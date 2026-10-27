@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Overview — Big Business Map</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Serif+4:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
+<script src="assets/common.js"></script>
+<script src="data/index.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <p class="kicker">Research pack · Overview</p>
+    <h1>Every big business on earth, measured</h1>
+    <p class="dek">The 2,000 largest listed companies book $52.9 trillion of revenue, a sum equal to 47% of world GDP, and they sit on $91 trillion of market value. Around them are 12,500 more listed firms, 1,442 private unicorns and 60 stock exchanges. This pack puts all of it in one place so you can check a number, see how it is spread and read the caveats before you write.</p>
+  </header>
+
+  <div id="tiles"></div>
+  <div id="n-tiles"></div>
+
+  <h2>How big is "big business"?</h2>
+  <p class="section-dek">The world's GDP is the yardstick. Against it we set what the Forbes Global 2000 sold, earned and was worth in 2025.</p>
+  <div class="grid">
+    <div class="card half">
+      <h3>The top 2,000 public firms sell the equivalent of half the world's output</h3>
+      <p class="sub">Forbes Global 2000 totals vs world GDP, US$ trillion</p>
+      <div class="chart short" id="c-yard"></div>
+      <button class="tbl-toggle" id="c-yard-t"></button><div id="c-yard-tbl"></div>
+      <p class="src">Source: Forbes Global 2000 (2026; revenue and profit are latest fiscal year, market value is a May 2026 snapshot); World Bank, GDP current US$, 2024.</p>
+    </div>
+    <div class="card half">
+      <h3 id="c-conc-h">The top 100 firms book 35% of the list's revenue</h3>
+      <p class="sub">Cumulative share of the Global 2000 total held by the top N firms. X axis is log scale.</p>
+      <div class="card-tools" id="conc-tools"></div>
+      <div class="chart short" id="c-conc"></div>
+      <button class="tbl-toggle" id="c-conc-t"></button><div id="c-conc-tbl"></div>
+      <p class="src">Source: Forbes Global 2000 (2026). Firms ranked separately on each metric; loss-makers count as zero profit.</p>
+    </div>
+  </div>
+  <div class="explainer" id="x-ledgers"></div>
+
+  <h2>What the 2,000 actually do</h2>
+  <p class="section-dek">Each box is one company, grouped by sector, and its area is the metric you pick. Hover a box for the company's numbers, or click a sector to zoom in.</p>
+  <div class="grid">
+    <div class="card">
+      <h3 id="c-tree-h">Financials book 23.5% of the revenue</h3>
+      <p class="sub" id="c-tree-sub">Forbes Global 2000 by sector and company, box area = revenue</p>
+      <div class="card-tools">
+        <span id="tree-tools"></span>
+        <label>Country <select id="tree-country"></select></label>
+      </div>
+      <div class="chart tall" id="c-tree"></div>
+      <button class="tbl-toggle" id="c-tree-t"></button><div id="c-tree-tbl"></div>
+      <p class="src">Source: Forbes Global 2000 (2026), with the 13-sector taxonomy from <code>scripts/taxonomy.py</code>. The 7 largest sectors by revenue get their own colour and the other 6 share grey. Firms with negative profit are left out of the profit view.</p>
+    </div>
+  </div>
+
+  <h2>Where it sits</h2>
+  <div class="grid">
+    <div class="card">
+      <h3 id="c-ctry-h">One country books 37% of the revenue and 55% of the market value</h3>
+      <p class="sub" id="c-ctry-sub">Share of the Forbes Global 2000 total, top 12 countries</p>
+      <div class="card-tools" id="ctry-tools"></div>
+      <div class="chart" id="c-ctry"></div>
+      <button class="tbl-toggle" id="c-ctry-t"></button><div id="c-ctry-tbl"></div>
+      <p class="src">Source: Forbes Global 2000 (2026). Country is where the company is headquartered. Forbes lists Hong Kong and Taiwan separately from China. The <a href="geography.html">Geography</a> page has the full map.</p>
+    </div>
+  </div>
+  <div id="n-head"></div>
+  <div id="n-angles"></div>
+
+  <h2>Explore the pack</h2>
+  <p class="section-dek">Each page takes one question. Every chart has hover detail, a data table and a source line.</p>
+  <div class="hub" id="hub"></div>
+
+  <h2 id="method">How to read this pack: data sources and methodology</h2>
+  <p class="section-dek">There are four layers here, each kept on its own ledger. The Forbes list measures <b>revenue</b>, the listed universe measures <b>market value</b>, the unicorn board measures <b>private paper valuation</b>, and the World Bank gives the <b>frame</b> (GDP, workers, the count of listed firms). They cover different companies and different years, so they are never added into one pie.</p>
+  <div id="n-rules"></div>
+  <div class="grid">
+    <div class="card">
+      <h3>Every dataset behind the pack</h3>
+      <p class="sub">Source, publisher, kind and trust level. Click a column header to sort.</p>
+      <div id="t-registry"></div>
+      <p class="src">Registry from <code>data_analysis/output/STUDY_PACK.md</code>, Appendix A.</p>
+    </div>
+    <div class="card half">
+      <h3>Vintages: which year each number comes from</h3>
+      <div id="t-vint"></div>
+      <ul class="sub" style="margin-top:10px">
+        <li>Forbes Global 2000: published June 2026. Revenue, profit and assets are each firm's latest fiscal year (mostly FY2025). Market value is a May 2026 snapshot.</li>
+        <li>Fortune Global 500: published July 2026 (FY2025 revenue).</li>
+        <li>Listed universe: CompaniesMarketCap market caps (scraped 2026) plus SEC XBRL revenue, mostly CY2025.</li>
+        <li>CB Insights unicorns: the valuation at each company's latest round, as of the 2026 scrape.</li>
+        <li>World Bank: GDP, labour force and listed domestic companies, all for 2024.</li>
+      </ul>
+    </div>
+    <div class="card half">
+      <h3>Coverage: what is and isn't in the pack</h3>
+      <ul class="sub">
+        <li><b>In:</b> 2,000 public giants with full financials. 90 state-owned, private and mutual giants from the Fortune 500. 12,512 listed firms with market cap, 5,500 of them with audited US revenue. 1,442 unicorns. 60 exchanges with 9,780 listings. 173 AI model builders.</li>
+        <li><b>Reconciled universe:</b> 17,985 source rows are de-duplicated into 15,175 companies. On 756 rows the sources disagree.</li>
+        <li><b>Out:</b> small business and the informal economy (the bottom ~95% of firms by count). Most co-operatives. Ownership networks (who owns whom). Listings exchange by exchange beyond the top companies.</li>
+        <li><b>Country</b> means where a company is domiciled, not who owns it. That is why Bermuda and the Cayman Islands "over-index".</li>
+      </ul>
+    </div>
+  </div>
+  <div id="n-cav"></div>
+</div>
+
+<script>
+const D = ATLAS.index, T = D.tiles, F = ATLAS.fmtUSD, N = ATLAS.fmtNum, P = ATLAS.fmtPct;
+const C = D.companies.map(r => Object.fromEntries(D.company_cols.map((k, i) => [k, r[i]])));
+
+// segmented button helper
+function seg(el, opts, cur, onChange) {
+  el = typeof el === 'string' ? document.getElementById(el) : el;
+  el.innerHTML = opts.map(([k, l]) => `<button type="button" data-k="${k}" class="${k === cur ? 'on' : ''}">${l}</button>`).join(' ');
+  el.querySelectorAll('button').forEach(b => b.onclick = () => {
+    el.querySelectorAll('button').forEach(x => x.classList.toggle('on', x === b)); onChange(b.dataset.k);
+  });
+}
+
+ATLAS.tiles('tiles', [
+  { v: F(T.world_gdp), l: 'World GDP', s: 'World Bank, 2024' },
+  { v: N(T.listed_domestic), l: 'Listed companies worldwide', s: 'World Bank count of listed domestic firms, 2024' },
+  { v: F(T.g_rev), l: 'Global 2000 revenue', s: P(T.g_rev / T.world_gdp * 100, 0) + ' of world GDP (scale, not share)' },
+  { v: F(T.g_prof), l: 'Global 2000 profit', s: P(T.g_margin * 100) + ' blended net margin' },
+  { v: F(T.g_mv), l: 'Global 2000 market value', s: 'May 2026 snapshot' },
+  { v: (T.g_emp / 1e6).toFixed(1) + 'M', l: 'Global 2000 employees', s: P(T.g_emp / T.labor_force * 100) + ' of the world\'s 3.7B workers' },
+  { v: N(T.unicorns), l: 'Private unicorns', s: F(T.unicorn_val) + ' paper valuation (CB Insights)' },
+  { v: N(T.universe), l: 'Companies in the reconciled universe', s: 'from ' + N(T.universe_rows) + ' source rows' },
+  { v: T.exchanges, l: 'Stock exchanges tracked', s: F(T.exchange_mcap) + ' across ' + N(T.exchange_cos) + ' listings' },
+  { v: N(T.listed_universe), l: 'Listed firms with a market cap', s: F(T.listed_mcap) + ' combined' },
+]);
+ATLAS.notes('n-tiles', { title: 'Numbers to quote', items: [
+  `<b>${F(T.g_rev)}</b> is what the Forbes Global 2000 took in. That equals <b>${P(T.g_rev / T.world_gdp * 100, 0)}</b> of 2024 world GDP (${F(T.world_gdp)}). It is a scale comparison, not a share of GDP (see the explainer below).`,
+  `They employ <b>${(T.g_emp / 1e6).toFixed(1)} million</b> people, about <b>${P(T.g_emp / T.labor_force * 100, 1)}</b> of the world's 3.7 billion workers. So roughly 1 worker in 40 produces revenue equal to half the world's output.`,
+  `Of the roughly <b>48,000</b> listed companies on earth, just 2,000 (about 4%) make the Forbes list. Then add <b>${N(T.unicorns)}</b> private unicorns worth ${F(T.unicorn_val)} on paper.`,
+  `<b>${T.g_loss}</b> of the 2,000 lost money in their latest year. The blended net margin is <b>${P(T.g_margin * 100)}</b>, so 9 cents of every dollar of sales is profit.`,
+] });
+
+// ---------- yardstick ----------
+(function () {
+  const pal = ATLAS.palette(), grey = ATLAS.css('--text-3');
+  const rows = [
+    { name: 'World GDP (2024)', v: T.world_gdp, c: grey, note: 'value added by every producer on earth' },
+    { name: 'Global 2000 market value', v: T.g_mv, c: pal[0], note: 'what investors valued the 2,000 at, May 2026' },
+    { name: 'Global 2000 revenue', v: T.g_rev, c: pal[0], note: 'sales in the latest fiscal year' },
+    { name: 'Global 2000 profit', v: T.g_prof, c: pal[0], note: 'net income in the latest fiscal year' },
+  ];
+  ATLAS.chart('c-yard', {
+    grid: { left: 8, right: 60, top: 10, bottom: 8 },
+    tooltip: { formatter: p => { const r = rows[p.dataIndex]; return `<b>${r.name}</b><br>${F(r.v)} = ${P(r.v / T.world_gdp * 100, 0)} of world GDP<br><span style="opacity:.7">${r.note}</span>`; } },
+    xAxis: { type: 'value', axisLabel: { formatter: v => '$' + v + 'T' } },
+    yAxis: { type: 'category', inverse: true, data: rows.map(r => r.name) },
+    series: [{ type: 'bar', barWidth: '55%', data: rows.map(r => ({ value: +(r.v / 1e12).toFixed(2), itemStyle: { color: r.c } })),
+      label: { show: true, position: 'right', formatter: p => '$' + p.value.toFixed(1) + 'T', color: ATLAS.css('--text') } }],
+  });
+  ATLAS.tableToggle('c-yard-t', 'c-yard-tbl', rows.map(r => ({ m: r.name, v: r.v, s: r.v / T.world_gdp * 100 })),
+    [{ key: 'm', label: 'Measure' }, { key: 'v', label: 'US$', num: true, fmt: v => F(v) }, { key: 's', label: '% of world GDP', num: true, fmt: v => P(v, 0) }]);
+})();
+
+ATLAS.notes('x-ledgers', { title: 'Explainer: revenue, profit, market value and GDP are four different things', items: [
+  '<b>Revenue</b> is everything a company sold. <b>GDP</b> counts only <i>value added</i>. A carmaker\'s revenue includes the steel, chips and tyres it bought, and the steelmaker\'s revenue counts that steel again. Adding up company revenue therefore double-counts, which is why $52.9T of revenue can sit beside $111.7T of GDP without meaning "47% of the economy".',
+  '<b>Profit</b> (net income) is what is left after every cost, interest payment and tax. It is the cleanest measure of who earns the money.',
+  '<b>Market value</b> (market capitalisation) is share price × shares outstanding. It is what investors think all future profits are worth today, so it is a stock figure, not a yearly flow. Never add it to revenue.',
+  '<b>Safe phrasing:</b> "The 2,000 largest listed companies took in revenue equal to nearly half of world GDP." <b>Unsafe:</b> "These companies make up half the world economy."',
+] });
+document.getElementById('x-ledgers').className = 'explainer';
+
+// ---------- concentration ----------
+(function () {
+  const M = { revenue: 'revenue', profit: 'profit', mv: 'market value' };
+  let cur = 'revenue', inst;
+  function draw() {
+    const c = D.concentration[cur], mk = c.marks;
+    document.getElementById('c-conc-h').textContent =
+      `The top 100 firms hold ${P(mk['100'] * 100, 0)} of the list's ${M[cur]}; it takes just ${c.half} to reach half`;
+    const opt = {
+      grid: { left: 8, right: 24, top: 16, bottom: 28 },
+      tooltip: { trigger: 'axis', formatter: ps => { const p = ps[0]; return `Top <b>${p.value[0].toLocaleString()}</b> firms by ${M[cur]}<br>hold <b>${p.value[1].toFixed(1)}%</b> of the Global 2000's total ${M[cur]}`; } },
+      xAxis: { type: 'log', name: 'rank (log scale)', nameLocation: 'middle', nameGap: 26, min: 1, max: 2000 },
+      yAxis: { type: 'value', max: 100, axisLabel: { formatter: '{value}%' } },
+      series: [{ type: 'line', showSymbol: false, data: c.curve, lineStyle: { width: 2.5 }, areaStyle: { opacity: .12 },
+        markPoint: { symbol: 'circle', symbolSize: 8, label: { position: 'top', formatter: p => p.name, color: ATLAS.css('--text'), fontSize: 11 },
+          data: [10, 100, 500].map(n => ({ name: `Top ${n}: ${(mk[String(n)] * 100).toFixed(0)}%`, coord: [n, mk[String(n)] * 100] })) } }],
+    };
+    if (inst) inst.setOption(opt, false); else inst = ATLAS.chart('c-conc', opt);
+  }
+  seg('conc-tools', [['revenue', 'Revenue'], ['profit', 'Profit'], ['mv', 'Market value']], cur, k => { cur = k; draw(); });
+  draw();
+  const rows = ['10', '20', '50', '100', '200', '500', '1000'].map(n => ({ n: 'Top ' + n, r: D.concentration.revenue.marks[n] * 100, p: D.concentration.profit.marks[n] * 100, m: D.concentration.mv.marks[n] * 100 }));
+  ATLAS.tableToggle('c-conc-t', 'c-conc-tbl', rows, [{ key: 'n', label: 'Firms' }, { key: 'r', label: 'Revenue share', num: true, fmt: v => P(v) },
+    { key: 'p', label: 'Profit share', num: true, fmt: v => P(v) }, { key: 'm', label: 'Market value share', num: true, fmt: v => P(v) }]);
+})();
+
+// ---------- treemap ----------
+(function () {
+  const MET = { rev_musd: ['Revenue', 'musd'], prof_musd: ['Profit', 'musd'], mv_musd: ['Market value', 'musd'], emp: ['Employees', 'n'] };
+  const HEAD = {
+    rev_musd: 'Financials book 23.5% of the revenue, ahead of consumer & retail (17%) and energy (13%)',
+    prof_musd: 'Financials earn a third (34%) of all profit; technology earns 17% on 9% of sales',
+    mv_musd: 'Technology is 9% of the revenue but 27% of the market value, the largest sector',
+    emp: 'Consumer & retail firms employ a quarter (25.5%) of the 92.6 million staff',
+  };
+  const secRev = {}; C.forEach(c => secRev[c.sector] = (secRev[c.sector] || 0) + (c.rev_musd || 0));
+  const sectors = Object.keys(secRev).sort((a, b) => secRev[b] - secRev[a]);
+  const pal = ATLAS.palette(), grey = ATLAS.css('--text-3');
+  const colorOf = s => { const i = sectors.indexOf(s); return i < 7 ? pal[i] : grey; };
+  const countries = {}; C.forEach(c => countries[c.country] = (countries[c.country] || 0) + 1);
+  const sel = document.getElementById('tree-country');
+  sel.innerHTML = '<option value="">All countries (2,000 firms)</option>' + Object.entries(countries).sort((a, b) => b[1] - a[1])
+    .map(([k, n]) => `<option value="${k}">${k} (${n})</option>`).join('');
+  let met = 'rev_musd', inst;
+  function fmtV(v) { return MET[met][1] === 'n' ? N(v) + ' people' : F(v, 'musd'); }
+  function build() {
+    const ctry = sel.value;
+    const list = C.filter(c => (!ctry || c.country === ctry) && c[met] > 0);
+    const total = list.reduce((s, c) => s + c[met], 0);
+    const bySec = {};
+    list.forEach(c => (bySec[c.sector] = bySec[c.sector] || []).push(c));
+    const data = sectors.filter(s => bySec[s]).map(s => {
+      const kids = bySec[s].sort((a, b) => b[met] - a[met]);
+      const st = kids.reduce((x, c) => x + c[met], 0);
+      return { name: s, value: st, share: st / total, n: kids.length, itemStyle: { color: colorOf(s) },
+        children: kids.map((c, i) => ({ name: c.company, value: c[met], c, share: c[met] / total, sshare: c[met] / st, srank: i + 1, itemStyle: { color: colorOf(s) } })) };
+    });
+    document.getElementById('c-tree-h').textContent = ctry ? `${ctry}: ${list.length} Global 2000 firms by ${MET[met][0].toLowerCase()}` : HEAD[met];
+    document.getElementById('c-tree-sub').textContent = `Forbes Global 2000${ctry ? ', ' + ctry : ''}, by sector and company. Box area = ${MET[met][0].toLowerCase()}. Total: ${fmtV(total)}`;
+    const bc = ATLAS.css('--surface');
+    const opt = {
+      tooltip: { formatter: p => {
+        const d = p.data; if (!d) return '';
+        if (d.c) { const c = d.c; return `<b>${c.company}</b><br>${c.country} · ${c.sector} · ${c.industry}<br>Forbes rank #${c.rank}<br>` +
+          `<b>${MET[met][0]}: ${fmtV(d.value)}</b><br>${P(d.share * 100, 2)} of the ${ctry ? ctry + ' ' : ''}total · #${d.srank} in sector (${P(d.sshare * 100)} of sector)<br>` +
+          `<span style="opacity:.75">Revenue ${F(c.rev_musd, 'musd')} · Profit ${F(c.prof_musd, 'musd')} · Mkt value ${F(c.mv_musd, 'musd')} · ${N(c.emp)} staff</span>`; }
+        return `<b>${d.name}</b><br>${d.n} firms · ${MET[met][0]}: ${fmtV(d.value)}<br>${P(d.share * 100)} of the total<br><i>click to zoom</i>`;
+      } },
+      series: [{ type: 'treemap', roam: false, nodeClick: 'zoomToNode', leafDepth: 2, top: 30, left: 0, right: 0, bottom: 0,
+        breadcrumb: { top: 0, left: 0, itemStyle: { color: ATLAS.css('--surface-2'), textStyle: { color: ATLAS.css('--text') } } },
+        data, label: { show: true, formatter: '{b}', fontSize: 11, overflow: 'truncate' },
+        upperLabel: { show: true, height: 22, color: '#fff', fontWeight: 600 },
+        levels: [{ itemStyle: { borderColor: bc, borderWidth: 3, gapWidth: 3 } },
+                 { itemStyle: { borderColor: bc, borderWidth: 1, gapWidth: 1, borderColorSaturation: 0.4 }, colorSaturation: [0.35, 0.6] }] }],
+    };
+    if (inst) inst.setOption(opt, true); else inst = ATLAS.chart('c-tree', opt);
+    window._treeRows = data.map(d => ({ s: d.name, n: d.n, v: d.value, sh: d.share * 100, top: d.children[0].name }));
+  }
+  seg('tree-tools', Object.entries(MET).map(([k, v]) => [k, v[0]]), met, k => { met = k; build(); });
+  sel.onchange = build;
+  build();
+  document.getElementById('c-tree-t').onclick = null;
+  const btn = document.getElementById('c-tree-t'), box = document.getElementById('c-tree-tbl');
+  btn.textContent = 'Show data table'; box.hidden = true;
+  btn.onclick = () => { box.hidden = !box.hidden; btn.textContent = box.hidden ? 'Show data table' : 'Hide data table';
+    if (!box.hidden) ATLAS.table(box, window._treeRows, [{ key: 's', label: 'Sector' }, { key: 'n', label: 'Firms', num: true },
+      { key: 'v', label: MET[met][0], num: true, fmt: fmtV }, { key: 'sh', label: 'Share', num: true, fmt: v => P(v) }, { key: 'top', label: 'Largest firm' }]); };
+})();
+
+// ---------- countries ----------
+(function () {
+  const MET = { rev_musd: 'revenue', prof_musd: 'profit', mv_musd: 'market value', n: 'number of companies' };
+  const agg = {};
+  C.forEach(c => { const a = agg[c.country] = agg[c.country] || { country: c.country, n: 0, rev_musd: 0, prof_musd: 0, mv_musd: 0 };
+    a.n++; a.rev_musd += c.rev_musd || 0; a.prof_musd += c.prof_musd || 0; a.mv_musd += c.mv_musd || 0; });
+  const all = Object.values(agg), tot = { n: 2000 };
+  ['rev_musd', 'prof_musd', 'mv_musd'].forEach(k => tot[k] = all.reduce((s, a) => s + a[k], 0));
+  let met = 'rev_musd', inst;
+  function draw() {
+    const rows = all.slice().sort((a, b) => b[met] - a[met]).slice(0, 12);
+    const fv = v => met === 'n' ? v + ' firms' : F(v, 'musd');
+    const us = agg['United States'];
+    document.getElementById('c-ctry-h').textContent = met === 'n'
+      ? `The US has ${us.n} of the 2,000 firms; China ${agg['China'].n}, Japan ${agg['Japan'].n}, India ${agg['India'].n}`
+      : `The US books ${P(us[met] / tot[met] * 100, 0)} of the Global 2000's ${MET[met]}; India ${P(agg['India'][met] / tot[met] * 100, 1)}`;
+    document.getElementById('c-ctry-sub').textContent = `Share of the Forbes Global 2000 total ${MET[met]}, top 12 countries`;
+    const india = ATLAS.css('--accent'), base = ATLAS.palette()[0];
+    const opt = {
+      grid: { left: 8, right: 60, top: 10, bottom: 8 },
+      tooltip: { formatter: p => { const r = rows[p.dataIndex]; return `<b>${r.country}</b> (#${p.dataIndex + 1})<br>${MET[met]}: <b>${fv(r[met])}</b><br>${P(r[met] / tot[met] * 100)} of the Global 2000 total<br>` +
+        `<span style="opacity:.75">${r.n} firms · revenue ${F(r.rev_musd, 'musd')} · profit ${F(r.prof_musd, 'musd')} · market value ${F(r.mv_musd, 'musd')}</span>`; } },
+      xAxis: { type: 'value', axisLabel: { formatter: '{value}%' } },
+      yAxis: { type: 'category', inverse: true, data: rows.map(r => r.country) },
+      series: [{ type: 'bar', barWidth: '60%', data: rows.map(r => ({ value: +(r[met] / tot[met] * 100).toFixed(2), itemStyle: { color: r.country === 'India' ? india : base } })),
+        label: { show: true, position: 'right', formatter: p => p.value.toFixed(1) + '%', color: ATLAS.css('--text') } }],
+    };
+    if (inst) inst.setOption(opt, true); else inst = ATLAS.chart('c-ctry', opt);
+  }
+  seg('ctry-tools', [['rev_musd', 'Revenue'], ['prof_musd', 'Profit'], ['mv_musd', 'Market value'], ['n', 'Companies']], met, k => { met = k; draw(); });
+  draw();
+  ATLAS.tableToggle('c-ctry-t', 'c-ctry-tbl', all.map(a => Object.assign({}, a, { rs: a.rev_musd / tot.rev_musd * 100, ms: a.mv_musd / tot.mv_musd * 100 })),
+    [{ key: 'country', label: 'Country' }, { key: 'n', label: 'Firms', num: true }, { key: 'rev_musd', label: 'Revenue', num: true, fmt: v => F(v, 'musd') },
+     { key: 'rs', label: 'Rev. share', num: true, fmt: v => P(v) }, { key: 'prof_musd', label: 'Profit', num: true, fmt: v => F(v, 'musd') },
+     { key: 'mv_musd', label: 'Market value', num: true, fmt: v => F(v, 'musd') }, { key: 'ms', label: 'MV share', num: true, fmt: v => P(v) }]);
+})();
+
+ATLAS.notes('n-head', { title: 'What the charts say', items: [
+  `<b>Concentration is steep.</b> The top 10 firms hold ${P(D.concentration.revenue.marks['10'] * 100, 1)} of revenue, the top 100 hold ${P(D.concentration.revenue.marks['100'] * 100, 0)} and the top 500 hold ${P(D.concentration.revenue.marks['500'] * 100, 0)}. Half of all revenue sits with just <b>${D.concentration.revenue.half}</b> firms.`,
+  `<b>Profit and value are even more concentrated.</b> The top 10 by profit earn ${P(D.concentration.profit.marks['10'] * 100, 0)} of all profit. The top 10 by market value hold ${P(D.concentration.mv.marks['10'] * 100, 0)} of all market value, and only <b>${D.concentration.mv.half}</b> firms make up half of it. That is the AI and big-tech premium.`,
+  `<b>Financials are the biggest sector</b> by revenue (about 23%), ahead of Consumer & Retail (17%), Energy & Utilities (13%) and Technology (9%). Technology's share of market value is several times its share of revenue.`,
+  `<b>The US has 612 of the 2,000 firms</b> but books 37% of revenue and 55% of market value. China has 275 firms. India has 70, the fourth-largest count, but only about 2.5% of the revenue.`,
+] });
+ATLAS.notes('n-angles', { title: 'Story angles', items: [
+  '"Half the world\'s output, 2.5% of its workers": use the revenue-to-GDP and employees-to-labour-force ratios together.',
+  '"2,000 out of 48,000": the Forbes list is the top 4% of listed firms, and listed firms are a tiny fraction of the hundreds of millions of businesses on earth. The tail of small and informal businesses is invisible in every company list.',
+  '"The 126 companies worth half of everything": market value is far more concentrated than sales.',
+  '"India: 4th by number of giants, 9th by their revenue." India has many big firms, but they are smaller than the global average. The <a href="geography.html#india">India deep-dive</a> has the detail.',
+  '"The invisible giants": 90 state-owned, private and mutual companies worth $6.4T of revenue never appear in Forbes. See <a href="ownership.html">Ownership</a>.',
+] });
+
+// ---------- hub ----------
+const HUB = {
+  'scale.html': 'How big the measured corporate world is, how steeply size falls with rank (the Zipf curve), and the firms that Forbes\' list leaves out.',
+  'geography.html': 'An interactive world map of companies, revenue, profit, market value and unicorns, which countries punch above their GDP weight, and an India deep-dive.',
+  'sectors.html': 'What the money does: 13 sectors and 30 industries compared on revenue, margins, concentration and valuation.',
+  'ownership.html': 'Who owns it: public vs state-owned vs private vs mutual, and the "invisible giants" such as State Grid.',
+  'markets.html': 'The world\'s 60 stock exchanges, the market depth of each country relative to its GDP, and the largest listed companies.',
+  'startups.html': 'The private layer: 1,442 unicorns, where they are, which industries they are in, the AI labs and their paper valuations.',
+  'time.html': 'Ten years of revenue and profit for the same firms: cohort paths, profit-pool migration and the fastest risers.',
+  'context.html': 'The big picture: world GDP, workers, the sector split of output and jobs, and where company lists stop seeing the economy.',
+  'directory.html': 'Search and filter all 15,175 companies in the reconciled universe, and plot revenue against market value for any slice.',
+  'notebook.html': 'The writer\'s notebook: the most quotable facts from every page, plus caveats and story angles, in one place.',
+};
+document.getElementById('hub').innerHTML = ATLAS.PAGES.filter(([h]) => h !== 'index.html')
+  .map(([h, t]) => `<a href="${h}"><div class="t">${t} →</div><div class="d">${HUB[h] || ''}</div></a>`).join('');
+
+// ---------- methodology ----------
+ATLAS.notes('n-rules', { title: 'Rules that keep this honest', items: [
+  '<b>Never sum across layers inside one chart.</b> Forbes and Fortune use different fiscal years and definitions, and Cloud 100 and unicorn figures are valuations, not revenue.',
+  '<b>Revenue is not value added.</b> "Combined revenue equals 47% of world GDP" is defensible. "These companies are 47% of the economy" is not.',
+  '<b>Forbes\' market values are May 2026 snapshots.</b> Share prices have moved since, especially for AI-linked stocks.',
+  '<b>Forbes\' industry labels are free text</b> (39 variants, e.g. "Banking" and "Banking and Financial Services"). This pack always uses the cleaned <code>sector</code> / <code>industry_canon</code> fields.',
+  '<b>Fortune\'s "Company type" mislabels state firms as "Private".</b> This pack uses its own curated ownership labels instead.',
+  '<b>Hong Kong and Taiwan are separate from China</b> in Forbes\' country field. Say so if you quote a "China" total.',
+] });
+ATLAS.table('t-registry', D.registry, [{ key: 'dataset', label: 'Dataset' }, { key: 'kind', label: 'Kind' }, { key: 'trust', label: 'Trust' },
+  { key: 'publisher', label: 'Publisher' }, { key: 'file', label: 'File' }, { key: 'notes', label: 'Notes', fmt: v => `<span style="white-space:normal;display:inline-block;min-width:320px">${v}</span>` }]);
+ATLAS.table('t-vint', D.vintages, [{ key: 'dataset', label: 'Dataset' }, { key: 'min_year', label: 'Earliest', num: true }, { key: 'max_year', label: 'Latest', num: true }, { key: 'mode_year', label: 'Most common', num: true }]);
+ATLAS.notes('n-cav', { title: 'Caveats before you quote', caveat: true, items: D.caveats.map(c => `<b>${c.topic}.</b> ${c.detail}`).concat([
+  'The listed universe is complete for the US and partial elsewhere. A country\'s count of listed firms in this pack measures coverage, not how many companies it really has.',
+  'Unicorn valuations are the price at the last funding round, not market prices. Anthropic ($965B) and OpenAI ($840B) dominate the total.',
+]) });
+</script>
+</body>
+</html>

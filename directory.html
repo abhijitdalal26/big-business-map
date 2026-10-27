@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Company finder — Big Business Map</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Serif+4:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
+<script src="assets/common.js"></script>
+<script src="data/companies.js"></script>
+<style>
+  .finder-tools { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 10px; margin-bottom: 12px; }
+  .finder-tools label { display: flex; flex-direction: column; font-size: 12px; color: var(--text-2); gap: 3px; }
+  .finder-tools input, .finder-tools select { font: inherit; font-size: 14px; padding: 6px 9px; border: 1px solid var(--border); border-radius: 6px; background: var(--surface); color: var(--text); min-width: 0; }
+  .finder-tools .wide { grid-column: span 2; }
+  @media (max-width: 600px) { .finder-tools .wide { grid-column: span 1; } }
+  .finder-bar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; font-size: 14px; color: var(--text-2); margin: 8px 0; }
+  .finder-bar button { font: inherit; font-size: 13px; padding: 5px 10px; border: 1px solid var(--border); border-radius: 6px; background: var(--surface); color: var(--text); cursor: pointer; }
+  .finder-bar button:disabled { opacity: .4; cursor: default; }
+  td.co { white-space: normal !important; min-width: 220px; max-width: 340px; }
+  td.co .nm { font-weight: 600; cursor: pointer; }
+  td.co .desc { display: block; color: var(--text-2); font-size: 12px; margin-top: 3px; }
+  .pill { display: inline-block; font-size: 11px; padding: 1px 6px; border-radius: 99px; background: var(--surface-2); color: var(--text-2); margin-left: 4px; }
+  .lnk a { margin-right: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <p class="kicker">Company finder</p>
+    <h1>15,175 companies, one search box</h1>
+    <p class="dek">Every company the reconciliation could name: the Forbes Global 2000, Fortune's state-owned and private giants, 11,400 more listed firms, 1,400 unicorns, AI labs and Wikipedia's national lists. Filter by country, sector, list or owner, sort any column, and plot what you find.</p>
+  </header>
+
+  <div id="tiles"></div>
+
+  <div class="card">
+    <div class="finder-tools">
+      <label class="wide">Search name, ticker, city or CEO <input id="q" type="search" placeholder="e.g. Tata, TSMC, Bengaluru, Nadella"></label>
+      <label>Country <select id="f-country"></select></label>
+      <label>Region <select id="f-region"></select></label>
+      <label>Sector <select id="f-sector"></select></label>
+      <label>Ownership <select id="f-own"></select></label>
+      <label>Primary source / list <select id="f-list"></select></label>
+      <label>Membership <select id="f-g2k"><option value="">Any</option><option value="1">In Forbes Global 2000</option><option value="0">Not in Global 2000</option></select></label>
+      <label>Minimum revenue <select id="f-minrev"><option value="0">Any</option><option value="1e8">$100M+</option><option value="1e9">$1B+</option><option value="1e10">$10B+</option><option value="1e11">$100B+</option></select></label>
+      <label>Must have <select id="f-has"><option value="">—</option><option value="revenue_usd">Revenue</option><option value="market_cap_usd">Market cap</option><option value="profit_usd">Profit</option><option value="valuation_usd">Private valuation</option><option value="employees">Employees</option><option value="website">Website</option></select></label>
+    </div>
+    <div class="finder-bar">
+      <span id="summary"></span>
+      <span><button id="reset" type="button">Reset filters</button> <button id="csv" type="button">Download CSV of matches</button></span>
+    </div>
+  </div>
+
+  <h2 id="c-sc-h">Revenue against market value</h2>
+  <p class="section-dek" id="c-sc-dek">Each dot is one company from the current filter that has both a revenue figure and a market value. Firms above the dashed line are worth more than one year's sales.</p>
+  <div class="grid">
+    <div class="card">
+      <h3 id="c-sc-title">Most firms are worth between 0.5× and 5× their revenue; tech and AI names sit far above</h3>
+      <p class="sub" id="c-sc-sub">Revenue vs market capitalisation, US$, both log scales</p>
+      <div class="chart tall" id="c-sc"></div>
+      <button class="tbl-toggle" id="c-sc-t"></button><div id="c-sc-tbl"></div>
+      <p class="src">Source: data_analysis reconciled directory (Forbes Global 2000 2025; SEC XBRL revenue; CompaniesMarketCap market caps and revenue estimates). Revenue and market value come from different dates for many firms. Colour = region.</p>
+    </div>
+  </div>
+
+  <h2>Results</h2>
+  <div class="finder-bar"><span id="pageinfo"></span><span><button id="prev" type="button">← Prev</button> <button id="next" type="button">Next →</button></span></div>
+  <div id="results"></div>
+  <div class="finder-bar"><span></span><span><button id="prev2" type="button">← Prev</button> <button id="next2" type="button">Next →</button></span></div>
+
+  <div id="n-how"></div>
+  <div id="n-ang"></div>
+  <div id="n-cav"></div>
+</div>
+
+<script>
+const DIR = ATLAS.directory, F = ATLAS.fmtUSD, N = ATLAS.fmtNum, P = ATLAS.fmtPct;
+const ci = Object.fromEntries(DIR.columns.map((c, i) => [c, i]));
+const DC = DIR.dicts;
+const OWN = { public: 'Public (listed)', pe: 'Private, VC-backed', private: 'Private', state: 'State-owned', mutual: 'Mutual / co-op', unknown: 'Unknown' };
+const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const unlink = v => !v ? '' : v.startsWith('w:') ? 'https://en.wikipedia.org/wiki/' + v.slice(2) : v.startsWith('f:') ? 'https://www.forbes.com/companies/' + v.slice(2) : v;
+
+// decode rows once into objects
+const ALL = DIR.rows.map((r, i) => {
+  const o = { i };
+  ['company', 'ticker', 'website', 'wikipedia', 'forbes_page', 'city', 'ceo', 'description', 'revenue_usd', 'profit_usd', 'assets_usd', 'market_cap_usd', 'valuation_usd', 'employees', 'n_sources', 'year_founded', 'g2k']
+    .forEach(k => o[k] = r[ci[k]]);
+  ['country', 'region', 'sector', 'industry_canon', 'ownership', 'list_name', 'confidence', 'revenue_basis', 'revenue_year'].forEach(k => o[k] = DC[k][r[ci[k]]]);
+  o._s = (o.company + ' ' + o.ticker + ' ' + o.city + ' ' + o.ceo).toLowerCase();
+  return o;
+});
+// rank by revenue across the universe
+ALL.slice().filter(o => o.revenue_usd).sort((a, b) => b.revenue_usd - a.revenue_usd).forEach((o, k) => o.rrank = k + 1);
+ALL.slice().filter(o => o.market_cap_usd).sort((a, b) => b.market_cap_usd - a.market_cap_usd).forEach((o, k) => o.mrank = k + 1);
+
+const cnt = k => ALL.filter(o => o[k]).length;
+ATLAS.tiles('tiles', [
+  { v: N(ALL.length), l: 'Companies in the directory', s: 'de-duplicated from 17,985 source rows' },
+  { v: N(cnt('revenue_usd')), l: 'with a revenue figure' },
+  { v: N(cnt('market_cap_usd')), l: 'with a market value' },
+  { v: N(cnt('valuation_usd')), l: 'with a private valuation', s: 'unicorns and AI labs' },
+  { v: N(new Set(ALL.map(o => o.country).filter(Boolean)).size), l: 'countries' },
+  { v: N(cnt('wikipedia')), l: 'with a Wikipedia page', s: N(cnt('website')) + ' with an official website' },
+]);
+
+// ---------- filter controls ----------
+function fill(id, values, label, fmt) {
+  const counts = {}; ALL.forEach(o => { const v = o[values] || ''; counts[v] = (counts[v] || 0) + 1; });
+  const el = document.getElementById(id);
+  el.innerHTML = `<option value="*">${label}</option>` + Object.entries(counts).sort((a, b) => b[1] - a[1])
+    .map(([v, n]) => `<option value="${esc(v)}">${esc(fmt ? fmt(v) : (v || '(not classified)'))} (${n.toLocaleString()})</option>`).join('');
+}
+fill('f-country', 'country', 'All countries'); fill('f-region', 'region', 'All regions'); fill('f-sector', 'sector', 'All sectors');
+fill('f-own', 'ownership', 'All owners', v => OWN[v] || v || '(blank)'); fill('f-list', 'list_name', 'All lists');
+const IDS = ['q', 'f-country', 'f-region', 'f-sector', 'f-own', 'f-list', 'f-g2k', 'f-minrev', 'f-has'];
+const $ = id => document.getElementById(id);
+
+// URL hash keeps the filter (handy for linking a writer to a slice)
+function readHash() { try { const h = new URLSearchParams(location.hash.slice(1)); IDS.forEach(id => { if (h.has(id)) $(id).value = h.get(id); }); } catch (e) {} }
+function writeHash() { const h = new URLSearchParams(); IDS.forEach(id => { const v = $(id).value; if (v && v !== '*' && v !== '0') h.set(id, v); }); history.replaceState(null, '', '#' + h.toString()); }
+
+let filtered = [], sortKey = 'revenue_usd', sortDir = -1, page = 0;
+const PER = 50;
+function apply() {
+  const q = $('q').value.trim().toLowerCase(), terms = q ? q.split(/\s+/) : [];
+  const fc = $('f-country').value, fr = $('f-region').value, fs = $('f-sector').value, fo = $('f-own').value, fl = $('f-list').value,
+    fg = $('f-g2k').value, mr = +$('f-minrev').value, fh = $('f-has').value;
+  filtered = ALL.filter(o => (fc === '*' || (o.country || '') === fc) && (fr === '*' || (o.region || '') === fr) && (fs === '*' || (o.sector || '') === fs)
+    && (fo === '*' || (o.ownership || '') === fo) && (fl === '*' || (o.list_name || '') === fl) && (fg === '' || String(o.g2k) === fg)
+    && (!mr || (o.revenue_usd || 0) >= mr) && (!fh || o[fh]) && terms.every(t => o._s.includes(t)));
+  sort(); page = 0; render(); drawScatter(); writeHash();
+}
+function sort() {
+  const k = sortKey, d = sortDir;
+  filtered.sort((a, b) => { const x = a[k], y = b[k]; if (x == null || x === '') return 1; if (y == null || y === '') return -1;
+    return (typeof x === 'number' ? x - y : String(x).localeCompare(String(y))) * d; });
+}
+const COLS = [
+  { k: 'company', l: 'Company' }, { k: 'country', l: 'Country' }, { k: 'sector', l: 'Sector' }, { k: 'ownership', l: 'Owner' }, { k: 'list_name', l: 'Primary source' },
+  { k: 'revenue_usd', l: 'Revenue', n: 1 }, { k: 'profit_usd', l: 'Profit', n: 1 }, { k: 'market_cap_usd', l: 'Market cap', n: 1 },
+  { k: 'valuation_usd', l: 'Private valuation', n: 1 }, { k: 'employees', l: 'Employees', n: 1 }, { k: 'year_founded', l: 'Founded', n: 1 }, { k: '_links', l: 'Links' },
+];
+function cell(o, c) {
+  switch (c.k) {
+    case 'company': return `<td class="co"><span class="nm" data-i="${o.i}" title="Click for description">${esc(o.company)}</span>${o.ticker ? `<span class="pill">${esc(o.ticker)}</span>` : ''}${o.g2k ? '<span class="pill" title="In the Forbes Global 2000">G2000</span>' : ''}${o.n_sources > 1 ? `<span class="pill" title="Found in ${o.n_sources} sources">${o.n_sources} src</span>` : ''}<span class="desc" hidden id="d${o.i}">${esc(o.description || 'No description in the sources.')}${o.city ? ' · ' + esc(o.city) : ''}${o.ceo ? ' · CEO: ' + esc(o.ceo) : ''}${o.industry_canon ? ' · ' + esc(o.industry_canon) : ''} · Revenue basis: ${esc(o.revenue_basis || '—')} ${esc(o.revenue_year || '')} · Confidence: ${esc(o.confidence)}</span></td>`;
+    case 'ownership': return `<td>${esc(OWN[o.ownership] || o.ownership)}</td>`;
+    case 'employees': case 'year_founded': return `<td class="n">${o[c.k] ? (c.k === 'employees' ? o[c.k].toLocaleString() : o[c.k]) : '—'}</td>`;
+    case 'revenue_usd': return `<td class="n" title="${o.rrank ? '#' + o.rrank.toLocaleString() + ' by revenue in the directory' : ''}">${F(o[c.k])}</td>`;
+    case 'market_cap_usd': return `<td class="n" title="${o.mrank ? '#' + o.mrank.toLocaleString() + ' by market cap in the directory' : ''}">${F(o[c.k])}</td>`;
+    case 'profit_usd': case 'valuation_usd': return `<td class="n">${F(o[c.k])}</td>`;
+    case '_links': return `<td class="lnk">${o.website ? `<a href="${esc(unlink(o.website))}" target="_blank" rel="noopener">site</a>` : ''}${o.wikipedia ? `<a href="${esc(unlink(o.wikipedia))}" target="_blank" rel="noopener">wiki</a>` : ''}${o.forbes_page ? `<a href="${esc(unlink(o.forbes_page))}" target="_blank" rel="noopener">forbes</a>` : ''}</td>`;
+    default: return `<td>${esc(o[c.k] || '—')}</td>`;
+  }
+}
+function render() {
+  const pages = Math.max(1, Math.ceil(filtered.length / PER));
+  page = Math.min(page, pages - 1);
+  const rows = filtered.slice(page * PER, page * PER + PER);
+  $('results').innerHTML = `<div class="tbl-wrap" style="max-height:none"><table class="data"><thead><tr><th class="n">#</th>${COLS.map(c =>
+    `<th class="${c.n ? 'n' : ''}" data-k="${c.k}">${c.l}${sortKey === c.k ? (sortDir < 0 ? ' ▾' : ' ▴') : ''}</th>`).join('')}</tr></thead><tbody>${
+    rows.map((o, j) => `<tr><td class="n">${page * PER + j + 1}</td>${COLS.map(c => cell(o, c)).join('')}</tr>`).join('') ||
+    '<tr><td colspan="13">No companies match these filters.</td></tr>'}</tbody></table></div>`;
+  $('results').querySelectorAll('th[data-k]').forEach(th => th.onclick = () => { const k = th.dataset.k; if (k === '_links') return;
+    sortDir = sortKey === k ? -sortDir : (['company', 'country', 'sector', 'ownership', 'list_name'].includes(k) ? 1 : -1); sortKey = k; sort(); render(); });
+  $('results').querySelectorAll('.nm').forEach(el => el.onclick = () => { const d = $('d' + el.dataset.i); d.hidden = !d.hidden; });
+  $('pageinfo').textContent = filtered.length ? `Rows ${(page * PER + 1).toLocaleString()}–${Math.min(filtered.length, page * PER + PER).toLocaleString()} of ${filtered.length.toLocaleString()} · page ${page + 1} of ${pages} · click a company name for its description` : '';
+  ['prev', 'prev2'].forEach(id => $(id).disabled = page === 0);
+  ['next', 'next2'].forEach(id => $(id).disabled = page >= pages - 1);
+  const rev = filtered.reduce((s, o) => s + (o.revenue_usd || 0), 0), mc = filtered.reduce((s, o) => s + (o.market_cap_usd || 0), 0),
+    val = filtered.reduce((s, o) => s + (o.valuation_usd || 0), 0), emp = filtered.reduce((s, o) => s + (o.employees || 0), 0);
+  $('summary').innerHTML = `<b>${filtered.length.toLocaleString()}</b> companies match · revenue ${F(rev)} · market cap ${F(mc)}` + (val ? ` · private valuation ${F(val)}` : '') + (emp ? ` · ${N(emp)} employees (where reported)` : '') +
+    ' <span style="opacity:.7">(separate ledgers, so don\'t add them)</span>';
+}
+['prev', 'prev2'].forEach(id => $(id).onclick = () => { page--; render(); });
+['next', 'next2'].forEach(id => $(id).onclick = () => { page++; render(); });
+let tmr; $('q').oninput = () => { clearTimeout(tmr); tmr = setTimeout(apply, 200); };
+IDS.slice(1).forEach(id => $(id).onchange = apply);
+$('reset').onclick = () => { $('q').value = ''; IDS.slice(1).forEach(id => { const el = $(id); el.selectedIndex = 0; }); apply(); };
+$('csv').onclick = () => {
+  const ks = ['company', 'ticker', 'country', 'region', 'sector', 'industry_canon', 'ownership', 'list_name', 'g2k', 'n_sources', 'confidence', 'revenue_usd', 'revenue_year', 'revenue_basis', 'profit_usd', 'assets_usd', 'market_cap_usd', 'valuation_usd', 'employees', 'year_founded', 'city', 'ceo', 'website', 'wikipedia', 'forbes_page'];
+  const q = v => { v = v == null ? '' : String(v); return /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v; };
+  const txt = [ks.join(',')].concat(filtered.map(o => ks.map(k => q(['website', 'wikipedia', 'forbes_page'].includes(k) ? unlink(o[k]) : o[k])).join(','))).join('\n');
+  const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([txt], { type: 'text/csv' })); a.download = 'companies_filtered.csv'; a.click();
+};
+
+// ---------- scatter ----------
+const REG = ['North America', 'Asia-Pacific', 'Europe', 'Middle East & Central Asia', 'Latin America', 'Africa'];
+let sc, scRows = [];
+function drawScatter() {
+  const pts = filtered.filter(o => o.revenue_usd > 0 && o.market_cap_usd > 0);
+  scRows = pts;
+  const cap = 8000, shown = pts.length > cap ? pts.slice().sort((a, b) => b.market_cap_usd - a.market_cap_usd).slice(0, cap) : pts;
+  const PAL = ATLAS.palette(), grey = ATLAS.css('--text-3');
+  const groups = REG.concat(['Unknown']);
+  const med = (() => { const r = pts.map(o => o.market_cap_usd / o.revenue_usd).sort((a, b) => a - b); return r.length ? r[Math.floor(r.length / 2)] : null; })();
+  $('c-sc-sub').textContent = `Revenue vs market capitalisation, US$, both log scales. ${pts.length.toLocaleString()} of ${filtered.length.toLocaleString()} matching firms have both` +
+    (pts.length > cap ? ` (largest ${cap.toLocaleString()} by market cap plotted)` : '') + (med ? `. Median market cap ÷ revenue: ${med.toFixed(2)}×` : '');
+  const above = pts.filter(o => o.market_cap_usd > o.revenue_usd).length;
+  $('c-sc-title').textContent = pts.length ? `${P(above / pts.length * 100, 0)} of these ${pts.length.toLocaleString()} firms are worth more than a year's revenue (median ${med.toFixed(1)}×)` : 'No firms in this filter have both revenue and market value';
+  const lo = 1e6, hi = 6e12;
+  const opt = {
+    legend: { top: 0, data: groups },
+    grid: { left: 8, right: 24, top: 44, bottom: 36 },
+    tooltip: { formatter: p => { const o = p.data && p.data.o; if (!o) return '';
+      return `<b>${esc(o.company)}</b>${o.ticker ? ' (' + esc(o.ticker) + ')' : ''}<br>${esc(o.country || '—')} · ${esc(o.sector || 'sector n/a')}<br>Revenue <b>${F(o.revenue_usd)}</b> (#${o.rrank.toLocaleString()} in directory)<br>Market cap <b>${F(o.market_cap_usd)}</b> (#${o.mrank.toLocaleString()})<br>Market cap ÷ revenue: <b>${(o.market_cap_usd / o.revenue_usd).toFixed(2)}×</b>` +
+        (o.profit_usd != null ? `<br>Profit ${F(o.profit_usd)}` : '') + `<br><span style="opacity:.7">${esc(o.list_name)} · revenue ${esc(o.revenue_basis)} ${esc(o.revenue_year || '')}</span>`; } },
+    xAxis: { type: 'log', name: 'revenue, US$ (log scale)', nameLocation: 'middle', nameGap: 24, min: lo, max: hi, axisLabel: { formatter: v => F(v) } },
+    yAxis: { type: 'log', name: 'market cap, US$ (log)', min: lo, max: hi, axisLabel: { formatter: v => F(v) } },
+    series: groups.map((g, i) => ({ name: g, type: 'scatter', symbolSize: 5, color: i < 6 ? PAL[i] : grey, itemStyle: { opacity: .65 },
+      data: shown.filter(o => (REG.includes(o.region) ? o.region : 'Unknown') === g).map(o => ({ value: [Math.max(lo, o.revenue_usd), Math.max(lo, o.market_cap_usd)], o })),
+      emphasis: { focus: 'self', itemStyle: { opacity: 1, borderColor: ATLAS.css('--text'), borderWidth: 1 } } })).concat([
+      { type: 'line', name: '1× revenue', data: [[lo, lo], [hi, hi]], showSymbol: false, silent: true, lineStyle: { type: 'dashed', color: grey, width: 1 }, tooltip: { show: false } },
+      { type: 'line', name: '10× revenue', data: [[lo, lo * 10], [hi / 10, hi]], showSymbol: false, silent: true, lineStyle: { type: 'dotted', color: grey, width: 1 }, tooltip: { show: false },
+        endLabel: { show: true, formatter: '10×', color: grey } }]),
+  };
+  if (sc) sc.setOption(opt, true); else sc = ATLAS.chart('c-sc', opt);
+}
+const scBtn = $('c-sc-t'), scBox = $('c-sc-tbl'); scBtn.textContent = 'Show data table'; scBox.hidden = true;
+scBtn.onclick = () => { scBox.hidden = !scBox.hidden; scBtn.textContent = scBox.hidden ? 'Show data table' : 'Hide data table';
+  if (!scBox.hidden) ATLAS.table(scBox, scRows.map(o => ({ c: o.company, ct: o.country, r: o.revenue_usd, m: o.market_cap_usd, x: o.market_cap_usd / o.revenue_usd })),
+    [{ key: 'c', label: 'Company' }, { key: 'ct', label: 'Country' }, { key: 'r', label: 'Revenue', num: true, fmt: v => F(v) }, { key: 'm', label: 'Market cap', num: true, fmt: v => F(v) }, { key: 'x', label: 'MC ÷ revenue', num: true, fmt: v => v.toFixed(2) + '×' }], { limit: 300 }); };
+
+readHash(); apply();
+
+ATLAS.notes('n-how', { title: 'How to use the finder', items: [
+  '<b>Search</b> matches every word you type against the company name, ticker, city and CEO. For example, "bank india" finds Indian banks whose names contain both words.',
+  '<b>Primary source</b> is the list the reconciliation trusted most for each firm. A Forbes Global 2000 member can show "Listed universe" as its primary source if SEC data was more authoritative. Use <b>Membership → In Forbes Global 2000</b> to get exactly the 2,000.',
+  '<b>Pills:</b> <span class="pill">G2000</span> means the firm is in the Forbes Global 2000. <span class="pill">3 src</span> means three sources were matched to this one company.',
+  'The filter is saved in the page address, so you can bookmark or share a slice (e.g. Indian state-owned firms). <b>Download CSV</b> exports the current matches with links.',
+  'Hover a revenue or market-cap cell to see its rank in the whole directory.',
+] });
+ATLAS.notes('n-ang', { title: 'Ways to use it for the story', items: [
+  'Set Country = India, Membership = Not in Global 2000, Minimum revenue = $1B+ to find large Indian listed firms that Forbes\' list misses.',
+  'Set Ownership = State-owned to list the state giants (State Grid, Sinopec-class firms, Saudi and Gulf entities) that never appear on stock-market screens.',
+  'Set Primary source = CB Insights unicorns to browse the private-valuation layer, and sort by Private valuation.',
+  'On the scatter, firms far above the 10× line are where investors are betting on the future (AI, chips, software). Firms below the 1× line are mostly banks, retailers, oil firms and conglomerates.',
+] });
+ATLAS.notes('n-cav', { title: 'Caveats', caveat: true, items: [
+  'A blank cell means no source in this project carries that value. Nothing is imputed. Only ~2,400 firms have a profit figure and ~2,100 an employee count.',
+  'Revenue comes from different bases: SEC filings (audited), Forbes, Fortune, Wikipedia and CompaniesMarketCap estimates. The "Revenue basis" in each description says which, so check it before you quote a small firm.',
+  'Market caps are snapshots: May 2026 for Forbes rows, the 2026 scrape for the listed universe. Private valuations are last-round marks, not prices.',
+  'Sector is assigned only where a source gave an industry. Most of the listed universe (about 11,700 firms) has no sector label.',
+  'Revenue, market cap and valuation totals in the summary line are separate ledgers. Never add them together.',
+] });
+</script>
+</body>
+</html>

@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Geography — Big Business Map</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Serif+4:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
+<script src="assets/common.js"></script>
+<script src="assets/world.geo.js"></script>
+<script src="data/geography.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <p class="kicker">Geography</p>
+    <h1>A quarter of the world's GDP, 37% of big-company revenue, 55% of their market value: the US</h1>
+    <p class="dek">Where the world's business is headquartered, and how far that map departs from the map of world GDP. Who punches above their economic weight, who has none of the giants at all, and where India stands.</p>
+  </header>
+
+  <div id="tiles"></div>
+
+  <h2>The map</h2>
+  <p class="section-dek">Pick a measure. Colours use a log scale because the US is often ten times the next country. Grey means none in the data, which for Russia is a real zero.</p>
+  <div class="grid">
+    <div class="card">
+      <h3 id="c-map-h">Business is booked in a handful of countries</h3>
+      <p class="sub" id="c-map-sub"></p>
+      <div class="card-tools"><label>Measure <select id="map-metric"></select></label></div>
+      <div class="chart tall" id="c-map"></div>
+      <button class="tbl-toggle" id="c-map-t"></button><div id="c-map-tbl"></div>
+      <p class="src" id="c-map-src">Sources: Forbes Global 2000 (2026); CB Insights unicorn list; CompaniesMarketCap listed universe (market cap by country of domicile); World Bank GDP 2024. Map: Natural Earth 1:50m.</p>
+    </div>
+  </div>
+  <div id="n-map"></div>
+
+  <h2>Country rankings</h2>
+  <div class="grid">
+    <div class="card">
+      <h3 id="c-rank-h"></h3>
+      <p class="sub" id="c-rank-sub"></p>
+      <div class="card-tools">
+        <label>Measure <select id="rank-metric"></select></label>
+        <label>Show <select id="rank-n"><option value="15">Top 15</option><option value="25" selected>Top 25</option><option value="40">Top 40</option></select></label>
+        <label>Region <select id="rank-region"></select></label>
+      </div>
+      <div class="chart tall" id="c-rank"></div>
+      <button class="tbl-toggle" id="c-rank-t"></button><div id="c-rank-tbl"></div>
+      <p class="src">Sources: as above. "Per GDP" ratios divide by 2024 nominal GDP (World Bank). Taiwan has no World Bank GDP figure, so it drops out of the ratio views.</p>
+    </div>
+  </div>
+
+  <h2>Who punches above their weight?</h2>
+  <p class="section-dek">Each dot is a country. It sits on the diagonal if its share of big-company revenue equals its share of world GDP. Above the line means more corporate revenue than the size of its economy would suggest.</p>
+  <div class="grid">
+    <div class="card two-third">
+      <h3 id="c-sc-h">Hong Kong, Switzerland and Japan book far more big-company revenue than their GDP share; India and Indonesia book less</h3>
+      <p class="sub">Share of corporate revenue vs share of world GDP, both log scales. Dot size = number of companies.</p>
+      <div class="card-tools" id="sc-tools"></div>
+      <div class="chart tall" id="c-sc"></div>
+      <button class="tbl-toggle" id="c-sc-t"></button><div id="c-sc-tbl"></div>
+      <p class="src">Source: Forbes Global 2000 (2026), or all sources reconciled in <code>data_analysis</code> (Forbes + Fortune + listed universe + Wikipedia lists); World Bank GDP 2024. Countries with zero companies cannot sit on a log axis and are listed in the notes.</p>
+    </div>
+    <div class="card third">
+      <h3>The over/under index</h3>
+      <p class="sub">Revenue share ÷ GDP share. 1.0× = in proportion.</p>
+      <div class="chart tall" id="c-idx"></div>
+      <p class="src">Forbes view; countries with at least $100B GDP and 3+ firms.</p>
+    </div>
+  </div>
+  <div id="n-sc"></div>
+  <div class="explainer" id="x-index"></div>
+
+  <h2>Six regions</h2>
+  <div class="grid">
+    <div class="card two-third">
+      <h3>North America has 28% of world GDP but 40% of big-company revenue and 58% of market value</h3>
+      <p class="sub">Each region's share of the world total, %</p>
+      <div class="chart" id="c-reg"></div>
+      <button class="tbl-toggle" id="c-reg-t"></button><div id="c-reg-tbl"></div>
+      <p class="src">Source: Forbes Global 2000 (2026); CB Insights; World Bank GDP 2024, with World Bank regions bridged to Forbes' six regions (South Asia → Asia-Pacific; MENA → "Middle East & Central Asia"; Europe includes Russia, Turkey and Central Asia).</p>
+    </div>
+    <div class="card third">
+      <h3>The Gulf runs the fattest margins</h3>
+      <p class="sub">Net profit ÷ revenue for Global 2000 firms in each region</p>
+      <div class="chart" id="c-marg"></div>
+      <p class="src">Source: Forbes Global 2000 (2026).</p>
+    </div>
+  </div>
+  <div id="n-reg"></div>
+
+  <h2>Head to head: US vs China vs Europe vs Japan vs India</h2>
+  <p class="section-dek">Every measure is shown as a share of the world total, so very different measures can sit side by side. This compares shares only. Nothing is added across ledgers.</p>
+  <div class="grid">
+    <div class="card">
+      <h3 id="c-h2h-h">The US has 26% of world GDP, 55% of big-company market value and 69% of unicorn value</h3>
+      <p class="sub">Share of the world total, %</p>
+      <div class="card-tools">
+        <label>China as <select id="h2h-china"><option value="1">China (mainland)</option><option value="2">Greater China (+HK, Taiwan)</option></select></label>
+        <label>Europe as <select id="h2h-eu"><option value="3">EU-27</option><option value="4">Europe (all, incl. UK, Switz.)</option></select></label>
+      </div>
+      <div class="chart" id="c-h2h"></div>
+      <button class="tbl-toggle" id="c-h2h-t"></button><div id="c-h2h-tbl"></div>
+      <p class="src">Sources: World Bank GDP 2024; Forbes Global 2000 (2026); CB Insights unicorns; CompaniesMarketCap listed universe (coverage-limited outside the US).</p>
+    </div>
+  </div>
+  <div id="n-h2h"></div>
+
+  <h2 id="india">India deep-dive</h2>
+  <p class="section-dek">India is the world's fifth-largest economy. It has the fourth-largest number of Global 2000 companies, but those companies are small for the list, and much of their weight comes from state-owned banks, oil firms and the LIC.</p>
+  <div id="tiles-india"></div>
+  <div class="grid">
+    <div class="card">
+      <h3 id="c-ind-h">Reliance and LIC lead India's 70 giants by revenue; HDFC Bank and TCS lead on value</h3>
+      <p class="sub" id="c-ind-sub"></p>
+      <div class="card-tools"><span id="ind-tools"></span>
+        <label>Show <select id="ind-n"><option value="25" selected>Top 25</option><option value="70">All 70</option></select></label></div>
+      <div class="chart tall" id="c-ind"></div>
+      <button class="tbl-toggle" id="c-ind-t"></button><div id="c-ind-tbl"></div>
+      <p class="src">Source: Forbes Global 2000 (2026). Revenue and profit are FY2025 (year to March 2025 for most Indian firms), converted to US$ by Forbes. Market value is from May 2026.</p>
+    </div>
+    <div class="card half">
+      <h3>India's giants lean on finance and energy</h3>
+      <p class="sub">Share of revenue by sector: India's 70 vs the whole Global 2000</p>
+      <div class="chart" id="c-isec"></div>
+      <button class="tbl-toggle" id="c-isec-t"></button><div id="c-isec-tbl"></div>
+      <p class="src">Source: Forbes Global 2000 (2026), 13-sector taxonomy.</p>
+    </div>
+    <div class="card half">
+      <h3 id="c-peer-h">India vs peers</h3>
+      <p class="sub" id="c-peer-sub"></p>
+      <div class="card-tools"><select id="peer-metric"></select></div>
+      <div class="chart" id="c-peer"></div>
+      <button class="tbl-toggle" id="c-peer-t"></button><div id="c-peer-tbl"></div>
+      <p class="src">Sources: Forbes Global 2000 (2026); CompaniesMarketCap; CB Insights; World Bank GDP 2024.</p>
+    </div>
+    <div class="card half">
+      <h3>India's 63 unicorns: a long tail behind the top few</h3>
+      <p class="sub">Latest private valuation, US$ billion, top 25</p>
+      <div class="chart tall" id="c-iuni"></div>
+      <button class="tbl-toggle" id="c-iuni-t"></button><div id="c-iuni-tbl"></div>
+      <p class="src">Source: CB Insights unicorn list (as scraped in 2026). Valuations are the last private round, not market prices. Firms that have listed (Zomato, Paytm, Nykaa…) leave the list.</p>
+    </div>
+    <div class="card half">
+      <h3>India's most valuable listed companies</h3>
+      <p class="sub">Market capitalisation, listed-universe snapshot (2026), top 25</p>
+      <div class="chart tall" id="c-ilist"></div>
+      <button class="tbl-toggle" id="c-ilist-t"></button><div id="c-ilist-tbl"></div>
+      <p class="src">Source: CompaniesMarketCap (2026 scrape), on a different date from Forbes' May 2026 values, so the two will not match.</p>
+    </div>
+  </div>
+  <div id="n-india"></div>
+  <div id="n-india-ang"></div>
+  <div id="n-cav"></div>
+</div>
+
+<script>
+const G = ATLAS.geography, W = G.world, F = ATLAS.fmtUSD, N = ATLAS.fmtNum, P = ATLAS.fmtPct;
+const CS = G.countries, byIso = Object.fromEntries(CS.map(c => [c.iso, c]));
+const ACC = ATLAS.css('--accent'), PAL = ATLAS.palette(), SEQ = ATLAS.seq();
+echarts.registerMap('world', window.WORLD_GEO);
+
+function seg(el, opts, cur, onChange) {
+  el = document.getElementById(el);
+  el.innerHTML = opts.map(([k, l]) => `<button type="button" data-k="${k}" class="${k === cur ? 'on' : ''}">${l}</button>`).join(' ');
+  el.querySelectorAll('button').forEach(b => b.onclick = () => { el.querySelectorAll('button').forEach(x => x.classList.toggle('on', x === b)); onChange(b.dataset.k); });
+}
+function manualToggle(btnId, boxId, getRows, cols) {
+  const btn = document.getElementById(btnId), box = document.getElementById(boxId);
+  btn.textContent = 'Show data table'; box.hidden = true;
+  btn.onclick = () => { box.hidden = !box.hidden; btn.textContent = box.hidden ? 'Show data table' : 'Hide data table'; if (!box.hidden) ATLAS.table(box, getRows(), typeof cols === 'function' ? cols() : cols); };
+}
+
+// metrics available per country
+const MET = {
+  g_n:   { l: 'Global 2000 companies (count)', f: v => N(v) + ' firms', tot: W.g_n, src: 'Forbes Global 2000' },
+  g_rev: { l: 'Global 2000 revenue', f: v => F(v), tot: W.g_rev, src: 'Forbes Global 2000' },
+  g_prof:{ l: 'Global 2000 profit', f: v => F(v), tot: W.g_prof, src: 'Forbes Global 2000' },
+  g_mv:  { l: 'Global 2000 market value', f: v => F(v), tot: W.g_mv, src: 'Forbes Global 2000' },
+  u_n:   { l: 'Unicorns (count)', f: v => N(v) + ' unicorns', tot: W.u_n, src: 'CB Insights' },
+  u_val: { l: 'Unicorn valuation', f: v => F(v), tot: W.u_val, src: 'CB Insights' },
+  l_mv:  { l: 'Listed-company market cap (all listed firms covered)', f: v => F(v), tot: W.l_mv, src: 'CompaniesMarketCap listed universe' },
+  x_rev: { l: 'Revenue, all sources reconciled', f: v => F(v), tot: G.mixed_rev_total, src: 'data_analysis reconciled universe' },
+};
+const RATIO = {
+  r_rev: { l: 'Global 2000 revenue ÷ GDP', f: v => (v * 100).toFixed(0) + '% of GDP', get: c => c.gdp && c.g_rev ? c.g_rev / c.gdp : null },
+  r_lmv: { l: 'Listed market cap ÷ GDP', f: v => (v * 100).toFixed(0) + '% of GDP', get: c => c.gdp && c.l_mv ? c.l_mv / c.gdp : null },
+  r_uni: { l: 'Unicorns per $1T of GDP', f: v => v.toFixed(1) + ' per $1T GDP', get: c => c.gdp && c.u_n ? c.u_n / (c.gdp / 1e12) : null },
+};
+const val = (c, k) => MET[k] ? (c[k] || 0) : (RATIO[k].get(c) || 0);
+const lbl = k => (MET[k] || RATIO[k]).l, fmt = (k, v) => (MET[k] || RATIO[k]).f(v);
+function rankOf(k, c) { const v = val(c, k); if (!v) return null; return CS.filter(x => val(x, k) > v).length + 1; }
+
+const us = byIso.USA, cn = byIso.CHN, ind = byIso.IND;
+ATLAS.tiles('tiles', [
+  { v: P(us.g_rev / W.g_rev * 100, 0), l: 'US share of Global 2000 revenue', s: `vs ${P(us.gdp / W.gdp * 100, 0)} of world GDP` },
+  { v: P(us.g_mv / W.g_mv * 100, 0), l: 'US share of Global 2000 market value', s: F(us.g_mv) + ' of ' + F(W.g_mv) },
+  { v: P(cn.g_rev / W.g_rev * 100, 0), l: 'China (mainland) revenue share', s: `${cn.g_n} firms; only ${P(cn.g_mv / W.g_mv * 100, 0)} of market value` },
+  { v: CS.filter(c => c.g_n).length, l: 'Countries with a Global 2000 firm', s: 'out of ~200 economies' },
+  { v: '#' + G.india_ranks.g_n, l: 'India\'s rank by number of giants', s: `${ind.g_n} firms; #${G.india_ranks.g_rev} by their revenue` },
+  { v: '0', l: 'Russian firms in the 2026 list', s: `despite ${F(byIso.RUS.gdp)} GDP (#${CS.filter(c => c.gdp > byIso.RUS.gdp).length + 1} in the world)` },
+]);
+
+// ---------- map ----------
+(function () {
+  const sel = document.getElementById('map-metric');
+  const keys = ['g_n', 'g_rev', 'g_prof', 'g_mv', 'u_n', 'u_val', 'l_mv', 'r_rev', 'r_lmv'];
+  sel.innerHTML = keys.map(k => `<option value="${k}">${lbl(k)}</option>`).join('');
+  const HEAD = {
+    g_n: 'The US has 612 of the 2,000 largest public firms; China 275, Japan 180, India 70',
+    g_rev: 'US firms book $19.5T of Global 2000 revenue, China\'s $7.8T',
+    g_prof: 'US firms earn 42% of all Global 2000 profit',
+    g_mv: 'US firms are worth $50T, more than the rest of the world\'s giants combined',
+    u_n: 'Unicorns are an American story: 825 of 1,440 are US-based',
+    u_val: 'US unicorns carry 69% of all private paper valuation',
+    l_mv: 'US-listed companies are worth about 80% of the market cap we can measure',
+    r_rev: 'Relative to GDP, Hong Kong, Luxembourg, Switzerland and Japan host the most giant-company revenue',
+    r_lmv: 'Stock markets are deepest in Switzerland, Hong Kong and the US; India\'s is worth about 100% of its GDP',
+  };
+  let inst;
+  function draw() {
+    const k = sel.value, isRatio = !!RATIO[k];
+    const data = CS.map(c => ({ name: c.iso, value: val(c, k) > 0 ? Math.log10(val(c, k)) : null, c }));
+    const vs = data.filter(d => d.value != null).map(d => d.value);
+    const lo = Math.min(...vs), hi = Math.max(...vs);
+    document.getElementById('c-map-h').textContent = HEAD[k];
+    document.getElementById('c-map-sub').textContent = `${lbl(k)}, by country of headquarters. Colour on a log scale. ${data.filter(d => d.value != null).length} countries with data.`;
+    const opt = {
+      tooltip: { formatter: p => {
+        const c = p.data && p.data.c; const name = c ? c.name : (p.name);
+        if (!c) { const f = (window.WORLD_GEO.features.find(x => x.properties.name === p.name) || {}).properties; return `<b>${f ? f.label : p.name}</b><br>No companies in this pack's data`; }
+        const v = val(c, k), r = rankOf(k, c);
+        let h = `<b>${name}</b> · ${c.region}<br>${lbl(k)}: <b>${v ? fmt(k, v) : 'none'}</b>`;
+        if (v && r) h += ` (#${r})`;
+        if (v && MET[k]) h += `<br>${P(v / MET[k].tot * 100, 1)} of the world total`;
+        if (c.gdp) h += `<br>GDP 2024: ${F(c.gdp)} (${P(c.gdp / W.gdp * 100, 1)} of world)`;
+        h += `<br><span style="opacity:.75">${c.g_n || 0} Global 2000 firms · ${c.u_n || 0} unicorns${c.top ? '<br>Largest: ' + c.top : ''}</span>`;
+        return h; } },
+      visualMap: { type: 'continuous', min: lo, max: hi, left: 8, bottom: 10, calculable: false, orient: 'horizontal', itemWidth: 12, itemHeight: 180,
+        inRange: { color: SEQ }, text: [fmt(k, Math.pow(10, hi)), fmt(k, Math.pow(10, lo))], textStyle: { color: ATLAS.css('--text-2') },
+        formatter: v => fmt(k, Math.pow(10, v)) },
+      series: [{ type: 'map', map: 'world', roam: true, scaleLimit: { min: 1, max: 12 }, top: 10, bottom: 40, left: 0, right: 0, data,
+        itemStyle: { areaColor: ATLAS.css('--surface-2'), borderColor: ATLAS.css('--border'), borderWidth: .5 },
+        emphasis: { label: { show: false }, itemStyle: { areaColor: ACC } }, select: { disabled: true } }],
+    };
+    if (inst) inst.setOption(opt, true); else inst = ATLAS.chart('c-map', opt);
+  }
+  sel.onchange = draw; draw();
+  manualToggle('c-map-t', 'c-map-tbl', () => { const k = sel.value; return CS.filter(c => val(c, k) > 0).map(c => ({ name: c.name, region: c.region, v: val(c, k), sh: MET[k] ? val(c, k) / MET[k].tot * 100 : null, gdp: c.gdp })); },
+    () => [{ key: 'name', label: 'Country' }, { key: 'region', label: 'Region' }, { key: 'v', label: lbl(sel.value), num: true, fmt: v => fmt(sel.value, v) },
+      { key: 'sh', label: 'World share', num: true, fmt: v => v == null ? '—' : P(v, 2) }, { key: 'gdp', label: 'GDP 2024', num: true, fmt: v => F(v) }]);
+})();
+
+ATLAS.notes('n-map', { title: 'Reading the map', items: [
+  `<b>${CS.filter(c => c.g_n).length} countries</b> host at least one Global 2000 company. The top five (US, China, Japan, UK, France by revenue) hold about 68% of the list's revenue, and the top ten hold 82%.`,
+  `<b>Big economies with zero giants:</b> ${G.zero_forbes_big.map(z => `${z.name} (${F(z.gdp)} GDP)`).join(', ')}. Russia's absence reflects sanctions and delistings since 2022, as Forbes cannot or will not rank firms like Gazprom, Sberbank and Rosneft. They still exist and are still huge.`,
+  '<b>Hong Kong and Taiwan</b> are separate economies in Forbes and in this pack. Taiwan (TSMC, Foxconn) has no World Bank GDP figure, so it drops out of every "÷ GDP" view.',
+  `<b>Not shown on the map</b> (too small for a 1:50m map, or not in Natural Earth): ${G.not_on_map.join(', ')}. They are still in the tables and rankings.`,
+] });
+
+// ---------- rankings ----------
+(function () {
+  const ms = document.getElementById('rank-metric'), ns = document.getElementById('rank-n'), rs = document.getElementById('rank-region');
+  const keys = ['g_n', 'g_rev', 'g_prof', 'g_mv', 'u_n', 'u_val', 'l_mv', 'x_rev', 'r_rev', 'r_lmv', 'r_uni'];
+  ms.innerHTML = keys.map(k => `<option value="${k}">${lbl(k)}</option>`).join('');
+  const regs = [...new Set(CS.map(c => c.region))].filter(r => r !== 'Other').sort();
+  rs.innerHTML = '<option value="">All regions</option>' + regs.map(r => `<option>${r}</option>`).join('');
+  let inst, rows;
+  function draw() {
+    const k = ms.value, n = +ns.value, reg = rs.value;
+    let list = CS.filter(c => val(c, k) > 0 && (!reg || c.region === reg));
+    if (k === 'r_uni') list = list.filter(c => c.gdp > 100e9);  // tiny economies distort per-GDP counts
+    if (k === 'r_rev' || k === 'r_lmv') list = list.filter(c => c.gdp > 50e9);
+    list.sort((a, b) => val(b, k) - val(a, k));
+    rows = list.slice(0, n);
+    const top = rows[0];
+    document.getElementById('c-rank-h').textContent = top ? `${top.name} leads on ${lbl(k).toLowerCase()} with ${fmt(k, val(top, k))}` + (rows[1] ? `, ahead of ${rows[1].name} (${fmt(k, val(rows[1], k))})` : '') : 'No data';
+    document.getElementById('c-rank-sub').textContent = `${lbl(k)}, top ${rows.length}${reg ? ' in ' + reg : ''}` + (RATIO[k] ? '. Ratio views exclude small economies (GDP under $50B, or under $100B for unicorns).' : '');
+    const opt = {
+      grid: { left: 8, right: 90, top: 8, bottom: 8 },
+      tooltip: { formatter: p => { const c = rows[p.dataIndex], v = val(c, k);
+        return `<b>${c.name}</b> · #${p.dataIndex + 1}${reg ? ' in ' + reg : ''}<br>${lbl(k)}: <b>${fmt(k, v)}</b>` + (MET[k] ? `<br>${P(v / MET[k].tot * 100, 1)} of the world total` : '') +
+          `<br><span style="opacity:.75">GDP ${F(c.gdp)} · ${c.g_n || 0} Global 2000 firms · ${c.u_n || 0} unicorns</span>`; } },
+      xAxis: { type: 'value', axisLabel: { formatter: v => RATIO[k] ? (k === 'r_uni' ? v : (v * 100).toFixed(0) + '%') : (k === 'g_n' || k === 'u_n' ? v : F(v)) } },
+      yAxis: { type: 'category', inverse: true, data: rows.map(c => c.name), axisLabel: { interval: 0, fontSize: 11 } },
+      series: [{ type: 'bar', barWidth: '62%', data: rows.map(c => ({ value: val(c, k), itemStyle: { color: c.iso === 'IND' ? ACC : PAL[0] } })),
+        label: { show: true, position: 'right', fontSize: 11, color: ATLAS.css('--text-2'), formatter: p => fmt(k, p.value).replace(' firms', '').replace(' unicorns', '').replace(' of GDP', '').replace(' per $1T GDP', '') } }],
+    };
+    if (inst) inst.setOption(opt, true); else inst = ATLAS.chart('c-rank', opt);
+  }
+  [ms, ns, rs].forEach(s => s.onchange = draw); draw();
+  manualToggle('c-rank-t', 'c-rank-tbl', () => CS.map(c => ({ name: c.name, region: c.region, gdp: c.gdp, g_n: c.g_n, g_rev: c.g_rev, g_prof: c.g_prof, g_mv: c.g_mv, u_n: c.u_n, u_val: c.u_val, l_mv: c.l_mv, x_rev: c.x_rev })),
+    [{ key: 'name', label: 'Country' }, { key: 'region', label: 'Region' }, { key: 'gdp', label: 'GDP', num: true, fmt: v => F(v) },
+     { key: 'g_n', label: 'G2000 firms', num: true }, { key: 'g_rev', label: 'G2000 revenue', num: true, fmt: v => F(v) }, { key: 'g_prof', label: 'G2000 profit', num: true, fmt: v => F(v) },
+     { key: 'g_mv', label: 'G2000 mkt value', num: true, fmt: v => F(v) }, { key: 'u_n', label: 'Unicorns', num: true }, { key: 'u_val', label: 'Unicorn value', num: true, fmt: v => F(v) },
+     { key: 'l_mv', label: 'Listed mkt cap', num: true, fmt: v => F(v) }, { key: 'x_rev', label: 'Revenue (all sources)', num: true, fmt: v => F(v) }]);
+})();
+
+// ---------- scatter ----------
+const REGIONS = ['North America', 'Asia-Pacific', 'Europe', 'Middle East & Central Asia', 'Latin America', 'Africa'];
+(function () {
+  let view = 'forbes', inst;
+  function pts() {
+    return CS.filter(c => c.gdp && (view === 'forbes' ? c.g_rev : c.x_rev)).map(c => {
+      const rs = (view === 'forbes' ? c.g_rev / W.g_rev : c.x_rev / G.mixed_rev_total) * 100, gs = c.gdp / W.gdp * 100;
+      return { c, rs, gs, idx: rs / gs, n: view === 'forbes' ? c.g_n : c.x_n };
+    });
+  }
+  function draw() {
+    const P_ = pts();
+    const series = REGIONS.map((r, i) => ({ name: r, type: 'scatter', color: PAL[i],
+      data: P_.filter(p => p.c.region === r).map(p => ({ value: [p.gs, p.rs], p })),
+      symbolSize: (v, prm) => 6 + Math.sqrt((prm.data && prm.data.p && prm.data.p.n) || 1) * 1.6,
+      label: { show: true, formatter: d => (d.data.p.rs > 1.5 || d.data.p.gs > 1.5 || d.data.p.c.iso === 'IND' || d.data.p.idx > 2.5) ? d.data.p.c.name : '', position: 'right', fontSize: 10, color: ATLAS.css('--text-2') },
+      emphasis: { focus: 'self' } }));
+    series.push({ type: 'line', name: 'In proportion (1:1)', data: [[0.005, 0.005], [60, 60]], showSymbol: false, silent: true,
+      lineStyle: { type: 'dashed', color: ATLAS.css('--text-3'), width: 1 }, tooltip: { show: false } });
+    const opt = {
+      legend: { top: 0, data: REGIONS },
+      grid: { left: 8, right: 30, top: 50, bottom: 36 },
+      tooltip: { formatter: d => { const p = d.data.p; if (!p) return '';
+        return `<b>${p.c.name}</b> · ${p.c.region}<br>Share of ${view === 'forbes' ? 'Global 2000' : 'reconciled'} revenue: <b>${P(p.rs, 2)}</b><br>Share of world GDP: <b>${P(p.gs, 2)}</b><br>Index: <b>${p.idx.toFixed(2)}×</b> ${p.idx > 1 ? '(over-indexed)' : '(under-indexed)'}<br>${p.n} companies · revenue ${F(view === 'forbes' ? p.c.g_rev : p.c.x_rev)} · GDP ${F(p.c.gdp)}`; } },
+      xAxis: { type: 'log', name: 'share of world GDP, % (log scale)', nameLocation: 'middle', nameGap: 24, min: 0.01, max: 50, axisLabel: { formatter: v => v + '%' } },
+      yAxis: { type: 'log', name: 'share of corporate revenue, % (log)', min: 0.001, max: 60, axisLabel: { formatter: v => v + '%' } },
+      series,
+    };
+    if (inst) inst.setOption(opt, true); else inst = ATLAS.chart('c-sc', opt);
+  }
+  seg('sc-tools', [['forbes', 'Forbes Global 2000 only'], ['mixed', 'All sources reconciled']], view, k => { view = k; draw(); });
+  draw();
+  manualToggle('c-sc-t', 'c-sc-tbl', () => pts().map(p => ({ name: p.c.name, region: p.c.region, n: p.n, rs: p.rs, gs: p.gs, idx: p.idx })),
+    [{ key: 'name', label: 'Country' }, { key: 'region', label: 'Region' }, { key: 'n', label: 'Companies', num: true }, { key: 'rs', label: 'Revenue share', num: true, fmt: v => P(v, 2) },
+     { key: 'gs', label: 'GDP share', num: true, fmt: v => P(v, 2) }, { key: 'idx', label: 'Index', num: true, fmt: v => v.toFixed(2) + '×' }]);
+
+  // index bar
+  const L = CS.filter(c => c.gdp > 100e9 && c.g_n >= 3).map(c => ({ c, idx: (c.g_rev / W.g_rev) / (c.gdp / W.gdp) })).sort((a, b) => b.idx - a.idx);
+  const [neg, mid, pos] = ATLAS.diverging();
+  ATLAS.chart('c-idx', {
+    grid: { left: 8, right: 40, top: 8, bottom: 8 },
+    tooltip: { formatter: p => { const r = L[p.dataIndex]; return `<b>${r.c.name}</b><br>Index ${r.idx.toFixed(2)}× (#${p.dataIndex + 1} of ${L.length})<br>${P(r.c.g_rev / W.g_rev * 100, 2)} of Global 2000 revenue vs ${P(r.c.gdp / W.gdp * 100, 2)} of world GDP<br>${r.c.g_n} firms`; } },
+    xAxis: { type: 'log', min: 0.05, max: 5, axisLabel: { formatter: v => v + '×' } },
+    yAxis: { type: 'category', inverse: true, data: L.map(r => r.c.name), axisLabel: { interval: 0, fontSize: 10 } },
+    series: [{ type: 'bar', data: L.map(r => ({ value: +r.idx.toFixed(3), itemStyle: { color: r.c.iso === 'IND' ? ACC : r.idx >= 1 ? pos : neg } })),
+      markLine: { silent: true, symbol: 'none', data: [{ xAxis: 1 }], lineStyle: { color: ATLAS.css('--text-3') }, label: { formatter: '1×' } } }],
+  });
+})();
+(function () {
+  const zero = G.zero_forbes_big.map(z => z.name).join(', ');
+  ATLAS.notes('n-sc', { title: 'Who is over and under', items: [
+    '<b>Over-indexed</b> (Forbes view): Hong Kong 4.2×, Luxembourg 2.3×, Switzerland 2.2×, Japan 1.9×, South Korea 1.7×, Ireland 1.4×, United States 1.3×. These are headquarters economies: firms domicile there for tax, finance or history, and book revenue earned worldwide.',
+    `<b>Under-indexed</b>: China 0.80×, India 0.67×, and most of Latin America, Africa and Southeast Asia. Their economies run on small firms, state entities and informal work that big-company lists do not capture.`,
+    `<b>Off the chart entirely</b> (zero Global 2000 firms): ${zero}.`,
+    '<b>The fit is still strong:</b> across 60 countries, the rank correlation between GDP share and Global 2000 revenue share is ρ = 0.87. Big economies have big companies. The interesting part is the size of the deviations.',
+    '<b>Tax havens explode the index</b> in the reconciled view: Bermuda 26× and the Cayman Islands 33× (insurers and holding companies domiciled there).',
+  ] });
+  ATLAS.notes('x-index', { title: 'Explainer: the over/under index', items: [
+    'Index = (country\'s share of big-company revenue) ÷ (country\'s share of world GDP). A value of 2× means the country hosts twice as much big-company revenue as the size of its economy would predict.',
+    'It is a measure of <b>where companies are headquartered</b>, not where they sell. Nestlé books Indian sales in Switzerland, and Apple books Indian sales in the US.',
+    'The "reconciled" view adds Fortune 500 state firms, the 12,500-firm listed universe and Wikipedia country lists. That repairs part of the Forbes-only distortion, but its coverage is uneven (complete for the US, partial elsewhere).',
+  ] });
+  document.getElementById('x-index').className = 'explainer';
+})();
+
+// ---------- regions ----------
+(function () {
+  const R = G.regions;
+  const totU = R.reduce((s, r) => s + r.u_val, 0);
+  const metrics = [['gdp_share', 'World GDP', r => r.gdp_share * 100], ['g_rev', 'G2000 revenue', r => r.g_rev / W.g_rev * 100], ['g_prof', 'G2000 profit', r => r.g_prof / W.g_prof * 100],
+    ['g_mv', 'G2000 market value', r => r.g_mv / W.g_mv * 100], ['u_val', 'Unicorn valuation', r => r.u_val / totU * 100]];
+  ATLAS.chart('c-reg', {
+    legend: { top: 0 },
+    grid: { left: 8, right: 16, top: 40, bottom: 8 },
+    tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' }, formatter: ps => `<b>${ps[0].axisValue}</b><br>` + ps.map(p => `${p.marker}${p.seriesName}: <b>${p.value.toFixed(1)}%</b> of world`).join('<br>') },
+    xAxis: { type: 'category', data: R.map(r => r.region.replace('Middle East & Central Asia', 'Middle East & C. Asia')), axisLabel: { interval: 0, fontSize: 11 } },
+    yAxis: { type: 'value', axisLabel: { formatter: '{value}%' } },
+    series: metrics.map(([k, l, f], i) => ({ name: l, type: 'bar', data: R.map(r => +f(r).toFixed(2)), color: i === 0 ? ATLAS.css('--text-3') : PAL[i - 1] })),
+  });
+  ATLAS.tableToggle('c-reg-t', 'c-reg-tbl', R.map(r => Object.assign({}, r, { gs: r.gdp_share * 100, rs: r.g_rev / W.g_rev * 100, ms: r.g_mv / W.g_mv * 100 })),
+    [{ key: 'region', label: 'Region' }, { key: 'gdp', label: 'GDP', num: true, fmt: v => F(v) }, { key: 'gs', label: 'GDP share', num: true, fmt: v => P(v) },
+     { key: 'g_n', label: 'G2000 firms', num: true }, { key: 'g_rev', label: 'G2000 revenue', num: true, fmt: v => F(v) }, { key: 'rs', label: 'Rev share', num: true, fmt: v => P(v) },
+     { key: 'g_mv', label: 'G2000 mkt value', num: true, fmt: v => F(v) }, { key: 'ms', label: 'MV share', num: true, fmt: v => P(v) },
+     { key: 'g_margin', label: 'Net margin', num: true, fmt: v => P(v * 100) }, { key: 'u_n', label: 'Unicorns', num: true }, { key: 'x_n', label: 'Firms (all sources)', num: true }]);
+  const RM = R.slice().sort((a, b) => b.g_margin - a.g_margin);
+  ATLAS.chart('c-marg', {
+    grid: { left: 8, right: 50, top: 8, bottom: 8 },
+    tooltip: { formatter: p => { const r = RM[p.dataIndex]; return `<b>${r.region}</b><br>Net margin <b>${P(r.g_margin * 100)}</b><br>Profit ${F(r.g_prof)} on revenue ${F(r.g_rev)}<br>${r.g_n} firms`; } },
+    xAxis: { type: 'value', axisLabel: { formatter: '{value}%' } },
+    yAxis: { type: 'category', inverse: true, data: RM.map(r => r.region.replace('Middle East & Central Asia', 'Middle East & C. Asia')), axisLabel: { fontSize: 11 } },
+    series: [{ type: 'bar', data: RM.map(r => +(r.g_margin * 100).toFixed(1)), color: PAL[0], label: { show: true, position: 'right', formatter: '{c}%', color: ATLAS.css('--text-2') } }],
+  });
+  const na = R.find(r => r.region === 'North America'), me = R.find(r => r.region === 'Middle East & Central Asia'), af = R.find(r => r.region === 'Africa'), la = R.find(r => r.region === 'Latin America');
+  ATLAS.notes('n-reg', { title: 'Regional numbers', items: [
+    `<b>North America</b>: ${P(na.gdp_share * 100, 0)} of world GDP, ${P(na.g_rev / W.g_rev * 100, 0)} of Global 2000 revenue, ${P(na.g_mv / W.g_mv * 100, 0)} of market value and ${P(na.u_val / totU * 100, 0)} of unicorn value. The gap between revenue and value is the US valuation premium.`,
+    `<b>Asia-Pacific</b> is the biggest region by GDP (32%) and nearly matches North America on revenue (34%), but holds only ${P(R[1].g_mv / W.g_mv * 100, 0)} of market value. Investors pay far less per dollar of Asian sales.`,
+    `<b>The Middle East</b> (Forbes' "Middle East & Central Asia", which includes North Africa) runs a ${P(me.g_margin * 100, 0)} net margin, double the world's 9%, because of Saudi Aramco and the Gulf banks.`,
+    `<b>Africa</b> has ${af.g_n} Global 2000 firms, ${P(af.g_rev / W.g_rev * 100, 1)} of revenue against ${P(af.gdp_share * 100, 1)} of world GDP. <b>Latin America</b> has ${la.g_n} firms and ${P(la.g_rev / W.g_rev * 100, 1)} of revenue against ${P(la.gdp_share * 100, 1)} of GDP.`,
+  ] });
+})();
+
+// ---------- head to head ----------
+(function () {
+  const H = G.h2h;
+  const M2 = [['gdp', 'World GDP'], ['g_n', 'G2000 firms'], ['g_rev', 'G2000 revenue'], ['g_prof', 'G2000 profit'], ['g_mv', 'G2000 market value'], ['u_n', 'Unicorns'], ['u_val', 'Unicorn value'], ['l_mv', 'Listed mkt cap']];
+  let inst, blocs;
+  function draw() {
+    blocs = [H[0], H[+document.getElementById('h2h-china').value], H[+document.getElementById('h2h-eu').value], H[5], H[6]];
+    const colors = [PAL[0], PAL[7], PAL[2], PAL[3], ACC];
+    const opt = {
+      legend: { top: 0, data: blocs.map(b => b.label) },
+      grid: { left: 8, right: 16, top: 40, bottom: 8 },
+      tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' }, formatter: ps => { const k = M2[ps[0].dataIndex][0];
+        return `<b>${ps[0].axisValue}</b> — share of world<br>` + ps.map(p => { const b = blocs[p.seriesIndex];
+          return `${p.marker}${b.label}: <b>${p.value.toFixed(1)}%</b> <span style="opacity:.7">(${k === 'g_n' || k === 'u_n' ? N(b[k]) : F(b[k])})</span>`; }).join('<br>'); } },
+      xAxis: { type: 'category', data: M2.map(m => m[1]), axisLabel: { interval: 0, fontSize: 11 } },
+      yAxis: { type: 'value', axisLabel: { formatter: '{value}%' } },
+      series: blocs.map((b, i) => ({ name: b.label, type: 'bar', color: colors[i], data: M2.map(([k]) => +(b[k] / W[k] * 100).toFixed(2)) })),
+    };
+    if (inst) inst.setOption(opt, true); else inst = ATLAS.chart('c-h2h', opt);
+  }
+  document.getElementById('h2h-china').onchange = draw; document.getElementById('h2h-eu').onchange = draw; draw();
+  ATLAS.tableToggle('c-h2h-t', 'c-h2h-tbl', H.map(b => Object.assign({}, b, { margin: b.g_prof / b.g_rev * 100, rev_gdp: b.g_rev / b.gdp * 100, mv_rev: b.g_mv / b.g_rev })),
+    [{ key: 'label', label: 'Bloc' }, { key: 'gdp', label: 'GDP', num: true, fmt: v => F(v) }, { key: 'g_n', label: 'G2000 firms', num: true }, { key: 'g_rev', label: 'Revenue', num: true, fmt: v => F(v) },
+     { key: 'g_prof', label: 'Profit', num: true, fmt: v => F(v) }, { key: 'margin', label: 'Margin', num: true, fmt: v => P(v) }, { key: 'g_mv', label: 'Mkt value', num: true, fmt: v => F(v) },
+     { key: 'mv_rev', label: 'MV ÷ revenue', num: true, fmt: v => v.toFixed(2) + '×' }, { key: 'rev_gdp', label: 'Revenue ÷ GDP', num: true, fmt: v => P(v, 0) },
+     { key: 'u_n', label: 'Unicorns', num: true }, { key: 'u_val', label: 'Unicorn value', num: true, fmt: v => F(v) }, { key: 'l_mv', label: 'Listed mkt cap', num: true, fmt: v => F(v) }]);
+  const [U, C1, , E, , J, I] = H;
+  ATLAS.notes('n-h2h', { title: 'Head-to-head numbers', items: [
+    `<b>Valuation gap:</b> US giants are worth ${(U.g_mv / U.g_rev).toFixed(1)}× their revenue; China's ${(C1.g_mv / C1.g_rev).toFixed(2)}×, the EU's ${(E.g_mv / E.g_rev).toFixed(2)}×, Japan's ${(J.g_mv / J.g_rev).toFixed(2)}× and India's ${(I.g_mv / I.g_rev).toFixed(1)}×. Investors pay about twice as much for a dollar of Indian giant-company sales as for a dollar of Chinese or Japanese sales. Among the big blocs, only the US commands a higher multiple.`,
+    `<b>China vs US:</b> China has ${P(C1.gdp / W.gdp * 100, 0)} of world GDP and ${P(C1.g_rev / W.g_rev * 100, 0)} of Global 2000 revenue, but only ${P(C1.g_mv / W.g_mv * 100, 0)} of market value. Add Hong Kong and Taiwan and the revenue share rises to 18%.`,
+    `<b>EU-27</b>: ${P(E.gdp / W.gdp * 100, 0)} of GDP and ${E.g_n} giants, but only ${E.u_n} unicorns (${P(E.u_val / W.u_val * 100, 0)} of unicorn value). Europe builds big old companies, not new ones.`,
+    `<b>Japan</b> has ${J.g_n} giants, the third-largest count, and their revenue equals ${P(J.g_rev / J.gdp * 100, 0)} of Japan's GDP. But it has only ${J.u_n} unicorns.`,
+    `<b>India</b> matches its GDP share almost exactly on unicorn count (${P(I.u_n / W.u_n * 100, 1)} of the world's unicorns vs ${P(I.gdp / W.gdp * 100, 1)} of GDP), but lags on revenue (${P(I.g_rev / W.g_rev * 100, 1)}).`,
+  ] });
+})();
+
+// ---------- India ----------
+(function () {
+  const R = G.india_ranks, F70 = G.india_firms;
+  ATLAS.tiles('tiles-india', [
+    { v: ind.g_n, l: 'Indian firms in the Global 2000', s: `#${R.g_n} in the world, behind the US, China and Japan` },
+    { v: F(ind.g_rev), l: 'Their combined revenue', s: `#${R.g_rev} by revenue; ${P(ind.g_rev / ind.gdp * 100, 0)} of India's GDP` },
+    { v: F(ind.g_mv), l: 'Their market value (May 2026)', s: `#${R.g_mv} in the world; ${P(ind.g_mv / W.g_mv * 100, 1)} of the total` },
+    { v: P(ind.g_prof / ind.g_rev * 100), l: 'Net margin of India\'s 70', s: `vs ${P(W.g_prof / W.g_rev * 100)} for the whole list` },
+    { v: ind.u_n, l: 'Indian unicorns', s: `#${R.u_n} in the world; ${F(ind.u_val)} paper value` },
+    { v: F(ind.l_mv), l: 'Listed market cap (' + ind.l_n + ' firms)', s: `${P(ind.l_mv / ind.gdp * 100, 0)} of GDP; NSE is #${G.india_ex[0].rank} of ${G.n_exchanges} exchanges` },
+  ]);
+  let met = 'rev', inst;
+  const ML = { rev: 'Revenue', prof: 'Profit', mv: 'Market value', emp: 'Employees' };
+  const fv = v => met === 'emp' ? N(v) + ' staff' : F(v);
+  function draw() {
+    const n = +document.getElementById('ind-n').value;
+    const rows = F70.filter(f => f[met] != null).sort((a, b) => b[met] - a[met]).slice(0, n);
+    const tot = F70.reduce((s, f) => s + (f[met] || 0), 0);
+    document.getElementById('c-ind-sub').textContent = `${ML[met]} of India's Global 2000 firms, ${rows.length} shown. Total: ${fv(tot)}. Colour = sector.`;
+    const secs = [...new Set(F70.map(f => f.sector))];
+    const secRank = secs.map(s => [s, F70.filter(f => f.sector === s).reduce((x, f) => x + f.rev, 0)]).sort((a, b) => b[1] - a[1]).map(x => x[0]);
+    const col = s => { const i = secRank.indexOf(s); return i < 7 ? PAL[i] : ATLAS.css('--text-3'); };
+    const opt = {
+      grid: { left: 8, right: 70, top: 8, bottom: 8 },
+      tooltip: { formatter: p => { const f = rows[p.dataIndex];
+        return `<b>${f.company}</b> · ${f.city || ''}<br>${f.sector} · ${f.industry}<br>Forbes rank #${f.rank} · #${p.dataIndex + 1} in India by ${ML[met].toLowerCase()}<br><b>${ML[met]}: ${fv(f[met])}</b> (${P(f[met] / tot * 100)} of India's 70)<br>` +
+          `<span style="opacity:.75">Revenue ${F(f.rev)} · Profit ${F(f.prof)} · Mkt value ${F(f.mv)} · ${N(f.emp)} staff</span>`; } },
+      xAxis: { type: 'value', axisLabel: { formatter: v => met === 'emp' ? N(v) : F(v) } },
+      yAxis: { type: 'category', inverse: true, data: rows.map(f => f.company), axisLabel: { interval: 0, fontSize: n > 30 ? 9 : 11 } },
+      series: [{ type: 'bar', data: rows.map(f => ({ value: f[met], itemStyle: { color: col(f.sector) } })), label: { show: n <= 30, position: 'right', fontSize: 10, color: ATLAS.css('--text-2'), formatter: p => met === 'emp' ? N(p.value) : F(p.value) } }],
+    };
+    document.getElementById('c-ind').style.height = (n > 30 ? 1100 : 620) + 'px';
+    if (inst) { inst.resize(); inst.setOption(opt, true); } else inst = ATLAS.chart('c-ind', opt);
+  }
+  seg('ind-tools', Object.entries(ML), met, k => { met = k; draw(); });
+  document.getElementById('ind-n').onchange = draw; draw();
+  ATLAS.tableToggle('c-ind-t', 'c-ind-tbl', F70, [{ key: 'company', label: 'Company' }, { key: 'rank', label: 'Forbes rank', num: true }, { key: 'sector', label: 'Sector' }, { key: 'industry', label: 'Industry' },
+    { key: 'rev', label: 'Revenue', num: true, fmt: v => F(v) }, { key: 'prof', label: 'Profit', num: true, fmt: v => F(v) }, { key: 'mv', label: 'Mkt value', num: true, fmt: v => F(v) }, { key: 'emp', label: 'Employees', num: true, fmt: v => N(v) }]);
+
+  // sectors
+  const S = G.india_sectors.filter(s => s.india > 0 || s.world > 0.01);
+  ATLAS.chart('c-isec', {
+    legend: { top: 0, data: ['India\'s 70', 'Global 2000'] },
+    grid: { left: 8, right: 30, top: 34, bottom: 8 },
+    tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' }, formatter: ps => { const s = S[ps[0].dataIndex]; return `<b>${s.sector}</b><br>India: <b>${P(s.india * 100)}</b> of revenue (${s.n} firms)<br>Global 2000: <b>${P(s.world * 100)}</b><br>${s.india > s.world ? 'India is ' + (s.india / s.world).toFixed(1) + '× heavier' : 'India is lighter'}`; } },
+    xAxis: { type: 'value', axisLabel: { formatter: '{value}%' } },
+    yAxis: { type: 'category', inverse: true, data: S.map(s => s.sector), axisLabel: { interval: 0, fontSize: 11 } },
+    series: [{ name: 'India\'s 70', type: 'bar', color: ACC, data: S.map(s => +(s.india * 100).toFixed(1)) }, { name: 'Global 2000', type: 'bar', color: ATLAS.css('--text-3'), data: S.map(s => +(s.world * 100).toFixed(1)) }],
+  });
+  ATLAS.tableToggle('c-isec-t', 'c-isec-tbl', S, [{ key: 'sector', label: 'Sector' }, { key: 'n', label: 'Indian firms', num: true }, { key: 'india', label: 'India share', num: true, fmt: v => P(v * 100) }, { key: 'world', label: 'World share', num: true, fmt: v => P(v * 100) }]);
+
+  // peers
+  const PM = { rev_gdp: ['Global 2000 revenue ÷ GDP', v => (v * 100).toFixed(0) + '%', 'India\'s giants book revenue worth 35% of GDP; Japan\'s book 101%'],
+               lmv_gdp: ['Listed market cap ÷ GDP', v => (v * 100).toFixed(0) + '%', 'India\'s stock market is worth about 100% of its GDP, deeper than China\'s or Germany\'s'],
+               mv_gdp: ['Global 2000 market value ÷ GDP', v => (v * 100).toFixed(0) + '%', 'India\'s 70 giants are worth 62% of GDP, more than China\'s 38%'],
+               uni_per_t: ['Unicorns per $1T of GDP', v => v.toFixed(1), 'India has 17 unicorns per $1T of GDP, behind only the US and UK among these big economies'],
+               g_per_t: ['Global 2000 firms per $1T of GDP', v => v.toFixed(1), 'India has 19 giants per $1T of GDP, more than China\'s 15'] };
+  const sel = document.getElementById('peer-metric');
+  sel.innerHTML = Object.entries(PM).map(([k, v]) => `<option value="${k}">${v[0]}</option>`).join('');
+  let pi, prow;
+  function drawP() {
+    const k = sel.value; prow = G.peers.slice().sort((a, b) => b[k] - a[k]);
+    document.getElementById('c-peer-h').textContent = PM[k][2];
+    document.getElementById('c-peer-sub').textContent = PM[k][0] + ', 15 large economies';
+    const opt = {
+      grid: { left: 8, right: 50, top: 8, bottom: 8 },
+      tooltip: { formatter: p => { const c = prow[p.dataIndex]; return `<b>${c.name}</b> · #${p.dataIndex + 1} of ${prow.length}<br>${PM[k][0]}: <b>${PM[k][1](c[k])}</b><br>GDP ${F(c.gdp)}${c.gdp_pc ? ' · GDP per head $' + Math.round(c.gdp_pc).toLocaleString() : ''}`; } },
+      xAxis: { type: 'value', axisLabel: { formatter: v => k.endsWith('gdp') ? (v * 100).toFixed(0) + '%' : v } },
+      yAxis: { type: 'category', inverse: true, data: prow.map(c => c.name), axisLabel: { interval: 0, fontSize: 11 } },
+      series: [{ type: 'bar', data: prow.map(c => ({ value: c[k], itemStyle: { color: c.iso === 'IND' ? ACC : PAL[0] } })), label: { show: true, position: 'right', fontSize: 10, color: ATLAS.css('--text-2'), formatter: p => PM[k][1](p.value) } }],
+    };
+    if (pi) pi.setOption(opt, true); else pi = ATLAS.chart('c-peer', opt);
+  }
+  sel.onchange = drawP; drawP();
+  ATLAS.tableToggle('c-peer-t', 'c-peer-tbl', G.peers, [{ key: 'name', label: 'Country' }, { key: 'gdp', label: 'GDP', num: true, fmt: v => F(v) },
+    { key: 'rev_gdp', label: 'G2000 rev ÷ GDP', num: true, fmt: v => P(v * 100, 0) }, { key: 'mv_gdp', label: 'G2000 MV ÷ GDP', num: true, fmt: v => P(v * 100, 0) },
+    { key: 'lmv_gdp', label: 'Listed cap ÷ GDP', num: true, fmt: v => P(v * 100, 0) }, { key: 'uni_per_t', label: 'Unicorns / $1T', num: true, fmt: v => v.toFixed(1) }, { key: 'g_per_t', label: 'G2000 firms / $1T', num: true, fmt: v => v.toFixed(1) }]);
+
+  // unicorns
+  const IU = G.india_unicorns.slice(0, 25);
+  ATLAS.chart('c-iuni', {
+    grid: { left: 8, right: 50, top: 8, bottom: 8 },
+    tooltip: { formatter: p => { const u = IU[p.dataIndex]; return `<b>${u.company}</b> · ${u.city}<br>${u.industry}<br>Valuation <b>${F(u.val)}</b> (#${p.dataIndex + 1} in India)<br>${P(u.val / ind.u_val * 100)} of India's unicorn value<br>Became a unicorn: ${u.joined}`; } },
+    xAxis: { type: 'value', axisLabel: { formatter: v => '$' + v + 'B' } },
+    yAxis: { type: 'category', inverse: true, data: IU.map(u => u.company), axisLabel: { interval: 0, fontSize: 11 } },
+    series: [{ type: 'bar', color: PAL[1], data: IU.map(u => +(u.val / 1e9).toFixed(2)), label: { show: true, position: 'right', fontSize: 10, formatter: p => '$' + p.value + 'B', color: ATLAS.css('--text-2') } }],
+  });
+  ATLAS.tableToggle('c-iuni-t', 'c-iuni-tbl', G.india_unicorns, [{ key: 'company', label: 'Company' }, { key: 'city', label: 'City' }, { key: 'industry', label: 'Industry' }, { key: 'val', label: 'Valuation', num: true, fmt: v => F(v) }, { key: 'joined', label: 'Joined' }]);
+  // listed
+  const IL = G.india_listed_top;
+  ATLAS.chart('c-ilist', {
+    grid: { left: 8, right: 50, top: 8, bottom: 8 },
+    tooltip: { formatter: p => { const c = IL[p.dataIndex]; return `<b>${c.company}</b><br>Market cap <b>${F(c.mv)}</b> (#${p.dataIndex + 1} in India)<br>${P(c.mv / ind.l_mv * 100)} of India's measured listed market cap${c.rev ? '<br>Revenue ' + F(c.rev) : ''}`; } },
+    xAxis: { type: 'value', axisLabel: { formatter: v => '$' + v + 'B' } },
+    yAxis: { type: 'category', inverse: true, data: IL.map(c => c.company), axisLabel: { interval: 0, fontSize: 11 } },
+    series: [{ type: 'bar', color: PAL[0], data: IL.map(c => +(c.mv / 1e9).toFixed(1)), label: { show: true, position: 'right', fontSize: 10, formatter: p => '$' + p.value + 'B', color: ATLAS.css('--text-2') } }],
+  });
+  ATLAS.tableToggle('c-ilist-t', 'c-ilist-tbl', IL, [{ key: 'company', label: 'Company' }, { key: 'mv', label: 'Market cap', num: true, fmt: v => F(v) }, { key: 'rev', label: 'Revenue', num: true, fmt: v => F(v) }]);
+
+  const top5rev = F70.slice(0, 5).reduce((s, f) => s + f.rev, 0);
+  const psu = ['Life Insurance Corp. of India', 'Indian Oil', 'Oil & Natural Gas', 'State Bank of India', 'Bharat Petroleum'];
+  ATLAS.notes('n-india', { title: 'India: numbers to quote', items: [
+    `<b>${ind.g_n} Indian companies</b> are in the Forbes Global 2000, the fourth-largest contingent after the US (612), China (275) and Japan (180), and ahead of the UK (68). By combined revenue (${F(ind.g_rev)}) India ranks only <b>#${R.g_rev}</b>.`,
+    `<b>Small giants:</b> the average Indian Global 2000 firm books ${F(ind.g_rev / ind.g_n)} of revenue, against ${F(W.g_rev / 2000)} for the list as a whole and ${F(us.g_rev / us.g_n)} for a US member.`,
+    `<b>The state is big in India Inc.:</b> four of India's top five by revenue (LIC, Indian Oil, ONGC, SBI) are government-controlled. The top five together book ${F(top5rev)}, or ${P(top5rev / ind.g_rev * 100, 0)} of the revenue of all 70.`,
+    `<b>Revenue vs value:</b> Reliance leads on revenue ($114B) and value ($206B). HDFC Bank (#6 by revenue) is #2 by value ($171B), and TCS ($30B revenue) is worth $146B. LIC books $107B of revenue but is valued at only $59B, and Indian Oil $91B but $22B.`,
+    `<b>Sector tilt:</b> finance is ${P(G.india_sectors[0].india * 100, 0)} of Indian giant revenue (world: ${P(G.india_sectors[0].world * 100, 0)}), and energy & utilities ${P(G.india_sectors[2].india * 100, 0)} (world: ${P(G.india_sectors[2].world * 100, 0)}). Healthcare, industrials and food are almost absent, although India is the "pharmacy of the world".`,
+    `<b>Market depth:</b> India's listed companies are worth ${F(ind.l_mv)}, ${P(ind.l_mv / ind.gdp * 100, 0)} of GDP. That is deeper than China (${P(byIso.CHN.l_mv / byIso.CHN.gdp * 100, 0)}), Germany (${P(byIso.DEU.l_mv / byIso.DEU.gdp * 100, 0)}) or Brazil (${P(byIso.BRA.l_mv / byIso.BRA.gdp * 100, 0)}), but far behind the US (${P(us.l_mv / us.gdp * 100, 0)}). NSE is the world's #${G.india_ex[0].rank} exchange in this dataset.`,
+    `<b>Unicorns:</b> ${ind.u_n} Indian unicorns worth ${F(ind.u_val)} (#${R.u_n} in the world after the US, China and UK). The largest are ${G.india_unicorns.slice(0, 4).map(u => u.company + ' (' + F(u.val) + ')').join(', ')}.`,
+    `<b>Reconciled view:</b> adding the listed universe, ${N(ind.x_n)} Indian firms carry ${F(ind.x_rev)} of measured revenue, ${P(ind.x_rev / ind.gdp * 100, 0)} of GDP.`,
+  ] });
+  ATLAS.notes('n-india-ang', { title: 'India story angles', items: [
+    '"Many giants, small giants": India ranks 4th by count but 9th by revenue. Why do Indian firms stay mid-sized? Fragmented markets, low per-capita spending, and a rupee that lost value against the dollar.',
+    '"Investors pay a premium for India": Indian giants trade at about 1.8× revenue, against 0.9× for Chinese and 1.0× for Japanese giants (US: 2.6×). Is that a growth bet or froth?',
+    '"PSU heavyweights": LIC, IOC, ONGC, SBI, BPCL and NTPC are revenue giants with modest valuations. What disinvestment would mean for India\'s rank.',
+    '"Missing sectors": almost no Indian manufacturer or pharma firm sits among the world\'s 2,000 largest by revenue. Compare with China and South Korea.',
+    '"The unicorn hangover": India has 63 unicorns today. Several have listed, and others have been marked down.',
+  ] });
+  ATLAS.notes('n-cav', { title: 'Caveats', caveat: true, items: [
+    'Country = headquarters/domicile in Forbes, not where revenue is earned or who owns the shares. Revenue booked in Switzerland or the US is often earned in India.',
+    'Listed market cap by country comes from CompaniesMarketCap coverage (~10,000 firms). It is complete for large caps but misses many small listed firms, especially in India (NSE/BSE list 5,000+ firms) and China.',
+    'Forbes market values are from May 2026, CompaniesMarketCap values from the 2026 scrape, and GDP is 2024. Ratios mix these vintages, so quote them as approximate.',
+    'Rupee conversion: Forbes converts each firm\'s fiscal-year figures to US$. A weaker rupee shrinks Indian firms in dollar terms even when they grow in rupees.',
+    'Unicorn counts follow CB Insights\' "country" field (HQ). Some Indian-founded firms are headquartered in the US or Singapore and count there.',
+    'Russia\'s zero is a list artefact, not an economic fact. Iran, Pakistan, Bangladesh and Nigeria also have no Global 2000 members but have large firms.',
+  ] });
+})();
+</script>
+</body>
+</html>

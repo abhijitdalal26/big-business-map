@@ -1,0 +1,706 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scale — Big Business Map</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Serif+4:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
+<script src="assets/common.js"></script>
+<script src="data/scale.js"></script>
+<style>
+  .ctl { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; margin: 4px 0 10px; font-size: 14px; color: var(--text-2); }
+  .ctl label { display: inline-flex; gap: 6px; align-items: center; }
+  .ctl select, .ctl input[type=search] { font: inherit; font-size: 14px; padding: 4px 8px; border: 1px solid var(--border); border-radius: 6px; background: var(--surface); color: var(--text); max-width: 100%; }
+  .chart.tall { height: 640px; }
+  .chart.xtall { height: 760px; }
+  .answer { background: var(--surface-2); border-radius: 8px; padding: 10px 14px; margin: 8px 0; font-size: 15px; }
+  .answer b { color: var(--text); }
+  .grid.one { grid-template-columns: 1fr; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <p class="kicker">Scale</p>
+    <h1>The world's 2,000 biggest listed firms sell $52.9 trillion a year, and the top 100 take more than a third of it</h1>
+    <p class="dek">How big is big business? This page sizes the largest companies on earth by revenue, profit, market value, assets and staff, shows how steeply that size is concentrated, and translates the numbers into country-sized comparisons a reader can hold on to.</p>
+  </header>
+
+  <div id="tiles"></div>
+
+  <!-- ============ 1. Top companies ============ -->
+  <h2>Who are the biggest companies on earth?</h2>
+  <p class="section-dek">Pick a yardstick. The leaderboard changes completely depending on whether you count sales, profit, stock-market value, balance sheet or headcount. Indian companies are highlighted in red.</p>
+  <div class="grid one">
+    <div class="card">
+      <h3 id="c-top-title">The leaderboard depends on the yardstick</h3>
+      <p class="sub" id="c-top-sub">Forbes Global 2000, FY2025</p>
+      <div class="ctl">
+        <label>Metric <select id="top-metric">
+          <option value="3">Revenue</option><option value="4">Profit</option><option value="6">Market value</option>
+          <option value="5">Assets</option><option value="7">Employees</option></select></label>
+        <label>Show <select id="top-n"><option>25</option><option selected>50</option><option>100</option></select></label>
+        <label>Sector <select id="top-sector"><option value="">All sectors</option></select></label>
+        <label>Country <select id="top-country"><option value="">All countries</option></select></label>
+      </div>
+      <div class="chart xtall" id="c-top"></div>
+      <button class="tbl-toggle" id="c-top-t"></button><div id="c-top-tbl"></div>
+      <p class="src">Source: Forbes Global 2000 (2025 list; financials are latest fiscal year, mostly FY2025; market value as of May 2026).</p>
+    </div>
+  </div>
+  <div id="n-top"></div>
+
+  <!-- ============ 2. True top 100 ============ -->
+  <h2>The real top 100 includes giants with no share price</h2>
+  <p class="section-dek">Forbes only ranks listed companies. Add the state-owned, private and mutual firms from the Fortune Global 500 and Forbes' private-company list, and China's State Grid becomes the third-biggest company on earth by revenue.</p>
+  <div class="grid one">
+    <div class="card">
+      <h3>16 of the world's 100 biggest companies by revenue are invisible on a stock-market list</h3>
+      <p class="sub">Revenue, US$ billions, FY2025 — colour shows ownership</p>
+      <div class="ctl">
+        <label>Show <select id="tt-n"><option>25</option><option selected>50</option><option>100</option></select></label>
+        <label>Ownership <select id="tt-own"><option value="">All</option><option value="out">Only firms outside Forbes</option></select></label>
+      </div>
+      <div class="chart xtall" id="c-tt"></div>
+      <button class="tbl-toggle" id="c-tt-t"></button><div id="c-tt-tbl"></div>
+      <p class="src">Source: Forbes Global 2000 (2026), Fortune Global 500 (2026) firms absent from Forbes with hand-checked ownership labels, Forbes America's Largest Private Companies (2024). Duplicates removed.</p>
+    </div>
+  </div>
+  <div id="n-tt"></div>
+
+  <!-- ============ 3. Distribution ============ -->
+  <h2>How many companies are really big?</h2>
+  <p class="section-dek">Corporate size is wildly skewed: a few thousand firms clear $1 billion in sales, a couple of hundred clear $50 billion, and only two clear half a trillion.</p>
+  <div class="grid">
+    <div class="card">
+      <h3>Only 83 firms on earth sell more than $100 billion a year</h3>
+      <p class="sub">Number of companies with revenue at or above each threshold (log scale)</p>
+      <div class="chart" id="c-th"></div>
+      <button class="tbl-toggle" id="c-th-t"></button><div id="c-th-tbl"></div>
+      <p class="src">Source: Forbes Global 2000 (FY2025); listed universe of ~12,000 companies (SEC XBRL filings + CompaniesMarketCap estimates, 2025–26).</p>
+    </div>
+    <div class="card">
+      <h3>Most measured companies sit between $100 million and $10 billion of revenue</h3>
+      <p class="sub">Count of companies per revenue band, log-spaced bands</p>
+      <div class="ctl"><label>Dataset <select id="h-ds"><option value="listed">Listed universe (~12,000)</option><option value="forbes">Forbes Global 2000</option></select></label></div>
+      <div class="chart" id="c-hist"></div>
+      <button class="tbl-toggle" id="c-hist-t"></button><div id="c-hist-tbl"></div>
+      <p class="src">Source: as left. The Forbes list is cut off near $1B revenue by design, which is why its histogram has a cliff on the left.</p>
+    </div>
+  </div>
+  <div class="grid one">
+    <div class="card">
+      <h3>Rank and size fall in a near-straight line on a log-log chart — the signature of a power law</h3>
+      <p class="sub">Revenue (US$ billions, log) against rank (log). Dashed line: fitted power law. Hover any dot.</p>
+      <div class="ctl"><label>Dataset <select id="z-ds"><option value="forbes">Forbes Global 2000</option><option value="listed">Listed universe, top 5,000</option></select></label></div>
+      <div class="chart tall" id="c-zipf"></div>
+      <button class="tbl-toggle" id="c-zipf-t"></button><div id="c-zipf-tbl"></div>
+      <p class="src">Source: Forbes Global 2000 (FY2025); listed universe (SEC XBRL + CompaniesMarketCap). Fit is ordinary least squares on log10(revenue) vs log10(rank).</p>
+    </div>
+  </div>
+  <div id="n-dist"></div>
+
+  <!-- ============ 4. Concentration ============ -->
+  <h2>How concentrated is corporate power?</h2>
+  <p class="section-dek">Market value is far more concentrated than sales: investors pile into a handful of firms they expect to dominate the future.</p>
+  <div class="grid">
+    <div class="card">
+      <h3>The more a measure reflects the future, the more unequal it is</h3>
+      <p class="sub">Lorenz curves: cumulative share of firms (smallest to largest) vs cumulative share of the total. Further from the diagonal = more concentrated.</p>
+      <div class="chart" id="c-lor"></div>
+      <button class="tbl-toggle" id="c-lor-t"></button><div id="c-lor-tbl"></div>
+      <p class="src">Source: Forbes Global 2000 (FY2025). Profit curve uses the 1,872 profitable firms only; employees uses 1,798 firms that report headcount.</p>
+    </div>
+    <div class="card">
+      <h3>The top 100 firms hold 35% of revenue but 46% of market value</h3>
+      <p class="sub">Share of the Global 2000 total held by the largest N firms on each measure</p>
+      <div class="chart" id="c-topshare"></div>
+      <button class="tbl-toggle" id="c-topshare-t"></button><div id="c-topshare-tbl"></div>
+      <p class="src">Source: Forbes Global 2000 (FY2025; market value May 2026). Firms are re-ranked separately for each measure.</p>
+    </div>
+    <div class="card">
+      <h3>Seven American tech firms are worth a sixth of every listed company we can measure</h3>
+      <p class="sub">Share of total market value of ~10,100 listed companies ($150.7T), by size band</p>
+      <div class="chart" id="c-bands"></div>
+      <button class="tbl-toggle" id="c-bands-t"></button><div id="c-bands-tbl"></div>
+      <p class="src">Source: listed universe, market caps from CompaniesMarketCap (2026 snapshot). Magnificent 7 = Nvidia, Apple, Alphabet, Microsoft, Amazon, Meta, Tesla.</p>
+    </div>
+    <div class="card">
+      <h3>15 companies are now worth more than $1 trillion — 12 of them American</h3>
+      <p class="sub">Market capitalisation, US$ trillions (2026 snapshot)</p>
+      <div class="chart" id="c-tril"></div>
+      <button class="tbl-toggle" id="c-tril-t"></button><div id="c-tril-tbl"></div>
+      <p class="src">Source: listed universe (CompaniesMarketCap snapshot, 2026). SpaceX appears as listed in the source; check its status before quoting.</p>
+    </div>
+  </div>
+  <div id="n-conc"></div>
+
+  <!-- ============ 5. People ============ -->
+  <h2>Who employs the world?</h2>
+  <p class="section-dek">The Global 2000 employ 92.6 million people — about 2.5% of the world's 3.7 billion workers. Size in staff and size in sales are only loosely related.</p>
+  <div class="grid">
+    <div class="card">
+      <h3>Walmart alone employs 2.1 million people — more than the population of many countries</h3>
+      <p class="sub">Employees, largest employers in the Global 2000</p>
+      <div class="ctl"><label>Show <select id="emp-n"><option>15</option><option selected>25</option><option>50</option></select></label></div>
+      <div class="chart tall" id="c-emp"></div>
+      <button class="tbl-toggle" id="c-emp-t"></button><div id="c-emp-tbl"></div>
+      <p class="src">Source: Forbes Global 2000 (2026). 202 firms do not report headcount.</p>
+    </div>
+    <div class="card">
+      <h3>Revenue per head ranges from tens of thousands to tens of millions of dollars</h3>
+      <p class="sub">Employees (log) vs revenue (US$ billions, log). Diagonal guides: $100K, $1M and $10M of revenue per employee.</p>
+      <div class="chart tall" id="c-sc"></div>
+      <button class="tbl-toggle" id="c-sc-t"></button><div id="c-sc-tbl"></div>
+      <p class="src">Source: Forbes Global 2000 (FY2025). Firms with fewer than 1,000 reported staff excluded.</p>
+    </div>
+  </div>
+  <div class="grid one">
+    <div class="card">
+      <h3 id="c-rpe-title">Productivity leaders and laggards</h3>
+      <p class="sub">Per employee, US$ — firms with at least 1,000 staff</p>
+      <div class="ctl">
+        <label>Measure <select id="rpe-m"><option value="rpe">Revenue per employee</option><option value="ppe">Profit per employee</option></select></label>
+        <label>Show <select id="rpe-dir"><option value="top">Top 20</option><option value="bot">Bottom 20</option></select></label>
+      </div>
+      <div class="chart tall" id="c-rpe"></div>
+      <button class="tbl-toggle" id="c-rpe-t"></button><div id="c-rpe-tbl"></div>
+      <p class="src">Source: Forbes Global 2000 (FY2025). Revenue per employee flatters commodity traders, holding companies and outsourcers that book pass-through sales.</p>
+    </div>
+  </div>
+  <div id="n-ppl"></div>
+
+  <!-- ============ 6. Profit ============ -->
+  <h2>Profit machines and loss makers</h2>
+  <p class="section-dek">The Global 2000 keep about 9 cents of every dollar of sales as profit. 128 firms lost money; together they lost $186 billion.</p>
+  <div class="grid">
+    <div class="card">
+      <h3 id="c-pl-title">Five firms each made more than $85 billion of profit</h3>
+      <p class="sub">Net profit, US$ billions, FY2025</p>
+      <div class="ctl"><label>View <select id="pl-v"><option value="top">Most profitable 20</option><option value="bot">Biggest loss makers 20</option></select></label></div>
+      <div class="chart tall" id="c-pl"></div>
+      <button class="tbl-toggle" id="c-pl-t"></button><div id="c-pl-tbl"></div>
+      <p class="src">Source: Forbes Global 2000 (FY2025).</p>
+    </div>
+    <div class="card">
+      <h3>The typical big company keeps about 10% of sales as profit</h3>
+      <p class="sub">Number of companies by net margin (profit ÷ revenue), 2.5-point bands; tails folded into the end bars</p>
+      <div class="ctl"><label>Sector <select id="m-sector"><option value="">All sectors</option></select></label></div>
+      <div class="chart tall" id="c-marg"></div>
+      <button class="tbl-toggle" id="c-marg-t"></button><div id="c-marg-tbl"></div>
+      <p class="src">Source: Forbes Global 2000 (FY2025). Bank and insurer "revenue" is defined differently, which inflates financial-sector margins.</p>
+    </div>
+  </div>
+  <div class="grid one">
+    <div class="card">
+      <h3>Technology turns 17% of sales into profit; construction and real estate under 4%</h3>
+      <p class="sub">Blended net margin (sector profit ÷ sector revenue), %</p>
+      <div class="chart" id="c-secm"></div>
+      <button class="tbl-toggle" id="c-secm-t"></button><div id="c-secm-tbl"></div>
+      <p class="src">Source: Forbes Global 2000 (FY2025), sectors per the atlas taxonomy.</p>
+    </div>
+  </div>
+  <div id="n-prof"></div>
+
+  <!-- ============ 7. Beeswarm ============ -->
+  <h2>Every listed company we can measure</h2>
+  <p class="section-dek">Each dot is one of ~10,100 listed companies, placed by market value on a log scale. Hover any dot; type a name to find it. The thickest crowd sits between $500 million and $10 billion.</p>
+  <div class="grid one">
+    <div class="card">
+      <h3>Ten thousand companies, $150 trillion — and half of that value is American</h3>
+      <p class="sub">Market capitalisation, US$ (log scale), by region. Vertical spread within a row is random jitter so dots don't overlap.</p>
+      <div class="ctl"><label>Find a company <input type="search" id="bee-q" placeholder="e.g. Infosys, Toyota"></label><span id="bee-hit"></span></div>
+      <div class="chart xtall" id="c-bee"></div>
+      <button class="tbl-toggle" id="c-bee-t"></button><div id="c-bee-tbl"></div>
+      <p class="src">Source: listed universe — CompaniesMarketCap market caps (2026 snapshot), SEC EDGAR for US revenue. Coverage is US-complete and partial elsewhere; ~48,000 companies are listed worldwide.</p>
+    </div>
+  </div>
+  <div id="n-bee"></div>
+
+  <!-- ============ 8. Company vs country ============ -->
+  <h2>Companies the size of countries</h2>
+  <p class="section-dek">Rank companies alongside national economies and Walmart's sales land between Poland and Belgium. Apple's stock-market value is bigger than India's annual GDP. These comparisons are vivid — and need a careful caveat.</p>
+  <div class="grid one">
+    <div class="card">
+      <h3 id="c-cvc-title">Walmart's sales would rank it 22nd among the world's economies</h3>
+      <p class="sub" id="c-cvc-sub">Company revenue (FY2025) ranked among country GDP (2024), US$ billions, log scale — scroll or drag the slider</p>
+      <div class="ctl">
+        <label>Compare companies by <select id="cvc-m"><option value="rev">Revenue</option><option value="mc">Market value</option></select></label>
+        <label>Pick a company <select id="cvc-pick"></select></label>
+      </div>
+      <div class="answer" id="cvc-answer"></div>
+      <div class="chart xtall" id="c-cvc"></div>
+      <button class="tbl-toggle" id="c-cvc-t"></button><div id="c-cvc-tbl"></div>
+      <p class="src">Source: World Bank GDP 2024 (current US$); company revenue from Forbes Global 2000 / Fortune Global 500 (FY2025); market value from the listed universe (2026 snapshot).</p>
+    </div>
+  </div>
+  <div id="n-cvc"></div>
+  <div id="n-cav"></div>
+</div>
+
+<script>
+(function () {
+  const D = ATLAS.scale;
+  const P = ATLAS.palette();
+  const ACC = ATLAS.css('--accent'), MUTED = ATLAS.css('--text-3'), GRID = ATLAS.css('--grid');
+  const $ = id => document.getElementById(id);
+  const usdB = v => ATLAS.fmtUSD(v, 'busd');
+  const F = D.forbes; // [name,country,sector,rev,pro,ast,mv,emp,rank]
+  const METRIC = { 3: ['Revenue', 'rev'], 4: ['Profit', 'pro'], 5: ['Assets', 'ast'], 6: ['Market value', 'mv'], 7: ['Employees', 'emp'] };
+  const fmtM = (i, v) => i === 7 ? ATLAS.fmtNum(v) + ' people' : usdB(v);
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+  // dynamic table toggle: rebuilds rows on each redraw while open
+  function dynTable(btnId, boxId, cols) {
+    const btn = $(btnId), box = $(boxId); let rows = [], open = false;
+    box.hidden = true; btn.textContent = 'Show data table';
+    btn.onclick = () => { open = !open; box.hidden = !open; btn.textContent = open ? 'Hide data table' : 'Show data table'; if (open) ATLAS.table(box, rows, cols); };
+    return r => { rows = r; if (open) ATLAS.table(box, rows, cols); };
+  }
+  function fillSelect(el, items) { items.forEach(v => { const o = document.createElement('option'); o.value = v; o.textContent = v; el.append(o); }); }
+
+  // ---------------- tiles ----------------
+  ATLAS.tiles('tiles', [
+    { v: '$' + D.totals.rev.toFixed(1) + 'T', l: 'Revenue of the Global 2000', s: '≈ ' + Math.round(D.totals.rev / D.world_gdp * 100) + '% of world GDP (scale, not value added)' },
+    { v: '$' + D.totals.pro.toFixed(1) + 'T', l: 'Their combined profit', s: D.profit.margin_blended.toFixed(1) + '% blended net margin' },
+    { v: '$' + D.totals.mv + 'T', l: 'Their market value', s: 'May 2026' },
+    { v: (D.totals.emp / 1e6).toFixed(1) + 'M', l: 'People they employ', s: 'median firm: ' + ATLAS.fmtNum(D.medians.emp) },
+    { v: D.conc.rev.top['100'] + '%', l: 'Revenue share of top 100', s: 'it takes ' + D.conc.rev.half + ' firms to reach half' },
+    { v: D.mag7_share + '%', l: 'Magnificent 7 share of all listed value', s: '$' + D.mag7_mc + 'T of $' + D.listed_total_mc + 'T, 2026' },
+  ]);
+
+  // ---------------- 1. top companies ----------------
+  fillSelect($('top-sector'), D.sectors);
+  const countries = [...new Set(F.map(r => r[1]))].sort();
+  fillSelect($('top-country'), countries);
+  const tTop = dynTable('c-top-t', 'c-top-tbl', [
+    { key: 'rk', label: 'Rank', num: true }, { key: 'name', label: 'Company' }, { key: 'country', label: 'Country' },
+    { key: 'sector', label: 'Sector' }, { key: 'val', label: 'Value', num: true, fmt: (v, r) => r.fv }, { key: 'share', label: '% of G2000 total', num: true, fmt: v => ATLAS.fmtPct(v, 2) },
+    { key: 'fr', label: 'Forbes rank', num: true }]);
+  const cTop = ATLAS.chart('c-top', {});
+  function drawTop() {
+    const mi = +$('top-metric').value, n = +$('top-n').value, sec = $('top-sector').value, ctry = $('top-country').value;
+    const [mname, mkey] = METRIC[mi];
+    const total = F.reduce((s, r) => s + (r[mi] > 0 ? r[mi] : 0), 0);
+    const ranked = F.filter(r => r[mi] != null).sort((a, b) => b[mi] - a[mi]);
+    const rankOf = new Map(ranked.map((r, i) => [r[0], i + 1]));
+    const rows = ranked.filter(r => (!sec || r[2] === sec) && (!ctry || r[1] === ctry)).slice(0, n);
+    const data = rows.map(r => ({ value: r[mi], name: r[0], r, itemStyle: { color: r[1] === 'India' ? ACC : P[0] } }));
+    $('c-top').style.height = Math.max(320, rows.length * 16 + 60) + 'px';
+    cTop.resize();
+    const ind = rows.filter(r => r[1] === 'India').length;
+    $('c-top-sub').textContent = `${mname}, top ${rows.length}${sec ? ' in ' + sec : ''}${ctry ? ' in ' + ctry : ''} — ${ind} Indian ${ind === 1 ? 'company' : 'companies'} highlighted. ${mi === 7 ? 'People' : 'US$'}; FY2025 (market value May 2026)`;
+    $('c-top-title').textContent = rows.length ? `${rows[0][0]} leads on ${mname.toLowerCase()} with ${fmtM(mi, rows[0][mi])}` : 'No companies match';
+    cTop.setOption({
+      grid: { left: 8, right: 60, top: 10, bottom: 8, containLabel: true },
+      xAxis: { type: 'value', axisLabel: { formatter: v => mi === 7 ? ATLAS.fmtNum(v) : usdB(v) }, splitLine: { lineStyle: { color: GRID } } },
+      yAxis: { type: 'category', inverse: true, data: rows.map(r => r[0]), axisLabel: { fontSize: 11, width: 170, overflow: 'truncate' } },
+      tooltip: { formatter: p => { const r = p.data.r; return `<b>${esc(r[0])}</b><br>${esc(r[1])} · ${esc(r[2])}<br>${mname}: <b>${fmtM(mi, r[mi])}</b><br>World rank on ${mname.toLowerCase()}: #${rankOf.get(r[0])} of 2,000<br>Share of Global 2000 total: ${ATLAS.fmtPct(r[mi] / total * 100, 2)}<br>Forbes overall rank: #${r[8]}<br><span style="opacity:.7">Revenue ${usdB(r[3])} · Profit ${usdB(r[4])} · Mkt value ${usdB(r[6])}</span>`; } },
+      series: [{ type: 'bar', data, barMaxWidth: 14, label: { show: true, position: 'right', fontSize: 10, color: MUTED, formatter: p => mi === 7 ? ATLAS.fmtNum(p.value) : usdB(p.value) } }],
+    }, { replaceMerge: ['series', 'yAxis', 'xAxis'] });
+    tTop(rows.map(r => ({ rk: rankOf.get(r[0]), name: r[0], country: r[1], sector: r[2], val: r[mi], fv: fmtM(mi, r[mi]), share: r[mi] / total * 100, fr: r[8] })));
+  }
+  ['top-metric', 'top-n', 'top-sector', 'top-country'].forEach(id => $(id).onchange = drawTop);
+  drawTop();
+
+  const I = D.india;
+  ATLAS.notes('n-top', { items: [
+    `<b>Headline numbers.</b> The Global 2000 booked <b>$${D.totals.rev}T</b> revenue, <b>$${D.totals.pro}T</b> profit, held <b>$${D.totals.ast}T</b> of assets and were worth <b>$${D.totals.mv}T</b> (May 2026). The median company on the list has revenue of ${usdB(D.medians.rev)}, profit of ${usdB(D.medians.pro)} and ${ATLAS.fmtNum(D.medians.emp)} staff.`,
+    `<b>Different yardsticks, different champions.</b> Amazon leads on revenue, Alphabet on profit, the big US tech firms on market value, Chinese and Japanese banks on assets, and Walmart again on staff. Forbes' own overall rank (JPMorgan #1) blends all four money measures — tell readers which yardstick you mean.`,
+    `<b>India angle.</b> ${I.n_forbes} Indian firms make the Global 2000, with ${usdB(I.rev)} of revenue (${I.rev_share}% of the list) and ${usdB(I.mv)} of market value (${I.mv_share}%). Reliance Industries is India's biggest by sales (${usdB(I.top[0][1])}, #${I.reliance_rev_rank} in the world by revenue), followed by LIC (${usdB(I.top[1][1])}), Indian Oil, ONGC and SBI. India is ~3.4% of world GDP, so its firms are under-represented by revenue.`,
+    `<b>Why assets look enormous.</b> Banks dominate the assets ranking because a bank's assets are mostly loans made with depositors' money. JPMorgan's $4.4T balance sheet is bigger than India's GDP — but that is a stock of claims, not output.`,
+    `<b>Story angle.</b> "One list, five winners": a graphic showing the No.1 company on each yardstick, and where India's champion sits on each.`,
+  ] });
+
+  // ---------------- 2. true top 100 ----------------
+  const OWN = ['Listed (in Forbes)', 'State-owned', 'Private', 'Mutual/co-op', 'Listed (not in Forbes)'];
+  const ownColor = o => o === 'Listed (in Forbes)' ? ATLAS.css('--seq-2') : P[OWN.indexOf(o)] || P[7];
+  const tTT = dynTable('c-tt-t', 'c-tt-tbl', [
+    { key: 'rk', label: 'True rank', num: true }, { key: 'n', label: 'Company' }, { key: 'c', label: 'Country' }, { key: 'o', label: 'Ownership' },
+    { key: 'rev', label: 'Revenue', num: true, fmt: usdB }, { key: 'pro', label: 'Profit', num: true, fmt: usdB }, { key: 'fr', label: 'Forbes rank', num: true }]);
+  const cTT = ATLAS.chart('c-tt', {});
+  function drawTT() {
+    const n = +$('tt-n').value, out = $('tt-own').value === 'out';
+    const rows = D.true_top.filter(r => !out || r.o !== 'Listed (in Forbes)').slice(0, out ? 100 : n);
+    $('c-tt').style.height = Math.max(320, rows.length * 16 + 70) + 'px'; cTT.resize();
+    cTT.setOption({
+      grid: { left: 8, right: 60, top: 34, bottom: 8, containLabel: true },
+      legend: { data: OWN, top: 0 },
+      xAxis: { type: 'value', axisLabel: { formatter: v => usdB(v) } },
+      yAxis: { type: 'category', inverse: true, data: rows.map(r => `${r.rk}. ${r.n}`), axisLabel: { fontSize: 11, width: 200, overflow: 'truncate' } },
+      tooltip: { formatter: p => { const r = p.data.r; return `<b>${esc(r.n)}</b><br>${esc(r.c)} · <b>${r.o}</b><br>Revenue: <b>${usdB(r.rev)}</b> — #${r.rk} on earth<br>Profit: ${usdB(r.pro)}<br>${r.fr ? 'Forbes Global 2000 rank: #' + r.fr : 'Not on the Forbes Global 2000' + (r.src ? ' (source: ' + r.src + ')' : '')}`; } },
+      series: OWN.map(o => ({ name: o, type: 'bar', stack: 'x', barMaxWidth: 14, itemStyle: { color: ownColor(o) },
+        data: rows.map(r => r.o === o ? { value: r.rev, r } : null),
+        label: { show: true, position: 'right', fontSize: 10, color: MUTED, formatter: p => p.value ? usdB(p.value) : '' } })),
+    }, { replaceMerge: ['series', 'yAxis'] });
+    tTT(rows);
+  }
+  ['tt-n', 'tt-own'].forEach(id => $(id).onchange = drawTT); drawTT();
+  const TS = D.true_summary;
+  ATLAS.notes('n-tt', { items: [
+    `<b>Headline.</b> Once unlisted firms are added, <b>${TS.outside} of the top 100</b> companies by revenue are outside the Forbes list: ${TS.by_type['State-owned']} state-owned, ${TS.by_type['Private']} private, ${TS.by_type['Mutual/co-op'] || 0} mutual/co-op. Together they had <b>${usdB(TS.rev_outside)}</b> of revenue.`,
+    `<b>State Grid of China</b> ($555B) is the world's #3 company by revenue, ahead of Saudi Aramco and Apple — and it has no share price. China National Petroleum ($402B) is #6. Swiss-Singaporean commodity trader Trafigura ($240B) and Germany's Bosch, Huawei, Cargill and Koch are among the private giants.`,
+    `<b>Why it matters.</b> Stock-market lists systematically under-count China, Russia (Gazprom, Sberbank) and Europe's state utilities (EDF), and family-owned America (Cargill, Koch, Mars). "The biggest companies in the world" is really "the biggest <i>listed</i> companies".`,
+    `<b>India angle.</b> Indian state firms are mostly listed (SBI, LIC, Indian Oil, ONGC), so they already appear on Forbes. ${I.n_true100} Indian firms make the true top 100: ${I.in_true100.join(', ')}.`,
+    `<b>Story angle.</b> "The giants with no ticker": a profile of State Grid — a single utility with revenue bigger than the GDP of most countries, serving over a billion people.`,
+  ] });
+
+  // ---------------- 3. distribution ----------------
+  ATLAS.chart('c-th', {
+    legend: { data: ['Forbes Global 2000', 'Listed universe (~12,000)'] },
+    xAxis: { type: 'category', data: D.thresholds.map(t => '≥ $' + (t.t >= 1000 ? t.t / 1000 + 'T' : t.t + 'B')) },
+    yAxis: { type: 'log', name: 'Companies (log scale)', min: 1 },
+    tooltip: { formatter: p => `<b>${p.seriesName}</b><br>Revenue ${p.name}: <b>${p.value.toLocaleString()}</b> companies` },
+    series: [
+      { name: 'Forbes Global 2000', type: 'bar', data: D.thresholds.map(t => t.forbes), label: { show: true, position: 'top', fontSize: 10 } },
+      { name: 'Listed universe (~12,000)', type: 'bar', data: D.thresholds.map(t => t.listed), label: { show: true, position: 'top', fontSize: 10 } },
+    ],
+  });
+  ATLAS.tableToggle('c-th-t', 'c-th-tbl', D.thresholds.map(t => ({ t: '$' + t.t + 'B+', f: t.forbes, l: t.listed })),
+    [{ key: 't', label: 'Revenue at least' }, { key: 'f', label: 'Forbes G2000', num: true }, { key: 'l', label: 'Listed universe', num: true }]);
+
+  const H = D.histo;
+  const binLabel = i => usdB(H.edges[i]) + '–' + usdB(H.edges[i + 1]);
+  const cHist = ATLAS.chart('c-hist', {});
+  const tHist = dynTable('c-hist-t', 'c-hist-tbl', [{ key: 'b', label: 'Revenue band' }, { key: 'n', label: 'Companies', num: true }, { key: 's', label: 'Share', num: true, fmt: v => ATLAS.fmtPct(v) }]);
+  function drawHist() {
+    const ds = $('h-ds').value, arr = H[ds], tot = arr.reduce((a, b) => a + b, 0);
+    const labels = arr.map((_, i) => binLabel(i));
+    cHist.setOption({
+      grid: { bottom: 40 },
+      xAxis: { type: 'category', data: labels, name: 'Annual revenue (log-spaced bands)', nameLocation: 'middle', nameGap: 48, axisLabel: { rotate: 45, fontSize: 10, formatter: v => v.split('–')[0] } },
+      yAxis: { type: 'value', name: 'Companies' },
+      tooltip: { formatter: p => `Revenue ${p.name}<br><b>${p.value.toLocaleString()}</b> companies (${ATLAS.fmtPct(p.value / tot * 100)} of ${tot.toLocaleString()})` },
+      series: [{ type: 'bar', data: arr, barCategoryGap: '8%', itemStyle: { color: P[0] } }],
+    }, { replaceMerge: ['series'] });
+    tHist(arr.map((n, i) => ({ b: labels[i], n, s: n / tot * 100 })));
+  }
+  $('h-ds').onchange = drawHist; drawHist();
+
+  const cZ = ATLAS.chart('c-zipf', {});
+  const tZ = dynTable('c-zipf-t', 'c-zipf-tbl', [{ key: 'rk', label: 'Rank', num: true }, { key: 'n', label: 'Company' }, { key: 'c', label: 'Country' }, { key: 'v', label: 'Revenue', num: true, fmt: usdB }]);
+  function drawZ() {
+    const ds = $('z-ds').value;
+    let pts, fit, fitName;
+    if (ds === 'forbes') {
+      pts = F.filter(r => r[3] > 0).sort((a, b) => b[3] - a[3]).map((r, i) => [i + 1, r[3], r[0], r[1]]);
+      fit = D.zipf.top500; fitName = `Fit on top 500: slope −${fit.slope} (R² ${fit.r2})`;
+    } else { pts = D.zipf_listed; fit = D.zipf.listed_top5000; fitName = `Fit on top 5,000: slope −${fit.slope} (R² ${fit.r2})`; }
+    const maxR = pts[pts.length - 1][0];
+    const line = [1, 2, 5, 10, 20, 50, 100, 200, 500, 1000, 2000, 5000].filter(x => x <= maxR).map(x => [x, Math.pow(10, fit.a - fit.slope * Math.log10(x))]);
+    cZ.setOption({
+      legend: { data: ['Companies', fitName] },
+      xAxis: { type: 'log', name: 'Rank (log scale)', nameLocation: 'middle', nameGap: 28, min: 1 },
+      yAxis: { type: 'log', name: 'Revenue, US$B (log scale)', axisLabel: { formatter: v => usdB(v) } },
+      grid: { bottom: 34 },
+      tooltip: { formatter: p => p.seriesIndex === 0 ? `<b>#${p.data[0]} ${esc(p.data[2])}</b><br>${esc(p.data[3] || '')}<br>Revenue: <b>${usdB(p.data[1])}</b>` : `Power-law fit at rank ${p.data[0]}: ${usdB(p.data[1])}` },
+      series: [
+        { name: 'Companies', type: 'scatter', data: pts, symbolSize: 5, itemStyle: { color: P[0], opacity: .6 },
+          markPoint: { symbol: 'pin', symbolSize: 34, label: { fontSize: 9 }, data: pts.filter(p => p[3] === 'India').slice(0, 3).map(p => ({ coord: [p[0], p[1]], value: 'IN', name: p[2], itemStyle: { color: ACC } })) } },
+        { name: fitName, type: 'line', data: line, showSymbol: false, lineStyle: { type: 'dashed', color: P[1], width: 2 }, itemStyle: { color: P[1] } },
+      ],
+    }, { replaceMerge: ['series'] });
+    tZ(pts.map(p => ({ rk: p[0], n: p[2], c: p[3], v: p[1] })));
+  }
+  $('z-ds').onchange = drawZ; drawZ();
+  const th = Object.fromEntries(D.thresholds.map(t => [t.t, t]));
+  ATLAS.notes('n-dist', { items: [
+    `<b>Quotable counts (Forbes, FY2025).</b> ${th[1].forbes.toLocaleString()} of the Global 2000 sell more than $1B a year; ${th[10].forbes.toLocaleString()} more than $10B; ${th[50].forbes} more than $50B; <b>${th[100].forbes}</b> more than $100B; ${th[250].forbes} more than $250B; and only <b>${th[500].forbes}</b> — Walmart and Amazon — more than $500B.`,
+    `<b>Beyond the Forbes cut-off.</b> In the wider listed universe at least <b>${th[1].listed.toLocaleString()}</b> listed companies have revenue above $1B — 2.6× the Forbes count — but above $10B the two lists nearly agree (${th[10].listed.toLocaleString()} vs ${th[10].forbes.toLocaleString()}). The Forbes list is a good census of giants, a poor one of mid-sized firms.`,
+    `<b>Explainer: what the Zipf slope means.</b> On a log-log chart of size vs rank, a straight line means a power law: size ≈ C ÷ rank<sup>k</sup>. If k = 1 (Zipf's law, which also describes city sizes), the #2 firm is half the #1, #10 is a tenth. Among the top 500 Forbes firms k ≈ <b>${D.zipf.top500.slope}</b> (R² ${D.zipf.top500.r2}) — the top is <i>flatter</i> than Zipf: the 100th company (~$110B) is still about a sixth of Walmart. Across the top 5,000 listed firms k ≈ ${D.zipf.listed_top5000.slope}, close to the classic Zipf value of 1.`,
+    `<b>Why it matters.</b> A power law means there is no "typical" big company: the mean Global 2000 firm has ${usdB(D.medians.mean_rev)} of revenue but the median has ${usdB(D.medians.rev)}. Use medians when describing "an average big company".`,
+  ] });
+
+  // ---------------- 4. concentration ----------------
+  const CM = [['rev', 'Revenue'], ['pro', 'Profit'], ['mv', 'Market value'], ['ast', 'Assets'], ['emp', 'Employees']];
+  ATLAS.chart('c-lor', {
+    legend: { data: CM.map(c => `${c[1]} (Gini ${D.conc[c[0]].gini})`).concat(['Perfect equality']) , type: 'scroll' },
+    grid: { top: 56, bottom: 34 },
+    xAxis: { type: 'value', min: 0, max: 100, name: 'Cumulative % of firms (smallest → largest)', nameLocation: 'middle', nameGap: 28, axisLabel: { formatter: '{value}%' } },
+    yAxis: { type: 'value', min: 0, max: 100, name: '% of total', axisLabel: { formatter: '{value}%' } },
+    tooltip: { trigger: 'axis', formatter: ps => { const x = ps[0].data[0]; return `The smallest <b>${x.toFixed(0)}%</b> of firms hold:<br>` + ps.filter(p => p.seriesName !== 'Perfect equality').map(p => `${p.marker}${p.seriesName.split(' (')[0]}: <b>${p.data[1].toFixed(1)}%</b> — top ${(100 - x).toFixed(0)}% hold ${(100 - p.data[1]).toFixed(1)}%`).join('<br>'); } },
+    series: CM.map((c, i) => ({ name: `${c[1]} (Gini ${D.conc[c[0]].gini})`, type: 'line', showSymbol: false, data: D.conc[c[0]].lorenz, lineStyle: { width: 2 }, color: P[i] }))
+      .concat([{ name: 'Perfect equality', type: 'line', data: [[0, 0], [100, 100]], showSymbol: false, lineStyle: { type: 'dashed', color: MUTED, width: 1 }, color: MUTED, tooltip: { show: false } }]),
+  });
+  ATLAS.tableToggle('c-lor-t', 'c-lor-tbl', CM.map(c => ({ m: c[1], n: D.conc[c[0]].n, g: D.conc[c[0]].gini, half: D.conc[c[0]].half, hhi: D.conc[c[0]].hhi })),
+    [{ key: 'm', label: 'Measure' }, { key: 'n', label: 'Firms', num: true }, { key: 'g', label: 'Gini', num: true }, { key: 'half', label: 'Firms to reach 50%', num: true }, { key: 'hhi', label: 'HHI', num: true }]);
+
+  const TOPS = ['10', '50', '100', '500'];
+  ATLAS.chart('c-topshare', {
+    legend: { data: CM.map(c => c[1]) },
+    xAxis: { type: 'category', data: TOPS.map(t => 'Top ' + t) },
+    yAxis: { type: 'value', max: 100, name: '% of Global 2000 total', axisLabel: { formatter: '{value}%' } },
+    tooltip: { formatter: p => `<b>${p.name} firms by ${p.seriesName.toLowerCase()}</b><br>hold <b>${p.value}%</b> of the Global 2000's total ${p.seriesName.toLowerCase()}` },
+    series: CM.map(c => ({ name: c[1], type: 'bar', data: TOPS.map(t => D.conc[c[0]].top[t]) })),
+  });
+  ATLAS.tableToggle('c-topshare-t', 'c-topshare-tbl', CM.map(c => Object.assign({ m: c[1] }, ...TOPS.map(t => ({ ['t' + t]: D.conc[c[0]].top[t] })))),
+    [{ key: 'm', label: 'Measure' }].concat(TOPS.map(t => ({ key: 't' + t, label: 'Top ' + t + ' %', num: true }))));
+
+  const BCOL = [ACC, P[1], P[3], P[0], ATLAS.css('--seq-2')];
+  ATLAS.chart('c-bands', {
+    legend: { data: D.mcap_bands.map(b => b.b), type: 'scroll' },
+    grid: { top: 60, bottom: 8 },
+    xAxis: { type: 'value', max: 100, axisLabel: { formatter: '{value}%' } },
+    yAxis: { type: 'category', data: ['Listed universe'], axisLabel: { show: false } },
+    tooltip: { formatter: p => `<b>${p.seriesName}</b><br>$${D.mcap_bands[p.seriesIndex].v}T — <b>${p.value}%</b> of $${D.listed_total_mc}T` },
+    series: D.mcap_bands.map((b, i) => ({ name: b.b, type: 'bar', stack: 'a', data: [b.share], itemStyle: { color: BCOL[i] }, barWidth: 60,
+      label: { show: b.share > 6, formatter: `${b.share}%`, color: '#fff', fontWeight: 600 } })),
+  });
+  ATLAS.tableToggle('c-bands-t', 'c-bands-tbl', D.mcap_bands, [{ key: 'b', label: 'Band' }, { key: 'v', label: 'Market cap $T', num: true }, { key: 'share', label: '% of total', num: true }]);
+
+  ATLAS.chart('c-tril', {
+    grid: { left: 8, right: 50, top: 10, bottom: 8, containLabel: true },
+    xAxis: { type: 'value', axisLabel: { formatter: v => '$' + v + 'T' } },
+    yAxis: { type: 'category', inverse: true, data: D.trillion.map(t => t.n), axisLabel: { fontSize: 11 } },
+    tooltip: { formatter: p => { const t = D.trillion[p.dataIndex]; return `<b>${esc(t.n)}</b> (${t.c})${t.mag ? '<br>Magnificent 7 member' : ''}<br>Market cap: <b>$${t.mc.toFixed(2)}T</b> — #${p.dataIndex + 1} on earth<br>${ATLAS.fmtPct(t.mc / D.listed_total_mc * 100, 2)} of all measured listed value<br>Revenue: ${usdB(t.rev)} → ${(t.mc * 1000 / t.rev).toFixed(1)}× sales`; } },
+    series: [{ type: 'bar', barMaxWidth: 16, data: D.trillion.map(t => ({ value: t.mc, itemStyle: { color: t.mag ? P[0] : MUTED } })),
+      label: { show: true, position: 'right', fontSize: 10, formatter: p => '$' + p.value.toFixed(2) + 'T' } }],
+  });
+  ATLAS.tableToggle('c-tril-t', 'c-tril-tbl', D.trillion.map((t, i) => Object.assign({ rk: i + 1, ps: +(t.mc * 1000 / t.rev).toFixed(1) }, t)),
+    [{ key: 'rk', label: '#', num: true }, { key: 'n', label: 'Company' }, { key: 'c', label: 'Country' }, { key: 'mc', label: 'Mkt cap $T', num: true }, { key: 'rev', label: 'Revenue $B', num: true }, { key: 'ps', label: 'Price/sales', num: true }]);
+  const C = D.conc;
+  ATLAS.notes('n-conc', { items: [
+    `<b>Headline numbers.</b> Top 10 firms hold ${C.rev.top['10']}% of Global 2000 revenue, ${C.pro.top['10']}% of profit and <b>${C.mv.top['10']}%</b> of market value. The top 100 hold ${C.rev.top['100']}% / ${C.pro.top['100']}% / ${C.mv.top['100']}%. Half of all revenue comes from ${C.rev.half} firms; half of all market value from just <b>${C.mv.half}</b>.`,
+    `<b>Explainer: Gini and Lorenz.</b> A Lorenz curve lines firms up from smallest to largest and plots the running share of the total. Perfect equality is the diagonal; the Gini coefficient is the gap (0 = all equal, 1 = one firm has everything). Revenue Gini is ${C.rev.gini}; market value ${C.mv.gini}; assets ${C.ast.gini} — and this is already among giants, the list excludes every firm below ~$1B.`,
+    `<b>Trillion-dollar club.</b> ${D.mc_thresh.find(t => t.t === 1000).n} listed companies are worth $1T or more; the Magnificent 7 alone are worth <b>$${D.mag7_mc}T — ${D.mag7_share}%</b> of the ~$${D.listed_total_mc}T value of ${D.listed_n.toLocaleString()} listed companies we can measure. That is more than six times India's GDP ($${D.india_gdp}T).`,
+    `<b>Why market value is so concentrated.</b> Market value capitalises expected <i>future</i> profit. Nvidia trades at ~25× its sales; Walmart at ~1.5×. When investors expect winner-takes-most outcomes (AI, cloud, platforms), valuations concentrate faster than revenue.`,
+    `<b>Story angle.</b> "Seven companies, one-sixth of the world's stock markets" — and what it means for Indian investors in global index funds and for the Sensex/Nifty, where the top 10 firms also dominate.`,
+  ] });
+
+  // ---------------- 5. people ----------------
+  const withEmp = F.filter(r => r[7] != null);
+  const tEmp = dynTable('c-emp-t', 'c-emp-tbl', [{ key: 'rk', label: '#', num: true }, { key: 'n', label: 'Company' }, { key: 'c', label: 'Country' }, { key: 's', label: 'Sector' }, { key: 'e', label: 'Employees', num: true, fmt: v => v.toLocaleString() }, { key: 'rpe', label: 'Revenue / employee', num: true, fmt: v => ATLAS.fmtUSD(v) }]);
+  const cEmp = ATLAS.chart('c-emp', {});
+  function drawEmp() {
+    const n = +$('emp-n').value;
+    const rows = withEmp.slice().sort((a, b) => b[7] - a[7]).slice(0, n);
+    $('c-emp').style.height = Math.max(360, rows.length * 18 + 40) + 'px'; cEmp.resize();
+    cEmp.setOption({
+      grid: { left: 8, right: 60, top: 10, bottom: 8, containLabel: true },
+      xAxis: { type: 'value', axisLabel: { formatter: v => ATLAS.fmtNum(v) } },
+      yAxis: { type: 'category', inverse: true, data: rows.map(r => r[0]), axisLabel: { fontSize: 11, width: 160, overflow: 'truncate' } },
+      tooltip: { formatter: p => { const r = rows[p.dataIndex]; return `<b>${esc(r[0])}</b><br>${esc(r[1])} · ${esc(r[2])}<br>Employees: <b>${r[7].toLocaleString()}</b> (#${p.dataIndex + 1})<br>${ATLAS.fmtPct(r[7] / D.totals.emp * 100, 2)} of all Global 2000 staff<br>Revenue per employee: ${ATLAS.fmtUSD(r[3] * 1e9 / r[7])}`; } },
+      series: [{ type: 'bar', barMaxWidth: 14, data: rows.map(r => ({ value: r[7], itemStyle: { color: r[1] === 'India' ? ACC : P[0] } })),
+        label: { show: true, position: 'right', fontSize: 10, color: MUTED, formatter: p => ATLAS.fmtNum(p.value) } }],
+    }, { replaceMerge: ['series', 'yAxis'] });
+    tEmp(rows.map((r, i) => ({ rk: i + 1, n: r[0], c: r[1], s: r[2], e: r[7], rpe: r[3] * 1e9 / r[7] })));
+  }
+  $('emp-n').onchange = drawEmp; drawEmp();
+
+  // scatter, sectors: top 7 by count + Other
+  const SEC7 = D.sectors.slice(0, 7);
+  const big = withEmp.filter(r => r[7] >= 1000 && r[3] > 0);
+  const secOf = s => SEC7.includes(s) ? s : 'Other';
+  const sGroups = SEC7.concat(['Other']);
+  const guides = [1e5, 1e6, 1e7].map(rpe => ({ name: (rpe >= 1e6 ? '$' + rpe / 1e6 + 'M' : '$' + rpe / 1e3 + 'K') + ' per employee', type: 'line', showSymbol: false, silent: true,
+    data: [[1000, 1000 * rpe / 1e9], [3e6, 3e6 * rpe / 1e9]], lineStyle: { type: 'dotted', color: MUTED, width: 1 }, color: MUTED, tooltip: { show: false },
+    endLabel: { show: true, formatter: (rpe >= 1e6 ? '$' + rpe / 1e6 + 'M' : '$' + rpe / 1e3 + 'K') + '/head', color: MUTED, fontSize: 10 } }));
+  ATLAS.chart('c-sc', {
+    legend: { data: sGroups, type: 'scroll' },
+    grid: { top: 40, bottom: 34, right: 60 },
+    xAxis: { type: 'log', name: 'Employees (log scale)', nameLocation: 'middle', nameGap: 28, min: 1000, max: 3e6, axisLabel: { formatter: v => ATLAS.fmtNum(v) } },
+    yAxis: { type: 'log', name: 'Revenue (log scale)', min: 0.1, max: 1000, axisLabel: { formatter: v => usdB(v) } },
+    tooltip: { formatter: p => { const r = p.data.r; if (!r) return ''; return `<b>${esc(r[0])}</b><br>${esc(r[1])} · ${esc(r[2])}<br>Employees: ${r[7].toLocaleString()}<br>Revenue: ${usdB(r[3])}<br>Revenue per employee: <b>${ATLAS.fmtUSD(r[3] * 1e9 / r[7])}</b><br>Profit per employee: ${ATLAS.fmtUSD(r[4] * 1e9 / r[7])}`; } },
+    series: sGroups.map((g, i) => ({ name: g, type: 'scatter', symbolSize: 5, itemStyle: { color: P[i], opacity: .7 },
+      data: big.filter(r => secOf(r[2]) === g).map(r => ({ value: [r[7], Math.max(r[3], 0.1)], r })) })).concat(guides),
+  });
+  ATLAS.tableToggle('c-sc-t', 'c-sc-tbl', big.map(r => ({ n: r[0], c: r[1], s: r[2], e: r[7], rev: r[3], rpe: Math.round(r[3] * 1e9 / r[7]) })),
+    [{ key: 'n', label: 'Company' }, { key: 'c', label: 'Country' }, { key: 's', label: 'Sector' }, { key: 'e', label: 'Employees', num: true }, { key: 'rev', label: 'Revenue $B', num: true }, { key: 'rpe', label: 'Revenue/employee $', num: true }]);
+
+  const cR = ATLAS.chart('c-rpe', {});
+  const tR = dynTable('c-rpe-t', 'c-rpe-tbl', [{ key: 'n', label: 'Company' }, { key: 'c', label: 'Country' }, { key: 's', label: 'Sector' }, { key: 'e', label: 'Employees', num: true }, { key: 'v', label: 'Per employee', num: true, fmt: v => ATLAS.fmtUSD(v) }]);
+  function drawR() {
+    const m = $('rpe-m').value, dir = $('rpe-dir').value, idx = m === 'rpe' ? 3 : 4, lab = m === 'rpe' ? 'Revenue' : 'Profit';
+    const all = big.map(r => ({ r, v: r[idx] * 1e9 / r[7] })).sort((a, b) => b.v - a.v);
+    const rows = dir === 'top' ? all.slice(0, 20) : all.slice(-20).reverse();
+    const med = dir === 'top' ? null : null;
+    $('c-rpe-title').textContent = dir === 'top'
+      ? `${rows[0].r[0]} books ${ATLAS.fmtUSD(rows[0].v)} of ${lab.toLowerCase()} per employee — the median big firm: ${ATLAS.fmtUSD(m === 'rpe' ? D.people.median_rpe : D.people.median_ppe)}`
+      : `At the bottom: ${rows[0].r[0]} at ${ATLAS.fmtUSD(rows[0].v)} of ${lab.toLowerCase()} per employee`;
+    cR.setOption({
+      grid: { left: 8, right: 70, top: 10, bottom: 8, containLabel: true },
+      xAxis: { type: 'value', axisLabel: { formatter: v => ATLAS.fmtUSD(v) } },
+      yAxis: { type: 'category', inverse: true, data: rows.map(x => x.r[0]), axisLabel: { fontSize: 11, width: 170, overflow: 'truncate' } },
+      tooltip: { formatter: p => { const x = rows[p.dataIndex], r = x.r; return `<b>${esc(r[0])}</b><br>${esc(r[1])} · ${esc(r[2])}<br>${lab} per employee: <b>${ATLAS.fmtUSD(x.v)}</b><br>Employees: ${r[7].toLocaleString()} · Revenue ${usdB(r[3])} · Profit ${usdB(r[4])}`; } },
+      series: [{ type: 'bar', barMaxWidth: 14, data: rows.map(x => ({ value: x.v, itemStyle: { color: x.r[1] === 'India' ? ACC : (x.v < 0 ? ATLAS.diverging()[0] : P[0]) } })),
+        label: { show: true, position: 'right', fontSize: 10, color: MUTED, formatter: p => ATLAS.fmtUSD(p.value) } }],
+    }, { replaceMerge: ['series', 'yAxis'] });
+    tR(rows.map(x => ({ n: x.r[0], c: x.r[1], s: x.r[2], e: x.r[7], v: x.v })));
+  }
+  ['rpe-m', 'rpe-dir'].forEach(id => $(id).onchange = drawR); drawR();
+  const indRows = withEmp.filter(r => r[1] === 'India');
+  const tcs = F.find(r => r[0] === 'Tata Consultancy Services');
+  const inf = F.find(r => r[0] === 'Infosys');
+  ATLAS.notes('n-ppl', { items: [
+    `<b>Headline numbers.</b> The Global 2000 employ <b>${(D.people.total_emp / 1e6).toFixed(1)} million</b> people (${D.people.n_missing} firms don't report). The 10 biggest employers alone account for ${D.people.top10_emp_share}%. The median firm has ${ATLAS.fmtNum(D.people.median_emp)} staff, ${ATLAS.fmtUSD(D.people.median_rpe)} of revenue and ${ATLAS.fmtUSD(D.people.median_ppe)} of profit per employee.`,
+    `<b>Biggest employers.</b> Walmart (2.1M), Amazon (1.58M), BYD (870K), Accenture (779K), JD.com (777K), Volkswagen (663K) and <b>TCS (${(tcs[7] / 1e3).toFixed(0)}K)</b> — India's IT exporter is the world's seventh-largest listed employer. Global 2000 firms based in India employ ${(D.people.india_emp / 1e6).toFixed(1)}M people.`,
+    `<b>India angle: the services model.</b> TCS earns ${ATLAS.fmtUSD(tcs[3] * 1e9 / tcs[7])} of revenue per employee and Infosys ${ATLAS.fmtUSD(inf[3] * 1e9 / inf[7])} — vs ${ATLAS.fmtUSD(D.people.median_rpe)} for the median Global 2000 firm. Labour-arbitrage outsourcing is headcount-heavy by design; the comparison with Accenture (Ireland, ${ATLAS.fmtUSD(F.find(r => r[0] === 'Accenture')[3] * 1e9 / 774000)}/head) is a story.`,
+    `<b>Explainer: why revenue per head misleads.</b> Commodity traders, oil refiners, pharma distributors and holding companies book huge pass-through sales with few staff, so they top this ranking. Profit per employee is a better gauge of how much value each worker creates, but is distorted by one-off gains.`,
+    `<b>Story angle.</b> "The world's biggest employers are not tech firms": retail, logistics, carmakers and IT outsourcers hire millions; the most valuable tech companies employ a fraction of that.`,
+  ] });
+
+  // ---------------- 6. profit ----------------
+  const cPL = ATLAS.chart('c-pl', {});
+  const tPL = dynTable('c-pl-t', 'c-pl-tbl', [{ key: 'n', label: 'Company' }, { key: 'c', label: 'Country' }, { key: 's', label: 'Sector' }, { key: 'p', label: 'Profit', num: true, fmt: usdB }, { key: 'm', label: 'Margin', num: true, fmt: v => ATLAS.fmtPct(v) }]);
+  function drawPL() {
+    const v = $('pl-v').value;
+    const s = F.slice().sort((a, b) => b[4] - a[4]);
+    const rows = v === 'top' ? s.slice(0, 20) : s.slice(-20).reverse();
+    $('c-pl-title').textContent = v === 'top' ? 'Five firms each made more than $85 billion of profit' : `${rows[0][0]} lost ${usdB(-rows[0][4])} — the biggest loss on the list`;
+    cPL.setOption({
+      grid: { left: 8, right: 60, top: 10, bottom: 8, containLabel: true },
+      xAxis: { type: 'value', axisLabel: { formatter: x => usdB(x) } },
+      yAxis: { type: 'category', inverse: true, data: rows.map(r => r[0]), axisLabel: { fontSize: 11, width: 170, overflow: 'truncate' } },
+      tooltip: { formatter: p => { const r = rows[p.dataIndex]; return `<b>${esc(r[0])}</b><br>${esc(r[1])} · ${esc(r[2])}<br>Net profit: <b>${usdB(r[4])}</b><br>Revenue: ${usdB(r[3])} → margin ${ATLAS.fmtPct(r[4] / r[3] * 100)}<br>${r[4] > 0 ? ATLAS.fmtPct(r[4] / D.profit.pos_total * 100, 2) + ' of all Global 2000 profit' : ''}`; } },
+      series: [{ type: 'bar', barMaxWidth: 14, data: rows.map(r => ({ value: r[4], itemStyle: { color: r[4] < 0 ? ATLAS.diverging()[0] : (r[1] === 'India' ? ACC : P[0]) } })),
+        label: { show: true, position: v === 'top' ? 'right' : 'left', fontSize: 10, color: MUTED, formatter: p => usdB(p.value) } }],
+    }, { replaceMerge: ['series', 'yAxis'] });
+    tPL(rows.map(r => ({ n: r[0], c: r[1], s: r[2], p: r[4], m: r[4] / r[3] * 100 })));
+  }
+  $('pl-v').onchange = drawPL; drawPL();
+
+  fillSelect($('m-sector'), D.sectors);
+  const cM = ATLAS.chart('c-marg', {});
+  const tM = dynTable('c-marg-t', 'c-marg-tbl', [{ key: 'b', label: 'Net margin band' }, { key: 'n', label: 'Companies', num: true }]);
+  function drawM() {
+    const sec = $('m-sector').value, lo = -30, hi = 60, step = 2.5;
+    const rows = F.filter(r => r[3] > 0 && (!sec || r[2] === sec));
+    const nb = (hi - lo) / step, counts = new Array(nb).fill(0), names = Array.from({ length: nb }, () => []);
+    rows.forEach(r => { const m = r[4] / r[3] * 100; let i = Math.floor((m - lo) / step); i = Math.max(0, Math.min(nb - 1, i)); counts[i]++; if (names[i].length < 3 || r[3] > names[i][0][1]) { names[i].push([r[0], r[3]]); names[i].sort((a, b) => b[1] - a[1]); names[i] = names[i].slice(0, 3); } });
+    const labels = counts.map((_, i) => { const a = lo + i * step; return i === 0 ? `< ${lo + step}%` : i === nb - 1 ? `≥ ${a}%` : `${a}% to ${a + step}%`; });
+    const med = rows.map(r => r[4] / r[3] * 100).sort((a, b) => a - b)[Math.floor(rows.length / 2)];
+    cM.setOption({
+      grid: { bottom: 34 },
+      xAxis: { type: 'category', data: labels, name: 'Net margin', nameLocation: 'middle', nameGap: 28, axisLabel: { interval: 3, formatter: v => v.split(' to ')[0] } },
+      yAxis: { type: 'value', name: 'Companies' },
+      tooltip: { formatter: p => `Net margin <b>${p.name}</b><br><b>${p.value}</b> companies (${ATLAS.fmtPct(p.value / rows.length * 100)})${names[p.dataIndex].length ? '<br>Largest here: ' + names[p.dataIndex].map(x => esc(x[0])).join(', ') : ''}<br><span style="opacity:.7">Median margin${sec ? ' in ' + sec : ''}: ${ATLAS.fmtPct(med)}</span>` },
+      series: [{ type: 'bar', barCategoryGap: '6%', data: counts.map((c, i) => ({ value: c, itemStyle: { color: lo + i * step < 0 ? ATLAS.diverging()[0] : P[0] } })),
+        markLine: { symbol: 'none', silent: true, label: { formatter: 'median ' + med.toFixed(1) + '%', color: MUTED }, lineStyle: { color: MUTED, type: 'dashed' }, data: [{ xAxis: Math.max(0, Math.min(nb - 1, Math.floor((med - lo) / step))) }] } }],
+    }, { replaceMerge: ['series'] });
+    tM(counts.map((n, i) => ({ b: labels[i], n })));
+  }
+  $('m-sector').onchange = drawM; drawM();
+
+  ATLAS.chart('c-secm', {
+    legend: { data: ['Blended margin (sector profit ÷ revenue)', 'Median company margin'] },
+    grid: { bottom: 8 },
+    xAxis: { type: 'category', data: D.sector_margin.map(s => s.s), axisLabel: { interval: 0, rotate: 30, fontSize: 11 } },
+    yAxis: { type: 'value', axisLabel: { formatter: '{value}%' } },
+    tooltip: { formatter: p => { const s = D.sector_margin[p.dataIndex]; return `<b>${s.s}</b> (${s.n} firms)<br>Blended margin: <b>${s.blended}%</b><br>Median company: ${s.median}%<br>Loss-makers: ${s.loss}`; } },
+    series: [{ name: 'Blended margin (sector profit ÷ revenue)', type: 'bar', data: D.sector_margin.map(s => s.blended) },
+             { name: 'Median company margin', type: 'bar', data: D.sector_margin.map(s => s.median) }],
+  });
+  ATLAS.tableToggle('c-secm-t', 'c-secm-tbl', D.sector_margin, [{ key: 's', label: 'Sector' }, { key: 'n', label: 'Firms', num: true }, { key: 'blended', label: 'Blended %', num: true }, { key: 'median', label: 'Median %', num: true }, { key: 'loss', label: 'Loss-makers', num: true }]);
+  const PR = D.profit;
+  ATLAS.notes('n-prof', { items: [
+    `<b>Headline numbers.</b> Combined profit $${D.totals.pro}T on $${D.totals.rev}T revenue = <b>${PR.margin_blended.toFixed(1)}%</b> blended margin; the median firm's margin is ${PR.margin_median}%. ${PR.n_loss} firms (${(PR.n_loss / 20).toFixed(1)}%) lost money — ${usdB(-PR.loss_total)} in all — while ${PR.n_margin_gt30} firms kept more than 30 cents of every dollar.`,
+    `<b>Profit machines.</b> Alphabet ($111B), Saudi Aramco ($105B), Apple ($96B), Microsoft ($93B) and Berkshire Hathaway ($89B) top the profit table. The top 10 profit-earners take ${PR.top10_profit_share}% of all Global 2000 profit, almost double their ${D.conc.rev.top['10']}% share of revenue.`,
+    `<b>Loss makers.</b> Porsche Automobil Holding (−$21.7B, on Volkswagen write-downs), Intel (−$19.2B), Boeing (−$11.5B) and Warner Bros. Discovery (−$11.3B) — plus China's property developers led by China Vanke. Losses are concentrated in old-economy turnarounds, not start-ups.`,
+    `<b>Explainer: margin.</b> Net margin = net profit ÷ revenue. It varies by business model: software and chip designers keep 25–50%; retailers and distributors 1–3% because they resell goods. A low margin isn't "bad" — Walmart's ~3% on $713B is still ~$22B.`,
+    `<b>India angle.</b> Use the sector filter and country filter above: Indian banks (HDFC, ICICI, SBI) show financial-sector margins, Reliance ~7%, the oil marketers (Indian Oil, BPCL) low single digits.`,
+  ] });
+
+  // ---------------- 7. beeswarm ----------------
+  const L = D.listed; // [name,country,regionIdx,mcap_b,rev_b]
+  let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+  const beeData = D.regions.map(() => []);
+  L.forEach((r, i) => beeData[r[2]].push([r[3], r[2] + (rnd() - 0.5) * 0.8, i]));
+  const cBee = ATLAS.chart('c-bee', {
+    legend: { data: D.regions, type: 'scroll' },
+    grid: { top: 40, bottom: 34, left: 8, right: 24 },
+    xAxis: { type: 'log', name: 'Market capitalisation, US$ (log scale)', nameLocation: 'middle', nameGap: 28, min: 0.05, max: 8000, axisLabel: { formatter: v => usdB(v) } },
+    yAxis: { type: 'value', min: -0.6, max: D.regions.length - 0.4, inverse: true, interval: 1, splitLine: { show: false },
+      axisLabel: { formatter: v => D.regions[v] || '', fontSize: 11 } },
+    tooltip: { formatter: p => { if (p.seriesName === 'Search') return `<b>${esc(L[p.data[2]][0])}</b>`; const r = L[p.data[2]]; return `<b>${esc(r[0])}</b><br>${esc(r[1])} · ${D.regions[r[2]]}<br>Market cap: <b>${usdB(r[3])}</b> — #${p.data[2] + 1} of ${L.length.toLocaleString()}<br>${r[4] != null ? 'Revenue: ' + usdB(r[4]) : 'Revenue: not available'}`; } },
+    series: D.regions.map((g, i) => ({ name: g, type: 'scatter', symbolSize: 3, large: false, data: beeData[i], itemStyle: { color: P[i], opacity: .55 }, emphasis: { scale: 2.5 } }))
+      .concat([{ name: 'Search', type: 'scatter', data: [], symbolSize: 12, itemStyle: { color: ACC, borderColor: '#fff', borderWidth: 1.5 }, z: 10,
+        label: { show: true, position: 'top', formatter: p => L[p.data[2]][0], fontWeight: 600, color: ATLAS.css('--text') } }]),
+  });
+  function beeSearch() {
+    const q = $('bee-q').value.trim().toLowerCase();
+    let hits = [];
+    if (q.length >= 2) L.forEach((r, i) => { if (r[0].toLowerCase().includes(q) && hits.length < 8) hits.push(i); });
+    const pts = hits.map(i => { const s = beeData[L[i][2]].find(d => d[2] === i); return s; });
+    cBee.setOption({ series: [{ name: 'Search', data: pts }] });
+    $('bee-hit').textContent = q.length < 2 ? '' : hits.length ? hits.map(i => `${L[i][0]} (${usdB(L[i][3])}, #${i + 1})`).join(' · ') : 'No match';
+  }
+  $('bee-q').oninput = beeSearch;
+  ATLAS.tableToggle('c-bee-t', 'c-bee-tbl', D.reg_stats, [{ key: 'region', label: 'Region' }, { key: 'n', label: 'Companies', num: true }, { key: 'mc', label: 'Market cap $T', num: true }, { key: 'share', label: '% of total', num: true }, { key: 'median', label: 'Median $B', num: true }, { key: 'top', label: 'Largest' }]);
+  const RS = Object.fromEntries(D.reg_stats.map(r => [r.region, r]));
+  ATLAS.notes('n-bee', { items: [
+    `<b>Headline numbers.</b> We can measure <b>${D.listed_n.toLocaleString()}</b> listed companies worth <b>$${D.listed_total_mc}T</b>. The median one is worth just ${usdB(D.listed_median_mc)}. ${D.mc_thresh[0].n.toLocaleString()} are worth over $1B, ${D.mc_thresh[1].n.toLocaleString()} over $10B, ${D.mc_thresh[2].n} over $100B, ${D.mc_thresh[4].n} over $1T.`,
+    `<b>Geography of value.</b> US firms are ${RS['United States'].share}% of the measured value ($${RS['United States'].mc}T across ${RS['United States'].n.toLocaleString()} companies); Europe ${RS['Europe'].share}%; China & HK ${RS['China & HK'].share}%; Japan ${RS['Japan'].share}%; <b>India ${RS['India'].share}%</b> ($${RS['India'].mc}T across ${RS['India'].n} companies, led by ${RS['India'].top}).`,
+    `<b>Explainer: why a log scale.</b> On a normal axis Nvidia ($5.2T) would sit 100,000× further right than a $50M company and every other dot would be squashed against zero. Each step on this axis is ×10.`,
+    `<b>India angle.</b> India's median measured listed company is worth ${usdB(RS['India'].median)} — similar to the US (${usdB(RS['United States'].median)}) and well above the Middle East & Africa (${usdB(RS['Middle East & Africa'].median)}). Only India's larger listed firms (of 5,000+ on NSE/BSE) appear here.`,
+  ] });
+
+  // ---------------- 8. company vs country ----------------
+  const CTRY = D.countries.filter(c => c.v >= 5);
+  const allC = D.countries;
+  const pick = $('cvc-pick');
+  const cC = ATLAS.chart('c-cvc', {});
+  const tC = dynTable('c-cvc-t', 'c-cvc-tbl', [{ key: 'rk', label: 'Rank', num: true }, { key: 'n', label: 'Economy or company' }, { key: 'k', label: 'Type' }, { key: 'v', label: 'US$', num: true, fmt: usdB }]);
+  function compRows(m) { return m === 'rev' ? D.comp_rev.map(c => ({ n: c.n, c: c.c, v: c.v, o: c.o })) : D.comp_mc.map(c => ({ n: c.n, c: c.c, v: c.v })); }
+  function fillPick() {
+    const m = $('cvc-m').value; pick.innerHTML = '';
+    compRows(m).forEach((c, i) => { const o = document.createElement('option'); o.value = i; o.textContent = c.n; pick.append(o); });
+    const idx = compRows(m).findIndex(c => /Reliance/.test(c.n)); // India angle pre-select when present
+    pick.value = m === 'mc' ? String(Math.max(0, compRows(m).findIndex(c => /^Apple/.test(c.n)))) : '0';
+  }
+  function drawC() {
+    const m = $('cvc-m').value, comps = compRows(m), lab = m === 'rev' ? 'revenue (FY2025)' : 'market value (2026)';
+    const mixed = CTRY.map(c => ({ n: c.n, v: c.v, k: 'Country GDP' })).concat(comps.map(c => ({ n: c.n, v: c.v, k: 'Company ' + (m === 'rev' ? 'revenue' : 'market value'), c: c.c, o: c.o })))
+      .sort((a, b) => b.v - a.v).map((x, i) => Object.assign(x, { rk: i + 1 }));
+    const sel = comps[+pick.value] || comps[0];
+    const smaller = allC.filter(c => c.v < sel.v), bigger = allC.filter(c => c.v >= sel.v).sort((a, b) => a.v - b.v);
+    const below = smaller.sort((a, b) => b.v - a.v)[0];
+    $('cvc-answer').innerHTML = `<b>${esc(sel.n)}</b>'s ${lab} of <b>${usdB(sel.v)}</b> is larger than the 2024 GDP of <b>${smaller.length} of ${allC.length}</b> countries — it would rank <b>#${bigger.length + 1}</b>, between ${bigger[0] ? esc(bigger[0].n) + ' (' + usdB(bigger[0].v) + ')' : '—'} and ${below ? esc(below.n) + ' (' + usdB(below.v) + ')' : '—'}. For scale: India's GDP is $${D.india_gdp}T (${(sel.v / (D.india_gdp * 1000) * 100).toFixed(0)}% of it).`;
+    $('c-cvc-title').textContent = m === 'rev' ? "Walmart's sales would rank it 22nd among the world's economies" : "Nvidia and Apple are each worth more than Germany's or India's annual GDP";
+    $('c-cvc-sub').textContent = m === 'rev' ? 'Company revenue (FY2025) ranked among country GDP (2024), US$, log scale — scroll or drag the slider' : 'Company market value (2026) ranked among country GDP (2024), US$, log scale — a stock compared with a yearly flow';
+    const selName = sel.n;
+    $('c-cvc').style.height = '760px'; cC.resize();
+    const isComp = x => x.k !== 'Country GDP';
+    cC.setOption({
+      legend: { data: ['Country GDP', 'Company', 'India / Indian company', 'Selected company'], top: 0 },
+      grid: { left: 8, right: 70, top: 34, bottom: 8, containLabel: true },
+      xAxis: { type: 'log', min: 5, name: 'US$ (log scale)', axisLabel: { formatter: v => usdB(v) } },
+      yAxis: { type: 'category', inverse: true, data: mixed.map(x => `${x.rk}. ${x.n}`), axisLabel: { fontSize: 11, width: 200, overflow: 'truncate' } },
+      dataZoom: [{ type: 'slider', yAxisIndex: 0, right: 0, width: 14, startValue: 0, endValue: 44, showDetail: false, brushSelect: false }, { type: 'inside', yAxisIndex: 0, zoomOnMouseWheel: false, moveOnMouseWheel: true }],
+      tooltip: { formatter: p => { const x = mixed[p.dataIndex]; return `<b>#${x.rk} ${esc(x.n)}</b><br>${x.k}${x.c ? ' · ' + esc(x.c) : ''}${x.o && x.o !== 'Listed (in Forbes)' ? ' · ' + x.o : ''}<br><b>${usdB(x.v)}</b><br>${isComp(x) ? 'Bigger than the GDP of ' + allC.filter(c => c.v < x.v).length + ' of ' + allC.length + ' countries' : ''}`; } },
+      series: [
+        { name: 'Country GDP', type: 'bar', stack: 's', barMaxWidth: 12, data: mixed.map(x => !isComp(x) && x.n !== 'India' ? x.v : null), itemStyle: { color: MUTED } },
+        { name: 'Company', type: 'bar', stack: 's', barMaxWidth: 12, data: mixed.map(x => isComp(x) && x.c !== 'India' && x.n !== selName ? x.v : null), itemStyle: { color: P[0] } },
+        { name: 'India / Indian company', type: 'bar', stack: 's', barMaxWidth: 12, data: mixed.map(x => (x.n === 'India' && !isComp(x)) || (isComp(x) && x.c === 'India' && x.n !== selName) ? x.v : null), itemStyle: { color: ACC } },
+        { name: 'Selected company', type: 'bar', stack: 's', barMaxWidth: 12, data: mixed.map(x => isComp(x) && x.n === selName ? x.v : null), itemStyle: { color: P[3] },
+          label: { show: true, position: 'right', fontSize: 10, formatter: p => p.value ? usdB(p.value) : '' } },
+      ],
+    }, { replaceMerge: ['series', 'yAxis', 'dataZoom'] });
+    const selIdx = mixed.findIndex(x => isComp(x) && x.n === selName);
+    cC.dispatchAction({ type: 'dataZoom', startValue: Math.max(0, selIdx - 20), endValue: Math.max(0, selIdx - 20) + 44 });
+    tC(mixed);
+  }
+  $('cvc-m').onchange = () => { fillPick(); drawC(); };
+  pick.onchange = drawC;
+  fillPick(); drawC();
+  const V = Object.fromEntries(D.vivid.map(v => [v.label.split(' ')[0] + '|' + v.kind, v]));
+  const vv = (k) => D.vivid.find(v => v.label.startsWith(k));
+  const wal = vv('Walmart'), rel = vv('Reliance Industries revenue'), sbi = vv('State Bank'), tcsV = vv('Tata Consultancy'), apl = vv('Apple'), nvd = vv('Nvidia'), msf = vv('Microsoft'), relM = vv('Reliance Industries market');
+  ATLAS.notes('n-cvc', { items: [
+    `<b>Vivid comparisons (revenue vs GDP).</b> Walmart's ${usdB(wal.v)} of sales would rank #${wal.rank} among ${D.n_countries} economies — between ${wal.just_above} and ${wal.just_below}. Amazon would rank #${vv('Amazon').rank}. Saudi Aramco's revenue ≈ ${vv('Saudi').just_below === 'Viet Nam' ? 'Vietnam' : vv('Saudi').just_below}'s GDP.`,
+    `<b>India angle.</b> Reliance's revenue (${usdB(rel.v)}) is bigger than the GDP of ${rel.n_smaller} countries (rank #${rel.rank}, near ${rel.just_below}); SBI's (${usdB(sbi.v)}) exceeds ${sbi.n_smaller}; TCS's (${usdB(tcsV.v)}) exceeds ${tcsV.n_smaller}, comparable to ${tcsV.just_below}.`,
+    `<b>Market value vs GDP.</b> Nvidia (${usdB(nvd.v)}) and Apple (${usdB(apl.v)}) are each worth more than <b>India's entire 2024 GDP ($${D.india_gdp}T)</b> — and more than Germany's. Microsoft (${usdB(msf.v)}) is worth slightly more than India's GDP. Reliance (${usdB(relM.v)}) is worth about as much as ${relM.just_below}'s GDP.`,
+  ] });
+  ATLAS.notes('n-cav', { title: 'Caveats before you quote', caveat: true, items: [
+    `<b>Revenue is not GDP.</b> GDP counts <i>value added</i> — output minus inputs bought from others. A company's revenue includes everything it bought from suppliers, so it double-counts across supply chains. "Walmart is bigger than Belgium" is a comparison of scale, not of economic weight. Walmart's own value added (wages + profit + depreciation) is perhaps a fifth of its sales.`,
+    `<b>Market value is a stock, GDP is a flow.</b> Apple's $5T is the price of owning all future Apple profits; India's $3.76T is one year's output. Use "worth more than India produces in a year" and say so.`,
+    `<b>Dates differ.</b> Forbes financials are FY2025 with market value from May 2026; the listed-universe market caps are a 2026 snapshot; GDP is 2024. Forbes and the listed universe are never summed here.`,
+    `<b>Coverage.</b> The Forbes list is truncated at ~$1B revenue and excludes unlisted firms; the listed universe covers ~10,100 of ~48,000 listed companies worldwide (US-complete, partial elsewhere — India has 5,000+ listed firms, we see ${RS['India'].n}). Fortune's state firms use their own fiscal years. Vitol (often cited at ~$400B revenue) is excluded because the only figure in our data is a stale Wikipedia number.`,
+    `<b>Banks and insurers.</b> Forbes "revenue" for financial firms is a different concept from sales (interest + fees + premiums); compare them with other sectors cautiously, especially on margins and assets.`,
+  ] });
+})();
+</script>
+</body>
+</html>

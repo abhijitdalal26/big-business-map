@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Who owns it — Big Business Map</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Serif+4:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
+<script src="assets/common.js"></script>
+<script src="data/ownership.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <p class="kicker">Ownership</p>
+    <h1>One dollar in four of big-company revenue answers to a government</h1>
+    <p class="dek">Stock markets show you most of the corporate world, not all of it. Of the 500 largest companies on earth,
+      about a quarter of revenue sits with state-owned or state-controlled firms, and 128 giants have no listed shares at the group level.
+      This page sorts the world's largest businesses by who owns them: shareholders, governments, families and foundations, or their own customers.</p>
+  </header>
+
+  <div id="tiles"></div>
+
+  <div class="explainer" id="lens-explainer"></div>
+
+  <!-- 1. Mix -->
+  <h2>Who owns the 500 largest companies?</h2>
+  <p class="section-dek">Every Fortune Global 500 company (2025, revenue for fiscal 2024) re-labelled into six ownership types.
+    Fortune ranks <b>parent groups</b>, so Sinopec Group (unlisted, state-owned) appears instead of its listed arm Sinopec Corp. That is why this lens shows state ownership more clearly than any stock-market list.</p>
+  <div class="grid">
+    <div class="card two-third">
+      <h3 id="c-mix-title">Listed companies without a big state stake earn 67% of the revenue, but governments control another 23%</h3>
+      <p class="sub">Fortune Global 500, by ownership type. Switch measure:</p>
+      <div class="card-tools" id="mix-tools"></div>
+      <div class="chart" id="c-mix"></div>
+      <button class="tbl-toggle" id="c-mix-t"></button><div id="c-mix-tbl"></div>
+      <p class="src">Source: Fortune Global 500 (2026); ownership labels by this atlas (curated, public knowledge, 2025). "Significant stake" = government holds roughly 20–50% and is usually the largest shareholder.</p>
+    </div>
+    <div class="card third">
+      <h3>The six labels, in plain words</h3>
+      <div id="legend-explain" style="font-size:14px"></div>
+    </div>
+  </div>
+  <div id="n-mix"></div>
+
+  <!-- 2. Invisible giants -->
+  <h2>The invisible giants: big, but not on any stock exchange</h2>
+  <p class="section-dek">The largest companies whose group has no listed shares — state enterprises, family firms, foundations, partnerships and co-operatives.
+    Hover for who owns each one. Filter by type or country.</p>
+  <div class="grid">
+    <div class="card">
+      <h3>State Grid, CNPC and Vitol would each rank among the ~15 largest companies on earth</h3>
+      <p class="sub">Revenue, US$ billions, latest fiscal year. Bars coloured by ownership type.</p>
+      <div class="card-tools" id="inv-tools">
+        <select id="inv-type"><option value="">All unlisted types</option></select>
+        <select id="inv-country"><option value="">All countries</option></select>
+        <select id="inv-n"><option value="30">Top 30</option><option value="50">Top 50</option><option value="80">Top 80</option></select>
+      </div>
+      <div class="chart tall" id="c-inv"></div>
+      <button class="tbl-toggle" id="c-inv-t"></button><div id="c-inv-tbl"></div>
+      <p class="src">Sources: Fortune Global 500 (2026); Forbes America's Largest Private Companies (2025); curated additions (Vitol, Schwarz, Aldi, ByteDance, Big Four, Ineos, CMA CGM) from company disclosures and press reports — approximate, check before quoting.</p>
+    </div>
+  </div>
+  <div id="n-inv"></div>
+
+  <!-- 3. By country -->
+  <h2>Ownership mix by country</h2>
+  <p class="section-dek">How each country's Fortune Global 500 companies are owned. China's big-company sector is mostly state-owned; America's is almost entirely listed, with mutual insurers and a few family firms on the side.</p>
+  <div class="grid">
+    <div class="card">
+      <h3>In China, roughly three of every four big-company dollars run through the state; in the US, almost none do</h3>
+      <p class="sub">Fortune Global 500 companies by headquarters country (top 16 by number of companies).</p>
+      <div class="card-tools" id="cty-tools"></div>
+      <div class="chart" id="c-cty" style="height:520px"></div>
+      <button class="tbl-toggle" id="c-cty-t"></button><div id="c-cty-tbl"></div>
+      <p class="src">Source: Fortune Global 500 (2026); country from Fortune's headquarters field; ownership labels by this atlas.</p>
+    </div>
+  </div>
+
+  <!-- 4. State share of listed -->
+  <h2>The state inside the stock market</h2>
+  <p class="section-dek">Listing a company doesn't take the government out of it. Here are the listed Forbes Global 2000 companies where a government is the controlling or a major shareholder: ICBC, Saudi Aramco, SBI, LIC, Petrobras, Equinor.
+    The chart shows, for each country, the share of its listed giants' revenue that sits in such firms.</p>
+  <div class="grid">
+    <div class="card">
+      <h3>Gulf, Chinese and Indian listed giants are largely state companies with outside shareholders</h3>
+      <p class="sub">Share of each country's Forbes Global 2000 revenue in state-controlled or significantly state-owned listed companies, %. Countries with ≥$60B of Global 2000 revenue plus selected emerging markets.</p>
+      <div class="card-tools" id="st-tools">
+        <select id="st-sort"><option value="both">Sort: total state share</option><option value="m">Sort: state-controlled only</option><option value="rev">Sort: country revenue</option></select>
+      </div>
+      <div class="chart" id="c-st" style="height:640px"></div>
+      <button class="tbl-toggle" id="c-st-t"></button><div id="c-st-tbl"></div>
+      <p class="src">Source: Forbes Global 2000 (2026) financials; state-control flags curated by this atlas from public shareholding information (2025). China: firms with revenue ≥$10B assessed (≈93% of China's Global 2000 revenue); smaller Chinese firms counted as not state-controlled, so China's share is a floor.</p>
+    </div>
+  </div>
+  <div id="n-st"></div>
+
+  <!-- 5. India -->
+  <h2>India: the PSU half of corporate India</h2>
+  <p class="section-dek">India has 70 companies in the Forbes Global 2000. The 23 government-controlled ones (LIC, Indian Oil, ONGC, SBI, NTPC, the PSU banks) bring in about as much revenue as the 47 private ones combined, yet the market values them at a fraction.</p>
+  <div class="grid">
+    <div class="card two-third">
+      <h3 id="c-ind-title">PSUs earn 45% of the revenue of India's global giants but only 21% of the market value</h3>
+      <p class="sub">Indian companies in the Forbes Global 2000, top 40. Switch measure:</p>
+      <div class="card-tools" id="ind-tools"></div>
+      <div class="chart tall" id="c-ind"></div>
+      <button class="tbl-toggle" id="c-ind-t"></button><div id="c-ind-tbl"></div>
+      <p class="src">Source: Forbes Global 2000 (2025; revenue/profit FY2025-25, market value May 2026). PSU = central government (directly or via LIC/other PSUs) is the controlling shareholder. LIC Housing Finance counted as a significant-stake firm (LIC ~45%).</p>
+    </div>
+    <div class="card third">
+      <h3>PSU vs private, side by side</h3>
+      <p class="sub">All 70 Indian Global 2000 firms</p>
+      <div class="chart" id="c-ind2" style="height:360px"></div>
+      <div id="ind-stats-tbl"></div>
+    </div>
+  </div>
+  <div id="n-ind"></div>
+
+  <!-- 6. Margins -->
+  <h2>Does the owner change the margin?</h2>
+  <p class="section-dek">State-owned giants that are not listed earn thin margins. Many are utilities, grids, steelmakers, traders and postal services. Listed state companies (Aramco, the Chinese banks) look like their private peers.
+    Family firms and traders look thin too, because trading companies book huge revenue on narrow spreads.</p>
+  <div class="grid">
+    <div class="card half">
+      <h3>Unlisted state giants keep about 2.5 cents of profit per dollar of sales; listed peers keep about 10</h3>
+      <p class="sub">Net profit margin, %. Switch lens:</p>
+      <div class="card-tools" id="mg-tools"></div>
+      <div class="chart" id="c-mg"></div>
+      <button class="tbl-toggle" id="c-mg-t"></button><div id="c-mg-tbl"></div>
+      <p class="src">Sources: Fortune Global 500 (2026), Forbes Global 2000 (2026); "aggregate" = total profit ÷ total revenue; "median" = middle company.</p>
+    </div>
+    <div class="card half">
+      <h3>Every one of the 500, by owner: the spread is wide in every group</h3>
+      <p class="sub">Net margin, % (clipped to −30…+50). Each dot is a company; hover for detail.</p>
+      <div class="chart" id="c-strip"></div>
+      <button class="tbl-toggle" id="c-strip-t"></button><div id="c-strip-tbl"></div>
+      <p class="src">Source: Fortune Global 500 (2026). Ownership labels by this atlas.</p>
+    </div>
+  </div>
+  <div id="n-mg"></div>
+
+  <!-- 7. US private -->
+  <h2>America's largest private companies</h2>
+  <p class="section-dek">The US has the deepest stock market on earth, yet Cargill, Koch, Mars and Publix still choose not to list.
+    Forbes' list of the 200 largest US private companies adds up to about $2 trillion of revenue, roughly a tenth of what America's listed giants in the Global 2000 bring in.</p>
+  <div class="grid">
+    <div class="card">
+      <h3>Cargill and Koch alone sell more than the next five US private giants combined</h3>
+      <p class="sub">Forbes America's Largest Private Companies 2025, top 30. Switch measure:</p>
+      <div class="card-tools" id="pv-tools"></div>
+      <div class="chart tall" id="c-pv"></div>
+      <button class="tbl-toggle" id="c-pv-t"></button><div id="c-pv-tbl"></div>
+      <p class="src">Source: Forbes America's Largest Private Companies (2025). Revenue for private firms is often a Forbes estimate.</p>
+    </div>
+  </div>
+  <div id="n-pv"></div>
+
+  <!-- 8. Why private -->
+  <h2>Why do some giants stay private (or stay controlled)?</h2>
+  <div class="explainer" id="why"></div>
+  <div class="grid">
+    <div class="card">
+      <h3>Family, foundation and cross-holding control: a curated table</h3>
+      <p class="sub">Selected giants whose control rests with a family, a foundation or a web of affiliates, even when the shares trade. <b>Curated from public knowledge (2025), approximate stakes — verify each before quoting.</b></p>
+      <div class="card-tools"><select id="fam-type"><option value="">All control types</option></select></div>
+      <div id="fam-tbl"></div>
+      <p class="src">Revenue/market value joined from Forbes Global 2000 (2026) where the company is listed; otherwise from the invisible-giants table above.</p>
+    </div>
+  </div>
+  <div id="n-why"></div>
+  <div id="n-cav"></div>
+</div>
+
+<script>
+(function () {
+  const D = ATLAS.ownership, H = D.H, P = ATLAS.palette();
+  const B = v => ATLAS.fmtUSD(v, 'musd');
+  const pct = (v, d = 1) => ATLAS.fmtPct(v, d);
+  const ORDER = D.own_order;
+  const COL = {}; ORDER.forEach((o, i) => COL[o] = P[i]);
+  const SHORT = { 'Listed, no major state stake': 'Listed', 'Listed, significant state stake': 'Listed, state minority', 'Listed, state-controlled': 'Listed, state-controlled',
+    'State-owned, unlisted': 'State-owned (unlisted)', 'Private (family / founder / foundation)': 'Private', 'Mutual / co-operative': 'Mutual / co-op' };
+
+  // segmented button helper
+  function seg(id, opts, onPick, init) {
+    const el = document.getElementById(id); let cur = init ?? opts[0][0];
+    el.innerHTML = opts.map(([k, l]) => `<button type="button" data-k="${k}" class="${k === cur ? 'on' : ''}">${l}</button>`).join('');
+    el.querySelectorAll('button').forEach(b => b.onclick = () => { cur = b.dataset.k; el.querySelectorAll('button').forEach(x => x.classList.toggle('on', x === b)); onPick(cur); });
+    onPick(cur);
+  }
+
+  // ---------- tiles ----------
+  ATLAS.tiles('tiles', [
+    { v: pct(H.state_ctrl_pct), l: 'of Fortune Global 500 revenue is in state-controlled companies', s: `${H.state_ctrl_n} firms, ${B(H.state_ctrl_rev)}; ${pct(H.state_any_pct)} incl. minority stakes` },
+    { v: H.unlisted_n, l: 'of the 500 largest companies have no listed shares at group level', s: `${B(H.unlisted_rev)} revenue — state, private, mutual` },
+    { v: `${H.china_state_n} of ${H.china_n}`, l: "China's Fortune 500 companies are state-controlled", s: `${pct(H.china_state_rev_pct, 0)} of their revenue incl. minority stakes` },
+    { v: pct(H.india_psu_rev_pct, 0), l: "of India's Global 2000 revenue comes from 23 PSUs", s: `but only ${pct(H.india_psu_mv_pct, 0)} of market value` },
+    { v: pct(H.forbes_state_rev_pct, 0), l: 'of all Forbes Global 2000 (listed) revenue is in firms with a major state stake', s: `${H.forbes_state_n} firms; ${pct(H.forbes_state_mv_pct, 0)} of market value` },
+  ]);
+
+  document.getElementById('lens-explainer').innerHTML = `<b>Two lenses, one question.</b> The <b>Fortune Global 500</b> ranks the 500 largest companies by revenue
+    whether or not they are listed, and it ranks <i>parent groups</i>. Use it for "who owns the biggest businesses". The <b>Forbes Global 2000</b> lists only
+    <i>listed</i> companies, so use it for "how much of the stock market is really state-owned". Never add the two together: CNPC (parent) and PetroChina (its listed child)
+    would be counted twice.`;
+
+  document.getElementById('legend-explain').innerHTML = ORDER.map(o => `<p style="margin:0 0 8px"><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:${COL[o]};margin-right:6px"></span><b>${o}</b><br><span style="color:var(--text-2)">${{
+    'Listed, no major state stake': 'Shares trade; owners are funds, the public, sometimes a founder or family (Walmart, Apple, Reliance, Toyota).',
+    'Listed, significant state stake': 'Shares trade; a government holds ~20–50% and is usually the biggest owner (Volkswagen, ENI, Japan Post, Bank of Communications).',
+    'Listed, state-controlled': 'Shares trade, but the state holds a majority or control (ICBC, Saudi Aramco, SBI, LIC, Petrobras, Equinor, Fannie Mae).',
+    'State-owned, unlisted': 'No public shares at group level; owned by a national or local government (State Grid, CNPC, Deutsche Bahn, USPS, Pemex).',
+    'Private (family / founder / foundation)': 'No public shares; owned by a family, founder, employees or a foundation (Bosch, Huawei, Ingka/IKEA, Trafigura).',
+    'Mutual / co-operative': 'Owned by customers or members (State Farm, Nippon Life, Rabobank, Edeka, REWE, Crédit Mutuel).',
+  }[o]}</span></p>`).join('');
+
+  // ---------- 1. mix ----------
+  let mixChart;
+  seg('mix-tools', [['rev', 'Revenue'], ['n', 'Number of companies'], ['profit', 'Profit']], m => {
+    const rows = D.fortune_mix.slice().reverse();
+    const tot = D.fortune_mix.reduce((a, r) => a + r[m], 0);
+    const opt = {
+      grid: { left: 8, right: 70, top: 10, bottom: 8 },
+      xAxis: { type: 'value', axisLabel: { formatter: v => m === 'n' ? v : B(v) } },
+      yAxis: { type: 'category', data: rows.map(r => r.owner), axisLabel: { width: 190, overflow: 'break' } },
+      tooltip: { trigger: 'item', formatter: p => { const r = rows[p.dataIndex]; return `<b>${r.owner}</b><br>${r.n} companies (${pct(r.n / 5, 1)} of 500)<br>Revenue ${B(r.rev)} — ${pct(r.rev / D.fortune_tot.rev * 100)} of total<br>Profit ${B(r.profit)} — ${pct(r.profit / D.fortune_tot.profit * 100)} of total<br>Aggregate margin ${pct(r.agg_margin)} · median ${pct(r.med_margin)}<br>Loss-makers: ${r.loss_makers}`; } },
+      series: [{ type: 'bar', data: rows.map(r => ({ value: r[m], itemStyle: { color: COL[r.owner], borderRadius: [0, 4, 4, 0] } })),
+        label: { show: true, position: 'right', formatter: p => pct(p.value / tot * 100, 0), color: ATLAS.css('--text-2') } }],
+    };
+    if (mixChart) mixChart.setOption(opt, { replaceMerge: ['series'] }); else mixChart = ATLAS.chart('c-mix', opt);
+  });
+  ATLAS.tableToggle('c-mix-t', 'c-mix-tbl', D.fortune_mix, [
+    { key: 'owner', label: 'Ownership' }, { key: 'n', label: 'Companies', num: true }, { key: 'rev', label: 'Revenue', num: true, fmt: B },
+    { key: 'profit', label: 'Profit', num: true, fmt: B }, { key: 'agg_margin', label: 'Agg. margin', num: true, fmt: v => pct(v) },
+    { key: 'med_margin', label: 'Median margin', num: true, fmt: v => pct(v) }, { key: 'loss_makers', label: 'Loss-makers', num: true }]);
+  const fm = Object.fromEntries(D.fortune_mix.map(r => [r.owner, r]));
+  ATLAS.notes('n-mix', { title: "Writer's notes — the ownership mix", items: [
+    `<b>${pct(H.state_ctrl_pct)}</b> of the Fortune 500's ${B(D.fortune_tot.rev)} revenue is in companies a government controls: <b>${fm['State-owned, unlisted'].n}</b> unlisted state groups (${B(fm['State-owned, unlisted'].rev)}) plus <b>${fm['Listed, state-controlled'].n}</b> listed but state-controlled (${B(fm['Listed, state-controlled'].rev)}). Add minority state stakes and it is <b>${pct(H.state_any_pct)}</b>.`,
+    `Profit tells a different story. Unlisted state groups bring in ${pct(fm['State-owned, unlisted'].rev / D.fortune_tot.rev * 100)} of revenue but only ${pct(fm['State-owned, unlisted'].profit / D.fortune_tot.profit * 100)} of profit. Listed state champions (Aramco, the big Chinese banks) are the opposite: ${pct(fm['Listed, state-controlled'].rev / D.fortune_tot.rev * 100)} of revenue, ${pct(fm['Listed, state-controlled'].profit / D.fortune_tot.profit * 100)} of profit.`,
+    `Mutuals and co-ops (${fm['Mutual / co-operative'].n} firms, ${B(fm['Mutual / co-operative'].rev)}) are the forgotten third model: US and Japanese life insurers, Dutch and French co-op banks, German grocery co-ops.`,
+    `<b>Story angle:</b> "The stock market is not the economy" — a quarter of the world's biggest business answers to ministries and party committees, not shareholders.`,
+  ]});
+
+  // ---------- 2. invisible giants ----------
+  const invTypes = [...new Set(D.invisible.map(r => r.owner))];
+  const invC = [...new Set(D.invisible.map(r => r.country))].sort();
+  const selT = document.getElementById('inv-type'), selC = document.getElementById('inv-country'), selN = document.getElementById('inv-n');
+  invTypes.forEach(t => selT.insertAdjacentHTML('beforeend', `<option>${t}</option>`));
+  invC.forEach(t => selC.insertAdjacentHTML('beforeend', `<option>${t}</option>`));
+  let invChart;
+  function drawInv() {
+    const rows = D.invisible.filter(r => (!selT.value || r.owner === selT.value) && (!selC.value || r.country === selC.value)).slice(0, +selN.value).reverse();
+    const opt = {
+      grid: { left: 8, right: 60, top: 10, bottom: 8 },
+      xAxis: { type: 'value', axisLabel: { formatter: v => '$' + (v / 1000).toFixed(0) + 'B' } },
+      yAxis: { type: 'category', data: rows.map(r => r.company), axisLabel: { fontSize: 11, width: 220, overflow: 'truncate' } },
+      tooltip: { formatter: p => { const r = rows[p.dataIndex]; return `<b>${r.company}</b><br>${r.country} · ${r.owner}<br>Revenue ${B(r.rev)}${r.profit != null ? `<br>Profit ${B(r.profit)} (${pct(r.profit / r.rev * 100)} margin)` : ''}${r.note ? `<br><i>${r.note}</i>` : ''}<br><span style="color:var(--text-3)">${r.src}</span>`; } },
+      series: [{ type: 'bar', data: rows.map(r => ({ value: r.rev, itemStyle: { color: COL[r.owner], borderRadius: [0, 3, 3, 0] } })),
+        label: { show: true, position: 'right', fontSize: 10, color: ATLAS.css('--text-3'), formatter: p => '$' + (p.value / 1000).toFixed(0) + 'B' } }],
+    };
+    document.getElementById('c-inv').style.height = Math.max(360, rows.length * 19 + 40) + 'px';
+    if (invChart) { invChart.resize(); invChart.setOption(opt, { replaceMerge: ['series', 'yAxis'] }); } else invChart = ATLAS.chart('c-inv', opt);
+  }
+  [selT, selC, selN].forEach(s => s.onchange = drawInv); drawInv();
+  ATLAS.tableToggle('c-inv-t', 'c-inv-tbl', D.invisible, [
+    { key: 'company', label: 'Company' }, { key: 'country', label: 'Country' }, { key: 'owner', label: 'Ownership' },
+    { key: 'rev', label: 'Revenue', num: true, fmt: B }, { key: 'profit', label: 'Profit', num: true, fmt: B }, { key: 'note', label: 'Note' }, { key: 'src', label: 'Source' }]);
+  const inv = D.invisible, top = inv[0];
+  const over100 = inv.filter(r => r.rev >= 100000).length;
+  ATLAS.notes('n-inv', { title: "Writer's notes — invisible giants", items: [
+    `The largest company on earth without listed shares is <b>${top.company}</b> (${B(top.rev)} revenue), a Chinese central SOE that runs the grid for about 1.1 billion people. Only Amazon and Walmart sell more.`,
+    `<b>${over100}</b> unlisted groups have revenue above $100 billion. Each would rank inside the top ~70 listed companies on earth.`,
+    `Commodity traders are the most invisible of all: <b>Vitol</b> (~$331B), <b>Trafigura</b> ($240B), <b>Louis Dreyfus</b> ($53B) are owned by their partners and employees and disclose little. Cargill (US) is the agricultural counterpart.`,
+    `The <b>Big Four</b> accounting firms (Deloitte, PwC, EY, KPMG; ~$212B combined) are partnerships, so they never appear on equity lists.`,
+    `<b>India angle:</b> India's state giants are mostly <i>listed</i> PSUs (see below), unlike China's unlisted parent groups. The big unlisted Indian names are smaller: Tata Sons, the holding company, has kept itself off the market.`,
+    `<b>Overlap warning:</b> CNPC, Sinopec Group, China Mobile Communications and other parent groups <i>consolidate</i> listed subsidiaries. Their revenue is not extra on top of PetroChina, Sinopec Corp or China Mobile.`,
+  ]});
+
+  // ---------- 3. country mix ----------
+  let ctyChart;
+  seg('cty-tools', [['n', 'Number of companies'], ['rev', 'Revenue'], ['share', '% of revenue']], m => {
+    const rows = D.fortune_country.slice().reverse();
+    const series = ORDER.map(o => ({
+      name: o, type: 'bar', stack: 'a', itemStyle: { color: COL[o] }, emphasis: { focus: 'series' },
+      data: rows.map(r => m === 'n' ? r.by[o].n : m === 'rev' ? r.by[o].rev : +(r.by[o].rev / r.rev * 100).toFixed(1)),
+    }));
+    const opt = {
+      legend: { data: ORDER, top: 0, type: 'scroll' }, grid: { left: 8, right: 24, top: 48, bottom: 8 },
+      xAxis: { type: 'value', max: m === 'share' ? 100 : null, axisLabel: { formatter: v => m === 'rev' ? B(v) : m === 'share' ? v + '%' : v } },
+      yAxis: { type: 'category', data: rows.map(r => r.country) },
+      tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' }, formatter: ps => { const r = rows[ps[0].dataIndex];
+        return `<b>${r.country}</b> — ${r.n} companies, ${B(r.rev)}<br>` + ORDER.filter(o => r.by[o].n).map(o => `<span style="color:${COL[o]}">●</span> ${SHORT[o]}: ${r.by[o].n} firms, ${B(r.by[o].rev)} (${pct(r.by[o].rev / r.rev * 100, 0)})`).join('<br>'); } },
+      series,
+    };
+    if (ctyChart) ctyChart.setOption(opt, { replaceMerge: ['series'] }); else ctyChart = ATLAS.chart('c-cty', opt);
+  });
+  ATLAS.tableToggle('c-cty-t', 'c-cty-tbl', D.fortune_rows, [
+    { key: 'rank', label: 'Rank', num: true }, { key: 'company', label: 'Company' }, { key: 'country', label: 'Country' }, { key: 'owner', label: 'Ownership' },
+    { key: 'rev', label: 'Revenue', num: true, fmt: B }, { key: 'profit', label: 'Profit', num: true, fmt: B }, { key: 'margin', label: 'Margin', num: true, fmt: v => pct(v) }]);
+
+  // ---------- 4. state share of listed ----------
+  let stChart;
+  const stSort = document.getElementById('st-sort');
+  function drawSt() {
+    const k = stSort.value;
+    const rows = D.state_by_country.slice().sort((a, b) => k === 'm' ? b.pct_m - a.pct_m : k === 'rev' ? b.rev - a.rev : (b.pct_m + b.pct_s) - (a.pct_m + a.pct_s)).reverse();
+    const opt = {
+      legend: { data: ['State-controlled', 'Significant state stake'], top: 0 }, grid: { left: 8, right: 40, top: 36, bottom: 8 },
+      xAxis: { type: 'value', max: 100, axisLabel: { formatter: '{value}%' } },
+      yAxis: { type: 'category', data: rows.map(r => r.country), axisLabel: { fontSize: 11 } },
+      tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' }, formatter: ps => { const r = rows[ps[0].dataIndex];
+        return `<b>${r.country}</b> — ${r.firms} Global 2000 firms, ${B(r.rev)} revenue<br><span style="color:${P[2]}">●</span> State-controlled: ${r.n_m} firms, ${B(r.rev_m)} (${pct(r.pct_m)})<br><span style="color:${P[1]}">●</span> Significant stake: ${r.n_s} firms, ${B(r.rev_s)} (${pct(r.pct_s)})<br>State-controlled share of market value: ${pct(r.mv_pct_m)}${r.unassessed_pct ? `<br><i>${pct(r.unassessed_pct)} of revenue not assessed (small firms)</i>` : ''}`; } },
+      series: [
+        { name: 'State-controlled', type: 'bar', stack: 's', itemStyle: { color: P[2] }, data: rows.map(r => r.pct_m) },
+        { name: 'Significant state stake', type: 'bar', stack: 's', itemStyle: { color: P[1] }, data: rows.map(r => r.pct_s) },
+      ],
+    };
+    if (stChart) stChart.setOption(opt, { replaceMerge: ['series'] }); else stChart = ATLAS.chart('c-st', opt);
+  }
+  stSort.onchange = drawSt; drawSt();
+  ATLAS.tableToggle('c-st-t', 'c-st-tbl', D.state_by_country, [
+    { key: 'country', label: 'Country' }, { key: 'firms', label: 'G2000 firms', num: true }, { key: 'rev', label: 'Revenue', num: true, fmt: B },
+    { key: 'n_m', label: 'State-ctrl firms', num: true }, { key: 'pct_m', label: 'State-ctrl % rev', num: true, fmt: v => pct(v) },
+    { key: 'n_s', label: 'Sig. stake firms', num: true }, { key: 'pct_s', label: 'Sig. stake % rev', num: true, fmt: v => pct(v) },
+    { key: 'mv_pct_m', label: 'State-ctrl % mkt value', num: true, fmt: v => pct(v) }]);
+  const sc = Object.fromEntries(D.state_by_country.map(r => [r.country, r]));
+  ATLAS.notes('n-st', { title: "Writer's notes — the state inside the market", items: [
+    `Across the whole Forbes Global 2000, <b>${H.forbes_state_n}</b> listed companies have a government as controlling or major shareholder. They bring in <b>${pct(H.forbes_state_rev_pct)}</b> of revenue (${pct(H.forbes_state_m_rev_pct)} in outright state-controlled firms) but only <b>${pct(H.forbes_state_mv_pct)}</b> of market value: investors pay less per dollar of state-company sales.`,
+    `<b>China:</b> at least ${pct(sc.China.pct_m, 0)} of its listed giants' revenue is in state-controlled firms (${sc.China.n_m} companies), ${pct(sc.China.pct_m + sc.China.pct_s, 0)} including minority-state ones. Add Hong Kong-listed mainland SOEs (China Mobile, CNOOC, CITIC) and the picture barely changes.`,
+    `<b>Saudi Arabia</b> ${pct(sc['Saudi Arabia'].pct_m, 0)} and <b>Qatar</b> ${pct(sc.Qatar.pct_m, 0)}: one company (Aramco, QNB) dominates the country's list.`,
+    `<b>Norway</b> is the rich-world outlier: Equinor, Telenor and Kongsberg are state-controlled and DNB, Hydro and Yara have big state stakes, so ~${pct(sc.Norway.pct_m + sc.Norway.pct_s, 0)} of its listed revenue is state-linked.`,
+    `In the <b>US, UK, Australia, Canada</b> the share is near zero. The notable US exceptions are Fannie Mae and Freddie Mac, in government conservatorship since 2008.`,
+  ]});
+
+  // ---------- 5. India ----------
+  const IC = { true: P[2], false: P[0] };
+  let indChart;
+  seg('ind-tools', [['rev', 'Revenue'], ['mv', 'Market value'], ['profit', 'Profit'], ['emp', 'Employees']], m => {
+    const rows = D.india.slice().sort((a, b) => (b[m] || 0) - (a[m] || 0)).slice(0, 40).reverse();
+    const fmt = v => m === 'emp' ? ATLAS.fmtNum(v) : B(v);
+    const opt = {
+      legend: { data: ['PSU (state-controlled)', 'Private sector'], top: 0 }, grid: { left: 8, right: 64, top: 30, bottom: 8 },
+      xAxis: { type: 'value', axisLabel: { formatter: fmt } },
+      yAxis: { type: 'category', data: rows.map(r => r.company), axisLabel: { fontSize: 11, width: 200, overflow: 'truncate' } },
+      tooltip: { formatter: p => { const r = rows[p.dataIndex]; return `<b>${r.company}</b> — ${r.psu ? 'PSU / state-controlled' : 'Private sector'}<br>${r.industry}<br>Revenue ${B(r.rev)} · Profit ${B(r.profit)} (${pct(r.margin)})<br>Market value ${B(r.mv)} (${(r.mv / r.rev).toFixed(2)}× revenue)<br>Employees ${ATLAS.fmtNum(r.emp)}`; } },
+      series: [
+        { name: 'PSU (state-controlled)', type: 'bar', stack: 'x', itemStyle: { color: P[2] }, data: rows.map(r => r.psu ? r[m] : null),
+          label: { show: true, position: 'right', fontSize: 10, color: ATLAS.css('--text-3'), formatter: p => p.value ? fmt(p.value) : '' } },
+        { name: 'Private sector', type: 'bar', stack: 'x', itemStyle: { color: P[0] }, data: rows.map(r => r.psu ? null : r[m]),
+          label: { show: true, position: 'right', fontSize: 10, color: ATLAS.css('--text-3'), formatter: p => p.value ? fmt(p.value) : '' } },
+      ],
+    };
+    if (indChart) indChart.setOption(opt, { replaceMerge: ['series', 'yAxis'] }); else indChart = ATLAS.chart('c-ind', opt);
+  });
+  ATLAS.tableToggle('c-ind-t', 'c-ind-tbl', D.india, [
+    { key: 'company', label: 'Company' }, { key: 'psu', label: 'PSU?', fmt: v => v ? 'PSU' : 'Private' }, { key: 'industry', label: 'Industry' },
+    { key: 'rev', label: 'Revenue', num: true, fmt: B }, { key: 'profit', label: 'Profit', num: true, fmt: B }, { key: 'margin', label: 'Margin', num: true, fmt: v => pct(v) },
+    { key: 'mv', label: 'Market value', num: true, fmt: B }, { key: 'emp', label: 'Employees', num: true, fmt: v => ATLAS.fmtNum(v) }]);
+  const IS = D.india_stats, ps = IS['PSU (state-controlled)'], pr = IS['Private sector'];
+  const shareRows = [['Companies', 'n'], ['Revenue', 'rev'], ['Profit', 'profit'], ['Market value', 'mv'], ['Employees', 'emp']];
+  ATLAS.chart('c-ind2', {
+    legend: { data: ['PSU (state-controlled)', 'Private sector'], top: 0 }, grid: { left: 8, right: 16, top: 34, bottom: 8 },
+    xAxis: { type: 'value', max: 100, axisLabel: { formatter: '{value}%' } },
+    yAxis: { type: 'category', data: shareRows.map(r => r[0]).reverse() },
+    tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' }, formatter: ps2 => { const k = shareRows.slice().reverse()[ps2[0].dataIndex][1]; const f = k === 'n' ? (v => v) : k === 'emp' ? ATLAS.fmtNum : B;
+      return `<b>${shareRows.find(r => r[1] === k)[0]}</b><br>PSUs: ${f(ps[k])} (${pct(ps[k] / (ps[k] + pr[k]) * 100, 0)})<br>Private: ${f(pr[k])} (${pct(pr[k] / (ps[k] + pr[k]) * 100, 0)})`; } },
+    series: [
+      { name: 'PSU (state-controlled)', type: 'bar', stack: 's', itemStyle: { color: P[2] }, data: shareRows.slice().reverse().map(([, k]) => +(ps[k] / (ps[k] + pr[k]) * 100).toFixed(1)), label: { show: true, formatter: '{c}%', fontSize: 11, color: '#fff' } },
+      { name: 'Private sector', type: 'bar', stack: 's', itemStyle: { color: P[0] }, data: shareRows.slice().reverse().map(([, k]) => +(pr[k] / (ps[k] + pr[k]) * 100).toFixed(1)), label: { show: true, formatter: '{c}%', fontSize: 11, color: '#fff' } },
+    ],
+  });
+  ATLAS.table('ind-stats-tbl', [
+    { m: 'Aggregate net margin', a: pct(ps.agg_margin), b: pct(pr.agg_margin) },
+    { m: 'Median net margin', a: pct(ps.med_margin), b: pct(pr.med_margin) },
+    { m: 'Market value ÷ revenue', a: ps.mv_to_rev + '×', b: pr.mv_to_rev + '×' },
+    { m: 'Market value ÷ profit (P/E-like)', a: ps.mv_to_profit + '×', b: pr.mv_to_profit + '×' },
+  ], [{ key: 'm', label: 'Measure' }, { key: 'a', label: 'PSUs', num: true }, { key: 'b', label: 'Private', num: true }]);
+  ATLAS.notes('n-ind', { title: "Writer's notes — India's PSUs", items: [
+    `<b>23 of India's 70</b> Global 2000 companies are government-controlled. Together they bring in <b>${B(ps.rev)}</b> (${pct(H.india_psu_rev_pct, 0)} of the Indian total) and <b>${pct(H.india_psu_profit_pct, 0)}</b> of profit, but the market values them at only <b>${pct(H.india_psu_mv_pct, 0)}</b> of India's Global 2000 market value.`,
+    `The valuation gap is the headline: private Indian giants trade at <b>${pr.mv_to_profit}×</b> profit, PSUs at <b>${ps.mv_to_profit}×</b>. That is the "PSU discount" in one number, and it persists even after the 2023-24 PSU stock rally.`,
+    `Margins are close: aggregate ${pct(ps.agg_margin)} for PSUs vs ${pct(pr.agg_margin)} private; the medians are nearly identical (${pct(ps.med_margin)} vs ${pct(pr.med_margin)}). The discount is about governance, dividends-to-the-state, pricing control (fuel, power) and growth, not about current profitability.`,
+    `<b>LIC</b> (${B(D.india.find(r => r.company.startsWith('Life Insurance')).rev)} revenue) is India's second-largest company by revenue after Reliance and its largest PSU. SBI is the largest bank; Indian Oil, ONGC and BPCL make up the energy block.`,
+    `PSUs employ <b>${ATLAS.fmtNum(ps.emp)}</b> people across these 23 firms, versus ${ATLAS.fmtNum(pr.emp)} at the 47 private ones. Most of the private headcount is in the IT-services firms (TCS, Infosys, HCLTech, Wipro).`,
+    `<b>Story angle:</b> India is closer to China than to the US in how much big business the state owns, but India listed its PSUs (often with only 5–25% float). China kept the parents unlisted.`,
+  ]});
+
+  // ---------- 6. margins ----------
+  let mgChart;
+  const lenses = {
+    fortune: D.fortune_mix.map(r => ({ label: r.owner, agg: r.agg_margin, med: r.med_margin, n: r.n, color: COL[r.owner] })),
+    forbes: D.forbes_margin.map(r => ({ label: r.label, agg: r.agg_margin, med: r.med_margin, n: r.n, color: COL[r.label] })),
+    india: [['PSU (state-controlled)', P[2]], ['Private sector', P[0]]].map(([k, c]) => ({ label: 'India — ' + k, agg: D.india_stats[k].agg_margin, med: D.india_stats[k].med_margin, n: D.india_stats[k].n, color: c })),
+    china: [['State-controlled', P[2]], ['Private / no state control', P[0]]].map(([k, c]) => ({ label: 'China — ' + k, agg: D.china_stats[k].agg_margin, med: D.china_stats[k].med_margin, n: D.china_stats[k].n, color: c })),
+  };
+  seg('mg-tools', [['fortune', 'Fortune 500 (all owners)'], ['forbes', 'Forbes G2000 (listed only)'], ['india', 'India'], ['china', 'China (listed, ≥$10B)']], k => {
+    const rows = lenses[k];
+    const opt = {
+      legend: { data: ['Aggregate margin', 'Median margin'], top: 0 }, grid: { left: 8, right: 30, top: 34, bottom: 8 },
+      xAxis: { type: 'value', axisLabel: { formatter: '{value}%' } },
+      yAxis: { type: 'category', data: rows.map(r => r.label), inverse: true, axisLabel: { width: 170, overflow: 'break', fontSize: 11 } },
+      tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' }, formatter: ps => { const r = rows[ps[0].dataIndex]; return `<b>${r.label}</b> (${r.n} companies)<br>Aggregate margin (total profit ÷ total revenue): ${pct(r.agg)}<br>Median company margin: ${pct(r.med)}`; } },
+      series: [
+        { name: 'Aggregate margin', type: 'bar', data: rows.map(r => ({ value: r.agg, itemStyle: { color: r.color } })), label: { show: true, position: 'right', formatter: '{c}%', fontSize: 11 } },
+        { name: 'Median margin', type: 'bar', data: rows.map(r => ({ value: r.med, itemStyle: { color: r.color, opacity: .45 } })), label: { show: true, position: 'right', formatter: '{c}%', fontSize: 11 } },
+      ],
+    };
+    if (mgChart) mgChart.setOption(opt, { replaceMerge: ['series', 'yAxis'] }); else mgChart = ATLAS.chart('c-mg', opt);
+  });
+  ATLAS.tableToggle('c-mg-t', 'c-mg-tbl', [].concat(...Object.entries(lenses).map(([k, v]) => v.map(r => Object.assign({ lens: k }, r)))), [
+    { key: 'lens', label: 'Lens' }, { key: 'label', label: 'Group' }, { key: 'n', label: 'Companies', num: true },
+    { key: 'agg', label: 'Aggregate margin', num: true, fmt: v => pct(v) }, { key: 'med', label: 'Median margin', num: true, fmt: v => pct(v) }]);
+
+  // strip plot
+  const strip = D.fortune_rows.filter(r => r.margin != null);
+  ATLAS.chart('c-strip', {
+    grid: { left: 8, right: 16, top: 16, bottom: 8 },
+    xAxis: { type: 'value', min: -30, max: 50, axisLabel: { formatter: '{value}%' }, name: 'Net margin', nameLocation: 'middle', nameGap: 26 },
+    yAxis: { type: 'category', data: ORDER.map(o => SHORT[o]), inverse: true },
+    tooltip: { formatter: p => { const r = p.data.r; return `<b>${r.company}</b> (#${r.rank})<br>${r.country} · ${r.owner}<br>Revenue ${B(r.rev)} · Profit ${B(r.profit)}<br>Net margin ${pct(r.margin)}`; } },
+    series: ORDER.map((o, i) => ({
+      type: 'scatter', symbolSize: 7, itemStyle: { color: COL[o], opacity: .7 },
+      data: strip.filter(r => r.owner === o).map((r, j) => ({ value: [Math.max(-30, Math.min(50, r.margin)), i], r, symbolOffset: [0, ((j * 37) % 23) - 11] })),
+      markLine: i === 0 ? undefined : undefined,
+    })).concat([{ type: 'scatter', symbol: 'diamond', symbolSize: 14, itemStyle: { color: ATLAS.css('--text') }, tooltip: { formatter: p => `<b>${ORDER[p.value[1]]}</b><br>Median margin ${pct(p.value[0])}` },
+      data: D.fortune_mix.map((r, i) => [r.med_margin, i]), z: 5 }]),
+  });
+  ATLAS.tableToggle('c-strip-t', 'c-strip-tbl', strip, [
+    { key: 'company', label: 'Company' }, { key: 'owner', label: 'Ownership' }, { key: 'country', label: 'Country' },
+    { key: 'rev', label: 'Revenue', num: true, fmt: B }, { key: 'margin', label: 'Margin', num: true, fmt: v => pct(v) }]);
+  const t = D.margin_tests.find(x => x.comparison === 'state vs listed') || {};
+  ATLAS.notes('n-mg', { title: "Writer's notes — margins by owner", items: [
+    `<b>Unlisted state giants:</b> aggregate margin <b>${pct(fm['State-owned, unlisted'].agg_margin)}</b>, median ${pct(fm['State-owned, unlisted'].med_margin)}; ${fm['State-owned, unlisted'].loss_makers} of ${fm['State-owned, unlisted'].n} lost money. Listed firms with no big state stake: ${pct(fm['Listed, no major state stake'].agg_margin)} aggregate, ${pct(fm['Listed, no major state stake'].med_margin)} median.`,
+    `The study pack's formal test (state vs listed, mixed universe): median ${pct(t.median_a * 100)} vs ${pct(t.median_b * 100)}; difference in means ${(t.diff * 100).toFixed(1)} pp, 95% bootstrap CI [${(t.ci_low * 100).toFixed(1)}, ${(t.ci_high * 100).toFixed(1)}] pp. It is not noise.`,
+    `But <b>listed state-controlled</b> firms post the <i>highest</i> aggregate margin (${pct(fm['Listed, state-controlled'].agg_margin)}), driven by Saudi Aramco and the Big Four Chinese banks. State ownership on its own doesn't mean low profit. Grids, posts, railways and steel mills do.`,
+    `Private (family/foundation) giants look thin (${pct(fm['Private (family / founder / foundation)'].agg_margin)}) because the list is heavy with Chinese private refiners and steelmakers and commodity traders. Private firms are not less efficient: their mix is different.`,
+    `<b>Mutuals</b> (${pct(fm['Mutual / co-operative'].agg_margin)}) return surplus to members as dividends or lower premiums. A low "profit" is partly the business model.`,
+    `<b>Caveat:</b> SOEs often carry social mandates (price caps on fuel and power, rural service), so margin comparisons mix efficiency with policy.`,
+  ]});
+
+  // ---------- 7. US private ----------
+  let pvChart;
+  seg('pv-tools', [['rev', 'Revenue'], ['emp', 'Employees']], m => {
+    const rows = D.private_us.slice().sort((a, b) => (b[m] || 0) - (a[m] || 0)).slice(0, 30).reverse();
+    const fmt = v => m === 'emp' ? ATLAS.fmtNum(v) : B(v);
+    const opt = {
+      grid: { left: 8, right: 64, top: 10, bottom: 8 },
+      xAxis: { type: 'value', axisLabel: { formatter: fmt } },
+      yAxis: { type: 'category', data: rows.map(r => r.company), axisLabel: { fontSize: 11 } },
+      tooltip: { formatter: p => { const r = rows[p.dataIndex]; return `<b>${r.company}</b> (#${r.rank})<br>${r.industry} · ${r.city}<br>Revenue ${B(r.rev)}${r.chg != null ? ` (${r.chg > 0 ? '+' : ''}${r.chg}% y/y)` : ''}<br>Employees ${ATLAS.fmtNum(r.emp)}${r.founded ? `<br>Founded ${r.founded}` : ''}`; } },
+      series: [{ type: 'bar', itemStyle: { color: P[4], borderRadius: [0, 3, 3, 0] }, data: rows.map(r => r[m]),
+        label: { show: true, position: 'right', fontSize: 10, color: ATLAS.css('--text-3'), formatter: p => fmt(p.value) } }],
+    };
+    if (pvChart) pvChart.setOption(opt, { replaceMerge: ['series', 'yAxis'] }); else pvChart = ATLAS.chart('c-pv', opt);
+  });
+  ATLAS.tableToggle('c-pv-t', 'c-pv-tbl', D.private_us, [
+    { key: 'rank', label: 'Rank', num: true }, { key: 'company', label: 'Company' }, { key: 'industry', label: 'Industry' }, { key: 'city', label: 'HQ' },
+    { key: 'rev', label: 'Revenue', num: true, fmt: B }, { key: 'chg', label: 'Rev. chg %', num: true }, { key: 'emp', label: 'Employees', num: true, fmt: v => ATLAS.fmtNum(v) },
+    { key: 'founded', label: 'Founded', num: true }]);
+  const PS = D.pv_stats;
+  ATLAS.notes('n-pv', { title: "Writer's notes — America's private giants", items: [
+    `Forbes' 200 largest US private companies: <b>${B(PS.rev)}</b> revenue, <b>${ATLAS.fmtNum(PS.emp)}</b> employees. That equals ${pct(PS.rev / PS.us_g2000_rev * 100, 0)} of the revenue of the ${'US'} companies in the Global 2000 (${B(PS.us_g2000_rev)}).`,
+    `The top 10 alone are ${B(PS.top10)}. <b>Cargill</b> ($154B) would rank among the 40 largest US listed companies by revenue.`,
+    `The private list is mostly groceries, convenience stores, food distribution, construction and trading. These are low-margin, cash-generative businesses that don't need equity markets. Publix and H-E-B employ more people than most listed tech giants.`,
+    `Many are employee-owned (Publix, WinCo) or partnerships (Bechtel, McKinsey, Edward Jones), so "private" doesn't mean "one family".`,
+    `<b>Caveat:</b> private-company revenue is often a Forbes estimate; profit is almost never disclosed.`,
+  ]});
+
+  // ---------- 8. why private ----------
+  document.getElementById('why').innerHTML = `
+    <p><b>1. Family control and the long view.</b> Cargill, Mars, Koch, Aldi and Schwarz (Lidl) have no outside shareholders to satisfy and don't publish quarterly earnings, so they can plan in decades.
+      Listing would mean disclosure, activists and dilution. Many families also keep control <i>after</i> listing through dual-class shares (Meta, Alphabet) or a controlling stake (Walmart's Waltons, LVMH's Arnaults, Reliance's Ambanis).</p>
+    <p><b>2. Foundations as owners.</b> A distinctly northern-European model. Bosch, Ingka/IKEA, Carlsberg, Novo Nordisk, Maersk and ZF are owned or controlled by foundations whose charters make them almost impossible to take over.
+      Novo Nordisk, once Europe's most valuable company, is controlled by a foundation that holds about three-quarters of the votes. India's version is the <b>Tata Trusts</b>, which own about two-thirds of Tata Sons.</p>
+    <p><b>3. The strategic state.</b> Grids, oil, railways, posts, policy banks and defence are kept state-owned because governments see them as infrastructure or as tools of policy (State Grid, CNPC, Deutsche Bahn, USPS, Pemex).
+      Some states list a minority and keep control: ICBC, Aramco, SBI, LIC and Equinor are listed but run by the state.</p>
+    <p><b>4. Owned by customers.</b> Mutual insurers (State Farm, Nippon Life, New York Life), co-operative banks (Rabobank, Crédit Mutuel, BPCE, DZ Bank) and retail co-ops (Edeka, REWE, Migros, Coop) are owned by their members. They cannot list without "demutualising".</p>
+    <p><b>5. Partnerships and traders.</b> Deloitte, PwC, EY, KPMG, McKinsey, Vitol and Trafigura are owned by their partners and senior staff. Listing would hand outsiders the profit that partners now keep.</p>
+    <p><b>6. Cross-holdings.</b> Japan's keiretsu (Toyota group) and Korea's chaebol (Samsung, Hyundai, SK, LG) are listed, but founding families control them through webs of affiliate shareholdings, often with family stakes in the low single digits.</p>`;
+  const famTypes = [...new Set(D.family.map(r => r.type))];
+  const ft = document.getElementById('fam-type');
+  famTypes.forEach(t => ft.insertAdjacentHTML('beforeend', `<option>${t}</option>`));
+  const famCols = [{ key: 'company', label: 'Company' }, { key: 'country', label: 'Country' }, { key: 'controller', label: 'Controlling entity' },
+    { key: 'type', label: 'Control type' }, { key: 'stake', label: 'Stake (approx.)' }, { key: 'listed', label: 'Listed?', fmt: v => v ? 'Yes' : 'No' },
+    { key: 'rev', label: 'Revenue', num: true, fmt: B }, { key: 'mv', label: 'Market value', num: true, fmt: B }];
+  const famT = ATLAS.table('fam-tbl', D.family, famCols);
+  ft.onchange = () => famT.update(D.family.filter(r => !ft.value || r.type === ft.value));
+  ATLAS.notes('n-why', { title: 'Story angles', items: [
+    `<b>"The quarter of business that doesn't answer to shareholders"</b>: state, family, foundation and mutual owners, with Bosch, State Grid, State Farm and Cargill as the four archetypes.`,
+    `<b>India's ownership story in one table:</b> the state (LIC, SBI, ONGC), the promoter families (Ambani, Adani, Premji, Bajaj, Birla) and a charitable trust (Tata Trusts). Widely held, professionally run firms like Infosys, HDFC Bank and ICICI are the minority among India's giants.`,
+    `<b>The Danish foundation model:</b> Novo Nordisk, Carlsberg and Maersk are among Denmark's biggest companies, and foundations control all three. Is it a model for keeping national champions at home?`,
+    `<b>The disclosure gap:</b> Vitol, Cargill, Schwarz and Aldi together sell roughly $800B a year with a fraction of the disclosure of a mid-cap listed firm.`,
+  ]});
+  ATLAS.notes('n-cav', { title: 'Caveats before you quote', caveat: true, items: [
+    'Ownership labels (state-controlled / significant stake / private / mutual) are this atlas\'s curation from public shareholding information as of 2025. Stakes change (NatWest and AIB were fully re-privatised in 2025). Check any single company before quoting.',
+    'Fortune ranks parent groups; Forbes ranks listed entities. CNPC ⊃ PetroChina, Sinopec Group ⊃ Sinopec Corp, China Mobile Communications ⊃ China Mobile. Never add the two lists together.',
+    'Fortune reports many Chinese SOE parents as "Private" (meaning unlisted). They are relabelled here as state-owned. The study pack\'s mixed-universe figures (56 state firms, $4.1T) count only the 90 Fortune names outside Forbes, so they understate state ownership relative to this page.',
+    'China\'s listed-SOE share covers firms with ≥$10B revenue (≈93% of China\'s Global 2000 revenue). Smaller Chinese firms are counted as not state-controlled, so the figure is a floor.',
+    'Revenue is not value added. Trading houses and refiners book huge revenue on thin margins, which inflates the "private" and "state" revenue shares relative to their economic weight.',
+    'Curated revenue for Vitol, Schwarz, Aldi, ByteDance, Ineos, CMA CGM and the Big Four comes from company statements and press reports for different fiscal years. It is approximate.',
+    'Fortune revenue is fiscal 2024 (published 2025); Forbes market values are May 2026.',
+  ]});
+})();
+</script>
+</body>
+</html>
