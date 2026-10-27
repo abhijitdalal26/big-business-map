@@ -1,0 +1,501 @@
+slug,revenues_musd,profits_musd,market_value_musd,employees,industry,company_type_page,country,headquarters_page,ceo_page,ticker_page,website,fortune_updated,market_value_asof
+abb,35551.0,4734.0,177346.0,111900.0,Industrial Machinery,Public,Switzerland,Zurich,Morten Wierød,ABBNY,https://www.abb.com,16/09/2026,"Aug. 31, 2026"
+abbott-laboratories,44328.0,6524.0,160438.0,115000.0,Medical Products and Equipment,Public,U.S.,"Abbott Park, Ill.",Robert B. Ford,ABT,https://www.abbott.com,7/28/26,
+abbvie,61160.0,4226.0,468427.0,57000.0,Pharmaceuticals,Public,U.S.,U.S.,Robert A. Michael,ABBV,https://www.abbvie.com,10/08/2026,"Sep. 24, 2026"
+accenture,69673.0,7678.0,112304.0,779000.0,Information Technology Services,Public,Ireland,Ireland,Julie Sweet,ACN,https://www.accenture.com/,10/08/2026,"Sep. 24, 2026"
+acs,56224.0,1072.0,32859.0,167803.0,"Engineering, Construction",Public,Spain,Madrid,Juan Santamaria Cases,ACSAY,https://www.grupoacs.com,16/09/2026,"Aug. 31, 2026"
+advanced-micro-devices,41305.0,6434.0,790755.0,31000.0,Semiconductors and Other Electronic Components,Public,U.S.,Santa Clara,Lisa T. Su,AMD,https://www.amd.com,9/29/26,
+aeon,71479.0,485.0,24049.0,427230.0,Food & Drug Stores,Public,Japan,"Chiba, Japan",Akio Yoshida,AONNY,https://www.aeon.info,7/28/26,
+agricultural-bank-of-china,190708.0,40492.0,321672.0,457835.0,Banks: Commercial and Savings,Public,Mainland China,Beijing,Wang  Zhiheng,ACGBY,https://www.abchina.com,7/28/26,
+aia-group,46098.0,7994.0,100220.0,25981.0,Life and Health Insurance,Public,China,Hong Kong,Lee Yuan Siong,AAGIY,https://www.aia.com,9/23/26,
+air-france-klm-group,37229.0,1797.0,3543.0,81992.0,Airlines,Public,France,Paris,Benjamin M. Smith,AFLYY,https://www.airfranceklm.com,16/09/2026,"Aug. 31, 2026"
+airbus-group,82812.0,5889.0,181314.0,165294.0,Aerospace and Defense,Public,Netherlands,Leiden,Guillaume Faury,EADSY,https://www.airbus.com,16/09/2026,"Aug. 31, 2026"
+aisin-seiki,33958.0,1139.0,10074.0,113292.0,Motor Vehicles & Parts,Public,Japan,"Kariya, Japan",Moritaka Yoshida,ASEKY,https://www.aisin.com,7/28/26,
+albertsons-cos,83173.0,217.0,7244.0,193200.0,Food & Drug Stores,Public,U.S.,Boise,Susan D. Morris,ACI,https://www.albertsonscompanies.com,7/28/26,
+alibaba-group-holding,149157.0,10516.0,283411.0,132165.0,Internet Services and Retailing,Public,China,"Hangzhou, China",Eddie Wu,BABA,https://www.alibabagroup.com,9/23/26,
+alimentation-couche-tard,72857.0,2580.0,59564.0,146000.0,Specialty Retailers,Public,Canada,"Laval, Quebec",Alex  Miller,ANCTF,https://corpo.couche-tard.com,7/28/26,
+allianz,133984.0,12153.0,176111.0,156875.0,"Insurance: Life, Health (stock)",Public,Germany,Germany,Oliver Bäte,ALIZY,https://www.allianz.com,10/08/2026,"Sep. 24, 2026"
+allstate,70137.0,13306.0,66034.0,53150.0,Insurance: Property and Casualty (Stock),Public,U.S.,"Northbrook, Ill.",Thomas J. Wilson,ALL,https://www.allstate.com,9/29/26,
+alphabet,445866.0,244205.0,4193427.0,198933.0,Internet Services and Retailing,Public,U.S.,"Mountain View, Calif.",Sundar Pichai,GOOGL,https://abc.xyz,9/29/26,
+aluminum-corp-of-china,68909.0,1343.0,,113762.0,Metals,Private,Mainland China,Beijing,Duan Xiangdong,,https://www.chinalco.com.cn,7/28/26,
+amazon-com,775680.0,135281.0,2798509.0,1595000.0,Internet Services and Retailing,Public,U.S.,Seattle,Andrew R. Jassy,AMZN,https://www.amazon.com,9/29/26,
+america-movil,49123.0,4311.0,78096.0,177711.0,Telecommunications,Public,Mexico,Mexico City,Daniel Hajj Aboumrad,AMX,https://www.americamovil.com,7/28/26,
+american-airlines-group,54633.0,111.0,10787.0,139100.0,Airlines,Public,U.S.,Fort Worth,Robert D. Isom,AAL,https://www.aa.com,7/28/26,
+american-express,80463.0,10833.0,241837.0,76800.0,Diversified Financials,Public,U.S.,New York City,Stephen J. Squeri,AXP,https://www.americanexpress.com,7/28/26,
+amerisourcebergen,321333.0,1554.0,59561.0,49000.0,Wholesalers: Health Care,Public,U.S.,"Conshohocken, Pa.",Robert P. Mauch,COR,https://www.cencora.com,7/28/26,
+amgen,36751.0,7711.0,219545.0,31500.0,Pharmaceuticals,Public,U.S.,U.S.,Robert A. Bradway,AMGN,https://www.amgen.com,10/08/2026,"Sep. 24, 2026"
+anheuser-busch-inbev,59320.0,6837.0,156351.0,136805.0,Beverages,Public,Belgium,Leuven,Michel Doukeris,BUD,https://www.ab-inbev.com,16/09/2026,"Aug. 31, 2026"
+ansteel-group,33894.0,-753.0,,129256.0,Metals,Private,Mainland China,"Anshan, China",Tan Chengxu,,https://www.ansteel.cn,7/28/26,
+apple,466823.0,128930.0,4459835.0,166000.0,"Computers, Office Equipment",Public,U.S.,"Cupertino, Calif.",Timothy D. Cook,AAPL,https://www.apple.com,10/6/2026,
+arcelormittal,61352.0,3152.0,56137.0,125554.0,Metals,Public,Luxembourg,Luxembourg,Aditya Mittal,MT,https://www.arcelormittal.com,16/09/2026,"Aug. 31, 2026"
+archer-daniels-midland,82099.0,1770.0,39738.0,41147.0,Food Production,Public,U.S.,Chicago,Juan R. Luciano,ADM,https://www.adm.com,9/29/26,
+asml-holding,36846.0,10839.0,647580.0,44209.0,Semiconductors and Other Electronic Components,Public,Netherlands,Veldhoven,Christophe D. Fouquet,ASML,https://www.asml.com,16/09/2026,"Aug. 31, 2026"
+assicurazioni-generali,67321.0,4706.0,78269.0,88249.0,"Insurance: Life, Health (stock)",Public,Italy,Trieste,Philippe R. Donnet,ARZGY,https://www.generali.com,16/09/2026,"Aug. 31, 2026"
+astrazeneca,58739.0,10225.0,251575.0,96100.0,Pharmaceuticals,Public,U.K.,Cambridge,Pascal Soriot,AZN,https://www.astrazeneca.com,16/09/2026,"Aug. 31, 2026"
+att,125648.0,21953.0,149737.0,133030.0,Telecommunications,Public,U.S.,Dallas,John T. Stankey,T,https://www.att.com,7/28/26,
+australia-new-zealand-banking-group,43836.0,3789.0,76115.0,42698.0,Banks: Commercial and Savings,Public,Australia,"Docklands, Australia",Nuno  Matos,ANZGY,https://www.anz.com,7/28/26,
+axa,107710.0,11050.0,101270.0,103423.0,"Insurance: Life, Health (stock)",Public,France,Paris,Thomas Buberl,AXAHY,https://www.axa.com,16/09/2026,"Aug. 31, 2026"
+bae-systems,37321.0,2716.0,78434.0,111400.0,Aerospace and Defense,Public,U.K.,London,Charles Woodburn,BAESY,https://www.baesystems.com,16/09/2026,"Aug. 31, 2026"
+banco-bilbao-vizcaya-argentaria,87005.0,11856.0,160441.0,127174.0,Banks: Commercial and Savings,Public,Spain,Bilbao,Onur Genç,BBVA,https://www.bbva.com,16/09/2026,"Aug. 31, 2026"
+banco-bradesco,60522.0,4235.0,36204.0,77702.0,Banks: Commercial and Savings,Public,Brazil,"Osasco, Brazil",Marcelo  de Araújo Noronha,BBD,https://www.bradesco.com.br,7/28/26,
+banco-do-brasil,66770.0,2450.0,22593.0,85206.0,Banks: Commercial and Savings,Public,Brazil,"Brasilia, Brazil",Tarciana Paula Gomes Medeiros,BDORY,https://ri.bb.com.br/,7/28/26,
+banco-santander,145070.0,15905.0,213022.0,200741.0,Banks: Commercial and Savings,Public,Spain,Madrid,Héctor Blas Grisi Checa,SAN,https://www.santander.com,16/09/2026,"Aug. 31, 2026"
+bank-of-america-corp,193330.0,33637.0,449144.0,211304.0,Commercial Banks,Public,U.S.,Charlotte,Brian T. Moynihan,BAC,https://www.bankofamerica.com,9/29/26,
+bank-of-china,171583.0,33811.0,262738.0,313746.0,Banks: Commercial and Savings,Public,Mainland China,Beijing,Ge Haijiao,BACHY,https://www.boc.cn,7/28/26,
+bank-of-communications,71791.0,13304.0,84183.0,97932.0,Banks: Commercial and Savings,Public,Mainland China,Shanghai,Ren Deqi,BCMXY,https://www.bankcomm.com,7/28/26,
+bank-of-montreal,55925.0,6218.0,125235.0,53234.0,Banks: Commercial and Savings,Public,Canada,Montreal,Darryl White,BMO,https://www.bmo.com,7/28/26,
+bank-of-new-york-mellon-corp,40634.0,6299.0,111227.0,46500.0,Commercial Banks,Public,U.S.,NewYork City,Robin Vince,BNY,https://www.bny.com,9/29/26,
+bank-of-nova-scotia,52710.0,5562.0,107673.0,86431.0,Banks: Commercial and Savings,Public,Canada,Toronto,L. Scott Thomson,BNS,https://www.scotiabank.com,7/28/26,
+barclays,71930.0,9446.0,90421.0,93000.0,Banks: Commercial and Savings,Public,U.K.,London,C.S. Venkatakrishnan,BCS,https://www.home.barclays,16/09/2026,"Aug. 31, 2026"
+basf,71513.0,1826.0,52975.0,108251.0,Chemicals,Public,Germany,Ludwigshafen,Markus Kamieth,BASFY,https://www.basf.com,16/09/2026,"Aug. 31, 2026"
+bayer,51405.0,-4083.0,55956.0,88078.0,Pharmaceuticals,Public,Germany,Leverkusen,William N. Anderson,BAYRY,https://www.bayer.com,16/09/2026,"Aug. 31, 2026"
+beijing-automotive-group,39393.0,10.0,,95000.0,Motor Vehicles & Parts,Private,Mainland China,Beijing,Zhang  Jianyong,,https://www.baicgroup.com.cn,7/28/26,
+beijing-jianlong-heavy-industry-group,34202.0,313.0,,62178.0,Metals,Private,Mainland China,Beijing,Zhixiang Zhang,,https://www.ejianlong.com,7/28/26,
+berkshire-hathaway,371444.0,66968.0,1071418.0,387800.0,Insurance: Property and Casualty (Stock),Public,U.S.,Omaha,Gregory E. Abel,BRK.A,https://www.berkshirehathaway.com,7/28/26,
+best-buy,41691.0,1069.0,17209.0,82000.0,Specialty Retailers,Public,U.S.,"Richfield, Minn.",Corie S. Barry,BBY,https://www.investors.bestbuy.com,7/28/26,
+bharat-petroleum,51895.0,2925.0,13920.0,8947.0,Petroleum Refining,Public,India,Mumbai,Sanjay  Khanna,,https://www.bharatpetroleum.in,7/28/26,
+bhp-billiton,51262.0,9019.0,205202.0,40711.0,"Mining, Crude-Oil Production",Public,Australia,Melbourne,Brandon  Craig,BHP,https://www.bhp.com,7/28/26,
+bmw-group,150524.0,8227.0,43111.0,154540.0,Motor Vehicles and Parts,Public,Germany,Munich,Milan Nedeljković,BMWKY,https://www.bmwgroup.com,16/09/2026,"Aug. 31, 2026"
+bnp-paribas,141642.0,13789.0,130833.0,179840.0,Banks: Commercial and Savings,Public,France,Paris,Jean-Laurent Bonnafé,BNPQY,https://group.bnpparibas,16/09/2026,"Aug. 31, 2026"
+boeing,89463.0,2235.0,169887.0,182000.0,Aerospace & Defense,Public,U.S.,"Arlington, Va.",Robert K. Ortberg,BA,https://www.boeing.com,7/28/26,
+bouygues,64192.0,1284.0,19822.0,192158.0,"Engineering, Construction",Public,France,Paris,Olivier Roussat,BOUYY,https://www.bouygues.com,16/09/2026,"Aug. 31, 2026"
+bp,192549.0,55.0,107727.0,93700.0,Petroleum Refining,Public,U.K.,London,Meg O’Neill,BP,https://www.bp.com,16/09/2026,"Aug. 31, 2026"
+bristol-myers-squibb,48194.0,7054.0,121177.0,32500.0,Pharmaceuticals,Public,U.S.,"Princeton, N.J.",Christopher S. Boerner,BMY,https://www.bms.com,7/28/26,
+british-american-tobacco,33731.0,10226.0,120716.0,47797.0,Tobacco,Public,U.K.,London,Tadeu Marroco,BTI,https://www.bat.com,16/09/2026,"Aug. 31, 2026"
+broadcom,63887.0,23126.0,1827149.0,33000.0,Semiconductors and Other Electronic Components,Public,U.S.,Palo Alto,Hock E. Tan,AVGO,https://www.broadcom.com,7/28/26,
+brookfield-asset-management,75100.0,1307.0,106372.0,250000.0,Diversified Financials,Public,Canada,Toronto,Bruce Flatt,BN,https://www.brookfield.com,7/28/26,
+bunge,70329.0,816.0,22326.0,34000.0,Food Production,Public,Switzerland,Geneva,Gregory A. Heckman,BG,https://www.bunge.com,16/09/2026,"Aug. 31, 2026"
+byd,110381.0,3880.0,113159.0,869622.0,Motor Vehicles & Parts,Public,China,"Shenzhen, China",Wang Chuanfu,BYDDY,https://www.bydglobal.com,9/23/26,
+caixa-economica-federal,51096.0,2872.0,,84394.0,Banks: Commercial and Savings,Private,Brazil,"Brasilia, Brazil",Carlos Antônio  Vieira Fernandes,,https://www.caixa.gov.br,7/28/26,
+canadian-imperial-bank-of-commerce,44358.0,6019.0,107078.0,49824.0,Banks: Commercial and Savings,Public,Canada,Toronto,Harry K. Culham,CM,https://www.cibc.com,7/28/26,
+capital-one-financial,78700.0,10520.0,135868.0,78400.0,Commercial Banks,Public,U.S.,"McLean, Va.",Richard D. Fairbank,COF,https://www.capitalone.com,9/29/26,
+cardinal-health,222578.0,1561.0,54725.0,55392.0,Wholesalers: Health Care,Public,U.S.,"Dublin, Ohio",Jason M. Hollar,CAH,https://www.cardinalhealth.com,7/28/26,
+carrefour,98381.0,360.0,12882.0,298604.0,Food and Drug Stores,Public,France,Massy,Alexandre Bompard,CRRFY,https://www.carrefour.com,16/09/2026,"Aug. 31, 2026"
+caterpillar,67589.0,8884.0,429028.0,118000.0,Construction and Farm Machinery,Public,U.S.,"Irvine, Tex.",Joseph E. Creed,CAT,https://www.caterpillar.com,7/28/26,
+cbre-group,40550.0,1157.0,40417.0,155000.0,Real estate,Public,U.S.,Dallas,Robert E. Sulentic,CBRE,https://www.cbre.com,7/28/26,
+cdp-group,38170.0,3595.0,,49583.0,Diversified Financials,Private,Italy,Rome,Dario Scannapieco,,https://www.cdp.it/,16/09/2026,
+cenovus-energy,35567.0,2813.0,51364.0,7211.0,"Mining, Crude-Oil Production",Public,Canada,Calgary,Jonathan M. McKenzie,CVE,https://www.cenovus.com,7/28/26,
+centene,194777.0,-6674.0,33721.0,61100.0,Health Care: Insurance and Managed Care,Public,U.S.,St. Louis,Sarah M. London,CNC,https://www.centene.com,7/28/26,
+cfe,35371.0,6778.0,,99574.0,Utilities,Private,Mexico,Mexico City,Emilia Esther  Calleja Alor,,https://www.cfe.mx,7/28/26,
+charter-communications,54774.0,4987.0,18320.0,91900.0,Telecommunications,Public,U.S.,"Stamford, Conn.",Christopher L. Winfrey,CHTR,https://www.charter.com,7/28/26,
+chery-automobile,41778.0,2646.0,19192.0,70103.0,Motor Vehicles & Parts,Public,Mainland China,"Wuhu, China",Yin  Tongyue,,https://www.chery-auto.com/,7/28/26,
+chevron,189031.0,12299.0,362869.0,43039.0,Petroleum Refining,Public,U.S.,Houston,Michael K. Wirth,CVX,https://www.chevron.com,7/28/26,
+china-baowu-steel-group,102980.0,2346.0,,232672.0,Metals,Private,Mainland China,Shanghai,Hu  Wangming,,https://www.baowugroup.com,7/28/26,
+china-communications-construction,134089.0,276.0,,198592.0,Engineering & Construction,Private,Mainland China,Beijing,Song  Hailiang,,https://www.ccccltd.cn,7/28/26,
+china-construction-bank,188657.0,47151.0,283916.0,378344.0,Banks: Commercial and Savings,Public,Mainland China,Beijing,Zhang  Jinliang,CICHY,https://www.ccb.com,7/28/26,
+china-cosco-shipping,63202.0,5358.0,,134724.0,Shipping,Private,Mainland China,Shanghai,Wan Min,,https://www.coscoshipping.com,7/28/26,
+china-datang,36173.0,861.0,,84000.0,Energy,Private,Mainland China,Beijing,Ly Jun,,https://www.china-cdt.com,7/28/26,
+china-electronics,36981.0,385.0,,190158.0,"Electronics, Electrical Equip.",Private,Mainland China,Shenzhen,Li   Ligong,,https://www.cec.com.cn,7/28/26,
+china-energy-engineering-group,63442.0,338.0,,117995.0,Engineering & Construction,Private,Mainland China,Beijing,Ni  Zhen,,https://www.ceec.net.cn,7/28/26,
+china-faw-group,74398.0,1445.0,,118857.0,Motor Vehicles & Parts,Private,Mainland China,"Changchun, China",Qiu Xiandong,,https://www.faw.com.cn,7/28/26,
+china-general-technology,44033.0,46.0,,115393.0,Trading,Private,Mainland China,Beijing,Yu  Xubo,,https://gt.cn/,7/28/26,
+china-huadian,43412.0,2879.0,,101618.0,Utilities,Private,Mainland China,Beijing,Ye  Xiangdong,,https://www.chd.com.cn,7/28/26,
+china-huaneng-group,53840.0,2747.0,,122618.0,Energy,Private,Mainland China,"Xiongan, China",Wen Shugang,,https://www.chng.com.cn,7/28/26,
+china-life-insurance,178215.0,3548.0,,175710.0,"Insurance: Life, Health (stock)",Private,Mainland China,Beijing,Cai  Xiliang,,https://www.chinalife.com.cn,7/28/26,
+china-merchants-bank,66303.0,20894.0,140270.0,121585.0,Banks: Commercial and Savings,Public,Mainland China,Shenzhen,Wang Xiao Qing,CIHKY,https://www.cmbchina.com,7/28/26,
+china-minmetals,104139.0,250.0,,183619.0,Metals,Private,Mainland China,Beijing,Chen  Dexin,,https://www.minmetals.com,7/28/26,
+china-minsheng-banking,37039.0,4252.0,21119.0,61658.0,Banks: Commercial and Savings,Public,Mainland China,Beijing,Gao Yingxin,CMAKY,https://www.cmbc.com.cn,7/28/26,
+china-mobile-communications,146550.0,14786.0,,468496.0,Telecommunications,Private,Mainland China,Beijing,Chen  Zhongyue,,https://www.10086.cn,7/28/26,
+china-national-building-material-group,40976.0,-363.0,,179859.0,"Building Materials, Glass",Private,Mainland China,Beijing,Zhou Yuxian,,https://www.cnbm.com.cn,7/28/26,
+china-national-offshore-oil,120915.0,12660.0,,86077.0,"Mining, Crude-Oil Production",Private,Mainland China,Beijing,Zhang  Chuanjiang,,https://www.cnooc.com.cn,7/28/26,
+china-national-petroleum,401927.0,21159.0,,948579.0,Petroleum Refining,Private,Mainland China,Beijing,Dai Houliang,,https://www.cnpc.com.cn,7/28/26,
+china-pacific-insurance-group,60542.0,7444.0,39576.0,91639.0,"Insurance: Life, Health (stock)",Public,Mainland China,Shanghai,Fu  Fan,CHPXF,https://www.cpic.com.cn,7/28/26,
+china-poly-group,68121.0,505.0,,83090.0,Real estate,Private,Mainland China,Beijing,Wu  Shengyue,,https://www.poly.com.cn,7/28/26,
+china-post-group,94215.0,2930.0,,719448.0,"Mail, Package, and Freight Delivery",Private,Mainland China,Beijing,Liu Aili,,https://www.chinapost.com.cn,7/28/26,
+china-railway-construction,143507.0,1153.0,,304927.0,Engineering & Construction,Private,Mainland China,Beijing,Dai  Hegen,,https://www.crcc.cn,7/28/26,
+china-railway-engineering,152201.0,1249.0,,302527.0,Engineering & Construction,Private,Mainland China,Beijing,Chen Wen Jian,,https://www.crecg.com,7/28/26,
+china-resources-national,133290.0,3613.0,,397398.0,Diversified Financials,Private,Mainland China,Hong Kong,Wang Xiangming,,https://www.crc.com.hk,7/28/26,
+china-southern-power-grid,118797.0,3339.0,,251674.0,Utilities,Private,Mainland China,"Guangzhou, China",Qian  Chaoyang,,https://www.csg.cn,7/28/26,
+china-state-construction-engineering,289893.0,3116.0,,370272.0,Engineering & Construction,Private,Mainland China,Beijing,Zheng Xuexuan,,https://www.cscec.com,7/28/26,
+china-telecommunications,88631.0,2726.0,,381436.0,Telecommunications,Private,Mainland China,Beijing,Ke Ruiwen,,https://www.chinatelecom.com.cn,7/28/26,
+china-united-network-communications,54569.0,1270.0,19368.0,237251.0,Telecommunications,Public,Mainland China,Beijing,Dong  Xin,,https://www.chinaunicom-a.com,7/28/26,
+christian-dior,91143.0,5111.0,84904.0,196647.0,Apparel,Public,France,Paris,Antoine Arnault,CHDRY,https://www.dior-finance.com,16/09/2026,"Aug. 31, 2026"
+chs,35463.0,598.0,,10683.0,Food Production,Private,U.S.,"Inver Grove Heights, Minn.",Jay D. Debertin,,https://www.chsinc.com,7/28/26,
+chubb,59402.0,10310.0,130632.0,45000.0,Insurance: Property and Casualty (Stock),Public,Switzerland,Zurich,Evan G. Greenberg,CB,https://www.chubb.com,16/09/2026,"Aug. 31, 2026"
+cigna,274900.0,5957.0,80550.0,66685.0,Health Care: Pharmacy and Other Services,Public,U.S.,"Bloomfield, Conn.",Brian Evanko,CI,https://www.thecignagroup.com,7/28/26,
+cisco-systems-inc,56654.0,10180.0,419610.0,86200.0,Network and Other Communications Equipment,Public,U.S.,U.S.,Charles H. Robbins,CSCO,https://www.cisco.com,10/08/2026,"Sep. 24, 2026"
+citic-group,139276.0,4174.0,,216477.0,Diversified Financials,Private,Mainland China,Beijing,Xi  Guohua,,https://www.group.citic,7/28/26,
+citigroup,174403.0,17839.0,230899.0,219000.0,Commercial Banks,Public,U.S.,NewYork City,Jane Fraser,C,https://www.citigroup.com,9/29/26,
+ck-hutchison-holdings,35923.0,1519.0,33616.0,300000.0,Specialty Retailers,Public,Mainland China,Hong Kong,Lai  Kai Ming,CKHUY,https://www.ckh.com.hk,7/28/26,
+coca-cola,50129.0,14316.0,382152.0,65900.0,Beverages,Public,U.S.,Atlanta,Henrique  Braun,KO,https://www.coca-colacompany.com,9/29/26,
+cofco,81955.0,335.0,,107318.0,Trading,Private,Mainland China,Beijing,Bai Yong,,https://www.cofco.com,7/28/26,
+comcast,124904.0,11199.0,92974.0,179000.0,Telecommunications,Public,U.S.,Philadelphia,Brian L. Roberts/Michael J. Cavanagh,CMCSA,https://corporate.comcast.com,9/29/26,
+commonwealth-bank-of-australia,45108.0,6545.0,196923.0,51346.0,Banks: Commercial and Savings,Public,Australia,Sydney,Matt Comyn,CMWAY,https://www.commbank.com.au,7/28/26,
+compass-group,46070.0,1868.0,52115.0,591767.0,Food Services,Public,U.K.,Chertsey,Dominic Blakemore,CMPGY,https://www.compass-group.com,16/09/2026,"Aug. 31, 2026"
+conocophillips,61548.0,7988.0,137548.0,9900.0,"Mining, Crude-Oil Production",Public,U.S.,Houston,Ryan M. Lance,COP,https://www.conocophillips.com,7/28/26,
+contemporary-amperex-technology,74589.0,12152.0,253513.0,185839.0,Medical Products and Equipment,Public,China,"Ningde, China",Robin Zeng,CYATY,https://www.catl.com,9/23/26,
+coop-group,42696.0,730.0,,84276.0,Food and Drug Stores,Private,Switzerland,Basel,Philipp Wyss,,https://www.coop.ch,16/09/2026,
+costco,275235.0,8099.0,410852.0,341000.0,General Merchandisers,Public,U.S.,"Issaquah, Wash.",Ron M. Vachris,COST,https://www.costco.com,7/28/26,
+coupang,34534.0,208.0,32168.0,108000.0,Internet Services and Retailing,Public,U.S.,Seattle,Bom Kim,CPNG,https://www.aboutcoupang.com,7/28/26,
+credit-agricole,84368.0,7979.0,65060.0,83045.0,Banks: Commercial and Savings,Public,France,Montrouge,Olivier Gavalda,CRARY,https://www.credit-agricole.com,16/09/2026,"Aug. 31, 2026"
+credit-mutuel-group,57518.0,5370.0,,88521.0,Diversified Financials,Private,France,Paris,Priscille Szeradzki,,https://www.creditmutuel.com/en/,16/09/2026,
+crh,37447.0,3753.0,62730.0,83032.0,"Building Materials, Glass",Public,Ireland,Dublin,Jim Mintern,CRH,https://www.crh.com,16/09/2026,"Aug. 31, 2026"
+crrc-group,39502.0,826.0,,158287.0,Industrial Machinery,Private,Mainland China,Beijing,Sun Yongcai,,https://www.crrcgc.cc,7/28/26,
+cummins,34708.0,2715.0,85463.0,67400.0,Industrial Machinery,Public,U.S.,"Columbus, Ind.",Jennifer Rumsey,CMI,https://www.cummins.com,9/29/26,
+cvs-health,402067.0,1768.0,135121.0,259500.0,Health Care: Pharmacy and Other Services,Public,U.S.,"Woonsocket, R.I.",J. David  Joyner,CVS,https://www.cvshealth.com,7/28/26,
+d-r-horton,33350.0,3053.0,40747.0,14341.0,Homebuilders,Public,U.S.,"Arlington, Texas",Paul J. Romanowski,DHI,https://www.drhorton.com,9/29/26,
+dai-ichi-life-holdings,75033.0,2897.0,40756.0,60138.0,"Insurance: Life, Health (stock)",Public,Japan,Tokyo,Tetsuya Kikuta,DLICY,https://www.daiichilife-group.com/,7/28/26,
+daikin-industries,33276.0,1826.0,45090.0,104095.0,Industrial Machinery,Public,Japan,Osaka,Masanori Togawa,DKILY,https://www.daikin.com,7/28/26,
+daimler,149126.0,5799.0,50725.0,158324.0,Motor Vehicles and Parts,Public,Germany,Stuttgart,Ola Källenius,MBGYY,https://group.mercedes-benz.com,16/09/2026,"Aug. 31, 2026"
+daimler-truck-holding,55704.0,2222.0,41295.0,106901.0,Motor Vehicles and Parts,Public,Germany,Leinfelden-Echterdingen,Karin Rådström,DTRUY,https://www.daimlertruck.com,16/09/2026,"Aug. 31, 2026"
+daiwa-house-industry,37004.0,2326.0,18439.0,55712.0,Engineering & Construction,Public,Japan,Osaka,Keiichi Yoshii,DWAHY,https://www.daiwahouse.com/english,7/28/26,
+datong-coal-mine-group,41131.0,-578.0,,409089.0,"Mining, Crude-Oil Production",Private,Mainland China,"Datong, China",Cao  Yang,,https://www.jnkgjtnews.com,7/28/26,
+deere,47982.0,4873.0,176580.0,73146.0,Construction and Farm Machinery,Public,U.S.,"Moline, Ill.",John May,DE,https://www.deere.com,9/23/26,
+dell-technologies,113538.0,5936.0,275974.0,97000.0,"Computers, Office Equipment",Public,U.S.,"Round Rock, Texas",Michael S. Dell,DELL,https://dell.com/,7/28/26,
+delta-air-lines,68287.0,3950.0,56054.0,103000.0,Airlines,Public,U.S.,Atlanta,Edward H. Bastian,DAL,https://www.delta.com,9/29/26,
+denso,50029.0,2944.0,34503.0,154716.0,Motor Vehicles & Parts,Public,Japan,"Kariya, Japan",Shinnosuke  Hayashi,DNZOY,https://www.denso.com/global,7/28/26,
+deutsche-bahn,37359.0,6025.0,,219152.0,Railroads,Private,Germany,Berlin,Evelyn Palla,,https://www.deutschebahn.com,16/09/2026,
+deutsche-bank,71623.0,7451.0,75229.0,89879.0,Banks: Commercial and Savings,Public,Germany,Frankfurt,Christian Sewing,DB,https://www.db.com,16/09/2026,"Aug. 31, 2026"
+deutsche-post-dhl-group,93453.0,3949.0,72294.0,544001.0,"Mail, Package, and Freight Delivery",Public,Germany,Germany,Tobias Meyer,DHLGY,https://group.dhl.com,10/08/2026,"Sep. 24, 2026"
+deutsche-telekom,134313.0,10838.0,158151.0,198079.0,Telecommunications,Public,Germany,Bonn,Timotheus Höttges,DTEGY,https://www.telekom.com,16/09/2026,"Aug. 31, 2026"
+discovery,37296.0,727.0,67918.0,35500.0,Entertainment,Private,U.S.,New York City,David M. Zaslav,,https://wbd.com,7/28/26,
+disney,94425.0,12404.0,166705.0,203280.0,Entertainment,Public,U.S.,"Burbank, Calif.",Josh  D’Amaro,DIS,https://www.thewaltdisneycompany.com,7/28/26,
+dollar-general,42724.0,1512.0,27229.0,194000.0,Specialty Retailers,Public,U.S.,"Goodlettsville, Tenn.",Todd J. Vasos,DG,https://www.dollargeneral.com,7/28/26,
+dongfeng-motor,49247.0,285.0,,114041.0,Motor Vehicles & Parts,Private,Mainland China,"Wuhan, China",Yang Qing,,https://www.dfmc.com.cn,7/28/26,
+dow,41319.0,-1293.0,22530.0,34600.0,Chemicals,Public,U.S.,"Midland, Mich.",James R. Fitterling,DOW,https://www.dow.com,9/29/26,
+dsv,37381.0,1223.0,50372.0,151751.0,"Mail, Package, and Freight Delivery",Public,Denmark,Hedehusene,Jens H. Lund,DSDVY,https://www.dsv.com,16/09/2026,"Aug. 31, 2026"
+dz-bank,40148.0,2974.0,,34567.0,Banks: Commercial and Savings,Private,Germany,Frankfurt,Cornelius Riese,,https://www.dzbank.com,16/09/2026,
+e-on-2,88771.0,1956.0,54047.0,78270.0,Energy,Public,Germany,Essen,Leonhard Birnbaum,EONGY,https://www.eon.com,16/09/2026,"Aug. 31, 2026"
+edeka-zentrale,63534.0,415.0,,417500.0,Wholesalers: Food and Grocery,Private,Germany,Hamburg,Markus Mosa,,https://www.verbund.edeka,16/09/2026,
+electricite-de-france,127754.0,9437.0,56203.0,188679.0,Utilities,Private,France,Paris,Bernard Fontana,,https://www.edf.fr,16/09/2026,
+elevance-health,201114.0,4963.0,86373.0,97100.0,Health Care: Insurance and Managed Care,Public,U.S.,Indianapolis,Gail K. Boudreaux,ELV,https://www.elevancehealth.com,9/29/26,
+eli-lilly,65179.0,20640.0,1025943.0,50000.0,Pharmaceuticals,Public,U.S.,U.S.,David A. Ricks,LLY,https://www.lilly.com/,10/08/2026,"Sep. 24, 2026"
+emirates-group,35054.0,5354.0,,130919.0,Airlines,Private,United Arab Emirates,Dubai,Sheikh Ahmed bin Saeed Al Maktoum,,https://www.theemiratesgroup.com,7/28/26,
+enbridge,46659.0,5361.0,120354.0,15550.0,Pipelines,Public,Canada,Calgary,Gregory L. Ebel,ENB,https://www.enbridge.com,7/28/26,
+enel,90623.0,4765.0,108580.0,61634.0,Utilities,Public,Italy,Rome,Flavio Cattaneo,ENLAY,https://www.enel.com,16/09/2026,"Aug. 31, 2026"
+energie-baden-wurttemberg,38789.0,-233.0,25847.0,29728.0,Utilities,Public,Germany,Karlsruhe,Georg Stamatelopoulos,EBK,https://www.enbw.com,16/09/2026,"Aug. 31, 2026"
+energy-transfer-equity,85536.0,4433.0,69443.0,22311.0,Pipelines,Public,U.S.,Dallas,Thomas E. Long/Marshall S. McCrea III,ET,https://www.energytransfer.com,7/28/26,
+engie,81147.0,4317.0,72743.0,87965.0,Utilities,Public,France,"La Garenne-Colombes, France",Catherine MacGregor,ENGIY,https://www.engie.com,9/23/26,
+eni-2,94326.0,2942.0,78885.0,32349.0,Petroleum Refining,Public,Italy,Rome,Claudio Descalzi,E,https://www.eni.com,16/09/2026,"Aug. 31, 2026"
+enterprise-products-partners,52596.0,5814.0,82884.0,8000.0,Pipelines,Public,U.S.,Houston,A. James Teague/W. Randall Fowler,EPD,https://www.enterpriseproducts.com,7/28/26,
+ep-group,75386.0,2567.0,,184064.0,Utilities,Private,Czech Republic,Prague,Daniel Křetínský,,https://epgroup.eu/en/,16/09/2026,
+equinor,106462.0,5043.0,101556.0,23843.0,Petroleum Refining,Public,Norway,Stavanger,Anders Opedal,EQNR,https://www.equinor.com,16/09/2026,"Aug. 31, 2026"
+exxon-mobil,361060.0,32757.0,680768.0,57900.0,Petroleum Refining,Public,U.S.,"Spring, Texas",Darren W. Woods,XOM,https://corporate.exxonmobil.com,9/29/26,
+facebook,228247.0,68098.0,1449455.0,75472.0,Internet Services and Retailing,Public,U.S.,"Menlo Park, Calif.",Mark Zuckerberg,META,https://www.meta.com,10/6/2026,
+fairfax-financial-holdings,46674.0,4772.0,38236.0,51056.0,Insurance: Property and Casualty (Stock),Public,Canada,Toronto,V. Prem Watsa,FRFHF,https://www.fairfax.ca,7/28/26,
+fannie-mae,159169.0,14364.0,35434.0,7000.0,Diversified Financials,Public,U.S.,"Washington, D.C.",Peter  Akwaboah,FNMA,https://www.fanniemae.com,7/28/26,
+fedex,94720.0,4433.0,77718.0,408200.0,"Mail, Package, and Freight Delivery",Public,U.S.,Memphis,Rajesh Subramaniam,FDX,https://www.fedex.com,9/29/26,
+fomento-economico-mexicano,43778.0,1012.0,38862.0,368776.0,Beverages,Public,Mexico,"Monterrey, Mexico",Jose Antonio  Fernandez Garza-Laguera,FMX,https://www.femsa.com,7/28/26,
+ford-motor,187267.0,-8182.0,55188.0,169000.0,Motor Vehicles & Parts,Public,U.S.,"Dearborn, Mich.",James D. Farley Jr.,F,https://www.ford.com,7/28/26,
+freddie-mac,135328.0,12946.0,18136.0,7345.0,Diversified Financials,Public,U.S.,"McLean, Va.",Kenny M. Smith,FMCC,https://www.freddiemac.com,9/29/26,
+galaxy-digital,61356.0,-241.0,9104.0,700.0,Diversified Financials,Public,U.S.,New York City,Michael  Novogratz,GLXY,https://www.galaxy.com/,7/28/26,
+gazprom,114868.0,15585.0,74282.0,501000.0,Energy,Public,Russia,St. Petersburg,Alexey B. Miller,OGZPY,https://www.gazprom.com,16/09/2026,
+gazprombank,34162.0,1557.0,,31271.0,Banks: Commercial and Savings,Private,Russia,Moscow,Andrey I. Akimov,,https://www.gazprombank.ru/,16/09/2026,
+general-dynamics,54861.0,4487.0,106299.0,117000.0,Aerospace & Defense,Public,U.S.,"Reston, Va.",Phebe N. Novakovic,GD,https://www.gd.com,9/29/26,
+general-electric,45855.0,8704.0,368736.0,57000.0,Aerospace & Defense,Public,U.S.,"Evendale, Ohio",H. Lawrence Culp Jr.,GE,https://www.geaerospace.com/,7/28/26,
+general-motors,185019.0,2697.0,69176.0,156000.0,Motor Vehicles & Parts,Public,U.S.,Detroit,Mary T. Barra,GM,https://www.gm.com,7/28/26,
+george-weston,46823.0,817.0,27157.0,220266.0,Food & Drug Stores,Public,Canada,Toronto,Galen G. Weston,WNGRF,https://www.weston.ca,7/28/26,
+gevernova,38068.0,4884.0,280167.0,78000.0,Energy,Public,U.S.,"Cambridge, Mass.",Scott L. Strazik,GEV,https://www.gevernova.com,7/28/26,
+glaxosmithkline,43026.0,7529.0,100640.0,66841.0,Pharmaceuticals,Public,U.K.,London,Luke Miels,GSK,https://www.gsk.com,16/09/2026,"Aug. 31, 2026"
+glencore,247535.0,363.0,94724.0,80423.0,"Mining, Crude-Oil Production",Public,Switzerland,Baar,Gary Nagle,GLNCY,https://www.glencore.com,16/09/2026,"Aug. 31, 2026"
+goldman-sachs-group,125097.0,17176.0,320633.0,47400.0,Banks: Commercial and Savings,Public,U.S.,New York City,David M. Solomon,GS,https://www.goldmansachs.com,7/28/26,
+groupe-bpce,78937.0,4580.0,,101452.0,Banks: Commercial and Savings,Private,France,Paris,Nicolas Namias,,https://www.groupebpce.com,16/09/2026,
+guangdong-guangxin-holdings,39788.0,156.0,,47126.0,Diversified Financials,Private,Mainland China,"Guangzhou, China",Liu  Zhihong,,https://www.gdghg.com,7/28/26,
+guangxi-investment-group,33399.0,41.0,,32349.0,Diversified Financials,Private,Mainland China,"Nanning, China",Zhou Lian,,https://www.gig.cn,7/28/26,
+guangzhou-automobile-industry-group,51837.0,-667.0,,96415.0,Motor Vehicles & Parts,Private,Mainland China,"Guangzhou, China",Feng Xingya,,https://www.gac.com.cn,7/28/26,
+guangzhou-industrial-investment-holdings,41181.0,73.0,,100771.0,Industrial Machinery,Private,Mainland China,"Guangzhou, China",Jing  Guangjun,,https://www.giihg.com,7/28/26,
+guangzhou-municipal-construction-group,37816.0,123.0,,45635.0,Engineering & Construction,Private,Mainland China,"Guangzhou, China",Li  Shuijiang,,https://www.gzmcg.com,7/28/26,
+guangzhou-pharmaceutical-holdings,35509.0,348.0,,34937.0,Pharmaceuticals,Private,Mainland China,"Guangzhou, China",Li  Xiaojun,,https://www.gpc.com.cn,7/28/26,
+hailiang-group,37473.0,11.0,,24122.0,Trading,Private,Mainland China,"Hangzhou, China",Wang Lihong,,https://www.hailiang.com,7/28/26,
+hangzhou-industrial-investment-group,38760.0,367.0,,3998.0,Diversified Financials,Private,Mainland China,"Hangzhou, China",Niu  Jian,,https://www.hziam.com,7/28/26,
+hangzhou-iron-and-steel-group,39236.0,147.0,,10287.0,Metals,Private,Mainland China,"Hangzhou, China",Zhang  Jiancheng,,https://www.hzsteel.com,7/28/26,
+hanwha,52608.0,262.0,4336.0,88540.0,Diversified Financials,Public,South Korea,Seoul,Woo-Seok Kim/Dong-Kwan Kim,,https://www.hanwhacorp.co.kr,7/28/26,
+hbis-group,57304.0,205.0,,83556.0,Metals,Private,Mainland China,"Shijiazhuang, China",Liu  Jian,,https://www.hbisco.com,7/28/26,
+hca-holdings,75600.0,6784.0,86682.0,275000.0,Health Care: Medical Facilities,Public,U.S.,Nashville,Samuel N. Hazen,HCA,https://www.hcahealthcare.com,7/28/26,
+hd-hyundai,50128.0,677.0,10587.0,23506.0,Petroleum Refining,Public,South Korea,"Seongnam-si, Gyeonggi-do, South Korea",Chung  Kisun /Cho  Youngcheul,,https://www.hd-hyundai.com,7/28/26,
+hdfc-bank,56075.0,8604.0,131424.0,211178.0,Banks: Commercial and Savings,Public,India,Mumbai,Sashidhar  Jagdishan,HDB,https://www.hdfcbank.com/,7/28/26,
+hengli-group,125085.0,440.0,,311600.0,Textiles,Private,Mainland China,"Suzhou City, China",Chen Jianhua,,https://www.hengli.com,7/28/26,
+heraeus-holding,48719.0,281.0,,15115.0,Metals,Private,Germany,Hanau,Frank Stietz,,https://www.heraeus.com,16/09/2026,
+hewlett-packard-enterprise,38794.0,1556.0,73745.0,67000.0,"Computers, Office Equipment",Public,U.S.,"Spring, Texas",Antonio F. Neri,HPE,https://www.hpe.com,9/29/26,
+hitachi,70246.0,5324.0,131669.0,287901.0,"Electronics, Electrical Equip.",Public,Japan,Tokyo,Toshiaki  Tokunaga,HTHIY,https://www.hitachi.com,7/28/26,
+home-depot,164683.0,14156.0,336138.0,472400.0,Specialty Retailers,Public,U.S.,Atlanta,Edward P. Decker,HD,https://www.homedepot.com,7/28/26,
+hon-hai-precision-industry,260084.0,6078.0,103021.0,648492.0,"Electronics, Electrical Equip.",Public,Taiwan,"New Taipei City, Taiwan",Young-Way Liu,HNHPF,https://www.honhai.com,7/28/26,
+honda-motor,144625.0,-2813.0,41716.0,195109.0,Motor Vehicles & Parts,Public,Japan,Tokyo,Toshihiro Mibe,HMC,https://global.honda/,7/28/26,
+honeywell-international,38057.0,8213.0,72170.0,101000.0,Industrial Machinery,Public,U.S.,Charlotte,Vimal Kapur,HON,https://www.honeywell.com,9/29/26,
+hp,55295.0,2529.0,22653.0,55000.0,"Computers, Office Equipment",Public,U.S.,Palo Alto,Bruce Broussard,HPQ,https://www.hp.com,7/28/26,
+hsbc-holdings,135617.0,22285.0,354983.0,208720.0,Banks: Commercial and Savings,Public,U.K.,London,Georges Elhedery,HSBC,https://www.hsbc.com,16/09/2026,"Aug. 31, 2026"
+huawei-investment-holding,122563.0,9336.0,,213000.0,Network and Other Communications Equipment,Private,Mainland China,Shenzhen,Liang  Hua,,https://www.huawei.com,7/28/26,
+humana,129664.0,1188.0,48745.0,67060.0,Health Care: Insurance and Managed Care,Public,U.S.,Louisville,James A. Rechtin,HUM,https://www.humana.com,7/28/26,
+hunan-iron-amp-steel-group,35623.0,593.0,,36126.0,Metals,Private,Mainland China,"Changsha, China",Li Jianyu,,https://www.chinavalin.com,7/28/26,
+hyundai-mobis,42994.0,2572.0,29657.0,51899.0,Motor Vehicles & Parts,Public,South Korea,Seoul,Gyusuk Lee,,https://www.mobis.com/,7/28/26,
+hyundai-motor,131021.0,6645.0,60769.0,75137.0,Motor Vehicles & Parts,Public,South Korea,Seoul,Euisun J. Chung/José Muñoz,,https://www.hyundai.com/worldwide/en,7/28/26,
+iberdrola,51373.0,7089.0,151289.0,43555.0,Utilities,Public,Spain,Bilbao,Pedro Azagra Blázquez,IBDRY,https://www.iberdrola.com,16/09/2026,"Aug. 31, 2026"
+ibm,67535.0,10593.0,272783.0,278100.0,Information Technology Services,Public,U.S.,"Armonk, N.Y.",Arvind Krishna,IBM,https://www.ibm.com,7/28/26,
+icici-bank,35325.0,6135.0,105492.0,177000.0,Banks: Commercial and Savings,Public,India,Mumbai,Sandeep  Bakhshi,IBN,https://www.icicibank.com/,7/28/26,
+idemitsu-kosan,47289.0,1141.0,9386.0,16962.0,Petroleum Refining,Public,Japan,Tokyo,Noriaki  Sakai,IDKOY,https://www.idemitsu.com,7/28/26,
+indian-oil,89249.0,4764.0,20618.0,31220.0,Petroleum Refining,Public,India,New Delhi,Arvinder Singh  Sahney,,https://www.iocl.com,7/28/26,
+inditex,45448.0,7091.0,209820.0,114744.0,Specialty Retailers,Public,Spain,A Coruña,Óscar García Maceiras,IDEXY,https://www.inditex.com,16/09/2026,"Aug. 31, 2026"
+industrial-bank,53050.0,10778.0,54532.0,63233.0,Banks: Commercial and Savings,Public,Mainland China,"Fuzhou, China",Lyu Jiajin,,https://www.cib.com.cn,7/28/26,
+industrial-commercial-bank-of-china,210590.0,51277.0,375070.0,409758.0,Banks: Commercial and Savings,Public,Mainland China,Beijing,Liu  Jun,IDCBY,https://www.icbc-ltd.com,7/28/26,
+ing-group,71899.0,9389.0,100952.0,62770.0,Banks: Commercial and Savings,Public,Netherlands,Amsterdam,Steven van Rijswijk,ING,https://www.ing.com,16/09/2026,"Aug. 31, 2026"
+ingka-group,45531.0,1550.0,,161211.0,Specialty Retailers,Private,Netherlands,"Leiden, Netherlands",Juvencio Maeztu,,https://www.ingka.com,9/23/26,
+ingram-micro,55976.0,431.0,6405.0,22200.0,Wholesalers: Electronics and Office Equipment,Public,U.S.,"Irvine, Calif.",Paul D. Bay,INGM,https://www.ingrammicro.com,9/29/26,
+intel,57032.0,-11289.0,508034.0,82300.0,Semiconductors and Other Electronic Components,Public,U.S.,Santa Clara,Lip-Bu  Tan,INTC,https://www.intel.com,9/29/26,
+international-airlines-group,37461.0,3769.0,26149.0,75786.0,Airlines,Public,U.K.,Harmondsworth,Luis Gallego Martín,ICAGY,https://www.iairgroup.com,16/09/2026,"Aug. 31, 2026"
+intesa-sanpaolo,51445.0,10513.0,136226.0,90831.0,Banks: Commercial and Savings,Public,Italy,Turin,Carlo Messina,ISNPY,https://www.group.intesasanpaolo.com,16/09/2026,"Aug. 31, 2026"
+itau-unibanco-holding,76791.0,8024.0,95880.0,92470.0,Banks: Commercial and Savings,Public,Brazil,Sao Paulo,Milton Maluhy Filho,ITUB,https://www.itau.com.br,7/28/26,
+itochu,98354.0,5974.0,91586.0,137300.0,Trading,Public,Japan,Tokyo,Masahiro Okafuji,ITOCY,https://www.itochu.co.jp,7/28/26,
+j-sainsbury,45229.0,527.0,9868.0,91000.0,Food and Drug Stores,Public,U.K.,London,Simon Roberts,JSAIY,https://corporate.sainsburys.co.uk/,16/09/2026,"Aug. 31, 2026"
+japan-post-holdings,75911.0,2485.0,40329.0,224429.0,"Insurance: Life, Health (stock)",Public,Japan,Tokyo,Kazuyuki  Negishi,JPPHY,https://www.japanpost.jp/en/,7/28/26,
+jardine-matheson,34217.0,1109.0,18254.0,209000.0,Motor Vehicles & Parts,Public,Mainland China,Hong Kong,Lincoln  Pan,JMHLY,https://www.jardines.com,7/28/26,
+jbs,86184.0,2024.0,14393.0,282806.0,Food Production,Public,Netherlands,Amstelveen,Gilberto Tomazoni,JBS,https://jbs.com.br,16/09/2026,"Aug. 31, 2026"
+jd-com,182129.0,2731.0,39445.0,776682.0,Internet Services and Retailing,Public,Mainland China,Beijing,Sandy Ran Xu,JD,https://www.jd.com,7/28/26,
+jeronimo-martins,40595.0,729.0,13138.0,147709.0,Food and Drug Stores,Public,Portugal,Lisbon,Pedro Soares dos Santos,JRONY,https://www.jeronimomartins.com,16/09/2026,"Aug. 31, 2026"
+jiangsu-shagang-group,36983.0,133.0,,44339.0,Metals,Private,Mainland China,"Zhangjiagang, China",Shen Bin,,https://www.shasteel.cn,7/28/26,
+jiangxi-copper,80488.0,520.0,,33008.0,Metals,Private,Mainland China,"Nanchang, China",Zheng Gaoqing,,https://www.jxcc.com,7/28/26,
+jinchuan-group,68116.0,979.0,,46987.0,Metals,Private,Mainland China,"Jinchang City, China",Ruan  Ying,,https://www.jnmc.com,7/28/26,
+jingye-group,51354.0,484.0,,40000.0,Metals,Private,Mainland China,"Shijiazhuang, China",Li Ganpo,,https://www.hbjyjt.com,7/28/26,
+johnson-johnson,94193.0,26804.0,620508.0,138200.0,Pharmaceuticals,Public,U.S.,"New Brunswick, N.J.",Joaquin Duato,JNJ,https://www.jnj.com,7/28/26,
+jpmorgan-chase,297632.0,65067.0,965586.0,320560.0,Commercial Banks,Public,U.S.,NewYork City,James Dimon,JPM,https://www.jpmorganchase.com,9/29/26,
+jxtg-holdings,64342.0,1717.0,20903.0,39986.0,Petroleum Refining,Public,Japan,Tokyo,Tomohide Miyata,JXHLY,https://www.hd.eneos.co.jp,7/28/26,
+kb-financial-group,41284.0,4103.0,45639.0,23481.0,Banks: Commercial and Savings,Public,South Korea,Seoul,Jong Hee Yang,KB,https://www.kbfg.com,7/28/26,
+kddi,40289.0,4692.0,69307.0,73198.0,Telecommunications,Public,Japan,Tokyo,Hiromichi  Matsuda,KDDIY,https://www.kddi.com,7/28/26,
+kia-motors,80292.0,5319.0,32838.0,35747.0,Motor Vehicles and Parts,Public,South Korea,South Korea,Ho-Sung Song,KIMTF,https://www.kia.com,10/08/2026,"Sep. 24, 2026"
+koc-holding,69742.0,556.0,11295.0,120219.0,Motor Vehicles and Parts,Public,Turkey,Istanbul,Levent Çakiroglu,KHOLY,https://www.koc.com.tr,16/09/2026,"Aug. 31, 2026"
+korea-electric-power,67931.0,6011.0,14869.0,48650.0,Utilities,Public,South Korea,"Naju, Jeollanam-do, South Korea",Dong-Cheol  Kim,KEP,https://www.kepco.co.kr,7/28/26,
+kroger,147642.0,1016.0,36336.0,403000.0,Food & Drug Stores,Public,U.S.,Cincinnati,Gregory S. Foran,KR,https://www.thekrogerco.com,7/28/26,
+la-poste,38786.0,1308.0,,227741.0,"Mail, Package, and Freight Delivery",Private,France,Paris,Marie-Ange Debon,,https://www.lapostegroupe.com,7/28/26,
+landesbank-baden-wurttemberg,35114.0,1066.0,,9355.0,Banks: Commercial and Savings,Private,Germany,Stuttgart,Rainer Neske,,https://www.lbbw.de,16/09/2026,
+lennar,32737.0,1615.0,20418.0,12532.0,Homebuilders,Public,U.S.,Miami,Stuart A. Miller,LEN,https://www.lennar.com,9/29/26,
+lenovo-group,83075.0,1912.0,36872.0,73500.0,"Computers, Office Equipment",Public,Mainland China,Hong Kong,Yang Yuanqing,LNVGY,https://www.lenovo.com,7/28/26,
+lg-chem,33190.0,-1280.0,12552.0,18543.0,Chemicals,Public,South Korea,Seoul,Dong-chun  Kim,,https://lgchem.com/,7/28/26,
+lg-electronics,62748.0,676.0,20273.0,74000.0,"Electronics, Electrical Equip.",Public,South Korea,Seoul,Jae-cheol  Ryu,,https://www.lg.com/global/,7/28/26,
+liberty-mutual-insurance-group,50465.0,6792.0,,40000.0,Insurance: Property and Casualty (Stock),Private,U.S.,Boston,Timothy M. Sweeney,,https://www.libertymutual.com,7/28/26,
+life-insurance-corp-of-india,110325.0,6502.0,58239.0,91606.0,"Insurance: Life, Health (stock)",Public,India,Mumbai,R. Doraiswamy,,https://www.licindia.in,7/28/26,
+linde,33986.0,6898.0,225687.0,65177.0,Chemicals,Public,U.K.,"Woking, Surrey",Sanjiv Lamba,LIN,https://www.linde.com,16/09/2026,"Aug. 31, 2026"
+lithia-motors,38134.0,820.0,7251.0,30847.0,Specialty Retailers,Public,U.S.,"Medford, Ore.",Bryan B. DeBoer,LAD,https://investors.lithiadriveway.com/,7/28/26,
+lloyds-banking-group,85430.0,6136.0,86074.0,60061.0,Banks: Commercial and Savings,Public,U.K.,London,Charlie Nunn,LYG,https://lloydsbankinggroup.com,16/09/2026,"Aug. 31, 2026"
+lockheed-martin,75048.0,5017.0,120050.0,123000.0,Aerospace & Defense,Public,U.S.,"Bethesda, Md.",James D. Taiclet,LMT,https://www.lockheedmartin.com,7/28/26,
+loreal,49687.0,6911.0,237874.0,94610.0,Household and Personal Products,Public,France,Clichy,Nicolas Hieronimus,LRLCY,https://www.loreal.com,16/09/2026,"Aug. 31, 2026"
+louis-dreyfus,53197.0,653.0,,19084.0,Food Production,Private,Netherlands,Rotterdam,Michael Gelchie,,https://www.ldc.com,16/09/2026,
+lowes,86286.0,6654.0,116459.0,221500.0,Specialty Retailers,Public,U.S.,"Mooresville, N.C.",Marvin R. Ellison,LOW,https://ir.lowes.com/,7/28/26,
+lufthansa-group,44662.0,1510.0,10974.0,85137.0,Airlines,Public,Germany,Cologne,Carsten Spohr,DLAKY,https://www.lufthansagroup.com,16/09/2026,"Aug. 31, 2026"
+lukoil,62644.0,-12692.0,40208.0,88950.0,Petroleum Refining,Public,Russia,Moscow,Sergei Kochkurov,LUKOY,https://www.lukoil.com,16/09/2026,
+luxshare-precision-industry,46238.0,2310.0,66873.0,416197.0,"Electronics, Electrical Equip.",Public,Mainland China,"Dongguan, China",Grace Wang,SZ: 002475,https://www.luxshare-ict.com,7/28/26,
+maersk-group,53988.0,2725.0,47318.0,105030.0,Shipping,Public,Denmark,Copenhagen,Vincent Clerc,AMKBY,https://www.maersk.com,16/09/2026,"Aug. 31, 2026"
+magna-international,42010.0,829.0,17295.0,156000.0,Motor Vehicles & Parts,Public,Canada,"Aurora, Ontario",Seetarama Kotagiri,MGA,https://www.magna.com,7/28/26,
+magnit,41851.0,-368.0,6897.0,393000.0,Food and Drug Stores,Public,Russia,Krasnodar,Evgeny Sluchevsky,,https://www.magnit.com,16/09/2026,
+mapfre-group,38432.0,1277.0,15935.0,30846.0,Insurance: Property and Casualty (Stock),Public,Spain,Madrid,Antonio Huertas Mejías,MPFRY,https://www.mapfre.com,16/09/2026,"Aug. 31, 2026"
+marathon-petroleum,135222.0,4047.0,86670.0,18500.0,Petroleum Refining,Public,U.S.,"Findlay, Ohio",Maryann T. Mannen,MPC,https://www.marathonpetroleum.com,7/28/26,
+marubeni,54846.0,3609.0,49705.0,56244.0,Trading,Public,Japan,Tokyo,Masayuki  Omoto,MARUY,https://www.marubeni.com,7/28/26,
+massachusetts-mutual-life-insurance,46054.0,295.0,,11329.0,"Insurance: Life, Health (Mutual)",Private,U.S.,"Springfield, Mass.",Roger W. Crandall,,https://www.massmutual.com,7/28/26,
+mckesson,403430.0,4762.0,95100.0,42300.0,Wholesalers: Health Care,Public,U.S.,"Irvine, Tex.",Brian S. Tyler,MCK,https://www.mckesson.com,7/28/26,
+medtronic,33537.0,4662.0,114227.0,95000.0,Medical Products and Equipment,Public,Ireland,Ireland,Geoffrey S. Martha,MDT,https://www.medtronic.com,10/08/2026,"Sep. 24, 2026"
+meiji-yasuda-life-insurance,49378.0,844.0,,48656.0,"Insurance: Life, Health (Mutual)",Private,Japan,Tokyo,Hideki Nagashima,,https://www.meijiyasuda.co.jp,7/28/26,
+meituan,50761.0,-3249.0,61403.0,111298.0,Internet Services and Retailing,Public,Mainland China,Beijing,Wang Xing,MPNGY,https://about.meituan.com/,7/28/26,
+mercadona,43062.0,1950.0,,115000.0,Food and Drug Stores,Private,Spain,Valencia,Juan Roig,,https://www.mercadona.es,16/09/2026,
+merck,65011.0,18254.0,306332.0,74000.0,Pharmaceuticals,Public,U.S.,"Rahway, N.J.",Robert M. Davis,MRK,https://www.merck.com,7/28/26,
+metlife,77084.0,3379.0,61768.0,46000.0,"Insurance: Life, Health (stock)",Public,U.S.,U.S.,Michel A. Khalaf,MET,https://www.metlife.com/,10/08/2026,"Sep. 24, 2026"
+micron-technology,37378.0,8539.0,1210574.0,53000.0,Semiconductors and Other Electronic Components,Public,U.S.,U.S.,Sanjay Mehrotra,MU,https://www.micron.com,10/08/2026,"Sep. 24, 2026"
+microsoft,331839.0,133749.0,3576365.0,223000.0,Computer Software,Public,U.S.,"Redmond, Wash.",Satya Nadella,MSFT,https://www.microsoft.com,9/29/26,
+midea-group,63790.0,6114.0,89941.0,198570.0,"Electronics, Electrical Equip.",Public,Mainland China,"Foshan, China",Fang Hongbo,,https://midea.com.cn/,7/28/26,
+migros-group,37015.0,1364.0,,69042.0,Food and Drug Stores,Private,Switzerland,Zurich,Mario Irminger,,https://www.migros.ch,16/09/2026,
+mitsubishi,125512.0,5311.0,101414.0,63037.0,Trading,Public,Japan,Tokyo,Katsuya Nakanishi,MTSUY,https://www.mitsubishicorp.com,7/28/26,
+mitsubishi-electric,39113.0,2706.0,73458.0,150386.0,"Electronics, Electrical Equip.",Public,Japan,Tokyo,Kei Uruma,MIELY,https://www.mitsubishielectric.com,7/28/26,
+mitsubishi-heavy-industries,37275.0,2204.0,78044.0,78793.0,Industrial Machinery,Public,Japan,Tokyo,Eisaku  Ito,MHVIY,https://www.mhi.com,7/28/26,
+mitsubishi-ufj-financial-group,97012.0,16105.0,258686.0,161509.0,Banks: Commercial and Savings,Public,Japan,Tokyo,Junichi  Hanzawa,MUFG,https://www.mufg.jp,7/28/26,
+mitsui,92861.0,5534.0,80764.0,55456.0,Trading,Public,Japan,Tokyo,Kenichi Hori,MITSY,https://www.mitsui.com,7/28/26,
+mizuho-financial-group,60284.0,8285.0,126570.0,52427.0,Banks: Commercial and Savings,Public,Japan,Tokyo,Masahiro Kihara,MFG,https://www.mizuhogroup.com,7/28/26,
+molina-healthcare,45426.0,472.0,12654.0,19000.0,Health Care: Insurance and Managed Care,Public,U.S.,"Long Beach, Calif.",Joseph M. Zubretsky,MOH,https://www.molinahealthcare.com,7/28/26,
+mondelez-international,38537.0,2451.0,76839.0,91000.0,Food Consumer Products,Public,U.S.,Chicago,Dirk Van de Put,MDLZ,https://www.mondelezinternational.com,7/28/26,
+morgan-stanley,128798.0,20155.0,341677.0,82944.0,Commercial Banks,Public,U.S.,NewYork City,Edward N. Pick,MS,https://www.morganstanley.com,9/29/26,
+msad-insurance-group-holdings,50780.0,5224.0,40711.0,39746.0,Insurance: Property and Casualty (Stock),Public,Japan,Tokyo,Shinichiro  Funabiki,MSADY,https://www.ms-ad-hd.com,7/28/26,
+munich-re-group,69816.0,6901.0,75750.0,43982.0,Insurance: Property and Casualty (Stock),Public,Germany,Munich,Christoph Jurecka,MURGY,https://www.munichre.com,16/09/2026,"Aug. 31, 2026"
+national-australia-bank,38754.0,4348.0,86422.0,41880.0,Banks: Commercial and Savings,Public,Australia,Melbourne,Andrew  Irvine,NABZY,https://www.nab.com.au,7/28/26,
+nationwide,64930.0,2830.0,,21716.0,Insurance: Property and Casualty (Mutual),Private,U.S.,"Columbus, Ohio",Kirt A. Walker,,https://www.nationwide.com,7/28/26,
+natwest-group,39833.0,7680.0,73221.0,58720.0,Banks: Commercial and Savings,Public,U.K.,Edinburgh,Paul Thwaite,NWG,https://www.natwestgroup.com,16/09/2026,"Aug. 31, 2026"
+nestle,107737.0,10875.0,250780.0,271000.0,Food Consumer Products,Public,Switzerland,Vevey,Philipp Navratil,NSRGY,https://www.nestle.com,16/09/2026,"Aug. 31, 2026"
+netflix,48371.0,13650.0,323830.0,16000.0,Entertainment,Public,U.S.,"Los Gatos, Calif.",Ted Sarandos/Gregory K. Peters,NFLX,https://www.netflix.com,9/29/26,
+new-china-life-insurance,39380.0,829.0,24793.0,27726.0,"Insurance: Life, Health (stock)",Public,Mainland China,Beijing,Yang Yucheng,NWWCF,https://www.newchinalife.com,7/28/26,
+new-hope-holding-group,34462.0,-96.0,,81788.0,Food Production,Private,Mainland China,"Chengdu, China",Liu Yonghao,,https://www.newhopegroup.com,7/28/26,
+new-york-life-insurance,73146.0,1212.0,,14713.0,"Insurance: Life, Health (Mutual)",Private,U.S.,New York City,Craig L. DeSanto,,https://www.newyorklife.com,7/28/26,
+nike,46309.0,3219.0,64804.0,77800.0,Apparel,Public,U.S.,"Beaverton, Ore.",Elliott  Hill,NKE,https://investors.nike.com,7/28/26,
+nippon-life-insurance,98034.0,4024.0,,172869.0,"Insurance: Life, Health (Mutual)",Private,Japan,Osaka,Satoshi  Asahi,,https://www.nissay.co.jp,7/28/26,
+nippon-steel-sumitomo-metal,66772.0,114.0,18524.0,144916.0,Metals,Public,Japan,Tokyo,Eiji Hashimoto,NPSCY,https://www.nipponsteel.com,7/28/26,
+nippon-telegraph-telephone,95608.0,6881.0,83109.0,344196.0,Telecommunications,Public,Japan,Tokyo,Akira Shimada,NTTYY,https://group.ntt/en/,7/28/26,
+nissan-motor,79675.0,-3537.0,6975.0,127499.0,Motor Vehicles & Parts,Public,Japan,"Yokohama, Japan",Ivan  Espinosa,NSANY,https://www.nissan-global.com,7/28/26,
+northrop-grumman,41954.0,4182.0,76957.0,95000.0,Aerospace & Defense,Public,U.S.,"Falls Church, Va.",Kathy J. Warden,NOC,https://www.northropgrumman.com,7/28/26,
+northwestern-mutual,43676.0,497.0,,8311.0,"Insurance: Life, Health (Mutual)",Private,U.S.,Milwaukee,Timothy J. Gerend,,https://www.northwesternmutual.com,7/28/26,
+novartis,56674.0,13984.0,323783.0,75267.0,Pharmaceuticals,Public,Switzerland,"Basel, Switzerland",Vasant Narasimhan,NVS,https://www.novartis.com,9/23/26,
+novo-nordisk,46711.0,15482.0,202907.0,69505.0,Pharmaceuticals,Public,Denmark,"Bagsværd, Denmark",Maziar Mike Doustdar,NVO,https://www.novonordisk.com,9/23/26,
+nvidia,215938.0,120067.0,5445390.0,42000.0,Semiconductors and Other Electronic Components,Public,U.S.,U.S.,Jensen Huang,NVDA,https://www.nvidia.com/,10/08/2026,"Sep. 24, 2026"
+oil-natural-gas,68887.0,4688.0,32608.0,34653.0,"Mining, Crude-Oil Production",Public,India,New Delhi,Arun  Kumar Singh,,https://www.ongcindia.com,7/28/26,
+olam-group,51492.0,340.0,3555.0,59120.0,Food Production,Public,Singapore,Singapore,A. Shekhar,OLGPF,https://www.olamgroup.com,7/28/26,
+omv-group,35914.0,1215.0,25948.0,22315.0,Petroleum Refining,Public,Austria,Vienna,Alfred Stern,OMVKY,https://www.omv.com,16/09/2026,"Aug. 31, 2026"
+oneok,33629.0,3393.0,58083.0,6326.0,Pipelines,Public,U.S.,Tulsa,Pierce H. Norton II,OKE,https://www.oneok.com,7/28/26,
+oracle,67357.0,17087.0,422421.0,141000.0,Computer Software,Public,U.S.,Austin,Clayton M. Magouyrk/Michael D. Sicilia,ORCL,https://www.oracle.com,10/6/2026,
+orange,45563.0,607.0,47553.0,116734.0,Telecommunications,Public,France,Issy-les-Moulineaux,Christel Heydemann,ORANY,https://www.orange.com,16/09/2026,"Aug. 31, 2026"
+orlen,71277.0,674.0,48035.0,66226.0,Petroleum Refining,Public,Poland,Plock,Ireneusz Fąfara,ORLNY,https://www.orlen.pl,16/09/2026,"Aug. 31, 2026"
+pacific-construction-group,79293.0,5158.0,,208135.0,Engineering & Construction,Private,Mainland China,"Urumqi, China",Yan Hao,,https://www.cpcg.com.cn,7/28/26,
+panasonic,53405.0,1258.0,66772.0,183685.0,"Electronics, Electrical Equip.",Public,Japan,Osaka,Yuki Kusumi,PCRHY,https://holdings.panasonic/global,7/28/26,
+paypal-holdings,34128.0,4902.0,51696.0,23800.0,Financial Data Services,Public,U.S.,San Jose,Enrique  Lores,PYPL,https://www.paypal.com,9/29/26,
+pegatron,35857.0,462.0,6879.0,56938.0,"Electronics, Electrical Equip.",Public,Taiwan,"Taipei, Taiwan",Gary Cheng/Johnson Teng,,https://www.pegatroncorp.com,7/28/26,
+pemex,79570.0,-4252.0,,126905.0,"Mining, Crude-Oil Production",Private,Mexico,Mexico City,Victor Rodriguez Padilla,,https://www.pemex.com,7/28/26,
+peoples-insurance-co-of-china,93111.0,6429.0,42483.0,179898.0,Insurance: Property and Casualty (Stock),Public,Mainland China,Beijing,Zhao Peng,PINXY,https://www.picc.com.cn,7/28/26,
+pepsico,93925.0,8240.0,189024.0,306000.0,Food Consumer Products,Public,U.S.,"Purchase, N.Y.",Ramon L. Laguarta,PEP,https://www.pepsico.com,7/28/26,
+performance-food-group,67840.0,359.0,16469.0,43780.0,Wholesalers: Food and Grocery,Public,U.S.,"Richmond, Va.",Scott E. McPherson,PFGC,https://www.pfgc.com,9/29/26,
+pertamina,70894.0,3351.0,,35295.0,Petroleum Refining,Private,Indonesia,Jakarta,Simon  Aloysius Mantiri,,https://www.pertamina.com,7/28/26,
+perusahaan-listrik-negara,35408.0,426.0,,49979.0,Utilities,Private,Indonesia,Jakarta,Darmawan Prasodjo,,https://www.pln.co.id,7/28/26,
+petrobras,89195.0,19634.0,109396.0,50687.0,Petroleum Refining,Public,Brazil,Rio de Janeiro,Magda Maria de Regina Chambriard,PBR,https://www.petrobras.com.br,7/28/26,
+petronas,62173.0,9526.0,,49067.0,Energy,Private,Malaysia,Kuala Lumpur,Tengku Muhammad Taufik,,https://www.petronas.com,7/28/26,
+pfizer,63696.0,4334.0,155316.0,75000.0,Pharmaceuticals,Public,U.S.,NewYork City,Albert Bourla,PFE,https://www.pfizer.com,9/29/26,
+philip-morris-international,40648.0,11348.0,280837.0,84900.0,Tobacco,Public,U.S.,"Stamford, Conn.",Jacek Olczak,PM,https://www.pmi.com,7/28/26,
+phillips,136560.0,4403.0,79501.0,12600.0,Petroleum Refining,Public,U.S.,Houston,Mark E. Lashier,PSX,https://www.phillips66.com,7/28/26,
+phoenix-group-holdings,37778.0,-583.0,12760.0,5519.0,"Insurance: Life, Health (stock)",Public,U.K.,London,Andy Briggs,PNXGF,https://www.standardlifeplc.com/,16/09/2026,"Aug. 31, 2026"
+pinduoduo,60081.0,13613.0,120362.0,25474.0,Internet Services and Retailing,Public,Mainland China,Shanghai,Chen Lei/Zhao Jiazhen,PDD,https://www.pddholdings.com,7/28/26,
+ping-an-insurance,158650.0,18751.0,128470.0,258806.0,"Insurance: Life, Health (stock)",Public,Mainland China,Shenzhen,Ma Mingzhe,PNGAY,https://www.group.pingan.com,7/28/26,
+plains-gp-holdings,45579.0,260.0,4995.0,3900.0,Pipelines,Public,U.S.,Houston,Wilfred C.W. Chiang,PAGP,https://www.plains.com,7/28/26,
+pnc-financial-services,33996.0,6936.0,101536.0,54596.0,Banks: Commercial and Savings,Public,U.S.,Pittsburgh,William S. Demchak,PNC,https://www.pnc.com,7/28/26,
+posco,48529.0,486.0,16473.0,42873.0,Metals,Public,South Korea,Seoul,In-hwa Chang,PKX,https://posco-inc.com/,7/28/26,
+power-corp-of-canada,34900.0,1880.0,39661.0,41200.0,"Insurance: Life, Health (stock)",Public,Canada,Montreal,James  O'Sullivan,PWCDF,https://www.powercorporation.com,7/28/26,
+powerchina,101854.0,427.0,,179815.0,Engineering & Construction,Private,Mainland China,Beijing,Ding Yanzhang,,https://www.powerchina.cn,7/28/26,
+procter-gamble,87032.0,16046.0,333440.0,104000.0,Household and Personal Products,Public,U.S.,Cincinnati,Shailesh  Jejurikar,PG,https://www.pginvestor.com,9/29/26,
+progressive,91019.0,11695.0,120478.0,70053.0,Insurance: Property and Casualty (Stock),Public,U.S.,"Mayfield Village, Ohio",Susan Patricia  Griffith,PGR,https://www.progressive.com,9/29/26,
+prudential-financial,60774.0,3576.0,40311.0,36607.0,"Insurance: Life, Health (stock)",Public,U.S.,"Newark, N.J.",Andrew F. Sullivan,PRU,https://investor.prudential.com/,7/28/26,
+ptt,81039.0,2745.0,31951.0,33122.0,Petroleum Refining,Public,Thailand,Bangkok,Kongkrapan  Intarajang,PUTRY,https://www.pttplc.com,7/28/26,
+publix-super-markets,63209.0,4734.0,,260000.0,Food & Drug Stores,Private,U.S.,"Lakeland, Fla.",Kevin S. Murphy,,https://corporate.publix.com/,7/28/26,
+qingdao-haier,42065.0,2720.0,26507.0,134995.0,"Electronics, Electrical Equip.",Public,Mainland China,"Qingdao, China",Li Huagang,HSHCY,https://smart-home.haier.com/,7/28/26,
+qnb-group,37831.0,4664.0,43638.0,31500.0,Banks: Commercial and Savings,Public,Qatar,Doha,Abdulla  Mubarak Al-Khalifa,,https://www.qnb.com/,7/28/26,
+qualcomm,44284.0,5541.0,193915.0,52000.0,Semiconductors and Other Electronic Components,Public,U.S.,San Diego,Cristiano R. Amon,QCOM,https://www.qualcomm.com,7/28/26,
+quanta-computer,68164.0,2407.0,45337.0,81502.0,"Computers, Office Equipment",Public,Taiwan,"Taoyuan, Taiwan",Barry Lam,,https://www.quantatw.com,7/28/26,
+rabobank,34873.0,5534.0,,48202.0,Banks: Commercial and Savings,Private,Netherlands,Utrecht,Stefaan Leon Decraene,RAB0BH,https://www.rabobank.com,16/09/2026,
+rajesh-exports,88164.0,13.0,282.0,112.0,Trading,Public,India,"Bengaluru, India",Rajesh J. Mehta,,https://www.rajeshindia.com,7/28/26,
+raytheon-technologies,93500.0,7738.0,303906.0,180000.0,Aerospace & Defense,Public,U.S.,"Arlington, Va.",Christopher T. Calio,RTX,https://www.rtx.com,9/29/26,
+reliance-industries,119653.0,9142.0,183101.0,419911.0,Petroleum Refining,Public,India,Mumbai,Mukesh D. Ambani,,https://www.ril.com,7/28/26,
+renault,65331.0,-12329.0,9388.0,100541.0,Motor Vehicles and Parts,Public,France,Boulogne-Billancourt,François Provost,RNLSY,https://renaultgroup.com,16/09/2026,"Aug. 31, 2026"
+repsol,54534.0,2142.0,34025.0,24523.0,Petroleum Refining,Public,Spain,Madrid,Josu Jon Imaz San Miguel,REPYY,https://www.repsol.com,16/09/2026,"Aug. 31, 2026"
+rewe-group,102755.0,574.0,,196532.0,Food and Drug Stores,Private,Germany,Cologne,Lionel Souque,,https://www.rewe-group.com/en,16/09/2026,
+rio-tinto-group,57638.0,9966.0,176976.0,61230.0,"Mining, Crude-Oil Production",Public,U.K.,London,Simon Trott,RIO,https://www.riotinto.com,16/09/2026,"Aug. 31, 2026"
+robert-bosch,102605.0,-952.0,,412774.0,Motor Vehicles and Parts,Private,Germany,Gerlingen-Schillerhöhe,Christian Fischer,,https://www.bosch.com,16/09/2026,
+roche-group,76274.0,15506.0,348704.0,112774.0,Pharmaceuticals,Public,Switzerland,Basel,Thomas Schinecker,RHHBY,https://www.roche.com,16/09/2026,"Aug. 31, 2026"
+rosneft-oil,98223.0,3494.0,52936.0,302100.0,Petroleum Refining,Public,Russia,Moscow,Igor I. Sechin,OJSCY,https://www.rosneft.com,16/09/2026,
+royal-ahold-delhaize,104165.0,2554.0,31104.0,222000.0,Food and Drug Stores,Public,Netherlands,Zaandam,Frans Muller,ADRNY,https://www.aholddelhaize.com,16/09/2026,"Aug. 31, 2026"
+royal-bank-of-canada,98128.0,14539.0,292563.0,96628.0,Banks: Commercial and Savings,Public,Canada,Toronto,David I. McKay,RY,https://www.rbc.com,7/28/26,
+royal-dutch-shell,273731.0,17837.0,250760.0,85000.0,Petroleum Refining,Public,U.K.,London,Wael Sawan,SHEL,https://www.shell.com,16/09/2026,"Aug. 31, 2026"
+russian-railways,43386.0,31.0,,677363.0,Railroads,Private,Russia,Moscow,Oleg Belozerov,,https://erzd.ru/en/,16/09/2026,
+safran,35705.0,8095.0,162255.0,103710.0,Aerospace and Defense,Public,France,Paris,Olivier Andriès,SAFRY,https://www.safran-group.com,16/09/2026,"Aug. 31, 2026"
+saic-motor,91301.0,1406.0,16853.0,133826.0,Motor Vehicles & Parts,Public,Mainland China,Shanghai,Wang Xiaoqiu,,https://www.saicmotor.com,7/28/26,
+saint-gobain,52429.0,3252.0,44502.0,161688.0,"Building Materials, Glass",Public,France,Courbevoie,Benoit Bazin,CODYY,https://www.saint-gobain.com,16/09/2026,"Aug. 31, 2026"
+salesforce-com,41525.0,7457.0,195528.0,83334.0,Computer Software,Public,U.S.,U.S.,Marc R. Benioff,CRM,https://www.salesforce.com,10/08/2026,"Sep. 24, 2026"
+samsung-electronics,334951.0,103307.0,1087223.0,259149.0,"Electronics, Electrical Equip.",Public,South Korea,"Suwon-si, South Korea",TM Roh/Young-Hyun Jun,,https://www.samsung.com,9/23/26,
+sanofi,54650.0,8812.0,106880.0,74846.0,Pharmaceuticals,Public,France,Paris,Belén Garijo,SNY,https://www.sanofi.com,16/09/2026,"Aug. 31, 2026"
+sap,41507.0,8077.0,255908.0,110650.0,Computer Software,Public,Germany,Walldorf,Christian Klein,SAP,https://www.sap.com,16/09/2026,"Aug. 31, 2026"
+saudi-aramco,445529.0,92785.0,1707600.0,76664.0,"Mining, Crude-Oil Production",Public,Saudi Arabia,"Dhahran, Saudi Arabia",Amin H. Nasser,,https://www.aramco.com,7/28/26,
+sberbank,135076.0,20362.0,47497.0,291795.0,Banks: Commercial and Savings,Public,Russia,Moscow,Herman O. Gref,SBRCY,https://www.sberbank.ru,16/09/2026,
+schlumberger,35708.0,3374.0,70806.0,109000.0,"Oil and Gas Equipment, Services",Public,U.S.,Houston,Olivier Le Peuch,SLB,https://www.slb.com,7/28/26,
+schneider-electric,45288.0,4696.0,192406.0,162970.0,"Electronics, Electrical Equip.",Public,France,Rueil-Malmaison,Olivier Blum,SBGSY,https://www.se.com,16/09/2026,"Aug. 31, 2026"
+seven-i-holdings,69577.0,1953.0,32274.0,61165.0,Food & Drug Stores,Public,Japan,Tokyo,Stephen Hayes Dacus,SVNDY,https://www.7andi.com,7/28/26,
+sf-holding,42883.0,1547.0,24431.0,158761.0,Transportation and Logistics,Public,Mainland China,Shenzhen,Wang Wei,,https://www.sf-express.com,7/28/26,
+shaanxi-coal-chemical-industry,60538.0,1248.0,,138186.0,"Mining, Crude-Oil Production",Private,Mainland China,"Xian, China",Zhang Wenqi,,https://www.shccig.com,7/28/26,
+shaanxi-yanchang-petroleum-group,40812.0,1159.0,,127560.0,"Mining, Crude-Oil Production",Private,Mainland China,"Xian, China",Zhang  Kaiyong,,https://www.sxycpc.com,7/28/26,
+shandong-gold-group,37936.0,87.0,,34605.0,Metals,Private,Mainland China,"Jinan, China",Zhang  Xiaohai,,https://www.sd-gold.com,7/28/26,
+shandong-hi-speed-group,40985.0,595.0,,55218.0,Transportation and Logistics,Private,Mainland China,"Jinan, China",Wang Qifeng,,https://www.sdhsg.com,7/28/26,
+shandong-weiqiao-pioneering-group,82303.0,2350.0,,108862.0,Textiles,Private,Mainland China,"Binzhou, China",Zhang Bo,,https://www.weiqiaocy.com,7/28/26,
+shanghai-delong-steel-group,34926.0,354.0,,34823.0,Metals,Private,Mainland China,"Tianjin, China",Ding Liguo,,https://www.dlsteelgroup.com/,7/28/26,
+shanghai-pharmaceuticals-holding,39454.0,796.0,8098.0,49608.0,Wholesalers: Health Care,Public,Mainland China,Shanghai,Shen  Bo,SHPMY,https://www.sphchina.com,7/28/26,
+shanghai-pudong-development-bank,45246.0,6959.0,45146.0,62198.0,Banks: Commercial and Savings,Public,Mainland China,Shanghai,Zhang  Weizhong,,https://www.spdb.com.cn,7/28/26,
+shenghong-holding-group,81811.0,491.0,,48223.0,Chemicals,Private,Mainland China,"Suzhou City, China",Miao Hangen,,https://www.shenghonggroup.cn,7/28/26,
+shenhua-group,98344.0,7683.0,,303418.0,Energy,Private,Mainland China,Beijing,Zou  Lei,,https://www.ceic.com,7/28/26,
+shenzhen-investment-holdings,38664.0,786.0,,101892.0,Diversified Financials,Private,Mainland China,Shenzhen,He Jianfeng,,https://www.sihc.com.cn/en,7/28/26,
+shudao-investment-group,37213.0,3.0,,59970.0,Engineering & Construction,Private,Mainland China,"Chengdu, China",Zhang  Sheng,,https://www.shudaojt.com,7/28/26,
+siemens,87066.0,10614.0,254750.0,318000.0,Industrial Machinery,Public,Germany,Munich,Roland Busch,SIEGY,https://www.siemens.com,16/09/2026,"Aug. 31, 2026"
+siemens-energy,43114.0,1560.0,141245.0,100990.0,Energy,Public,Germany,Munich,Christian Bruch,SMREY,https://www.siemens-energy.com,16/09/2026,"Aug. 31, 2026"
+sinomach,42444.0,213.0,,114522.0,Industrial Machinery,Private,Mainland China,Beijing,Zhang Xiaolun,,https://www.sinomach.com.cn,7/28/26,
+sinopec-group,364033.0,5091.0,,488019.0,Petroleum Refining,Private,Mainland China,Beijing,Hou  Qijun,,https://www.sinopec.com,7/28/26,
+sinopharm,89352.0,813.0,,170643.0,Wholesalers: Health Care,Private,Mainland China,Beijing,Bai  Zhongquan,,https://www.sinopharm.com,7/28/26,
+sk-holdings,87238.0,1124.0,28593.0,104602.0,Petroleum Refining,Public,South Korea,Seoul,Jang  Yung-ho /Tae-Won Chey,,https://www.sk.co.kr,7/28/26,
+sk-hynix,68338.0,30192.0,870846.0,39347.0,Semiconductors and Other Electronic Components,Public,South Korea,"Icheon-si, Gyeonggi-do, South Korea",Noh-Jung Kwak,,https://www.skhynix.com,7/28/26,
+sncf-group,48490.0,2035.0,,284511.0,Railroads,Private,France,St. Denis,Jean Castex,,https://groupe-sncf.com/,16/09/2026,
+societe-generale,102423.0,6770.0,61895.0,106074.0,Banks: Commercial and Savings,Public,France,Paris,Slawomir Krupa,SCGLY,https://www.societegenerale.com,16/09/2026,"Aug. 31, 2026"
+softbank-group,51746.0,33191.0,223762.0,73677.0,Telecommunications,Public,Japan,Tokyo,Masayoshi Son,SFTBY,https://group.softbank/en/,7/28/26,
+sompo-holdings,35651.0,4247.0,37254.0,55702.0,Insurance: Property and Casualty (Stock),Public,Japan,Tokyo,Mikio  Okumura,SMPNY,https://www.sompo-hd.com,7/28/26,
+sony,87304.0,-2169.0,122685.0,94900.0,"Electronics, Electrical Equip.",Public,Japan,Tokyo,Hiroki  Totoki,SONY,https://www.sony.com/en/,7/28/26,
+standard-chartered,40634.0,5085.0,65722.0,81832.0,Banks: Commercial and Savings,Public,U.K.,U.K.,William T. Winters,SCBFY,https://www.sc.com,10/08/2026,"Sep. 24, 2026"
+starbucks,37184.0,1856.0,122335.0,381000.0,Food Services,Public,U.S.,Seattle,Brian R. Niccol,SBUX,https://www.starbucks.com,7/28/26,
+state-bank-of-india,80655.0,9428.0,99862.0,245131.0,Banks: Commercial and Savings,Public,India,Mumbai,Challa Sreenivasulu Setty,SBKFF,https://sbi.bank.in/,7/28/26,
+state-farm-insurance-cos,132312.0,12938.0,,64273.0,Insurance: Property and Casualty (Mutual),Private,U.S.,"Bloomington, Ill.",Jon  Farney,,https://www.statefarm.com,7/28/26,
+state-grid,555371.0,11116.0,,1347273.0,Utilities,Private,Mainland China,Beijing,Zhang  Zhigang,,https://www.sgcc.com.cn,7/28/26,
+state-power-investment,56221.0,2381.0,,124755.0,Energy,Private,Mainland China,Beijing,Liu  Minsheng,,https://www.spic.com.cn,7/28/26,
+stellantis,173144.0,-25229.0,16023.0,259206.0,Motor Vehicles and Parts,Public,Netherlands,Hoofddorp,Antonio Filosa,STLA,https://www.stellantis.com,16/09/2026,"Aug. 31, 2026"
+stjamesplace,39726.0,700.0,8127.0,2859.0,Diversified Financials,Public,U.K.,Cirencester,Mark FitzPatrick,STJPF,https://www.sjp.co.uk,16/09/2026,"Aug. 31, 2026"
+stonex-group,132378.0,306.0,8906.0,5430.0,Diversified Financials,Public,U.S.,New York City,Philip A. Smith,SNEX,https://www.stonex.com,7/28/26,
+sumitomo,48684.0,3983.0,45774.0,82488.0,Trading,Public,Japan,Tokyo,Shingo  Ueno,SSUMY,https://www.sumitomocorp.com,7/28/26,
+sumitomo-electric-industries,33907.0,2452.0,48599.0,302972.0,Motor Vehicles & Parts,Public,Japan,Osaka,Masayoshi Matsumoto,SMTOY,https://sumitomoelectric.com,7/28/26,
+sumitomo-life-insurance,39640.0,172.0,,42317.0,"Insurance: Life, Health (Mutual)",Private,Japan,Osaka,Yukinori Takada,,https://www.sumitomolife.co.jp,7/28/26,
+sumitomo-mitsui-financial-group,71600.0,10503.0,163161.0,127697.0,Banks: Commercial and Savings,Public,Japan,Tokyo,Toru  Nakashima,SMFG,https://www.smfg.co.jp/english/,7/28/26,
+suncor-energy,35291.0,4236.0,71793.0,15424.0,Petroleum Refining,Public,Canada,Calgary,Richard M. Kruger,SU,https://www.suncor.com,7/28/26,
+susun-construction-group,45907.0,69.0,,101372.0,Engineering & Construction,Private,Mainland China,Shanghai,Yan Xin,,https://www.ss-ceo.com,7/28/26,
+suzuki-motor,41755.0,2915.0,24544.0,76889.0,Motor Vehicles & Parts,Public,Japan,"Hamamatsu, Japan",Toshihiro Suzuki,SZKMY,https://www.globalsuzuki.com,7/28/26,
+swiss-re,44090.0,4740.0,51112.0,14893.0,Insurance: Property and Casualty (Stock),Public,Switzerland,Zurich,Andreas Berger,SSREY,https://www.swissre.com,16/09/2026,"Aug. 31, 2026"
+synnex,62508.0,828.0,23019.0,24000.0,Wholesalers: Electronics and Office Equipment,Public,U.S.,U.S.,Patrick Zammit,SNX,https://uk.tdsynnex.com/,10/08/2026,"Sep. 24, 2026"
+sysco,81370.0,1828.0,39909.0,75000.0,Wholesalers: Food and Grocery,Public,U.S.,Houston,Kevin P. Hourican,SYY,https://www.sysco.com,7/28/26,
+taikang-insurance-group,51921.0,1017.0,,44484.0,"Insurance: Life, Health (Mutual)",Private,Mainland China,Beijing,Chen Dongsheng,,https://www.taikang.com,7/28/26,
+taiwan-semiconductor-manufacturing,122258.0,54488.0,1964800.0,90557.0,Semiconductors and Other Electronic Components,Public,Taiwan,"Hsinchu, Taiwan",C.C. Wei,TSM,https://www.tsmc.com,7/28/26,
+talanx,56646.0,2797.0,37523.0,29899.0,Insurance: Property and Casualty (Stock),Public,Germany,Hanover,Torsten Leue,,https://www.talanx.com,16/09/2026,"Aug. 31, 2026"
+target,104780.0,3705.0,61211.0,415000.0,General Merchandisers,Public,U.S.,Minneapolis,Michael J. Fiddelke,TGT,https://corporate.target.com/,7/28/26,
+tata-motors,40562.0,9325.0,13149.0,31351.0,Motor Vehicles & Parts,Public,India,Mumbai,Shailesh   Chandra,,https://cars.tatamotors.com/,7/28/26,
+telefonica,42540.0,-4870.0,23866.0,82655.0,Telecommunications,Public,Spain,Madrid,Marc Thomas Murtra Millar,TELFY,https://www.telefonica.com,16/09/2026,"Aug. 31, 2026"
+tencent-holdings,104591.0,31282.0,530787.0,115849.0,Internet Services and Retailing,Public,Mainland China,Shenzhen,Pony Ma,TCEHY,https://www.tencent.com,7/28/26,
+tesco,98502.0,2388.0,38615.0,227188.0,Food and Drug Stores,Public,U.K.,Welwyn Garden City,Ken Murphy,TSCDY,https://www.tescoplc.com,16/09/2026,"Aug. 31, 2026"
+tesla,103619.0,3804.0,1340081.0,134785.0,Motor Vehicles & Parts,Public,U.S.,Austin,Elon R. Musk,TSLA,https://www.tesla.com,10/6/2026,
+thermo-fisher-scientific,46336.0,6967.0,217796.0,125000.0,Medical Products and Equipment,Public,U.S.,"Waltham, Mass.",Marc N. Casper,TMO,https://www.thermofisher.com,9/29/26,
+thyssenkrupp,36229.0,513.0,10448.0,93375.0,Metals,Public,Germany,Essen,Miguel López,TKAMY,https://www.thyssenkrupp.com,16/09/2026,"Aug. 31, 2026"
+tiaa,50605.0,621.0,,13676.0,"Insurance: Life, Health (Mutual)",Private,U.S.,New York City,Thasunda Brown Duckett,,https://www.tiaa.org,7/28/26,
+tjx,60372.0,5494.0,166291.0,377000.0,Specialty Retailers,Public,U.S.,"Framingham, Mass.",Ernie L. Herrman,TJX,https://www.tjx.com,7/28/26,
+tokio-marine-holdings,58869.0,6505.0,90634.0,51717.0,Insurance: Property and Casualty (Stock),Public,Japan,Tokyo,Masahiro  Koike,TKOMY,https://www.tokiomarinehd.com,7/28/26,
+tokyo-electric-power,41991.0,-3014.0,4801.0,38341.0,Utilities,Public,Japan,Tokyo,Tomoaki Kobayakawa,TKECY,https://www.tepco.co.jp,7/28/26,
+tongling-nonferrous-metals-group,37391.0,4.0,,20827.0,Metals,Private,Mainland China,"Tongling, China",Ding  Shiqi,,https://www.tnmg.com.cn,7/28/26,
+tongwei-group,35602.0,5.0,7092.0,60012.0,Energy,Public,Mainland China,"Chengdu, China",Liu Hanyuan,,https://www.tongwei.com,7/28/26,
+toronto-dominion-bank,87350.0,14665.0,199344.0,102218.0,Banks: Commercial and Savings,Public,Canada,Toronto,Raymond   Chun,TD,https://www.td.com,7/28/26,
+total,182344.0,13127.0,194981.0,101513.0,Petroleum Refining,Public,France,Courbevoie,Patrick Pouyanné,TTE,https://www.totalenergies.com,16/09/2026,"Aug. 31, 2026"
+toyota-motor,336305.0,25533.0,252099.0,390927.0,Motor Vehicles & Parts,Public,Japan,Toyota,Kenta  Kon,TM,https://global.toyota/en/,7/28/26,
+toyota-tsusho,76716.0,2459.0,35183.0,74927.0,Trading,Public,Japan,"Nagoya, Japan",Toshimitsu  Imai,TYHOF,https://www.toyota-tsusho.com,7/28/26,
+trafigura-group,240268.0,2666.0,,14476.0,Trading,Private,Singapore,Singapore,Richard  Holtum,,https://www.trafigura.com,7/28/26,
+travelers-cos,48828.0,6288.0,72620.0,34000.0,Insurance: Property and Casualty (Stock),Public,U.S.,New York City,Alan D. Schnitzer,TRV,https://www.travelers.com,7/28/26,
+tsingshan-holding-group,60131.0,865.0,,110059.0,Metals,Private,Mainland China,"Wenzhou, China",Sun Jianfen,,https://www.tssgroup.com.cn,7/28/26,
+tyson-foods,54441.0,474.0,20395.0,133000.0,Food Production,Public,U.S.,"Springdale, Ark.",Jeffrey K. Schomburger,TSN,https://www.tysonfoods.com,7/28/26,
+u-s-bancorp,42861.0,7570.0,97109.0,68520.0,Banks: Commercial and Savings,Public,U.S.,Minneapolis,Gunjan  Kedia,USB,https://www.usbank.com,7/28/26,
+u-s-postal-service,80581.0,-8978.0,,577877.0,"Mail, Package, and Freight Delivery",Private,U.S.,"Washington, D.C.",David P. Steiner,,https://www.usps.com,7/28/26,
+uber-technologies,52017.0,10053.0,151164.0,34000.0,Internet Services and Retailing,Public,U.S.,San Francisco,Dara Khosrowshahi,UBER,https://www.uber.com,7/28/26,
+ubs-group,78786.0,7767.0,167696.0,103177.0,Banks: Commercial and Savings,Public,Switzerland,Zurich,Sergio P. Ermotti,UBS,https://www.ubs.com,16/09/2026,"Aug. 31, 2026"
+unicredit-group,44708.0,12311.0,146422.0,67118.0,Banks: Commercial and Savings,Public,Italy,Milan,Andrea Orcel,UNCRY,https://www.unicreditgroup.eu,16/09/2026,"Aug. 31, 2026"
+unilever,65638.0,10680.0,139356.0,96092.0,Household and Personal Products,Public,U.K.,London,Fernando Fernandez,UL,https://www.unilever.com,16/09/2026,"Aug. 31, 2026"
+uniper,68752.0,1576.0,21815.0,7053.0,Energy,Public,Germany,Düsseldorf,Michael D. Lewis,UNPRF,https://www.uniper.energy,16/09/2026,"Aug. 31, 2026"
+united-continental-holdings,59070.0,3353.0,39335.0,113200.0,Airlines,Public,U.S.,Chicago,J. Scott Kirby,UAL,https://www.united.com,7/28/26,
+unitedhealth-group,450129.0,14122.0,353590.0,390000.0,Health Care: Insurance and Managed Care,Public,U.S.,"Eden Prairie, Minn.",Stephen J. Hemsley,UNH,https://www.unitedhealthgroup.com,9/29/26,
+ups,89930.0,4570.0,86720.0,350625.0,"Mail, Package, and Freight Delivery",Public,U.S.,Atlanta,Carol B. Tomé,UPS,https://www.ups.com,9/29/26,
+us-foods-holding,39424.0,676.0,22311.0,30000.0,Wholesalers: Food and Grocery,Public,U.S.,"Rosemont, Ill.",David E. Flitman,USFD,https://www.usfoods.com,7/28/26,
+usaa,51499.0,5499.0,,37380.0,Insurance: Property and Casualty (Stock),Private,U.S.,San Antonio,Juan C. Andrade,,https://www.usaa.com,7/28/26,
+vale,38403.0,2352.0,60583.0,65805.0,"Mining, Crude-Oil Production",Public,Brazil,Rio de Janeiro,Gustavo  Duarte  Pimenta,VALE,https://www.vale.com,7/28/26,
+valero-energy,115939.0,2348.0,87830.0,9798.0,Petroleum Refining,Public,U.S.,San Antonio,R. Lane Riggs,VLO,https://www.valero.com,7/28/26,
+veolia-environnement,50075.0,1373.0,27729.0,204224.0,Utilities,Public,France,Aubervilliers,Estelle K. Brachlianoff,VEOEY,https://www.veolia.com,16/09/2026,"Aug. 31, 2026"
+verizon,138895.0,16172.0,201673.0,99800.0,Telecommunications,Public,U.S.,NewYork City,Daniel H. Schulman,VZ,https://www.verizon.com,9/29/26,
+vibra-energia,33856.0,359.0,7648.0,3785.0,Petroleum Refining,Public,Brazil,Rio de Janeiro,Ernesto Peres Pousada,VBREY,https://www.vibraenergia.com.br,7/28/26,
+vinci,85387.0,5530.0,72824.0,293786.0,"Engineering, Construction",Public,France,Nanterre,Pierre Anjolras,VCISY,https://www.vinci.com,16/09/2026,"Aug. 31, 2026"
+visa,44488.0,22592.0,668619.0,34100.0,Financial Data Services,Public,U.S.,San Francisco,Ryan McInerney,V,https://www.visa.com,9/29/26,
+vodafone-group,46906.0,-460.0,36956.0,92988.0,Telecommunications,Public,U.K.,Newbury,Margherita Della Valle,VOD,https://www.vodafone.com,16/09/2026,"Aug. 31, 2026"
+volkswagen,363090.0,8260.0,45526.0,628893.0,Motor Vehicles and Parts,Public,Germany,Wolfsburg,Oliver Blume,VWAGY,https://volkswagen-group.com,16/09/2026,"Aug. 31, 2026"
+volvo,48828.0,3511.0,73485.0,88919.0,Motor Vehicles and Parts,Public,Sweden,Gothenburg,Martin Lundstedt,VLVLY,https://www.volvogroup.com,16/09/2026,"Aug. 31, 2026"
+vtb-bank,69867.0,5769.0,3872.0,69540.0,Banks: Commercial and Savings,Public,Russia,Moscow,Andrey L. Kostin,,https://www.vtb.com,16/09/2026,
+walmart,735840.0,22076.0,916771.0,2100000.0,General Merchandisers,Public,U.S.,"Bentonville, Ark.",John R. Furner,WMT,https://www.stock.walmart.com,9/29/26,
+wells-fargo,128852.0,22610.0,264298.0,197466.0,Commercial Banks,Public,U.S.,San Francisco,Charles W. Scharf,WFC,https://www.wellsfargo.com,9/29/26,
+westpac-banking,37338.0,4449.0,87362.0,35236.0,Banks: Commercial and Savings,Public,Australia,Sydney,Anthony  Miller,WBKCY,https://www.westpac.com.au,7/28/26,
+wilmar-international,70416.0,1411.0,18668.0,100000.0,Food Production,Public,Singapore,Singapore,Kuok Khoon Hong,WLMIY,https://www.wilmar-international.com,7/28/26,
+wistron,70180.0,880.0,14171.0,44234.0,"Computers, Office Equipment",Public,Taiwan,"Taipei, Taiwan",Jeff Lin,,https://www.wistron.com,7/28/26,
+woolworths,44693.0,623.0,33688.0,202846.0,Food & Drug Stores,Public,Australia,"Bella Vista, Australia",Amanda  Bardwell,WOLWF,https://www.woolworthsgroup.com.au,7/28/26,
+world-fuel-services,36917.0,-614.0,1846.0,4003.0,Energy,Public,U.S.,Miami,Ira M. Birns,WKC,https://www.world-kinect.com,7/28/26,
+wt-microelectronics,37808.0,435.0,8315.0,7597.0,Wholesalers: Electronics and Office Equipment,Public,Taiwan,"New Taipei City, Taiwan",Eric  Cheng,,https://www.wtmec.com/,7/28/26,
+wuchan-zhongda-group,82984.0,504.0,3684.0,26254.0,Trading,Public,Mainland China,"Hangzhou, China",Chen Xin,,https://www.wzgroup.cn,7/28/26,
+x5-retail-group,55361.0,991.0,8582.0,389000.0,Wholesalers: Food and Grocery,Private,Russia,Moscow,Igor Shekhterman,,https://www.x5.ru,16/09/2026,
+xiamen-cd,97028.0,-509.0,,57590.0,Trading,Private,Mainland China,"Xiamen, China",Xu  Xiaoxi,,https://www.chinacdc.com,7/28/26,
+xiamen-itg-holding-group,60296.0,-128.0,,35274.0,Trading,Private,Mainland China,"Xiamen, China",Zheng  Yongda,,https://www.itgholding.com.cn,7/28/26,
+xiamen-xiangyu-group,64537.0,120.0,,38215.0,Trading,Private,Mainland China,"Xiamen, China",Deng  Qidong,,https://www.xiangyu-group.com,7/28/26,
+xiaomi,63621.0,5794.0,84999.0,56531.0,"Electronics, Electrical Equip.",Public,Mainland China,Beijing,Lei Jun,XIACY,https://www.mi.com/global,7/28/26,
+yankuang-group,116559.0,-546.0,,202060.0,"Mining, Crude-Oil Production",Private,Mainland China,"Jinan, China",Li Wei,,https://www.shandong-energy.com,7/28/26,
+zf-friedrichshafen,43774.0,-2563.0,,145909.0,Motor Vehicles and Parts,Private,Germany,Friedrichshafen,Mathias Miedreich,,https://www.zf.com,16/09/2026,
+zhejiang-communications-investment-group,50819.0,377.0,,46569.0,Transportation and Logistics,Private,Mainland China,"Hangzhou, China",Gao  Haomeng,,https://www.cncico.com,7/28/26,
+zhejiang-geely-holding-group,87866.0,-897.0,,136299.0,Motor Vehicles & Parts,Private,Mainland China,"Hangzhou, China",An  Conghui,,https://www.zgh.com,7/28/26,
+zhejiang-hengyi-group,69781.0,62.0,,23889.0,Chemicals,Private,Mainland China,"Hangzhou, China",Qiu Jianlin,,https://www.hengyi.com,7/28/26,
+zhejiang-rongsheng-holding-group,94831.0,8.0,,26269.0,Chemicals,Private,Mainland China,"Hangzhou, China",Li Shuirong,,https://www.rong-sheng.com,7/28/26,
+zijin-mining-group,48566.0,7204.0,105708.0,66708.0,Metals,Public,Mainland China,"Longyan, China",Zou  Laichang,ZIJMY,https://www.zjky.cn,7/28/26,
+zurich-insurance-group,69780.0,6798.0,109489.0,63965.0,Insurance: Property and Casualty (Stock),Public,Switzerland,Zurich,Mario Greco,ZURVY,https://www.zurich.com,16/09/2026,"Aug. 31, 2026"

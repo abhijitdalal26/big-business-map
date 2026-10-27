@@ -1,0 +1,276 @@
+﻿indicator,indicator_name,year,value
+CM.MKT.LDOM.NO,"Listed domestic companies, total",2000,39892.0
+CM.MKT.LDOM.NO,"Listed domestic companies, total",2001,40157.0
+CM.MKT.LDOM.NO,"Listed domestic companies, total",2002,38894.0
+CM.MKT.LDOM.NO,"Listed domestic companies, total",2003,41051.0
+CM.MKT.LDOM.NO,"Listed domestic companies, total",2004,38724.0
+CM.MKT.LDOM.NO,"Listed domestic companies, total",2005,39096.0
+CM.MKT.LDOM.NO,"Listed domestic companies, total",2006,43104.0
+CM.MKT.LDOM.NO,"Listed domestic companies, total",2007,44034.0
+CM.MKT.LDOM.NO,"Listed domestic companies, total",2008,43949.0
+CM.MKT.LDOM.NO,"Listed domestic companies, total",2009,42669.0
+CM.MKT.LDOM.NO,"Listed domestic companies, total",2010,43427.0
+CM.MKT.LDOM.NO,"Listed domestic companies, total",2011,44323.0
+CM.MKT.LDOM.NO,"Listed domestic companies, total",2012,43772.0
+CM.MKT.LDOM.NO,"Listed domestic companies, total",2013,44853.0
+CM.MKT.LDOM.NO,"Listed domestic companies, total",2014,45743.0
+CM.MKT.LDOM.NO,"Listed domestic companies, total",2015,43983.0
+CM.MKT.LDOM.NO,"Listed domestic companies, total",2016,43806.0
+CM.MKT.LDOM.NO,"Listed domestic companies, total",2017,43440.0
+CM.MKT.LDOM.NO,"Listed domestic companies, total",2018,44910.0
+CM.MKT.LDOM.NO,"Listed domestic companies, total",2019,49792.0
+CM.MKT.LDOM.NO,"Listed domestic companies, total",2020,50055.0
+CM.MKT.LDOM.NO,"Listed domestic companies, total",2021,52292.0
+CM.MKT.LDOM.NO,"Listed domestic companies, total",2022,51026.0
+CM.MKT.LDOM.NO,"Listed domestic companies, total",2023,48748.0
+CM.MKT.LDOM.NO,"Listed domestic companies, total",2024,47980.0
+NV.AGR.TOTL.ZS,"Agriculture, value added (% of GDP)",2000,3.36613840334415
+NV.AGR.TOTL.ZS,"Agriculture, value added (% of GDP)",2001,3.3471268108389
+NV.AGR.TOTL.ZS,"Agriculture, value added (% of GDP)",2002,3.3133647099912
+NV.AGR.TOTL.ZS,"Agriculture, value added (% of GDP)",2003,3.30307837194351
+NV.AGR.TOTL.ZS,"Agriculture, value added (% of GDP)",2004,3.34583906680995
+NV.AGR.TOTL.ZS,"Agriculture, value added (% of GDP)",2005,3.21993242419093
+NV.AGR.TOTL.ZS,"Agriculture, value added (% of GDP)",2006,3.1934853150184
+NV.AGR.TOTL.ZS,"Agriculture, value added (% of GDP)",2007,3.37506604005994
+NV.AGR.TOTL.ZS,"Agriculture, value added (% of GDP)",2008,3.53401200073419
+NV.AGR.TOTL.ZS,"Agriculture, value added (% of GDP)",2009,3.63961038714002
+NV.AGR.TOTL.ZS,"Agriculture, value added (% of GDP)",2010,3.84887117605728
+NV.AGR.TOTL.ZS,"Agriculture, value added (% of GDP)",2011,4.00598256310293
+NV.AGR.TOTL.ZS,"Agriculture, value added (% of GDP)",2012,4.03511093565123
+NV.AGR.TOTL.ZS,"Agriculture, value added (% of GDP)",2013,4.17627258441127
+NV.AGR.TOTL.ZS,"Agriculture, value added (% of GDP)",2014,4.15504348996036
+NV.AGR.TOTL.ZS,"Agriculture, value added (% of GDP)",2015,4.18554090766153
+NV.AGR.TOTL.ZS,"Agriculture, value added (% of GDP)",2016,4.12841221761396
+NV.AGR.TOTL.ZS,"Agriculture, value added (% of GDP)",2017,4.09394024921527
+NV.AGR.TOTL.ZS,"Agriculture, value added (% of GDP)",2018,3.91924976054505
+NV.AGR.TOTL.ZS,"Agriculture, value added (% of GDP)",2019,4.04997436616003
+NV.AGR.TOTL.ZS,"Agriculture, value added (% of GDP)",2020,4.38235019123088
+NV.AGR.TOTL.ZS,"Agriculture, value added (% of GDP)",2021,4.30295607275396
+NV.AGR.TOTL.ZS,"Agriculture, value added (% of GDP)",2022,4.32398050260687
+NV.AGR.TOTL.ZS,"Agriculture, value added (% of GDP)",2023,4.13682559934491
+NV.AGR.TOTL.ZS,"Agriculture, value added (% of GDP)",2024,4.07045929837122
+NV.IND.MANF.ZS,"Manufacturing, value added (% of GDP)",2000,18.4060038495082
+NV.IND.MANF.ZS,"Manufacturing, value added (% of GDP)",2001,17.3457575693782
+NV.IND.MANF.ZS,"Manufacturing, value added (% of GDP)",2002,16.8893861027913
+NV.IND.MANF.ZS,"Manufacturing, value added (% of GDP)",2003,16.7233785215678
+NV.IND.MANF.ZS,"Manufacturing, value added (% of GDP)",2004,16.5903318992635
+NV.IND.MANF.ZS,"Manufacturing, value added (% of GDP)",2005,16.3658789027544
+NV.IND.MANF.ZS,"Manufacturing, value added (% of GDP)",2006,16.3396407115888
+NV.IND.MANF.ZS,"Manufacturing, value added (% of GDP)",2007,16.3164073803018
+NV.IND.MANF.ZS,"Manufacturing, value added (% of GDP)",2008,16.0608383395231
+NV.IND.MANF.ZS,"Manufacturing, value added (% of GDP)",2009,15.4744889080069
+NV.IND.MANF.ZS,"Manufacturing, value added (% of GDP)",2010,15.9937554604582
+NV.IND.MANF.ZS,"Manufacturing, value added (% of GDP)",2011,16.102460584951
+NV.IND.MANF.ZS,"Manufacturing, value added (% of GDP)",2012,16.0726179892082
+NV.IND.MANF.ZS,"Manufacturing, value added (% of GDP)",2013,15.925858241262
+NV.IND.MANF.ZS,"Manufacturing, value added (% of GDP)",2014,16.0753032239983
+NV.IND.MANF.ZS,"Manufacturing, value added (% of GDP)",2015,16.3769271539914
+NV.IND.MANF.ZS,"Manufacturing, value added (% of GDP)",2016,16.2042384591368
+NV.IND.MANF.ZS,"Manufacturing, value added (% of GDP)",2017,16.2514915858743
+NV.IND.MANF.ZS,"Manufacturing, value added (% of GDP)",2018,16.382816153437
+NV.IND.MANF.ZS,"Manufacturing, value added (% of GDP)",2019,15.9690657926037
+NV.IND.MANF.ZS,"Manufacturing, value added (% of GDP)",2020,15.9082177582571
+NV.IND.MANF.ZS,"Manufacturing, value added (% of GDP)",2021,16.3553808124352
+NV.IND.MANF.ZS,"Manufacturing, value added (% of GDP)",2022,15.7099984104883
+NV.IND.MANF.ZS,"Manufacturing, value added (% of GDP)",2023,15.2465175130439
+NV.IND.MANF.ZS,"Manufacturing, value added (% of GDP)",2024,14.8854431636487
+NV.IND.TOTL.ZS,"Industry, value added (% of GDP)",2000,27.829631205746
+NV.IND.TOTL.ZS,"Industry, value added (% of GDP)",2001,26.9307877641503
+NV.IND.TOTL.ZS,"Industry, value added (% of GDP)",2002,26.4208571343339
+NV.IND.TOTL.ZS,"Industry, value added (% of GDP)",2003,26.4182158184013
+NV.IND.TOTL.ZS,"Industry, value added (% of GDP)",2004,26.7817498170279
+NV.IND.TOTL.ZS,"Industry, value added (% of GDP)",2005,27.225649421898
+NV.IND.TOTL.ZS,"Industry, value added (% of GDP)",2006,27.7449008184268
+NV.IND.TOTL.ZS,"Industry, value added (% of GDP)",2007,27.8294342799491
+NV.IND.TOTL.ZS,"Industry, value added (% of GDP)",2008,28.1621989751856
+NV.IND.TOTL.ZS,"Industry, value added (% of GDP)",2009,26.640011729053
+NV.IND.TOTL.ZS,"Industry, value added (% of GDP)",2010,27.5559641210838
+NV.IND.TOTL.ZS,"Industry, value added (% of GDP)",2011,28.2295435296902
+NV.IND.TOTL.ZS,"Industry, value added (% of GDP)",2012,28.2147937019147
+NV.IND.TOTL.ZS,"Industry, value added (% of GDP)",2013,27.8861441009133
+NV.IND.TOTL.ZS,"Industry, value added (% of GDP)",2014,27.6899462559795
+NV.IND.TOTL.ZS,"Industry, value added (% of GDP)",2015,26.7847420643514
+NV.IND.TOTL.ZS,"Industry, value added (% of GDP)",2016,26.2334068607048
+NV.IND.TOTL.ZS,"Industry, value added (% of GDP)",2017,26.6910514643472
+NV.IND.TOTL.ZS,"Industry, value added (% of GDP)",2018,27.1662997991077
+NV.IND.TOTL.ZS,"Industry, value added (% of GDP)",2019,26.5867134167993
+NV.IND.TOTL.ZS,"Industry, value added (% of GDP)",2020,25.9122777369681
+NV.IND.TOTL.ZS,"Industry, value added (% of GDP)",2021,27.0084721023324
+NV.IND.TOTL.ZS,"Industry, value added (% of GDP)",2022,27.2094363311311
+NV.IND.TOTL.ZS,"Industry, value added (% of GDP)",2023,26.1933428273257
+NV.IND.TOTL.ZS,"Industry, value added (% of GDP)",2024,25.435604452787
+NV.SRV.TOTL.ZS,"Services, value added (% of GDP)",2000,64.2015073591987
+NV.SRV.TOTL.ZS,"Services, value added (% of GDP)",2001,65.2207314986342
+NV.SRV.TOTL.ZS,"Services, value added (% of GDP)",2002,65.6933532733087
+NV.SRV.TOTL.ZS,"Services, value added (% of GDP)",2003,65.5033747235766
+NV.SRV.TOTL.ZS,"Services, value added (% of GDP)",2004,64.8272680969656
+NV.SRV.TOTL.ZS,"Services, value added (% of GDP)",2005,64.3010416657244
+NV.SRV.TOTL.ZS,"Services, value added (% of GDP)",2006,63.5945426260835
+NV.SRV.TOTL.ZS,"Services, value added (% of GDP)",2007,63.1847951280857
+NV.SRV.TOTL.ZS,"Services, value added (% of GDP)",2008,62.7820728368771
+NV.SRV.TOTL.ZS,"Services, value added (% of GDP)",2009,64.6926516520716
+NV.SRV.TOTL.ZS,"Services, value added (% of GDP)",2010,63.3420052293702
+NV.SRV.TOTL.ZS,"Services, value added (% of GDP)",2011,62.5861458813772
+NV.SRV.TOTL.ZS,"Services, value added (% of GDP)",2012,62.7313229546527
+NV.SRV.TOTL.ZS,"Services, value added (% of GDP)",2013,62.9349082133651
+NV.SRV.TOTL.ZS,"Services, value added (% of GDP)",2014,63.2029972232875
+NV.SRV.TOTL.ZS,"Services, value added (% of GDP)",2015,64.4130219474451
+NV.SRV.TOTL.ZS,"Services, value added (% of GDP)",2016,65.0265064956916
+NV.SRV.TOTL.ZS,"Services, value added (% of GDP)",2017,64.5216023602665
+NV.SRV.TOTL.ZS,"Services, value added (% of GDP)",2018,64.2950128806001
+NV.SRV.TOTL.ZS,"Services, value added (% of GDP)",2019,64.9083684916517
+NV.SRV.TOTL.ZS,"Services, value added (% of GDP)",2020,65.4046330034739
+NV.SRV.TOTL.ZS,"Services, value added (% of GDP)",2021,64.1107931432767
+NV.SRV.TOTL.ZS,"Services, value added (% of GDP)",2022,62.263158912684
+NV.SRV.TOTL.ZS,"Services, value added (% of GDP)",2023,63.0410618356026
+NV.SRV.TOTL.ZS,"Services, value added (% of GDP)",2024,63.3018068599679
+NY.GDP.MKTP.CD,"GDP, current US$",2000,33965806441911.9
+NY.GDP.MKTP.CD,"GDP, current US$",2001,33747838963540.0
+NY.GDP.MKTP.CD,"GDP, current US$",2002,35048255697763.2
+NY.GDP.MKTP.CD,"GDP, current US$",2003,39288473726074.5
+NY.GDP.MKTP.CD,"GDP, current US$",2004,44264898214305.3
+NY.GDP.MKTP.CD,"GDP, current US$",2005,47938461749088.8
+NY.GDP.MKTP.CD,"GDP, current US$",2006,51965655998564.4
+NY.GDP.MKTP.CD,"GDP, current US$",2007,58574302755950.8
+NY.GDP.MKTP.CD,"GDP, current US$",2008,64378551514749.3
+NY.GDP.MKTP.CD,"GDP, current US$",2009,61049315651690.3
+NY.GDP.MKTP.CD,"GDP, current US$",2010,66893676131662.7
+NY.GDP.MKTP.CD,"GDP, current US$",2011,74388644404622.5
+NY.GDP.MKTP.CD,"GDP, current US$",2012,76055253368044.6
+NY.GDP.MKTP.CD,"GDP, current US$",2013,78171001460419.0
+NY.GDP.MKTP.CD,"GDP, current US$",2014,80243543597078.9
+NY.GDP.MKTP.CD,"GDP, current US$",2015,75839351828606.1
+NY.GDP.MKTP.CD,"GDP, current US$",2016,77084966373474.1
+NY.GDP.MKTP.CD,"GDP, current US$",2017,82110104984460.0
+NY.GDP.MKTP.CD,"GDP, current US$",2018,87310840056717.8
+NY.GDP.MKTP.CD,"GDP, current US$",2019,88796498078977.6
+NY.GDP.MKTP.CD,"GDP, current US$",2020,86388502867289.2
+NY.GDP.MKTP.CD,"GDP, current US$",2021,98780038374127.1
+NY.GDP.MKTP.CD,"GDP, current US$",2022,102862471365575.0
+NY.GDP.MKTP.CD,"GDP, current US$",2023,107348614073350.0
+NY.GDP.MKTP.CD,"GDP, current US$",2024,111669432109121.0
+SL.AGR.EMPL.ZS,Employment in agriculture (% of total employment),2000,39.3475201133238
+SL.AGR.EMPL.ZS,Employment in agriculture (% of total employment),2001,38.9985930555861
+SL.AGR.EMPL.ZS,Employment in agriculture (% of total employment),2002,38.7460680130745
+SL.AGR.EMPL.ZS,Employment in agriculture (% of total employment),2003,38.2456284659108
+SL.AGR.EMPL.ZS,Employment in agriculture (% of total employment),2004,37.1793552072528
+SL.AGR.EMPL.ZS,Employment in agriculture (% of total employment),2005,36.2651747228504
+SL.AGR.EMPL.ZS,Employment in agriculture (% of total employment),2006,35.2125737637074
+SL.AGR.EMPL.ZS,Employment in agriculture (% of total employment),2007,34.3110561189689
+SL.AGR.EMPL.ZS,Employment in agriculture (% of total employment),2008,33.725849774871
+SL.AGR.EMPL.ZS,Employment in agriculture (% of total employment),2009,33.2235316577505
+SL.AGR.EMPL.ZS,Employment in agriculture (% of total employment),2010,32.5616577635918
+SL.AGR.EMPL.ZS,Employment in agriculture (% of total employment),2011,31.6926831031304
+SL.AGR.EMPL.ZS,Employment in agriculture (% of total employment),2012,30.877291400788
+SL.AGR.EMPL.ZS,Employment in agriculture (% of total employment),2013,30.0856775067725
+SL.AGR.EMPL.ZS,Employment in agriculture (% of total employment),2014,29.2154305399711
+SL.AGR.EMPL.ZS,Employment in agriculture (% of total employment),2015,28.537576574815
+SL.AGR.EMPL.ZS,Employment in agriculture (% of total employment),2016,28.0127060099184
+SL.AGR.EMPL.ZS,Employment in agriculture (% of total employment),2017,27.4501841952462
+SL.AGR.EMPL.ZS,Employment in agriculture (% of total employment),2018,26.809842056786
+SL.AGR.EMPL.ZS,Employment in agriculture (% of total employment),2019,26.2795254151894
+SL.AGR.EMPL.ZS,Employment in agriculture (% of total employment),2020,27.1903745010412
+SL.AGR.EMPL.ZS,Employment in agriculture (% of total employment),2021,26.8638944896346
+SL.AGR.EMPL.ZS,Employment in agriculture (% of total employment),2022,26.9070538280491
+SL.AGR.EMPL.ZS,Employment in agriculture (% of total employment),2023,26.5559920191478
+SL.AGR.EMPL.ZS,Employment in agriculture (% of total employment),2024,26.0721069106481
+SL.IND.EMPL.ZS,Employment in industry (% of total employment),2000,21.3617781819108
+SL.IND.EMPL.ZS,Employment in industry (% of total employment),2001,20.7799422181641
+SL.IND.EMPL.ZS,Employment in industry (% of total employment),2002,20.556588817794
+SL.IND.EMPL.ZS,Employment in industry (% of total employment),2003,20.6320799339909
+SL.IND.EMPL.ZS,Employment in industry (% of total employment),2004,20.9840156447432
+SL.IND.EMPL.ZS,Employment in industry (% of total employment),2005,21.4466363151373
+SL.IND.EMPL.ZS,Employment in industry (% of total employment),2006,21.9363125810871
+SL.IND.EMPL.ZS,Employment in industry (% of total employment),2007,22.5025955943163
+SL.IND.EMPL.ZS,Employment in industry (% of total employment),2008,22.6035541442484
+SL.IND.EMPL.ZS,Employment in industry (% of total employment),2009,22.5447844653776
+SL.IND.EMPL.ZS,Employment in industry (% of total employment),2010,22.8638865353355
+SL.IND.EMPL.ZS,Employment in industry (% of total employment),2011,23.1627905629219
+SL.IND.EMPL.ZS,Employment in industry (% of total employment),2012,23.5568526789684
+SL.IND.EMPL.ZS,Employment in industry (% of total employment),2013,23.5043672873629
+SL.IND.EMPL.ZS,Employment in industry (% of total employment),2014,23.5061132469854
+SL.IND.EMPL.ZS,Employment in industry (% of total employment),2015,23.3371737872136
+SL.IND.EMPL.ZS,Employment in industry (% of total employment),2016,23.3429180570016
+SL.IND.EMPL.ZS,Employment in industry (% of total employment),2017,23.4308690261831
+SL.IND.EMPL.ZS,Employment in industry (% of total employment),2018,23.5282673217623
+SL.IND.EMPL.ZS,Employment in industry (% of total employment),2019,23.5469066836257
+SL.IND.EMPL.ZS,Employment in industry (% of total employment),2020,23.2971308423826
+SL.IND.EMPL.ZS,Employment in industry (% of total employment),2021,23.5599106355379
+SL.IND.EMPL.ZS,Employment in industry (% of total employment),2022,23.5749655400189
+SL.IND.EMPL.ZS,Employment in industry (% of total employment),2023,23.5140534163634
+SL.IND.EMPL.ZS,Employment in industry (% of total employment),2024,23.603839656985
+SL.SRV.EMPL.ZS,Employment in services (% of total employment),2000,39.2907006125923
+SL.SRV.EMPL.ZS,Employment in services (% of total employment),2001,40.2214646215593
+SL.SRV.EMPL.ZS,Employment in services (% of total employment),2002,40.6973416025775
+SL.SRV.EMPL.ZS,Employment in services (% of total employment),2003,41.1222914134818
+SL.SRV.EMPL.ZS,Employment in services (% of total employment),2004,41.8366308076617
+SL.SRV.EMPL.ZS,Employment in services (% of total employment),2005,42.2881920077482
+SL.SRV.EMPL.ZS,Employment in services (% of total employment),2006,42.8511111471335
+SL.SRV.EMPL.ZS,Employment in services (% of total employment),2007,43.1863492015103
+SL.SRV.EMPL.ZS,Employment in services (% of total employment),2008,43.6705949646725
+SL.SRV.EMPL.ZS,Employment in services (% of total employment),2009,44.2316853605538
+SL.SRV.EMPL.ZS,Employment in services (% of total employment),2010,44.5744547297132
+SL.SRV.EMPL.ZS,Employment in services (% of total employment),2011,45.1445268212204
+SL.SRV.EMPL.ZS,Employment in services (% of total employment),2012,45.5658565185414
+SL.SRV.EMPL.ZS,Employment in services (% of total employment),2013,46.409954765999
+SL.SRV.EMPL.ZS,Employment in services (% of total employment),2014,47.2784591283812
+SL.SRV.EMPL.ZS,Employment in services (% of total employment),2015,48.125251517685
+SL.SRV.EMPL.ZS,Employment in services (% of total employment),2016,48.6443741553292
+SL.SRV.EMPL.ZS,Employment in services (% of total employment),2017,49.118944269086
+SL.SRV.EMPL.ZS,Employment in services (% of total employment),2018,49.6618906697368
+SL.SRV.EMPL.ZS,Employment in services (% of total employment),2019,50.1735683639877
+SL.SRV.EMPL.ZS,Employment in services (% of total employment),2020,49.5124938969333
+SL.SRV.EMPL.ZS,Employment in services (% of total employment),2021,49.5761960618908
+SL.SRV.EMPL.ZS,Employment in services (% of total employment),2022,49.5179817245832
+SL.SRV.EMPL.ZS,Employment in services (% of total employment),2023,49.9299526778755
+SL.SRV.EMPL.ZS,Employment in services (% of total employment),2024,50.3240550504721
+SL.TLF.TOTL.IN,"Labor force, total",2000,2762297138.0
+SL.TLF.TOTL.IN,"Labor force, total",2001,2806007488.0
+SL.TLF.TOTL.IN,"Labor force, total",2002,2851071777.0
+SL.TLF.TOTL.IN,"Labor force, total",2003,2897927722.0
+SL.TLF.TOTL.IN,"Labor force, total",2004,2947396565.0
+SL.TLF.TOTL.IN,"Labor force, total",2005,2997070515.0
+SL.TLF.TOTL.IN,"Labor force, total",2006,3039084034.0
+SL.TLF.TOTL.IN,"Labor force, total",2007,3081020937.0
+SL.TLF.TOTL.IN,"Labor force, total",2008,3117244795.0
+SL.TLF.TOTL.IN,"Labor force, total",2009,3151090637.0
+SL.TLF.TOTL.IN,"Labor force, total",2010,3182700274.0
+SL.TLF.TOTL.IN,"Labor force, total",2011,3220004890.0
+SL.TLF.TOTL.IN,"Labor force, total",2012,3254539083.0
+SL.TLF.TOTL.IN,"Labor force, total",2013,3290895160.0
+SL.TLF.TOTL.IN,"Labor force, total",2014,3324856330.0
+SL.TLF.TOTL.IN,"Labor force, total",2015,3363415327.0
+SL.TLF.TOTL.IN,"Labor force, total",2016,3400659364.0
+SL.TLF.TOTL.IN,"Labor force, total",2017,3435038478.0
+SL.TLF.TOTL.IN,"Labor force, total",2018,3471702582.0
+SL.TLF.TOTL.IN,"Labor force, total",2019,3508957956.0
+SL.TLF.TOTL.IN,"Labor force, total",2020,3472746320.0
+SL.TLF.TOTL.IN,"Labor force, total",2021,3555964088.0
+SL.TLF.TOTL.IN,"Labor force, total",2022,3599248427.0
+SL.TLF.TOTL.IN,"Labor force, total",2023,3657009128.0
+SL.TLF.TOTL.IN,"Labor force, total",2024,3697172611.0
+SP.POP.TOTL,"Population, total",2000,6161528496.0
+SP.POP.TOTL,"Population, total",2001,6244739668.0
+SP.POP.TOTL,"Population, total",2002,6327171255.0
+SP.POP.TOTL,"Population, total",2003,6409352386.0
+SP.POP.TOTL,"Population, total",2004,6492354627.0
+SP.POP.TOTL,"Population, total",2005,6575410029.0
+SP.POP.TOTL,"Population, total",2006,6659536021.0
+SP.POP.TOTL,"Population, total",2007,6744049498.0
+SP.POP.TOTL,"Population, total",2008,6830080867.0
+SP.POP.TOTL,"Population, total",2009,6916168196.0
+SP.POP.TOTL,"Population, total",2010,7000860073.0
+SP.POP.TOTL,"Population, total",2011,7086704141.0
+SP.POP.TOTL,"Population, total",2012,7176482165.0
+SP.POP.TOTL,"Population, total",2013,7265404737.0
+SP.POP.TOTL,"Population, total",2014,7353532223.0
+SP.POP.TOTL,"Population, total",2015,7441084771.0
+SP.POP.TOTL,"Population, total",2016,7528221579.0
+SP.POP.TOTL,"Population, total",2017,7613788655.0
+SP.POP.TOTL,"Population, total",2018,7696159728.0
+SP.POP.TOTL,"Population, total",2019,7777162476.0
+SP.POP.TOTL,"Population, total",2020,7853863139.0
+SP.POP.TOTL,"Population, total",2021,7919567995.0
+SP.POP.TOTL,"Population, total",2022,7988550201.0
+SP.POP.TOTL,"Population, total",2023,8062923417.0
+SP.POP.TOTL,"Population, total",2024,8140897523.0

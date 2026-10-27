@@ -1,0 +1,101 @@
+company,country,sector,market_cap_usd,revenue_usd,revenue_basis
+NVIDIA CORP,United States,Unclassified,5242072072192.0,215938000000.0,sec_filing
+Apple Inc.,United States,Unclassified,5004928221184.0,416161000000.0,sec_filing
+Alphabet Inc.,United States,Unclassified,4160134840320.0,402836000000.0,sec_filing
+MICROSOFT CORPORATION,United States,Unclassified,3961677414400.0,281724000000.0,sec_filing
+"AMAZON.COM, INC.",United States,Unclassified,2830868152320.0,716924000000.0,sec_filing
+TSMC,Taiwan,Unclassified,2179460104192.0,121910000000.0,estimate
+SpaceX,United States,Unclassified,1949252845568.0,20640000000.0,estimate
+"Meta Platforms, Inc.",United States,Unclassified,1797112725504.0,200966000000.0,sec_filing
+Saudi Aramco,Saudi Arabia,Unclassified,1663347115141.0,487870000000.0,estimate
+Broadcom Inc.,United States,Unclassified,1597208788992.0,63887000000.0,sec_filing
+"Tesla, Inc.",United States,Unclassified,1453670400000.0,94827000000.0,sec_filing
+BERKSHIRE HATHAWAY INC,United States,Unclassified,1139349913600.0,247244000000.0,sec_filing
+ELI LILLY AND COMPANY,United States,Unclassified,1105585766400.0,65179000000.0,sec_filing
+Samsung,South Korea,Unclassified,1065509204255.0,326380000000.0,estimate
+"Micron Technology, Inc.",United States,Unclassified,1023824887808.0,37378000000.0,sec_filing
+Walmart Inc.,United States,Unclassified,941735673856.0,706413000000.0,sec_filing
+JPMorgan Chase,United States,Unclassified,885722316800.0,194910000000.0,estimate
+"ADVANCED MICRO DEVICES, INC.",United States,Unclassified,878353186816.0,34639000000.0,sec_filing
+VISA INC.,United States,Unclassified,756423983104.0,40000000000.0,sec_filing
+Exxon Mobil Corporation,United States,Unclassified,733071671296.0,332238000000.0,sec_filing
+SK Hynix,South Korea,Unclassified,698602990110.0,126440000000.0,estimate
+ASML,Netherlands,Unclassified,634829275136.0,41020000000.0,estimate
+Johnson & Johnson,United States,Unclassified,611608100864.0,94193000000.0,sec_filing
+Mastercard Incorporated,United States,Unclassified,539972534272.0,32791000000.0,sec_filing
+AbbVie Inc.,United States,Unclassified,499528695808.0,61160000000.0,sec_filing
+INTEL CORPORATION,United States,Unclassified,486480248832.0,52853000000.0,sec_filing
+Tencent,China,Unclassified,472335570000.0,99650000000.0,estimate
+Palantir Technologies Inc.,United States,Unclassified,466553765888.0,4475446000.0,sec_filing
+China Construction Bank,China,Unclassified,453087654798.0,119010000000.0,estimate
+COSTCO WHOLESALE CORP /NEW,United States,Unclassified,441148571648.0,275235000000.0,sec_filing
+CXMT,China,Unclassified,440142681668.0,28600000000.0,estimate
+Chevron Corp,United States,Unclassified,440124932096.0,184432000000.0,sec_filing
+"CISCO SYSTEMS, INC.",United States,Unclassified,419885514752.0,56654000000.0,sec_filing
+COCA COLA CO,United States,Unclassified,401944117248.0,47941000000.0,sec_filing
+Oracle Corporation,United States,Unclassified,392852209664.0,67357000000.0,sec_filing
+Agricultural Bank of China,China,Unclassified,392409336834.0,110280000000.0,estimate
+Roche,Switzerland,Unclassified,371736693530.0,80020000000.0,estimate
+PROCTER & GAMBLE CO,United States,Unclassified,366539866112.0,84284000000.0,sec_filing
+UnitedHealth Group Incorporated,United States,Unclassified,365213384704.0,447567000000.0,sec_filing
+"Merck & Co., Inc.",United States,Unclassified,354359869440.0,65011000000.0,sec_filing
+Bank of America Corporation,United States,Unclassified,352364593152.0,113097000000.0,sec_filing
+ICBC,China,Unclassified,344722949059.0,125620000000.0,estimate
+Bank of China,China,Unclassified,342943343200.0,98660000000.0,estimate
+LAM RESEARCH CORPORATION,United States,Unclassified,340637745152.0,23232690000.0,sec_filing
+CATERPILLAR INC.,United States,Unclassified,333627424768.0,67589000000.0,sec_filing
+APPLIED MATERIALS INC /DE,United States,Unclassified,327843020800.0,28368000000.0,sec_filing
+GENERAL ELECTRIC COMPANY,United States,Unclassified,322972450816.0,45855000000.0,sec_filing
+HSBC,United Kingdom,Unclassified,317922148352.0,72400000000.0,estimate
+PHILIP MORRIS INTERNATIONAL INC.,United States,Unclassified,313359237120.0,40648000000.0,sec_filing
+"HOME DEPOT, INC.",United States,Unclassified,309164048384.0,164683000000.0,sec_filing
+Shell,United Kingdom,Unclassified,298153377792.0,296600000000.0,estimate
+"Netflix, Inc.",United States,Unclassified,290851160064.0,45183036000.0,sec_filing
+Dell Technologies Inc.,United States,Unclassified,289574551552.0,113538000000.0,sec_filing
+Novartis,Switzerland,Unclassified,285487366144.0,56690000000.0,estimate
+"Palo Alto Networks, Inc",United States,Unclassified,283805122560.0,9221000000.0,sec_filing
+MORGAN STANLEY,United States,Unclassified,280298979328.0,70645000000.0,sec_filing
+Royal Bank Of Canada,Canada,Unclassified,271763570688.0,51500000000.0,estimate
+Alibaba Group Holding Limited,China,Unclassified,270094483456.0,148401000000.0,sec_filing
+SAP,Germany,Unclassified,260884791296.0,44360000000.0,estimate
+RTX Corporation,United States,Unclassified,258917810176.0,88603000000.0,sec_filing
+Nestlé,Switzerland,Unclassified,256916999847.0,113530000000.0,estimate
+"The Goldman Sachs Group, Inc.",United States,Unclassified,255002083328.0,58283000000.0,sec_filing
+AstraZeneca,United Kingdom,Unclassified,254270996480.0,61360000000.0,estimate
+TEXAS INSTRUMENTS INC,United States,Unclassified,252193341440.0,17682000000.0,sec_filing
+THERMO FISHER SCIENTIFIC INC.,United States,Unclassified,251198914560.0,44556000000.0,sec_filing
+Kweichow Moutai,China,Unclassified,247944771616.0,24880000000.0,estimate
+Wells Fargo,United States,Unclassified,245534064640.0,86790000000.0,estimate
+Mitsubishi UFJ Financial,Japan,Unclassified,243799867392.0,50250000000.0,estimate
+ARM HOLDINGS PLC /UK,United Kingdom,Unclassified,243557089280.0,4920000000.0,sec_filing
+GE Vernova Inc.,United States,Unclassified,241948082176.0,38068000000.0,sec_filing
+L'Oréal,France,Unclassified,241027846057.0,51740000000.0,estimate
+"CROWDSTRIKE HOLDINGS, INC.",United States,Unclassified,233559539712.0,4812005000.0,sec_filing
+PetroChina,China,Unclassified,233113133957.0,419920000000.0,estimate
+LINDE PLC,United Kingdom,Unclassified,232075853824.0,33986000000.0,sec_filing
+"ARISTA NETWORKS, INC.",United States,Unclassified,230741049344.0,9005700000.0,sec_filing
+Amgen Inc.,United States,Unclassified,229736169472.0,36751000000.0,sec_filing
+Siemens,Germany,Unclassified,228565659181.0,94220000000.0,estimate
+Toyota,Japan,Unclassified,228565139456.0,332270000000.0,estimate
+China Mobile,China,Unclassified,223683120162.0,142410000000.0,estimate
+INTERNATIONAL BUSINESS MACHINES CORPORATION,United States,Unclassified,222711152640.0,67535000000.0,sec_filing
+Shopify Inc.,Canada,Unclassified,220093317120.0,11556000000.0,sec_filing
+KLA CORP,United States,Unclassified,217153060864.0,12156162000.0,sec_filing
+LVMH,France,Unclassified,215655011992.0,94920000000.0,estimate
+American Express Co,United States,Unclassified,213674786816.0,41304000000.0,sec_filing
+"MARVELL TECHNOLOGY, INC",United States,Unclassified,213073887232.0,8194600000.0,sec_filing
+BHP Group,Australia,Unclassified,211501711360.0,58760000000.0,estimate
+International Holding Company,United Arab Emirates,Unclassified,210222452999.0,7740000000.0,estimate
+MediaTek,Taiwan,Unclassified,206813200941.0,18920000000.0,estimate
+Citigroup Inc,United States,Unclassified,204127289344.0,85225000000.0,sec_filing
+"Salesforce, Inc.",United States,Unclassified,199536345088.0,41525000000.0,sec_filing
+TotalEnergies,France,Unclassified,198324355072.0,196380000000.0,estimate
+Sandisk Corporation,United States,Unclassified,198164643840.0,7355000000.0,sec_filing
+AMPHENOL CORPORATION,United States,Unclassified,197967822848.0,23094700000.0,sec_filing
+Toronto Dominion Bank,Canada,Unclassified,196059987968.0,47160000000.0,estimate
+Inditex,Spain,Unclassified,193644196795.0,45820000000.0,estimate
+"Analog Devices, Inc.",United States,Unclassified,191088394240.0,11019707000.0,sec_filing
+"GILEAD SCIENCES, INC.",United States,Unclassified,189799956480.0,29443000000.0,sec_filing
+WALT DISNEY CO/,United States,Unclassified,189227597824.0,94425000000.0,sec_filing
+Santander,Spain,Unclassified,188234121216.0,69820000000.0,estimate
+QUALCOMM INC/DE,United States,Unclassified,185302188032.0,44284000000.0,sec_filing

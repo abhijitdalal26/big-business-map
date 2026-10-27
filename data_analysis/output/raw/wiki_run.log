@@ -1,0 +1,79 @@
+resuming: 1,205 rows from 35 pages
+[ 1/62] SKIP  List of largest German companies (already collected)
+[ 2/62] SKIP  List of largest Chinese companies (already collected)
+[ 3/62] SKIP  List of largest Japanese companies (already collected)
+[ 4/62]  --   List of largest Indian companies: no usable table
+[ 5/62] SKIP  List of largest French companies (already collected)
+[ 6/62] SKIP  List of largest Italian companies (already collected)
+[ 7/62] SKIP  List of largest Spanish companies (already collected)
+[ 8/62] SKIP  List of largest Brazilian companies (already collected)
+[ 9/62] SKIP  List of largest Canadian companies (already collected)
+[10/62] SKIP  List of largest Australian companies (already collected)
+[11/62] SKIP  List of largest Mexican companies (already collected)
+[12/62]  --   List of largest Polish companies: no usable table
+[13/62] SKIP  List of largest Swedish companies (already collected)
+[14/62] SKIP  List of largest Danish companies (already collected)
+[15/62] SKIP  List of largest Dutch companies (already collected)
+[16/62]  --   List of largest Austrian companies: no usable table
+[17/62] SKIP  List of largest Lithuanian companies (already collected)
+[18/62] SKIP  List of largest companies in Belgium (already collected)
+[19/62] SKIP  List of largest companies in Finland (already collected)
+[20/62] SKIP  List of largest companies in Indonesia (already collected)
+[21/62] SKIP  List of largest companies in Ireland (already collected)
+[22/62] SKIP  List of largest companies in Israel (already collected)
+[23/62] SKIP  List of largest companies in Malaysia (already collected)
+[24/62] SKIP  List of largest companies in Nigeria (already collected)
+[25/62]  --   List of largest companies in Pakistan: no usable table
+[26/62] SKIP  List of largest companies in Saudi Arabia (already collected)
+[27/62] SKIP  List of largest companies in Singapore (already collected)
+[28/62] SKIP  List of largest companies in South Africa (already collected)
+[29/62]  --   List of largest companies in Sri Lanka: no usable table
+[30/62] SKIP  List of largest companies in Taiwan (already collected)
+[31/62] SKIP  List of largest companies in Thailand (already collected)
+[32/62] SKIP  List of largest companies in Vietnam (already collected)
+[33/62] SKIP  List of largest companies in the Philippines (already collected)
+[34/62] SKIP  List of largest companies in the United Arab Emirates (already collected)
+[35/62] SKIP  List of largest companies in the United Kingdom (already collected)
+[36/62] SKIP  List of largest companies of South Korea (already collected)
+[37/62] MISS  List of largest Russian companies
+[38/62] MISS  List of largest Turkish companies
+[39/62] MISS  List of largest Norwegian companies
+[40/62] MISS  List of largest New Zealand companies
+        HTTP 429 on List of largest Portuguese companies; waiting 6s
+        HTTP 429 on List of largest Portuguese companies; waiting 12s
+[41/62] MISS  List of largest Portuguese companies
+[42/62] MISS  List of largest Greek companies
+[43/62] MISS  List of largest Czech companies
+[44/62] MISS  List of largest Hungarian companies
+[45/62] MISS  List of largest Romanian companies
+[46/62] MISS  List of largest Ukrainian companies
+[47/62] MISS  List of largest Chilean companies
+[48/62] MISS  List of largest Colombian companies
+[49/62] MISS  List of largest Argentine companies
+[50/62] MISS  List of largest Peruvian companies
+        HTTP 429 on List of largest Egyptian companies; waiting 6s
+        HTTP 429 on List of largest Egyptian companies; waiting 12s
+        HTTP 429 on List of largest Egyptian companies; waiting 18s
+        HTTP 429 on List of largest Egyptian companies; waiting 24s
+[51/62] MISS  List of largest Egyptian companies
+[52/62] MISS  List of largest Moroccan companies
+[53/62] MISS  List of largest Kazakh companies
+[54/62] MISS  List of largest Luxembourgish companies
+[55/62] MISS  List of largest Irish companies
+[56/62] SKIP  List of largest companies in Europe by revenue (already collected)
+[57/62] SKIP  List of largest companies in Africa by revenue (already collected)
+[58/62]  --   List of largest companies in Asia: no usable table
+[59/62] SKIP  List of largest companies in Southeast Asia by revenue (already collected)
+[60/62]  --   List of largest companies by revenue: no usable table
+[61/62] SKIP  List of largest private companies by revenue (already collected)
+[62/62]  --   List of largest companies by number of employees: no usable table
+
+retry pass for 19 missed page(s)...
+        HTTP 429 on List of largest Turkish companies; waiting 6s
+        HTTP 429 on List of largest Turkish companies; waiting 12s
+        HTTP 429 on List of largest Turkish companies; waiting 18s
+        HTTP 429 on List of largest Colombian companies; waiting 6s
+        HTTP 429 on List of largest Colombian companies; waiting 12s
+
+rows: 1,205  countries: 35
+written -> C:\Users\abhijit\Pictures\articles\forbes_500\data_analysis\output\raw\wiki_country_companies.csv

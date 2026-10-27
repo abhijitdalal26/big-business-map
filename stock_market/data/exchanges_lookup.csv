@@ -1,0 +1,60 @@
+﻿suffix,exchange,country,city
+T,Tokyo Stock Exchange,Japan,Tokyo
+NS,National Stock Exchange of India,India,Mumbai
+BO,Bombay Stock Exchange,India,Mumbai
+L,London Stock Exchange,United Kingdom,London
+AX,Australian Securities Exchange,Australia,Sydney
+PA,Euronext Paris,France,Paris
+TO,Toronto Stock Exchange,Canada,Toronto
+V,TSX Venture Exchange,Canada,Calgary
+SR,Saudi Exchange (Tadawul),Saudi Arabia,Riyadh
+HK,Hong Kong Stock Exchange,Hong Kong,Hong Kong
+ST,Nasdaq Stockholm,Sweden,Stockholm
+DE,Xetra (Frankfurt),Germany,Frankfurt
+F,Frankfurt Stock Exchange,Germany,Frankfurt
+SW,SIX Swiss Exchange,Switzerland,Zurich
+SS,Shanghai Stock Exchange,China,Shanghai
+SZ,Shenzhen Stock Exchange,China,Shenzhen
+KS,Korea Exchange (KOSPI),South Korea,Seoul
+KQ,KOSDAQ,South Korea,Seoul
+MI,Borsa Italiana,Italy,Milan
+MC,Bolsa de Madrid,Spain,Madrid
+AS,Euronext Amsterdam,Netherlands,Amsterdam
+BR,Euronext Brussels,Belgium,Brussels
+LS,Euronext Lisbon,Portugal,Lisbon
+OL,Oslo Børs,Norway,Oslo
+HE,Nasdaq Helsinki,Finland,Helsinki
+CO,Nasdaq Copenhagen,Denmark,Copenhagen
+VI,Vienna Stock Exchange,Austria,Vienna
+IR,Euronext Dublin,Ireland,Dublin
+WA,Warsaw Stock Exchange,Poland,Warsaw
+PR,Prague Stock Exchange,Czech Republic,Prague
+BD,Budapest Stock Exchange,Hungary,Budapest
+IS,Borsa Istanbul,Turkey,Istanbul
+TA,Tel Aviv Stock Exchange,Israel,Tel Aviv
+JK,Indonesia Stock Exchange,Indonesia,Jakarta
+KL,Bursa Malaysia,Malaysia,Kuala Lumpur
+BK,Stock Exchange of Thailand,Thailand,Bangkok
+QA,Qatar Stock Exchange,Qatar,Doha
+KW,Boursa Kuwait,Kuwait,Kuwait City
+OM,Muscat Stock Exchange,Oman,Muscat
+BH,Bahrain Bourse,Bahrain,Manama
+AE,Abu Dhabi Securities Exchange,United Arab Emirates,Abu Dhabi
+DFM,Dubai Financial Market,United Arab Emirates,Dubai
+MX,Mexican Stock Exchange (BMV),Mexico,Mexico City
+SA,B3 (Brasil Bolsa Balcão),Brazil,São Paulo
+CL,Colombia Stock Exchange,Colombia,Bogotá
+BA,Buenos Aires Stock Exchange,Argentina,Buenos Aires
+SN,Santiago Stock Exchange,Chile,Santiago
+JO,Johannesburg Stock Exchange,South Africa,Johannesburg
+EGX,Egyptian Exchange,Egypt,Cairo
+NZ,New Zealand Exchange,New Zealand,Wellington
+SG,Singapore Exchange,Singapore,Singapore
+TW,Taiwan Stock Exchange,Taiwan,Taipei
+TWO,Taipei Exchange,Taiwan,Taipei
+ME,Moscow Exchange,Russia,Moscow
+ATH,Athens Stock Exchange,Greece,Athens
+LU,Luxembourg Stock Exchange,Luxembourg,Luxembourg
+ZAG,Zagreb Stock Exchange,Croatia,Zagreb
+VN,Hanoi Stock Exchange,Vietnam,Hanoi
+HM,Ho Chi Minh Stock Exchange,Vietnam,Ho Chi Minh City

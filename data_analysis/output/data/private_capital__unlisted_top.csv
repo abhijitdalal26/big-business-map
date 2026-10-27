@@ -1,0 +1,101 @@
+company,country,ownership,sector,revenue_usd
+State Grid,,state,Energy & Utilities,555371400000.0
+China National Petroleum,,state,Energy & Utilities,401927000000.0
+Vitol,World (private),unknown,Unclassified,400000000000.0
+Hon Hai Precision Industry,Taiwan,public,Technology,260083600000.0
+Trafigura Group,Singapore,private,Unclassified,240268000000.0
+Industrial & Commercial Bank of China,,public,Financials,210589800000.0
+Schwarz Group,World (private),unknown,Unclassified,180600000000.0
+Cargill,United States,private,Food & Agriculture,154000000000.0
+China Railway Engineering Group,,private,Construction & Real Estate,152201000000.0
+China Mobile Communications,,private,Technology,146550200000.0
+Banco Santander,Europe,public,Financials,145070200000.0
+China Resources,,private,Financials,133290100000.0
+State Farm Insurance,United States,mutual,Financials,132311600000.0
+Electricité de France,France,state,Energy & Utilities,127754400000.0
+EDF,Europe,unknown,Energy & Utilities,127754000000.0
+Hengli Group,China,private,Consumer & Retail,125084800000.0
+Koch ,United States,private,Unclassified,125000000000.0
+Huawei Investment & Holding,,private,Unclassified,122562700000.0
+Taiwan Semiconductor Manufacturing,Taiwan,public,Technology,122258400000.0
+Aldi,World (private),unknown,Unclassified,120960000000.0
+China National Offshore Oil,,private,Energy & Utilities,120914500000.0
+China Southern Power Grid,China,private,Energy & Utilities,118796700000.0
+Shandong Energy Group,China,state,Energy & Utilities,116559100000.0
+Nippon Telegraph and Telephone,Japan,unknown,Technology,110390000000.0
+China Minmetals,,private,Materials & Chemicals,104139200000.0
+China Baowu Steel Group,,state,Materials & Chemicals,102980000000.0
+E.Leclerc,World (private),unknown,Unclassified,102980000000.0
+Suning Holdings Group,World (private),unknown,Unclassified,102900000000.0
+REWE Group,Europe,private,Healthcare,102755400000.0
+Bosch Group,Europe,private,Industrials & Defense,102605300000.0
+PowerChina,,state,Construction & Real Estate,101853500000.0
+Huawei,World (private),private,Unclassified,99000000000.0
+Robert Bosch,World (private),unknown,Unclassified,98920000000.0
+China Energy Investment,,state,Energy & Utilities,98343900000.0
+Rosneft Oil,,public,Energy & Utilities,98222600000.0
+Nippon Life Insurance,World (private),mutual,Financials,98034300000.0
+Zhejiang Rongsheng Holding Group,China,private,Materials & Chemicals,94831100000.0
+China Post Group,,state,Transport & Logistics,94215300000.0
+DHL Group,Europe,public,Transport & Logistics,93453400000.0
+Dior - LVMH,France,unknown,Consumer & Retail,93137000000.0
+People's Insurance Co. of China,,public,Financials,93111300000.0
+Mitsui,Japan,public,Unclassified,92861300000.0
+Christian Dior,,public,Consumer & Retail,91143400000.0
+Amer International Group,World (private),unknown,Unclassified,88900000000.0
+UPS,,public,Transport & Logistics,88661000000.0
+China Telecommunications,,private,Technology,88630700000.0
+HNA Group,World (private),unknown,Unclassified,88500000000.0
+Zhejiang Geely Holding Group,China,private,Industrials & Defense,87866400000.0
+PTT Public Company,Southeast Asia,unknown,Energy & Utilities,87639000000.0
+BBVA,Europe,unknown,Financials,87005000000.0
+Energy Transfer,,public,Unclassified,85536000000.0
+ByteDance,World (private),pe,Unclassified,85200000000.0
+Shandong Weiqiao Pioneering Group,China,private,Consumer & Retail,82302600000.0
+State Farm,World (private),unknown,Unclassified,82200000000.0
+COFCO,,state,Unclassified,81954700000.0
+Shenghong Holding Group,China,private,Materials & Chemicals,81810600000.0
+U.S. Postal Service,D.C.,state,Transport & Logistics,80581000000.0
+Pemex,,state,Energy & Utilities,79570100000.0
+Pacific Construction Group,China,private,Construction & Real Estate,79293100000.0
+Groupe BPCE,Europe,private,Financials,78937100000.0
+Sonatrach,Africa,unknown,Energy & Utilities,77013000000.0
+EP Group,Europe,private,Energy & Utilities,75386500000.0
+China FAW Group,China,state,Industrials & Defense,74397800000.0
+New York Life Insurance,World (private),mutual,Financials,73145500000.0
+Pertamina,Indonesia,state,Energy & Utilities,70894000000.0
+Bunge,Europe,unknown,Food & Agriculture,70329000000.0
+VTB Bank,Europe,state,Financials,69867300000.0
+Zhejiang Hengyi Group,China,private,Materials & Chemicals,69781400000.0
+China Poly Group,,state,Construction & Real Estate,68120500000.0
+Jinchuan Group,China,state,Materials & Chemicals,68116399999.99999
+Banco Itaú Unibanco,Brazil,unknown,Financials,67800000000.0
+Assicurazioni Generali,Europe,public,Financials,67320700000.0
+Deloitte,World (private),unknown,Unclassified,67200000000.0
+Merck,United States,public,Healthcare,65011000000.0
+Ineos,World (private),unknown,Unclassified,65000000000.0
+Nationwide,United States,mutual,Financials,64929800000.0
+XMXYG,China,private,Unclassified,64537400000.0
+Edeka Zentrale,World (private),mutual,Food & Agriculture,63534300000.0
+Edeka,Europe,unknown,Consumer & Retail,63534000000.0
+Petronas,,state,Energy & Utilities,62172800000.0
+Shaanxi Coal & Chemical Industry,China,state,Energy & Utilities,60538300000.0
+TJX,United States,public,Consumer & Retail,60372000000.0
+Xiamen ITG Holding Group,China,state,Unclassified,60296100000.0
+Tsingshan Holding Group,China,private,Materials & Chemicals,60130700000.0
+AB InBev,Europe,unknown,Food & Agriculture,59320000000.0
+Contemporary Amperex Technology (CATL),China,public,Industrials & Defense,58948400000.0
+Crédit Mutuel Group,Europe,mutual,Financials,57518000000.0
+Peugeot,France,unknown,Industrials & Defense,56622000000.0
+ACS,Europe,public,Construction & Real Estate,56223900000.0
+State Power Investment,,state,Energy & Utilities,56220800000.0
+CMA CGM,World (private),unknown,Unclassified,56000000000.0
+X5 Group,Europe,private,Food & Agriculture,55361000000.0
+PwC,World (private),unknown,Unclassified,55200000000.0
+Mars,United States,private,Food & Agriculture,55000000000.0
+China United Network Communications,,state,Technology,54568800000.0
+China Huaneng Group,China,state,Energy & Utilities,53840400000.0
+Louis Dreyfus,Europe,private,Food & Agriculture,53197000000.0
+Enterprise Products Partners,,public,Unclassified,52596000000.0
+Taikang Insurance Group,World (private),private,Financials,51920500000.0
+Guangzhou Automobile Industry Group,China,private,Industrials & Defense,51836500000.0

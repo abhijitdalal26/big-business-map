@@ -1,0 +1,100 @@
+﻿lab,hf_org,country,founded,category,parent,open_weights,flagship_models,notable_open_model,license,hf_models,hf_top_model,hf_top_downloads,hf_license,valuation_busd_cb
+OpenAI,openai,United States,2015,frontier_closed,,partial,"GPT-5.x, o-series, Sora",gpt-oss-120b,Apache-2.0,39.0,openai/clip-vit-base-patch32,17686148.0,,840.0
+Anthropic,,United States,2021,frontier_closed,,no,Claude 4.x,,,,,,,965.0
+Google DeepMind,google,United Kingdom,2010,frontier_closed,Alphabet,partial,"Gemini 3, Veo, AlphaFold",Gemma 4,Gemma license,100.0,google/electra-base-discriminator,41852016.0,apache-2.0,
+Meta Superintelligence Labs / FAIR,meta-llama,United States,2013,frontier_open,Meta,yes,Llama 4.x,Llama 4,Llama license,70.0,meta-llama/Llama-3.1-8B-Instruct,5490624.0,llama3.1,
+xAI,,United States,2023,frontier_closed,,partial,Grok 4,grok-1,Apache-2.0,,,,,
+Microsoft AI / MAI,,United States,2023,frontier_closed,Microsoft,no,"MAI-1, Copilot",,,,,,,
+Amazon AGI / Nova,,United States,2023,frontier_closed,Amazon,no,Nova 2,,,,,,,
+Apple Intelligence,,United States,2024,frontier_closed,Apple,no,"Apple Intelligence, Ferret",,,,,,,
+Mistral AI,mistralai,France,2023,frontier_open,,partial,"Mistral Large, Le Chat",Mistral 7B,Apache-2.0,81.0,mistralai/Voxtral-Mini-4B-Realtime-2602,2171152.0,apache-2.0,24.38
+Cohere,CohereLabs,Canada,2019,enterprise,,partial,Command A,Command R,CC-BY-NC,55.0,CohereLabs/cohere-transcribe-arabic-07-2026,137039.0,apache-2.0,2.0
+AI21 Labs,ai21labs,Israel,2017,enterprise,,partial,Jamba,Jamba,Apache-2.0,17.0,ai21labs/Jamba-tiny-dev,238006.0,apache-2.0,1.4
+Perplexity,,United States,2022,application,,no,Sonar,,,,,,,20.0
+Character.AI,,United States,2021,application,Google (licence),no,Character models,,,,,,,1.0
+Inflection AI,,United States,2022,application,Microsoft (talent),no,Pi,,,,,,,4.0
+Adept,,United States,2022,application,Amazon (acquired),no,ACT-1,,,,,,,1.0
+Runway,,United States,2018,generative_media,,no,Gen-4,,,,,,,5.32
+Midjourney,,United States,2021,generative_media,,no,Midjourney v7,,,,,,,
+Stability AI,stabilityai,United Kingdom,2019,generative_media,,yes,Stable Diffusion 3.5,SDXL,Stability Community,100.0,stabilityai/stable-diffusion-xl-base-1.0,4300663.0,openrail++,1.0
+Black Forest Labs,black-forest-labs,Germany,2024,generative_media,,yes,FLUX.2,FLUX.1,Apache-2.0,42.0,black-forest-labs/FLUX.1-dev,647169.0,other,3.25
+Luma AI,,United States,2021,generative_media,,no,Ray3,,,,,,,4.0
+ElevenLabs,,United States,2022,generative_media,,no,Eleven v3 (voice),,,,,,,11.0
+Suno,,United States,2022,generative_media,,no,v5 (music),,,,,,,5.4
+Synthesia,,United Kingdom,2017,generative_media,,no,Avatar video,,,,,,,4.0
+Reka AI,RekaAI,United States,2022,frontier_closed,,partial,Reka Core,Reka Flash,Apache-2.0,5.0,RekaAI/reka-flash-3,808.0,apache-2.0,1.0
+Nous Research,NousResearch,United States,2023,open_weight,,yes,Hermes,Hermes 4,Llama/Apache,100.0,NousResearch/Hermes-3-Llama-3.1-8B,485536.0,llama3,
+Together AI,togethercomputer,United States,2022,infrastructure,,yes,hosting open models,RedPajama,Apache-2.0,40.0,togethercomputer/Aurora-Spec-Minimax-M2.5,5814.0,apache-2.0,8.3
+Databricks (Mosaic),databricks,United States,2023,enterprise,Databricks,yes,DBRX,DBRX,Databricks Open,0.0,,,,
+NVIDIA,nvidia,United States,1993,hardware_lab,,yes,Nemotron,Nemotron-4,NVIDIA Open,100.0,nvidia/Qwen3.6-35B-A3B-NVFP4,4436218.0,apache-2.0,
+IBM Research,ibm-granite,United States,1945,enterprise,IBM,yes,Granite 4,Granite,Apache-2.0,100.0,ibm-granite/granite-embedding-small-english-r2,5839803.0,apache-2.0,
+Salesforce AI Research,Salesforce,United States,2016,enterprise,Salesforce,yes,"xLAM, BLIP",xLAM,Apache-2.0,100.0,Salesforce/blip-image-captioning-base,1303189.0,bsd-3-clause,
+Allen Institute for AI (Ai2),allenai,United States,2014,institute,,yes,"OLMo 3, Molmo",OLMo,Apache-2.0,100.0,allenai/specter2_base,889648.0,apache-2.0,
+EleutherAI,EleutherAI,United States,2020,institute,,yes,"Pythia, GPT-NeoX",Pythia,Apache-2.0,100.0,EleutherAI/pythia-160m,3412083.0,apache-2.0,
+BigScience,bigscience,International,2021,institute,,yes,BLOOM,BLOOM-176B,RAIL,100.0,bigscience/bloomz-560m,1177901.0,bigscience-bloom-rail-1.0,
+LMSYS,lmsys,United States,2023,institute,,yes,"Vicuna, Chatbot Arena",Vicuna,Apache-2.0,55.0,lmsys/vicuna-7b-v1.5,102396.0,llama2,
+Hugging Face,HuggingFaceTB,United States,2016,infrastructure,,yes,SmolLM,SmolLM3,Apache-2.0,84.0,HuggingFaceTB/SmolLM2-135M,1736183.0,apache-2.0,4.5
+LAION,laion,Germany,2019,institute,,yes,datasets (LAION-5B),LAION-5B,CC-BY,100.0,laion/clap-htsat-fused,7361940.0,apache-2.0,
+Modular,,United States,2022,infrastructure,,no,"Mojo, MAX",,,,,,,
+Groq,,United States,2016,hardware_lab,,no,LPU inference,,,,,,,
+Cerebras,,United States,2016,hardware_lab,,yes,"CS-3, inference",,,,,,,
+SambaNova,,United States,2017,hardware_lab,,yes,SN40L,,,,,,,
+Google Research,google-research,United States,2011,institute,Alphabet,yes,"BERT, T5",T5,Apache-2.0,0.0,,,,
+DeepSeek,deepseek-ai,China,2023,frontier_open,,yes,"DeepSeek V4, R2",DeepSeek-V3,MIT,100.0,deepseek-ai/DeepSeek-V3.2,5289963.0,mit,50.0
+Alibaba Qwen,Qwen,China,2023,frontier_open,Alibaba,yes,Qwen3.5,Qwen3,Apache-2.0,100.0,Qwen/Qwen3-0.6B,29469443.0,apache-2.0,
+Moonshot AI,moonshotai,China,2023,frontier_open,,yes,Kimi K2,Kimi K2,Modified MIT,19.0,moonshotai/Kimi-K3,1012867.0,other,50.0
+Zhipu AI (Z.ai),zai-org,China,2019,frontier_open,,yes,GLM-5,GLM-4.5,MIT,100.0,zai-org/GLM-5.3-Flash,6536333.0,mit,
+MiniMax,MiniMaxAI,China,2021,frontier_open,,yes,MiniMax-M2,MiniMax-M2,MIT,21.0,MiniMaxAI/MiniMax-H3,4806865.0,other,
+01.AI,01-ai,China,2023,open_weight,,yes,Yi,Yi-34B,Apache-2.0,28.0,01-ai/Yi-34B-Chat,29494.0,apache-2.0,1.0
+StepFun,stepfun-ai,China,2023,open_weight,,yes,Step-3,Step-3,Apache-2.0,54.0,stepfun-ai/GOT-OCR2_0,379191.0,apache-2.0,
+Baichuan,baichuan-inc,China,2023,open_weight,,yes,Baichuan-M2,Baichuan 2,Apache-2.0,25.0,baichuan-inc/Baichuan2-7B-Chat,46272.0,,
+Baidu,,China,2000,frontier_closed,,no,ERNIE 5,,,,,,,
+ByteDance Seed,ByteDance-Seed,China,2023,frontier_closed,ByteDance,partial,"Doubao, Seed",Seed-OSS,Apache-2.0,59.0,ByteDance-Seed/UI-TARS-1.5-7B,206466.0,apache-2.0,
+Tencent Hunyuan,Tencent-Hunyuan,China,2023,frontier_open,Tencent,yes,Hunyuan-Large,Hunyuan 7B,Tencent license,25.0,Tencent-Hunyuan/HunyuanDiT-v1.1-Diffusers-Distilled,210409.0,other,
+Huawei,,China,1987,frontier_closed,,no,Pangu 5,,,,,,,
+SenseTime,,China,2014,application,,partial,SenseNova,,,,,,,
+iFlytek,,China,1999,application,,no,Spark,,,,,,,
+Shanghai AI Lab,internlm,China,2020,institute,,yes,"InternLM, InternVL",InternLM2.5,Apache-2.0,100.0,internlm/internlm-chat-7b,64028.0,,
+BAAI,BAAI,China,2018,institute,,yes,"BGE, Emu",BGE-M3,MIT,100.0,BAAI/bge-small-en-v1.5,57543408.0,mit,
+Xiaomi,XiaomiMiMo,China,2024,open_weight,Xiaomi,yes,MiMo,MiMo-7B,Apache-2.0,30.0,XiaomiMiMo/MiMo-V2.5,152779.0,mit,
+Naver,,South Korea,1999,frontier_closed,,no,HyperCLOVA X,,,,,,,
+Kakao,,South Korea,2010,frontier_closed,,no,KoGPT,,,,,,,
+Upstage,upstage,South Korea,2020,open_weight,,yes,Solar Pro,Solar,Apache-2.0,26.0,upstage/SOLAR-10.7B-Instruct-v1.0,33572.0,cc-by-nc-4.0,
+LG AI Research,LGAI-EXAONE,South Korea,2020,open_weight,LG,yes,EXAONE 4,EXAONE,EXAONE license,50.0,LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct-AWQ,709571.0,other,
+SK Telecom,,South Korea,1984,frontier_closed,,no,A.X,,,,,,,
+Sakana AI,,Japan,2023,institute,,partial,evolutionary merging,,,,,,,2.64
+Preferred Networks,,Japan,2014,application,,yes,PLaMo,PLaMo,Apache-2.0,,,,,2.0
+Rinna,rinna,Japan,2014,open_weight,,yes,Rinna,rinna/japanese-gpt2,MIT,61.0,rinna/japanese-gpt-neox-small,395116.0,mit,
+LLM-jp,llm-jp,Japan,2023,institute,,yes,LLM-jp,llm-jp-3,Apache-2.0,100.0,llm-jp/llm-jp-4-33b-thinking-gguf,296206.0,apache-2.0,
+Fujitsu,,Japan,1935,enterprise,,partial,Fugaku-LLM,,,,,,,
+SoftBank,,Japan,1981,frontier_closed,,no,investment / OpenAI alliance,,,,,,,
+TSMC,,Taiwan,1987,hardware_lab,,no,AI accelerators,,,,,,,
+MediaTek,,Taiwan,1997,hardware_lab,,no,edge AI chips,,,,,,,
+TAIDE,taide,Taiwan,2023,institute,,yes,TAIDE,TAIDE-LX,Apache-2.0,13.0,taide/embeddinggemma-GTAIDE-300m-2605,1389.0,other,
+AI Singapore,aisingapore,Singapore,2017,institute,,yes,SEA-LION,SEA-LION,Apache-2.0,87.0,aisingapore/Gemma-SEA-LION-v3-9B-IT,42808.0,gemma,
+G42 / TII,tiiuae,United Arab Emirates,2021,institute,G42,yes,Falcon 3,Falcon,TII license,100.0,tiiuae/falcon-7b,235967.0,apache-2.0,
+MBZUAI,MBZUAI,United Arab Emirates,2019,institute,,yes,"K2, Jais",K2,Apache-2.0,100.0,MBZUAI/GeoPixel-7B,75400.0,apache-2.0,
+Sarvam AI,sarvamai,India,2023,open_weight,,yes,Sarvam-M,Sarvam-M,Apache-2.0,14.0,sarvamai/sarvam-105b,11010.0,apache-2.0,
+Krutrim,,India,2023,frontier_closed,Ola,no,Krutrim-2,,,,,,,1.0
+BharatGen,,India,2024,institute,,partial,BharatGen,,,,,,,
+VinAI,,Vietnam,2019,institute,Vingroup,partial,ViGPT,,,,,,,
+Aleph Alpha,Aleph-Alpha,Germany,2019,frontier_closed,,partial,Pharia,Pharia-1,Apache-2.0,30.0,Aleph-Alpha/Kolibri-1,19881.0,apache-2.0,
+DeepL,,Germany,2017,application,,no,translation models,,,,,,,2.0
+Kyutai,kyutai,France,2023,institute,,yes,Moshi,Moshi,Apache-2.0,81.0,kyutai/mimi,245320.0,cc-by-4.0,
+LightOn,LightOnIO,France,2016,open_weight,,yes,Paradigm,Paradigm,Apache-2.0,0.0,,,,
+Mila,,Canada,1993,institute,,partial,research,,,,,,,
+Vector Institute,,Canada,2017,institute,,partial,research,,,,,,,
+AI Sweden,,Sweden,2019,institute,,yes,GPT-SW3,GPT-SW3,Apache-2.0,,,,,
+TurkuNLP,TurkuNLP,Finland,2019,institute,,yes,Poro,Poro,Apache-2.0,92.0,TurkuNLP/sbert-cased-finnish-paraphrase,8785.0,,
+Silo AI,,Finland,2017,application,AMD (acquired),partial,"Poro, enterprise",,,,,,,
+SpeakLeash,,Poland,2022,institute,,yes,Bielik,Bielik,Apache-2.0,,,,,
+Swiss AI Initiative,swiss-ai,Switzerland,2023,institute,,yes,Apertus,Apertus,Apache-2.0,31.0,swiss-ai/Apertus-v1.5-8B,523963.0,apache-2.0,
+GPT-NL,,Netherlands,2024,institute,,yes,GPT-NL,,,,,,,
+Yandex,,Russia,1997,frontier_closed,,partial,YaLM,,,,,,,
+Sber,,Russia,1991,frontier_closed,,no,GigaChat,,,,,,,
+T-Bank (T-Technologies),,Russia,2006,open_weight,,yes,T-lite,T-lite,Apache-2.0,,,,,
+Ollama,,United States,2023,infrastructure,,no,local model runner,,,,,,,
+vLLM,,United States,2023,infrastructure,,no,inference engine,,,,,,,
+Replicate,,United States,2019,infrastructure,,no,hosting,,,,,,,
+Scale AI,,United States,2016,data,,no,data labelling,,,,,,,
+Surge AI,,United States,2020,data,,no,data labelling,,,,,,,

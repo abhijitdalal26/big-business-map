@@ -1,0 +1,29 @@
+﻿sector,industry_canon,companies,revenue_musd,profits_musd
+Financials,Banking,315,6322715.0,1076840.9
+Energy & Utilities,Oil & Gas,91,5097669.0,392998.0
+Consumer & Retail,Retail & Wholesale,68,4276462.0,238566.0
+Consumer & Retail,Consumer Durables,83,3909791.0,85237.4
+Financials,Insurance,112,3809007.0,390744.1
+Construction & Real Estate,Construction,117,2701370.0,125809.0
+Healthcare,Pharma & Biotech,61,2591128.0,228199.8
+Technology,Software & IT Services,84,2504227.0,542023.2
+Technology,Hardware & Equipment,78,2451078.0,287422.9
+Industrials & Defense,Capital Goods,94,1887456.0,178693.9
+Financials,Diversified Financials,136,1880405.0,288338.8
+Transport & Logistics,Transportation,81,1864400.0,127406.2
+Healthcare,Health Care Equipment & Services,48,1820261.0,89033.9
+Food & Agriculture,"Food, Drink & Tobacco",71,1790633.0,145581.7
+Materials & Chemicals,Materials,95,1761429.0,151665.8
+Energy & Utilities,Utilities,93,1684421.0,152329.8
+Telecom & Media,Telecom Services,45,1432384.0,151772.5
+Business Services,Business Services,76,1349855.0,183159.9
+Business Services,Trading Companies,30,1235921.0,29113.2
+Food & Agriculture,Food Markets,23,1220734.0,23931.7
+Technology,Semiconductors,47,1031125.0,349052.10000000003
+Materials & Chemicals,Chemicals,44,872795.0,47093.8
+Industrials & Defense,Aerospace & Defense,35,867012.0,82027.8
+Consumer & Retail,Household & Personal Products,30,651161.0,75872.0
+Telecom & Media,Media,16,492551.0,43476.0
+Consumer & Retail,Hotels & Leisure,24,379764.0,41138.4
+Conglomerates,Conglomerate,2,59241.0,3896.0
+Unclassified,Unclassified,1,29140.0,966.0

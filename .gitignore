@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+# bulky scraped source pages and caches; rebuild with the fetch scripts
+data/raw/fortune/
+data/raw/*.html
+site/build/cache/
+site/build/raw_context/
+listed_universe/data/raw_fin/
+listed_universe/data/raw_wikidata/
+listed_universe/data/raw_sector/
+.claude/
+.bak_build/
+data/raw_2026/fortune/
+data/raw_2026/*.html

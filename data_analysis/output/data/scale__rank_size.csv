@@ -1,0 +1,2001 @@
+rank,company,country,revenue_usd
+1,Amazon,United States,742776000000.0
+2,Walmart,United States,713163000000.0
+3,Saudi Arabian Oil Company (Saudi Aramco),Saudi Arabia,455531000000.0
+4,Apple,United States,451442000000.0
+5,UnitedHealth Group,United States,449713000000.0
+6,Alphabet,United States,423165000000.0
+7,CVS Health,United States,407944000000.0
+8,McKesson,United States,403430000000.0
+9,PetroChina,China,392552000000.0
+10,Berkshire Hathaway,United States,375394000000.0
+11,Volkswagen Group,Germany,370805000000.0
+12,Sinopec,China,354404000000.0
+13,Toyota Motor,Japan,336348000000.0
+14,ExxonMobil,United States,329324000000.0
+15,Cencora,United States,328680000000.0
+16,Microsoft,United States,318273000000.0
+17,China State Construction Engineering,China,287014000000.0
+18,Costco Wholesale,United States,286265000000.0
+19,JPMorganChase,United States,284791000000.0
+20,Cigna,United States,278128000000.0
+21,Hon Hai Precision ,Taiwan,277939000000.0
+22,Samsung Electronics,South Korea,272561000000.0
+23,Shell Plc,United Kingdom,267251000000.0
+24,Cardinal Health,United States,250735000000.0
+25,Glencore International,Switzerland,247216000000.0
+26,Bullish,Cayman Islands,216388000000.0
+27,NVIDIA,United States,215938000000.0
+28,Meta Platforms,United States,214962000000.0
+29,ICBC,China,210257000000.0
+30,Elevance Health,United States,200415000000.0
+31,Centene,United States,198101000000.0
+32,Agricultural Bank of China,China,196084000000.0
+33,Bank of America,United States,195001000000.0
+34,BP,United Kingdom,194634000000.0
+35,China Construction Bank,China,192274000000.0
+36,Ford Motor,United States,189861000000.0
+37,Chevron,United States,188812000000.0
+38,JD.com,China,186348000000.0
+39,General Motors,United States,184623000000.0
+40,TotalEnergies,France,183906000000.0
+41,Citigroup,United States,173861000000.0
+42,Bank of China,China,173783000000.0
+43,Stellantis,Netherlands,173246000000.0
+44,BNP Paribas,France,165258000000.0
+45,Home Depot,United States,164683000000.0
+46,Fannie Mae,United States,160499000000.0
+47,Allianz,Germany,158705000000.0
+48,Ping An Insurance Group,China,158134000000.0
+49,StoneX Group,United States,152361000000.0
+50,China Railway Group,China,152199000000.0
+51,BMW Group,Germany,151447000000.0
+52,Mercedes-Benz Group,Germany,151320000000.0
+53,China Mobile,Hong Kong,148289000000.0
+54,Kroger,United States,147642000000.0
+55,Honda Motor,Japan,144643000000.0
+56,Alibaba Group,China,144163000000.0
+57,China Railway Construction,China,141475000000.0
+58,Verizon Communications,United States,139146000000.0
+59,Deutsche Telekom,Germany,138115000000.0
+60,Humana,United States,137200000000.0
+61,Phillips 66,United States,135770000000.0
+62,Marathon Petroleum,United States,135386000000.0
+63,Freddie Mac,United States,133632000000.0
+64,HSBC Holdings,United Kingdom,133581000000.0
+65,Taiwan Semiconductor,Taiwan,132967000000.0
+66,Hyundai Motor,South Korea,131800000000.0
+67,Goldman Sachs Group,United States,129006000000.0
+68,AT&T,United States,126528000000.0
+69,Wells Fargo,United States,125948000000.0
+70,Mitsubishi Corporation,Japan,125527000000.0
+71,Comcast,United States,125278000000.0
+72,Valero Energy,United States,125063000000.0
+73,Morgan Stanley,United States,123701000000.0
+74,AXA Group,France,123273000000.0
+75,Santander,Spain,122017000000.0
+76,Reliance Industries,India,119652000000.0
+77,Dell Technologies,United States,113725000000.0
+78,BYD,China,110212000000.0
+79,Tencent Holdings,China,108241000000.0
+80,Life Insurance Corp. of India,India,108011000000.0
+81,Nestlé,Switzerland,107756000000.0
+82,CITIC,China,107049000000.0
+83,Royal Ahold Delhaize N.V.,Netherlands,105850000000.0
+84,Credit Agricole,France,105739000000.0
+85,Target,United States,104780000000.0
+86,Equinor,Norway,104149000000.0
+87,China Communications Construction,China,101151000000.0
+88,Tesco,United Kingdom,98486000000.0
+89,Itochu,Japan,98367000000.0
+90,Tesla,United States,97879000000.0
+91,Royal Bank of Canada,Canada,97817000000.0
+92,Walt Disney,United States,97367000000.0
+93,Johnson & Johnson,United States,96363000000.0
+94,NTT,Japan,95620000000.0
+95,Deutsche Post,Germany,95555000000.0
+96,PepsiCo,United States,95448000000.0
+97,Carrefour,France,94829000000.0
+98,Xiamen C&D,China,93910000000.0
+99,Mitsui & Co.,Japan,92873000000.0
+100,SK Hynix,South Korea,92705000000.0
+101,Siemens,Germany,92349000000.0
+102,SAIC Motor,China,92328000000.0
+103,Boeing,United States,92182000000.0
+104,FedEx,United States,91933000000.0
+105,Eni,Italy,91919000000.0
+106,Enel,Italy,91690000000.0
+107,Petrobras,Brazil,91504000000.0
+108,Power Construction Corporation of China,China,91334000000.0
+109,LVMH Louis Vuitton Moet Hennessy,France,91197000000.0
+110,RTX,United States,90373000000.0
+111,SK,South Korea,89996000000.0
+112,Progressive,United States,89415000000.0
+113,PICC,China,88914000000.0
+114,Indian Oil,India,88496000000.0
+115,United Parcel Service (UPS),United States,88372000000.0
+116,JBS,Netherlands,88249000000.0
+117,TD Bank Group,Canada,87982000000.0
+118,E.ON,Germany,87265000000.0
+119,Zurich Insurance Group,Switzerland,87258000000.0
+120,Wistron,Taiwan,87038000000.0
+121,Procter & Gamble,United States,86718000000.0
+122,Lowe's,United States,86286000000.0
+123,Société Générale,France,85108000000.0
+124,VINCI,France,85063000000.0
+125,Rajesh Exports,India,85014000000.0
+126,Legend Holding,China,84346000000.0
+127,Mitsubishi UFJ Financial,Japan,84341000000.0
+128,Wuchan Zhongda Group,China,84122000000.0
+129,AIRBUS,Netherlands,84041000000.0
+130,Sysco,United States,83567000000.0
+131,Albertsons,United States,83172000000.0
+132,PTT ,Thailand,82956000000.0
+133,Sony Group,Japan,82815000000.0
+134,American Express,United States,82425000000.0
+135,ENGIE ,France,81194000000.0
+136,KIA,South Korea,81153000000.0
+137,BBVA-Banco Bilbao Vizcaya Argentaria,Spain,80806000000.0
+138,Munich Re,Germany,80735000000.0
+139,Archer Daniels Midland,United States,80650000000.0
+140,Bunge Global,United States,80542000000.0
+141,State Bank of India,India,80312000000.0
+142,Sinopharm Group,China,80012000000.0
+143,Generali Group,Italy,79996000000.0
+144,Nissan Motor,Japan,79685000000.0
+145,UBS,Switzerland,79643000000.0
+146,Postal Savings Bank Of China (PSBC),China,79586000000.0
+147,Quanta Computer,Taiwan,79291000000.0
+148,Lenovo Group,Hong Kong,78469000000.0
+149,ENEOS Holdings,Japan,78076000000.0
+150,Itaú Unibanco Holding,Brazil,77721000000.0
+151,Brookfield Corporation,Canada,77615000000.0
+152,MetLife,United States,77589000000.0
+153,Aviva,United Kingdom,77110000000.0
+154,Toyota Tsusho,Japan,76726000000.0
+155,HCA Healthcare,United States,76388000000.0
+156,Oil & Natural Gas,India,75631000000.0
+157,China Life Insurance,China,75572000000.0
+158,Jiangxi Copper,China,75533000000.0
+159,Lockheed Martin,United States,75106000000.0
+160,Capital One Financial,United States,74989000000.0
+161,Japan Post Holdings,Japan,74498000000.0
+162,Roche Holding,Switzerland,74072000000.0
+163,China Telecom,China,73356000000.0
+164,Couche Tard,Canada,73260000000.0
+165,Eli Lilly,United States,72250000000.0
+166,Accenture,Ireland,72110000000.0
+167,Bank of Communications,China,72020000000.0
+168,Legal & General Group,United Kingdom,71878000000.0
+169,Aeon,Japan,71493000000.0
+170,ORLEN Spolka Akcyjna,Poland,71180000000.0
+171,Caterpillar,United States,70755000000.0
+172,Wilmar International,Singapore,70370000000.0
+173,Banco Bradesco,Brazil,70327000000.0
+174,Hitachi,Japan,70254000000.0
+175,BASF,Germany,69696000000.0
+176,Seven & I Holdings,Japan,69591000000.0
+177,China Merchants Bank,China,69505000000.0
+178,IBM,United States,68911000000.0
+179,Deutsche Bank,Germany,68621000000.0
+180,Banco do Brasil,Brazil,68568000000.0
+181,Koç Holding,Turkey,68554000000.0
+182,Korea Electric Power,South Korea,68505000000.0
+183,Broadcom,United States,68282000000.0
+184,Allstate,United States,68174000000.0
+185,Nippon Steel ,Japan,66780000000.0
+186,Performance Food Group,United States,66750000000.0
+187,Contemporary Amperex Technology,China,66047000000.0
+188,Sumitomo Mitsui Financial,Japan,65579000000.0
+189,Merck & Co.,United States,65507000000.0
+190,Bouygues,France,65439000000.0
+191,Renault,France,65369000000.0
+192,Delta Air Lines,United States,65178000000.0
+193,TD SYNNEX,United States,65139000000.0
+194,Midea Group,China,65074000000.0
+195,Repsol ,Spain,64971000000.0
+196,Daiichi Life Group.,Japan,64423000000.0
+197,Oracle,United States,64077000000.0
+198,Talanx,Germany,64046000000.0
+199,China Energy Engineering,China,63870000000.0
+200,Xiaomi  ,China,63617000000.0
+201,Pfizer,United States,63315000000.0
+202,LG Electronics,South Korea,63300000000.0
+203,Prudential Financial,United States,62830000000.0
+204,AbbVie,United States,62819000000.0
+205,ArcelorMittal,Luxembourg,61386000000.0
+206,Chubb,Switzerland,61098000000.0
+207,Cisco Systems,United States,60746000000.0
+208,United Airlines Holdings,United States,60466000000.0
+209,AstraZeneca,United Kingdom,60433000000.0
+210,TJX Cos,United States,60372000000.0
+211,PDD Holdings,Ireland,60127000000.0
+212,Metallurgical Corp of China,China,59835000000.0
+213,Anheuser-Busch InBev,Belgium,59283000000.0
+214,Galaxy Digital,United States,58541000000.0
+215,SK Innovation ,South Korea,58509000000.0
+216,Micron Technology,United States,58119000000.0
+217,Xiamen Xiangyu,China,58043000000.0
+218,China Pacific Insurance,China,57908000000.0
+219,ConocoPhillips,United States,57858000000.0
+220,Rio Tinto,United Kingdom,57590000000.0
+221,Unilever,United Kingdom,56829000000.0
+222,Mizuho Financial,Japan,56778000000.0
+223,HP,United States,56330000000.0
+224,ACS Actividades de Construccion y Servicios,Spain,56257000000.0
+225,HDFC Bank,India,56075000000.0
+226,American Airlines Group,United States,55994000000.0
+227,Hanwha,South Korea,55864000000.0
+228,Tyson Foods,United States,55710000000.0
+229,BMO,Canada,55157000000.0
+230,CNOOC,Hong Kong,55089000000.0
+231,Marubeni,Japan,54853000000.0
+232,Charter Communications,United States,54636000000.0
+233,China Unicom,Hong Kong,54549000000.0
+234,Novartis,Switzerland,54427000000.0
+235,Ingram Micro Holding,United States,54238000000.0
+236,BHP Group,Australia,53972000000.0
+237,General Dynamics,United States,53808000000.0
+238,Idemitsu Kosan,Japan,53791000000.0
+239,Intel,United States,53763000000.0
+240,Uber,United States,53687000000.0
+241,A.P. Moller-Maersk,Denmark,53625000000.0
+242,Panasonic,Japan,53412000000.0
+243,Tokio Marine Holdings,Japan,53077000000.0
+244,Intesa Sanpaolo,Italy,52800000000.0
+245,HD HYUNDAI,South Korea,52718000000.0
+246,Saint-Gobain,France,52460000000.0
+247,Bayer ,Germany,52423000000.0
+248,Zijin Mining Group,China,51963000000.0
+249,Iberdrola,Spain,51795000000.0
+250,Softbank,Japan,51752000000.0
+251,Industrial Bank ,China,51412000000.0
+252,Bharat Petroleum,India,51367000000.0
+253,América Móvil,Mexico,51234000000.0
+254,Daimler Truck Holding,Germany,50987000000.0
+255,Novo Nordisk,Denmark,50875000000.0
+256,Bank of Nova Scotia,Canada,50874000000.0
+257,Meituan ,China,50765000000.0
+258,Enbridge,Canada,50233000000.0
+259,Geely Automobile Holdings,Hong Kong,50222000000.0
+260,Veolia Environnement,France,50104000000.0
+261,MS&AD Insurance,Japan,50071000000.0
+262,Denso,Japan,50036000000.0
+263,China Citic Bank,China,49895000000.0
+264,Luxshare Precision Industry,China,49837000000.0
+265,Coca-Cola,United States,49815000000.0
+266,Xiamen International Trade Group,China,49766000000.0
+267,L'Oréal,France,49716000000.0
+268,Volvo Group,Sweden,49616000000.0
+269,Sanofi ,France,49235000000.0
+270,Standard Life,United Kingdom,49093000000.0
+271,Travelers,United States,48942000000.0
+272,Posco,South Korea,48804000000.0
+273,Sumitomo,Japan,48690000000.0
+274,Compass Group,United Kingdom,48485000000.0
+275,Bristol Myers Squibb,United States,48482000000.0
+276,GE Aerospace,United States,48313000000.0
+277,Swiss Re ,Switzerland,47632000000.0
+278,Netflix,United States,47278000000.0
+279,George Weston,Canada,46932000000.0
+280,Vodafone,United Kingdom,46902000000.0
+281,John Deere,United States,46774000000.0
+282,Deutsche Lufthansa,Germany,46599000000.0
+283,Nike,United States,46547000000.0
+284,Siemens Energy,Germany,46513000000.0
+285,WT Microelectronics,Taiwan,46164000000.0
+286,Femsa,Mexico,46126000000.0
+287,Orange,France,45590000000.0
+288,Inditex,Spain,45448000000.0
+289,Woolworths,Australia,45319000000.0
+290,Schneider Electric,France,45315000000.0
+291,Baoshan Iron & Steel,China,45289000000.0
+292,Thermo Fisher Scientific,United States,45197000000.0
+293,Abbott Laboratories,United States,45134000000.0
+294,Molina Healthcare,United States,45075000000.0
+295,J Sainsbury,United Kingdom,44955000000.0
+296,Commonwealth Bank,Australia,44929000000.0
+297,Qualcomm,United States,44486000000.0
+298,Fairfax Financial,Canada,44454000000.0
+299,Manulife,Canada,44320000000.0
+300,S.F. Holding,China,43998000000.0
+301,Canadian Imperial Bank,Canada,43996000000.0
+302,GSK,United Kingdom,43928000000.0
+303,Shanghai Pudong Development,China,43816000000.0
+304,Hyundai Mobis,South Korea,43464000000.0
+305,US Bancorp,United States,43412000000.0
+306,SAP,Germany,43269000000.0
+307,ANZ Group Holdings,Australia,43254000000.0
+308,Visa,United States,43027000000.0
+309,DSV,Denmark,42846000000.0
+310,Dollar General,United States,42724000000.0
+311,Northrop Grumman,United States,42367000000.0
+312,Magna International,Canada,42323000000.0
+313,Jeronimo Martins,Portugal,42315000000.0
+314,Poly Developments & Holdings Group,China,42180000000.0
+315,CBRE Group,United States,42168000000.0
+316,Tokyo Electric Power,Japan,41997000000.0
+317,Chery Automobile,China,41934000000.0
+318,Haier Smart Home,China,41811000000.0
+319,Suzuki Motor,Japan,41760000000.0
+320,Best Buy,United States,41691000000.0
+321,China Shenhua Energy,China,41653000000.0
+322,Raizen,Brazil,41571000000.0
+323,Salesforce,United States,41525000000.0
+324,Rongsheng Petrochemical,China,41430000000.0
+325,Philip Morris International,United States,41415000000.0
+326,Telefónica,Spain,40792000000.0
+327,NatWest Group,United Kingdom,40708000000.0
+328,Bank of New York Mellon,United States,40686000000.0
+329,Shanghai Pharmaceuticals,China,40593000000.0
+330,KDDI,Japan,40294000000.0
+331,Power Corp of Canada,Canada,39825000000.0
+332,St. James's Place,United Kingdom,39804000000.0
+333,US Foods,United States,39683000000.0
+334,Honeywell Technologies,United States,39662000000.0
+335,Barclays,United Kingdom,39658000000.0
+336,EnBW Energie Baden-Wurttemberg,Germany,39607000000.0
+337,Vale,Brazil,39473000000.0
+338,GE Vernova,United States,39348000000.0
+339,China Resources Land,Hong Kong,39333000000.0
+340,Dow,United States,39331000000.0
+341,Mondelez International,United States,39304000000.0
+342,CRRC,China,39124000000.0
+343,Mitsubishi Electric,Japan,39118000000.0
+344,ASML Holding,Netherlands,39040000000.0
+345,Air France-KLM,France,38610000000.0
+346,Starbucks,United States,38453000000.0
+347,NAB - National Australia Bank,Australia,38226000000.0
+348,Metro Group,Germany,38124000000.0
+349,CRH,United States,38061000000.0
+350,Qatar National Bank,Qatar,37992000000.0
+351,Standard Chartered,United Kingdom,37859000000.0
+352,Lithia Motors,United States,37728000000.0
+353,International Airlines,United Kingdom,37521000000.0
+354,China Resources Pharmaceutical Group,Hong Kong,37506000000.0
+355,Westpac Banking Group,Australia,37503000000.0
+356,Advanced Micro Devices (AMD),United States,37454000000.0
+357,BAE Systems,United Kingdom,37344000000.0
+358,Amgen,United States,37302000000.0
+359,Warner Bros. Discovery,United States,37251000000.0
+360,China Minsheng Bank,China,37225000000.0
+361,World Kinect,United States,37111000000.0
+362,ThyssenKrupp Group,Germany,37072000000.0
+363,Daiwa House Industry,Japan,37008000000.0
+364,Suncor Energy,Canada,36948000000.0
+365,Volvo Car,Sweden,36769000000.0
+366,KB Financial Group,South Korea,36122000000.0
+367,CK Hutchison,Hong Kong,35920000000.0
+368,SLB,United States,35905000000.0
+369,Hewlett Packard Enterprise,United States,35830000000.0
+370,ABB,Switzerland,35662000000.0
+371,Medtronic,Ireland,35483000000.0
+372,Vibra Energia,Brazil,35355000000.0
+373,ICICI Bank,India,35324000000.0
+374,Sompo,Japan,35314000000.0
+375,Pegatron,Taiwan,35278000000.0
+376,Cenovus Energy,Canada,35275000000.0
+377,ONEOK,United States,35204000000.0
+378,Safran,France,35199000000.0
+379,Coupang,United States,35130000000.0
+380,Linde,United Kingdom,34655000000.0
+381,PNC Financial Services,United States,34586000000.0
+382,China Everbright Bank,China,34573000000.0
+383,WPG Holdings,Taiwan,34564000000.0
+384,Jardine Matheson,Bermuda,34217000000.0
+385,Nucor,United States,34160000000.0
+386,PayPal,United States,34022000000.0
+387,Mastercard,United States,34010000000.0
+388,Aisin Seiki,Japan,33962000000.0
+389,Sumitomo Electric,Japan,33911000000.0
+390,Zheshang Development Group,China,33901000000.0
+391,Cummins,United States,33894000000.0
+392,British American Tobacco,United Kingdom,33751000000.0
+393,Super Micro Computer,United States,33700000000.0
+394,Cathay Financial,Taiwan,33632000000.0
+395,Aluminum Corp of China,China,33552000000.0
+396,Arrow Electronics,United States,33512000000.0
+397,Weichai Power,China,33393000000.0
+398,D.R. Horton,United States,33348000000.0
+399,Daikin Industries,Japan,33280000000.0
+400,Duke Energy,United States,33166000000.0
+401,Mapfre,Spain,33160000000.0
+402,Lennar,United States,33115000000.0
+403,Mitsubishi Heavy Industries,Japan,33009000000.0
+404,Jabil Circuit,United States,32667000000.0
+405,Mazda Motor,Japan,32637000000.0
+406,AIA Group,Hong Kong,32530000000.0
+407,Heineken,Netherlands,32450000000.0
+408,NRG Energy,United States,32372000000.0
+409,Larsen & Toubro,India,32354000000.0
+410,LG Chem,South Korea,32326000000.0
+411,Aegon,Netherlands,32276000000.0
+412,CJ Corporation,South Korea,32194000000.0
+413,EssilorLuxottica,France,32154000000.0
+414,Great Wall Motor ,China,32064000000.0
+415,CMOC Group,China,32046000000.0
+416,MercadoLibre,Uruguay,31803000000.0
+417,Subaru Corporation,Japan,31753000000.0
+418,Apollo Global Management,United States,31692000000.0
+419,Nomura,Japan,31578000000.0
+420,United Natural Foods,United States,31542000000.0
+421,DiDi Global,China,31537000000.0
+422,Huaneng Power International,China,31517000000.0
+423,International Holding Company,United Arab Emirates,31481000000.0
+424,China Vanke,China,31479000000.0
+425,Smurfit Westrock,Ireland,31235000000.0
+426,CP All,Thailand,31077000000.0
+427,Penske Automotive,United States,30990000000.0
+428,Canon,Japan,30924000000.0
+429,Danone,France,30791000000.0
+430,Fubon Financial,Taiwan,30772000000.0
+431,Truist,United States,30561000000.0
+432,Cosco Shipping,China,30535000000.0
+433,Air Liquide,France,30404000000.0
+434,Shanghai Construction ,China,30239000000.0
+435,Tata Consultancy Services,India,30220000000.0
+436,Nordea Bank,Finland,30181000000.0
+437,Southern Company,United States,30174000000.0
+438,PBF Energy,United States,30170000000.0
+439,Wanhua Chemical Group,China,30159000000.0
+440,JFE Holdings,Japan,30123000000.0
+441,Quanta Services,United States,30121000000.0
+442,MBRF Global Foods Company,Brazil,30096000000.0
+443,Hindalco Industries,India,30023000000.0
+444,Takeda Pharmaceutical,Japan,29900000000.0
+445,Ecopetrol,Colombia,29887000000.0
+446,Wesfarmers,Australia,29846000000.0
+447,Gilead Sciences,United States,29786000000.0
+448,Bridgestone,Japan,29761000000.0
+449,LyondellBasell Industries,United Kingdom,29683000000.0
+450,UniCredit,Italy,29595000000.0
+451,Kuehne & Nagel International,Switzerland,29588000000.0
+452,Isbank,Turkey,29515000000.0
+453,Eiffage,France,29477000000.0
+454,AntarChile,Chile,29472000000.0
+455,Ferguson Enterprises,United States,29460000000.0
+456,Michelin Group,France,29334000000.0
+457,Adidas,Germany,29258000000.0
+458,VakifBank,Turkey,29232000000.0
+459,Medline,United States,29140000000.0
+460,Samsung C&T,South Korea,29107000000.0
+461,Coles Group,Australia,29065000000.0
+462,Paramount,United States,29046000000.0
+463,KBC Group,Belgium,29039000000.0
+464,Applied Materials,United States,29024000000.0
+465,Toyota Industries,Japan,28996000000.0
+466,Emirates NBD,United Arab Emirates,28928000000.0
+467,Southwest Airlines,United States,28884000000.0
+468,BOE Technology Group,China,28860000000.0
+469,Sabanci Holding,Turkey,28801000000.0
+470,DBS,Singapore,28800000000.0
+471,Hartford Financial Services,United States,28784000000.0
+472,M&G,United Kingdom,28684000000.0
+473,Eaton,Ireland,28522000000.0
+474,Sun Life Financial,Canada,28511000000.0
+475,Constellation Energy,United States,28499000000.0
+476,Tongling Nonferrous Metals,China,28481000000.0
+477,Commerzbank,Germany,28413000000.0
+478,Charles Schwab,United States,28325000000.0
+479,Shinhan Financial Group,South Korea,28142000000.0
+480,Sekisui House,Japan,28054000000.0
+481,WH Group ,Hong Kong,28026000000.0
+482,TUI,Germany,28000000000.0
+483,Canadian Natural Resources,Canada,27952000000.0
+484,Rolls-Royce Holdings,United Kingdom,27948000000.0
+485,Flex,United States,27914000000.0
+486,Baker Hughes Company,United States,27893000000.0
+487,Nutrien,Canada,27831000000.0
+488,Paccar,United States,27768000000.0
+489,OMV Group,Austria,27749000000.0
+490,CarMax,United States,27745000000.0
+491,Saudi Electricity,Saudi Arabia,27738000000.0
+492,Prudential,Hong Kong,27720000000.0
+493,Booking Holdings,United States,27687000000.0
+494,HF Sinclair,United States,27622000000.0
+495,NextEra Energy,United States,27563000000.0
+496,Marsh,United States,27552000000.0
+497,AutoNation,United States,27493000000.0
+498,McDonald's,United States,27446000000.0
+499,Komatsu,Japan,27425000000.0
+500,Yunnan Copper ,China,27418000000.0
+501,Sodexo,France,27197000000.0
+502,Schaeffler,Germany,27035000000.0
+503,Ceconomy,Germany,27031000000.0
+504,Carnival Corporation,United States,26976000000.0
+505,CaixaBank,Spain,26975000000.0
+506,China National Chemical,China,26971000000.0
+507,Kansai Electric Power,Japan,26920000000.0
+508,ING Group,Netherlands,26907000000.0
+509,Hengli Petrochemical,China,26879000000.0
+510,Adecco Group,Switzerland,26841000000.0
+511,Ultrapar Participacoes,Brazil,26783000000.0
+512,Jones Lang LaSalle,United States,26756000000.0
+513,Fresenius,Germany,26698000000.0
+514,Lloyds Banking Group,United Kingdom,26682000000.0
+515,American International Group,United States,26642000000.0
+516,Marriott International,United States,26577000000.0
+517,Randstad N.V.,Netherlands,26574000000.0
+518,TCL ,China,26407000000.0
+519,Banorte,Mexico,26348000000.0
+520,BlackRock,United States,26276000000.0
+521,Tata Steel,India,26273000000.0
+522,BT Group,United Kingdom,26164000000.0
+523,Imperial Brands,United Kingdom,26006000000.0
+524,Halkbank,Turkey,25993000000.0
+525,Associated British Foods,United Kingdom,25947000000.0
+526,Asustek Computer,Taiwan,25907000000.0
+527,Amphenol,United States,25904000000.0
+528,Top Frontier Investment Holdings,Philippines,25889000000.0
+529,PG&E,United States,25833000000.0
+530,Freeport-McMoRan,United States,25793000000.0
+531,Centrica,United Kingdom,25688000000.0
+532,Erste Group Bank,Austria,25638000000.0
+533,Live Nation Entertainment,United States,25612000000.0
+534,Waste Management,United States,25413000000.0
+535,China Southern Airlines,China,25365000000.0
+536,Capgemini,France,25354000000.0
+537,Medipal Holdings,Japan,25332000000.0
+538,Stryker,United States,25270000000.0
+539,MOL Hungarian Oil,Hungary,25202000000.0
+540,Sea,Singapore,25195000000.0
+541,Turkish Airlines,Turkey,25058000000.0
+542,3M,United States,25024000000.0
+543,Kraft Heinz Company,United States,24990000000.0
+544,Thales,France,24983000000.0
+545,International Paper,United States,24966000000.0
+546,Avnet,United States,24955000000.0
+547,Reinsurance Group of America,United States,24942000000.0
+548,Huaqin,China,24932000000.0
+549,Exelon,United States,24786000000.0
+550,Danaher,United States,24778000000.0
+551,China National Building,China,24754000000.0
+552,Union Pacific,United States,24700000000.0
+553,Genuine Parts,United States,24699000000.0
+554,Kweichow Moutai,China,24682000000.0
+555,Compal Electronics,Taiwan,24615000000.0
+556,Mitsubishi Chemical,Japan,24580000000.0
+557,Recruit Holdings ,Japan,24536000000.0
+558,Ericsson,Sweden,24481000000.0
+559,Block,United States,24479000000.0
+560,Fast Retailing,Japan,24457000000.0
+561,Adobe,United States,24453000000.0
+562,Johnson Controls International,Ireland,24433000000.0
+563,Korea Gas,South Korea,24412000000.0
+564,Newmont ,United States,24409000000.0
+565,Poste Italiane,Italy,24385000000.0
+566,Huaxia Bank,China,24362000000.0
+567,Greenland Holdings Group,China,24304000000.0
+568,Gree Electric Appliances,China,24294000000.0
+569,"Merck KGaA, Darmstadt, Germany and its affiliates",Germany,24282000000.0
+570,WESCO International,United States,24247000000.0
+571,Richemont,Switzerland,24225000000.0
+572,HeidelbergCement,Germany,24220000000.0
+573,LS Corp,South Korea,24187000000.0
+574,Fosun International,China,24123000000.0
+575,Seres Group,China,24105000000.0
+576,QBE Insurance Group,Australia,24102000000.0
+577,Forvia,France,24092000000.0
+578,Asr Nederland,Netherlands,24013000000.0
+579,S-Oil,South Korea,24003000000.0
+580,Sherwin-Williams,United States,23936000000.0
+581,Bharti Airtel,India,23877000000.0
+582,GD Power Development,China,23877000000.0
+583,Inventec,Taiwan,23797000000.0
+584,NEC,Japan,23775000000.0
+585,HD KOREA SHIPBUILDING & OFFSHORE ENGINEERING CO. LTD.,South Korea,23738000000.0
+586,Citic Securities,China,23730000000.0
+587,National Grid,United Kingdom,23702000000.0
+588,Japan Tobacco,Japan,23655000000.0
+589,Coca-Cola Europacific Partners,United Kingdom,23615000000.0
+590,Valeo,France,23591000000.0
+591,Occidental Petroleum,United States,23578000000.0
+592,EOG Resources,United States,23552000000.0
+593,Chubu Electric Power,Japan,23532000000.0
+594,Aurubis,Germany,23530000000.0
+595,Lear,United States,23521000000.0
+596,H&M - Hennes & Mauritz,Sweden,23403000000.0
+597,Prysmian,Italy,23287000000.0
+598,Fujitsu,Japan,23246000000.0
+599,Nokia,Finland,23185000000.0
+600,Henkel,Germany,23130000000.0
+601,Jointown Pharmaceutical Group,China,23111000000.0
+602,Isuzu Motors,Japan,23087000000.0
+603,Bank Of Jiangsu,China,23075000000.0
+604,Gold.com,United States,23020000000.0
+605,China Taiping Insurance,Hong Kong,22920000000.0
+606,CDW,United States,22905000000.0
+607,Grupo Bimbo,Mexico,22900000000.0
+608,Chongqing Changan Auto,China,22884000000.0
+609,Zhongsheng Group Holdings,China,22882000000.0
+610,BayWa,Germany,22881000000.0
+611,Galp Energia,Portugal,22867000000.0
+612,Acciona,Spain,22838000000.0
+613,Empire,Canada,22823000000.0
+614,BAIC Motor,China,22819000000.0
+615,Ross Stores,United States,22751000000.0
+616,Danske Bank,Denmark,22719000000.0
+617,Olam Group,Singapore,22654000000.0
+618,Macy's,United States,22621000000.0
+619,China Hongqiao Group,China,22584000000.0
+620,Carvana,United States,22522000000.0
+621,L3Harris Technologies,United States,22477000000.0
+622,Group 1 Automotive,United States,22473000000.0
+623,Mahindra & Mahindra,India,22406000000.0
+624,Vestas Wind Systems,Denmark,22387000000.0
+625,KKR,United States,22382000000.0
+626,American Electric,United States,22378000000.0
+627,National Bank of Canada,Canada,22311000000.0
+628,Fujifilm Holdings,Japan,22277000000.0
+629,China Merchants Shekou Industrial Zone Holdings,China,22237000000.0
+630,Alstom,France,22214000000.0
+631,Continental,Germany,22209000000.0
+632,Neste,Finland,22202000000.0
+633,Amcor,Switzerland,22189000000.0
+634,Halliburton,United States,22169000000.0
+635,Macquarie Group Limited,Australia,22163000000.0
+636,Shaanxi Coal Industry,China,22099000000.0
+637,Orix,Japan,22076000000.0
+638,Leonardo,Italy,22011000000.0
+639,Uni-President,Taiwan,21987000000.0
+640,Naturgy Energy Group,Spain,21956000000.0
+641,Rexel,France,21911000000.0
+642,Carrier Global,United States,21870000000.0
+643,Umicore,Belgium,21865000000.0
+644,Intact Financial,Canada,21761000000.0
+645,ASE Technology Holding,Taiwan,21737000000.0
+646,Greentown China Holdings,China,21685000000.0
+647,Lam Research,United States,21682000000.0
+648,First Abu Dhabi Bank,United Arab Emirates,21668000000.0
+649,State Street,United States,21624000000.0
+650,Trane Technologies,Ireland,21603000000.0
+651,Automatic Data Processing,United States,21600000000.0
+652,IEIT Systems,China,21596000000.0
+653,Hana Financial Group,South Korea,21583000000.0
+654,Country Garden Holdings,China,21559000000.0
+655,China International Marine,China,21558000000.0
+656,Zall Smart Commerce Group,China,21531000000.0
+657,NTPC,India,21514000000.0
+658,Digital China Group,China,21474000000.0
+659,BJ's Wholesale Club,United States,21457000000.0
+660,Tenet Healthcare,United States,21455000000.0
+661,Cognizant,United States,21406000000.0
+662,Becton Dickinson,United States,21365000000.0
+663,Hyundai Glovis,South Korea,21165000000.0
+664,NN Group,Netherlands,21142000000.0
+665,STRABAG,Austria,21121000000.0
+666,Fiserv,United States,21090000000.0
+667,JSW Steel,India,20991000000.0
+668,Parker-Hannifin,United States,20987000000.0
+669,GE HealthCare Technologies,United States,20979000000.0
+670,DCC,Ireland,20979000000.0
+671,Hyundai Engineering,South Korea,20978000000.0
+672,Investor AB,Sweden,20972000000.0
+673,Cheniere Energy,United States,20955000000.0
+674,Saudi Telecom,Saudi Arabia,20939000000.0
+675,Aumovio,Germany,20935000000.0
+676,China Communications Services,China,20873000000.0
+677,Banco Btg Pactual,Brazil,20846000000.0
+678,Colgate-Palmolive,United States,20795000000.0
+679,China CSSC Holdings,China,20712000000.0
+680,Kubota,Japan,20680000000.0
+681,Aptiv,Switzerland,20659000000.0
+682,Boston Scientific,United States,20615000000.0
+683,Alfresa Holdings,Japan,20599000000.0
+684,China Coal Energy,China,20594000000.0
+685,Etisalat,United Arab Emirates,20531000000.0
+686,East Japan Railway,Japan,20470000000.0
+687,Philips,Netherlands,20442000000.0
+688,Woori Financial Group,South Korea,20412000000.0
+689,Asahi Kasei,Japan,20403000000.0
+690,Altria Group,United States,20397000000.0
+691,Kajima,Japan,20355000000.0
+692,Spotify Technology,Sweden,20322000000.0
+693,E-mart ,South Korea,20266000000.0
+694,Infosys,India,20219000000.0
+695,Bank Rakyat Indonesia (BRI),Indonesia,20170000000.0
+696,Saudi National Bank,Saudi Arabia,20155000000.0
+697,Intuit,United States,20121000000.0
+698,Akbank,Turkey,20008000000.0
+699,Ampol ,Australia,19987000000.0
+700,Marks & Spencer,United Kingdom,19949000000.0
+701,Ford Otosan,Turkey,19947000000.0
+702,Formosa Petrochemical,Taiwan,19922000000.0
+703,United Overseas Bank,Singapore,19917000000.0
+704,Oversea-Chinese Banking,Singapore,19891000000.0
+705,Kuaishou Technology,China,19873000000.0
+706,DNB Bank,Norway,19841000000.0
+707,Omnicom,United States,19824000000.0
+708,Diageo,United Kingdom,19791000000.0
+709,KT ,South Korea,19777000000.0
+710,Norsk Hydro,Norway,19760000000.0
+711,Lincoln National,United States,19697000000.0
+712,Murphy USA,United States,19678000000.0
+713,Publicis Groupe,France,19636000000.0
+714,Asahi Group Holdings,Japan,19620000000.0
+715,AutoZone,United States,19610000000.0
+716,Edison International,United States,19609000000.0
+717,Al Rajhi Bank,Saudi Arabia,19538000000.0
+718,China Eastern Airlines,China,19475000000.0
+719,Grupo Mexico,Mexico,19465000000.0
+720,Bank of Beijing,China,19429000000.0
+721,Aramark,United States,19414000000.0
+722,Dollar Tree,United States,19412000000.0
+723,Muyuan Foods,China,19402000000.0
+724,Grasim Industries,India,19342000000.0
+725,Ameriprise Financial,United States,19299000000.0
+726,Delta Electronics,Taiwan,19288000000.0
+727,Mitsubishi Motors,Japan,19222000000.0
+728,MediaTek,Taiwan,19175000000.0
+729,Arch Capital Group,Bermuda,19166000000.0
+730,ZTE,China,19141000000.0
+731,CJ Cheiljedang,South Korea,19122000000.0
+732,Barrick Mining,Canada,19025000000.0
+733,Steel Dynamics,United States,19012000000.0
+734,Synchrony Financial,United States,18978000000.0
+735,Holcim,Switzerland,18933000000.0
+736,Hanwha Aerospace,South Korea,18929000000.0
+737,Cleveland-Cliffs,United States,18909000000.0
+738,Ningbo Jintian Copper (Group),China,18901000000.0
+739,Tokyo Gas,Japan,18812000000.0
+740,Reckitt Benckiser Group,United Kingdom,18721000000.0
+741,TE Connectivity,Ireland,18696000000.0
+742,New China Life Insurance,China,18678000000.0
+743,Yankuang Energy Group,China,18582000000.0
+744,Guangdong Haid Group,China,18563000000.0
+745,Swisscom,Switzerland,18557000000.0
+746,Scor,France,18542000000.0
+747,Anglo American,United Kingdom,18528000000.0
+748,Loews,United States,18515000000.0
+749,YPF ,Argentina,18487000000.0
+750,Texas Instruments,United States,18438000000.0
+751,T&D Holdings,Japan,18423000000.0
+752,EDP,Portugal,18417000000.0
+753,Viva Energy Group,Australia,18396000000.0
+754,Royal Caribbean Group,United States,18388000000.0
+755,WW Grainger,United States,18378000000.0
+756,Manpower,United States,18377000000.0
+757,General Mills,United States,18371000000.0
+758,Axis Bank,India,18358000000.0
+759,Sumitomo Mitsui Trust,Japan,18352000000.0
+760,Cencosud,Chile,18340000000.0
+761,Swiss Life Holding,Switzerland,18319000000.0
+762,Emerson Electric,United States,18312000000.0
+763,Sojitz,Japan,18298000000.0
+764,Grupa PZU,Poland,18276000000.0
+765,LPL Financial Holdings,United States,18258000000.0
+766,Skanska,Sweden,18257000000.0
+767,BIM Birlesik Magazalar,Turkey,18229000000.0
+768,O'Reilly Automotive,United States,18206000000.0
+769,Corebridge Financial,United States,18165000000.0
+770,ENN Natural Gas,China,18151000000.0
+771,Aflac,United States,18112000000.0
+772,GS Holdings,South Korea,18111000000.0
+773,Shanghai Electric Group,China,18106000000.0
+774,CNH Industrial,United Kingdom,18093000000.0
+775,OM,South Africa,18065000000.0
+776,Hermès International,France,18060000000.0
+777,RWE Group,Germany,17998000000.0
+778,Mitsui Fudosan,Japan,17982000000.0
+779,Asbury Automotive Group,United States,17963000000.0
+780,Baidu,China,17954000000.0
+781,Bank of Ningbo,China,17931000000.0
+782,Jiangsu Eastern Shenghong,China,17922000000.0
+783,Goodyear,United States,17908000000.0
+784,Corteva,United States,17889000000.0
+785,BCE,Canada,17876000000.0
+786,WPP,United Kingdom,17857000000.0
+787,Korean Air,South Korea,17822000000.0
+788,CTBC Financial Holding,Taiwan,17800000000.0
+789,Shandong Humon Smelting,China,17782000000.0
+790,Cosmo Energy Holdings,Japan,17769000000.0
+791,Universal Health Services,United States,17760000000.0
+792,Dominion Energy,United States,17756000000.0
+793,Bank of Baroda,India,17749000000.0
+794,EMCOR Group,United States,17747000000.0
+795,LG Display,South Korea,17742000000.0
+796,MGM Resorts,United States,17715000000.0
+797,Hanwa,Japan,17670000000.0
+798,Samsung Life Insurance,South Korea,17666000000.0
+799,Shaanxi Construction Engineering Group,China,17650000000.0
+800,Atlas Copco,Sweden,17609000000.0
+801,Barry Callebaut,Switzerland,17577000000.0
+802,Aon,Ireland,17574000000.0
+803,Ag Anadolu Grubu Holding Anonim Sirketi,Turkey,17548000000.0
+804,Nidec,Japan,17541000000.0
+805,Infineon Technologies,Germany,17521000000.0
+806,Yamaha Motor,Japan,17508000000.0
+807,Saipem,Italy,17490000000.0
+808,Charoen Pokphand Group,Thailand,17443000000.0
+809,Huadian Power International,China,17426000000.0
+810,Kinder Morgan,United States,17412000000.0
+811,Teva Pharmaceutical,Israel,17392000000.0
+812,Sumec Corporation,China,17358000000.0
+813,Leidos,United States,17329000000.0
+814,Canara Bank,India,17325000000.0
+815,Ricoh,Japan,17309000000.0
+816,Bajaj Finserv ,India,17304000000.0
+817,Everest Re Group,Bermuda,17301000000.0
+818,Ryanair Holdings,Ireland,17300000000.0
+819,Consolidated Edison,United States,17215000000.0
+820,DICK'S Sporting Goods,United States,17215000000.0
+821,Kingfisher,United Kingdom,17186000000.0
+822,China Reinsurance Group,China,17164000000.0
+823,Obayashi,Japan,17163000000.0
+824,Toray Industries,Japan,17155000000.0
+825,Nippon Express Holdings,Japan,17134000000.0
+826,Brenntag,Germany,17105000000.0
+827,Rakuten,Japan,17104000000.0
+828,Voestalpine,Austria,17088000000.0
+829,Shin-Etsu Chemical,Japan,17081000000.0
+830,Hunan Valin Steel,China,17024000000.0
+831,Flutter Entertainment,United States,17022000000.0
+832,China Zheshang Bank,China,17021000000.0
+833,Casey's General Stores,United States,16982000000.0
+834,Keurig Dr Pepper,United States,16944000000.0
+835,Punjab National Bank,India,16916000000.0
+836,Vienna Insurance Group,Austria,16862000000.0
+837,Devon Energy,United States,16862000000.0
+838,All Nippon Airways,Japan,16850000000.0
+839,Avolta,Switzerland,16837000000.0
+840,PulteGroup,United States,16828000000.0
+841,JD Sports Fashion,United Kingdom,16811000000.0
+842,Otsuka Holding,Japan,16699000000.0
+843,Republic Services,United States,16696000000.0
+844,Coal India,India,16687000000.0
+845,Targa Resources,United States,16674000000.0
+846,Datang International Power,China,16639000000.0
+847,IQVIA,United States,16632000000.0
+848,TDK,Japan,16622000000.0
+849,Air Canada,Canada,16613000000.0
+850,A2A,Italy,16606000000.0
+851,Sime Darby,Malaysia,16598000000.0
+852,Inner Mongolia Yili ,China,16576000000.0
+853,Cemex,Mexico,16570000000.0
+854,Kering,France,16562000000.0
+855,Kimberly-Clark,United States,16556000000.0
+856,Raymond James Financial,United States,16511000000.0
+857,Suzuken,Japan,16502000000.0
+858,HBIS,China,16457000000.0
+859,Vistra Energy,United States,16455000000.0
+860,China Aviation Oil,Singapore,16452000000.0
+861,Ecolab,United States,16452000000.0
+862,Unipol Gruppo,Italy,16388000000.0
+863,United Rentals,United States,16365000000.0
+864,SEB AB,Sweden,16359000000.0
+865,PGE Polska Grupa Energetyczna,Poland,16358000000.0
+866,Hengyi Petrochemical ,China,16352000000.0
+867,GAIL India,India,16344000000.0
+868,Fortescue Metals Group,Australia,16337000000.0
+869,Kirin Holdings,Japan,16328000000.0
+870,Corning,United States,16321000000.0
+871,Daou Technology,South Korea,16304000000.0
+872,DTE Energy,United States,16290000000.0
+873,Illinois Tool Works,United States,16221000000.0
+874,Tokyo Electron,Japan,16215000000.0
+875,CP Axtra,Thailand,16212000000.0
+876,Yara International,Norway,16210000000.0
+877,Samsung Fire & Marine,South Korea,16208000000.0
+878,Fox,United States,16201000000.0
+879,C.H. Robinson,United States,16199000000.0
+880,Metro,Canada,16192000000.0
+881,Kobe Steel,Japan,16169000000.0
+882,BitGo Holdings,United States,16152000000.0
+883,Sanlam,South Africa,16148000000.0
+884,Raiffeisen Bank International,Austria,16144000000.0
+885,PPG ,United States,16121000000.0
+886,Nu Holdings,Brazil,16090000000.0
+887,Nippon Yusen,Japan,16084000000.0
+888,Hyundai Steel,South Korea,16079000000.0
+889,Securitas,Sweden,16079000000.0
+890,Rogers Communications,Canada,16076000000.0
+891,Sichuan Road & Bridge,China,16066000000.0
+892,Markel,United States,16013000000.0
+893,AECOM,United States,15986000000.0
+894,Telecom Italia,Italy,15966000000.0
+895,Assa Abloy,Sweden,15921000000.0
+896,Singapore Airlines,Singapore,15918000000.0
+897,Iveco Group,Italy,15898000000.0
+898,Evonik Industries,Germany,15898000000.0
+899,Delivery Hero,Germany,15867000000.0
+900,Pan Pacific International Holdings,Japan,15828000000.0
+901,Tenaga Nasional,Malaysia,15815000000.0
+902,"LG Innotek Co.,",South Korea,15756000000.0
+903,Tohoku Electric Power,Japan,15743000000.0
+904,S&P Global,United States,15730000000.0
+905,Bank of Nanjing,China,15714000000.0
+906,NetEase,China,15665000000.0
+907,Tractor Supply,United States,15649000000.0
+908,Li Auto,China,15626000000.0
+909,Ally Financial,United States,15615000000.0
+910,Smithfield Foods,United States,15613000000.0
+911,Bunzl,United Kingdom,15611000000.0
+912,Qantas Airways,Australia,15585000000.0
+913,ENN Energy Holdings,China,15567000000.0
+914,FirstEnergy,United States,15527000000.0
+915,Kioxia Holdings,Japan,15513000000.0
+916,Venture Global,United States,15474000000.0
+917,Principal Financial Group,United States,15459000000.0
+918,Sumitomo Chemical,Japan,15452000000.0
+919,New Hope Liuhe,China,15449000000.0
+920,Ternium,Luxembourg,15395000000.0
+921,"Gap, Inc.",United States,15366000000.0
+922,Nintendo,Japan,15350000000.0
+923,Siam Cement,Thailand,15345000000.0
+924,Kawasaki Heavy Industries,Japan,15338000000.0
+925,Kenvue,United States,15291000000.0
+926,MasTec,United States,15280000000.0
+927,CSL,Australia,15270000000.0
+928,Techtronic Industries,Hong Kong,15259000000.0
+929,Sinotruk Hong Kong,China,15248000000.0
+930,Stanley Black & Decker,United States,15232000000.0
+931,Diamondback Energy,United States,15218000000.0
+932,Textron,United States,15188000000.0
+933,Sumitomo Forestry ,Japan,15183000000.0
+934,Whirlpool,United States,15174000000.0
+935,Expedia Group,United States,15171000000.0
+936,Hankook Tire,South Korea,15127000000.0
+937,Cathay Pacific Airways,Hong Kong,14978000000.0
+938,Fidelity National Financial,United States,14976000000.0
+939,Gallagher,United States,14972000000.0
+940,TAQA,United Arab Emirates,14970000000.0
+941,Latam Airlines,Chile,14966000000.0
+942,Telstra,Australia,14936000000.0
+943,Regeneron Pharmaceuticals,United States,14920000000.0
+944,Kyushu Electric Power,Japan,14913000000.0
+945,Blackstone,United States,14876000000.0
+946,W. R. Berkley,United States,14851000000.0
+947,The Estée Lauder Companies,United States,14846000000.0
+948,Reliance Steel,United States,14836000000.0
+949,PTT Global Chemical,Thailand,14830000000.0
+950,Echostar,United States,14803000000.0
+951,Xcel Energy,United States,14770000000.0
+952,Vipshop Holdings,China,14743000000.0
+953,HCLTech,India,14729000000.0
+954,DoorDash,United States,14721000000.0
+955,Mitsubishi UFJ Lease,Japan,14701000000.0
+956,TELUS,Canada,14700000000.0
+957,Svenska Handelsbanken,Sweden,14671000000.0
+958,Wen's Foodstuff Group,China,14650000000.0
+959,Otis Worldwide,United States,14647000000.0
+960,Unisplendour,China,14634000000.0
+961,Union Bank of India,India,14626000000.0
+962,Bank Hapoalim,Israel,14618000000.0
+963,XCMG Construction Machinery,China,14613000000.0
+964,Covestro,Germany,14606000000.0
+965,Northern Trust,United States,14592000000.0
+966,Viatris,United States,14569000000.0
+967,FirstRand,South Africa,14558000000.0
+968,Falabella,Chile,14554000000.0
+969,Haleon,United Kingdom,14536000000.0
+970,Essity,Sweden,14487000000.0
+971,Emaar Properties,United Arab Emirates,14461000000.0
+972,Bank Of Shanghai,China,14429000000.0
+973,Doosan,South Korea,14420000000.0
+974,First Citizens Bank (NC),United States,14409000000.0
+975,Alaska Air Group,United States,14402000000.0
+976,Bank Leumi,Israel,14377000000.0
+977,CEZ Group,Czech Republic,14349000000.0
+978,BorgWarner,United States,14334000000.0
+979,OTP Bank,Hungary,14329000000.0
+980,Beijing Shougang,China,14285000000.0
+981,Webuild ,Italy,14261000000.0
+982,Vedanta Limited,India,14223000000.0
+983,Astellas Pharma,Japan,14196000000.0
+984,CSX,United States,14151000000.0
+985,Labcorp Holdings,United States,14144000000.0
+986,Universal Music Group,Netherlands,14115000000.0
+987,HAL Trust,Netherlands,14112000000.0
+988,Fifth Third Bank,United States,14091000000.0
+989,Daiichi Sankyo,Japan,14089000000.0
+990,Ageas,Belgium,14070000000.0
+991,China Petroleum Engineering,China,13993000000.0
+992,China Tower Corp.,China,13969000000.0
+993,ServiceNow,United States,13960000000.0
+994,Sasol,South Africa,13952000000.0
+995,Eversource Energy,United States,13933000000.0
+996,Goertek,China,13924000000.0
+997,TBEA,China,13923000000.0
+998,LKQ,United States,13922000000.0
+999,AGC,Japan,13917000000.0
+1000,Hera,Italy,13915000000.0
+1001,Samvardhana Motherson International,India,13894000000.0
+1002,Taisei,Japan,13863000000.0
+1003,DaVita,United States,13835000000.0
+1004,Celestica,Canada,13785000000.0
+1005,Tongkun Group,China,13774000000.0
+1006,Las Vegas Sands,United States,13740000000.0
+1007,Helvetia Baloise Holding,Switzerland,13738000000.0
+1008,Kyocera,Japan,13738000000.0
+1009,Ball,United States,13725000000.0
+1010,Industrial Bank of Korea,South Korea,13674000000.0
+1011,Shimizu,Japan,13656000000.0
+1012,Standard Bank Group,South Africa,13647000000.0
+1013,BrightSpring Health Services,United States,13646000000.0
+1014,Sampo,Finland,13616000000.0
+1015,Saputo,Canada,13593000000.0
+1016,Agnico Eagle Mines,Canada,13534000000.0
+1017,Longfor Group Holdings,China,13529000000.0
+1018,Arca Continental,Mexico,13524000000.0
+1019,Sempra,United States,13491000000.0
+1020,Sika,Switzerland,13488000000.0
+1021,Vingroup,Vietnam,13476000000.0
+1022,Carlsberg,Denmark,13473000000.0
+1023,Osaka Gas,Japan,13473000000.0
+1024,SSE,United Kingdom,13458000000.0
+1025,Guangzhou Automobile Group,China,13444000000.0
+1026,China Nuclear Engineering Corporation,China,13427000000.0
+1027,Japan Airlines,Japan,13355000000.0
+1028,WSP,Canada,13347000000.0
+1029,Hikvision,China,13331000000.0
+1030,Unum Group,United States,13323000000.0
+1031,Central Japan Railway,Japan,13313000000.0
+1032,Sinotrans Ltd.,China,13307000000.0
+1033,Entergy,United States,13287000000.0
+1034,Swedbank,Sweden,13224000000.0
+1035,Korea Zinc,South Korea,13214000000.0
+1036,M&T Bank,United States,13210000000.0
+1037,EasyJet,United Kingdom,13196000000.0
+1038,Sandisk,United States,13184000000.0
+1039,Schindler Holding,Switzerland,13181000000.0
+1040,Daito Trust Construction,Japan,13171000000.0
+1041,Jacobs Solutions,United States,13163000000.0
+1042,Assurant,United States,13160000000.0
+1043,KE Holdings,China,13152000000.0
+1044,Huntington Bank,United States,13131000000.0
+1045,Inpex,Japan,13115000000.0
+1046,Lotte Chemical,South Korea,13113000000.0
+1047,Coca-Cola HBC,Switzerland,13107000000.0
+1048,Kuwait Finance House,Kuwait,13097000000.0
+1049,KLA,United States,13091000000.0
+1050,China Resources Power,Hong Kong,13085000000.0
+1051,Kone,Finland,13072000000.0
+1052,KION Group,Germany,13071000000.0
+1053,Sany Heavy Industry,China,13057000000.0
+1054,Guotai Junan Securities,China,13037000000.0
+1055,Public Service Enterprise Group,United States,13014000000.0
+1056,Alcoa,United States,12978000000.0
+1057,Woodside Energy Group,Australia,12965000000.0
+1058,Motor Oil,Greece,12959000000.0
+1059,Sandvik,Sweden,12937000000.0
+1060,Cincinnati Financial,United States,12928000000.0
+1061,IntercontinentalExchange,United States,12927000000.0
+1062,Expand Energy,United States,12891000000.0
+1063,Huntington Ingalls Industries,United States,12849000000.0
+1064,Darden Restaurants,United States,12764000000.0
+1065,Crown Holdings,United States,12760000000.0
+1066,Power Finance,India,12754000000.0
+1067,Thai Oil,Thailand,12730000000.0
+1068,AirBnB,United States,12712000000.0
+1069,Daou Data,South Korea,12702000000.0
+1070,MTN Group,South Africa,12683000000.0
+1071,RELX,United Kingdom,12639000000.0
+1072,NXP Semiconductors,Netherlands,12615000000.0
+1073,Sunshine Insurance Group,China,12612000000.0
+1074,Db Insurance,South Korea,12604000000.0
+1075,SBI Holdings,Japan,12586000000.0
+1076,BBMG,China,12572000000.0
+1077,Zhejiang Huayou Cobalt,China,12527000000.0
+1078,Canadian National Railway,Canada,12503000000.0
+1079,Air Products & Chemicals,United States,12463000000.0
+1080,AviChina Industry & Technology,China,12461000000.0
+1081,AES,United States,12454000000.0
+1082,Mosaic,United States,12430000000.0
+1083,Ulta Beauty,United States,12393000000.0
+1084,El Puerto de Liverpool,Mexico,12372000000.0
+1085,Shopify,Canada,12370000000.0
+1086,STMicroelectronics,Switzerland,12367000000.0
+1087,Quilter,United Kingdom,12341000000.0
+1088,Vertex Pharmaceuticals,United States,12341000000.0
+1089,Nippon Paint,Japan,12335000000.0
+1090,London Stock Exchange,United Kingdom,12312000000.0
+1091,Abu Dhabi Commercial Bank,United Arab Emirates,12311000000.0
+1092,Hilton Worldwide Holdings,United States,12281000000.0
+1093,Absa Group,South Africa,12262000000.0
+1094,West Japan Railway,Japan,12249000000.0
+1095,Mitsubishi Materials,Japan,12237000000.0
+1096,"Zhongjin Gold Corp., Ltd.",China,12221000000.0
+1097,NIO,China,12211000000.0
+1098,China Yangtze Power,China,12187000000.0
+1099,Norfolk Southern,United States,12185000000.0
+1100,Kotak Mahindra Bank,India,12174000000.0
+1101,Tenaris,Luxembourg,12160000000.0
+1102,Murata Manufacturing,Japan,12150000000.0
+1103,Constellation Software,Canada,12149000000.0
+1104,Citizens Financial Group,United States,12144000000.0
+1105,Chipotle Mexican Grill,United States,12139000000.0
+1106,Williams,United States,12134000000.0
+1107,J.B. Hunt Transport Services,United States,12134000000.0
+1108,Bank Mandiri,Indonesia,12131000000.0
+1109,Beijing Enterprises,Hong Kong,12131000000.0
+1110,Lumen Technologies,United States,12119000000.0
+1111,Mitsui OSK Lines,Japan,12111000000.0
+1112,Yum China Holdings,China,12087000000.0
+1113,Equitable Holdings,United States,12083000000.0
+1114,Sungrow Power Supply  ,China,12067000000.0
+1115,Yuexiu Property ,Hong Kong,12009000000.0
+1116,TS Financial Holding,Taiwan,11998000000.0
+1117,The Hershey Company,United States,11991000000.0
+1118,SK Telecom,South Korea,11958000000.0
+1119,Insurance Australia Group,Australia,11946000000.0
+1120,Anhui Construction Engineering Group,China,11919000000.0
+1121,Amrize,United States,11912000000.0
+1122,Maybank,Malaysia,11876000000.0
+1123,Motorola Solutions,United States,11868000000.0
+1124,CGI,Canada,11822000000.0
+1125,Western Digital,United States,11777000000.0
+1126,Analog Devices,United States,11757000000.0
+1127,Welltower,United States,11755000000.0
+1128,Avis Budget Group,United States,11752000000.0
+1129,eBay,United States,11709000000.0
+1130,Sun Hung Kai Properties,Hong Kong,11695000000.0
+1131,Swire Pacific,Hong Kong,11604000000.0
+1132,Mitsubishi Estate,Japan,11588000000.0
+1133,Burlington Stores,United States,11567000000.0
+1134,Caesars Entertainment,United States,11562000000.0
+1135,Sumitomo Metal Mining,Japan,11557000000.0
+1136,Evergreen Marine Corp. (Taiwan),Taiwan,11522000000.0
+1137,Westinghouse Air Brake Technologies,United States,11507000000.0
+1138,Akzo Nobel,Netherlands,11507000000.0
+1139,RenaissanceRe Holdings,Bermuda,11499000000.0
+1140,Anhui Conch Cement,China,11480000000.0
+1141,Shandong Gold Mining,China,11465000000.0
+1142,Chow Tai Fook Jewellery,Hong Kong,11447000000.0
+1143,Fidelity National Information (FIS),United States,11440000000.0
+1144,Booz Allen Hamilton Holding,United States,11409000000.0
+1145,Meritz Financial Group,South Korea,11382000000.0
+1146,Adani Enterprises,India,11371000000.0
+1147,China National Nuclear Power,China,11365000000.0
+1148,Kao ,Japan,11361000000.0
+1149,PKO Bank Polski,Poland,11360000000.0
+1150,TC Energy,Canada,11356000000.0
+1151,Sanmina-SCI,United States,11341000000.0
+1152,Pernod Ricard,France,11326000000.0
+1153,Baxter International,United States,11320000000.0
+1154,Tongwei,China,11308000000.0
+1155,CLP Holdings,Hong Kong,11290000000.0
+1156,Legrand,France,11286000000.0
+1157,Quest Diagnostics,United States,11278000000.0
+1158,Toll Brothers,United States,11253000000.0
+1159,Dongfang Electric,China,11191000000.0
+1160,Molson Coors Brewing,United States,11188000000.0
+1161,Expeditors International,United States,11186000000.0
+1162,AngloGold Ashanti,United States,11166000000.0
+1163,Anta Sports Products,China,11163000000.0
+1164,Grupo Aval,Colombia,11151000000.0
+1165,KeyCorp,United States,11137000000.0
+1166,Beiersdorf,Germany,11119000000.0
+1167,Lululemon Athletica,Canada,11103000000.0
+1168,Public Power,Greece,11096000000.0
+1169,Rheinmetall,Germany,11087000000.0
+1170,Sandoz Group,Switzerland,11069000000.0
+1171,Minebea,Japan,11045000000.0
+1172,Daqin Railway,China,11040000000.0
+1173,Momentum Metropolitan Holdings,South Africa,11031000000.0
+1174,Cintas,United States,11027000000.0
+1175,UPM-Kymmene,Finland,11025000000.0
+1176,Seagate Technology,United States,11010000000.0
+1177,Tingyi Holding,China,10997000000.0
+1178,Autoliv,Sweden,10990000000.0
+1179,SM Investments,Philippines,10984000000.0
+1180,AVIC Chengdu Aircraft,China,10981000000.0
+1181,Westlake Corporation,United States,10976000000.0
+1182,Zhejiang Zheneng Electric Power,China,10927000000.0
+1183,IHI,Japan,10906000000.0
+1184,Ferrovial,Netherlands,10865000000.0
+1185,Orsted,Denmark,10844000000.0
+1186,Vertiv Holdings,United States,10843000000.0
+1187,Canadian Pacific Kansas City,Canada,10842000000.0
+1188,YTO Express Group,China,10838000000.0
+1189,KGHM Polska Miedz,Poland,10829000000.0
+1190,American Tower,United States,10819000000.0
+1191,Stora Enso,Finland,10800000000.0
+1192,Sunbelt Rentals,United States,10791000000.0
+1193,International Flavors & Fragrances,United States,10788000000.0
+1194,Suncorp Group,Australia,10763000000.0
+1195,Interactive Brokers Group,United States,10759000000.0
+1196,Hyundai Marine & Fire,South Korea,10704000000.0
+1197,SingTel,Singapore,10691000000.0
+1198,XPeng,China,10685000000.0
+1199,Brookfield Wealth Solutions,Bermuda,10676000000.0
+1200,KGI Financial Holding,Taiwan,10658000000.0
+1201,Alcon,Switzerland,10629000000.0
+1202,Boliden,Sweden,10620000000.0
+1203,Groupo Cibest,Colombia,10619000000.0
+1204,Migdal Insurance,Israel,10586000000.0
+1205,Intuitive,United States,10582000000.0
+1206,Banco BPM,Italy,10538000000.0
+1207,Bausch Health Companies,Canada,10532000000.0
+1208,Origin Energy,Australia,10525000000.0
+1209,Bank Of Hangzhou,China,10522000000.0
+1210,Ajinomoto,Japan,10510000000.0
+1211,Rede D'Oro Luiz,Brazil,10489000000.0
+1212,Wipro,India,10483000000.0
+1213,Quinenco,Chile,10404000000.0
+1214,Kingspan Group PLC,Ireland,10382000000.0
+1215,AGCO,United States,10374000000.0
+1216,Saudi Arabian Mining,Saudi Arabia,10357000000.0
+1217,Grupo Carso,Mexico,10311000000.0
+1218,Hangzhou Binjiang Real Estate Group ,China,10259000000.0
+1219,Huishang Bank,China,10234000000.0
+1220,First Pacific,Hong Kong,10233000000.0
+1221,dsm-firmenich,Switzerland,10196000000.0
+1222,Thai Beverage,Thailand,10186000000.0
+1223,Industrias Peñoles,Mexico,10172000000.0
+1224,TechnipFMC,United States,10166000000.0
+1225,Goldwind Science & Technology,China,10145000000.0
+1226,Comfort Systems USA,United States,10136000000.0
+1227,CGN Power,China,10129000000.0
+1228,Tianshan Material,China,10120000000.0
+1229,WEC Energy Group,United States,10085000000.0
+1230,Hengtong Optic-Electric,China,10049000000.0
+1231,Lens Technology,China,10042000000.0
+1232,Dai Nippon Printing,Japan,10038000000.0
+1233,Norwegian Cruise Line Holdings ,United States,10031000000.0
+1234,Harbour Energy,United Kingdom,9999000000.0
+1235,Jefferies Financial ,United States,9930000000.0
+1236,Titan (India),India,9912000000.0
+1237,Hanwha Chemical,South Korea,9911000000.0
+1238,WTW,United Kingdom,9902000000.0
+1239,Palo Alto Networks,United States,9893000000.0
+1240,MTU Aero Engines AG,Germany,9890000000.0
+1241,Storebrand,Norway,9858000000.0
+1242,BPER Banca,Italy,9796000000.0
+1243,Eve Energy,China,9764000000.0
+1244,Hainan Airlines Holding,China,9763000000.0
+1245,Daiwa Securities,Japan,9759000000.0
+1246,Lotte Shopping,South Korea,9730000000.0
+1247,InterGlobe Aviation,India,9714000000.0
+1248,Arista Networks,United States,9710000000.0
+1249,DuPont De Nemours,United States,9703000000.0
+1250,Bank of India,India,9693000000.0
+1251,Semiconductor Manufacturing International,China,9673000000.0
+1252,Tokyo Century,Japan,9673000000.0
+1253,Zhuhai Huafa Properties,China,9653000000.0
+1254,Bombardier,Canada,9644000000.0
+1255,Waste Connections,Canada,9608000000.0
+1256,NVR,United States,9608000000.0
+1257,Biogen,United States,9600000000.0
+1258,Samsung SDI,South Korea,9592000000.0
+1259,Restaurant Brands International,Canada,9590000000.0
+1260,Regions Financial,United States,9572000000.0
+1261,Chugoku Electric Power,Japan,9571000000.0
+1262,Longi Green Energy Technology,China,9557000000.0
+1263,EQT,United States,9551000000.0
+1264,Workday,United States,9534000000.0
+1265,Shandong Hi-Speed Road & Bridge Group,China,9528000000.0
+1266,Zoetis,United States,9509000000.0
+1267,TransDigm Group,United States,9504000000.0
+1268,Tata Motors,India,9490000000.0
+1269,Aldar Properties,United Arab Emirates,9488000000.0
+1270,Grupo Galicia,Argentina,9457000000.0
+1271,ST Engineering,Singapore,9449000000.0
+1272,Equinix,United States,9436000000.0
+1273,PT Barito Pacific,Indonesia,9431000000.0
+1274,Old Republic International,United States,9422000000.0
+1275,NARI Technology Development,China,9418000000.0
+1276,CenterPoint Energy,United States,9412000000.0
+1277,Phoenix Holdings,Israel,9386000000.0
+1278,AltaGas,Canada,9368000000.0
+1279,Tauron Group,Poland,9338000000.0
+1280,Sigma Healthcare,Australia,9329000000.0
+1281,PPL,United States,9313000000.0
+1282,Banco de Sabadell,Spain,9285000000.0
+1283,Zhejiang Chint Electrics,China,9276000000.0
+1284,Renesas Electronics,Japan,9242000000.0
+1285,Samsung Heavy Industries,South Korea,9239000000.0
+1286,Israel Discount Bank,Israel,9228000000.0
+1287,Packaging Corp of America,United States,9216000000.0
+1288,Nedbank,South Africa,9201000000.0
+1289,Uniqa,Austria,9186000000.0
+1290,Open House,Japan,9172000000.0
+1291,Riyad Bank,Saudi Arabia,9168000000.0
+1292,Mizrahi Tefahot Bank,Israel,9164000000.0
+1293,Next,United Kingdom,9162000000.0
+1294,ITC,India,9156000000.0
+1295,Constellation Brands,United States,9138000000.0
+1296,Hanwha Ocean,South Korea,9121000000.0
+1297,Suzano ,Brazil,9099000000.0
+1298,Xylem,United States,9081000000.0
+1299,Knorr-Bremse,Germany,9033000000.0
+1300,Avery Dennison,United States,9006000000.0
+1301,Inner Mongolia Baotou Steel,China,9001000000.0
+1302,Givaudan,Switzerland,8997000000.0
+1303,Teck Resources,Canada,8978000000.0
+1304,Franklin Resources,United States,8973000000.0
+1305,Ovintiv,United States,8954000000.0
+1306,Prologis,United States,8948000000.0
+1307,Bandai Namco Holdings,Japan,8947000000.0
+1308,Accton Technology,Taiwan,8932000000.0
+1309,CIMB Group Holdings,Malaysia,8930000000.0
+1310,Telkom Indonesia,Indonesia,8914000000.0
+1311,Credicorp,Peru,8907000000.0
+1312,Harel Insurance Investments & Financial Services,Israel,8887000000.0
+1313,Ameren,United States,8878000000.0
+1314,Verbund,Austria,8873000000.0
+1315,Indian Bank,India,8865000000.0
+1316,Resonac Holdings,Japan,8852000000.0
+1317,Fortis (Canada),Canada,8837000000.0
+1318,Global Payments,United States,8831000000.0
+1319,CMS Energy,United States,8822000000.0
+1320,Chandra Asri Petrochemical,Indonesia,8817000000.0
+1321,Rockwell Automation,United States,8803000000.0
+1322,Monster Beverage,United States,8793000000.0
+1323,Naver,South Korea,8766000000.0
+1324,Saab Group,Sweden,8745000000.0
+1325,UCB,Belgium,8736000000.0
+1326,Yunnan Aluminium,China,8731000000.0
+1327,Manila Electric,Philippines,8718000000.0
+1328,National Bank of Kuwait ,Kuwait,8714000000.0
+1329,Gold Fields,South Africa,8704000000.0
+1330,Trip.com Group,Singapore,8688000000.0
+1331,"Furukawa Electric Co.,",Japan,8677000000.0
+1332,Howmet Aerospace,United States,8623000000.0
+1333,APA,United States,8611000000.0
+1334,Antofagasta,United Kingdom,8606000000.0
+1335,iA Financial Corporation,Canada,8583000000.0
+1336,SiriusXM Holdings,United States,8581000000.0
+1337,Telia,Sweden,8576000000.0
+1338,Nan Ya Plastics,Taiwan,8520000000.0
+1339,Optimum,United States,8504000000.0
+1340,Yum! Brands,United States,8485000000.0
+1341,China Bohai Bank,China,8453000000.0
+1342,Fastenal,United States,8443000000.0
+1343,Zimmer Biomet,United States,8409000000.0
+1344,Banca MPS,Italy,8392000000.0
+1345,Dassault Aviation,France,8381000000.0
+1346,Deutsche Boerse,Germany,8368000000.0
+1347,SGS,Switzerland,8363000000.0
+1348,Bank of Ireland,Ireland,8349000000.0
+1349,Ferrari,Italy,8347000000.0
+1350,Secom,Japan,8341000000.0
+1351,Rocket Companies,United States,8331000000.0
+1352,Kaspi.kz JSC,Kazakhstan,8309000000.0
+1353,China Jinmao,Hong Kong,8298000000.0
+1354,XPO,United States,8298000000.0
+1355,Solventum,United States,8284000000.0
+1356,Dover,United States,8280000000.0
+1357,CPFL Energia,Brazil,8277000000.0
+1358,Samsung Electro-Mechanics,South Korea,8271000000.0
+1359,Tokyu Fudosan,Japan,8269000000.0
+1360,NASDAQ,United States,8265000000.0
+1361,Atkinsrealis Group,Canada,8263000000.0
+1362,Voya Financial,United States,8251000000.0
+1363,KASIKORNBANK,Thailand,8224000000.0
+1364,Marvell Technology,United States,8195000000.0
+1365,Grupo Bolivar,Colombia,8175000000.0
+1366,APi Group,United States,8174000000.0
+1367,Fuji Electric,Japan,8146000000.0
+1368,Roper Technologies,United States,8115000000.0
+1369,American Financial Group,United States,8092000000.0
+1370,Resona Holdings,Japan,8082000000.0
+1371,Vulcan Materials,United States,8062000000.0
+1372,Axia Energia,Brazil,8006000000.0
+1373,Wärtsilä,Finland,8006000000.0
+1374,Synopsys,United States,8002000000.0
+1375,Companhia Energetica de Minas Gerais,Brazil,7967000000.0
+1376,Experian,Ireland,7964000000.0
+1377,Kinross Gold,Canada,7958000000.0
+1378,Elbit Systems,Israel,7932000000.0
+1379,Grupo Inbursa,Mexico,7911000000.0
+1380,Moody's,United States,7873000000.0
+1381,Jiangsu Zhongtian Technology,China,7868000000.0
+1382,Lonza Group,Switzerland,7864000000.0
+1383,Naspers,South Africa,7855000000.0
+1384,Wuestenrot & Wuerttembergische,Germany,7855000000.0
+1385,Tapestry,United States,7851000000.0
+1386,Fujikura,Japan,7846000000.0
+1387,Bangkok Bank,Thailand,7844000000.0
+1388,Ralph Lauren,United States,7833000000.0
+1389,Telenor,Norway,7821000000.0
+1390,Williams-Sonoma,United States,7807000000.0
+1391,United Microelectronics,Taiwan,7800000000.0
+1392,Avenue Supermarts,India,7789000000.0
+1393,Chunghwa Telecom,Taiwan,7786000000.0
+1394,Ingersoll Rand,United States,7781000000.0
+1395,Keyence,Japan,7759000000.0
+1396,Bank Central Asia,Indonesia,7705000000.0
+1397,Masco,United States,7679000000.0
+1398,CK Asset Holdings,Hong Kong,7676000000.0
+1399,Saudi British Bank,Saudi Arabia,7676000000.0
+1400,Thomson Reuters,Canada,7662000000.0
+1401,Commercial Bank For Investment & Development Of Vietnam,Vietnam,7640000000.0
+1402,Kerry Group,Ireland,7626000000.0
+1403,Amadeus IT Group ,Spain,7610000000.0
+1404,China Tourism Group Duty Free ,China,7605000000.0
+1405,Ametek,United States,7598000000.0
+1406,Electronic Arts,United States,7573000000.0
+1407,Aeroports de Paris,France,7566000000.0
+1408,Mobile Telecommunications KSC,Kuwait,7555000000.0
+1409,HMM,South Korea,7549000000.0
+1410,Terumo,Japan,7511000000.0
+1411,Advantest,Japan,7490000000.0
+1412,Garmin,Switzerland,7464000000.0
+1413,Aena,Spain,7459000000.0
+1414,AerCap Holdings,Ireland,7458000000.0
+1415,T Rowe Price,United States,7408000000.0
+1416,CF Industries Holdings,United States,7407000000.0
+1417,Seazen Group,China,7405000000.0
+1418,WEG,Brazil,7384000000.0
+1419,Admiral Group ,United Kingdom,7341000000.0
+1420,SDIC Power Holdings,China,7336000000.0
+1421,Alfa Laval,Sweden,7326000000.0
+1422,Broadridge Financial,United States,7322000000.0
+1423,Vonovia,Germany,7320000000.0
+1424,Nongfu Spring,China,7312000000.0
+1425,Julius Baer Group,Switzerland,7308000000.0
+1426,Bureau Veritas,France,7298000000.0
+1427,Sabesp,Brazil,7281000000.0
+1428,Chongqing Rural Bank,China,7269000000.0
+1429,Huatai Securities,China,7258000000.0
+1430,Iron Mountain,United States,7245000000.0
+1431,Autodesk,United States,7200000000.0
+1432,Zhongji Innolight,China,7189000000.0
+1433,Dassault Systemes,France,7152000000.0
+1434,Lindt & Sprungli,Switzerland,7123000000.0
+1435,Bajaj Auto,India,7119000000.0
+1436,MTR,Hong Kong,7115000000.0
+1437,Ningxia Baofeng Energy Group,China,7110000000.0
+1438,Annaly Capital Management,United States,7110000000.0
+1439,Fortinet,United States,7110000000.0
+1440,McCormick,United States,7109000000.0
+1441,Agilent Technologies,United States,7065000000.0
+1442,Advanced Info Service,Thailand,7060000000.0
+1443,Sumitomo Realty,Japan,7019000000.0
+1444,Zhongyuan Bank,China,7005000000.0
+1445,Towngas,Hong Kong,6968000000.0
+1446,Genworth Financial,United States,6944000000.0
+1447,Vietin Bank,Vietnam,6917000000.0
+1448,Wolters Kluwer,Netherlands,6913000000.0
+1449,Orkla,Norway,6890000000.0
+1450,Ooredoo Q.P.S.C,Qatar,6853000000.0
+1451,Mowi ASA,Norway,6845000000.0
+1452,GlobalFoundries,United States,6840000000.0
+1453,ZTO Express (Cayman),China,6836000000.0
+1454,Brambles,Australia,6829000000.0
+1455,Nitto Denko,Japan,6823000000.0
+1456,China Power International Development,Hong Kong,6822000000.0
+1457,NiSource,United States,6822000000.0
+1458,Ares Management,United States,6816000000.0
+1459,Tryg,Denmark,6805000000.0
+1460,RTL Group,Luxembourg,6792000000.0
+1461,Invesco,United States,6778000000.0
+1462,CME Group,United States,6758000000.0
+1463,Ackermans & van Haaren,Belgium,6728000000.0
+1464,BDO Unibank,Philippines,6728000000.0
+1465,Hydro One,Canada,6715000000.0
+1466,NetApp,United States,6707000000.0
+1467,Mashreq Bank,United Arab Emirates,6690000000.0
+1468,Halyk Bank,Kazakhstan,6687000000.0
+1469,SCB X Public Company ,Thailand,6683000000.0
+1470,Viking Holdings,Bermuda,6658000000.0
+1471,Axis Capital Holdings,Bermuda,6652000000.0
+1472,Simon Property Group,United States,6648000000.0
+1473,Bank Of Chengdu,China,6625000000.0
+1474,Coinbase,United States,6621000000.0
+1475,Yuanta Financial Holding,Taiwan,6615000000.0
+1476,Coherent,United States,6602000000.0
+1477,Eurobank,Greece,6590000000.0
+1478,SharkNinja,United States,6589000000.0
+1479,Dubai Islamic Bank,United Arab Emirates,6582000000.0
+1480,Wuxi Apptec,China,6567000000.0
+1481,Take-Two Interactive Software,United States,6559000000.0
+1482,Martin Marietta Materials,United States,6553000000.0
+1483,Stifel Financial,United States,6545000000.0
+1484,KPN,Netherlands,6542000000.0
+1485,Sunac China Holdings,China,6540000000.0
+1486,Satellite Chemical,China,6535000000.0
+1487,Shanghai Rural Commercial Bank,China,6530000000.0
+1488,Sun Pharma Industries,India,6517000000.0
+1489,Lyft,United States,6517000000.0
+1490,Shenzhen Inovance Technology,China,6504000000.0
+1491,AIB Group,Ireland,6474000000.0
+1492,Prada,Italy,6465000000.0
+1493,Epiroc,Sweden,6445000000.0
+1494,Millicom International,Luxembourg,6429000000.0
+1495,Digital Realty Trust,United States,6418000000.0
+1496,Bank Pekao,Poland,6407000000.0
+1497,SS&C Technologies,United States,6405000000.0
+1498,Brown & Brown,United States,6399000000.0
+1499,Bank of Changsha,China,6376000000.0
+1500,Fuyao Glass Industry Group,China,6373000000.0
+1501,China Northern Rare Earth High-Tech,China,6354000000.0
+1502,Paychex,United States,6334000000.0
+1503,OneMain Holdings,United States,6327000000.0
+1504,Krung Thai Bank,Thailand,6320000000.0
+1505,Edwards Lifesciences,United States,6304000000.0
+1506,Hoya,Japan,6289000000.0
+1507,Suzhou Dongshan Precision Manufacturing,China,6288000000.0
+1508,Equifax,United States,6281000000.0
+1509,CoreWeave,United States,6227000000.0
+1510,Teledyne Technologies,United States,6224000000.0
+1511,Investec,United Kingdom,6219000000.0
+1512,Banco Comercial Portugues,Portugal,6211000000.0
+1513,Emera,Canada,6210000000.0
+1514,Church & Dwight,United States,6205000000.0
+1515,Fortum,Finland,6186000000.0
+1516,Host Hotels & Resorts,United States,6165000000.0
+1517,AppLovin,United States,6164000000.0
+1518,Ventas,United States,6133000000.0
+1519,Beijing-Shanghai High-Speed Railway,China,6102000000.0
+1520,Adani Power Limited,India,6087000000.0
+1521,Public Bank,Malaysia,6078000000.0
+1522,Globe Life,United States,6074000000.0
+1523,ON Semiconductor ,United States,6063000000.0
+1524,IndusInd Bank,India,6053000000.0
+1525,Csc Financial,China,6045000000.0
+1526,Banco Davivienda ,Colombia,6041000000.0
+1527,Realty Income,United States,6024000000.0
+1528,General Insurance Corporation Of India,India,6024000000.0
+1529,Hubbell,United States,5996000000.0
+1530,Evergy,United States,5972000000.0
+1531,Steris,Ireland,5936000000.0
+1532,Korea Investment Holdings,South Korea,5935000000.0
+1533,Brighthouse Financial,United States,5903000000.0
+1534,Hexagon ,Sweden,5877000000.0
+1535,Ayala Corp,Philippines,5845000000.0
+1536,NAURA Technology Group,China,5838000000.0
+1537,Jackson Financial,United States,5835000000.0
+1538,China Merchants Securities,China,5819000000.0
+1539,BNK Financial Group,South Korea,5811000000.0
+1540,First Financial Holding,Taiwan,5798000000.0
+1541,Asics,Japan,5792000000.0
+1542,Alinma Bank,Saudi Arabia,5762000000.0
+1543,Antero Resources,United States,5761000000.0
+1544,Mirae Asset Financial Group,South Korea,5754000000.0
+1545,China Cinda Asset Management,China,5752000000.0
+1546,BeOne Medicines,Switzerland,5739000000.0
+1547,Zhejiang Century Huatong Group,China,5739000000.0
+1548,Bankinter,Spain,5710000000.0
+1549,BCI-Banco Credito,Chile,5705000000.0
+1550,Fanuc,Japan,5693000000.0
+1551,Shanghai International Port,China,5685000000.0
+1552,Keysight Technologies,United States,5677000000.0
+1553,BAC Holding International,Colombia,5669000000.0
+1554,Wuliangye Yibin,China,5611000000.0
+1555,Borouge,United Arab Emirates,5603000000.0
+1556,Veralto,United States,5593000000.0
+1557,SMC,Japan,5591000000.0
+1558,Bank Negara Indonesia,Indonesia,5589000000.0
+1559,Mega Financial Holding,Taiwan,5586000000.0
+1560,Western Alliance Bancorp.,United States,5575000000.0
+1561,ResMed,United States,5538000000.0
+1562,Cadence Design,United States,5529000000.0
+1563,Rithm Capital,United States,5520000000.0
+1564,Menora Mivtachim Holdings,Israel,5506000000.0
+1565,Pinnacle West,United States,5457000000.0
+1566,Old Dominion Freight Line,United States,5456000000.0
+1567,Shriram Finance,India,5454000000.0
+1568,First Quantum Minerals,Canada,5451000000.0
+1569,Abu Dhabi Islamic Bank,United Arab Emirates,5451000000.0
+1570,Banque Saudi Fransi,Saudi Arabia,5424000000.0
+1571,Pembina Pipeline,Canada,5424000000.0
+1572,First Solar,United States,5419000000.0
+1573,Huadian New Energy Group Corporation,China,5401000000.0
+1574,Zijin Gold International,Hong Kong,5384000000.0
+1575,Cellnex Telecom,Spain,5381000000.0
+1576,Deckers Outdoor,United States,5366000000.0
+1577,Incyte,United States,5361000000.0
+1578,Asia Vital Components Company,Taiwan,5357000000.0
+1579,Mobily,Saudi Arabia,5306000000.0
+1580,China Galaxy Securities,China,5304000000.0
+1581,Twilio,United States,5302000000.0
+1582,Roblox,United States,5297000000.0
+1583,Hulic ,Japan,5293000000.0
+1584,China International Capital,China,5293000000.0
+1585,Alpha Bank,Greece,5289000000.0
+1586,Power Grid of India,India,5289000000.0
+1587,GF Securities,China,5286000000.0
+1588,Lennox International,United States,5258000000.0
+1589,Shanxi Xinghuacun Fen Wine Factory,China,5226000000.0
+1590,Palantir Technologies,United States,5224000000.0
+1591,Snap-on,United States,5221000000.0
+1592,Dollarama,Canada,5211000000.0
+1593,Joint Stock Commercial Bank for Foreign Trade of Vietnam,Vietnam,5208000000.0
+1594,American Water Works,United States,5205000000.0
+1595,InterContinental Hotels,United Kingdom,5189000000.0
+1596,Guangzhou Rural Commercial Bank,China,5177000000.0
+1597,Pop Mart International Group,China,5176000000.0
+1598,SoFi,United States,5141000000.0
+1599,Ciena,United States,5124000000.0
+1600,Brookfield Renewable Holdings,United States,5120000000.0
+1601,Attijariwafa Bank,Morocco,5104000000.0
+1602,Taiwan Cooperative Financial,Taiwan,5099000000.0
+1603,Grupo Nutresa,Colombia,5079000000.0
+1604,Vodafone Idea,India,5078000000.0
+1605,Permian Resources,United States,5077000000.0
+1606,Bank of East Asia,Hong Kong,5071000000.0
+1607,Far East Horizon,Hong Kong,5058000000.0
+1608,Santos,Australia,5045000000.0
+1609,E.Sun Financial,Taiwan,5034000000.0
+1610,Arab National Bank,Saudi Arabia,5018000000.0
+1611,Kuwait Projects,Kuwait,5016000000.0
+1612,Elia System Operator,Belgium,5013000000.0
+1613,Gen Digital,United States,5000000000.0
+1614,First Horizon,United States,4992000000.0
+1615,Vietnam Prosperity Joint Stock Commercial Bank (VPBank),Vietnam,4961000000.0
+1616,Bank of Tianjin,China,4957000000.0
+1617,Qnity Electronics,United States,4951000000.0
+1618,Zions Bancorp,United States,4928000000.0
+1619,CNPC Capital,China,4925000000.0
+1620,Bank of Chongqing,China,4920000000.0
+1621,Gjensidige Forsikring,Norway,4891000000.0
+1622,Atmos Energy,United States,4881000000.0
+1623,Hua Nan Financial,Taiwan,4879000000.0
+1624,Hikari Tsushin,Japan,4876000000.0
+1625,Keppel Ltd,Singapore,4875000000.0
+1626,Zoom Video Communications,United States,4869000000.0
+1627,Novonesis A/S,Denmark,4866000000.0
+1628,Public Storage,United States,4859000000.0
+1629,Logitech International,Switzerland,4840000000.0
+1630,Dexcom,United States,4818000000.0
+1631,Central Bank of India,India,4817000000.0
+1632,CrowdStrike,United States,4812000000.0
+1633,CBOE Global Markets,United States,4792000000.0
+1634,Corpay,United States,4784000000.0
+1635,Mercuries & Associates,Taiwan,4766000000.0
+1636,Mediobanca,Italy,4764000000.0
+1637,Commercial International Bank,Egypt,4762000000.0
+1638,United Bank (Pakistan),Pakistan,4759000000.0
+1639,Liberty Media Corporation Series A Liberty Formula One,United States,4746000000.0
+1640,Microchip Technology,United States,4713000000.0
+1641,Military Commercial Joint Stock Bank,Vietnam,4712000000.0
+1642,Snowflake,United States,4684000000.0
+1643,Oriental Land,Japan,4675000000.0
+1644,Shenzhen Mindray Bio-Medical Electronics,China,4660000000.0
+1645,Harbin Bank,China,4655000000.0
+1646,Robinhood Markets,United States,4647000000.0
+1647,Heico,United States,4633000000.0
+1648,East West Bancorp,United States,4633000000.0
+1649,ARC Resources,Canada,4628000000.0
+1650,Copart,United States,4614000000.0
+1651,Flagstar Bank,United States,4602000000.0
+1652,Jiangsu Hengrui Pharmaceuticals,China,4586000000.0
+1653,Jiangsu Hengrui Medicine,China,4585000000.0
+1654,Bawag Group,Austria,4575000000.0
+1655,SQM,Chile,4572000000.0
+1656,SinoPac Financial,Taiwan,4567000000.0
+1657,Terna,Italy,4552000000.0
+1658,Endeavour Mining,United Kingdom,4541000000.0
+1659,Yageo Corporation,Taiwan,4536000000.0
+1660,Kongsberg Gruppen ,Norway,4531000000.0
+1661,Aselsan Elektronik Sanayi ve Ticaret,Turkey,4509000000.0
+1662,Popular,United States,4500000000.0
+1663,UniMicron Technology Corp.,Taiwan,4491000000.0
+1664,Northern Star Resources,Australia,4488000000.0
+1665,Industries Qatar,Qatar,4447000000.0
+1666,IDEXX Laboratories,United States,4446000000.0
+1667,Webster Financial,United States,4443000000.0
+1668,Schroders,United Kingdom,4433000000.0
+1669,Clal Insurance Enterprises ,Israel,4420000000.0
+1670,Alliant Energy,United States,4419000000.0
+1671,Emirates Integrated Telecom,United Arab Emirates,4403000000.0
+1672,Illumina,United States,4391000000.0
+1673,Adani Ports & Special Economic Zone,India,4384000000.0
+1674,China Merchants Energy Shipping,China,4384000000.0
+1675,Zhejiang Sanhua Intelligent Controls,China,4381000000.0
+1676,FIBI Holdings,Israel,4379000000.0
+1677,Mueller Industries,United States,4371000000.0
+1678,Shengyi Technology,China,4359000000.0
+1679,CAPITEC,South Africa,4359000000.0
+1680,Piraeus Bank,Greece,4348000000.0
+1681,Snam,Italy,4347000000.0
+1682,nVent Electric,United Kingdom,4326000000.0
+1683,Wintrust Financial,United States,4296000000.0
+1684,UMB Financial,United States,4290000000.0
+1685,Guangdong Songfa Ceramics,China,4290000000.0
+1686,Alnylam Pharmaceuticals,United States,4287000000.0
+1687,Gulf Development,Thailand,4225000000.0
+1688,Yes Bank,India,4221000000.0
+1689,Crown Castle International,United States,4214000000.0
+1690,Pinnacle Financial Partners,United States,4204000000.0
+1691,Jyske Bank,Denmark,4198000000.0
+1692,China Longyuan Power,China,4197000000.0
+1693,Carlyle Group,United States,4187000000.0
+1694,Foshan Haitian Flavouring and Food,China,4176000000.0
+1695,Aristocrat Leisure,Australia,4156000000.0
+1696,Shenwan Hongyuan Group,China,4153000000.0
+1697,arGEN-X,Netherlands,4131000000.0
+1698,Eoptolink Technology,China,4101000000.0
+1699,Boyd Gaming,United States,4098000000.0
+1700,Mettler-Toledo International,United States,4090000000.0
+1701,VICI Properties,United States,4040000000.0
+1702,IDBI Bank,India,4033000000.0
+1703,Lundin Mining,Canada,4019000000.0
+1704,Old National Bank,United States,4013000000.0
+1705,Shenzhen Longsys Electronics,China,4001000000.0
+1706,Pan American Silver,Canada,4000000000.0
+1707,Guosen Securities,China,3992000000.0
+1708,Banca Transilvania,Romania,3985000000.0
+1709,Asian Paints,India,3980000000.0
+1710,Shimao Property Holdings,Hong Kong,3976000000.0
+1711,Yangzijiang Shipbuilding (Holdings),China,3964000000.0
+1712,Enka,Turkey,3927000000.0
+1713,Hong Kong Exchanges,Hong Kong,3909000000.0
+1714,Genmab,Denmark,3900000000.0
+1715,China Three Gorges Renewables (Group),China,3893000000.0
+1716,Federal Bank,India,3879000000.0
+1717,Rollins,United States,3845000000.0
+1718,National Bank of Greece,Greece,3843000000.0
+1719,AGNC Investment,United States,3817000000.0
+1720,Bank Of Guiyang,China,3812000000.0
+1721,Geberit,Switzerland,3808000000.0
+1722,Metropolitan Bank & Trust,Philippines,3806000000.0
+1723,Galaxy Entertainment,Hong Kong,3796000000.0
+1724,China Development Bank Financial Leasing,China,3789000000.0
+1725,Teradyne,United States,3785000000.0
+1726,SouthState Bank,United States,3780000000.0
+1727,Waters,United States,3771000000.0
+1728,Bank of Qingdao,China,3770000000.0
+1729,Modon Holding PSC,United Arab Emirates,3765000000.0
+1730,Dr. Sulaiman Al-Habib Medical Services Group,Saudi Arabia,3728000000.0
+1731,Bank of Maharashtra,India,3715000000.0
+1732,ASM International,Netherlands,3704000000.0
+1733,Datadog,United States,3672000000.0
+1734,Everpure,United States,3663000000.0
+1735,Bank of Zhengzhou,China,3649000000.0
+1736,Arab Banking,Bahrain,3633000000.0
+1737,International Container Terminal Services,Philippines,3627000000.0
+1738,Orient Securities,China,3607000000.0
+1739,Curtiss Wright Corporation,United States,3606000000.0
+1740,Fukuoka Financial Group,Japan,3585000000.0
+1741,Shennan Circuit,China,3584000000.0
+1742,Cholamandalam Investment and Finance,India,3569000000.0
+1743,Tata Capital,India,3567000000.0
+1744,Nextpower,United States,3559000000.0
+1745,Muthoot Finance,India,3548000000.0
+1746,CIFI Holdings Group,China,3543000000.0
+1747,Banque Centrale Populaire,Morocco,3538000000.0
+1748,Moncler SpA,Italy,3535000000.0
+1749,Valley National Bancorp,United States,3523000000.0
+1750,Qilu Bank,China,3521000000.0
+1751,Nanya Technology,Taiwan,3515000000.0
+1752,United Utilities,United Kingdom,3506000000.0
+1753,Bank of Suzhou,China,3504000000.0
+1754,Vietnam Technological & Commercial Joint Stock Bank,Vietnam,3500000000.0
+1755,Unibail-Rodamco-Westfield ,France,3452000000.0
+1756,Credito Emiliano,Italy,3448000000.0
+1757,RHB Bank,Malaysia,3436000000.0
+1758,Elite Material,Taiwan,3423000000.0
+1759,Extra Space Storage,United States,3414000000.0
+1760,SITC International Holdings,Hong Kong,3412000000.0
+1761,Unicaja Banco,Spain,3407000000.0
+1762,BOK Financial,United States,3403000000.0
+1763,First National Of Nebraska,United States,3402000000.0
+1764,Columbia Banking System,United States,3398000000.0
+1765,Partners Group Holding,Switzerland,3377000000.0
+1766,Porsche Automobil Holding,Germany,3367000000.0
+1767,Bayan Resources,Indonesia,3361000000.0
+1768,XP,Brazil,3334000000.0
+1769,Sparebanken Vest,Norway,3320000000.0
+1770,Shionogi,Japan,3316000000.0
+1771,Henderson Land,Hong Kong,3304000000.0
+1772,Evolution Mining,Australia,3297000000.0
+1773,Commercial Bank of Qatar ,Qatar,3290000000.0
+1774,Luzhou Lao Jiao,China,3282000000.0
+1775,Bank of Guizhou,China,3282000000.0
+1776,Konami,Japan,3276000000.0
+1777,Banca Mediolanum,Italy,3268000000.0
+1778,LIC Housing Finance,India,3265000000.0
+1779,Bank of Queensland,Australia,3263000000.0
+1780,Chang Hwa Bank,Taiwan,3256000000.0
+1781,Zhejiang NHU,China,3253000000.0
+1782,Bendigo & Adelaide Bank,Australia,3239000000.0
+1783,MSCI,United States,3239000000.0
+1784,F5,United States,3225000000.0
+1785,Phison Electronics,Taiwan,3223000000.0
+1786,West Pharmaceutical Services,United States,3221000000.0
+1787,Dongguan Rural Commercial Bank,China,3212000000.0
+1788,Veeva Systems,United States,3195000000.0
+1789,China Huarong Asset Management,China,3191000000.0
+1790,Yokohama Financial Group,Japan,3180000000.0
+1791,Tele2,Sweden,3178000000.0
+1792,United Therapeutics,United States,3170000000.0
+1793,Banco BBVA Peru,Peru,3160000000.0
+1794,Celltrion,South Korea,3134000000.0
+1795,Equity Residential,United States,3134000000.0
+1796,EFG International,Switzerland,3127000000.0
+1797,Chailease Holding,Taiwan,3112000000.0
+1798,Verisk Analytics,United States,3102000000.0
+1799,Neurocrine Biosciences,United States,3102000000.0
+1800,SLM,United States,3099000000.0
+1801,Ubiquiti,United States,3096000000.0
+1802,Indian Railway Finance,India,3094000000.0
+1803,Navient,United States,3087000000.0
+1804,iM Financial Group,South Korea,3087000000.0
+1805,AvalonBay Communities,United States,3064000000.0
+1806,Bank of Africa,Morocco,3046000000.0
+1807,Bharat Electronics,India,3044000000.0
+1808,WuXi Biologics,China,3034000000.0
+1809,Dangote Cement,Nigeria,3033000000.0
+1810,Qatar Islamic Bank,Qatar,3030000000.0
+1811,SpareBank 1 SR-Bank,Norway,3029000000.0
+1812,Bank Albilad,Saudi Arabia,3022000000.0
+1813,Saudi Investment Bank,Saudi Arabia,3021000000.0
+1814,Adyen,Netherlands,3016000000.0
+1815,Arab Bank,Jordan,3008000000.0
+1816,Zscaler,United States,3001000000.0
+1817,PTC,United States,2998000000.0
+1818,Ho Chi Minh City Development Joint Stock Commercial Bank,Vietnam,2989000000.0
+1819,Axon Enterprise,United States,2983000000.0
+1820,"WUS PRINTED CIRCUIT (KUNSHAN) CO., LTD.",China,2974000000.0
+1821,Monolithic Power Systems,United States,2957000000.0
+1822,Lundbergs,Sweden,2948000000.0
+1823,Zhejiang Expressway ,China,2920000000.0
+1824,Cullen/Frost Bankers,United States,2918000000.0
+1825,Hong Leong Financial,Malaysia,2913000000.0
+1826,DISCO Corp.,Japan,2899000000.0
+1827,Victory Giant Technology,China,2890000000.0
+1828,Sterling Infrastructure,United States,2885000000.0
+1829,JB Financial Group,South Korea,2877000000.0
+1830,Circle,United States,2862000000.0
+1831,Bank of Xi'an,China,2860000000.0
+1832,SBA Communications,United States,2854000000.0
+1833,FTAI Aviation,United States,2837000000.0
+1834,Bank Aljazira,Saudi Arabia,2833000000.0
+1835,East Money Information  ,China,2827000000.0
+1836,NH Investment & Securities,South Korea,2825000000.0
+1837,Invitation Homes,United States,2811000000.0
+1838,Bank OZK,United States,2797000000.0
+1839,Asia Commercial Bank,Vietnam,2791000000.0
+1840,TMBThanachart Bank,Thailand,2772000000.0
+1841,Ibiden,Japan,2762000000.0
+1842,Check Point Software,Israel,2756000000.0
+1843,Wheaton Precious Metals,Canada,2746000000.0
+1844,Lion Finance Group,United Kingdom,2745000000.0
+1845,Commercial Bank Dubai,United Arab Emirates,2722000000.0
+1846,Weihai City Commercial Bank,China,2721000000.0
+1847,EQT AB,Sweden,2716000000.0
+1848,F.N.B.,United States,2699000000.0
+1849,Bank of Jiujiang,Hong Kong,2675000000.0
+1850,Qinghai Salt Lake Industry,China,2649000000.0
+1851,Jiangxi Bank,China,2638000000.0
+1852,Eicher Motors,India,2589000000.0
+1853,Jiangsu Changshu Rural Commercial Bank,China,2582000000.0
+1854,Transurban Group,Australia,2577000000.0
+1855,Coeur Mining,United States,2565000000.0
+1856,Cameco,Canada,2560000000.0
+1857,AlRayan Bank,Qatar,2555000000.0
+1858,Deutsche Pfandbriefbank,Germany,2554000000.0
+1859,Chiba Bank,Japan,2528000000.0
+1860,Qingdao Rural Commercial Bank,China,2508000000.0
+1861,Natera,United States,2501000000.0
+1862,SDIC Capital,China,2497000000.0
+1863,Lumentum Holdings,United States,2488000000.0
+1864,Associated Banc-Corp,United States,2476000000.0
+1865,Reddit,United States,2474000000.0
+1866,Mebuki Financial Group,Japan,2473000000.0
+1867,Shanghai Commercial & Savings Bank,Taiwan,2464000000.0
+1868,Bank of Lanzhou,China,2460000000.0
+1869,Shizuoka Financial Group,Japan,2459000000.0
+1870,China Merchants Port Group,China,2457000000.0
+1871,Wise,United Kingdom,2454000000.0
+1872,Bloom Energy,United States,2449000000.0
+1873,Royalty Pharma,United States,2441000000.0
+1874,Samsung Securities,South Korea,2406000000.0
+1875,Evolution Gaming Group AB,Sweden,2385000000.0
+1876,Bank Muscat,Oman,2369000000.0
+1877,Taiwan Business Bank,Taiwan,2368000000.0
+1878,Sun Communities,United States,2359000000.0
+1879,Biwin Storage Technology,China,2333000000.0
+1880,Cloudflare,United States,2329000000.0
+1881,National Bank of Ras Al-Khaimah (P.S.C.),United Arab Emirates,2258000000.0
+1882,FICO,United States,2256000000.0
+1883,Hygon Information Technology,China,2254000000.0
+1884,Alior Bank,Poland,2236000000.0
+1885,FinecoBank,Italy,2205000000.0
+1886,Commerce Bancshares,United States,2175000000.0
+1887,Kimco Realty,United States,2175000000.0
+1888,E-L Financial,Canada,2170000000.0
+1889,Tradeweb Markets,United States,2161000000.0
+1890,Sino-Ocean Group Holding,China,2150000000.0
+1891,TMX Group,Canada,2128000000.0
+1892,KakaoBank,South Korea,2122000000.0
+1893,Franco-Nevada,Canada,2102000000.0
+1894,CVC Capital Partners,United Kingdom,2091000000.0
+1895,Hansoh Pharmaceutical Group ,China,2091000000.0
+1896,ACWA Power,Saudi Arabia,2090000000.0
+1897,China Industrial Securities,China,2080000000.0
+1898,Kiwoom Securities,South Korea,2078000000.0
+1899,Nova Ljubljanska Banka,Slovenia,2073000000.0
+1900,Alamos Gold,Canada,2072000000.0
+1901,Airports of Thailand,Thailand,2055000000.0
+1902,Euronext,Netherlands,2053000000.0
+1903,AmBank Group,Malaysia,2023000000.0
+1904,Lundin Gold,Canada,1994000000.0
+1905,Starwood Property Trust,United States,1985000000.0
+1906,BG Financial Group,Panama,1950000000.0
+1907,B3,Brazil,1939000000.0
+1908,Xiamen Bank,China,1920000000.0
+1909,Klepierre,France,1869000000.0
+1910,Advanced Micro-Fabrication Equipment Inc. China,China,1848000000.0
+1911,Link REIT,Hong Kong,1819000000.0
+1912,Bank Of Gansu,China,1795000000.0
+1913,Prosperity Bancshares,United States,1790000000.0
+1914,Basler Kantonalbank,Switzerland,1777000000.0
+1915,Banque Cantonale Vaudoise,Switzerland,1772000000.0
+1916,Hachijuni Bank,Japan,1754000000.0
+1917,Aroundtown ,Luxembourg,1742000000.0
+1918,Scentre Group,Australia,1731000000.0
+1919,Jinshang Bank,China,1725000000.0
+1920,China Merchants Port Holdings,Hong Kong,1713000000.0
+1921,3i Group,United Kingdom,1690000000.0
+1922,VeriSign,United States,1683000000.0
+1923,Lasertec,Japan,1673000000.0
+1924,Fibra Uno,Mexico,1670000000.0
+1925,Covivio,France,1664000000.0
+1926,Sydbank,Denmark,1655000000.0
+1927,Hokuhoku Financial Group,Japan,1645000000.0
+1928,Founder Securities,China,1644000000.0
+1929,Kyushu Financial Group,Japan,1626000000.0
+1930,Giga Device Semiconductor,China,1624000000.0
+1931,Tower Semiconductor,Israel,1622000000.0
+1932,Gaming And Leisure Properties,United States,1620000000.0
+1933,Gunma Bank,Japan,1600000000.0
+1934,LEG Immobilien AG,Germany,1588000000.0
+1935,Aozora Bank,Japan,1552000000.0
+1936,Iyogin Holdings,Japan,1538000000.0
+1937,Itaúsa,Brazil,1537000000.0
+1938,Hirogin Holdings,Japan,1531000000.0
+1939,Chugin Financial Group ,Japan,1504000000.0
+1940,Yamaguchi Financial,Japan,1488000000.0
+1941,Fastighets Balder,Sweden,1460000000.0
+1942,Daishi Hokuetsu Financial Group,Japan,1435000000.0
+1943,Goodman Group,Australia,1434000000.0
+1944,Nishi-nippon Financial Holdings,Japan,1425000000.0
+1945,Kaisa Group Holdings,China,1324000000.0
+1946,Japan Exchange Group,Japan,1321000000.0
+1947,Royal Gold,United States,1306000000.0
+1948,Guangzhou Friendship Group,China,1296000000.0
+1949,New World Development,Hong Kong,1283000000.0
+1950,Luzerner Kantonalbank,Switzerland,1254000000.0
+1951,CapitaLand Integrated Commercial Trust ,Singapore,1251000000.0
+1952,Kyoto Financial Group,Japan,1250000000.0
+1953,North Pacific Bank,Japan,1187000000.0
+1954,CTP,Netherlands,1179000000.0
+1955,77 Bank,Japan,1171000000.0
+1956,Cambricon Technologies ,China,1164000000.0
+1957,Azrieli Group,Israel,1152000000.0
+1958,Industrivarden,Sweden,1096000000.0
+1959,Chroma Ate,Taiwan,1079000000.0
+1960,MACOM Technology Solutions Holdings,United States,1074000000.0
+1961,Credo Technology Group Holding,Cayman Islands,1068000000.0
+1962,St. Galler Kantonalbank,Switzerland,1045000000.0
+1963,San-In Godo Bank,Japan,1042000000.0
+1964,Astera Labs,United States,1001000000.0
+1965,Tokyo Kiraboshi Financial Group,Japan,989000000.0
+1966,Shiga Bank,Japan,964000000.0
+1967,Segro,United Kingdom,957000000.0
+1968,Yuzhou Group Holdings,China,947000000.0
+1969,Hyakugo Bank,Japan,927000000.0
+1970,SK Square,South Korea,919000000.0
+1971,SJ Semiconductor,China,907000000.0
+1972,Juroku  Financial Group,Japan,904000000.0
+1973,Jinke Property Group,China,897000000.0
+1974,Range Intelligent Computing Technology Group,China,889000000.0
+1975,Valiant Holding,Switzerland,882000000.0
+1976,Nebius Group,Netherlands,878000000.0
+1977,BEKB-BCBE,Switzerland,827000000.0
+1978,Montage Technology,China,802000000.0
+1979,Graubunder Ktbk,Switzerland,795000000.0
+1980,Suzhou TFC Optical Communication,China,781000000.0
+1981,Japan Securities Finance,Japan,733000000.0
+1982,Rocket Lab,United States,680000000.0
+1983,Avanza Bank Holding,Sweden,625000000.0
+1984,WHSP-WH Soul Pattinson & Co,Australia,599000000.0
+1985,Oi,Brazil,590000000.0
+1986,Zangge Mining,China,527000000.0
+1987,Cerebras Systems,United States,510000000.0
+1988,Strategy,United States,490000000.0
+1989,Capital A Berhad,Malaysia,480000000.0
+1990,DapuStor,China,465000000.0
+1991,MetaX Integrated Circuits (Shanghai),China,265000000.0
+1992,Moore Threads Technology,China,209000000.0
+1993,DCI Indonesia,Indonesia,158000000.0
+1994,Bajaj Holdings & Investment,India,127000000.0
+1995,Knowledge Atlas Technology Joint Stock,China,101000000.0
+1996,Power Assets Holdings,Hong Kong,99000000.0
+1997,Bolsa de Valores de Colombia,Colombia,90000000.0
+1998,MiniMax Group,China,79000000.0
+1999,Revolution Medicines,United States,0.0
+2000,Schweizerische Nationalbank,Switzerland,-13332000000.0

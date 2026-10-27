@@ -1,0 +1,5720 @@
+{
+  "scale": {
+    "metrics": {
+      "forbes_company_count": 2000,
+      "forbes_revenue_total": 55974135000000.0,
+      "forbes_profit_total": 5532390800000.0,
+      "forbes_assets_total": 272217698000000.0,
+      "forbes_market_cap_total": 121915565000000.0,
+      "forbes_employees_total": 82224162.0,
+      "forbes_blended_margin": 0.09883834381719342,
+      "forbes_loss_makers": 127,
+      "forbes_loss_maker_share": 0.0635,
+      "revenue_distribution": {
+        "n": 2000,
+        "mean": 27987067500.0,
+        "median": 13904500000.0,
+        "std": 51108368192.09329,
+        "min": -13332000000.0,
+        "p10": 3098700000.0,
+        "p25": 6368250000.0,
+        "p75": 27252250000.0,
+        "p90": 63345200000.00004,
+        "p99": 277940890000.0,
+        "max": 742776000000.0,
+        "sum": 55974135000000.0,
+        "skew": 6.1404518239487285,
+        "kurtosis": 54.935975427282386,
+        "cv": 1.8261423134843724,
+        "mean_to_median": 2.012806465532741
+      },
+      "profit_distribution": {
+        "n": 2000,
+        "mean": 2766195400.0,
+        "median": 1113550000.0,
+        "std": 8413383302.897804,
+        "min": -25244000000.0,
+        "p10": 172450000.0,
+        "p25": 587800000.0,
+        "p75": 2490000000.0,
+        "p90": 5534700000.000001,
+        "p99": 25316221999.999996,
+        "max": 160208000000.0,
+        "sum": 5532390800000.0,
+        "skew": 10.539767944902795,
+        "kurtosis": 145.64979573334455,
+        "cv": 3.0414999977578607,
+        "mean_to_median": 2.4841232095550265
+      },
+      "employees_distribution": {
+        "n": 1634,
+        "mean": 50320.78457772338,
+        "median": 22310.5,
+        "std": 100715.12149889182,
+        "min": 15.0,
+        "p10": 2914.4000000000005,
+        "p25": 8101.75,
+        "p75": 52888.75,
+        "p90": 112688.80000000002,
+        "p99": 412600.1400000003,
+        "max": 2100000.0,
+        "sum": 82224162.0,
+        "skew": 9.28476813673189,
+        "kurtosis": 145.4395296784177,
+        "cv": 2.0014616692498395,
+        "mean_to_median": 2.255475429852463
+      },
+      "market_cap_distribution": {
+        "n": 2000,
+        "mean": 60957782500.0,
+        "median": 21836500000.0,
+        "std": 242607192103.5491,
+        "min": 30000000.0,
+        "p10": 4839800000.0,
+        "p25": 10832500000.0,
+        "p75": 46848500000.0,
+        "p90": 107903500000.00006,
+        "p99": 585952819999.9998,
+        "max": 5475276000000.0,
+        "sum": 121915565000000.0,
+        "skew": 15.116812044780163,
+        "kurtosis": 275.635819378902,
+        "cv": 3.979921548221494,
+        "mean_to_median": 2.7915546218487397
+      },
+      "concentration": {
+        "hhi_revenue": 21.654757700972954,
+        "hhi_profit": 46.821378279641195,
+        "gini_revenue": 0.6109308188295071,
+        "gini_profit": 0.6797902960830116,
+        "top10_revenue_share": 0.08600335500086118,
+        "top50_revenue_share": 0.24836231651630175,
+        "top100_revenue_share": 0.3540368775747615,
+        "top500_revenue_share": 0.7072995997479221,
+        "top1000_revenue_share": 0.8800973617899163,
+        "top100_profit_share": 0.45041612080679794,
+        "top500_profit_share": 0.7630134168495313,
+        "firms_for_50pct_revenue": 207,
+        "firms_for_80pct_revenue": 727,
+        "firms_for_90pct_revenue": 1085,
+        "firms_for_95pct_revenue": 1358
+      },
+      "zipf_revenue": {
+        "exponent": 0.87116095933242,
+        "intercept": 29.07978201593768,
+        "r2": 0.525556431854654,
+        "n": 1998
+      },
+      "zipf_market_cap": {
+        "exponent": 1.1782635202189453,
+        "intercept": 31.606857812509514,
+        "r2": 0.8187737434762556,
+        "n": 2000
+      },
+      "revenue_thresholds": {
+        "gt_1b": 1964,
+        "gt_10b": 1233,
+        "gt_50b": 262,
+        "gt_100b": 87,
+        "gt_250b": 24,
+        "gt_500b": 2
+      },
+      "profit_thresholds": {
+        "gt_1b": 1104,
+        "gt_10b": 93,
+        "gt_25b": 22,
+        "gt_50b": 13
+      },
+      "truncation": {
+        "measured_firms": 13836,
+        "measured_firms_revenue": 123284713291040.0,
+        "forbes_revenue": 55974135000000.0,
+        "revenue_beyond_forbes": 28911249833040.0,
+        "share_beyond_forbes": 0.23450798611818804,
+        "firms_beyond_1b": 3774,
+        "firms_beyond_10b": 436,
+        "firms_beyond_50b": 68,
+        "firms_beyond_100b": 26,
+        "largest_beyond_10b": 436,
+        "top_beyond_forbes": [
+          {
+            "company": "AMAZON.COM, INC.",
+            "country": "United States",
+            "revenue_musd": 716924.0,
+            "sector": "Unclassified"
+          },
+          {
+            "company": "Saudi Aramco",
+            "country": "Saudi Arabia",
+            "revenue_musd": 487870.0,
+            "sector": "Unclassified"
+          },
+          {
+            "company": "UnitedHealth Group Incorporated",
+            "country": "United States",
+            "revenue_musd": 447567.0,
+            "sector": "Unclassified"
+          },
+          {
+            "company": "Toyota",
+            "country": "Japan",
+            "revenue_musd": 332270.0,
+            "sector": "Unclassified"
+          },
+          {
+            "company": "Exxon Mobil Corporation",
+            "country": "United States",
+            "revenue_musd": 332238.0,
+            "sector": "Unclassified"
+          },
+          {
+            "company": "Samsung",
+            "country": "South Korea",
+            "revenue_musd": 326380.0,
+            "sector": "Unclassified"
+          },
+          {
+            "company": "Foxconn (Hon Hai Precision Industry)",
+            "country": "Taiwan",
+            "revenue_musd": 296760.0,
+            "sector": "Unclassified"
+          },
+          {
+            "company": "COSTCO WHOLESALE CORP /NEW",
+            "country": "United States",
+            "revenue_musd": 275235.0,
+            "sector": "Unclassified"
+          },
+          {
+            "company": "The Cigna Group",
+            "country": "United States",
+            "revenue_musd": 274900.0,
+            "sector": "Unclassified"
+          },
+          {
+            "company": "Glencore",
+            "country": "Switzerland",
+            "revenue_musd": 247530.0,
+            "sector": "Unclassified"
+          },
+          {
+            "company": "Exor",
+            "country": "Netherlands",
+            "revenue_musd": 223050.0,
+            "sector": "Unclassified"
+          },
+          {
+            "company": "JPMorgan Chase",
+            "country": "United States",
+            "revenue_musd": 194910.0,
+            "sector": "Unclassified"
+          },
+          {
+            "company": "Ford",
+            "country": "United States",
+            "revenue_musd": 187970.0,
+            "sector": "Unclassified"
+          },
+          {
+            "company": "JPMorgan Chase & Co",
+            "country": "United States",
+            "revenue_musd": 182447.0,
+            "sector": "Unclassified"
+          },
+          {
+            "company": "Foxconn Industrial Internet",
+            "country": "China",
+            "revenue_musd": 152270.0,
+            "sector": "Unclassified"
+          },
+          {
+            "company": "Alibaba Group Holding Limited",
+            "country": "China",
+            "revenue_musd": 148401.0,
+            "sector": "Unclassified"
+          },
+          {
+            "company": "WALGREENS BOOTS ALLIANCE, INC.",
+            "country": "United States",
+            "revenue_musd": 147658.0,
+            "sector": "Unclassified"
+          },
+          {
+            "company": "Gazprom",
+            "country": "Russia",
+            "revenue_musd": 146830.0,
+            "sector": "Unclassified"
+          },
+          {
+            "company": "Honda",
+            "country": "Japan",
+            "revenue_musd": 143890.0,
+            "sector": "Unclassified"
+          },
+          {
+            "company": "Hyundai",
+            "country": "South Korea",
+            "revenue_musd": 128210.00000000001,
+            "sector": "Unclassified"
+          },
+          {
+            "company": "VALERO ENERGY CORP/TX",
+            "country": "United States",
+            "revenue_musd": 122687.0,
+            "sector": "Unclassified"
+          },
+          {
+            "company": "TSMC",
+            "country": "Taiwan",
+            "revenue_musd": 121910.0,
+            "sector": "Unclassified"
+          },
+          {
+            "company": "Rosneft",
+            "country": "Russia",
+            "revenue_musd": 111100.0,
+            "sector": "Unclassified"
+          },
+          {
+            "company": "Life Insurance Corporation of India (LIC)",
+            "country": "India",
+            "revenue_musd": 107430.0,
+            "sector": "Unclassified"
+          },
+          {
+            "company": "Ahold Delhaize",
+            "country": "Netherlands",
+            "revenue_musd": 106210.0,
+            "sector": "Unclassified"
+          }
+        ]
+      },
+      "zipf_merged": {
+        "exponent": 2.358950115918361,
+        "intercept": 40.57454288243433,
+        "r2": 0.6166252845097135,
+        "n": 13836
+      },
+      "concentration_merged": {
+        "hhi_revenue": 8.827062338792558,
+        "gini_revenue": 0.8222585550410253,
+        "top100_revenue_share": 0.22333629274864114,
+        "top1000_revenue_share": 0.6348218403869866,
+        "firms_for_80pct_revenue": 2086
+      },
+      "pareto_alpha_above_1b": 0.5257216087046013,
+      "pareto_tail_estimate_above_1b": NaN
+    },
+    "insights": [
+      "Forbes' Global 2000 holds **55.97 T$** of revenue across 2,000 firms, **9.9%** of which is profit. 127 firms (6.3%) lose money.",
+      "Concentration is steep but not a monopoly: the top 100 firms hold **35.4%** of revenue, the top 500 hold **70.7%**, and it takes **207** firms to reach half the total. HHI on revenue is **22** points and the Gini is **0.61**.",
+      "The rank-size curve fits a power law with a Zipf exponent of **0.87** (R² = 0.526), i.e. roughly Zipf-like, so firm size decays smoothly rather than through a single dominant tier.",
+      "**The list is truncated, and it matters.** Merging the 2,000 Forbes firms with the 11,836 listed companies we can measure individually adds **28.91 T$** of revenue that the Global 2000 never mentions — **23.5%** of everything measurable. Among those are **436** firms above $10B.",
+      "Profit concentration exceeds revenue concentration: the top 100 firms capture **45.0%** of all profit versus **35.4%** of revenue."
+    ],
+    "tables": [
+      "rank_size",
+      "thresholds",
+      "top20",
+      "top_beyond_forbes"
+    ]
+  },
+  "geography": {
+    "metrics": {
+      "gdp_correlation": {
+        "forbes": {
+          "label": "Forbes Global 2000 only",
+          "n": 61,
+          "spearman_r": 0.8223162347964039,
+          "spearman_p": 4.459611871690925e-16,
+          "pearson_r": 0.9711636950768829,
+          "pearson_p": 1.9475620034001235e-38
+        },
+        "mixed": {
+          "label": "All sources reconciled",
+          "n": 81,
+          "spearman_r": 0.860869570706859,
+          "spearman_p": 6.8220408357190615e-25,
+          "pearson_r": 0.9711669311933038,
+          "pearson_p": 5.907443723945455e-51
+        }
+      },
+      "over_indexed_forbes": [
+        {
+          "country": "Hong Kong SAR, China",
+          "companies": 40,
+          "revenue_usd": 812682000000.0,
+          "gdp_usd": 408368682415.423,
+          "revenue_share": 0.014518884481198325,
+          "gdp_share": 0.003992680282290522,
+          "index_vs_gdp": 3.6363754307091996
+        },
+        {
+          "country": "Switzerland",
+          "companies": 46,
+          "revenue_usd": 1169294000000.0,
+          "gdp_usd": 969919786394.884,
+          "revenue_share": 0.020889898521879793,
+          "gdp_share": 0.009483047484534607,
+          "index_vs_gdp": 2.2028676494500328
+        },
+        {
+          "country": "Luxembourg",
+          "companies": 6,
+          "revenue_usd": 103904000000.0,
+          "gdp_usd": 93279851863.4062,
+          "revenue_share": 0.001856285943498725,
+          "gdp_share": 0.000912010742516079,
+          "index_vs_gdp": 2.035377278975415
+        },
+        {
+          "country": "Japan",
+          "companies": 178,
+          "revenue_usd": 4430200000000.0,
+          "gdp_usd": 4190008188358.57,
+          "revenue_share": 0.07914727043124471,
+          "gdp_share": 0.040966322337315626,
+          "index_vs_gdp": 1.9320081939391132
+        },
+        {
+          "country": "Korea, Rep.",
+          "companies": 66,
+          "revenue_usd": 1849555000000.0,
+          "gdp_usd": 1875388209406.8,
+          "revenue_share": 0.033043029606442335,
+          "gdp_share": 0.018335944571090997,
+          "index_vs_gdp": 1.8020903956341017
+        },
+        {
+          "country": "United States",
+          "companies": 595,
+          "revenue_usd": 20955310000000.0,
+          "gdp_usd": 29298013000000.0,
+          "revenue_share": 0.3743748786828059,
+          "gdp_share": 0.2864509543765481,
+          "index_vs_gdp": 1.3069423332787338
+        },
+        {
+          "country": "Ireland",
+          "companies": 18,
+          "revenue_usd": 402251000000.0,
+          "gdp_usd": 609157459747.205,
+          "revenue_share": 0.0071863727773551125,
+          "gdp_share": 0.0059558214992320654,
+          "index_vs_gdp": 1.206613189848237
+        },
+        {
+          "country": "Sweden",
+          "companies": 29,
+          "revenue_usd": 388094000000.0,
+          "gdp_usd": 604827393488.582,
+          "revenue_share": 0.006933452388321856,
+          "gdp_share": 0.005913485808675296,
+          "index_vs_gdp": 1.1724814454023433
+        },
+        {
+          "country": "Netherlands",
+          "companies": 25,
+          "revenue_usd": 765860000000.0,
+          "gdp_usd": 1213936238063.28,
+          "revenue_share": 0.013682390982906658,
+          "gdp_share": 0.011868831990261697,
+          "index_vs_gdp": 1.1528001233931844
+        },
+        {
+          "country": "France",
+          "companies": 44,
+          "revenue_usd": 1966900000000.0,
+          "gdp_usd": 3160442622465.08,
+          "revenue_share": 0.035139444316557994,
+          "gdp_share": 0.03090010935067312,
+          "index_vs_gdp": 1.1371948208265006
+        },
+        {
+          "country": "Canada",
+          "companies": 64,
+          "revenue_usd": 1371539000000.0,
+          "gdp_usd": 2270076189683.46,
+          "revenue_share": 0.024503085219628674,
+          "gdp_share": 0.022194866629429953,
+          "index_vs_gdp": 1.1039978580965235
+        },
+        {
+          "country": "United Kingdom",
+          "companies": 63,
+          "revenue_usd": 2140764000000.0,
+          "gdp_usd": 3695539513534.15,
+          "revenue_share": 0.03824559325481314,
+          "gdp_share": 0.03613182984757709,
+          "index_vs_gdp": 1.0585014214932653
+        },
+        {
+          "country": "Denmark",
+          "companies": 12,
+          "revenue_usd": 238193000000.0,
+          "gdp_usd": 424524722037.047,
+          "revenue_share": 0.004255411896941328,
+          "gdp_share": 0.004150640242529448,
+          "index_vs_gdp": 1.0252422875243052
+        },
+        {
+          "country": "Germany",
+          "companies": 50,
+          "revenue_usd": 2395122000000.0,
+          "gdp_usd": 4685592577804.69,
+          "revenue_share": 0.042789799252815605,
+          "gdp_share": 0.04581172333194827,
+          "index_vs_gdp": 0.9340360095769366
+        },
+        {
+          "country": "Saudi Arabia",
+          "companies": 17,
+          "revenue_usd": 607306000000.0,
+          "gdp_usd": 1254140800000.0,
+          "revenue_share": 0.010849761233469708,
+          "gdp_share": 0.01226191786735051,
+          "index_vs_gdp": 0.8848339510052572
+        }
+      ],
+      "under_indexed_forbes": [
+        {
+          "country": "Romania",
+          "companies": 1,
+          "revenue_usd": 3985000000.0,
+          "gdp_usd": 382564217988.866,
+          "revenue_share": 7.119359682824933e-05,
+          "gdp_share": 0.0037403862628236414,
+          "index_vs_gdp": 0.01903375529309768
+        },
+        {
+          "country": "Nigeria",
+          "companies": 1,
+          "revenue_usd": 3033000000.0,
+          "gdp_usd": 252261880140.271,
+          "revenue_share": 5.4185741324988765e-05,
+          "gdp_share": 0.002466401264788947,
+          "index_vs_gdp": 0.021969556251271834
+        },
+        {
+          "country": "Egypt, Arab Rep.",
+          "companies": 1,
+          "revenue_usd": 4762000000.0,
+          "gdp_usd": 389059910593.1,
+          "revenue_share": 8.507500830517524e-05,
+          "gdp_share": 0.003803895598621243,
+          "index_vs_gdp": 0.02236523219407269
+        },
+        {
+          "country": "Pakistan",
+          "companies": 1,
+          "revenue_usd": 4759000000.0,
+          "gdp_usd": 371747087751.306,
+          "revenue_share": 8.502141212186665e-05,
+          "gdp_share": 0.0036346255997996854,
+          "index_vs_gdp": 0.02339206880800939
+        },
+        {
+          "country": "Oman",
+          "companies": 1,
+          "revenue_usd": 2369000000.0,
+          "gdp_usd": 107137198699.61,
+          "revenue_share": 4.2323119419353246e-05,
+          "gdp_share": 0.0010474960474873552,
+          "index_vs_gdp": 0.04040408507590493
+        },
+        {
+          "country": "Panama",
+          "companies": 1,
+          "revenue_usd": 1950000000.0,
+          "gdp_usd": 86523959100.0,
+          "revenue_share": 3.483751915058625e-05,
+          "gdp_share": 0.0008459573917395836,
+          "index_vs_gdp": 0.04118117471489687
+        },
+        {
+          "country": "Slovenia",
+          "companies": 1,
+          "revenue_usd": 2073000000.0,
+          "gdp_usd": 72972015197.3859,
+          "revenue_share": 3.703496266623861e-05,
+          "gdp_share": 0.0007134580558780953,
+          "index_vs_gdp": 0.051909095932286424
+        },
+        {
+          "country": "Czechia",
+          "companies": 1,
+          "revenue_usd": 14349000000.0,
+          "gdp_usd": 347082562221.377,
+          "revenue_share": 0.0002563505447650062,
+          "gdp_share": 0.0033934769295027307,
+          "index_vs_gdp": 0.07554215045233002
+        },
+        {
+          "country": "Peru",
+          "companies": 2,
+          "revenue_usd": 12067000000.0,
+          "gdp_usd": 291751523018.903,
+          "revenue_share": 0.00021558171466160218,
+          "gdp_share": 0.0028524972737767646,
+          "index_vs_gdp": 0.07557648403154041
+        },
+        {
+          "country": "Argentina",
+          "companies": 2,
+          "revenue_usd": 27944000000.0,
+          "gdp_usd": 638365455340.04,
+          "revenue_share": 0.0004992305821251191,
+          "gdp_share": 0.006241392340264651,
+          "index_vs_gdp": 0.07998705335418001
+        },
+        {
+          "country": "Jordan",
+          "companies": 1,
+          "revenue_usd": 3008000000.0,
+          "gdp_usd": 58618380563.3803,
+          "revenue_share": 5.3739106464083814e-05,
+          "gdp_share": 0.0005731204725859049,
+          "index_vs_gdp": 0.09376581196203713
+        },
+        {
+          "country": "Kazakhstan",
+          "companies": 2,
+          "revenue_usd": 14996000000.0,
+          "gdp_usd": 291480274648.826,
+          "revenue_share": 0.00026790945496522634,
+          "gdp_share": 0.0028498452388253962,
+          "index_vs_gdp": 0.09400842239266613
+        },
+        {
+          "country": "Indonesia",
+          "companies": 9,
+          "revenue_usd": 76276000000.0,
+          "gdp_usd": 1396301788461.69,
+          "revenue_share": 0.0013627008260154445,
+          "gdp_share": 0.013651846625316606,
+          "index_vs_gdp": 0.09981805856860346
+        },
+        {
+          "country": "Morocco",
+          "companies": 3,
+          "revenue_usd": 11688000000.0,
+          "gdp_usd": 160610994054.734,
+          "revenue_share": 0.00020881073017028312,
+          "gdp_share": 0.0015703171587214686,
+          "index_vs_gdp": 0.13297360282319914
+        },
+        {
+          "country": "Viet Nam",
+          "companies": 9,
+          "revenue_usd": 52194000000.0,
+          "gdp_usd": 476324572783.807,
+          "revenue_share": 0.0009324663972029224,
+          "gdp_share": 0.0046570949527165225,
+          "index_vs_gdp": 0.20022490558389988
+        }
+      ],
+      "regions": {
+        "forbes": [
+          {
+            "region": "North America",
+            "countries": 4,
+            "companies": 668,
+            "revenue_usd": 22650474000000.0,
+            "profit_usd": 2511998800000.0,
+            "market_cap_usd": 71371756000000.0,
+            "employees": 32658326.0,
+            "revenue_share": 0.4046596521768492,
+            "profit_margin": 0.11090270340479409,
+            "revenue_per_employee": 693558.9411410738,
+            "countries_count": 4
+          },
+          {
+            "region": "Asia-Pacific",
+            "countries": 13,
+            "companies": 787,
+            "revenue_usd": 19008369000000.0,
+            "profit_usd": 1700799800000.0,
+            "market_cap_usd": 27421174000000.0,
+            "employees": 24437195.0,
+            "revenue_share": 0.3395920097738,
+            "profit_margin": 0.08947636696236273,
+            "revenue_per_employee": 777845.7797631847,
+            "countries_count": 13
+          },
+          {
+            "region": "Europe",
+            "countries": 23,
+            "companies": 409,
+            "revenue_usd": 12040679000000.0,
+            "profit_usd": 984935000000.0,
+            "market_cap_usd": 18003085000000.0,
+            "employees": 22287417.0,
+            "revenue_share": 0.21511147961464702,
+            "profit_margin": 0.08180061938367429,
+            "revenue_per_employee": 540245.6013633163,
+            "countries_count": 23
+          },
+          {
+            "region": "Latin America",
+            "countries": 8,
+            "companies": 55,
+            "revenue_usd": 1071328000000.0,
+            "profit_usd": 96694300000.0,
+            "market_cap_usd": 1421768000000.0,
+            "employees": 2230756.0,
+            "revenue_share": 0.01913969729054321,
+            "profit_margin": 0.0902564854087637,
+            "revenue_per_employee": 480253.3311576882,
+            "countries_count": 8
+          },
+          {
+            "region": "Middle East & Central Asia",
+            "countries": 10,
+            "companies": 64,
+            "revenue_usd": 1041337000000.0,
+            "profit_usd": 213699300000.0,
+            "market_cap_usd": 3418152000000.0,
+            "employees": 323417.0,
+            "revenue_share": 0.018603896246007195,
+            "profit_margin": 0.20521627484666347,
+            "revenue_per_employee": 3219796.733010324,
+            "countries_count": 10
+          },
+          {
+            "region": "Africa",
+            "countries": 4,
+            "companies": 17,
+            "revenue_usd": 161948000000.0,
+            "profit_usd": 24263600000.0,
+            "market_cap_usd": 279630000000.0,
+            "employees": 287051.0,
+            "revenue_share": 0.0028932648981534062,
+            "profit_margin": 0.14982340010373701,
+            "revenue_per_employee": 564178.4909301831,
+            "countries_count": 4
+          }
+        ],
+        "mixed": [
+          {
+            "region": "North America",
+            "countries": 4,
+            "companies": 7169,
+            "revenue_usd": 35354536286791.0,
+            "profit_usd": 2722123900000.0,
+            "market_cap_usd": 99281890691624.0,
+            "employees": 39067909.0,
+            "revenue_share": 0.3852040114538544,
+            "profit_margin": 0.07699503899354006,
+            "revenue_per_employee": 904950.8200398184,
+            "countries_count": 4
+          },
+          {
+            "region": "Asia-Pacific",
+            "countries": 15,
+            "companies": 3744,
+            "revenue_usd": 32506453977255.0,
+            "profit_usd": 1989926000000.0,
+            "market_cap_usd": 47184036168943.0,
+            "employees": 38041695.0,
+            "revenue_share": 0.35417283848966774,
+            "profit_margin": 0.061216335728048514,
+            "revenue_per_employee": 854495.4155500957,
+            "countries_count": 15
+          },
+          {
+            "region": "Europe",
+            "countries": 35,
+            "companies": 2823,
+            "revenue_usd": 19266990905636.188,
+            "profit_usd": 1125496000000.0,
+            "market_cap_usd": 26742799973755.0,
+            "employees": 26651852.0,
+            "revenue_share": 0.20992276988989558,
+            "profit_margin": 0.05841576432523035,
+            "revenue_per_employee": 722913.7737083407,
+            "countries_count": 35
+          },
+          {
+            "region": "Middle East & Central Asia",
+            "countries": 11,
+            "companies": 862,
+            "revenue_usd": 2187906649110.0,
+            "profit_usd": 324248600000.0,
+            "market_cap_usd": 7037159339738.0,
+            "employees": 531000.0,
+            "revenue_share": 0.023838254052807706,
+            "profit_margin": 0.1482003814613838,
+            "revenue_per_employee": 4120351.504915254,
+            "countries_count": 11
+          },
+          {
+            "region": "Latin America",
+            "countries": 12,
+            "companies": 249,
+            "revenue_usd": 2119561946000.0,
+            "profit_usd": 109559300000.0,
+            "market_cap_usd": 2636688765467.0,
+            "employees": 3354273.0,
+            "revenue_share": 0.023093606927866325,
+            "profit_margin": 0.051689595676483235,
+            "revenue_per_employee": 631899.057113121,
+            "countries_count": 12
+          },
+          {
+            "region": "Africa",
+            "countries": 6,
+            "companies": 89,
+            "revenue_usd": 345879701000.0,
+            "profit_usd": 32420600000.0,
+            "market_cap_usd": 504938200038.0,
+            "employees": 287051.0,
+            "revenue_share": 0.003768519185908206,
+            "profit_margin": 0.0937337458840928,
+            "revenue_per_employee": 1204941.6340650269,
+            "countries_count": 6
+          }
+        ]
+      },
+      "national_concentration": {
+        "forbes_hhi": 1765.3575390564638,
+        "mixed_hhi": 1613.466612740384,
+        "forbes_top1_share": 0.3743748786828059,
+        "forbes_top5_share": 0.680306287895293,
+        "forbes_top10_share": 0.8177518777199505,
+        "mixed_top10_share": 0.7890677873465244,
+        "forbes_gini": 0.8200171748681262,
+        "mixed_gini": 0.8456594506345212
+      },
+      "coverage_gaps": {
+        "countries_in_mixed_not_in_forbes": 21,
+        "revenue_in_gaps": 730984872863.1887,
+        "largest_gaps": [
+          {
+            "country": "Russian Federation",
+            "companies": 18,
+            "revenue_usd": 541542400000.0
+          },
+          {
+            "country": "Turks and Caicos Islands",
+            "companies": 1,
+            "revenue_usd": 80581000000.0
+          },
+          {
+            "country": "New Zealand",
+            "companies": 52,
+            "revenue_usd": 60569410000.0
+          },
+          {
+            "country": "Iceland",
+            "companies": 26,
+            "revenue_usd": 12284750000.0
+          },
+          {
+            "country": "Lithuania",
+            "companies": 35,
+            "revenue_usd": 8252940023.18868
+          },
+          {
+            "country": "Isle of Man",
+            "companies": 2,
+            "revenue_usd": 7970000000.0
+          },
+          {
+            "country": "Cyprus",
+            "companies": 3,
+            "revenue_usd": 5581081840.0
+          },
+          {
+            "country": "Estonia",
+            "companies": 10,
+            "revenue_usd": 5334080000.0
+          },
+          {
+            "country": "Monaco",
+            "companies": 5,
+            "revenue_usd": 4329266000.0
+          },
+          {
+            "country": "Bulgaria",
+            "companies": 1,
+            "revenue_usd": 1620000000.0
+          },
+          {
+            "country": "Liechtenstein",
+            "companies": 3,
+            "revenue_usd": 1190000000.0
+          },
+          {
+            "country": "Bahamas, The",
+            "companies": 1,
+            "revenue_usd": 961001000.0
+          },
+          {
+            "country": "Cambodia",
+            "companies": 6,
+            "revenue_usd": 304260000.0
+          },
+          {
+            "country": "Costa Rica",
+            "companies": 1,
+            "revenue_usd": 211076000.0
+          },
+          {
+            "country": "Gibraltar",
+            "companies": 1,
+            "revenue_usd": 176488000.0
+          }
+        ]
+      },
+      "map_totals": {
+        "countries_with_firms": 83,
+        "total_revenue_usd": 91781329465792.17
+      }
+    },
+    "insights": [
+      "Country size tracks corporate size, but loosely. Across the 61 countries Forbes covers, the correlation between a country's share of world GDP and its share of Global-2000 revenue is **ρ = 0.82** (p = <0.001).",
+      "Mixing in the Fortune 500, the Wikipedia country lists and the listed universe *raises* that correlation to **ρ = 0.86** (p = <0.001) -- the Forbes list alone was distorting the map, and mixing the sources repairs part of the distortion.",
+      "National concentration is extreme. One country holds **37.4%** of the revenue in Forbes' list, the top five hold **68.0%** and the top ten **81.8%**. National HHI on revenue is **1765** points (mixed view: 1613).",
+      "**21 countries** appear in the mixed view with no representative at all in Forbes' 2,000, together worth **$731B**. The largest such gaps are Russian Federation ($542B), Turks and Caicos Islands ($81B), New Zealand ($61B), Iceland ($12B), Lithuania ($8B)."
+    ],
+    "tables": [
+      "country_forbes",
+      "country_mixed",
+      "map",
+      "over_under",
+      "regions_forbes",
+      "regions_mixed"
+    ]
+  },
+  "ownership": {
+    "metrics": {
+      "ownership": {
+        "forbes": [
+          {
+            "ownership": "public",
+            "companies": 2000,
+            "revenue_usd": 55974135000000.0,
+            "profit_usd": 5532390800000.0,
+            "market_cap_usd": 121915565000000.0,
+            "employees": 82224162.0,
+            "profit_margin": 0.09883834381719342,
+            "revenue_per_employee": 680750.4465658161,
+            "revenue_share": 1.0,
+            "profit_share": 1.0
+          }
+        ],
+        "mixed": [
+          {
+            "ownership": "state",
+            "companies": 57,
+            "revenue_usd": 4094791838000.0,
+            "profit_usd": 146041700000.0,
+            "market_cap_usd": 280662590988.0,
+            "employees": 9970689.0,
+            "profit_margin": 0.03566523178167964,
+            "revenue_per_employee": 410682.93655533734,
+            "revenue_share": 0.04052245072895294,
+            "profit_share": 0.022137819693286535
+          },
+          {
+            "ownership": "mutual",
+            "companies": 15,
+            "revenue_usd": 888501008000.0,
+            "profit_usd": 48832100000.0,
+            "market_cap_usd": 0.0,
+            "employees": 1066871.0,
+            "profit_margin": 0.05496009521690942,
+            "revenue_per_employee": 832810.1598037626,
+            "revenue_share": 0.008792690750524306,
+            "profit_share": 0.007402243503359228
+          },
+          {
+            "ownership": "pe",
+            "companies": 1442,
+            "revenue_usd": 188863089452.0,
+            "profit_usd": 951000000.0,
+            "market_cap_usd": 87098651187.0,
+            "employees": 188615.0,
+            "profit_margin": 0.0050353936428732355,
+            "revenue_per_employee": 1001315.3219627283,
+            "revenue_share": 0.001869007153383044,
+            "profit_share": 0.00014415791194101064
+          },
+          {
+            "ownership": "public",
+            "companies": 12992,
+            "revenue_usd": 85392914143317.0,
+            "profit_usd": 6172687300000.0,
+            "market_cap_usd": 183082319835303.0,
+            "employees": 98650151.0,
+            "profit_margin": 0.07228570850316958,
+            "revenue_per_employee": 865613.6182023381,
+            "revenue_share": 0.845056426034195,
+            "profit_share": 0.9356905491406885
+          },
+          {
+            "ownership": "private",
+            "companies": 338,
+            "revenue_usd": 5285196300000.0,
+            "profit_usd": 82005300000.0,
+            "market_cap_usd": 37182000000.0,
+            "employees": 10249809.0,
+            "profit_margin": 0.015516036745882079,
+            "revenue_per_employee": 515638.5158006359,
+            "revenue_share": 0.05230280686605061,
+            "profit_share": 0.012430823150469148
+          },
+          {
+            "ownership": "unknown",
+            "companies": 324,
+            "revenue_usd": 5199689000023.188,
+            "profit_usd": 146415000000.0,
+            "market_cap_usd": 1285970000000.0,
+            "employees": 2005226.0,
+            "profit_margin": 0.028158414858916955,
+            "revenue_per_employee": 2593068.811207908,
+            "revenue_share": 0.05145661846689416,
+            "profit_share": 0.0221944066002556
+          }
+        ]
+      },
+      "state_revenue_mixed": 4094791838000.0,
+      "state_companies_mixed": 57,
+      "invisible_giants": {
+        "count_with_revenue": 11026,
+        "total_revenue": 46615366063063.19,
+        "count_over_10b": 738,
+        "count_over_50b": 184,
+        "top_30": [
+          {
+            "company": "AMAZON.COM, INC.",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_musd": 716924.0,
+            "profit_musd": NaN,
+            "source": "listed"
+          },
+          {
+            "company": "State Grid",
+            "country": null,
+            "ownership": "state",
+            "sector": "Energy & Utilities",
+            "revenue_musd": 555371.4,
+            "profit_musd": 11116.2,
+            "source": "fortune"
+          },
+          {
+            "company": "UnitedHealth Group Incorporated",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_musd": 447567.0,
+            "profit_musd": NaN,
+            "source": "listed"
+          },
+          {
+            "company": "Saudi Aramco",
+            "country": "Saudi Arabia",
+            "ownership": "public",
+            "sector": "Energy & Utilities",
+            "revenue_musd": 445528.7,
+            "profit_musd": 92785.0,
+            "source": "fortune"
+          },
+          {
+            "company": "China National Petroleum",
+            "country": null,
+            "ownership": "state",
+            "sector": "Energy & Utilities",
+            "revenue_musd": 401927.0,
+            "profit_musd": 21159.2,
+            "source": "fortune"
+          },
+          {
+            "company": "Vitol",
+            "country": "World (private)",
+            "ownership": "unknown",
+            "sector": "Unclassified",
+            "revenue_musd": 400000.0,
+            "profit_musd": NaN,
+            "source": "wiki"
+          },
+          {
+            "company": "Exxon Mobil Corporation",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_musd": 332238.0,
+            "profit_musd": 28844.0,
+            "source": "listed"
+          },
+          {
+            "company": "Samsung",
+            "country": "South Korea",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_musd": 326380.0,
+            "profit_musd": NaN,
+            "source": "listed"
+          },
+          {
+            "company": "Foxconn (Hon Hai Precision Industry)",
+            "country": "Taiwan",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_musd": 296760.0,
+            "profit_musd": NaN,
+            "source": "listed"
+          },
+          {
+            "company": "Toyota",
+            "country": "Japan",
+            "ownership": "public",
+            "sector": "Industrials & Defense",
+            "revenue_musd": 281750.0,
+            "profit_musd": 28150.0,
+            "source": "wiki"
+          },
+          {
+            "company": "JPMorgan Chase",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Financials",
+            "revenue_musd": 280345.0,
+            "profit_musd": 57048.0,
+            "source": "fortune"
+          },
+          {
+            "company": "COSTCO WHOLESALE CORP /NEW",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_musd": 275235.0,
+            "profit_musd": NaN,
+            "source": "listed"
+          },
+          {
+            "company": "The Cigna Group",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_musd": 274900.0,
+            "profit_musd": NaN,
+            "source": "listed"
+          },
+          {
+            "company": "Hon Hai Precision Industry",
+            "country": "Taiwan",
+            "ownership": "public",
+            "sector": "Technology",
+            "revenue_musd": 260083.6,
+            "profit_musd": 6077.7,
+            "source": "fortune"
+          },
+          {
+            "company": "Glencore",
+            "country": "Europe",
+            "ownership": "public",
+            "sector": "Energy & Utilities",
+            "revenue_musd": 247535.0,
+            "profit_musd": 363.0,
+            "source": "fortune"
+          },
+          {
+            "company": "Trafigura Group",
+            "country": "Singapore",
+            "ownership": "private",
+            "sector": "Unclassified",
+            "revenue_musd": 240268.0,
+            "profit_musd": 2666.0,
+            "source": "fortune"
+          },
+          {
+            "company": "Exor",
+            "country": "Netherlands",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_musd": 223050.0,
+            "profit_musd": NaN,
+            "source": "listed"
+          },
+          {
+            "company": "Industrial & Commercial Bank of China",
+            "country": null,
+            "ownership": "public",
+            "sector": "Financials",
+            "revenue_musd": 210589.8,
+            "profit_musd": 51276.9,
+            "source": "fortune"
+          },
+          {
+            "company": "Ford",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_musd": 187970.0,
+            "profit_musd": NaN,
+            "source": "listed"
+          },
+          {
+            "company": "JPMorgan Chase & Co",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_musd": 182447.0,
+            "profit_musd": NaN,
+            "source": "listed"
+          },
+          {
+            "company": "Schwarz Group",
+            "country": "World (private)",
+            "ownership": "unknown",
+            "sector": "Unclassified",
+            "revenue_musd": 180600.0,
+            "profit_musd": NaN,
+            "source": "wiki"
+          },
+          {
+            "company": "Cargill",
+            "country": "United States",
+            "ownership": "private",
+            "sector": "Food & Agriculture",
+            "revenue_musd": 154000.0,
+            "profit_musd": NaN,
+            "source": "private"
+          },
+          {
+            "company": "Foxconn Industrial Internet",
+            "country": "China",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_musd": 152270.0,
+            "profit_musd": NaN,
+            "source": "listed"
+          },
+          {
+            "company": "China Railway Engineering Group",
+            "country": null,
+            "ownership": "private",
+            "sector": "Construction & Real Estate",
+            "revenue_musd": 152201.0,
+            "profit_musd": 1249.1,
+            "source": "fortune"
+          },
+          {
+            "company": "Alibaba Group Holding Limited",
+            "country": "China",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_musd": 148401.0,
+            "profit_musd": NaN,
+            "source": "listed"
+          },
+          {
+            "company": "WALGREENS BOOTS ALLIANCE, INC.",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_musd": 147658.0,
+            "profit_musd": NaN,
+            "source": "listed"
+          },
+          {
+            "company": "China Mobile Communications",
+            "country": null,
+            "ownership": "private",
+            "sector": "Technology",
+            "revenue_musd": 146550.2,
+            "profit_musd": 14785.7,
+            "source": "fortune"
+          },
+          {
+            "company": "Banco Santander",
+            "country": "Europe",
+            "ownership": "public",
+            "sector": "Financials",
+            "revenue_musd": 145070.2,
+            "profit_musd": 15904.7,
+            "source": "fortune"
+          },
+          {
+            "company": "Sberbank",
+            "country": "Europe",
+            "ownership": "state",
+            "sector": "Financials",
+            "revenue_musd": 135076.4,
+            "profit_musd": 20362.5,
+            "source": "fortune"
+          },
+          {
+            "company": "China Resources",
+            "country": null,
+            "ownership": "private",
+            "sector": "Financials",
+            "revenue_musd": 133290.1,
+            "profit_musd": 3613.3,
+            "source": "fortune"
+          }
+        ],
+        "by_country": [
+          {
+            "country": "United States",
+            "firms": 4883,
+            "revenue_usd": 12946515445694.0
+          },
+          {
+            "country": "China",
+            "firms": 357,
+            "revenue_usd": 4662425354355.0
+          },
+          {
+            "country": "World (private)",
+            "firms": 78,
+            "revenue_usd": 3490528100000.0
+          },
+          {
+            "country": "Japan",
+            "firms": 760,
+            "revenue_usd": 3283056473130.0
+          },
+          {
+            "country": "Europe",
+            "firms": 35,
+            "revenue_usd": 2772250700000.0
+          },
+          {
+            "country": "Taiwan",
+            "firms": 89,
+            "revenue_usd": 1172347980000.0
+          },
+          {
+            "country": "France",
+            "firms": 240,
+            "revenue_usd": 975496398000.0
+          },
+          {
+            "country": "Canada",
+            "firms": 324,
+            "revenue_usd": 947412227000.0
+          },
+          {
+            "country": "South Korea",
+            "firms": 127,
+            "revenue_usd": 946740970000.0
+          },
+          {
+            "country": "Germany",
+            "firms": 255,
+            "revenue_usd": 928299230000.0
+          },
+          {
+            "country": "India",
+            "firms": 514,
+            "revenue_usd": 883460990000.0
+          },
+          {
+            "country": "Saudi Arabia",
+            "firms": 216,
+            "revenue_usd": 711401370000.0
+          },
+          {
+            "country": "United Kingdom",
+            "firms": 377,
+            "revenue_usd": 634059338387.0
+          },
+          {
+            "country": "Brazil",
+            "firms": 85,
+            "revenue_usd": 574079820000.0
+          },
+          {
+            "country": "Australia",
+            "firms": 303,
+            "revenue_usd": 499147684000.0
+          },
+          {
+            "country": "Singapore",
+            "firms": 60,
+            "revenue_usd": 437699408391.0
+          },
+          {
+            "country": "Spain",
+            "firms": 91,
+            "revenue_usd": 436632580000.0
+          },
+          {
+            "country": "Africa",
+            "firms": 93,
+            "revenue_usd": 398708000000.0
+          },
+          {
+            "country": "Netherlands",
+            "firms": 42,
+            "revenue_usd": 397508907000.0
+          },
+          {
+            "country": "Switzerland",
+            "firms": 167,
+            "revenue_usd": 306244529000.0
+          }
+        ],
+        "by_ownership": [
+          {
+            "ownership": "public",
+            "firms": 10378,
+            "revenue_usd": 31031034827588.0
+          },
+          {
+            "ownership": "private",
+            "firms": 236,
+            "revenue_usd": 5285196300000.0
+          },
+          {
+            "ownership": "unknown",
+            "firms": 324,
+            "revenue_usd": 5199689000023.188
+          },
+          {
+            "ownership": "state",
+            "firms": 56,
+            "revenue_usd": 4052857838000.0
+          },
+          {
+            "ownership": "mutual",
+            "firms": 15,
+            "revenue_usd": 888501008000.0
+          },
+          {
+            "ownership": "pe",
+            "firms": 17,
+            "revenue_usd": 158087089452.0
+          }
+        ]
+      },
+      "true_top100": {
+        "forbes_top100_revenue": 15722014000000.0,
+        "mixed_top100_revenue": 24275495419000.0,
+        "revenue_difference": 8553481419000.0,
+        "displaced_count": 62,
+        "displaced": [
+          {
+            "company": "AMAZON.COM, INC.",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_musd": 716924.0,
+            "source": "listed"
+          },
+          {
+            "company": "State Grid",
+            "country": null,
+            "ownership": "state",
+            "sector": "Energy & Utilities",
+            "revenue_musd": 555371.4,
+            "source": "fortune"
+          },
+          {
+            "company": "UnitedHealth Group Incorporated",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_musd": 447567.0,
+            "source": "listed"
+          },
+          {
+            "company": "Saudi Aramco",
+            "country": "Saudi Arabia",
+            "ownership": "public",
+            "sector": "Energy & Utilities",
+            "revenue_musd": 445528.7,
+            "source": "fortune"
+          },
+          {
+            "company": "McKESSON CORPORATION",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_musd": 403430.0,
+            "source": "listed"
+          },
+          {
+            "company": "CVS HEALTH CORPORATION",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_musd": 402067.0,
+            "source": "listed"
+          },
+          {
+            "company": "China National Petroleum",
+            "country": null,
+            "ownership": "state",
+            "sector": "Energy & Utilities",
+            "revenue_musd": 401927.0,
+            "source": "fortune"
+          },
+          {
+            "company": "Vitol",
+            "country": "World (private)",
+            "ownership": "unknown",
+            "sector": "Unclassified",
+            "revenue_musd": 400000.0,
+            "source": "wiki"
+          },
+          {
+            "company": "Exxon Mobil Corporation",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_musd": 332238.0,
+            "source": "listed"
+          },
+          {
+            "company": "Samsung",
+            "country": "South Korea",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_musd": 326380.0,
+            "source": "listed"
+          },
+          {
+            "company": "Cencora, Inc.",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_musd": 321332.819,
+            "source": "listed"
+          },
+          {
+            "company": "Foxconn (Hon Hai Precision Industry)",
+            "country": "Taiwan",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_musd": 296760.0,
+            "source": "listed"
+          },
+          {
+            "company": "China State Construction Engineering",
+            "country": "China",
+            "ownership": "public",
+            "sector": "Construction & Real Estate",
+            "revenue_musd": 287014.0,
+            "source": "forbes"
+          },
+          {
+            "company": "Toyota",
+            "country": "Japan",
+            "ownership": "public",
+            "sector": "Industrials & Defense",
+            "revenue_musd": 281750.0,
+            "source": "wiki"
+          },
+          {
+            "company": "JPMorgan Chase",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Financials",
+            "revenue_musd": 280345.0,
+            "source": "fortune"
+          },
+          {
+            "company": "Cigna",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Healthcare",
+            "revenue_musd": 278128.0,
+            "source": "forbes"
+          },
+          {
+            "company": "COSTCO WHOLESALE CORP /NEW",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_musd": 275235.0,
+            "source": "listed"
+          },
+          {
+            "company": "The Cigna Group",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_musd": 274900.0,
+            "source": "listed"
+          },
+          {
+            "company": "Hon Hai Precision Industry",
+            "country": "Taiwan",
+            "ownership": "public",
+            "sector": "Technology",
+            "revenue_musd": 260083.6,
+            "source": "fortune"
+          },
+          {
+            "company": "Glencore",
+            "country": "Europe",
+            "ownership": "public",
+            "sector": "Energy & Utilities",
+            "revenue_musd": 247535.0,
+            "source": "fortune"
+          },
+          {
+            "company": "Glencore International",
+            "country": "Switzerland",
+            "ownership": "public",
+            "sector": "Business Services",
+            "revenue_musd": 247216.0,
+            "source": "forbes"
+          },
+          {
+            "company": "Trafigura Group",
+            "country": "Singapore",
+            "ownership": "private",
+            "sector": "Unclassified",
+            "revenue_musd": 240268.0,
+            "source": "fortune"
+          },
+          {
+            "company": "Exor",
+            "country": "Netherlands",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_musd": 223050.0,
+            "source": "listed"
+          },
+          {
+            "company": "Cardinal Health, Inc.",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_musd": 222578.0,
+            "source": "listed"
+          },
+          {
+            "company": "Bullish",
+            "country": "Cayman Islands",
+            "ownership": "public",
+            "sector": "Technology",
+            "revenue_musd": 216388.0,
+            "source": "forbes"
+          },
+          {
+            "company": "Industrial & Commercial Bank of China",
+            "country": null,
+            "ownership": "public",
+            "sector": "Financials",
+            "revenue_musd": 210589.8,
+            "source": "fortune"
+          },
+          {
+            "company": "ELEVANCE HEALTH, INC.",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_musd": 199125.0,
+            "source": "listed"
+          },
+          {
+            "company": "BP",
+            "country": "United Kingdom",
+            "ownership": "public",
+            "sector": "Energy & Utilities",
+            "revenue_musd": 194634.0,
+            "source": "forbes"
+          },
+          {
+            "company": "Ford",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_musd": 187970.0,
+            "source": "listed"
+          },
+          {
+            "company": "Ford Motor Co",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_musd": 187267.0,
+            "source": "listed"
+          },
+          {
+            "company": "JD.com, Inc.",
+            "country": "China",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_musd": 187197.0,
+            "source": "listed"
+          },
+          {
+            "company": "JPMorgan Chase & Co",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_musd": 182447.0,
+            "source": "listed"
+          },
+          {
+            "company": "Schwarz Group",
+            "country": "World (private)",
+            "ownership": "unknown",
+            "sector": "Unclassified",
+            "revenue_musd": 180600.0,
+            "source": "wiki"
+          },
+          {
+            "company": "Centene Corporation",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_musd": 174581.0,
+            "source": "listed"
+          },
+          {
+            "company": "Stellantis",
+            "country": "Netherlands",
+            "ownership": "public",
+            "sector": "Consumer & Retail",
+            "revenue_musd": 173246.0,
+            "source": "forbes"
+          },
+          {
+            "company": "GENERAL MOTORS COMPANY",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_musd": 167971.0,
+            "source": "listed"
+          },
+          {
+            "company": "Fannie Mae",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Business Services",
+            "revenue_musd": 160499.0,
+            "source": "forbes"
+          },
+          {
+            "company": "Cargill",
+            "country": "United States",
+            "ownership": "private",
+            "sector": "Food & Agriculture",
+            "revenue_musd": 154000.0,
+            "source": "private"
+          },
+          {
+            "company": "Foxconn Industrial Internet",
+            "country": "China",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_musd": 152270.0,
+            "source": "listed"
+          },
+          {
+            "company": "China Railway Engineering Group",
+            "country": null,
+            "ownership": "private",
+            "sector": "Construction & Real Estate",
+            "revenue_musd": 152201.0,
+            "source": "fortune"
+          },
+          {
+            "company": "China Railway Group",
+            "country": "China",
+            "ownership": "public",
+            "sector": "Construction & Real Estate",
+            "revenue_musd": 152199.0,
+            "source": "forbes"
+          },
+          {
+            "company": "BMW Group",
+            "country": "Germany",
+            "ownership": "public",
+            "sector": "Consumer & Retail",
+            "revenue_musd": 151447.0,
+            "source": "forbes"
+          },
+          {
+            "company": "Mercedes-Benz Group",
+            "country": "Germany",
+            "ownership": "public",
+            "sector": "Consumer & Retail",
+            "revenue_musd": 151320.0,
+            "source": "forbes"
+          },
+          {
+            "company": "Alibaba Group Holding Limited",
+            "country": "China",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_musd": 148401.0,
+            "source": "listed"
+          },
+          {
+            "company": "WALGREENS BOOTS ALLIANCE, INC.",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_musd": 147658.0,
+            "source": "listed"
+          },
+          {
+            "company": "KROGER CO",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_musd": 147642.0,
+            "source": "listed"
+          },
+          {
+            "company": "China Mobile Communications",
+            "country": null,
+            "ownership": "private",
+            "sector": "Technology",
+            "revenue_musd": 146550.2,
+            "source": "fortune"
+          },
+          {
+            "company": "Banco Santander",
+            "country": "Europe",
+            "ownership": "public",
+            "sector": "Financials",
+            "revenue_musd": 145070.2,
+            "source": "fortune"
+          },
+          {
+            "company": "Honda Motor",
+            "country": "Japan",
+            "ownership": "public",
+            "sector": "Consumer & Retail",
+            "revenue_musd": 144643.0,
+            "source": "forbes"
+          },
+          {
+            "company": "China Railway Construction",
+            "country": "China",
+            "ownership": "public",
+            "sector": "Construction & Real Estate",
+            "revenue_musd": 141475.0,
+            "source": "forbes"
+          },
+          {
+            "company": "Sberbank",
+            "country": "Europe",
+            "ownership": "state",
+            "sector": "Financials",
+            "revenue_musd": 135076.4,
+            "source": "fortune"
+          },
+          {
+            "company": "Freddie Mac",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Business Services",
+            "revenue_musd": 133632.0,
+            "source": "forbes"
+          },
+          {
+            "company": "China Resources",
+            "country": null,
+            "ownership": "private",
+            "sector": "Financials",
+            "revenue_musd": 133290.1,
+            "source": "fortune"
+          },
+          {
+            "company": "Marathon Petroleum Corporation",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_musd": 132699.0,
+            "source": "listed"
+          },
+          {
+            "company": "StoneX Group Inc.",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_musd": 132378.2,
+            "source": "listed"
+          },
+          {
+            "company": "Phillips 66",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_musd": 132376.0,
+            "source": "listed"
+          },
+          {
+            "company": "State Farm Insurance",
+            "country": "United States",
+            "ownership": "mutual",
+            "sector": "Financials",
+            "revenue_musd": 132311.6,
+            "source": "fortune"
+          },
+          {
+            "company": "Honda",
+            "country": "Japan",
+            "ownership": "public",
+            "sector": "Industrials & Defense",
+            "revenue_musd": 130160.0,
+            "source": "wiki"
+          },
+          {
+            "company": "HUMANA INC.",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_musd": 129664.0,
+            "source": "listed"
+          },
+          {
+            "company": "Hyundai",
+            "country": "South Korea",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_musd": 128210.00000000001,
+            "source": "listed"
+          },
+          {
+            "company": "Electricité de France",
+            "country": "France",
+            "ownership": "state",
+            "sector": "Energy & Utilities",
+            "revenue_musd": 127754.4,
+            "source": "fortune"
+          },
+          {
+            "company": "EDF",
+            "country": "Europe",
+            "ownership": "unknown",
+            "sector": "Energy & Utilities",
+            "revenue_musd": 127754.0,
+            "source": "wiki"
+          }
+        ],
+        "displacement": [
+          {
+            "company": "Amazon",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Consumer & Retail",
+            "revenue_usd": 742776000000.0,
+            "would_rank": 1,
+            "forbes_rank": 2.0,
+            "source": "forbes",
+            "revenue_musd": 742776.0
+          },
+          {
+            "company": "AMAZON.COM, INC.",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_usd": 716924000000.0,
+            "would_rank": 2,
+            "forbes_rank": NaN,
+            "source": "listed",
+            "revenue_musd": 716924.0
+          },
+          {
+            "company": "Walmart Inc.",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_usd": 706413000000.0,
+            "would_rank": 3,
+            "forbes_rank": 23.0,
+            "source": "listed",
+            "revenue_musd": 706413.0
+          },
+          {
+            "company": "State Grid",
+            "country": null,
+            "ownership": "state",
+            "sector": "Energy & Utilities",
+            "revenue_usd": 555371400000.0,
+            "would_rank": 4,
+            "forbes_rank": NaN,
+            "source": "fortune",
+            "revenue_musd": 555371.4
+          },
+          {
+            "company": "Saudi Arabian Oil Company (Saudi Aramco)",
+            "country": "Saudi Arabia",
+            "ownership": "public",
+            "sector": "Energy & Utilities",
+            "revenue_usd": 455531000000.0,
+            "would_rank": 5,
+            "forbes_rank": 5.0,
+            "source": "forbes",
+            "revenue_musd": 455531.0
+          },
+          {
+            "company": "UnitedHealth Group",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Healthcare",
+            "revenue_usd": 449713000000.0,
+            "would_rank": 6,
+            "forbes_rank": 29.0,
+            "source": "forbes",
+            "revenue_musd": 449713.0
+          },
+          {
+            "company": "UnitedHealth Group Incorporated",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_usd": 447567000000.0,
+            "would_rank": 7,
+            "forbes_rank": NaN,
+            "source": "listed",
+            "revenue_musd": 447567.0
+          },
+          {
+            "company": "Saudi Aramco",
+            "country": "Saudi Arabia",
+            "ownership": "public",
+            "sector": "Energy & Utilities",
+            "revenue_usd": 445528700000.0,
+            "would_rank": 8,
+            "forbes_rank": NaN,
+            "source": "fortune",
+            "revenue_musd": 445528.7
+          },
+          {
+            "company": "Apple Inc.",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_usd": 416161000000.0,
+            "would_rank": 9,
+            "forbes_rank": 11.0,
+            "source": "listed",
+            "revenue_musd": 416161.0
+          },
+          {
+            "company": "McKESSON CORPORATION",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_usd": 403430000000.0,
+            "would_rank": 10,
+            "forbes_rank": 162.0,
+            "source": "listed",
+            "revenue_musd": 403430.0
+          },
+          {
+            "company": "Alphabet Inc.",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_usd": 402836000000.0,
+            "would_rank": 11,
+            "forbes_rank": 4.0,
+            "source": "listed",
+            "revenue_musd": 402836.0
+          },
+          {
+            "company": "CVS HEALTH CORPORATION",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_usd": 402067000000.0,
+            "would_rank": 12,
+            "forbes_rank": 112.0,
+            "source": "listed",
+            "revenue_musd": 402067.0
+          },
+          {
+            "company": "China National Petroleum",
+            "country": null,
+            "ownership": "state",
+            "sector": "Energy & Utilities",
+            "revenue_usd": 401927000000.0,
+            "would_rank": 13,
+            "forbes_rank": NaN,
+            "source": "fortune",
+            "revenue_musd": 401927.0
+          },
+          {
+            "company": "Vitol",
+            "country": "World (private)",
+            "ownership": "unknown",
+            "sector": "Unclassified",
+            "revenue_usd": 400000000000.0,
+            "would_rank": 14,
+            "forbes_rank": NaN,
+            "source": "wiki",
+            "revenue_musd": 400000.0
+          },
+          {
+            "company": "PetroChina",
+            "country": "China",
+            "ownership": "public",
+            "sector": "Energy & Utilities",
+            "revenue_usd": 392552000000.0,
+            "would_rank": 15,
+            "forbes_rank": 22.0,
+            "source": "forbes",
+            "revenue_musd": 392552.0
+          },
+          {
+            "company": "Volkswagen Group",
+            "country": "Germany",
+            "ownership": "public",
+            "sector": "Consumer & Retail",
+            "revenue_usd": 370805000000.0,
+            "would_rank": 16,
+            "forbes_rank": 86.0,
+            "source": "forbes",
+            "revenue_musd": 370805.0
+          },
+          {
+            "company": "Sinopec",
+            "country": "China",
+            "ownership": "public",
+            "sector": "Energy & Utilities",
+            "revenue_usd": 354404000000.0,
+            "would_rank": 17,
+            "forbes_rank": 84.0,
+            "source": "forbes",
+            "revenue_musd": 354404.0
+          },
+          {
+            "company": "Toyota Motor",
+            "country": "Japan",
+            "ownership": "public",
+            "sector": "Consumer & Retail",
+            "revenue_usd": 336348000000.0,
+            "would_rank": 18,
+            "forbes_rank": 17.0,
+            "source": "forbes",
+            "revenue_musd": 336348.0
+          },
+          {
+            "company": "Exxon Mobil Corporation",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_usd": 332238000000.0,
+            "would_rank": 19,
+            "forbes_rank": NaN,
+            "source": "listed",
+            "revenue_musd": 332238.0
+          },
+          {
+            "company": "ExxonMobil",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Energy & Utilities",
+            "revenue_usd": 329324000000.0,
+            "would_rank": 20,
+            "forbes_rank": 14.0,
+            "source": "forbes",
+            "revenue_musd": 329324.0
+          },
+          {
+            "company": "Samsung",
+            "country": "South Korea",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_usd": 326380000000.0,
+            "would_rank": 21,
+            "forbes_rank": NaN,
+            "source": "listed",
+            "revenue_musd": 326380.0
+          },
+          {
+            "company": "Cencora, Inc.",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_usd": 321332819000.0,
+            "would_rank": 22,
+            "forbes_rank": 250.0,
+            "source": "listed",
+            "revenue_musd": 321332.819
+          },
+          {
+            "company": "Foxconn (Hon Hai Precision Industry)",
+            "country": "Taiwan",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_usd": 296760000000.0,
+            "would_rank": 23,
+            "forbes_rank": NaN,
+            "source": "listed",
+            "revenue_musd": 296760.0
+          },
+          {
+            "company": "China State Construction Engineering",
+            "country": "China",
+            "ownership": "public",
+            "sector": "Construction & Real Estate",
+            "revenue_usd": 287014000000.0,
+            "would_rank": 24,
+            "forbes_rank": 184.0,
+            "source": "forbes",
+            "revenue_musd": 287014.0
+          },
+          {
+            "company": "Costco Wholesale",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Consumer & Retail",
+            "revenue_usd": 286265000000.0,
+            "would_rank": 25,
+            "forbes_rank": 87.0,
+            "source": "forbes",
+            "revenue_musd": 286265.0
+          },
+          {
+            "company": "JPMorganChase",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Financials",
+            "revenue_usd": 284791000000.0,
+            "would_rank": 26,
+            "forbes_rank": 1.0,
+            "source": "forbes",
+            "revenue_musd": 284791.0
+          },
+          {
+            "company": "Toyota",
+            "country": "Japan",
+            "ownership": "public",
+            "sector": "Industrials & Defense",
+            "revenue_usd": 281750000000.0,
+            "would_rank": 27,
+            "forbes_rank": NaN,
+            "source": "wiki",
+            "revenue_musd": 281750.0
+          },
+          {
+            "company": "MICROSOFT CORPORATION",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_usd": 281724000000.0,
+            "would_rank": 28,
+            "forbes_rank": 7.0,
+            "source": "listed",
+            "revenue_musd": 281724.0
+          },
+          {
+            "company": "JPMorgan Chase",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Financials",
+            "revenue_usd": 280345000000.0,
+            "would_rank": 29,
+            "forbes_rank": NaN,
+            "source": "fortune",
+            "revenue_musd": 280345.0
+          },
+          {
+            "company": "Cigna",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Healthcare",
+            "revenue_usd": 278128000000.0,
+            "would_rank": 30,
+            "forbes_rank": 123.0,
+            "source": "forbes",
+            "revenue_musd": 278128.0
+          },
+          {
+            "company": "Hon Hai Precision ",
+            "country": "Taiwan",
+            "ownership": "public",
+            "sector": "Technology",
+            "revenue_usd": 277939000000.0,
+            "would_rank": 31,
+            "forbes_rank": 82.0,
+            "source": "forbes",
+            "revenue_musd": 277939.0
+          },
+          {
+            "company": "COSTCO WHOLESALE CORP /NEW",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_usd": 275235000000.0,
+            "would_rank": 32,
+            "forbes_rank": NaN,
+            "source": "listed",
+            "revenue_musd": 275235.0
+          },
+          {
+            "company": "The Cigna Group",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_usd": 274900000000.0,
+            "would_rank": 33,
+            "forbes_rank": NaN,
+            "source": "listed",
+            "revenue_musd": 274900.0
+          },
+          {
+            "company": "Samsung Electronics",
+            "country": "South Korea",
+            "ownership": "public",
+            "sector": "Technology",
+            "revenue_usd": 272561000000.0,
+            "would_rank": 34,
+            "forbes_rank": 15.0,
+            "source": "forbes",
+            "revenue_musd": 272561.0
+          },
+          {
+            "company": "Shell Plc",
+            "country": "United Kingdom",
+            "ownership": "public",
+            "sector": "Energy & Utilities",
+            "revenue_usd": 267251000000.0,
+            "would_rank": 35,
+            "forbes_rank": 28.0,
+            "source": "forbes",
+            "revenue_musd": 267251.0
+          },
+          {
+            "company": "Hon Hai Precision Industry",
+            "country": "Taiwan",
+            "ownership": "public",
+            "sector": "Technology",
+            "revenue_usd": 260083600000.0,
+            "would_rank": 36,
+            "forbes_rank": NaN,
+            "source": "fortune",
+            "revenue_musd": 260083.6
+          },
+          {
+            "company": "Glencore",
+            "country": "Europe",
+            "ownership": "public",
+            "sector": "Energy & Utilities",
+            "revenue_usd": 247535000000.0,
+            "would_rank": 37,
+            "forbes_rank": NaN,
+            "source": "fortune",
+            "revenue_musd": 247535.0
+          },
+          {
+            "company": "BERKSHIRE HATHAWAY INC",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_usd": 247244000000.0,
+            "would_rank": 38,
+            "forbes_rank": 3.0,
+            "source": "listed",
+            "revenue_musd": 247244.0
+          },
+          {
+            "company": "Glencore International",
+            "country": "Switzerland",
+            "ownership": "public",
+            "sector": "Business Services",
+            "revenue_usd": 247216000000.0,
+            "would_rank": 39,
+            "forbes_rank": 464.0,
+            "source": "forbes",
+            "revenue_musd": 247216.0
+          },
+          {
+            "company": "Trafigura Group",
+            "country": "Singapore",
+            "ownership": "private",
+            "sector": "Unclassified",
+            "revenue_usd": 240268000000.0,
+            "would_rank": 40,
+            "forbes_rank": NaN,
+            "source": "fortune",
+            "revenue_musd": 240268.0
+          },
+          {
+            "company": "Exor",
+            "country": "Netherlands",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_usd": 223050000000.0,
+            "would_rank": 41,
+            "forbes_rank": NaN,
+            "source": "listed",
+            "revenue_musd": 223050.0
+          },
+          {
+            "company": "Cardinal Health, Inc.",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_usd": 222578000000.0,
+            "would_rank": 42,
+            "forbes_rank": 336.0,
+            "source": "listed",
+            "revenue_musd": 222578.0
+          },
+          {
+            "company": "Bullish",
+            "country": "Cayman Islands",
+            "ownership": "public",
+            "sector": "Technology",
+            "revenue_usd": 216388000000.0,
+            "would_rank": 43,
+            "forbes_rank": 1422.0,
+            "source": "forbes",
+            "revenue_musd": 216388.0
+          },
+          {
+            "company": "NVIDIA CORP",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_usd": 215938000000.0,
+            "would_rank": 44,
+            "forbes_rank": 27.0,
+            "source": "listed",
+            "revenue_musd": 215938.0
+          },
+          {
+            "company": "Industrial & Commercial Bank of China",
+            "country": null,
+            "ownership": "public",
+            "sector": "Financials",
+            "revenue_usd": 210589800000.0,
+            "would_rank": 45,
+            "forbes_rank": NaN,
+            "source": "fortune",
+            "revenue_musd": 210589.8
+          },
+          {
+            "company": "ICBC",
+            "country": "China",
+            "ownership": "public",
+            "sector": "Financials",
+            "revenue_usd": 210257000000.0,
+            "would_rank": 46,
+            "forbes_rank": 6.0,
+            "source": "forbes",
+            "revenue_musd": 210257.0
+          },
+          {
+            "company": "Meta Platforms, Inc.",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_usd": 200966000000.0,
+            "would_rank": 47,
+            "forbes_rank": 16.0,
+            "source": "listed",
+            "revenue_musd": 200966.0
+          },
+          {
+            "company": "ELEVANCE HEALTH, INC.",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_usd": 199125000000.0,
+            "would_rank": 48,
+            "forbes_rank": 135.0,
+            "source": "listed",
+            "revenue_musd": 199125.0
+          },
+          {
+            "company": "Agricultural Bank of China",
+            "country": "China",
+            "ownership": "public",
+            "sector": "Financials",
+            "revenue_usd": 196084000000.0,
+            "would_rank": 49,
+            "forbes_rank": 10.0,
+            "source": "forbes",
+            "revenue_musd": 196084.0
+          },
+          {
+            "company": "BP",
+            "country": "United Kingdom",
+            "ownership": "public",
+            "sector": "Energy & Utilities",
+            "revenue_usd": 194634000000.0,
+            "would_rank": 50,
+            "forbes_rank": 107.0,
+            "source": "forbes",
+            "revenue_musd": 194634.0
+          },
+          {
+            "company": "China Construction Bank",
+            "country": "China",
+            "ownership": "public",
+            "sector": "Financials",
+            "revenue_usd": 192274000000.0,
+            "would_rank": 51,
+            "forbes_rank": 9.0,
+            "source": "forbes",
+            "revenue_musd": 192274.0
+          },
+          {
+            "company": "Ford",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_usd": 187970000000.0,
+            "would_rank": 52,
+            "forbes_rank": NaN,
+            "source": "listed",
+            "revenue_musd": 187970.0
+          },
+          {
+            "company": "Ford Motor Co",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_usd": 187267000000.0,
+            "would_rank": 53,
+            "forbes_rank": 476.0,
+            "source": "listed",
+            "revenue_musd": 187267.0
+          },
+          {
+            "company": "JD.com, Inc.",
+            "country": "China",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_usd": 187197000000.0,
+            "would_rank": 54,
+            "forbes_rank": 273.0,
+            "source": "listed",
+            "revenue_musd": 187197.0
+          },
+          {
+            "company": "Chevron Corp",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_usd": 184432000000.0,
+            "would_rank": 55,
+            "forbes_rank": 35.0,
+            "source": "listed",
+            "revenue_musd": 184432.0
+          },
+          {
+            "company": "TotalEnergies",
+            "country": "France",
+            "ownership": "public",
+            "sector": "Energy & Utilities",
+            "revenue_usd": 183906000000.0,
+            "would_rank": 56,
+            "forbes_rank": 40.0,
+            "source": "forbes",
+            "revenue_musd": 183906.0
+          },
+          {
+            "company": "JPMorgan Chase & Co",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_usd": 182447000000.0,
+            "would_rank": 57,
+            "forbes_rank": NaN,
+            "source": "listed",
+            "revenue_musd": 182447.0
+          },
+          {
+            "company": "Schwarz Group",
+            "country": "World (private)",
+            "ownership": "unknown",
+            "sector": "Unclassified",
+            "revenue_usd": 180600000000.0,
+            "would_rank": 58,
+            "forbes_rank": NaN,
+            "source": "wiki",
+            "revenue_musd": 180600.0
+          },
+          {
+            "company": "Centene Corporation",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_usd": 174581000000.0,
+            "would_rank": 59,
+            "forbes_rank": 640.0,
+            "source": "listed",
+            "revenue_musd": 174581.0
+          },
+          {
+            "company": "Bank of China",
+            "country": "China",
+            "ownership": "public",
+            "sector": "Financials",
+            "revenue_usd": 173783000000.0,
+            "would_rank": 60,
+            "forbes_rank": 12.0,
+            "source": "forbes",
+            "revenue_musd": 173783.0
+          },
+          {
+            "company": "Stellantis",
+            "country": "Netherlands",
+            "ownership": "public",
+            "sector": "Consumer & Retail",
+            "revenue_usd": 173246000000.0,
+            "would_rank": 61,
+            "forbes_rank": 622.0,
+            "source": "forbes",
+            "revenue_musd": 173246.0
+          },
+          {
+            "company": "GENERAL MOTORS COMPANY",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_usd": 167971000000.0,
+            "would_rank": 62,
+            "forbes_rank": 171.0,
+            "source": "listed",
+            "revenue_musd": 167971.0
+          },
+          {
+            "company": "BNP Paribas",
+            "country": "France",
+            "ownership": "public",
+            "sector": "Financials",
+            "revenue_usd": 165258000000.0,
+            "would_rank": 63,
+            "forbes_rank": 37.0,
+            "source": "forbes",
+            "revenue_musd": 165258.0
+          },
+          {
+            "company": "HOME DEPOT, INC.",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_usd": 164683000000.0,
+            "would_rank": 64,
+            "forbes_rank": 69.0,
+            "source": "listed",
+            "revenue_musd": 164683.0
+          },
+          {
+            "company": "Fannie Mae",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Business Services",
+            "revenue_usd": 160499000000.0,
+            "would_rank": 65,
+            "forbes_rank": 351.0,
+            "source": "forbes",
+            "revenue_musd": 160499.0
+          },
+          {
+            "company": "Allianz",
+            "country": "Germany",
+            "ownership": "public",
+            "sector": "Financials",
+            "revenue_usd": 158705000000.0,
+            "would_rank": 66,
+            "forbes_rank": 32.0,
+            "source": "forbes",
+            "revenue_musd": 158705.0
+          },
+          {
+            "company": "Ping An Insurance Group",
+            "country": "China",
+            "ownership": "public",
+            "sector": "Financials",
+            "revenue_usd": 158134000000.0,
+            "would_rank": 67,
+            "forbes_rank": 26.0,
+            "source": "forbes",
+            "revenue_musd": 158134.0
+          },
+          {
+            "company": "Cargill",
+            "country": "United States",
+            "ownership": "private",
+            "sector": "Food & Agriculture",
+            "revenue_usd": 154000000000.0,
+            "would_rank": 68,
+            "forbes_rank": NaN,
+            "source": "private",
+            "revenue_musd": 154000.0
+          },
+          {
+            "company": "Foxconn Industrial Internet",
+            "country": "China",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_usd": 152270000000.0,
+            "would_rank": 69,
+            "forbes_rank": NaN,
+            "source": "listed",
+            "revenue_musd": 152270.0
+          },
+          {
+            "company": "China Railway Engineering Group",
+            "country": null,
+            "ownership": "private",
+            "sector": "Construction & Real Estate",
+            "revenue_usd": 152201000000.0,
+            "would_rank": 70,
+            "forbes_rank": NaN,
+            "source": "fortune",
+            "revenue_musd": 152201.0
+          },
+          {
+            "company": "China Railway Group",
+            "country": "China",
+            "ownership": "public",
+            "sector": "Construction & Real Estate",
+            "revenue_usd": 152199000000.0,
+            "would_rank": 71,
+            "forbes_rank": 407.0,
+            "source": "forbes",
+            "revenue_musd": 152199.0
+          },
+          {
+            "company": "BMW Group",
+            "country": "Germany",
+            "ownership": "public",
+            "sector": "Consumer & Retail",
+            "revenue_usd": 151447000000.0,
+            "would_rank": 72,
+            "forbes_rank": 113.0,
+            "source": "forbes",
+            "revenue_musd": 151447.0
+          },
+          {
+            "company": "Mercedes-Benz Group",
+            "country": "Germany",
+            "ownership": "public",
+            "sector": "Consumer & Retail",
+            "revenue_usd": 151320000000.0,
+            "would_rank": 73,
+            "forbes_rank": 128.0,
+            "source": "forbes",
+            "revenue_musd": 151320.0
+          },
+          {
+            "company": "Alibaba Group Holding Limited",
+            "country": "China",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_usd": 148401000000.0,
+            "would_rank": 74,
+            "forbes_rank": NaN,
+            "source": "listed",
+            "revenue_musd": 148401.0
+          },
+          {
+            "company": "China Mobile",
+            "country": "Hong Kong",
+            "ownership": "public",
+            "sector": "Telecom & Media",
+            "revenue_usd": 148289000000.0,
+            "would_rank": 75,
+            "forbes_rank": 36.0,
+            "source": "forbes",
+            "revenue_musd": 148289.0
+          },
+          {
+            "company": "WALGREENS BOOTS ALLIANCE, INC.",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_usd": 147658000000.0,
+            "would_rank": 76,
+            "forbes_rank": NaN,
+            "source": "listed",
+            "revenue_musd": 147658.0
+          },
+          {
+            "company": "KROGER CO",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_usd": 147642000000.0,
+            "would_rank": 77,
+            "forbes_rank": 457.0,
+            "source": "listed",
+            "revenue_musd": 147642.0
+          },
+          {
+            "company": "China Mobile Communications",
+            "country": null,
+            "ownership": "private",
+            "sector": "Technology",
+            "revenue_usd": 146550200000.0,
+            "would_rank": 78,
+            "forbes_rank": NaN,
+            "source": "fortune",
+            "revenue_musd": 146550.2
+          },
+          {
+            "company": "Banco Santander",
+            "country": "Europe",
+            "ownership": "public",
+            "sector": "Financials",
+            "revenue_usd": 145070200000.0,
+            "would_rank": 79,
+            "forbes_rank": NaN,
+            "source": "fortune",
+            "revenue_musd": 145070.2
+          },
+          {
+            "company": "Honda Motor",
+            "country": "Japan",
+            "ownership": "public",
+            "sector": "Consumer & Retail",
+            "revenue_usd": 144643000000.0,
+            "would_rank": 80,
+            "forbes_rank": 550.0,
+            "source": "forbes",
+            "revenue_musd": 144643.0
+          },
+          {
+            "company": "Alibaba Group",
+            "country": "China",
+            "ownership": "public",
+            "sector": "Consumer & Retail",
+            "revenue_usd": 144163000000.0,
+            "would_rank": 81,
+            "forbes_rank": 41.0,
+            "source": "forbes",
+            "revenue_musd": 144163.0
+          },
+          {
+            "company": "China Railway Construction",
+            "country": "China",
+            "ownership": "public",
+            "sector": "Construction & Real Estate",
+            "revenue_usd": 141475000000.0,
+            "would_rank": 82,
+            "forbes_rank": 486.0,
+            "source": "forbes",
+            "revenue_musd": 141475.0
+          },
+          {
+            "company": "Verizon Communications Inc.",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_usd": 138191000000.0,
+            "would_rank": 83,
+            "forbes_rank": 38.0,
+            "source": "listed",
+            "revenue_musd": 138191.0
+          },
+          {
+            "company": "Deutsche Telekom",
+            "country": "Germany",
+            "ownership": "public",
+            "sector": "Telecom & Media",
+            "revenue_usd": 138115000000.0,
+            "would_rank": 84,
+            "forbes_rank": 45.0,
+            "source": "forbes",
+            "revenue_musd": 138115.0
+          },
+          {
+            "company": "Sberbank",
+            "country": "Europe",
+            "ownership": "state",
+            "sector": "Financials",
+            "revenue_usd": 135076400000.0,
+            "would_rank": 85,
+            "forbes_rank": NaN,
+            "source": "fortune",
+            "revenue_musd": 135076.4
+          },
+          {
+            "company": "Freddie Mac",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Business Services",
+            "revenue_usd": 133632000000.0,
+            "would_rank": 86,
+            "forbes_rank": 360.0,
+            "source": "forbes",
+            "revenue_musd": 133632.0
+          },
+          {
+            "company": "HSBC Holdings",
+            "country": "United Kingdom",
+            "ownership": "public",
+            "sector": "Financials",
+            "revenue_usd": 133581000000.0,
+            "would_rank": 87,
+            "forbes_rank": 13.0,
+            "source": "forbes",
+            "revenue_musd": 133581.0
+          },
+          {
+            "company": "China Resources",
+            "country": null,
+            "ownership": "private",
+            "sector": "Financials",
+            "revenue_usd": 133290100000.0,
+            "would_rank": 88,
+            "forbes_rank": NaN,
+            "source": "fortune",
+            "revenue_musd": 133290.1
+          },
+          {
+            "company": "Taiwan Semiconductor",
+            "country": "Taiwan",
+            "ownership": "public",
+            "sector": "Technology",
+            "revenue_usd": 132967000000.0,
+            "would_rank": 89,
+            "forbes_rank": 31.0,
+            "source": "forbes",
+            "revenue_musd": 132967.0
+          },
+          {
+            "company": "Marathon Petroleum Corporation",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_usd": 132699000000.0,
+            "would_rank": 90,
+            "forbes_rank": 190.0,
+            "source": "listed",
+            "revenue_musd": 132699.0
+          },
+          {
+            "company": "StoneX Group Inc.",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_usd": 132378200000.0,
+            "would_rank": 91,
+            "forbes_rank": 992.0,
+            "source": "listed",
+            "revenue_musd": 132378.2
+          },
+          {
+            "company": "Phillips 66",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_usd": 132376000000.0,
+            "would_rank": 92,
+            "forbes_rank": 203.0,
+            "source": "listed",
+            "revenue_musd": 132376.0
+          },
+          {
+            "company": "State Farm Insurance",
+            "country": "United States",
+            "ownership": "mutual",
+            "sector": "Financials",
+            "revenue_usd": 132311600000.0,
+            "would_rank": 93,
+            "forbes_rank": NaN,
+            "source": "fortune",
+            "revenue_musd": 132311.6
+          },
+          {
+            "company": "Hyundai Motor",
+            "country": "South Korea",
+            "ownership": "public",
+            "sector": "Consumer & Retail",
+            "revenue_usd": 131800000000.0,
+            "would_rank": 94,
+            "forbes_rank": 75.0,
+            "source": "forbes",
+            "revenue_musd": 131800.0
+          },
+          {
+            "company": "Honda",
+            "country": "Japan",
+            "ownership": "public",
+            "sector": "Industrials & Defense",
+            "revenue_usd": 130160000000.0,
+            "would_rank": 95,
+            "forbes_rank": NaN,
+            "source": "wiki",
+            "revenue_musd": 130160.0
+          },
+          {
+            "company": "HUMANA INC.",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_usd": 129664000000.0,
+            "would_rank": 96,
+            "forbes_rank": 419.0,
+            "source": "listed",
+            "revenue_musd": 129664.0
+          },
+          {
+            "company": "Goldman Sachs Group",
+            "country": "United States",
+            "ownership": "public",
+            "sector": "Financials",
+            "revenue_usd": 129006000000.0,
+            "would_rank": 97,
+            "forbes_rank": 19.0,
+            "source": "forbes",
+            "revenue_musd": 129006.0
+          },
+          {
+            "company": "Hyundai",
+            "country": "South Korea",
+            "ownership": "public",
+            "sector": "Unclassified",
+            "revenue_usd": 128210000000.00002,
+            "would_rank": 98,
+            "forbes_rank": NaN,
+            "source": "listed",
+            "revenue_musd": 128210.00000000001
+          },
+          {
+            "company": "Electricité de France",
+            "country": "France",
+            "ownership": "state",
+            "sector": "Energy & Utilities",
+            "revenue_usd": 127754400000.0,
+            "would_rank": 99,
+            "forbes_rank": NaN,
+            "source": "fortune",
+            "revenue_musd": 127754.4
+          },
+          {
+            "company": "EDF",
+            "country": "Europe",
+            "ownership": "unknown",
+            "sector": "Energy & Utilities",
+            "revenue_usd": 127754000000.0,
+            "would_rank": 100,
+            "forbes_rank": NaN,
+            "source": "wiki",
+            "revenue_musd": 127754.0
+          }
+        ]
+      },
+      "margin_by_ownership_tests": [
+        {
+          "comparison": "state vs listed",
+          "n_a": 56,
+          "n_b": 2104,
+          "mean_a": 0.030694117058214787,
+          "mean_b": 0.1353534523865689,
+          "median_a": 0.020177590594158162,
+          "median_b": 0.11084228275164108,
+          "diff": -0.10465933532835411,
+          "ci_low": -0.11841506477525626,
+          "ci_high": -0.09091958311688197,
+          "p_welch": 1.5101918757592434e-24,
+          "p_mann_whitney": 1.8154490952133684e-14
+        },
+        {
+          "comparison": "state vs private/PE",
+          "n_a": 56,
+          "n_b": 47,
+          "mean_a": 0.030694117058214787,
+          "mean_b": 0.021760081526029297,
+          "median_a": 0.020177590594158162,
+          "median_b": 0.009426669237045389,
+          "diff": 0.00893403553218549,
+          "ci_low": -0.008010644255016285,
+          "ci_high": 0.026885833272222045,
+          "p_welch": 0.31476894799979516,
+          "p_mann_whitney": 0.12862525128134086
+        },
+        {
+          "comparison": "mutual vs listed",
+          "n_a": 15,
+          "n_b": 2104,
+          "mean_a": 0.05331921007964899,
+          "mean_b": 0.1353534523865689,
+          "median_a": 0.03684982615202985,
+          "median_b": 0.11084228275164108,
+          "diff": -0.08203424230691991,
+          "ci_low": -0.10643063945294494,
+          "ci_high": -0.054474720283302164,
+          "p_welch": 1.830831246715971e-05,
+          "p_mann_whitney": 0.0028708969693785214
+        }
+      ],
+      "margin_exclusions": {
+        "impossible_margin_rows_dropped": 40,
+        "rule": "net margin outside [-100%, +100%] is arithmetically impossible for a standalone operating business"
+      },
+      "size_by_ownership_tests": [
+        {
+          "comparison": "median revenue: state vs listed",
+          "median_state": 48490200000.0,
+          "median_listed": 13727500000.0,
+          "ratio": 3.5323401930431615,
+          "ci_low": 26894200000.0,
+          "ci_high": 46814100000.0,
+          "p_welch": 0.00026731534976922233
+        }
+      ],
+      "state_by_country": [
+        {
+          "country": "China",
+          "firms": 20,
+          "revenue_usd": 988979400000.0
+        },
+        {
+          "country": "Europe",
+          "firms": 6,
+          "revenue_usd": 480440000000.0
+        },
+        {
+          "country": "France",
+          "firms": 2,
+          "revenue_usd": 166540000000.0
+        },
+        {
+          "country": "Indonesia",
+          "firms": 2,
+          "revenue_usd": 106302000000.0
+        },
+        {
+          "country": "D.C.",
+          "firms": 1,
+          "revenue_usd": 80581000000.0
+        },
+        {
+          "country": "Brazil",
+          "firms": 1,
+          "revenue_usd": 51096200000.0
+        },
+        {
+          "country": "World (private)",
+          "firms": 1,
+          "revenue_usd": 40148100000.0
+        },
+        {
+          "country": "United States",
+          "firms": 1,
+          "revenue_usd": 92638000.0
+        }
+      ]
+    },
+    "insights": [
+      "State-owned enterprises account for **57** companies and **$4.09 T$** of revenue in the mixed universe -- **4.1%** of everything measured, and a profit share of only **2.2%**.",
+      "**The invisible giants.** 11,026 companies with known revenue do not appear in the Forbes Global 2000, worth **$46.62 T$** between them. 184 of them exceed $50B in revenue -- including **AMAZON.COM, INC.** ($717B, public), **State Grid** ($555B, state), **UnitedHealth Group Incorporated** ($448B, public), **Saudi Aramco** ($446B, public).",
+      "Re-ranking the top 100 on earth from the mixed universe, **62 of Forbes' own top 100 are displaced**, and the true top 100 is worth **$24.28 T$** against Forbes' $15.72 T$ (a $8553B gap).",
+      "**state vs listed**: median net margin 2.0% vs 11.1% (means 3.1% vs 13.5%; difference in means -10.5 pp, bootstrap CI [-11.8, -9.1] pp, p = <0.001).",
+      "**state vs private/PE**: median net margin 2.0% vs 0.9% (means 3.1% vs 2.2%; difference in means +0.9 pp, bootstrap CI [-0.8, +2.7] pp, p = 0.315).",
+      "**mutual vs listed**: median net margin 3.7% vs 11.1% (means 5.3% vs 13.5%; difference in means -8.2 pp, bootstrap CI [-10.6, -5.4] pp, p = <0.001).",
+      "40 rows were dropped from the margin comparison because a net margin outside [-100%, +100%] is arithmetically impossible for a standalone operating business."
+    ],
+    "tables": [
+      "invisible_by_country",
+      "invisible_giants",
+      "margin_tests",
+      "ownership_forbes",
+      "ownership_mixed",
+      "true_top100"
+    ]
+  },
+  "private_capital": {
+    "metrics": {
+      "unicorns": {
+        "count": 1442,
+        "total_valuation": 7348860000000.0,
+        "median_valuation": 1700000000.0,
+        "mean_valuation": 5096296809.986131,
+        "countries": 55,
+        "hhi_by_country": 4937.304568537524,
+        "gini_by_country": 0.9202347158923829,
+        "top1_country_share": 0.6872923859416012,
+        "top5_country_share": 0.8998864589346199,
+        "distribution": {
+          "n": 1442,
+          "mean": 5096296809.986131,
+          "median": 1700000000.0,
+          "std": 36760757995.45477,
+          "min": 1000000000.0,
+          "p10": 1000000000.0,
+          "p25": 1150000000.0,
+          "p75": 3200000000.0,
+          "p90": 6800000000.0,
+          "p99": 31589999999.99992,
+          "max": 965000000000.0,
+          "sum": 7348860000000.0,
+          "skew": 22.170191861282614,
+          "kurtosis": 526.4906165983272,
+          "cv": 7.213229402852385,
+          "mean_to_median": 2.997821652933018
+        },
+        "top_20": [
+          {
+            "company": "Anthropic",
+            "country": "United States",
+            "industry": "Enterprise Tech",
+            "valuation_busd": 965.0,
+            "date_joined": "2/3/2023"
+          },
+          {
+            "company": "OpenAI",
+            "country": "United States",
+            "industry": "Enterprise Tech",
+            "valuation_busd": 840.0,
+            "date_joined": "7/22/2019"
+          },
+          {
+            "company": "ByteDance",
+            "country": "China",
+            "industry": "Media & Entertainment",
+            "valuation_busd": 480.0,
+            "date_joined": "4/7/2017"
+          },
+          {
+            "company": "Databricks",
+            "country": "United States",
+            "industry": "Enterprise Tech",
+            "valuation_busd": 190.0,
+            "date_joined": "2/5/2019"
+          },
+          {
+            "company": "Stripe",
+            "country": "United States",
+            "industry": "Financial Services",
+            "valuation_busd": 159.0,
+            "date_joined": "1/23/2014"
+          },
+          {
+            "company": "VAST Data",
+            "country": "United States",
+            "industry": "Enterprise Tech",
+            "valuation_busd": 80.0,
+            "date_joined": "4/16/2020"
+          },
+          {
+            "company": "Revolut",
+            "country": "United Kingdom",
+            "industry": "Financial Services",
+            "valuation_busd": 75.0,
+            "date_joined": "4/26/2018"
+          },
+          {
+            "company": "DeepSeek",
+            "country": "China",
+            "industry": "Enterprise Tech",
+            "valuation_busd": 50.0,
+            "date_joined": "6/16/2026"
+          },
+          {
+            "company": "Moonshot AI",
+            "country": "China",
+            "industry": "Consumer & Retail",
+            "valuation_busd": 50.0,
+            "date_joined": "2/19/2024"
+          },
+          {
+            "company": "Cognition",
+            "country": "United States",
+            "industry": "Enterprise Tech",
+            "valuation_busd": 48.0,
+            "date_joined": "4/24/2024"
+          },
+          {
+            "company": "Ramp",
+            "country": "United States",
+            "industry": "Enterprise Tech",
+            "valuation_busd": 44.0,
+            "date_joined": "3/29/2021"
+          },
+          {
+            "company": "Project Prometheus",
+            "country": "United States",
+            "industry": "Enterprise Tech",
+            "valuation_busd": 41.0,
+            "date_joined": "4/23/2026"
+          },
+          {
+            "company": "Ripple",
+            "country": "United States",
+            "industry": "Financial Services",
+            "valuation_busd": 40.0,
+            "date_joined": "12/20/2019"
+          },
+          {
+            "company": "Figure",
+            "country": "United States",
+            "industry": "Industrials",
+            "valuation_busd": 39.0,
+            "date_joined": "2/23/2024"
+          },
+          {
+            "company": "Canva",
+            "country": "Australia",
+            "industry": "Enterprise Tech",
+            "valuation_busd": 32.0,
+            "date_joined": "1/8/2018"
+          },
+          {
+            "company": "Fanatics",
+            "country": "United States",
+            "industry": "Consumer & Retail",
+            "valuation_busd": 31.0,
+            "date_joined": "6/6/2012"
+          },
+          {
+            "company": "Crusoe",
+            "country": "United States",
+            "industry": "Industrials",
+            "valuation_busd": 30.9,
+            "date_joined": "4/21/2022"
+          },
+          {
+            "company": "Safe Superintelligence",
+            "country": "United States",
+            "industry": "Enterprise Tech",
+            "valuation_busd": 30.0,
+            "date_joined": "9/4/2024"
+          },
+          {
+            "company": "OKX",
+            "country": "Seychelles",
+            "industry": "Financial Services",
+            "valuation_busd": 25.0,
+            "date_joined": "3/5/2026"
+          },
+          {
+            "company": "Mistral AI",
+            "country": "France",
+            "industry": "Enterprise Tech",
+            "valuation_busd": 24.38,
+            "date_joined": "12/10/2023"
+          }
+        ],
+        "by_country": [
+          {
+            "country": "United States",
+            "region": "North America",
+            "companies": 825,
+            "valuation_usd": 5048410000000.0
+          },
+          {
+            "country": "China",
+            "region": "Asia-Pacific",
+            "companies": 170,
+            "valuation_usd": 1001480000000.0
+          },
+          {
+            "country": "United Kingdom",
+            "region": "Europe",
+            "companies": 73,
+            "valuation_usd": 278510000000.0
+          },
+          {
+            "country": "India",
+            "region": "Asia-Pacific",
+            "companies": 63,
+            "valuation_usd": 143640000000.0
+          },
+          {
+            "country": "Germany",
+            "region": "Europe",
+            "companies": 39,
+            "valuation_usd": 137950000000.0
+          },
+          {
+            "country": "France",
+            "region": "Europe",
+            "companies": 31,
+            "valuation_usd": 102170000000.0
+          },
+          {
+            "country": "Canada",
+            "region": "North America",
+            "companies": 23,
+            "valuation_usd": 64670000000.0
+          },
+          {
+            "country": "Israel",
+            "region": "Middle East & Central Asia",
+            "companies": 26,
+            "valuation_usd": 60130000000.0
+          },
+          {
+            "country": "Australia",
+            "region": "Asia-Pacific",
+            "companies": 9,
+            "valuation_usd": 53840000000.0
+          },
+          {
+            "country": "Brazil",
+            "region": "Latin America",
+            "companies": 20,
+            "valuation_usd": 41640000000.0
+          },
+          {
+            "country": "Singapore",
+            "region": "Asia-Pacific",
+            "companies": 17,
+            "valuation_usd": 40060000000.0
+          },
+          {
+            "country": "South Korea",
+            "region": "Asia-Pacific",
+            "companies": 16,
+            "valuation_usd": 37980000000.0
+          },
+          {
+            "country": "Seychelles",
+            "region": "Africa",
+            "companies": 3,
+            "valuation_usd": 36800000000.0
+          },
+          {
+            "country": "Netherlands",
+            "region": "Europe",
+            "companies": 13,
+            "valuation_usd": 35360000000.0
+          },
+          {
+            "country": "Sweden",
+            "region": "Europe",
+            "companies": 7,
+            "valuation_usd": 32500000000.0
+          },
+          {
+            "country": "Finland",
+            "region": "Europe",
+            "companies": 5,
+            "valuation_usd": 23710000000.0
+          },
+          {
+            "country": "Belgium",
+            "region": "Europe",
+            "companies": 5,
+            "valuation_usd": 19880000000.0
+          },
+          {
+            "country": "Mexico",
+            "region": "Latin America",
+            "companies": 8,
+            "valuation_usd": 19250000000.0
+          },
+          {
+            "country": "Lithuania",
+            "region": "Europe",
+            "companies": 2,
+            "valuation_usd": 12990000000.0
+          },
+          {
+            "country": "Portugal",
+            "region": "Europe",
+            "companies": 3,
+            "valuation_usd": 12700000000.0
+          },
+          {
+            "country": "Ireland",
+            "region": "Europe",
+            "companies": 7,
+            "valuation_usd": 11480000000.0
+          },
+          {
+            "country": "Spain",
+            "region": "Europe",
+            "companies": 6,
+            "valuation_usd": 11430000000.0
+          },
+          {
+            "country": "Saudi Arabia",
+            "region": "Middle East & Central Asia",
+            "companies": 4,
+            "valuation_usd": 10900000000.0
+          },
+          {
+            "country": "Indonesia",
+            "region": "Asia-Pacific",
+            "companies": 7,
+            "valuation_usd": 10730000000.0
+          },
+          {
+            "country": "Japan",
+            "region": "Asia-Pacific",
+            "companies": 6,
+            "valuation_usd": 10660000000.0
+          },
+          {
+            "country": "Denmark",
+            "region": "Europe",
+            "companies": 3,
+            "valuation_usd": 8440000000.0
+          },
+          {
+            "country": "Switzerland",
+            "region": "Europe",
+            "companies": 4,
+            "valuation_usd": 7700000000.0
+          },
+          {
+            "country": "Austria",
+            "region": "Europe",
+            "companies": 2,
+            "valuation_usd": 7610000000.0
+          },
+          {
+            "country": "United Arab Emirates",
+            "region": "Middle East & Central Asia",
+            "companies": 5,
+            "valuation_usd": 7400000000.0
+          },
+          {
+            "country": "Hong Kong",
+            "region": "Asia-Pacific",
+            "companies": 5,
+            "valuation_usd": 7350000000.0
+          },
+          {
+            "country": "Nigeria",
+            "region": "Africa",
+            "companies": 2,
+            "valuation_usd": 4100000000.0
+          },
+          {
+            "country": "Turkey",
+            "region": "Europe",
+            "companies": 2,
+            "valuation_usd": 3300000000.0
+          },
+          {
+            "country": "Argentina",
+            "region": "Latin America",
+            "companies": 1,
+            "valuation_usd": 3200000000.0
+          },
+          {
+            "country": "Norway",
+            "region": "Europe",
+            "companies": 3,
+            "valuation_usd": 3000000000.0
+          },
+          {
+            "country": "Chile",
+            "region": "Latin America",
+            "companies": 2,
+            "valuation_usd": 2500000000.0
+          },
+          {
+            "country": "Thailand",
+            "region": "Asia-Pacific",
+            "companies": 2,
+            "valuation_usd": 2500000000.0
+          },
+          {
+            "country": "Uzbekistan",
+            "region": "Europe",
+            "companies": 1,
+            "valuation_usd": 2430000000.0
+          },
+          {
+            "country": "Vietnam",
+            "region": "Asia-Pacific",
+            "companies": 1,
+            "valuation_usd": 2270000000.0
+          },
+          {
+            "country": "Colombia",
+            "region": "Latin America",
+            "companies": 2,
+            "valuation_usd": 2150000000.0
+          },
+          {
+            "country": "Greece",
+            "region": "Europe",
+            "companies": 1,
+            "valuation_usd": 2049999999.9999998
+          },
+          {
+            "country": "Italy",
+            "region": "Europe",
+            "companies": 2,
+            "valuation_usd": 2000000000.0
+          },
+          {
+            "country": "Luxembourg",
+            "region": "Europe",
+            "companies": 1,
+            "valuation_usd": 2000000000.0
+          },
+          {
+            "country": "Malaysia",
+            "region": "Asia-Pacific",
+            "companies": 1,
+            "valuation_usd": 1700000000.0
+          },
+          {
+            "country": "Hungary",
+            "region": "Europe",
+            "companies": 1,
+            "valuation_usd": 1600000000.0
+          },
+          {
+            "country": "South Africa",
+            "region": "Africa",
+            "companies": 1,
+            "valuation_usd": 1590000000.0
+          },
+          {
+            "country": "Ecuador",
+            "region": "Latin America",
+            "companies": 1,
+            "valuation_usd": 1500000000.0
+          },
+          {
+            "country": "Estonia",
+            "region": "Europe",
+            "companies": 1,
+            "valuation_usd": 1500000000.0
+          },
+          {
+            "country": "Egypt",
+            "region": "Africa",
+            "companies": 1,
+            "valuation_usd": 1400000000.0
+          },
+          {
+            "country": "Czech Republic",
+            "region": "Europe",
+            "companies": 1,
+            "valuation_usd": 1200000000.0
+          },
+          {
+            "country": "Cayman Islands",
+            "region": "North America",
+            "companies": 1,
+            "valuation_usd": 1000000000.0
+          },
+          {
+            "country": "Liechtenstein",
+            "region": "Europe",
+            "companies": 1,
+            "valuation_usd": 1000000000.0
+          },
+          {
+            "country": "Philippines",
+            "region": "Asia-Pacific",
+            "companies": 1,
+            "valuation_usd": 1000000000.0
+          },
+          {
+            "country": "New Zealand",
+            "region": "Asia-Pacific",
+            "companies": 1,
+            "valuation_usd": 1000000000.0
+          },
+          {
+            "country": "Malta",
+            "region": "Middle East & Central Asia",
+            "companies": 1,
+            "valuation_usd": 1000000000.0
+          },
+          {
+            "country": "Slovenia",
+            "region": "Europe",
+            "companies": 1,
+            "valuation_usd": 1000000000.0
+          }
+        ],
+        "by_industry": [
+          {
+            "industry": "Enterprise Tech",
+            "companies": 558,
+            "valuation_usd": 3990220000000.0
+          },
+          {
+            "industry": "Financial Services",
+            "companies": 227,
+            "valuation_usd": 909170000000.0
+          },
+          {
+            "industry": "Industrials",
+            "companies": 226,
+            "valuation_usd": 741430000000.0
+          },
+          {
+            "industry": "Media & Entertainment",
+            "companies": 78,
+            "valuation_usd": 721820000000.0
+          },
+          {
+            "industry": "Consumer & Retail",
+            "companies": 205,
+            "valuation_usd": 612390000000.0
+          },
+          {
+            "industry": "Healthcare & Life Sciences",
+            "companies": 126,
+            "valuation_usd": 325900000000.0
+          },
+          {
+            "industry": "Insurance",
+            "companies": 21,
+            "valuation_usd": 44430000000.0
+          }
+        ],
+        "by_year_joined": [
+          {
+            "year": 2007.0,
+            "companies": 1,
+            "valuation_usd": 1380000000.0
+          },
+          {
+            "year": 2012.0,
+            "companies": 3,
+            "valuation_usd": 35000000000.0
+          },
+          {
+            "year": 2013.0,
+            "companies": 3,
+            "valuation_usd": 10000000000.0
+          },
+          {
+            "year": 2014.0,
+            "companies": 9,
+            "valuation_usd": 174500000000.0
+          },
+          {
+            "year": 2015.0,
+            "companies": 31,
+            "valuation_usd": 83990000000.0
+          },
+          {
+            "year": 2016.0,
+            "companies": 16,
+            "valuation_usd": 67890000000.0
+          },
+          {
+            "year": 2017.0,
+            "companies": 30,
+            "valuation_usd": 570420000000.0
+          },
+          {
+            "year": 2018.0,
+            "companies": 68,
+            "valuation_usd": 360350000000.0
+          },
+          {
+            "year": 2019.0,
+            "companies": 83,
+            "valuation_usd": 1390050000000.0
+          },
+          {
+            "year": 2020.0,
+            "companies": 87,
+            "valuation_usd": 405220000000.0
+          },
+          {
+            "year": 2021.0,
+            "companies": 433,
+            "valuation_usd": 1172730000000.0
+          },
+          {
+            "year": 2022.0,
+            "companies": 231,
+            "valuation_usd": 495090000000.0
+          },
+          {
+            "year": 2023.0,
+            "companies": 60,
+            "valuation_usd": 1118820000000.0
+          },
+          {
+            "year": 2024.0,
+            "companies": 83,
+            "valuation_usd": 435430000000.0
+          },
+          {
+            "year": 2025.0,
+            "companies": 123,
+            "valuation_usd": 429080000000.0
+          },
+          {
+            "year": 2026.0,
+            "companies": 102,
+            "valuation_usd": 391680000000.0
+          }
+        ]
+      },
+      "private_us_list": {
+        "count": 200,
+        "total_revenue": 2020241000000.0,
+        "top_15": [
+          {
+            "company": "Cargill",
+            "industry": "Food & Drink",
+            "revenue_usd": 154000000000.0,
+            "employees": 155000.0
+          },
+          {
+            "company": "Koch ",
+            "industry": "Multicompany",
+            "revenue_usd": 125000000000.0,
+            "employees": 120000.0
+          },
+          {
+            "company": "Publix Super Markets",
+            "industry": "Food Markets",
+            "revenue_usd": 59700000000.0,
+            "employees": 260000.0
+          },
+          {
+            "company": "Mars",
+            "industry": "Food & Drink",
+            "revenue_usd": 55000000000.0,
+            "employees": 150000.0
+          },
+          {
+            "company": "H-E-B Grocery Company",
+            "industry": "Business Management Consultants",
+            "revenue_usd": 49570000000.0,
+            "employees": 175000.0
+          },
+          {
+            "company": "Reyes Holdings",
+            "industry": "Food, Drink & Tobacco",
+            "revenue_usd": 44000000000.0,
+            "employees": 36000.0
+          },
+          {
+            "company": "Enterprise Mobility",
+            "industry": "Services",
+            "revenue_usd": 38000000000.0,
+            "employees": 100000.0
+          },
+          {
+            "company": "Fidelity Investments",
+            "industry": "Insurance",
+            "revenue_usd": 32700000000.0,
+            "employees": 78000.0
+          },
+          {
+            "company": "Southern Glazer's Wine & Spirits",
+            "industry": "Food, Drink & Tobacco",
+            "revenue_usd": 25000000000.0,
+            "employees": 24000.0
+          },
+          {
+            "company": "Cox Enterprises",
+            "industry": "Media",
+            "revenue_usd": 23500000000.0,
+            "employees": 50000.0
+          },
+          {
+            "company": "Bechtel",
+            "industry": "Construction",
+            "revenue_usd": 23000000000.0,
+            "employees": 50000.0
+          },
+          {
+            "company": "Gordon Food Service",
+            "industry": "Food, Drink & Tobacco",
+            "revenue_usd": 23000000000.0,
+            "employees": 20000.0
+          },
+          {
+            "company": "JM Family Enterprises",
+            "industry": "Consumer Durables",
+            "revenue_usd": 22800000000.0,
+            "employees": 5500.0
+          },
+          {
+            "company": "Meijer",
+            "industry": "Food Markets",
+            "revenue_usd": 22000000000.0,
+            "employees": 70000.0
+          },
+          {
+            "company": "Love's Travel Stops & Country Stores",
+            "industry": "Convenience Stores & Gas Stations",
+            "revenue_usd": 21600000000.0,
+            "employees": 40000.0
+          }
+        ]
+      },
+      "unlisted": {
+        "count": 659,
+        "total_revenue": 17372121700023.19,
+        "by_ownership": [
+          {
+            "ownership": "private",
+            "firms": 236,
+            "revenue_usd": 5285196300000.0
+          },
+          {
+            "ownership": "unknown",
+            "firms": 324,
+            "revenue_usd": 5199689000023.188
+          },
+          {
+            "ownership": "state",
+            "firms": 51,
+            "revenue_usd": 3684821000000.0
+          },
+          {
+            "ownership": "public",
+            "firms": 28,
+            "revenue_usd": 2202977000000.0
+          },
+          {
+            "ownership": "mutual",
+            "firms": 14,
+            "revenue_usd": 853038400000.0
+          },
+          {
+            "ownership": "pe",
+            "firms": 6,
+            "revenue_usd": 146400000000.0
+          }
+        ],
+        "top_25": [
+          {
+            "company": "State Grid",
+            "country": null,
+            "ownership": "state",
+            "sector": "Energy & Utilities",
+            "revenue_musd": 555371.4
+          },
+          {
+            "company": "China National Petroleum",
+            "country": null,
+            "ownership": "state",
+            "sector": "Energy & Utilities",
+            "revenue_musd": 401927.0
+          },
+          {
+            "company": "Vitol",
+            "country": "World (private)",
+            "ownership": "unknown",
+            "sector": "Unclassified",
+            "revenue_musd": 400000.0
+          },
+          {
+            "company": "Hon Hai Precision Industry",
+            "country": "Taiwan",
+            "ownership": "public",
+            "sector": "Technology",
+            "revenue_musd": 260083.6
+          },
+          {
+            "company": "Trafigura Group",
+            "country": "Singapore",
+            "ownership": "private",
+            "sector": "Unclassified",
+            "revenue_musd": 240268.0
+          },
+          {
+            "company": "Industrial & Commercial Bank of China",
+            "country": null,
+            "ownership": "public",
+            "sector": "Financials",
+            "revenue_musd": 210589.8
+          },
+          {
+            "company": "Schwarz Group",
+            "country": "World (private)",
+            "ownership": "unknown",
+            "sector": "Unclassified",
+            "revenue_musd": 180600.0
+          },
+          {
+            "company": "Cargill",
+            "country": "United States",
+            "ownership": "private",
+            "sector": "Food & Agriculture",
+            "revenue_musd": 154000.0
+          },
+          {
+            "company": "China Railway Engineering Group",
+            "country": null,
+            "ownership": "private",
+            "sector": "Construction & Real Estate",
+            "revenue_musd": 152201.0
+          },
+          {
+            "company": "China Mobile Communications",
+            "country": null,
+            "ownership": "private",
+            "sector": "Technology",
+            "revenue_musd": 146550.2
+          },
+          {
+            "company": "Banco Santander",
+            "country": "Europe",
+            "ownership": "public",
+            "sector": "Financials",
+            "revenue_musd": 145070.2
+          },
+          {
+            "company": "China Resources",
+            "country": null,
+            "ownership": "private",
+            "sector": "Financials",
+            "revenue_musd": 133290.1
+          },
+          {
+            "company": "State Farm Insurance",
+            "country": "United States",
+            "ownership": "mutual",
+            "sector": "Financials",
+            "revenue_musd": 132311.6
+          },
+          {
+            "company": "Electricité de France",
+            "country": "France",
+            "ownership": "state",
+            "sector": "Energy & Utilities",
+            "revenue_musd": 127754.4
+          },
+          {
+            "company": "EDF",
+            "country": "Europe",
+            "ownership": "unknown",
+            "sector": "Energy & Utilities",
+            "revenue_musd": 127754.0
+          },
+          {
+            "company": "Hengli Group",
+            "country": "China",
+            "ownership": "private",
+            "sector": "Consumer & Retail",
+            "revenue_musd": 125084.8
+          },
+          {
+            "company": "Koch ",
+            "country": "United States",
+            "ownership": "private",
+            "sector": "Unclassified",
+            "revenue_musd": 125000.0
+          },
+          {
+            "company": "Huawei Investment & Holding",
+            "country": null,
+            "ownership": "private",
+            "sector": "Unclassified",
+            "revenue_musd": 122562.7
+          },
+          {
+            "company": "Taiwan Semiconductor Manufacturing",
+            "country": "Taiwan",
+            "ownership": "public",
+            "sector": "Technology",
+            "revenue_musd": 122258.4
+          },
+          {
+            "company": "Aldi",
+            "country": "World (private)",
+            "ownership": "unknown",
+            "sector": "Unclassified",
+            "revenue_musd": 120960.0
+          },
+          {
+            "company": "China National Offshore Oil",
+            "country": null,
+            "ownership": "private",
+            "sector": "Energy & Utilities",
+            "revenue_musd": 120914.5
+          },
+          {
+            "company": "China Southern Power Grid",
+            "country": "China",
+            "ownership": "private",
+            "sector": "Energy & Utilities",
+            "revenue_musd": 118796.7
+          },
+          {
+            "company": "Shandong Energy Group",
+            "country": "China",
+            "ownership": "state",
+            "sector": "Energy & Utilities",
+            "revenue_musd": 116559.1
+          },
+          {
+            "company": "Nippon Telegraph and Telephone",
+            "country": "Japan",
+            "ownership": "unknown",
+            "sector": "Technology",
+            "revenue_musd": 110390.0
+          },
+          {
+            "company": "China Minmetals",
+            "country": null,
+            "ownership": "private",
+            "sector": "Materials & Chemicals",
+            "revenue_musd": 104139.2
+          }
+        ]
+      },
+      "ai": {
+        "count": 173,
+        "by_modality": {
+          "LLM": 37,
+          "robotics": 10,
+          "autonomy": 9,
+          "code": 8,
+          "video": 7,
+          "infrastructure": 7,
+          "LLM / multimodal": 6,
+          "biology": 6,
+          "chips": 6,
+          "enterprise AI": 5,
+          "image": 5,
+          "data labelling": 4,
+          "agents": 3,
+          "audio / voice": 3,
+          "LLM / video": 3,
+          "enterprise / models": 3,
+          "chips / inference": 2,
+          "world models": 2,
+          "memory": 2,
+          "research": 2,
+          "LLM / consumer": 2,
+          "music": 2,
+          "video / avatars": 2,
+          "LLM / on-device": 2,
+          "LLM / reasoning": 1,
+          "LLM / devices": 1,
+          "LLM / sovereign": 1,
+          "audio / emotion": 1,
+          "image / video": 1,
+          "video / 3D": 1,
+          "image / audio": 1,
+          "LLM (SEA)": 1,
+          "LLM / vision": 1,
+          "embeddings / LLM": 1,
+          "speech / LLM": 1,
+          "LLM / Indic": 1,
+          "search / agents": 1,
+          "LLM / enterprise": 1,
+          "LLM / chips": 1,
+          "biology / drug discovery": 1,
+          "autonomy / robotics": 1,
+          "3D": 1,
+          "3D / world models": 1,
+          "agents / LLM": 1,
+          "search / enterprise": 1,
+          "biology / simulation": 1,
+          "health / data": 1,
+          "biology / protein": 1,
+          "autonomous driving": 1,
+          "chips / on-device": 1,
+          "chips / models": 1,
+          "inference chips": 1,
+          "lithography": 1,
+          "chips (foundry)": 1,
+          "chips (IP)": 1,
+          "data / services": 1,
+          "data / hiring": 1,
+          "translation": 1,
+          "LLM / automotive": 1
+        },
+        "by_openness": {
+          "no": 104,
+          "yes": 45,
+          "partial": 24
+        },
+        "by_country": {
+          "United States": 97,
+          "China": 16,
+          "United Kingdom": 9,
+          "Canada": 9,
+          "South Korea": 7,
+          "Japan": 4,
+          "Russia": 3,
+          "Israel": 3,
+          "Germany": 3,
+          "India": 3,
+          "France": 2,
+          "United Arab Emirates": 2,
+          "Taiwan": 2,
+          "Netherlands": 2,
+          "Finland": 2,
+          "Australia": 2,
+          "International": 1,
+          "Singapore": 1,
+          "Sweden": 1,
+          "Switzerland": 1,
+          "Poland": 1,
+          "Norway": 1,
+          "Vietnam": 1
+        },
+        "by_category": {
+          "generative_media": 27,
+          "application": 23,
+          "institute": 21,
+          "frontier_closed": 19,
+          "autonomy": 11,
+          "open_weight": 10,
+          "robotics": 10,
+          "biology": 10,
+          "chips": 9,
+          "frontier_open": 8,
+          "hardware_lab": 7,
+          "infrastructure": 7,
+          "data": 6,
+          "enterprise": 5
+        },
+        "with_valuation": 54,
+        "total_valuation": 2214682000000.0,
+        "top_15": [
+          {
+            "company": "Anthropic",
+            "country": "United States",
+            "modality": "LLM",
+            "open_weights": "no",
+            "valuation_busd_cb": 965.0
+          },
+          {
+            "company": "OpenAI",
+            "country": "United States",
+            "modality": "LLM / multimodal",
+            "open_weights": "partial",
+            "valuation_busd_cb": 840.0
+          },
+          {
+            "company": "DeepSeek",
+            "country": "China",
+            "modality": "LLM / reasoning",
+            "open_weights": "yes",
+            "valuation_busd_cb": 50.0
+          },
+          {
+            "company": "Moonshot AI",
+            "country": "China",
+            "modality": "LLM",
+            "open_weights": "yes",
+            "valuation_busd_cb": 50.0
+          },
+          {
+            "company": "Cognition",
+            "country": "United States",
+            "modality": "code",
+            "open_weights": "no",
+            "valuation_busd_cb": 48.0
+          },
+          {
+            "company": "Mistral AI",
+            "country": "France",
+            "modality": "LLM",
+            "open_weights": "partial",
+            "valuation_busd_cb": 24.38
+          },
+          {
+            "company": "Etched",
+            "country": "United States",
+            "modality": "chips",
+            "open_weights": "no",
+            "valuation_busd_cb": 21.0
+          },
+          {
+            "company": "Perplexity",
+            "country": "United States",
+            "modality": "search / agents",
+            "open_weights": "no",
+            "valuation_busd_cb": 20.0
+          },
+          {
+            "company": "Sierra",
+            "country": "United States",
+            "modality": "agents",
+            "open_weights": "no",
+            "valuation_busd_cb": 15.8
+          },
+          {
+            "company": "Skild AI",
+            "country": "United States",
+            "modality": "robotics",
+            "open_weights": "no",
+            "valuation_busd_cb": 14.0
+          },
+          {
+            "company": "Poolside",
+            "country": "United States",
+            "modality": "code",
+            "open_weights": "partial",
+            "valuation_busd_cb": 13.0
+          },
+          {
+            "company": "Baseten",
+            "country": "United States",
+            "modality": "infrastructure",
+            "open_weights": "no",
+            "valuation_busd_cb": 13.0
+          },
+          {
+            "company": "ElevenLabs",
+            "country": "United States",
+            "modality": "audio / voice",
+            "open_weights": "no",
+            "valuation_busd_cb": 11.0
+          },
+          {
+            "company": "Mercor",
+            "country": "United States",
+            "modality": "data / hiring",
+            "open_weights": "no",
+            "valuation_busd_cb": 10.0
+          },
+          {
+            "company": "Wayve",
+            "country": "United Kingdom",
+            "modality": "autonomy",
+            "open_weights": "no",
+            "valuation_busd_cb": 9.0
+          }
+        ],
+        "open_by_country": [
+          {
+            "country": "Australia",
+            "no": 2,
+            "partial": 0,
+            "yes": 0
+          },
+          {
+            "country": "Canada",
+            "no": 5,
+            "partial": 4,
+            "yes": 0
+          },
+          {
+            "country": "China",
+            "no": 2,
+            "partial": 2,
+            "yes": 12
+          },
+          {
+            "country": "Finland",
+            "no": 0,
+            "partial": 1,
+            "yes": 1
+          },
+          {
+            "country": "France",
+            "no": 0,
+            "partial": 1,
+            "yes": 1
+          },
+          {
+            "country": "Germany",
+            "no": 1,
+            "partial": 1,
+            "yes": 1
+          },
+          {
+            "country": "India",
+            "no": 1,
+            "partial": 1,
+            "yes": 1
+          },
+          {
+            "country": "International",
+            "no": 0,
+            "partial": 0,
+            "yes": 1
+          },
+          {
+            "country": "Israel",
+            "no": 2,
+            "partial": 1,
+            "yes": 0
+          },
+          {
+            "country": "Japan",
+            "no": 0,
+            "partial": 1,
+            "yes": 3
+          },
+          {
+            "country": "Netherlands",
+            "no": 1,
+            "partial": 0,
+            "yes": 1
+          },
+          {
+            "country": "Norway",
+            "no": 1,
+            "partial": 0,
+            "yes": 0
+          },
+          {
+            "country": "Poland",
+            "no": 0,
+            "partial": 0,
+            "yes": 1
+          },
+          {
+            "country": "Russia",
+            "no": 1,
+            "partial": 1,
+            "yes": 1
+          },
+          {
+            "country": "Singapore",
+            "no": 0,
+            "partial": 0,
+            "yes": 1
+          },
+          {
+            "country": "South Korea",
+            "no": 5,
+            "partial": 0,
+            "yes": 2
+          },
+          {
+            "country": "Sweden",
+            "no": 0,
+            "partial": 0,
+            "yes": 1
+          },
+          {
+            "country": "Switzerland",
+            "no": 0,
+            "partial": 0,
+            "yes": 1
+          },
+          {
+            "country": "Taiwan",
+            "no": 1,
+            "partial": 0,
+            "yes": 1
+          },
+          {
+            "country": "United Arab Emirates",
+            "no": 0,
+            "partial": 0,
+            "yes": 2
+          },
+          {
+            "country": "United Kingdom",
+            "no": 7,
+            "partial": 1,
+            "yes": 1
+          },
+          {
+            "country": "United States",
+            "no": 75,
+            "partial": 9,
+            "yes": 13
+          },
+          {
+            "country": "Vietnam",
+            "no": 0,
+            "partial": 1,
+            "yes": 0
+          }
+        ],
+        "frontier": {
+          "count": 27,
+          "open_weights": {
+            "no": 12,
+            "partial": 8,
+            "yes": 7
+          },
+          "by_country": {
+            "China": 9,
+            "United States": 8,
+            "South Korea": 4,
+            "Russia": 2,
+            "United Kingdom": 1,
+            "Germany": 1,
+            "France": 1,
+            "India": 1
+          }
+        }
+      },
+      "ai_labs": {
+        "count": 99,
+        "by_openness": {
+          "yes": 48,
+          "no": 33,
+          "partial": 18
+        },
+        "by_country": {
+          "United States": 37,
+          "China": 17,
+          "Japan": 6,
+          "South Korea": 5,
+          "Germany": 4,
+          "Taiwan": 3,
+          "Canada": 3,
+          "France": 3,
+          "United Kingdom": 3,
+          "Russia": 3,
+          "India": 3,
+          "Finland": 2,
+          "United Arab Emirates": 2,
+          "Israel": 1,
+          "International": 1,
+          "Singapore": 1,
+          "Vietnam": 1,
+          "Sweden": 1,
+          "Poland": 1,
+          "Switzerland": 1,
+          "Netherlands": 1
+        },
+        "top_downloads": [
+          {
+            "lab": "BAAI",
+            "country": "China",
+            "hf_top_model": "BAAI/bge-small-en-v1.5",
+            "hf_top_downloads": 57543408.0,
+            "open_weights": "yes",
+            "hf_license": "mit"
+          },
+          {
+            "lab": "Google DeepMind",
+            "country": "United Kingdom",
+            "hf_top_model": "google/electra-base-discriminator",
+            "hf_top_downloads": 41852016.0,
+            "open_weights": "partial",
+            "hf_license": "apache-2.0"
+          },
+          {
+            "lab": "Alibaba Qwen",
+            "country": "China",
+            "hf_top_model": "Qwen/Qwen3-0.6B",
+            "hf_top_downloads": 29469443.0,
+            "open_weights": "yes",
+            "hf_license": "apache-2.0"
+          },
+          {
+            "lab": "OpenAI",
+            "country": "United States",
+            "hf_top_model": "openai/clip-vit-base-patch32",
+            "hf_top_downloads": 17686148.0,
+            "open_weights": "partial",
+            "hf_license": NaN
+          },
+          {
+            "lab": "LAION",
+            "country": "Germany",
+            "hf_top_model": "laion/clap-htsat-fused",
+            "hf_top_downloads": 7361940.0,
+            "open_weights": "yes",
+            "hf_license": "apache-2.0"
+          },
+          {
+            "lab": "Zhipu AI (Z.ai)",
+            "country": "China",
+            "hf_top_model": "zai-org/GLM-5.3-Flash",
+            "hf_top_downloads": 6536333.0,
+            "open_weights": "yes",
+            "hf_license": "mit"
+          },
+          {
+            "lab": "IBM Research",
+            "country": "United States",
+            "hf_top_model": "ibm-granite/granite-embedding-small-english-r2",
+            "hf_top_downloads": 5839803.0,
+            "open_weights": "yes",
+            "hf_license": "apache-2.0"
+          },
+          {
+            "lab": "Meta Superintelligence Labs / FAIR",
+            "country": "United States",
+            "hf_top_model": "meta-llama/Llama-3.1-8B-Instruct",
+            "hf_top_downloads": 5490624.0,
+            "open_weights": "yes",
+            "hf_license": "llama3.1"
+          },
+          {
+            "lab": "DeepSeek",
+            "country": "China",
+            "hf_top_model": "deepseek-ai/DeepSeek-V3.2",
+            "hf_top_downloads": 5289963.0,
+            "open_weights": "yes",
+            "hf_license": "mit"
+          },
+          {
+            "lab": "MiniMax",
+            "country": "China",
+            "hf_top_model": "MiniMaxAI/MiniMax-H3",
+            "hf_top_downloads": 4806865.0,
+            "open_weights": "yes",
+            "hf_license": "other"
+          },
+          {
+            "lab": "NVIDIA",
+            "country": "United States",
+            "hf_top_model": "nvidia/Qwen3.6-35B-A3B-NVFP4",
+            "hf_top_downloads": 4436218.0,
+            "open_weights": "yes",
+            "hf_license": "apache-2.0"
+          },
+          {
+            "lab": "Stability AI",
+            "country": "United Kingdom",
+            "hf_top_model": "stabilityai/stable-diffusion-xl-base-1.0",
+            "hf_top_downloads": 4300663.0,
+            "open_weights": "yes",
+            "hf_license": "openrail++"
+          },
+          {
+            "lab": "EleutherAI",
+            "country": "United States",
+            "hf_top_model": "EleutherAI/pythia-160m",
+            "hf_top_downloads": 3412083.0,
+            "open_weights": "yes",
+            "hf_license": "apache-2.0"
+          },
+          {
+            "lab": "Mistral AI",
+            "country": "France",
+            "hf_top_model": "mistralai/Voxtral-Mini-4B-Realtime-2602",
+            "hf_top_downloads": 2171152.0,
+            "open_weights": "partial",
+            "hf_license": "apache-2.0"
+          },
+          {
+            "lab": "Hugging Face",
+            "country": "United States",
+            "hf_top_model": "HuggingFaceTB/SmolLM2-135M",
+            "hf_top_downloads": 1736183.0,
+            "open_weights": "yes",
+            "hf_license": "apache-2.0"
+          }
+        ],
+        "total_downloads_top_model": 207620842.0
+      },
+      "paper_vs_real": {
+        "forbes_revenue": 55974135000000.0,
+        "listed_market_cap": 150488439670183.0,
+        "unicorn_paper_value": 7348860000000.0,
+        "unicorn_value_as_pct_of_listed_mcap": 4.883338558168376,
+        "note": "unicorn value is a private mark; it is not revenue and not a traded price, and the three numbers are not additive"
+      },
+      "overlap": {
+        "unicorn_companies": 1442,
+        "unicorns_also_in_reconciled": 20,
+        "unicorns_also_in_forbes": 2,
+        "note": "A unicorn that also appears in another source has already IPO'd or been reclassified; the board lags reality."
+      }
+    },
+    "insights": [
+      "The private tail is enormous and unusually concentrated: **1,442** unicorns carry **7.35 T$** of paper value across **55** countries, but the top country holds **69%** of it and the top five **90%** (HHI 4937). The median unicorn is worth **$1.7B**; the mean is **3.0x** the median.",
+      "**659** companies with measurable revenue have no listed share at all, worth **17.37 T$** — real revenue, not paper. **private** accounts for $5285B across 236 firms; **unknown** accounts for $5200B across 324 firms; **state** accounts for $3685B across 51 firms.",
+      "Among **173** AI model builders, **45** ship open weights, **24** are partial and **104** are closed. At the frontier specifically (27 labs) the split is {'no': 12, 'partial': 8, 'yes': 7} by country {'China': 9, 'United States': 8, 'South Korea': 4, 'Russia': 2, 'United Kingdom': 1, 'Germany': 1, 'France': 1, 'India': 1} — openness is a regional strategy, not a universal one.",
+      "**Keep the ledgers separate.** The Forbes 2,000 report **$56.0 T$** of *revenue*; the listed universe reports **$150.5 T$** of *market value*; the unicorn board reports **$7.35 T$** of *paper marks* — equal to **4.9%** of the listed market. These three numbers measure different things and must never be summed.",
+      "The unicorn board overlaps the public world more than its reputation suggests: **20** of 1,442 unicorn names also appear in the reconciled universe. A $1B+ private mark from an old round is not a current price."
+    ],
+    "tables": [
+      "ai_by_modality",
+      "private_us",
+      "unicorns_by_country",
+      "unicorns_by_industry",
+      "unicorns_by_year",
+      "unicorns_top",
+      "unlisted_top"
+    ]
+  },
+  "time_series": {
+    "metrics": {
+      "available": true,
+      "history_rows": 61365,
+      "metrics_in_file": [
+        "assets",
+        "employees",
+        "profits",
+        "revenue"
+      ],
+      "year_span": [
+        2016,
+        2025
+      ],
+      "revenue_points": 16000,
+      "profit_points": 16001,
+      "cohort_companies": 1263,
+      "cohort_years": [
+        2016,
+        2025
+      ],
+      "cohort_revenue": {
+        "companies": 1263,
+        "first_year": 2016,
+        "last_year": 2025,
+        "span_years": 9,
+        "start_musd": 29318779.0,
+        "end_musd": 47751843.0,
+        "growth_multiple": 1.629,
+        "cagr_pct": 5.57,
+        "series": [
+          {
+            "year": 2016,
+            "total_musd": 29318779.0,
+            "companies": 1263
+          },
+          {
+            "year": 2017,
+            "total_musd": 32408542.657,
+            "companies": 1263
+          },
+          {
+            "year": 2018,
+            "total_musd": 34381733.004,
+            "companies": 1263
+          },
+          {
+            "year": 2019,
+            "total_musd": 35519742.622,
+            "companies": 1263
+          },
+          {
+            "year": 2020,
+            "total_musd": 33665228.036,
+            "companies": 1263
+          },
+          {
+            "year": 2021,
+            "total_musd": 39819432.812,
+            "companies": 1263
+          },
+          {
+            "year": 2022,
+            "total_musd": 42961357.71,
+            "companies": 1263
+          },
+          {
+            "year": 2023,
+            "total_musd": 44175941.136,
+            "companies": 1263
+          },
+          {
+            "year": 2024,
+            "total_musd": 45188245.546,
+            "companies": 1263
+          },
+          {
+            "year": 2025,
+            "total_musd": 47751843.0,
+            "companies": 1263
+          }
+        ],
+        "cagr_ci95_pct": [
+          3.32,
+          5.57
+        ]
+      },
+      "cohort_profit": {
+        "companies": 1263,
+        "first_year": 2016,
+        "last_year": 2025,
+        "start_musd": 2126936.9,
+        "end_musd": 4754984.0,
+        "growth_multiple": 2.236,
+        "cagr_pct": 9.35,
+        "series": [
+          {
+            "year": 2016,
+            "total_musd": 2126936.9,
+            "companies": 1263
+          },
+          {
+            "year": 2017,
+            "total_musd": 2764916.918,
+            "companies": 1263
+          },
+          {
+            "year": 2018,
+            "total_musd": 2926029.0,
+            "companies": 1263
+          },
+          {
+            "year": 2019,
+            "total_musd": 2786158.952,
+            "companies": 1263
+          },
+          {
+            "year": 2020,
+            "total_musd": 2134323.293,
+            "companies": 1263
+          },
+          {
+            "year": 2021,
+            "total_musd": 4093803.045,
+            "companies": 1263
+          },
+          {
+            "year": 2022,
+            "total_musd": 3740262.056,
+            "companies": 1263
+          },
+          {
+            "year": 2023,
+            "total_musd": 3851563.908,
+            "companies": 1263
+          },
+          {
+            "year": 2024,
+            "total_musd": 4126082.505,
+            "companies": 1263
+          },
+          {
+            "year": 2025,
+            "total_musd": 4754984.0,
+            "companies": 1263
+          }
+        ]
+      },
+      "cohort_margin_path": [
+        {
+          "year": 2016,
+          "margin_pct": 7.254520728847541
+        },
+        {
+          "year": 2017,
+          "margin_pct": 8.531444771407513
+        },
+        {
+          "year": 2018,
+          "margin_pct": 8.510417434919827
+        },
+        {
+          "year": 2019,
+          "margin_pct": 7.843972805913086
+        },
+        {
+          "year": 2020,
+          "margin_pct": 6.339845049371583
+        },
+        {
+          "year": 2021,
+          "margin_pct": 10.280917521673715
+        },
+        {
+          "year": 2022,
+          "margin_pct": 8.706107663653723
+        },
+        {
+          "year": 2023,
+          "margin_pct": 8.718691235445512
+        },
+        {
+          "year": 2024,
+          "margin_pct": 9.130875640657033
+        },
+        {
+          "year": 2025,
+          "margin_pct": 9.957697339556088
+        }
+      ],
+      "profit_pool_migration": {
+        "industries": 33,
+        "first_year": 2016,
+        "last_year": 2025,
+        "biggest_gainers": [
+          {
+            "industry": "Oil & Gas Operations",
+            "profit_share_change_pp": 5.16
+          },
+          {
+            "industry": "Semiconductors",
+            "profit_share_change_pp": 4.36
+          },
+          {
+            "industry": "IT Software & Services",
+            "profit_share_change_pp": 4.16
+          },
+          {
+            "industry": "Retail and Wholesale",
+            "profit_share_change_pp": 1.53
+          },
+          {
+            "industry": "Capital Goods",
+            "profit_share_change_pp": 1.2
+          }
+        ],
+        "biggest_losers": [
+          {
+            "industry": "Banking",
+            "profit_share_change_pp": -5.09
+          },
+          {
+            "industry": "Consumer Durables",
+            "profit_share_change_pp": -4.53
+          },
+          {
+            "industry": "Food, Drink & Tobacco",
+            "profit_share_change_pp": -2.15
+          },
+          {
+            "industry": "Drugs & Biotechnology",
+            "profit_share_change_pp": -1.81
+          },
+          {
+            "industry": "Telecommunications Services",
+            "profit_share_change_pp": -1.66
+          }
+        ]
+      },
+      "mobility": {
+        "matched_forbes_companies": 1263,
+        "median_growth_pct": 61.81,
+        "top_risers": [
+          {
+            "company": "Porsche Automobil Holding",
+            "rank_now": 1035.0,
+            "growth_pct": 336600.0
+          },
+          {
+            "company": "CNPC Capital",
+            "rank_now": 1099.0,
+            "growth_pct": 5833.7
+          },
+          {
+            "company": "CMOC Group",
+            "rank_now": 410.0,
+            "growth_pct": 3098.2
+          },
+          {
+            "company": "NVIDIA",
+            "rank_now": 27.0,
+            "growth_pct": 3025.0
+          },
+          {
+            "company": "Cheniere Energy",
+            "rank_now": 515.0,
+            "growth_pct": 1528.2
+          },
+          {
+            "company": "Tesla",
+            "rank_now": 96.0,
+            "growth_pct": 1298.3
+          },
+          {
+            "company": "Yokohama Financial Group",
+            "rank_now": 1243.0,
+            "growth_pct": 949.5
+          },
+          {
+            "company": "ServiceNow",
+            "rank_now": 629.0,
+            "growth_pct": 903.6
+          }
+        ],
+        "top_fallers": [
+          {
+            "company": "New World Development",
+            "rank_now": 1891.0,
+            "growth_pct": -81.9
+          },
+          {
+            "company": "Tata Motors",
+            "rank_now": 1972.0,
+            "growth_pct": -77.0
+          },
+          {
+            "company": "China Huarong Asset Management",
+            "rank_now": 1087.0,
+            "growth_pct": -76.4
+          },
+          {
+            "company": "Prudential",
+            "rank_now": 276.0,
+            "growth_pct": -71.4
+          },
+          {
+            "company": "SSE",
+            "rank_now": 693.0,
+            "growth_pct": -63.8
+          },
+          {
+            "company": "RWE Group",
+            "rank_now": 346.0,
+            "growth_pct": -62.7
+          },
+          {
+            "company": "Lotte Shopping",
+            "rank_now": 1867.0,
+            "growth_pct": -61.8
+          },
+          {
+            "company": "GE Aerospace",
+            "rank_now": 115.0,
+            "growth_pct": -59.6
+          }
+        ],
+        "share_declining_pct": 11.4
+      },
+      "turnover": {
+        "top_50": {
+          "retained": 34,
+          "entered": 16,
+          "exited": 16,
+          "retained_pct": 68.0
+        },
+        "top_100": {
+          "retained": 66,
+          "entered": 34,
+          "exited": 34,
+          "retained_pct": 66.0
+        },
+        "top_200": {
+          "retained": 147,
+          "entered": 53,
+          "exited": 53,
+          "retained_pct": 73.5
+        },
+        "top_500": {
+          "retained": 382,
+          "entered": 118,
+          "exited": 118,
+          "retained_pct": 76.4
+        }
+      },
+      "growth_dispersion": {
+        "n": 1263,
+        "mean": 368.28361335112857,
+        "median": 61.80824109881318,
+        "std": 9471.431065257604,
+        "min": -81.93720962973391,
+        "p10": -4.331918295065579,
+        "p25": 24.615089397499734,
+        "p75": 124.15870469281192,
+        "p90": 213.50684603545957,
+        "p99": 682.1791705222367,
+        "max": 336600.0,
+        "sum": 465142.2036624754,
+        "skew": 35.50586271833348,
+        "kurtosis": 1261.431532206177,
+        "cv": 25.717764032654266,
+        "mean_to_median": 5.958487198533145,
+        "share_grew_pct": 88.6,
+        "share_5x_or_more_pct": 2.77,
+        "share_halved_pct": 0.95
+      }
+    },
+    "insights": [
+      "**Constant cohort: 1,263 firms, 2016–2025.** Aggregate revenue grew from $29.32T to $47.75T — ×1.63, a CAGR of 5.6% (95% CI 3.3–5.6%).",
+      "**Profit outran revenue.** Over the same window the cohort's profit pool grew ×2.24 against revenue ×1.63 — so the blended margin widened, not narrowed.",
+      "**The profit pool migrated.** Biggest share gainers: Oil & Gas Operations (+5.2pp), Semiconductors (+4.4pp), IT Software & Services (+4.2pp), Retail and Wholesale (+1.5pp), Capital Goods (+1.2pp).",
+      "**Biggest share losers:** Banking (-5.1pp), Consumer Durables (-4.5pp), Food, Drink & Tobacco (-2.1pp), Drugs & Biotechnology (-1.8pp), Telecommunications Services (-1.7pp).",
+      "**The top of the table is sticky but not static.** Of the top 100 in 2016, 66 are still there today; of the top 500, 382 remain (76.4%).",
+      "**Of 1,263 current Forbes firms with a full history, 11% shrank over the decade** (median growth +61.8%)."
+    ],
+    "tables": [
+      "cohort_margin_path",
+      "cohort_profit_series",
+      "cohort_revenue_series",
+      "mobility_forbes",
+      "profit_pool_migration",
+      "rank_mobility"
+    ]
+  },
+  "data_quality": {
+    "metrics": {
+      "missingness_summary": [
+        {
+          "dataset": "ai_companies",
+          "rows": 173,
+          "columns": 18,
+          "cell_missing_pct": 39.2,
+          "worst_column": "total_funding_usd",
+          "worst_column_missing_pct": 100.0
+        },
+        {
+          "dataset": "ai_labs",
+          "rows": 99,
+          "columns": 15,
+          "cell_missing_pct": 33.9,
+          "worst_column": "parent",
+          "worst_column_missing_pct": 78.8
+        },
+        {
+          "dataset": "exchange_top",
+          "rows": 561,
+          "columns": 8,
+          "cell_missing_pct": 0.6,
+          "worst_column": "revenue_usd",
+          "worst_column_missing_pct": 4.3
+        },
+        {
+          "dataset": "exchanges",
+          "rows": 60,
+          "columns": 8,
+          "cell_missing_pct": 0.0,
+          "worst_column": "exchange",
+          "worst_column_missing_pct": 0.0
+        },
+        {
+          "dataset": "forbes2000",
+          "rows": 2000,
+          "columns": 31,
+          "cell_missing_pct": 8.5,
+          "worst_column": "state",
+          "worst_column_missing_pct": 70.2
+        },
+        {
+          "dataset": "forbes2000_hist",
+          "rows": 61365,
+          "columns": 8,
+          "cell_missing_pct": 0.0,
+          "worst_column": "company",
+          "worst_column_missing_pct": 0.0
+        },
+        {
+          "dataset": "fortune500",
+          "rows": 500,
+          "columns": 15,
+          "cell_missing_pct": 3.8,
+          "worst_column": "ticker",
+          "worst_column_missing_pct": 32.0
+        },
+        {
+          "dataset": "fortune_profiles",
+          "rows": 500,
+          "columns": 14,
+          "cell_missing_pct": 9.6,
+          "worst_column": "market_value_asof",
+          "worst_column_missing_pct": 78.0
+        },
+        {
+          "dataset": "hf_stats",
+          "rows": 49,
+          "columns": 5,
+          "cell_missing_pct": 5.3,
+          "worst_column": "hf_license",
+          "worst_column_missing_pct": 14.3
+        },
+        {
+          "dataset": "listed",
+          "rows": 12512,
+          "columns": 9,
+          "cell_missing_pct": 11.6,
+          "worst_column": "cik",
+          "worst_column_missing_pct": 56.0
+        },
+        {
+          "dataset": "private_us",
+          "rows": 200,
+          "columns": 14,
+          "cell_missing_pct": 3.3,
+          "worst_column": "revenue_change_pct",
+          "worst_column_missing_pct": 26.5
+        },
+        {
+          "dataset": "profiles",
+          "rows": 12512,
+          "columns": 9,
+          "cell_missing_pct": 17.2,
+          "worst_column": "wiki_title",
+          "worst_column_missing_pct": 38.2
+        },
+        {
+          "dataset": "unicorns",
+          "rows": 1442,
+          "columns": 8,
+          "cell_missing_pct": 0.7,
+          "worst_column": "investors",
+          "worst_column_missing_pct": 3.5
+        },
+        {
+          "dataset": "wiki_countries",
+          "rows": 1205,
+          "columns": 22,
+          "cell_missing_pct": 46.4,
+          "worst_column": "ownership",
+          "worst_column_missing_pct": 100.0
+        },
+        {
+          "dataset": "worldbank_extra",
+          "rows": 109962,
+          "columns": 6,
+          "cell_missing_pct": 0.0,
+          "worst_column": "iso3",
+          "worst_column_missing_pct": 0.0
+        }
+      ],
+      "sources_compared": [
+        "forbes",
+        "fortune",
+        "listed",
+        "private",
+        "wiki"
+      ],
+      "companies_in_multiple_sources": 1805,
+      "total_matched_companies": 13021,
+      "cross_source_disagreement": [
+        {
+          "source_a": "forbes",
+          "source_b": "fortune",
+          "pairs": 335,
+          "median_abs_pct_diff": 2.0,
+          "mean_abs_pct_diff": 6.5,
+          "p90_abs_pct_diff": 14.5,
+          "share_within_10pct": 84.2,
+          "share_within_25pct": 94.6,
+          "share_over_2x": 2.7,
+          "pearson_r": 0.993,
+          "note": NaN
+        },
+        {
+          "source_a": "forbes",
+          "source_b": "listed",
+          "pairs": 1455,
+          "median_abs_pct_diff": 4.7,
+          "mean_abs_pct_diff": 18.9,
+          "p90_abs_pct_diff": 59.3,
+          "share_within_10pct": 65.8,
+          "share_within_25pct": 79.3,
+          "share_over_2x": 8.1,
+          "pearson_r": 0.971,
+          "note": NaN
+        },
+        {
+          "source_a": "forbes",
+          "source_b": "wiki",
+          "pairs": 538,
+          "median_abs_pct_diff": 13.9,
+          "mean_abs_pct_diff": 24.3,
+          "p90_abs_pct_diff": 66.1,
+          "share_within_10pct": 42.4,
+          "share_within_25pct": 66.5,
+          "share_over_2x": 9.5,
+          "pearson_r": 0.979,
+          "note": NaN
+        },
+        {
+          "source_a": "fortune",
+          "source_b": "listed",
+          "pairs": 307,
+          "median_abs_pct_diff": 4.4,
+          "mean_abs_pct_diff": 20.4,
+          "p90_abs_pct_diff": 63.8,
+          "share_within_10pct": 65.1,
+          "share_within_25pct": 75.2,
+          "share_over_2x": 9.1,
+          "pearson_r": 0.956,
+          "note": NaN
+        },
+        {
+          "source_a": "fortune",
+          "source_b": "private",
+          "pairs": 1,
+          "median_abs_pct_diff": NaN,
+          "mean_abs_pct_diff": NaN,
+          "p90_abs_pct_diff": NaN,
+          "share_within_10pct": NaN,
+          "share_within_25pct": NaN,
+          "share_over_2x": NaN,
+          "pearson_r": NaN,
+          "note": "too few matches"
+        },
+        {
+          "source_a": "fortune",
+          "source_b": "wiki",
+          "pairs": 229,
+          "median_abs_pct_diff": 8.4,
+          "mean_abs_pct_diff": 18.6,
+          "p90_abs_pct_diff": 55.3,
+          "share_within_10pct": 54.1,
+          "share_within_25pct": 75.1,
+          "share_over_2x": 7.9,
+          "pearson_r": 0.948,
+          "note": NaN
+        },
+        {
+          "source_a": "listed",
+          "source_b": "private",
+          "pairs": 5,
+          "median_abs_pct_diff": 10.4,
+          "mean_abs_pct_diff": 38.1,
+          "p90_abs_pct_diff": 92.8,
+          "share_within_10pct": 40.0,
+          "share_within_25pct": 60.0,
+          "share_over_2x": 20.0,
+          "pearson_r": 0.989,
+          "note": NaN
+        },
+        {
+          "source_a": "listed",
+          "source_b": "wiki",
+          "pairs": 591,
+          "median_abs_pct_diff": 19.6,
+          "mean_abs_pct_diff": 31.2,
+          "p90_abs_pct_diff": 70.5,
+          "share_within_10pct": 35.0,
+          "share_within_25pct": 55.5,
+          "share_over_2x": 11.5,
+          "pearson_r": 0.945,
+          "note": NaN
+        },
+        {
+          "source_a": "private",
+          "source_b": "wiki",
+          "pairs": 29,
+          "median_abs_pct_diff": 22.8,
+          "mean_abs_pct_diff": 27.0,
+          "p90_abs_pct_diff": 45.9,
+          "share_within_10pct": 20.7,
+          "share_within_25pct": 51.7,
+          "share_over_2x": 3.4,
+          "pearson_r": 0.982,
+          "note": NaN
+        }
+      ],
+      "agreement_forbes_vs_listed": {
+        "pairs": 1455,
+        "median_abs_pct_diff": 4.7,
+        "mean_abs_pct_diff": 18.9,
+        "p90_abs_pct_diff": 59.3,
+        "share_within_10pct": 65.8,
+        "share_within_25pct": 79.3,
+        "share_over_2x": 8.1,
+        "pearson_r": 0.971
+      },
+      "agreement_forbes_vs_fortune": {
+        "pairs": 335,
+        "median_abs_pct_diff": 2.0,
+        "mean_abs_pct_diff": 6.5,
+        "p90_abs_pct_diff": 14.5,
+        "share_within_10pct": 84.2,
+        "share_within_25pct": 94.6,
+        "share_over_2x": 2.7,
+        "pearson_r": 0.993
+      },
+      "agreement_forbes_vs_wiki": {
+        "pairs": 538,
+        "median_abs_pct_diff": 13.9,
+        "mean_abs_pct_diff": 24.3,
+        "p90_abs_pct_diff": 66.1,
+        "share_within_10pct": 42.4,
+        "share_within_25pct": 66.5,
+        "share_over_2x": 9.5,
+        "pearson_r": 0.979
+      },
+      "agreement_listed_vs_fortune": {
+        "pairs": 307,
+        "median_abs_pct_diff": 4.4,
+        "mean_abs_pct_diff": 20.4,
+        "p90_abs_pct_diff": 63.8,
+        "share_within_10pct": 65.1,
+        "share_within_25pct": 75.2,
+        "share_over_2x": 9.1,
+        "pearson_r": 0.956
+      },
+      "wiki_pages_with_forbes_crossref": 35,
+      "wiki_rows_carrying_forbes_rank": 614,
+      "wiki_forbes_rank_range": [
+        3,
+        1986
+      ],
+      "wiki_vs_forbes_revenue": {
+        "pairs": 538,
+        "median_abs_pct_diff": 13.9,
+        "mean_abs_pct_diff": 24.3,
+        "p90_abs_pct_diff": 66.1,
+        "share_within_10pct": 42.4,
+        "share_within_25pct": 66.5,
+        "share_over_2x": 9.5,
+        "pearson_r": 0.979
+      },
+      "wiki_forbes_overlap": {
+        "wiki_companies": 1076,
+        "forbes_companies": 1997,
+        "overlap": 538,
+        "wiki_share_also_in_forbes_pct": 50.0,
+        "wiki_only": 538
+      },
+      "outliers": {
+        "revenue_usd": {
+          "n": 13021,
+          "median": 920000000.0,
+          "p99": 104656999999.99956,
+          "max": 742776000000.0,
+          "extreme_count": 61,
+          "extreme_share_pct": 0.468,
+          "extreme_examples": [
+            {
+              "company": "Amazon",
+              "revenue_usd": 742776000000.0,
+              "country": "United States"
+            },
+            {
+              "company": "AMAZON.COM, INC.",
+              "revenue_usd": 716924000000.0,
+              "country": "United States"
+            },
+            {
+              "company": "Walmart Inc.",
+              "revenue_usd": 706413000000.0,
+              "country": "United States"
+            }
+          ]
+        },
+        "profit_usd": {
+          "n": 2262,
+          "median": 1153450000.0,
+          "p99": 30003079999.999622,
+          "max": 160208000000.0,
+          "extreme_count": 14,
+          "extreme_share_pct": 0.619,
+          "extreme_examples": [
+            {
+              "company": "Alphabet Inc.",
+              "profit_usd": 160208000000.0,
+              "country": "United States"
+            },
+            {
+              "company": "MICROSOFT CORPORATION",
+              "profit_usd": 125216000000.0,
+              "country": "United States"
+            },
+            {
+              "company": "Apple Inc.",
+              "profit_usd": 122575000000.0,
+              "country": "United States"
+            }
+          ]
+        },
+        "assets_usd": {
+          "n": 2156,
+          "median": 36734500000.0,
+          "p99": 1968594399999.9934,
+          "max": 8073389000000.0,
+          "extreme_count": 11,
+          "extreme_share_pct": 0.51,
+          "extreme_examples": [
+            {
+              "company": "ICBC",
+              "assets_usd": 8073389000000.0,
+              "country": "China"
+            },
+            {
+              "company": "Agricultural Bank of China",
+              "assets_usd": 7386777000000.0,
+              "country": "China"
+            },
+            {
+              "company": "China Construction Bank",
+              "assets_usd": 6822770000000.0,
+              "country": "China"
+            }
+          ]
+        },
+        "market_cap_usd": {
+          "n": 10714,
+          "median": 2113038812.0,
+          "p99": 211862220000.0031,
+          "max": 5242072072192.0,
+          "extreme_count": 27,
+          "extreme_share_pct": 0.252,
+          "extreme_examples": [
+            {
+              "company": "NVIDIA CORP",
+              "market_cap_usd": 5242072072192.0,
+              "country": "United States"
+            },
+            {
+              "company": "Apple Inc.",
+              "market_cap_usd": 5004928221184.0,
+              "country": "United States"
+            },
+            {
+              "company": "Alphabet Inc.",
+              "market_cap_usd": 4160134840320.0,
+              "country": "United States"
+            }
+          ]
+        }
+      },
+      "confidence": {
+        "mean": 0.702,
+        "median": 0.65,
+        "p10": 0.4,
+        "p90": 1.0,
+        "by_basis": [
+          {
+            "revenue_basis": "estimate",
+            "count": 5907,
+            "mean": 0.449
+          },
+          {
+            "revenue_basis": "forbes",
+            "count": 1658,
+            "mean": 0.974
+          },
+          {
+            "revenue_basis": "fortune",
+            "count": 158,
+            "mean": 0.944
+          },
+          {
+            "revenue_basis": "none",
+            "count": 1524,
+            "mean": 0.303
+          },
+          {
+            "revenue_basis": "sec_filing",
+            "count": 5481,
+            "mean": 0.999
+          },
+          {
+            "revenue_basis": "wikipedia",
+            "count": 440,
+            "mean": 0.669
+          }
+        ]
+      },
+      "data_vintages": [
+        {
+          "dataset": "Forbes Global 2000",
+          "min_year": 2025,
+          "max_year": 2025,
+          "mode_year": 2025
+        },
+        {
+          "dataset": "Listed universe (SEC)",
+          "min_year": 2001,
+          "max_year": 2026,
+          "mode_year": 2026
+        },
+        {
+          "dataset": "Fortune profiles (market value)",
+          "min_year": 2026,
+          "max_year": 2026,
+          "mode_year": 2026
+        }
+      ],
+      "caveats": [
+        {
+          "topic": "Revenue is a flow, not value added",
+          "detail": "Company revenue double-counts intermediate goods across the supply chain. Global 2000 revenue equals ~47% of world GDP only as a scale statement."
+        },
+        {
+          "topic": "Fortune's company_type mislabels state firms",
+          "detail": "Fortune reports several Chinese state enterprises as 'Private'. Ownership for 104 names was hand-labelled in data/fortune_labels.csv and applied here."
+        },
+        {
+          "topic": "Exchange market caps are not world market cap",
+          "detail": "The 60 exchanges cover ~148T USD, but listed domestic companies number ~48,000 worldwide, so this is a coverage figure, not a total."
+        },
+        {
+          "topic": "Unicorn valuations are marks, not prices",
+          "detail": "Private valuations are the price of the most recent round, usually preferred stock with a preference. They are not realisable and not comparable to market capitalisation."
+        },
+        {
+          "topic": "The listed universe is US-complete and world-partial",
+          "detail": "5,500 US names carry SEC XBRL revenue; the rest carry a market-cap-site estimate. Country counts measure coverage, not corporate density."
+        },
+        {
+          "topic": "Market-value snapshots come from different dates",
+          "detail": "Forbes values are May 2025; the scraped Fortune profiles are dated 2026. They are never plotted on the same axis."
+        }
+      ]
+    },
+    "insights": [
+      "**Forbes vs SEC filings.** Across 1,455 companies in both, revenue differs by a median of 4.7%; 66% agree to within 10% and 8% differ by more than 2×.",
+      "**Forbes vs Wikipedia country lists.** Across 538 shared companies the median revenue gap is 13.9% and 66% land within 25% — the Wikipedia top-up is usable, but it is a third-tier source and is labelled as such.",
+      "**Completeness is uneven.** Densest gaps: wiki_countries (46% of cells empty, worst column `ownership`), ai_companies (39% of cells empty, worst column `total_funding_usd`), ai_labs (34% of cells empty, worst column `parent`).",
+      "**Every company carries a confidence score** (median 0.65, 10th percentile 0.40), derived from source trust, how many independent lists corroborate the company, and field completeness.",
+      "**The Wikipedia top-up mostly finds companies Forbes missed.** 538 of its 1,076 companies are absent from the Forbes 2,000 — which is precisely the coverage gap the reconciled ranking is built to close.",
+      "**Read the caveats panel before quoting any single number.** Revenue is a flow, not value added; valuations are marks, not prices; and the vintage of every series differs."
+    ],
+    "tables": [
+      "confidence",
+      "cross_source_disagreement",
+      "data_vintages",
+      "missingness",
+      "missingness_key"
+    ]
+  },
+  "companies": {
+    "metrics": {
+      "companies": 15168,
+      "with_website": 1979,
+      "with_wikipedia": 7695,
+      "with_forbes_page": 1997,
+      "with_description": 8355,
+      "with_ceo": 1972,
+      "with_revenue": 13234,
+      "with_market_cap": 10714,
+      "with_profit": 2425,
+      "with_employees": 2174,
+      "with_country": 15115,
+      "by_source": {
+        "listed": 11388,
+        "forbes": 1462,
+        "unicorns": 1422,
+        "wiki": 440,
+        "private": 196,
+        "fortune": 158,
+        "ai": 102
+      },
+      "by_ownership": {
+        "public": 12992,
+        "pe": 1442,
+        "private": 338,
+        "unknown": 324,
+        "state": 57,
+        "mutual": 15
+      },
+      "by_sector": [
+        {
+          "name": "Financials",
+          "value": 15141992294002.338,
+          "firms": 673
+        },
+        {
+          "name": "Energy & Utilities",
+          "value": 11208044430007.54,
+          "firms": 304
+        },
+        {
+          "name": "Consumer & Retail",
+          "value": 10331958530007.582,
+          "firms": 263
+        },
+        {
+          "name": "Technology",
+          "value": 6893173661000.0,
+          "firms": 257
+        },
+        {
+          "name": "Healthcare",
+          "value": 4794719111000.0,
+          "firms": 133
+        },
+        {
+          "name": "Industrials & Defense",
+          "value": 4217773064000.0,
+          "firms": 162
+        },
+        {
+          "name": "Food & Agriculture",
+          "value": 4025260419000.0,
+          "firms": 161
+        },
+        {
+          "name": "Materials & Chemicals",
+          "value": 3889321825000.0,
+          "firms": 195
+        },
+        {
+          "name": "Construction & Real Estate",
+          "value": 3649136271000.8867,
+          "firms": 182
+        },
+        {
+          "name": "Transport & Logistics",
+          "value": 2633603176001.8154,
+          "firms": 117
+        },
+        {
+          "name": "Business Services",
+          "value": 2573698832000.0,
+          "firms": 115
+        },
+        {
+          "name": "Telecom & Media",
+          "value": 1926296175000.0,
+          "firms": 64
+        },
+        {
+          "name": "Conglomerates",
+          "value": 59165000000.0,
+          "firms": 2
+        }
+      ],
+      "by_country": [
+        {
+          "name": "United States",
+          "value": 32504650094423.0,
+          "firms": 5677
+        },
+        {
+          "name": "China",
+          "value": 12892004867355.0,
+          "firms": 659
+        },
+        {
+          "name": "Japan",
+          "value": 7713256473130.0,
+          "firms": 938
+        },
+        {
+          "name": "World (private)",
+          "value": 3490528100000.0,
+          "firms": 78
+        },
+        {
+          "name": "Germany",
+          "value": 3285297230000.0,
+          "firms": 304
+        },
+        {
+          "name": "France",
+          "value": 2942396398000.0,
+          "firms": 284
+        },
+        {
+          "name": "South Korea",
+          "value": 2796295970000.0,
+          "firms": 193
+        },
+        {
+          "name": "Europe",
+          "value": 2772250700000.0,
+          "firms": 35
+        },
+        {
+          "name": "United Kingdom",
+          "value": 2752499831387.0,
+          "firms": 443
+        },
+        {
+          "name": "Canada",
+          "value": 2306399727000.0,
+          "firms": 389
+        },
+        {
+          "name": "Taiwan",
+          "value": 2264806980000.0,
+          "firms": 132
+        },
+        {
+          "name": "India",
+          "value": 2180918690000.0,
+          "firms": 578
+        },
+        {
+          "name": "Switzerland",
+          "value": 1456756809000.0,
+          "firms": 212
+        },
+        {
+          "name": "Saudi Arabia",
+          "value": 1318707370000.0,
+          "firms": 233
+        },
+        {
+          "name": "Brazil",
+          "value": 1158316820000.0,
+          "firms": 107
+        },
+        {
+          "name": "Netherlands",
+          "value": 1141880907000.0,
+          "firms": 66
+        }
+      ],
+      "coverage_rule": "A blank cell means no source in this project carries the value. Websites come from the Forbes Global 2000 and Fortune Global 500 files; Wikipedia links from the listed-universe company profiles.",
+      "revenue_total_usd": 101049955378792.19,
+      "market_cap_total_usd": 184773233077478.0
+    },
+    "insights": [
+      "The directory holds **15,168 companies** -- every firm the reconciliation could name. **13,234** carry a revenue figure, **10,714** a market value, and only **11,388** of them have a listed share.",
+      "Descriptive detail is patchy by design rather than by accident: **1,979** companies have an official website, **7,695** a Wikipedia article and **8,355** a one-line description. The rest are numbers without a face, and this pack does not invent one.",
+      "By measured revenue the largest sector is **Financials** with 673 firms and $15,142B of revenue."
+    ],
+    "tables": [
+      "company_directory",
+      "company_presence"
+    ]
+  }
+}

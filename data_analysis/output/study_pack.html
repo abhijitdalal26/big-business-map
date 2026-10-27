@@ -1,0 +1,4843 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Business World in Numbers — Study Pack</title>
+<style>
+  :root {
+    --ink:#0B2545; --bar:#1B6CA8; --accent:#E07A4F; --muted:#9AA5B1;
+    --grid:#E6EAF0; --paper:#FFFFFF; --soft:#F6F8FB; --edge:#D8E0EA;
+  }
+  * { box-sizing:border-box; }
+  body {
+    margin:0; background:var(--soft); color:#12283f;
+    font:16px/1.65 "Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
+  }
+  .wrap { max-width:1180px; margin:0 auto; padding:40px 28px 90px; }
+  header.hero {
+    background:var(--ink); color:#fff; padding:52px 40px; border-radius:14px;
+    margin-bottom:34px;
+  }
+  header.hero h1 { margin:0 0 8px; font-size:34px; letter-spacing:-0.4px; }
+  header.hero p { margin:0; color:#BFD3E4; font-size:15px; max-width:760px; }
+  .toc {
+    background:var(--paper); border:1px solid var(--edge); border-radius:12px;
+    padding:20px 26px; margin-bottom:34px; columns:2; column-gap:38px;
+  }
+  .toc h2 { margin:0 0 10px; font-size:13px; letter-spacing:1.4px;
+             text-transform:uppercase; color:var(--muted); border:0; padding:0; }
+  .toc a { display:block; color:var(--bar); text-decoration:none;
+            font-size:14.5px; padding:3px 0; break-inside:avoid; }
+  .toc a:hover { color:var(--accent); }
+  section {
+    background:var(--paper); border:1px solid var(--edge); border-radius:12px;
+    padding:30px 34px; margin-bottom:26px;
+  }
+  h1 { font-size:30px; color:var(--ink); border-bottom:3px solid var(--accent);
+        padding-bottom:10px; margin:0 0 18px; }
+  h2 { font-size:21px; color:var(--ink); margin:34px 0 12px;
+        border-left:4px solid var(--bar); padding-left:11px; }
+  h3 { font-size:16.5px; color:var(--bar); margin:24px 0 8px;
+        text-transform:uppercase; letter-spacing:.6px; }
+  p { margin:0 0 14px; }
+  ul { margin:0 0 16px; padding-left:22px; }
+  li { margin-bottom:8px; }
+  blockquote {
+    margin:0 0 16px; padding:12px 18px; background:#FFF6F1;
+    border-left:4px solid var(--accent); color:#6a3b26; border-radius:0 8px 8px 0;
+  }
+  table { border-collapse:collapse; width:100%; margin:6px 0 20px; font-size:14px; }
+  th, td { border-bottom:1px solid var(--grid); padding:8px 11px;
+            text-align:left; vertical-align:top; }
+  th { background:var(--soft); color:var(--ink); font-weight:600;
+        border-bottom:2px solid var(--edge); }
+  tr:hover td { background:#FBFCFE; }
+  td strong { color:var(--ink); }
+  figure { margin:8px 0 24px; }
+  figure img { width:100%; border:1px solid var(--edge); border-radius:9px;
+                display:block; background:#fff; }
+  figcaption { color:#5A6673; font-size:13.5px; margin-top:7px; }
+  code { background:var(--soft); border:1px solid var(--edge); border-radius:4px;
+          padding:1px 5px; font-family:"Cascadia Mono",Consolas,monospace;
+          font-size:13px; }
+  pre { background:#0B2545; color:#E8EEF5; padding:16px 20px; border-radius:9px;
+         overflow:auto; font-size:13px; }
+  pre code { background:none; border:0; color:inherit; }
+  .kv td:first-child { width:34%; }
+  footer { text-align:center; color:var(--muted); font-size:13px; margin-top:34px; }
+  @media (max-width:720px) { .toc { columns:1; } header.hero { padding:32px 22px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <h1>The Business World in Numbers — Study Pack</h1>
+  <p>A data study of the large-company world: scale, geography, industry, ownership, capital, private markets, change over time, and the quality of the underlying data.</p>
+</header>
+
+<nav class="toc"><h2>Contents</h2>
+<a href="#sec-how-to-use-this-pack">How to use this pack</a>
+<a href="#sec-scale-the-size-of-the-measured-corporate-world">Scale: the size of the measured corporate world</a>
+<a href="#sec-geography-where-the-money-sits">Geography: where the money sits</a>
+<a href="#sec-industry-what-the-money-does">Industry: what the money does</a>
+<a href="#sec-ownership-who-owns-it">Ownership: who owns it</a>
+<a href="#sec-capital-what-the-markets-think-it-is-worth">Capital: what the markets think it is worth</a>
+<a href="#sec-private-capital-the-part-without-a-ticker">Private capital: the part without a ticker</a>
+<a href="#sec-time-series-how-the-picture-changed">Time series: how the picture changed</a>
+<a href="#sec-data-quality-how-far-to-trust-the-above">Data quality: how far to trust the above</a>
+<a href="#sec-companies-one-page-for-every-firm">Companies: one page for every firm</a>
+<a href="#sec-appendix-a-the-datasets-behind-every-number">Appendix A: the datasets behind every number</a>
+<a href="#sec-appendix-b-chart-index">Appendix B: chart index</a>
+<a href="#sec-appendix-c-table-index">Appendix C: table index</a>
+<a href="#sec-appendix-d-caveats">Appendix D: caveats</a>
+</nav>
+<section id='sec-how-to-use-this-pack'>
+<h1>How to use this pack</h1>
+<p>This is the analysis layer of the project: the measurements, the tables, the charts and the caveats. It is written so that it can be read as a reference and quoted from, and it deliberately contains no article prose. Every figure below is reproduced from the datasets listed in the appendix and can be regenerated with <code>python data_analysis/build_report.py</code>.</p>
+<blockquote><strong>Reading the numbers.</strong> Revenue, profit, assets and market value are converted to US dollars. Market value is a point-in-time measure and is not additive with revenue; the two live on separate ledgers. Country is the domicile of the company, not the nationality of its owners, and several of the largest firms are domiciled in places that have no large domestic economy of their own.</blockquote>
+<h2 id='the-universe-at-a-glance'>The universe at a glance</h2>
+<table class="kv"><tbody>
+<tr><td><strong>Firms in the Forbes Global 2000</strong></td><td>2,000</td></tr>
+<tr><td><strong>Firms in the reconciled universe</strong></td><td>15,175</td></tr>
+<tr><td><strong>Rows before reconciliation</strong></td><td>17,985</td></tr>
+<tr><td><strong>Rows where sources disagreed</strong></td><td>756</td></tr>
+<tr><td><strong>Listed companies with a market value</strong></td><td>10,076</td></tr>
+<tr><td><strong>Listed companies&#x27; market value</strong></td><td>$150.5T</td></tr>
+<tr><td><strong>Private unicorns tracked</strong></td><td>1,442</td></tr>
+<tr><td><strong>Unicorn paper valuation</strong></td><td>$7.3T</td></tr>
+<tr><td><strong>Countries with at least one measured firm</strong></td><td>84</td></tr>
+</tbody></table>
+<blockquote><strong>Three ledgers, not one.</strong> The Forbes list measures <em>revenue</em>. The listed universe measures <em>market value</em>. The unicorn board measures <em>private paper valuation</em>. They cover different companies and different years, so they must never be added together or compared as shares of a single pie.</blockquote>
+<section id='sec-scale-the-size-of-the-measured-corporate-world'>
+<h1>Scale: the size of the measured corporate world</h1>
+<p>How much revenue, profit, assets and workforce the reconciled universe of large firms actually represents, and how steeply that value is concentrated.</p>
+<h3>Key numbers</h3>
+<table class="kv"><tbody>
+<tr><td><strong>Forbes Global 2000 firms</strong></td><td>2,000</td></tr>
+<tr><td><strong>Combined revenue</strong></td><td>$52.9T</td></tr>
+<tr><td><strong>Combined profit</strong></td><td>$4.9T</td></tr>
+<tr><td><strong>Combined assets</strong></td><td>$242.2T</td></tr>
+<tr><td><strong>Combined market value</strong></td><td>$91.3T</td></tr>
+<tr><td><strong>Employees</strong></td><td>92,622,255</td></tr>
+<tr><td><strong>Blended net margin</strong></td><td>9.2%</td></tr>
+<tr><td><strong>Firms that lose money</strong></td><td>128</td></tr>
+</tbody></table>
+<h3>What the data shows</h3>
+<ul>
+<li>Forbes&#x27; Global 2000 holds <strong>52.88 T$</strong> of revenue across 2,000 firms, <strong>9.2%</strong> of which is profit. 128 firms (6.4%) lose money.</li>
+<li>Concentration is steep but not a monopoly: the top 100 firms hold <strong>35.4%</strong> of revenue, the top 500 hold <strong>70.7%</strong>, and it takes <strong>208</strong> firms to reach half the total. HHI on revenue is <strong>21</strong> points and the Gini is <strong>0.61</strong>.</li>
+<li>The rank-size curve fits a power law with a Zipf exponent of <strong>0.87</strong> (R² = 0.547), i.e. roughly Zipf-like, so firm size decays smoothly rather than through a single dominant tier.</li>
+<li><strong>The list is truncated, and it matters.</strong> Merging the 2,000 Forbes firms with the 11,836 listed companies we can measure individually adds <strong>28.89 T$</strong> of revenue that the Global 2000 never mentions — <strong>24.0%</strong> of everything measurable. Among those are <strong>431</strong> firms above $10B.</li>
+<li>Profit concentration exceeds revenue concentration: the top 100 firms capture <strong>43.6%</strong> of all profit versus <strong>35.4%</strong> of revenue.</li>
+</ul>
+<h3>Charts</h3>
+<figure>
+<img src='charts/01_top20_revenue.png' alt='Ranked by revenue, the top twenty account for a quarter of all corporate output measured in the Forbes Global 2000.'>
+<figcaption>Ranked by revenue, the top twenty account for a quarter of all corporate output measured in the Forbes Global 2000.</figcaption>
+</figure>
+<figure>
+<img src='charts/02_revenue_thresholds.png' alt='How many firms clear each revenue bar — Cumulative count above a revenue threshold'>
+<figcaption>How many firms clear each revenue bar — Cumulative count above a revenue threshold</figcaption>
+</figure>
+<figure>
+<img src='charts/03_rank_size_zipf.png' alt='The rank-size curve — Revenue against rank, both on a log scale'>
+<figcaption>The rank-size curve — Revenue against rank, both on a log scale</figcaption>
+</figure>
+<figure>
+<img src='charts/04_truncation_gap.png' alt='What Forbes&#x27; list leaves out — Largest measured companies absent from the Global 2000'>
+<figcaption>What Forbes&#x27; list leaves out — Largest measured companies absent from the Global 2000</figcaption>
+</figure>
+<h3>Firm counts above each revenue threshold</h3>
+<p><strong>Firm counts above each revenue threshold</strong></p>
+<table><thead><tr>
+<th>threshold</th>
+<th>firms</th>
+</tr></thead><tbody>
+<tr>
+<td>gt_1b</td>
+<td>1,967</td>
+</tr>
+<tr>
+<td>gt_10b</td>
+<td>1,210</td>
+</tr>
+<tr>
+<td>gt_50b</td>
+<td>242</td>
+</tr>
+<tr>
+<td>gt_100b</td>
+<td>83</td>
+</tr>
+<tr>
+<td>gt_250b</td>
+<td>20</td>
+</tr>
+<tr>
+<td>gt_500b</td>
+<td>2</td>
+</tr>
+</tbody></table>
+<p>_Full table: <code>data/scale__thresholds.csv</code>_ (6 rows, 2 columns)._</p>
+<h3>Largest firms that are not on Forbes&#x27; Global 2000 list</h3>
+<p><strong>Largest firms that are not on Forbes&#x27; Global 2000 list</strong></p>
+<table><thead><tr>
+<th>company</th>
+<th>country</th>
+<th>revenue_musd</th>
+<th>sector</th>
+</tr></thead><tbody>
+<tr>
+<td>AMAZON.COM, INC.</td>
+<td>United States</td>
+<td>$1M</td>
+<td>Unclassified</td>
+</tr>
+<tr>
+<td>Saudi Aramco</td>
+<td>Saudi Arabia</td>
+<td>$0M</td>
+<td>Unclassified</td>
+</tr>
+<tr>
+<td>UnitedHealth Group Incorporated</td>
+<td>United States</td>
+<td>$0M</td>
+<td>Unclassified</td>
+</tr>
+<tr>
+<td>Toyota</td>
+<td>Japan</td>
+<td>$0M</td>
+<td>Unclassified</td>
+</tr>
+<tr>
+<td>Exxon Mobil Corporation</td>
+<td>United States</td>
+<td>$0M</td>
+<td>Unclassified</td>
+</tr>
+<tr>
+<td>Samsung</td>
+<td>South Korea</td>
+<td>$0M</td>
+<td>Unclassified</td>
+</tr>
+<tr>
+<td>Foxconn (Hon Hai Precision Industry)</td>
+<td>Taiwan</td>
+<td>$0M</td>
+<td>Unclassified</td>
+</tr>
+<tr>
+<td>COSTCO WHOLESALE CORP /NEW</td>
+<td>United States</td>
+<td>$0M</td>
+<td>Unclassified</td>
+</tr>
+<tr>
+<td>The Cigna Group</td>
+<td>United States</td>
+<td>$0M</td>
+<td>Unclassified</td>
+</tr>
+<tr>
+<td>Glencore</td>
+<td>Switzerland</td>
+<td>$0M</td>
+<td>Unclassified</td>
+</tr>
+<tr>
+<td>JPMorgan Chase</td>
+<td>United States</td>
+<td>$0M</td>
+<td>Unclassified</td>
+</tr>
+<tr>
+<td>Bullish</td>
+<td>Cayman Islands</td>
+<td>$0M</td>
+<td>Unclassified</td>
+</tr>
+<tr>
+<td>Ford</td>
+<td>United States</td>
+<td>$0M</td>
+<td>Unclassified</td>
+</tr>
+<tr>
+<td>JPMorgan Chase &amp; Co</td>
+<td>United States</td>
+<td>$0M</td>
+<td>Unclassified</td>
+</tr>
+<tr>
+<td>HOME DEPOT, INC.</td>
+<td>United States</td>
+<td>$0M</td>
+<td>Unclassified</td>
+</tr>
+</tbody></table>
+<p>_Full table: <code>data/scale__top_beyond_forbes.csv</code>_ (25 rows, 5 columns)._</p>
+<section id='sec-geography-where-the-money-sits'>
+<h1>Geography: where the money sits</h1>
+<p>How the measured corporate revenue and profit distribute across countries and regions, and how far that map deviates from a map of world GDP.</p>
+<h3>What the data shows</h3>
+<ul>
+<li>Country size tracks corporate size, but loosely. Across the 60 countries Forbes covers, the correlation between a country&#x27;s share of world GDP and its share of Global-2000 revenue is <strong>ρ = 0.87</strong> (p = &lt;0.001).</li>
+<li>Mixing in the Fortune 500, the Wikipedia country lists and the listed universe <em>raises</em> that correlation to <strong>ρ = 0.85</strong> (p = &lt;0.001) -- the Forbes list alone was distorting the map, and mixing the sources repairs part of the distortion.</li>
+<li>National concentration is extreme. One country holds <strong>36.9%</strong> of the revenue in Forbes&#x27; list, the top five hold <strong>68.0%</strong> and the top ten <strong>82.1%</strong>. National HHI on revenue is <strong>1734</strong> points (mixed view: 1647).</li>
+<li><strong>23 countries</strong> appear in the mixed view with no representative at all in Forbes&#x27; 2,000, together worth <strong>$770B</strong>. The largest such gaps are Russian Federation ($542B), Turks and Caicos Islands ($81B), New Zealand ($61B), Nigeria ($38B), Iceland ($12B).</li>
+</ul>
+<h3>Charts</h3>
+<figure>
+<img src='charts/05_top_countries.png' alt='Where the world&#x27;s corporate revenue is booked — Top 20 countries by measured revenue'>
+<figcaption>Where the world&#x27;s corporate revenue is booked — Top 20 countries by measured revenue</figcaption>
+</figure>
+<figure>
+<img src='charts/06_revenue_vs_gdp.png' alt='Corporate weight against economic weight — Revenue share against GDP share'>
+<figcaption>Corporate weight against economic weight — Revenue share against GDP share</figcaption>
+</figure>
+<figure>
+<img src='charts/07_regions.png' alt='Six regions, one world — Measured revenue by region'>
+<figcaption>Six regions, one world — Measured revenue by region</figcaption>
+</figure>
+<figure>
+<img src='charts/08_region_compare.png' alt='What mixing in the other lists changes — Forbes-only versus reconciled regional shares'>
+<figcaption>What mixing in the other lists changes — Forbes-only versus reconciled regional shares</figcaption>
+</figure>
+<h3>Regional rollup of the reconciled universe</h3>
+<p><strong>Regional rollup of the reconciled universe</strong></p>
+<table><thead><tr>
+<th>region</th>
+<th>countries</th>
+<th>companies</th>
+<th>revenue_usd</th>
+<th>profit_usd</th>
+<th>market_cap_usd</th>
+<th>employees</th>
+<th>revenue_share</th>
+<th>profit_margin</th>
+<th>revenue_per_employee</th>
+<th>countries_count</th>
+</tr></thead><tbody>
+<tr>
+<td>North America</td>
+<td>4</td>
+<td>7,186</td>
+<td>$35.3T</td>
+<td>$2.4T</td>
+<td>$96.7T</td>
+<td>37,339,945</td>
+<td>39.2%</td>
+<td>6.9%</td>
+<td>944,947</td>
+<td>4.00</td>
+</tr>
+<tr>
+<td>Asia-Pacific</td>
+<td>15</td>
+<td>3,731</td>
+<td>$31.6T</td>
+<td>$1.8T</td>
+<td>$38.8T</td>
+<td>35,619,054</td>
+<td>35.1%</td>
+<td>5.6%</td>
+<td>888,499</td>
+<td>15.00</td>
+</tr>
+<tr>
+<td>Europe</td>
+<td>35</td>
+<td>2,824</td>
+<td>$18.6T</td>
+<td>$1.0T</td>
+<td>$24.3T</td>
+<td>24,843,553</td>
+<td>20.7%</td>
+<td>5.6%</td>
+<td>749,604</td>
+<td>35.00</td>
+</tr>
+<tr>
+<td>Middle East &amp; Central Asia</td>
+<td>12</td>
+<td>860</td>
+<td>$2.1T</td>
+<td>$318B</td>
+<td>$6.8T</td>
+<td>339,675</td>
+<td>2.4%</td>
+<td>15.0%</td>
+<td>6,239,027</td>
+<td>12.00</td>
+</tr>
+<tr>
+<td>Latin America</td>
+<td>12</td>
+<td>249</td>
+<td>$2.1T</td>
+<td>$100B</td>
+<td>$2.2T</td>
+<td>2,730,027</td>
+<td>2.3%</td>
+<td>4.8%</td>
+<td>769,149</td>
+<td>12.00</td>
+</tr>
+<tr>
+<td>Africa</td>
+<td>6</td>
+<td>88</td>
+<td>$315B</td>
+<td>$22B</td>
+<td>$427B</td>
+<td>342,689</td>
+<td>0.4%</td>
+<td>7.1%</td>
+<td>920,215</td>
+<td>6.00</td>
+</tr>
+</tbody></table>
+<p>_Full table: <code>data/geography__regions_mixed.csv</code>_ (6 rows, 11 columns)._</p>
+<h3>Largest country economies of the corporate world</h3>
+<p><strong>Largest country economies of the corporate world</strong></p>
+<table><thead><tr>
+<th>country</th>
+<th>companies</th>
+<th>revenue_usd</th>
+<th>profit_usd</th>
+<th>market_cap_usd</th>
+<th>revenue_share</th>
+<th>index_vs_gdp</th>
+</tr></thead><tbody>
+<tr>
+<td>United Arab Emirates</td>
+<td>135</td>
+<td>$254B</td>
+<td>$47B</td>
+<td>$1.2T</td>
+<td>0.3%</td>
+<td>0.54x</td>
+</tr>
+<tr>
+<td>Argentina</td>
+<td>18</td>
+<td>$84B</td>
+<td>$6B</td>
+<td>$153B</td>
+<td>0.1%</td>
+<td>0.15x</td>
+</tr>
+<tr>
+<td>Australia</td>
+<td>367</td>
+<td>$1.1T</td>
+<td>$82B</td>
+<td>$2.1T</td>
+<td>1.2%</td>
+<td>0.71x</td>
+</tr>
+<tr>
+<td>Austria</td>
+<td>53</td>
+<td>$237B</td>
+<td>$10B</td>
+<td>$200B</td>
+<td>0.3%</td>
+<td>0.52x</td>
+</tr>
+<tr>
+<td>Belgium</td>
+<td>84</td>
+<td>$286B</td>
+<td>$17B</td>
+<td>$402B</td>
+<td>0.3%</td>
+<td>0.50x</td>
+</tr>
+<tr>
+<td>Bulgaria</td>
+<td>1</td>
+<td>$2B</td>
+<td>$0</td>
+<td>$2B</td>
+<td>0.0%</td>
+<td>0.02x</td>
+</tr>
+<tr>
+<td>Bahrain</td>
+<td>25</td>
+<td>$13B</td>
+<td>$285M</td>
+<td>$20B</td>
+<td>0.0%</td>
+<td>0.32x</td>
+</tr>
+<tr>
+<td>Bahamas, The</td>
+<td>1</td>
+<td>$961M</td>
+<td>$0</td>
+<td>$2B</td>
+<td>0.0%</td>
+<td>0.07x</td>
+</tr>
+<tr>
+<td>Bermuda</td>
+<td>38</td>
+<td>$204B</td>
+<td>$8B</td>
+<td>$285B</td>
+<td>0.2%</td>
+<td>26.01x</td>
+</tr>
+<tr>
+<td>Brazil</td>
+<td>129</td>
+<td>$1.2T</td>
+<td>$68B</td>
+<td>$1.2T</td>
+<td>1.3%</td>
+<td>0.62x</td>
+</tr>
+<tr>
+<td>Canada</td>
+<td>462</td>
+<td>$2.5T</td>
+<td>$171B</td>
+<td>$4.8T</td>
+<td>2.7%</td>
+<td>1.27x</td>
+</tr>
+<tr>
+<td>Switzerland</td>
+<td>221</td>
+<td>$1.7T</td>
+<td>$121B</td>
+<td>$3.0T</td>
+<td>1.9%</td>
+<td>2.06x</td>
+</tr>
+<tr>
+<td>Chile</td>
+<td>27</td>
+<td>$180B</td>
+<td>$4B</td>
+<td>$170B</td>
+<td>0.2%</td>
+<td>0.64x</td>
+</tr>
+<tr>
+<td>China</td>
+<td>823</td>
+<td>$12.8T</td>
+<td>$736B</td>
+<td>$11.7T</td>
+<td>14.2%</td>
+<td>0.80x</td>
+</tr>
+<tr>
+<td>Colombia</td>
+<td>12</td>
+<td>$91B</td>
+<td>$8B</td>
+<td>$68B</td>
+<td>0.1%</td>
+<td>0.25x</td>
+</tr>
+<tr>
+<td>Costa Rica</td>
+<td>1</td>
+<td>$211M</td>
+<td>$0</td>
+<td>$2B</td>
+<td>0.0%</td>
+<td>0.00x</td>
+</tr>
+<tr>
+<td>Cayman Islands</td>
+<td>12</td>
+<td>$215B</td>
+<td>$1B</td>
+<td>$109B</td>
+<td>0.2%</td>
+<td>32.53x</td>
+</tr>
+<tr>
+<td>Cyprus</td>
+<td>4</td>
+<td>$7B</td>
+<td>$550M</td>
+<td>$5B</td>
+<td>0.0%</td>
+<td>0.22x</td>
+</tr>
+<tr>
+<td>Czechia</td>
+<td>6</td>
+<td>$23B</td>
+<td>$1B</td>
+<td>$60B</td>
+<td>0.0%</td>
+<td>0.08x</td>
+</tr>
+<tr>
+<td>Germany</td>
+<td>350</td>
+<td>$3.3T</td>
+<td>$109B</td>
+<td>$3.1T</td>
+<td>3.7%</td>
+<td>0.83x</td>
+</tr>
+</tbody></table>
+<p>_Full table: <code>data/geography__country_mixed.csv</code>_ (84 rows, 18 columns)._</p>
+<h3>Countries over- and under-indexed against their own GDP</h3>
+<p><strong>Countries over- and under-indexed against their own GDP</strong></p>
+<table><thead><tr>
+<th>country</th>
+<th>companies</th>
+<th>revenue_usd</th>
+<th>gdp_usd</th>
+<th>revenue_share</th>
+<th>gdp_share</th>
+<th>index_vs_gdp</th>
+</tr></thead><tbody>
+<tr>
+<td>Hong Kong SAR, China</td>
+<td>42</td>
+<td>$886B</td>
+<td>$408B</td>
+<td>1.7%</td>
+<td>0.004</td>
+<td>4.17x</td>
+</tr>
+<tr>
+<td>Luxembourg</td>
+<td>4</td>
+<td>$109B</td>
+<td>$93B</td>
+<td>0.2%</td>
+<td>0.001</td>
+<td>2.25x</td>
+</tr>
+<tr>
+<td>Switzerland</td>
+<td>45</td>
+<td>$1.1T</td>
+<td>$970B</td>
+<td>2.1%</td>
+<td>0.010</td>
+<td>2.23x</td>
+</tr>
+<tr>
+<td>Japan</td>
+<td>180</td>
+<td>$4.2T</td>
+<td>$4.2T</td>
+<td>8.0%</td>
+<td>0.041</td>
+<td>1.94x</td>
+</tr>
+<tr>
+<td>Korea, Rep.</td>
+<td>62</td>
+<td>$1.7T</td>
+<td>$1.9T</td>
+<td>3.2%</td>
+<td>0.018</td>
+<td>1.73x</td>
+</tr>
+<tr>
+<td>Ireland</td>
+<td>25</td>
+<td>$457B</td>
+<td>$609B</td>
+<td>0.9%</td>
+<td>0.006</td>
+<td>1.44x</td>
+</tr>
+<tr>
+<td>United States</td>
+<td>612</td>
+<td>$19.5T</td>
+<td>$29.3T</td>
+<td>36.9%</td>
+<td>0.288</td>
+<td>1.28x</td>
+</tr>
+<tr>
+<td>France</td>
+<td>47</td>
+<td>$2.0T</td>
+<td>$3.2T</td>
+<td>3.8%</td>
+<td>0.031</td>
+<td>1.23x</td>
+</tr>
+<tr>
+<td>Sweden</td>
+<td>27</td>
+<td>$360B</td>
+<td>$605B</td>
+<td>0.7%</td>
+<td>0.006</td>
+<td>1.14x</td>
+</tr>
+<tr>
+<td>Canada</td>
+<td>60</td>
+<td>$1.3T</td>
+<td>$2.3T</td>
+<td>2.5%</td>
+<td>0.022</td>
+<td>1.12x</td>
+</tr>
+<tr>
+<td>United Kingdom</td>
+<td>68</td>
+<td>$2.1T</td>
+<td>$3.7T</td>
+<td>4.0%</td>
+<td>0.036</td>
+<td>1.11x</td>
+</tr>
+<tr>
+<td>Saudi Arabia</td>
+<td>19</td>
+<td>$624B</td>
+<td>$1.3T</td>
+<td>1.2%</td>
+<td>0.012</td>
+<td>0.96x</td>
+</tr>
+<tr>
+<td>Denmark</td>
+<td>13</td>
+<td>$209B</td>
+<td>$425B</td>
+<td>0.4%</td>
+<td>0.004</td>
+<td>0.95x</td>
+</tr>
+<tr>
+<td>Thailand</td>
+<td>16</td>
+<td>$259B</td>
+<td>$529B</td>
+<td>0.5%</td>
+<td>0.005</td>
+<td>0.94x</td>
+</tr>
+<tr>
+<td>Germany</td>
+<td>49</td>
+<td>$2.3T</td>
+<td>$4.7T</td>
+<td>4.3%</td>
+<td>0.046</td>
+<td>0.93x</td>
+</tr>
+<tr>
+<td>Finland</td>
+<td>10</td>
+<td>$143B</td>
+<td>$299B</td>
+<td>0.3%</td>
+<td>0.003</td>
+<td>0.92x</td>
+</tr>
+<tr>
+<td>Netherlands</td>
+<td>24</td>
+<td>$559B</td>
+<td>$1.2T</td>
+<td>1.1%</td>
+<td>0.012</td>
+<td>0.88x</td>
+</tr>
+<tr>
+<td>China</td>
+<td>275</td>
+<td>$7.8T</td>
+<td>$18.7T</td>
+<td>14.8%</td>
+<td>0.184</td>
+<td>0.80x</td>
+</tr>
+<tr>
+<td>Singapore</td>
+<td>11</td>
+<td>$236B</td>
+<td>$573B</td>
+<td>0.4%</td>
+<td>0.006</td>
+<td>0.79x</td>
+</tr>
+<tr>
+<td>Spain</td>
+<td>18</td>
+<td>$624B</td>
+<td>$1.7T</td>
+<td>1.2%</td>
+<td>0.017</td>
+<td>0.70x</td>
+</tr>
+</tbody></table>
+<p>_Full table: <code>data/geography__over_under.csv</code>_ (55 rows, 7 columns)._</p>
+<section id='sec-industry-what-the-money-does'>
+<h1>Industry: what the money does</h1>
+<p>Which sectors carry the revenue, which carry the profit, and how wide the margin distributions are inside each sector.</p>
+<h3>What the data shows</h3>
+<ul>
+<li>Profit is pooled far more unevenly than revenue. <strong>Financials</strong> takes 34.0% ($1661B); <strong>Technology</strong> takes 16.7% ($815B); <strong>Energy &amp; Utilities</strong> takes 11.2% ($550B); <strong>Consumer &amp; Retail</strong> takes 10.7% ($522B); <strong>Healthcare</strong> takes 5.3% ($258B).</li>
+<li>ROA is exactly margin x turnover (largest identity error 6.94e-18), and it splits the map in two. <strong>Margin-driven</strong> sectors: Technology, Healthcare, Industrials &amp; Defense, Transport &amp; Logistics. <strong>Turnover-driven</strong> sectors: Consumer &amp; Retail, Food &amp; Agriculture, Materials &amp; Chemicals.</li>
+<li>Productivity per employee spans four orders of magnitude: the median firm earns <strong>$0.6M</strong> per head, the 99th percentile <strong>$2M</strong>, and the top firm <strong>915x</strong> the median.</li>
+<li><strong>Conglomerates</strong> has the highest rate of loss-making firms (25% of 8 firms), while <strong>Financials</strong> has the highest median net margin (15.5%).</li>
+<li>Does being bigger make you more profitable? Controlling for sector, a 1% larger revenue base is associated with <strong>-0.036 pp</strong> higher net margin (p = &lt;0.001, significant; n = 1,981).</li>
+</ul>
+<h3>Charts</h3>
+<figure>
+<img src='charts/09_sector_revenue_profit.png' alt='Revenue and profit by sector — Where the money comes from, and where it stays'>
+<figcaption>Revenue and profit by sector — Where the money comes from, and where it stays</figcaption>
+</figure>
+<figure>
+<img src='charts/10_sector_margin.png' alt='Median net margin by sector — The middle firm in each sector'>
+<figcaption>Median net margin by sector — The middle firm in each sector</figcaption>
+</figure>
+<figure>
+<img src='charts/11_margin_dispersion.png' alt='How wide is the margin spread inside each sector? — 10th to 90th percentile net margin'>
+<figcaption>How wide is the margin spread inside each sector? — 10th to 90th percentile net margin</figcaption>
+</figure>
+<figure>
+<img src='charts/12_roa_decomposition.png' alt='Every sector is margin-driven or turnover-driven — Net margin against asset turnover'>
+<figcaption>Every sector is margin-driven or turnover-driven — Net margin against asset turnover</figcaption>
+</figure>
+<figure>
+<img src='charts/13_sector_concentration.png' alt='Concentration inside each sector — Herfindahl index on revenue'>
+<figcaption>Concentration inside each sector — Herfindahl index on revenue</figcaption>
+</figure>
+<h3>Sector scoreboard</h3>
+<p><strong>Sector scoreboard</strong></p>
+<table><thead><tr>
+<th>sector</th>
+<th>companies</th>
+<th>revenue_usd</th>
+<th>profit_usd</th>
+<th>assets_usd</th>
+<th>market_cap_usd</th>
+<th>employees</th>
+<th>profit_margin</th>
+<th>roa</th>
+<th>asset_turnover</th>
+<th>revenue_per_employee</th>
+<th>profit_per_employee</th>
+<th>market_cap_to_revenue</th>
+<th>market_cap_to_profit</th>
+<th>revenue_share</th>
+<th>profit_share</th>
+<th>roa_check</th>
+</tr></thead><tbody>
+<tr>
+<td>Financials</td>
+<td>578</td>
+<td>$12.4T</td>
+<td>$1.7T</td>
+<td>$169.6T</td>
+<td>$18.8T</td>
+<td>14,973,295</td>
+<td>13.4%</td>
+<td>0.010</td>
+<td>0.073</td>
+<td>829,866</td>
+<td>110,959</td>
+<td>1.51x</td>
+<td>11.32x</td>
+<td>23.5%</td>
+<td>34.0%</td>
+<td>0.010</td>
+</tr>
+<tr>
+<td>Consumer &amp; Retail</td>
+<td>217</td>
+<td>$9.1T</td>
+<td>$522B</td>
+<td>$10.0T</td>
+<td>$11.9T</td>
+<td>23,633,502</td>
+<td>5.7%</td>
+<td>0.052</td>
+<td>0.907</td>
+<td>385,268</td>
+<td>22,079</td>
+<td>1.31x</td>
+<td>22.79x</td>
+<td>17.2%</td>
+<td>10.7%</td>
+<td>0.052</td>
+</tr>
+<tr>
+<td>Energy &amp; Utilities</td>
+<td>188</td>
+<td>$6.8T</td>
+<td>$550B</td>
+<td>$12.5T</td>
+<td>$7.9T</td>
+<td>4,568,861</td>
+<td>8.1%</td>
+<td>0.044</td>
+<td>0.543</td>
+<td>1,491,365</td>
+<td>120,292</td>
+<td>1.16x</td>
+<td>14.38x</td>
+<td>12.9%</td>
+<td>11.2%</td>
+<td>0.044</td>
+</tr>
+<tr>
+<td>Technology</td>
+<td>184</td>
+<td>$4.7T</td>
+<td>$815B</td>
+<td>$8.1T</td>
+<td>$24.5T</td>
+<td>9,309,972</td>
+<td>17.4%</td>
+<td>0.100</td>
+<td>0.577</td>
+<td>503,660</td>
+<td>87,578</td>
+<td>5.22x</td>
+<td>30.00x</td>
+<td>8.9%</td>
+<td>16.7%</td>
+<td>0.100</td>
+</tr>
+<tr>
+<td>Healthcare</td>
+<td>105</td>
+<td>$3.2T</td>
+<td>$258B</td>
+<td>$4.1T</td>
+<td>$7.0T</td>
+<td>4,757,709</td>
+<td>8.1%</td>
+<td>0.063</td>
+<td>0.775</td>
+<td>668,574</td>
+<td>54,310</td>
+<td>2.21x</td>
+<td>27.23x</td>
+<td>6.0%</td>
+<td>5.3%</td>
+<td>0.063</td>
+</tr>
+<tr>
+<td>Food &amp; Agriculture</td>
+<td>111</td>
+<td>$3.0T</td>
+<td>$193B</td>
+<td>$3.5T</td>
+<td>$3.9T</td>
+<td>7,096,733</td>
+<td>6.4%</td>
+<td>0.055</td>
+<td>0.861</td>
+<td>422,743</td>
+<td>27,140</td>
+<td>1.30x</td>
+<td>20.27x</td>
+<td>5.7%</td>
+<td>3.9%</td>
+<td>0.055</td>
+</tr>
+<tr>
+<td>Construction &amp; Real Estate</td>
+<td>111</td>
+<td>$2.7T</td>
+<td>$102B</td>
+<td>$6.0T</td>
+<td>$1.7T</td>
+<td>5,869,056</td>
+<td>3.7%</td>
+<td>0.017</td>
+<td>0.460</td>
+<td>468,143</td>
+<td>17,316</td>
+<td>0.63x</td>
+<td>16.91x</td>
+<td>5.2%</td>
+<td>2.1%</td>
+<td>0.017</td>
+</tr>
+<tr>
+<td>Materials &amp; Chemicals</td>
+<td>131</td>
+<td>$2.4T</td>
+<td>$149B</td>
+<td>$3.7T</td>
+<td>$2.9T</td>
+<td>3,934,520</td>
+<td>6.1%</td>
+<td>0.040</td>
+<td>0.648</td>
+<td>616,526</td>
+<td>37,810</td>
+<td>1.19x</td>
+<td>19.35x</td>
+<td>4.6%</td>
+<td>3.0%</td>
+<td>0.040</td>
+</tr>
+<tr>
+<td>Industrials &amp; Defense</td>
+<td>108</td>
+<td>$2.3T</td>
+<td>$184B</td>
+<td>$3.7T</td>
+<td>$4.8T</td>
+<td>5,782,994</td>
+<td>8.0%</td>
+<td>0.050</td>
+<td>0.623</td>
+<td>397,275</td>
+<td>31,782</td>
+<td>2.11x</td>
+<td>26.34x</td>
+<td>4.3%</td>
+<td>3.8%</td>
+<td>0.050</td>
+</tr>
+<tr>
+<td>Business Services</td>
+<td>110</td>
+<td>$2.3T</td>
+<td>$156B</td>
+<td>$13.0T</td>
+<td>$2.8T</td>
+<td>3,671,649</td>
+<td>6.9%</td>
+<td>0.012</td>
+<td>0.175</td>
+<td>617,366</td>
+<td>42,561</td>
+<td>1.23x</td>
+<td>17.91x</td>
+<td>4.3%</td>
+<td>3.2%</td>
+<td>0.012</td>
+</tr>
+<tr>
+<td>Telecom &amp; Media</td>
+<td>63</td>
+<td>$1.9T</td>
+<td>$138B</td>
+<td>$4.8T</td>
+<td>$2.7T</td>
+<td>4,173,903</td>
+<td>7.4%</td>
+<td>0.029</td>
+<td>0.392</td>
+<td>448,351</td>
+<td>33,091</td>
+<td>1.46x</td>
+<td>19.80x</td>
+<td>3.5%</td>
+<td>2.8%</td>
+<td>0.029</td>
+</tr>
+<tr>
+<td>Transport &amp; Logistics</td>
+<td>84</td>
+<td>$1.8T</td>
+<td>$146B</td>
+<td>$2.6T</td>
+<td>$1.9T</td>
+<td>4,601,184</td>
+<td>8.1%</td>
+<td>0.056</td>
+<td>0.693</td>
+<td>393,900</td>
+<td>31,761</td>
+<td>1.03x</td>
+<td>12.83x</td>
+<td>3.4%</td>
+<td>3.0%</td>
+<td>0.056</td>
+</tr>
+<tr>
+<td>Conglomerates</td>
+<td>8</td>
+<td>$268B</td>
+<td>$17B</td>
+<td>$502B</td>
+<td>$429B</td>
+<td>248,668</td>
+<td>6.2%</td>
+<td>0.033</td>
+<td>0.535</td>
+<td>1,079,753</td>
+<td>66,689</td>
+<td>1.60x</td>
+<td>25.86x</td>
+<td>0.5%</td>
+<td>0.3%</td>
+<td>0.033</td>
+</tr>
+</tbody></table>
+<p>_Full table: <code>data/industry__sectors.csv</code>_ (13 rows, 17 columns)._</p>
+<h3>Spread of net margins inside each sector</h3>
+<p><strong>Spread of net margins inside each sector</strong></p>
+<table><thead><tr>
+<th>sector</th>
+<th>firms</th>
+<th>mean</th>
+<th>median</th>
+<th>p10</th>
+<th>p90</th>
+<th>std</th>
+<th>iqr</th>
+<th>cv</th>
+<th>loss_makers</th>
+<th>loss_rate</th>
+</tr></thead><tbody>
+<tr>
+<td>Business Services</td>
+<td>110</td>
+<td>10.82</td>
+<td>8.71</td>
+<td>0.503</td>
+<td>25.03</td>
+<td>11.58</td>
+<td>24.53</td>
+<td>1.07</td>
+<td>6.00</td>
+<td>5.5%</td>
+</tr>
+<tr>
+<td>Conglomerates</td>
+<td>8</td>
+<td>10.80</td>
+<td>4.91</td>
+<td>-1.40</td>
+<td>25.18</td>
+<td>14.80</td>
+<td>26.59</td>
+<td>1.37</td>
+<td>2.00</td>
+<td>25.0%</td>
+</tr>
+<tr>
+<td>Construction &amp; Real Estate</td>
+<td>109</td>
+<td>6.22</td>
+<td>4.33</td>
+<td>-0.513</td>
+<td>20.37</td>
+<td>15.65</td>
+<td>20.88</td>
+<td>2.52</td>
+<td>13.00</td>
+<td>11.9%</td>
+</tr>
+<tr>
+<td>Consumer &amp; Retail</td>
+<td>217</td>
+<td>7.53</td>
+<td>6.07</td>
+<td>0.607</td>
+<td>17.27</td>
+<td>7.84</td>
+<td>16.66</td>
+<td>1.04</td>
+<td>12.00</td>
+<td>5.5%</td>
+</tr>
+<tr>
+<td>Energy &amp; Utilities</td>
+<td>186</td>
+<td>11.37</td>
+<td>9.43</td>
+<td>1.09</td>
+<td>24.33</td>
+<td>10.31</td>
+<td>23.24</td>
+<td>0.907</td>
+<td>12.00</td>
+<td>6.5%</td>
+</tr>
+<tr>
+<td>Financials</td>
+<td>569</td>
+<td>16.63</td>
+<td>15.53</td>
+<td>4.43</td>
+<td>28.99</td>
+<td>12.11</td>
+<td>24.56</td>
+<td>0.728</td>
+<td>11.00</td>
+<td>1.9%</td>
+</tr>
+<tr>
+<td>Food &amp; Agriculture</td>
+<td>110</td>
+<td>9.77</td>
+<td>6.00</td>
+<td>1.04</td>
+<td>23.86</td>
+<td>12.03</td>
+<td>22.82</td>
+<td>1.23</td>
+<td>5.00</td>
+<td>4.5%</td>
+</tr>
+<tr>
+<td>Healthcare</td>
+<td>104</td>
+<td>13.21</td>
+<td>12.34</td>
+<td>0.158</td>
+<td>28.10</td>
+<td>12.63</td>
+<td>27.94</td>
+<td>0.956</td>
+<td>10.00</td>
+<td>9.6%</td>
+</tr>
+<tr>
+<td>Industrials &amp; Defense</td>
+<td>108</td>
+<td>10.05</td>
+<td>8.27</td>
+<td>1.92</td>
+<td>19.26</td>
+<td>7.35</td>
+<td>17.34</td>
+<td>0.731</td>
+<td>4.00</td>
+<td>3.7%</td>
+</tr>
+<tr>
+<td>Materials &amp; Chemicals</td>
+<td>131</td>
+<td>8.14</td>
+<td>5.90</td>
+<td>-1.88</td>
+<td>22.37</td>
+<td>11.93</td>
+<td>24.25</td>
+<td>1.47</td>
+<td>19.00</td>
+<td>14.5%</td>
+</tr>
+<tr>
+<td>Technology</td>
+<td>183</td>
+<td>13.78</td>
+<td>13.36</td>
+<td>0.572</td>
+<td>32.37</td>
+<td>17.62</td>
+<td>31.80</td>
+<td>1.28</td>
+<td>16.00</td>
+<td>8.7%</td>
+</tr>
+<tr>
+<td>Telecom &amp; Media</td>
+<td>62</td>
+<td>7.81</td>
+<td>7.84</td>
+<td>-2.78</td>
+<td>17.44</td>
+<td>14.77</td>
+<td>20.22</td>
+<td>1.89</td>
+<td>14.00</td>
+<td>22.6%</td>
+</tr>
+<tr>
+<td>Transport &amp; Logistics</td>
+<td>84</td>
+<td>13.60</td>
+<td>7.97</td>
+<td>0.887</td>
+<td>30.06</td>
+<td>12.99</td>
+<td>29.17</td>
+<td>0.955</td>
+<td>2.00</td>
+<td>2.4%</td>
+</tr>
+</tbody></table>
+<p>_Full table: <code>data/industry__margin_dispersion.csv</code>_ (13 rows, 11 columns)._</p>
+<h3>How concentrated each sector is</h3>
+<p><strong>How concentrated each sector is</strong></p>
+<table><thead><tr>
+<th>sector</th>
+<th>firms</th>
+<th>hhi</th>
+<th>top5_share</th>
+<th>gini</th>
+</tr></thead><tbody>
+<tr>
+<td>Conglomerates</td>
+<td>8</td>
+<td>2,654</td>
+<td>0.881</td>
+<td>0.467</td>
+</tr>
+<tr>
+<td>Healthcare</td>
+<td>105</td>
+<td>394.52</td>
+<td>0.384</td>
+<td>0.639</td>
+</tr>
+<tr>
+<td>Telecom &amp; Media</td>
+<td>63</td>
+<td>384.06</td>
+<td>0.348</td>
+<td>0.550</td>
+</tr>
+<tr>
+<td>Business Services</td>
+<td>110</td>
+<td>292.76</td>
+<td>0.304</td>
+<td>0.548</td>
+</tr>
+<tr>
+<td>Construction &amp; Real Estate</td>
+<td>111</td>
+<td>288.56</td>
+<td>0.292</td>
+<td>0.529</td>
+</tr>
+<tr>
+<td>Technology</td>
+<td>184</td>
+<td>273.72</td>
+<td>0.309</td>
+<td>0.651</td>
+</tr>
+<tr>
+<td>Transport &amp; Logistics</td>
+<td>84</td>
+<td>238.91</td>
+<td>0.237</td>
+<td>0.484</td>
+</tr>
+<tr>
+<td>Energy &amp; Utilities</td>
+<td>188</td>
+<td>230.46</td>
+<td>0.276</td>
+<td>0.628</td>
+</tr>
+<tr>
+<td>Consumer &amp; Retail</td>
+<td>217</td>
+<td>214.21</td>
+<td>0.258</td>
+<td>0.616</td>
+</tr>
+<tr>
+<td>Food &amp; Agriculture</td>
+<td>111</td>
+<td>178.46</td>
+<td>0.179</td>
+<td>0.481</td>
+</tr>
+<tr>
+<td>Industrials &amp; Defense</td>
+<td>108</td>
+<td>166.12</td>
+<td>0.167</td>
+<td>0.454</td>
+</tr>
+<tr>
+<td>Materials &amp; Chemicals</td>
+<td>131</td>
+<td>125.50</td>
+<td>0.140</td>
+<td>0.395</td>
+</tr>
+<tr>
+<td>Financials</td>
+<td>578</td>
+<td>79.04</td>
+<td>0.123</td>
+<td>0.667</td>
+</tr>
+</tbody></table>
+<p>_Full table: <code>data/industry__sector_concentration.csv</code>_ (13 rows, 5 columns)._</p>
+<section id='sec-ownership-who-owns-it'>
+<h1>Ownership: who owns it</h1>
+<p>State, listed, private, mutual and subsidiary capital, and the large firms that no ranking list puts on the page.</p>
+<h3>What the data shows</h3>
+<ul>
+<li>State-owned enterprises account for <strong>56</strong> companies and <strong>$4.05 T$</strong> of revenue in the mixed universe -- <strong>4.1%</strong> of everything measured, and a profit share of only <strong>2.4%</strong>.</li>
+<li><strong>The invisible giants.</strong> 11,030 companies with known revenue do not appear in the Forbes Global 2000, worth <strong>$46.81 T$</strong> between them. 186 of them exceed $50B in revenue -- including <strong>AMAZON.COM, INC.</strong> ($717B, public), <strong>State Grid</strong> ($555B, state), <strong>UnitedHealth Group Incorporated</strong> ($448B, public), <strong>Saudi Aramco</strong> ($446B, public).</li>
+<li>Re-ranking the top 100 on earth from the mixed universe, <strong>60 of Forbes&#x27; own top 100 are displaced</strong>, and the true top 100 is worth <strong>$23.95 T$</strong> against Forbes&#x27; $15.48 T$ (a $8475B gap).</li>
+<li><strong>state vs listed</strong>: median net margin 2.0% vs 9.8% (means 3.1% vs 12.0%; difference in means -8.9 pp, bootstrap CI [-10.3, -7.5] pp, p = &lt;0.001).</li>
+<li><strong>state vs private/PE</strong>: median net margin 2.0% vs 1.0% (means 3.1% vs 2.3%; difference in means +0.8 pp, bootstrap CI [-0.9, +2.6] pp, p = 0.360).</li>
+<li><strong>mutual vs listed</strong>: median net margin 3.7% vs 9.8% (means 5.3% vs 12.0%; difference in means -6.7 pp, bootstrap CI [-9.2, -3.9] pp, p = &lt;0.001).</li>
+<li>42 rows were dropped from the margin comparison because a net margin outside [-100%, +100%] is arithmetically impossible for a standalone operating business.</li>
+</ul>
+<h3>Charts</h3>
+<figure>
+<img src='charts/14_ownership_mix.png' alt='Who owns the world&#x27;s corporate revenue? — Revenue by ownership type'>
+<figcaption>Who owns the world&#x27;s corporate revenue? — Revenue by ownership type</figcaption>
+</figure>
+<figure>
+<img src='charts/15_invisible_giants.png' alt='The invisible giants — Measured companies missing from the Global 2000'>
+<figcaption>The invisible giants — Measured companies missing from the Global 2000</figcaption>
+</figure>
+<figure>
+<img src='charts/16_true_top100.png' alt='The true top 100 on earth — Re-ranked from the reconciled universe'>
+<figcaption>The true top 100 on earth — Re-ranked from the reconciled universe</figcaption>
+</figure>
+<figure>
+<img src='charts/17_margin_by_ownership.png' alt='Median net margin, owner by owner — State, listed, private and mutual businesses'>
+<figcaption>Median net margin, owner by owner — State, listed, private and mutual businesses</figcaption>
+</figure>
+<h3>Ownership split of the reconciled universe</h3>
+<p><strong>Ownership split of the reconciled universe</strong></p>
+<table><thead><tr>
+<th>ownership</th>
+<th>companies</th>
+<th>revenue_usd</th>
+<th>profit_usd</th>
+<th>market_cap_usd</th>
+<th>employees</th>
+<th>profit_margin</th>
+<th>revenue_per_employee</th>
+<th>revenue_share</th>
+<th>profit_share</th>
+</tr></thead><tbody>
+<tr>
+<td>state</td>
+<td>56</td>
+<td>$4.0T</td>
+<td>$146B</td>
+<td>$268B</td>
+<td>779,034</td>
+<td>3.6%</td>
+<td>5,192,824</td>
+<td>4.1%</td>
+<td>2.4%</td>
+</tr>
+<tr>
+<td>mutual</td>
+<td>15</td>
+<td>$889B</td>
+<td>$49B</td>
+<td>$0</td>
+<td>77,283</td>
+<td>5.5%</td>
+<td>11,496,728</td>
+<td>0.9%</td>
+<td>0.8%</td>
+</tr>
+<tr>
+<td>pe</td>
+<td>1,442</td>
+<td>$186B</td>
+<td>$1B</td>
+<td>$59B</td>
+<td>187,379</td>
+<td>0.6%</td>
+<td>992,646</td>
+<td>0.2%</td>
+<td>0.0%</td>
+</tr>
+<tr>
+<td>public</td>
+<td>13,000</td>
+<td>$84.0T</td>
+<td>$5.6T</td>
+<td>$169.2T</td>
+<td>94,680,269</td>
+<td>6.7%</td>
+<td>887,488</td>
+<td>84.4%</td>
+<td>92.9%</td>
+</tr>
+<tr>
+<td>private</td>
+<td>338</td>
+<td>$5.3T</td>
+<td>$82B</td>
+<td>$37B</td>
+<td>3,753,747</td>
+<td>1.6%</td>
+<td>1,407,979</td>
+<td>5.3%</td>
+<td>1.4%</td>
+</tr>
+<tr>
+<td>unknown</td>
+<td>324</td>
+<td>$5.2T</td>
+<td>$148B</td>
+<td>$1.3T</td>
+<td>2,005,226</td>
+<td>2.9%</td>
+<td>2,580,596</td>
+<td>5.2%</td>
+<td>2.5%</td>
+</tr>
+</tbody></table>
+<p>_Full table: <code>data/ownership__ownership_mixed.csv</code>_ (6 rows, 10 columns)._</p>
+<h3>The true top 100 once every source is reconciled</h3>
+<p><strong>The true top 100 once every source is reconciled</strong></p>
+<table><thead><tr>
+<th>company</th>
+<th>country</th>
+<th>ownership</th>
+<th>sector</th>
+<th>revenue_usd</th>
+<th>forbes_rank</th>
+</tr></thead><tbody>
+<tr>
+<td>AMAZON.COM, INC.</td>
+<td>United States</td>
+<td>public</td>
+<td>Unclassified</td>
+<td>$717B</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Walmart Inc.</td>
+<td>United States</td>
+<td>public</td>
+<td>Unclassified</td>
+<td>$706B</td>
+<td>18</td>
+</tr>
+<tr>
+<td>Amazon</td>
+<td>United States</td>
+<td>public</td>
+<td>Consumer &amp; Retail</td>
+<td>$638B</td>
+<td>5</td>
+</tr>
+<tr>
+<td>State Grid</td>
+<td>—</td>
+<td>state</td>
+<td>Unclassified</td>
+<td>$555B</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Saudi Arabian Oil Company (Saudi Aramco)</td>
+<td>Saudi Arabia</td>
+<td>public</td>
+<td>Energy &amp; Utilities</td>
+<td>$480B</td>
+<td>4</td>
+</tr>
+<tr>
+<td>UnitedHealth Group Incorporated</td>
+<td>United States</td>
+<td>public</td>
+<td>Unclassified</td>
+<td>$448B</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Saudi Aramco</td>
+<td>Saudi Arabia</td>
+<td>public</td>
+<td>Unclassified</td>
+<td>$446B</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Apple Inc.</td>
+<td>United States</td>
+<td>public</td>
+<td>Unclassified</td>
+<td>$416B</td>
+<td>11</td>
+</tr>
+<tr>
+<td>UnitedHealth Group</td>
+<td>United States</td>
+<td>public</td>
+<td>Financials</td>
+<td>$410B</td>
+<td>17</td>
+</tr>
+<tr>
+<td>McKESSON CORPORATION</td>
+<td>United States</td>
+<td>public</td>
+<td>Unclassified</td>
+<td>$403B</td>
+<td>195</td>
+</tr>
+<tr>
+<td>Alphabet Inc.</td>
+<td>United States</td>
+<td>public</td>
+<td>Unclassified</td>
+<td>$403B</td>
+<td>9</td>
+</tr>
+<tr>
+<td>CVS HEALTH CORPORATION</td>
+<td>United States</td>
+<td>public</td>
+<td>Unclassified</td>
+<td>$402B</td>
+<td>74</td>
+</tr>
+<tr>
+<td>China National Petroleum</td>
+<td>—</td>
+<td>state</td>
+<td>Unclassified</td>
+<td>$402B</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Vitol</td>
+<td>World (private)</td>
+<td>unknown</td>
+<td>Unclassified</td>
+<td>$400B</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Sinopec</td>
+<td>China</td>
+<td>public</td>
+<td>Energy &amp; Utilities</td>
+<td>$390B</td>
+<td>51</td>
+</tr>
+<tr>
+<td>PetroChina</td>
+<td>China</td>
+<td>public</td>
+<td>Energy &amp; Utilities</td>
+<td>$384B</td>
+<td>28</td>
+</tr>
+<tr>
+<td>Volkswagen Group</td>
+<td>Germany</td>
+<td>public</td>
+<td>Consumer &amp; Retail</td>
+<td>$351B</td>
+<td>54</td>
+</tr>
+<tr>
+<td>ExxonMobil</td>
+<td>United States</td>
+<td>public</td>
+<td>Energy &amp; Utilities</td>
+<td>$340B</td>
+<td>13</td>
+</tr>
+<tr>
+<td>Exxon Mobil Corporation</td>
+<td>United States</td>
+<td>public</td>
+<td>Unclassified</td>
+<td>$332B</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Samsung</td>
+<td>South Korea</td>
+<td>public</td>
+<td>Unclassified</td>
+<td>$326B</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Cencora, Inc.</td>
+<td>United States</td>
+<td>public</td>
+<td>Unclassified</td>
+<td>$321B</td>
+<td>287</td>
+</tr>
+<tr>
+<td>Toyota Motor</td>
+<td>Japan</td>
+<td>public</td>
+<td>Consumer &amp; Retail</td>
+<td>$309B</td>
+<td>14</td>
+</tr>
+<tr>
+<td>China State Construction Engineering</td>
+<td>China</td>
+<td>public</td>
+<td>Construction &amp; Real Estate</td>
+<td>$303B</td>
+<td>136</td>
+</tr>
+<tr>
+<td>JPMorgan Chase</td>
+<td>United States</td>
+<td>public</td>
+<td>Unclassified</td>
+<td>$298B</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Foxconn (Hon Hai Precision Industry)</td>
+<td>Taiwan</td>
+<td>public</td>
+<td>Unclassified</td>
+<td>$297B</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<p>_Full table: <code>data/ownership__true_top100.csv</code>_ (100 rows, 50 columns)._</p>
+<h3>The invisible giants, by country</h3>
+<p><strong>The invisible giants, by country</strong></p>
+<table><thead><tr>
+<th>country</th>
+<th>firms</th>
+<th>revenue_usd</th>
+</tr></thead><tbody>
+<tr>
+<td>United States</td>
+<td>4,876</td>
+<td>$12.9T</td>
+</tr>
+<tr>
+<td>China</td>
+<td>366</td>
+<td>$4.7T</td>
+</tr>
+<tr>
+<td>World (private)</td>
+<td>78</td>
+<td>$3.5T</td>
+</tr>
+<tr>
+<td>Japan</td>
+<td>765</td>
+<td>$3.3T</td>
+</tr>
+<tr>
+<td>Europe</td>
+<td>35</td>
+<td>$2.8T</td>
+</tr>
+<tr>
+<td>Taiwan</td>
+<td>89</td>
+<td>$1.2T</td>
+</tr>
+<tr>
+<td>Canada</td>
+<td>329</td>
+<td>$1.1T</td>
+</tr>
+<tr>
+<td>South Korea</td>
+<td>130</td>
+<td>$989B</td>
+</tr>
+<tr>
+<td>Germany</td>
+<td>256</td>
+<td>$976B</td>
+</tr>
+<tr>
+<td>France</td>
+<td>238</td>
+<td>$955B</td>
+</tr>
+<tr>
+<td>India</td>
+<td>508</td>
+<td>$866B</td>
+</tr>
+<tr>
+<td>Saudi Arabia</td>
+<td>214</td>
+<td>$695B</td>
+</tr>
+<tr>
+<td>United Kingdom</td>
+<td>376</td>
+<td>$618B</td>
+</tr>
+<tr>
+<td>Brazil</td>
+<td>81</td>
+<td>$519B</td>
+</tr>
+<tr>
+<td>Australia</td>
+<td>302</td>
+<td>$493B</td>
+</tr>
+</tbody></table>
+<p>_Full table: <code>data/ownership__invisible_by_country.csv</code>_ (82 rows, 3 columns)._</p>
+<section id='sec-capital-what-the-markets-think-it-is-worth'>
+<h1>Capital: what the markets think it is worth</h1>
+<p>The listed universe: market value, sector multiples, the gap between where profit sits and where valuation sits, and how deep each national equity market is against its GDP.</p>
+<h3>What the data shows</h3>
+<ul>
+<li>The listed universe we can measure holds <strong>10,076</strong> companies worth <strong>$150.5 T$</strong>. That is extraordinarily concentrated: the top 10 hold <strong>20.2%</strong>, the top 100 <strong>42.9%</strong>, and it takes only <strong>169</strong> companies to reach half the total. HHI <strong>59</strong>, Gini <strong>0.86</strong>.</li>
+<li>The median listed company is worth <strong>$1830.5M</strong> while the average is <strong>$14935.3M</strong> -- a <strong>8x</strong> gap. The top 1,000 firms (9.9% of the universe) alone hold <strong>78.5%</strong> of all measured market value.</li>
+<li>Financial depth varies by an order of magnitude. Among economies large enough to host a real equity market (economy with GDP &gt;= $100B and &gt;= 5 listed companies), the deepest market is <strong>3.17x</strong> GDP (Switzerland) and the shallowest <strong>0.12x</strong> (Pakistan). (26 micro-states (Bahamas, Bahrain, Bermuda, Bulgaria, Cambodia, Cayman Islands...) are excluded: they host a handful of multinational registrations, not a genuine domestic market.)</li>
+<li>Market value scales with revenue with an elasticity of <strong>0.63</strong> (95% CI [0.62, 0.64], p = &lt;0.001; n = 9,609). Because the elasticity is below 1, doubling revenue multiplies market value by about <strong>1.54x</strong>, not 2x -- scale by itself does not earn a higher valuation multiple, because the price-to-sales multiple shrinks as revenue grows.</li>
+<li>Profit and market value disagree about which businesses matter. <strong>Financials</strong> earns 34.1% of profit but is only 20.6% of market value; <strong>Energy &amp; Utilities</strong> earns 11.3% of profit but is only 8.7% of market value. Conversely <strong>Technology</strong> (-10.1 pp); <strong>Consumer &amp; Retail</strong> (-2.8 pp); <strong>Healthcare</strong> (-2.4 pp).</li>
+</ul>
+<h3>Charts</h3>
+<figure>
+<img src='charts/18_top_listed.png' alt='The twenty most valuable listed companies — Market capitalisation'>
+<figcaption>The twenty most valuable listed companies — Market capitalisation</figcaption>
+</figure>
+<figure>
+<img src='charts/19_multiples_by_sector.png' alt='What the market pays for each unit of revenue — Market capitalisation ÷ revenue, by sector'>
+<figcaption>What the market pays for each unit of revenue — Market capitalisation ÷ revenue, by sector</figcaption>
+</figure>
+<figure>
+<img src='charts/20_profit_vs_mcap.png' alt='Profit and market value disagree about what matters — Profit share minus market-value share, by sector'>
+<figcaption>Profit and market value disagree about what matters — Profit share minus market-value share, by sector</figcaption>
+</figure>
+<figure>
+<img src='charts/21_financial_depth.png' alt='How deep is each equity market? — Market capitalisation as a multiple of GDP'>
+<figcaption>How deep is each equity market? — Market capitalisation as a multiple of GDP</figcaption>
+</figure>
+<figure>
+<img src='charts/22_exchanges.png' alt='The world&#x27;s exchanges by market value — Aggregate market capitalisation per venue'>
+<figcaption>The world&#x27;s exchanges by market value — Aggregate market capitalisation per venue</figcaption>
+</figure>
+<h3>Profit share against market-value share, by sector</h3>
+<p><strong>Profit share against market-value share, by sector</strong></p>
+<table><thead><tr>
+<th>sector</th>
+<th>revenue</th>
+<th>profit</th>
+<th>market_cap</th>
+<th>profit_share</th>
+<th>market_cap_share</th>
+<th>profit_minus_mcap_pp</th>
+<th>market_cap_to_profit</th>
+</tr></thead><tbody>
+<tr>
+<td>Business Services</td>
+<td>$2.3T</td>
+<td>$156B</td>
+<td>$2.8T</td>
+<td>3.2%</td>
+<td>3.1%</td>
+<td>0.143</td>
+<td>17.91x</td>
+</tr>
+<tr>
+<td>Conglomerates</td>
+<td>$268B</td>
+<td>$17B</td>
+<td>$429B</td>
+<td>0.3%</td>
+<td>0.5%</td>
+<td>-0.129</td>
+<td>25.86x</td>
+</tr>
+<tr>
+<td>Construction &amp; Real Estate</td>
+<td>$2.7T</td>
+<td>$102B</td>
+<td>$1.7T</td>
+<td>2.1%</td>
+<td>1.9%</td>
+<td>0.204</td>
+<td>16.91x</td>
+</tr>
+<tr>
+<td>Consumer &amp; Retail</td>
+<td>$9.1T</td>
+<td>$500B</td>
+<td>$11.9T</td>
+<td>10.3%</td>
+<td>13.0%</td>
+<td>-2.77</td>
+<td>23.80x</td>
+</tr>
+<tr>
+<td>Energy &amp; Utilities</td>
+<td>$6.8T</td>
+<td>$550B</td>
+<td>$7.9T</td>
+<td>11.3%</td>
+<td>8.7%</td>
+<td>2.62</td>
+<td>14.38x</td>
+</tr>
+<tr>
+<td>Financials</td>
+<td>$12.4T</td>
+<td>$1.7T</td>
+<td>$18.8T</td>
+<td>34.1%</td>
+<td>20.6%</td>
+<td>13.52</td>
+<td>11.32x</td>
+</tr>
+<tr>
+<td>Food &amp; Agriculture</td>
+<td>$3.0T</td>
+<td>$193B</td>
+<td>$3.9T</td>
+<td>4.0%</td>
+<td>4.3%</td>
+<td>-0.323</td>
+<td>20.27x</td>
+</tr>
+<tr>
+<td>Healthcare</td>
+<td>$3.2T</td>
+<td>$260B</td>
+<td>$7.0T</td>
+<td>5.3%</td>
+<td>7.7%</td>
+<td>-2.37</td>
+<td>27.06x</td>
+</tr>
+<tr>
+<td>Industrials &amp; Defense</td>
+<td>$2.3T</td>
+<td>$184B</td>
+<td>$4.8T</td>
+<td>3.8%</td>
+<td>5.3%</td>
+<td>-1.53</td>
+<td>26.34x</td>
+</tr>
+<tr>
+<td>Materials &amp; Chemicals</td>
+<td>$2.4T</td>
+<td>$149B</td>
+<td>$2.9T</td>
+<td>3.1%</td>
+<td>3.2%</td>
+<td>-0.099</td>
+<td>19.35x</td>
+</tr>
+<tr>
+<td>Technology</td>
+<td>$4.7T</td>
+<td>$815B</td>
+<td>$24.5T</td>
+<td>16.7%</td>
+<td>26.8%</td>
+<td>-10.05</td>
+<td>30.00x</td>
+</tr>
+<tr>
+<td>Telecom &amp; Media</td>
+<td>$1.9T</td>
+<td>$138B</td>
+<td>$2.7T</td>
+<td>2.8%</td>
+<td>3.0%</td>
+<td>-0.161</td>
+<td>19.80x</td>
+</tr>
+<tr>
+<td>Transport &amp; Logistics</td>
+<td>$1.8T</td>
+<td>$146B</td>
+<td>$1.9T</td>
+<td>3.0%</td>
+<td>2.1%</td>
+<td>0.946</td>
+<td>12.83x</td>
+</tr>
+</tbody></table>
+<p>_Full table: <code>data/capital__profit_pool.csv</code>_ (13 rows, 8 columns)._</p>
+<h3>Equity-market depth against GDP</h3>
+<p><strong>Equity-market depth against GDP</strong></p>
+<table><thead><tr>
+<th>country</th>
+<th>market_cap</th>
+<th>companies</th>
+<th>iso3</th>
+<th>gdp</th>
+<th>mcap_to_gdp</th>
+</tr></thead><tbody>
+<tr>
+<td>Argentina</td>
+<td>$149B</td>
+<td>16</td>
+<td>ARG</td>
+<td>638,365,455,340</td>
+<td>0.23x</td>
+</tr>
+<tr>
+<td>Australia</td>
+<td>$2.0T</td>
+<td>348</td>
+<td>AUS</td>
+<td>1,757,022,451,653</td>
+<td>1.13x</td>
+</tr>
+<tr>
+<td>Austria</td>
+<td>$249B</td>
+<td>50</td>
+<td>AUT</td>
+<td>534,790,720,467</td>
+<td>0.47x</td>
+</tr>
+<tr>
+<td>Bahamas</td>
+<td>$2B</td>
+<td>1</td>
+<td>BHS</td>
+<td>15,832,800,000</td>
+<td>0.15x</td>
+</tr>
+<tr>
+<td>Bahrain</td>
+<td>$19B</td>
+<td>24</td>
+<td>BHR</td>
+<td>47,210,732,713</td>
+<td>0.40x</td>
+</tr>
+<tr>
+<td>Belgium</td>
+<td>$461B</td>
+<td>75</td>
+<td>BEL</td>
+<td>670,983,130,619</td>
+<td>0.69x</td>
+</tr>
+<tr>
+<td>Bermuda</td>
+<td>$285B</td>
+<td>37</td>
+<td>BMU</td>
+<td>9,194,499,000</td>
+<td>31.02x</td>
+</tr>
+<tr>
+<td>Brazil</td>
+<td>$1.1T</td>
+<td>91</td>
+<td>BRA</td>
+<td>2,185,821,610,689</td>
+<td>0.52x</td>
+</tr>
+<tr>
+<td>Bulgaria</td>
+<td>$2B</td>
+<td>1</td>
+<td>BGR</td>
+<td>113,349,149,167</td>
+<td>0.02x</td>
+</tr>
+<tr>
+<td>Cambodia</td>
+<td>$6B</td>
+<td>6</td>
+<td>KHM</td>
+<td>46,352,647,037</td>
+<td>0.12x</td>
+</tr>
+<tr>
+<td>Canada</td>
+<td>$4.2T</td>
+<td>412</td>
+<td>CAN</td>
+<td>2,270,076,189,683</td>
+<td>1.85x</td>
+</tr>
+<tr>
+<td>Cayman Islands</td>
+<td>$23B</td>
+<td>9</td>
+<td>CYM</td>
+<td>7,765,336,505</td>
+<td>3.00x</td>
+</tr>
+<tr>
+<td>Chile</td>
+<td>$169B</td>
+<td>24</td>
+<td>CHL</td>
+<td>329,260,633,699</td>
+<td>0.51x</td>
+</tr>
+<tr>
+<td>China</td>
+<td>$10.9T</td>
+<td>452</td>
+<td>CHN</td>
+<td>18,729,668,435,848</td>
+<td>0.58x</td>
+</tr>
+<tr>
+<td>Colombia</td>
+<td>$66B</td>
+<td>4</td>
+<td>COL</td>
+<td>420,504,033,143</td>
+<td>0.16x</td>
+</tr>
+<tr>
+<td>Costa Rica</td>
+<td>$2B</td>
+<td>1</td>
+<td>CRI</td>
+<td>96,715,644,331</td>
+<td>0.02x</td>
+</tr>
+<tr>
+<td>Cyprus</td>
+<td>$3B</td>
+<td>3</td>
+<td>CYP</td>
+<td>37,634,551,821</td>
+<td>0.07x</td>
+</tr>
+<tr>
+<td>Czech Republic</td>
+<td>$67B</td>
+<td>5</td>
+<td>CZE</td>
+<td>347,082,562,221</td>
+<td>0.19x</td>
+</tr>
+<tr>
+<td>Denmark</td>
+<td>$613B</td>
+<td>58</td>
+<td>DNK</td>
+<td>424,524,722,037</td>
+<td>1.44x</td>
+</tr>
+<tr>
+<td>Egypt</td>
+<td>$8B</td>
+<td>2</td>
+<td>EGY</td>
+<td>389,059,910,593</td>
+<td>0.02x</td>
+</tr>
+</tbody></table>
+<p>_Full table: <code>data/capital__financial_depth.csv</code>_ (74 rows, 6 columns)._</p>
+<h3>Largest listed companies by market value</h3>
+<p><strong>Largest listed companies by market value</strong></p>
+<table><thead><tr>
+<th>company</th>
+<th>country</th>
+<th>sector</th>
+<th>market_cap_usd</th>
+<th>revenue_usd</th>
+<th>revenue_basis</th>
+</tr></thead><tbody>
+<tr>
+<td>NVIDIA CORP</td>
+<td>United States</td>
+<td>Unclassified</td>
+<td>$5.2T</td>
+<td>$216B</td>
+<td>sec_filing</td>
+</tr>
+<tr>
+<td>Apple Inc.</td>
+<td>United States</td>
+<td>Unclassified</td>
+<td>$5.0T</td>
+<td>$416B</td>
+<td>sec_filing</td>
+</tr>
+<tr>
+<td>Alphabet Inc.</td>
+<td>United States</td>
+<td>Unclassified</td>
+<td>$4.2T</td>
+<td>$403B</td>
+<td>sec_filing</td>
+</tr>
+<tr>
+<td>MICROSOFT CORPORATION</td>
+<td>United States</td>
+<td>Unclassified</td>
+<td>$4.0T</td>
+<td>$282B</td>
+<td>sec_filing</td>
+</tr>
+<tr>
+<td>AMAZON.COM, INC.</td>
+<td>United States</td>
+<td>Unclassified</td>
+<td>$2.8T</td>
+<td>$717B</td>
+<td>sec_filing</td>
+</tr>
+<tr>
+<td>TSMC</td>
+<td>Taiwan</td>
+<td>Unclassified</td>
+<td>$2.2T</td>
+<td>$122B</td>
+<td>estimate</td>
+</tr>
+<tr>
+<td>SpaceX</td>
+<td>United States</td>
+<td>Unclassified</td>
+<td>$1.9T</td>
+<td>$21B</td>
+<td>estimate</td>
+</tr>
+<tr>
+<td>Meta Platforms, Inc.</td>
+<td>United States</td>
+<td>Unclassified</td>
+<td>$1.8T</td>
+<td>$201B</td>
+<td>sec_filing</td>
+</tr>
+<tr>
+<td>Saudi Aramco</td>
+<td>Saudi Arabia</td>
+<td>Unclassified</td>
+<td>$1.7T</td>
+<td>$488B</td>
+<td>estimate</td>
+</tr>
+<tr>
+<td>Broadcom Inc.</td>
+<td>United States</td>
+<td>Unclassified</td>
+<td>$1.6T</td>
+<td>$64B</td>
+<td>sec_filing</td>
+</tr>
+<tr>
+<td>Tesla, Inc.</td>
+<td>United States</td>
+<td>Unclassified</td>
+<td>$1.5T</td>
+<td>$95B</td>
+<td>sec_filing</td>
+</tr>
+<tr>
+<td>BERKSHIRE HATHAWAY INC</td>
+<td>United States</td>
+<td>Unclassified</td>
+<td>$1.1T</td>
+<td>$247B</td>
+<td>sec_filing</td>
+</tr>
+<tr>
+<td>ELI LILLY AND COMPANY</td>
+<td>United States</td>
+<td>Unclassified</td>
+<td>$1.1T</td>
+<td>$65B</td>
+<td>sec_filing</td>
+</tr>
+<tr>
+<td>Samsung</td>
+<td>South Korea</td>
+<td>Unclassified</td>
+<td>$1.1T</td>
+<td>$326B</td>
+<td>estimate</td>
+</tr>
+<tr>
+<td>Micron Technology, Inc.</td>
+<td>United States</td>
+<td>Unclassified</td>
+<td>$1.0T</td>
+<td>$37B</td>
+<td>sec_filing</td>
+</tr>
+<tr>
+<td>Walmart Inc.</td>
+<td>United States</td>
+<td>Unclassified</td>
+<td>$942B</td>
+<td>$706B</td>
+<td>sec_filing</td>
+</tr>
+<tr>
+<td>JPMorgan Chase</td>
+<td>United States</td>
+<td>Unclassified</td>
+<td>$886B</td>
+<td>$195B</td>
+<td>estimate</td>
+</tr>
+<tr>
+<td>ADVANCED MICRO DEVICES, INC.</td>
+<td>United States</td>
+<td>Unclassified</td>
+<td>$878B</td>
+<td>$35B</td>
+<td>sec_filing</td>
+</tr>
+<tr>
+<td>VISA INC.</td>
+<td>United States</td>
+<td>Unclassified</td>
+<td>$756B</td>
+<td>$40B</td>
+<td>sec_filing</td>
+</tr>
+<tr>
+<td>Exxon Mobil Corporation</td>
+<td>United States</td>
+<td>Unclassified</td>
+<td>$733B</td>
+<td>$332B</td>
+<td>sec_filing</td>
+</tr>
+</tbody></table>
+<p>_Full table: <code>data/capital__top_listed.csv</code>_ (100 rows, 6 columns)._</p>
+<h3>Exchanges by total market capitalisation</h3>
+<p><strong>Exchanges by total market capitalisation</strong></p>
+<table><thead><tr>
+<th>exchange</th>
+<th>exchange_country</th>
+<th>city</th>
+<th>companies</th>
+<th>total_market_cap_usd</th>
+<th>top10_market_cap_usd</th>
+<th>top_company</th>
+<th>top_company_mcap</th>
+<th>top10_share</th>
+<th>avg_company_cap</th>
+<th>share_of_listed_total</th>
+</tr></thead><tbody>
+<tr>
+<td>Nasdaq</td>
+<td>United States</td>
+<td>New York</td>
+<td>1,618</td>
+<td>46,088,902,094,592</td>
+<td>29,020,750,348,288</td>
+<td>NVIDIA</td>
+<td>5,242,072,072,192</td>
+<td>0.630</td>
+<td>28,485,106,363</td>
+<td>0.310</td>
+</tr>
+<tr>
+<td>New York Stock Exchange</td>
+<td>United States</td>
+<td>New York</td>
+<td>1,467</td>
+<td>34,246,917,347,336</td>
+<td>7,113,332,031,488</td>
+<td>Berkshire Hathaway</td>
+<td>1,139,349,913,600</td>
+<td>0.208</td>
+<td>23,344,865,267</td>
+<td>0.231</td>
+</tr>
+<tr>
+<td>Tokyo Stock Exchange</td>
+<td>Japan</td>
+<td>Tokyo</td>
+<td>903</td>
+<td>7,783,181,610,177</td>
+<td>1,737,222,659,993</td>
+<td>Mitsubishi UFJ Financial</td>
+<td>243,799,867,392</td>
+<td>0.223</td>
+<td>8,619,248,738</td>
+<td>0.052</td>
+</tr>
+<tr>
+<td>Shanghai Stock Exchange</td>
+<td>China</td>
+<td>Shanghai</td>
+<td>161</td>
+<td>5,408,467,235,248</td>
+<td>2,590,799,492,090</td>
+<td>China Construction Bank</td>
+<td>453,087,654,798</td>
+<td>0.479</td>
+<td>33,592,964,194</td>
+<td>0.036</td>
+</tr>
+<tr>
+<td>London Stock Exchange</td>
+<td>United Kingdom</td>
+<td>London</td>
+<td>464</td>
+<td>4,627,480,057,176</td>
+<td>2,030,761,233,186</td>
+<td>HSBC</td>
+<td>317,922,148,352</td>
+<td>0.439</td>
+<td>9,973,017,365</td>
+<td>0.031</td>
+</tr>
+<tr>
+<td>Toronto Stock Exchange</td>
+<td>Canada</td>
+<td>Toronto</td>
+<td>394</td>
+<td>4,179,009,403,170</td>
+<td>1,419,000,881,152</td>
+<td>Royal Bank Of Canada</td>
+<td>271,763,570,688</td>
+<td>0.340</td>
+<td>10,606,622,851</td>
+<td>0.028</td>
+</tr>
+<tr>
+<td>Taiwan Stock Exchange</td>
+<td>Taiwan</td>
+<td>Taipei</td>
+<td>95</td>
+<td>4,064,892,788,273</td>
+<td>3,010,547,458,829</td>
+<td>TSMC</td>
+<td>2,179,460,104,192</td>
+<td>0.741</td>
+<td>42,788,345,140</td>
+<td>0.027</td>
+</tr>
+<tr>
+<td>Hong Kong Stock Exchange</td>
+<td>Hong Kong</td>
+<td>Hong Kong</td>
+<td>306</td>
+<td>4,042,164,209,895</td>
+<td>1,756,005,217,840</td>
+<td>ICBC</td>
+<td>344,722,949,059</td>
+<td>0.434</td>
+<td>13,209,686,960</td>
+<td>0.027</td>
+</tr>
+<tr>
+<td>National Stock Exchange of India</td>
+<td>India</td>
+<td>Mumbai</td>
+<td>564</td>
+<td>3,840,860,095,017</td>
+<td>919,206,604,314</td>
+<td>Reliance Industries</td>
+<td>171,374,723,672</td>
+<td>0.239</td>
+<td>6,810,035,629</td>
+<td>0.026</td>
+</tr>
+<tr>
+<td>Korea Exchange (KOSPI)</td>
+<td>South Korea</td>
+<td>Seoul</td>
+<td>159</td>
+<td>3,299,137,193,755</td>
+<td>2,176,987,629,173</td>
+<td>Samsung</td>
+<td>1,065,509,204,255</td>
+<td>0.660</td>
+<td>20,749,290,527</td>
+<td>0.022</td>
+</tr>
+<tr>
+<td>Euronext Paris</td>
+<td>France</td>
+<td>Paris</td>
+<td>289</td>
+<td>3,103,366,038,000</td>
+<td>1,621,869,031,789</td>
+<td>L&#x27;Oréal</td>
+<td>241,027,846,057</td>
+<td>0.523</td>
+<td>10,738,290,789</td>
+<td>0.021</td>
+</tr>
+<tr>
+<td>SIX Swiss Exchange</td>
+<td>Switzerland</td>
+<td>Zurich</td>
+<td>208</td>
+<td>3,021,070,705,799</td>
+<td>1,743,615,658,654</td>
+<td>Roche</td>
+<td>371,736,693,530</td>
+<td>0.577</td>
+<td>14,524,378,393</td>
+<td>0.020</td>
+</tr>
+<tr>
+<td>Saudi Exchange (Tadawul)</td>
+<td>Saudi Arabia</td>
+<td>Riyadh</td>
+<td>229</td>
+<td>2,423,015,923,980</td>
+<td>2,065,452,021,314</td>
+<td>Saudi Aramco</td>
+<td>1,663,347,115,141</td>
+<td>0.852</td>
+<td>10,580,855,563</td>
+<td>0.016</td>
+</tr>
+<tr>
+<td>Xetra (Frankfurt)</td>
+<td>Germany</td>
+<td>Frankfurt</td>
+<td>199</td>
+<td>2,302,082,736,375</td>
+<td>1,225,632,017,825</td>
+<td>SAP</td>
+<td>260,884,791,296</td>
+<td>0.532</td>
+<td>11,568,254,957</td>
+<td>0.016</td>
+</tr>
+<tr>
+<td>Australian Securities Exchange</td>
+<td>Australia</td>
+<td>Sydney</td>
+<td>353</td>
+<td>2,013,010,425,078</td>
+<td>938,628,334,728</td>
+<td>BHP Group</td>
+<td>211,501,711,360</td>
+<td>0.466</td>
+<td>5,702,579,108</td>
+<td>0.014</td>
+</tr>
+<tr>
+<td>Shenzhen Stock Exchange</td>
+<td>China</td>
+<td>Shenzhen</td>
+<td>116</td>
+<td>1,961,934,069,762</td>
+<td>826,561,085,547</td>
+<td>CATL</td>
+<td>185,256,494,218</td>
+<td>0.421</td>
+<td>16,913,224,739</td>
+<td>0.013</td>
+</tr>
+<tr>
+<td>Euronext Amsterdam</td>
+<td>Netherlands</td>
+<td>Amsterdam</td>
+<td>62</td>
+<td>1,625,236,458,531</td>
+<td>1,215,050,727,548</td>
+<td>ASML</td>
+<td>634,829,275,136</td>
+<td>0.748</td>
+<td>26,213,491,267</td>
+<td>0.011</td>
+</tr>
+<tr>
+<td>Nasdaq Stockholm</td>
+<td>Sweden</td>
+<td>Stockholm</td>
+<td>199</td>
+<td>1,324,461,064,239</td>
+<td>632,997,669,138</td>
+<td>Investor AB</td>
+<td>130,090,831,167</td>
+<td>0.478</td>
+<td>6,655,583,237</td>
+<td>0.009</td>
+</tr>
+<tr>
+<td>Bolsa de Madrid</td>
+<td>Spain</td>
+<td>Madrid</td>
+<td>100</td>
+<td>1,302,846,519,578</td>
+<td>965,085,397,562</td>
+<td>Inditex</td>
+<td>193,644,196,795</td>
+<td>0.741</td>
+<td>13,028,465,196</td>
+<td>0.009</td>
+</tr>
+<tr>
+<td>Borsa Italiana</td>
+<td>Italy</td>
+<td>Milan</td>
+<td>148</td>
+<td>1,242,264,872,232</td>
+<td>715,719,828,181</td>
+<td>UniCredit</td>
+<td>126,128,010,373</td>
+<td>0.576</td>
+<td>8,393,681,569</td>
+<td>0.008</td>
+</tr>
+</tbody></table>
+<p>_Full table: <code>data/capital__exchanges.csv</code>_ (60 rows, 11 columns)._</p>
+<section id='sec-private-capital-the-part-without-a-ticker'>
+<h1>Private capital: the part without a ticker</h1>
+<p>The private half of the economy: unicorn valuations, the largest unlisted operating companies, and the frontier-lab landscape.</p>
+<h3>What the data shows</h3>
+<ul>
+<li>The private tail is enormous and unusually concentrated: <strong>1,442</strong> unicorns carry <strong>7.35 T$</strong> of paper value across <strong>55</strong> countries, but the top country holds <strong>69%</strong> of it and the top five <strong>90%</strong> (HHI 4937). The median unicorn is worth <strong>$1.7B</strong>; the mean is <strong>3.0x</strong> the median.</li>
+<li><strong>662</strong> companies with measurable revenue have no listed share at all, worth <strong>17.52 T$</strong> — real revenue, not paper. <strong>private</strong> accounts for $5285B across 236 firms; <strong>unknown</strong> accounts for $5175B across 324 firms; <strong>state</strong> accounts for $3685B across 51 firms.</li>
+<li>Among <strong>173</strong> AI model builders, <strong>45</strong> ship open weights, <strong>24</strong> are partial and <strong>104</strong> are closed. At the frontier specifically (27 labs) the split is {&#x27;no&#x27;: 12, &#x27;partial&#x27;: 8, &#x27;yes&#x27;: 7} by country {&#x27;China&#x27;: 9, &#x27;United States&#x27;: 8, &#x27;South Korea&#x27;: 4, &#x27;Russia&#x27;: 2, &#x27;United Kingdom&#x27;: 1, &#x27;Germany&#x27;: 1, &#x27;France&#x27;: 1, &#x27;India&#x27;: 1} — openness is a regional strategy, not a universal one.</li>
+<li><strong>Keep the ledgers separate.</strong> The Forbes 2,000 report <strong>$52.9 T$</strong> of <em>revenue</em>; the listed universe reports <strong>$150.5 T$</strong> of <em>market value</em>; the unicorn board reports <strong>$7.35 T$</strong> of <em>paper marks</em> — equal to <strong>4.9%</strong> of the listed market. These three numbers measure different things and must never be summed.</li>
+<li>The unicorn board overlaps the public world more than its reputation suggests: <strong>19</strong> of 1,442 unicorn names also appear in the reconciled universe. A $1B+ private mark from an old round is not a current price.</li>
+</ul>
+<h3>Charts</h3>
+<figure>
+<img src='charts/23_unicorns_country.png' alt='Where the private giants are — Unicorn paper valuation by country'>
+<figcaption>Where the private giants are — Unicorn paper valuation by country</figcaption>
+</figure>
+<figure>
+<img src='charts/24_unicorns_industry.png' alt='Which industries the private money went into — Unicorn paper valuation by industry'>
+<figcaption>Which industries the private money went into — Unicorn paper valuation by industry</figcaption>
+</figure>
+<figure>
+<img src='charts/25_unicorn_wave.png' alt='The unicorn wave — Companies crossing $1B each year'>
+<figcaption>The unicorn wave — Companies crossing $1B each year</figcaption>
+</figure>
+<figure>
+<img src='charts/26_unlisted_top.png' alt='Real revenue with no listed share — Measured revenue, no public equity'>
+<figcaption>Real revenue with no listed share — Measured revenue, no public equity</figcaption>
+</figure>
+<figure>
+<img src='charts/27_ai_modality.png' alt='The AI builders by modality — Model builders grouped by what they build'>
+<figcaption>The AI builders by modality — Model builders grouped by what they build</figcaption>
+</figure>
+<h3>Unicorns by country</h3>
+<p><strong>Unicorns by country</strong></p>
+<table><thead><tr>
+<th>country</th>
+<th>region</th>
+<th>companies</th>
+<th>valuation_usd</th>
+</tr></thead><tbody>
+<tr>
+<td>United States</td>
+<td>North America</td>
+<td>825</td>
+<td>$5.0T</td>
+</tr>
+<tr>
+<td>China</td>
+<td>Asia-Pacific</td>
+<td>170</td>
+<td>$1.0T</td>
+</tr>
+<tr>
+<td>United Kingdom</td>
+<td>Europe</td>
+<td>73</td>
+<td>$279B</td>
+</tr>
+<tr>
+<td>India</td>
+<td>Asia-Pacific</td>
+<td>63</td>
+<td>$144B</td>
+</tr>
+<tr>
+<td>Germany</td>
+<td>Europe</td>
+<td>39</td>
+<td>$138B</td>
+</tr>
+<tr>
+<td>France</td>
+<td>Europe</td>
+<td>31</td>
+<td>$102B</td>
+</tr>
+<tr>
+<td>Canada</td>
+<td>North America</td>
+<td>23</td>
+<td>$65B</td>
+</tr>
+<tr>
+<td>Israel</td>
+<td>Middle East &amp; Central Asia</td>
+<td>26</td>
+<td>$60B</td>
+</tr>
+<tr>
+<td>Australia</td>
+<td>Asia-Pacific</td>
+<td>9</td>
+<td>$54B</td>
+</tr>
+<tr>
+<td>Brazil</td>
+<td>Latin America</td>
+<td>20</td>
+<td>$42B</td>
+</tr>
+<tr>
+<td>Singapore</td>
+<td>Asia-Pacific</td>
+<td>17</td>
+<td>$40B</td>
+</tr>
+<tr>
+<td>South Korea</td>
+<td>Asia-Pacific</td>
+<td>16</td>
+<td>$38B</td>
+</tr>
+<tr>
+<td>Seychelles</td>
+<td>Africa</td>
+<td>3</td>
+<td>$37B</td>
+</tr>
+<tr>
+<td>Netherlands</td>
+<td>Europe</td>
+<td>13</td>
+<td>$35B</td>
+</tr>
+<tr>
+<td>Sweden</td>
+<td>Europe</td>
+<td>7</td>
+<td>$32B</td>
+</tr>
+</tbody></table>
+<p>_Full table: <code>data/private_capital__unicorns_by_country.csv</code>_ (55 rows, 4 columns)._</p>
+<h3>Unicorns by industry</h3>
+<p><strong>Unicorns by industry</strong></p>
+<table><thead><tr>
+<th>industry</th>
+<th>companies</th>
+<th>valuation_usd</th>
+</tr></thead><tbody>
+<tr>
+<td>Enterprise Tech</td>
+<td>558</td>
+<td>$4.0T</td>
+</tr>
+<tr>
+<td>Financial Services</td>
+<td>227</td>
+<td>$909B</td>
+</tr>
+<tr>
+<td>Industrials</td>
+<td>226</td>
+<td>$741B</td>
+</tr>
+<tr>
+<td>Media &amp; Entertainment</td>
+<td>78</td>
+<td>$722B</td>
+</tr>
+<tr>
+<td>Consumer &amp; Retail</td>
+<td>205</td>
+<td>$612B</td>
+</tr>
+<tr>
+<td>Healthcare &amp; Life Sciences</td>
+<td>126</td>
+<td>$326B</td>
+</tr>
+<tr>
+<td>Insurance</td>
+<td>21</td>
+<td>$44B</td>
+</tr>
+</tbody></table>
+<p>_Full table: <code>data/private_capital__unicorns_by_industry.csv</code>_ (7 rows, 3 columns)._</p>
+<h3>Largest unlisted companies by revenue</h3>
+<p><strong>Largest unlisted companies by revenue</strong></p>
+<table><thead><tr>
+<th>company</th>
+<th>country</th>
+<th>ownership</th>
+<th>sector</th>
+<th>revenue_usd</th>
+</tr></thead><tbody>
+<tr>
+<td>State Grid</td>
+<td>—</td>
+<td>state</td>
+<td>Unclassified</td>
+<td>$555B</td>
+</tr>
+<tr>
+<td>China National Petroleum</td>
+<td>—</td>
+<td>state</td>
+<td>Unclassified</td>
+<td>$402B</td>
+</tr>
+<tr>
+<td>Vitol</td>
+<td>World (private)</td>
+<td>unknown</td>
+<td>Unclassified</td>
+<td>$400B</td>
+</tr>
+<tr>
+<td>Hon Hai Precision Industry</td>
+<td>Taiwan</td>
+<td>public</td>
+<td>Unclassified</td>
+<td>$260B</td>
+</tr>
+<tr>
+<td>Trafigura Group</td>
+<td>Singapore</td>
+<td>private</td>
+<td>Unclassified</td>
+<td>$240B</td>
+</tr>
+<tr>
+<td>Industrial &amp; Commercial Bank of China</td>
+<td>—</td>
+<td>public</td>
+<td>Unclassified</td>
+<td>$211B</td>
+</tr>
+<tr>
+<td>Schwarz Group</td>
+<td>World (private)</td>
+<td>unknown</td>
+<td>Unclassified</td>
+<td>$181B</td>
+</tr>
+<tr>
+<td>Cargill</td>
+<td>United States</td>
+<td>private</td>
+<td>Food &amp; Agriculture</td>
+<td>$154B</td>
+</tr>
+<tr>
+<td>China Railway Engineering Group</td>
+<td>—</td>
+<td>private</td>
+<td>Unclassified</td>
+<td>$152B</td>
+</tr>
+<tr>
+<td>China Mobile Communications</td>
+<td>—</td>
+<td>private</td>
+<td>Unclassified</td>
+<td>$147B</td>
+</tr>
+<tr>
+<td>Banco Santander</td>
+<td>Europe</td>
+<td>public</td>
+<td>Unclassified</td>
+<td>$145B</td>
+</tr>
+<tr>
+<td>China Resources</td>
+<td>—</td>
+<td>private</td>
+<td>Unclassified</td>
+<td>$133B</td>
+</tr>
+<tr>
+<td>State Farm Insurance</td>
+<td>United States</td>
+<td>mutual</td>
+<td>Unclassified</td>
+<td>$132B</td>
+</tr>
+<tr>
+<td>EDF</td>
+<td>Europe</td>
+<td>unknown</td>
+<td>Energy &amp; Utilities</td>
+<td>$128B</td>
+</tr>
+<tr>
+<td>Electricité de France</td>
+<td>France</td>
+<td>state</td>
+<td>Unclassified</td>
+<td>$128B</td>
+</tr>
+<tr>
+<td>Hengli Group</td>
+<td>China</td>
+<td>private</td>
+<td>Unclassified</td>
+<td>$125B</td>
+</tr>
+<tr>
+<td>Koch </td>
+<td>United States</td>
+<td>private</td>
+<td>Unclassified</td>
+<td>$125B</td>
+</tr>
+<tr>
+<td>Huawei Investment &amp; Holding</td>
+<td>—</td>
+<td>private</td>
+<td>Unclassified</td>
+<td>$123B</td>
+</tr>
+<tr>
+<td>Taiwan Semiconductor Manufacturing</td>
+<td>Taiwan</td>
+<td>public</td>
+<td>Unclassified</td>
+<td>$122B</td>
+</tr>
+<tr>
+<td>Aldi</td>
+<td>World (private)</td>
+<td>unknown</td>
+<td>Unclassified</td>
+<td>$121B</td>
+</tr>
+</tbody></table>
+<p>_Full table: <code>data/private_capital__unlisted_top.csv</code>_ (100 rows, 5 columns)._</p>
+<section id='sec-time-series-how-the-picture-changed'>
+<h1>Time series: how the picture changed</h1>
+<p>The tracked cohort across years: revenue and profit paths, where the profit pool moved, and which firms climbed.</p>
+<h3>What the data shows</h3>
+<ul>
+<li><strong>Constant cohort: 1,287 firms, 2015–2024.</strong> Aggregate revenue grew from $29.34T to $45.22T — ×1.54, a CAGR of 4.9% (95% CI 3.3–4.9%).</li>
+<li><strong>Profit outran revenue.</strong> Over the same window the cohort&#x27;s profit pool grew ×1.95 against revenue ×1.54 — so the blended margin widened, not narrowed.</li>
+<li><strong>The profit pool migrated.</strong> Biggest share gainers: Oil &amp; Gas Operations (+7.5pp), IT Software &amp; Services (+4.0pp), Materials (+3.9pp), Semiconductors (+1.4pp), Retail and Wholesale (+1.2pp).</li>
+<li><strong>Biggest share losers:</strong> Banking (-5.3pp), Consumer Durables (-2.9pp), Drugs &amp; Biotechnology (-2.8pp), Telecommunications Services (-2.5pp), Food, Drink &amp; Tobacco (-1.6pp).</li>
+<li><strong>The top of the table is sticky but not static.</strong> Of the top 100 in 2015, 67 are still there today; of the top 500, 382 remain (76.4%).</li>
+<li><strong>Of 1,287 current Forbes firms with a full history, 15% shrank over the decade</strong> (median growth +51.8%).</li>
+</ul>
+<h3>Charts</h3>
+<figure>
+<img src='charts/28_cohort_revenue.png' alt='The constant cohort — Revenue of a fixed set of companies over time'>
+<figcaption>The constant cohort — Revenue of a fixed set of companies over time</figcaption>
+</figure>
+<figure>
+<img src='charts/29_cohort_margin.png' alt='Did the cohort get more profitable? — Net margin of a fixed cohort'>
+<figcaption>Did the cohort get more profitable? — Net margin of a fixed cohort</figcaption>
+</figure>
+<figure>
+<img src='charts/30_rank_mobility.png' alt='Who grew, who shrank — Revenue change for the same companies over time'>
+<figcaption>Who grew, who shrank — Revenue change for the same companies over time</figcaption>
+</figure>
+<figure>
+<img src='charts/31_profit_pool_migration.png' alt='Where the profit pool moved — Change in industry share of total profit'>
+<figcaption>Where the profit pool moved — Change in industry share of total profit</figcaption>
+</figure>
+<h3>Cohort revenue, year by year</h3>
+<p><strong>Cohort revenue, year by year</strong></p>
+<table><thead><tr>
+<th>year</th>
+<th>total</th>
+<th>n</th>
+</tr></thead><tbody>
+<tr>
+<td>2,015</td>
+<td>$29M</td>
+<td>1,287</td>
+</tr>
+<tr>
+<td>2,016</td>
+<td>$29M</td>
+<td>1,287</td>
+</tr>
+<tr>
+<td>2,017</td>
+<td>$33M</td>
+<td>1,287</td>
+</tr>
+<tr>
+<td>2,018</td>
+<td>$35M</td>
+<td>1,287</td>
+</tr>
+<tr>
+<td>2,019</td>
+<td>$36M</td>
+<td>1,287</td>
+</tr>
+<tr>
+<td>2,020</td>
+<td>$34M</td>
+<td>1,287</td>
+</tr>
+<tr>
+<td>2,021</td>
+<td>$40M</td>
+<td>1,287</td>
+</tr>
+<tr>
+<td>2,022</td>
+<td>$43M</td>
+<td>1,287</td>
+</tr>
+<tr>
+<td>2,023</td>
+<td>$44M</td>
+<td>1,287</td>
+</tr>
+<tr>
+<td>2,024</td>
+<td>$45M</td>
+<td>1,287</td>
+</tr>
+</tbody></table>
+<p>_Full table: <code>data/time_series__cohort_revenue_series.csv</code>_ (10 rows, 3 columns)._</p>
+<h3>Cohort margin path</h3>
+<p><strong>Cohort margin path</strong></p>
+<table><thead><tr>
+<th>year</th>
+<th>total_rev</th>
+<th>total_prof</th>
+<th>margin_pct</th>
+</tr></thead><tbody>
+<tr>
+<td>2,015</td>
+<td>$29M</td>
+<td>$2M</td>
+<td>7.2%</td>
+</tr>
+<tr>
+<td>2,016</td>
+<td>$29M</td>
+<td>$2M</td>
+<td>7.2%</td>
+</tr>
+<tr>
+<td>2,017</td>
+<td>$33M</td>
+<td>$3M</td>
+<td>8.5%</td>
+</tr>
+<tr>
+<td>2,018</td>
+<td>$35M</td>
+<td>$3M</td>
+<td>8.5%</td>
+</tr>
+<tr>
+<td>2,019</td>
+<td>$36M</td>
+<td>$3M</td>
+<td>7.8%</td>
+</tr>
+<tr>
+<td>2,020</td>
+<td>$34M</td>
+<td>$2M</td>
+<td>6.2%</td>
+</tr>
+<tr>
+<td>2,021</td>
+<td>$40M</td>
+<td>$4M</td>
+<td>10.3%</td>
+</tr>
+<tr>
+<td>2,022</td>
+<td>$43M</td>
+<td>$4M</td>
+<td>8.7%</td>
+</tr>
+<tr>
+<td>2,023</td>
+<td>$44M</td>
+<td>$4M</td>
+<td>8.7%</td>
+</tr>
+<tr>
+<td>2,024</td>
+<td>$45M</td>
+<td>$4M</td>
+<td>9.1%</td>
+</tr>
+</tbody></table>
+<p>_Full table: <code>data/time_series__cohort_margin_path.csv</code>_ (10 rows, 4 columns)._</p>
+<h3>Change in profit share by industry</h3>
+<p><strong>Change in profit share by industry</strong></p>
+<table><thead><tr>
+<th>industry</th>
+<th>revenue_start_musd</th>
+<th>revenue_end_musd</th>
+<th>revenue_cagr_pct</th>
+<th>profit_start_musd</th>
+<th>profit_end_musd</th>
+<th>profit_cagr_pct</th>
+<th>profit_share_end_pct</th>
+<th>profit_share_start_pct</th>
+<th>profit_share_change_pp</th>
+</tr></thead><tbody>
+<tr>
+<td>Banking</td>
+<td>3,213,238</td>
+<td>6,368,090</td>
+<td>7.9%</td>
+<td>556,927</td>
+<td>1,033,264</td>
+<td>7.1%</td>
+<td>21.2%</td>
+<td>26.5%</td>
+<td>-5.28</td>
+</tr>
+<tr>
+<td>IT Software &amp; Services</td>
+<td>746,087</td>
+<td>1,981,729</td>
+<td>11.5%</td>
+<td>108,329</td>
+<td>443,928</td>
+<td>17.0%</td>
+<td>9.1%</td>
+<td>5.2%</td>
+<td>3.96</td>
+</tr>
+<tr>
+<td>Oil &amp; Gas Operations</td>
+<td>3,110,027</td>
+<td>5,218,382</td>
+<td>5.9%</td>
+<td>13,224</td>
+<td>396,196</td>
+<td>45.9%</td>
+<td>8.1%</td>
+<td>63.0%</td>
+<td>7.50</td>
+</tr>
+<tr>
+<td>Insurance</td>
+<td>2,711,725</td>
+<td>4,321,187</td>
+<td>5.3%</td>
+<td>167,022</td>
+<td>381,597</td>
+<td>9.6%</td>
+<td>7.8%</td>
+<td>7.9%</td>
+<td>-0.110</td>
+</tr>
+<tr>
+<td>Diversified Financials</td>
+<td>576,796</td>
+<td>1,541,770</td>
+<td>11.5%</td>
+<td>80,067</td>
+<td>215,726</td>
+<td>11.6%</td>
+<td>4.4%</td>
+<td>3.8%</td>
+<td>0.620</td>
+</tr>
+<tr>
+<td>Technology Hardware &amp; Equipment</td>
+<td>1,195,066</td>
+<td>1,957,806</td>
+<td>5.6%</td>
+<td>104,283</td>
+<td>195,180</td>
+<td>7.2%</td>
+<td>4.0%</td>
+<td>5.0%</td>
+<td>-0.950</td>
+</tr>
+<tr>
+<td>Drugs &amp; Biotechnology</td>
+<td>847,116</td>
+<td>1,604,415</td>
+<td>7.3%</td>
+<td>139,033</td>
+<td>184,698</td>
+<td>3.2%</td>
+<td>3.8%</td>
+<td>6.6%</td>
+<td>-2.82</td>
+</tr>
+<tr>
+<td>Semiconductors</td>
+<td>238,239</td>
+<td>733,926</td>
+<td>13.3%</td>
+<td>45,519</td>
+<td>174,685</td>
+<td>16.1%</td>
+<td>3.6%</td>
+<td>2.2%</td>
+<td>1.43</td>
+</tr>
+<tr>
+<td>Consumer Durables</td>
+<td>2,513,734</td>
+<td>3,766,259</td>
+<td>4.6%</td>
+<td>135,122</td>
+<td>173,429</td>
+<td>2.8%</td>
+<td>3.6%</td>
+<td>6.4%</td>
+<td>-2.87</td>
+</tr>
+<tr>
+<td>Food, Drink &amp; Tobacco</td>
+<td>1,169,927</td>
+<td>1,816,718</td>
+<td>5.0%</td>
+<td>105,363</td>
+<td>166,769</td>
+<td>5.2%</td>
+<td>3.4%</td>
+<td>5.0%</td>
+<td>-1.59</td>
+</tr>
+<tr>
+<td>Utilities</td>
+<td>1,212,155</td>
+<td>1,595,457</td>
+<td>3.1%</td>
+<td>54,104</td>
+<td>153,400</td>
+<td>12.3%</td>
+<td>3.1%</td>
+<td>2.6%</td>
+<td>0.580</td>
+</tr>
+<tr>
+<td>Retailing</td>
+<td>1,888,108</td>
+<td>3,592,417</td>
+<td>7.4%</td>
+<td>82,229</td>
+<td>150,557</td>
+<td>7.0%</td>
+<td>3.1%</td>
+<td>3.9%</td>
+<td>-0.820</td>
+</tr>
+<tr>
+<td>Transportation</td>
+<td>772,981</td>
+<td>1,731,991</td>
+<td>9.4%</td>
+<td>57,838</td>
+<td>139,028</td>
+<td>10.2%</td>
+<td>2.9%</td>
+<td>2.8%</td>
+<td>0.100</td>
+</tr>
+<tr>
+<td>Business Services &amp; Supplies</td>
+<td>567,432</td>
+<td>1,182,140</td>
+<td>8.5%</td>
+<td>57,096</td>
+<td>130,869</td>
+<td>9.7%</td>
+<td>2.7%</td>
+<td>2.7%</td>
+<td>-0.030</td>
+</tr>
+<tr>
+<td>Capital Goods</td>
+<td>814,492</td>
+<td>1,459,165</td>
+<td>6.7%</td>
+<td>45,379</td>
+<td>129,984</td>
+<td>12.4%</td>
+<td>2.7%</td>
+<td>2.2%</td>
+<td>0.510</td>
+</tr>
+<tr>
+<td>Telecommunications Services</td>
+<td>1,293,398</td>
+<td>1,345,338</td>
+<td>44.0%</td>
+<td>105,901</td>
+<td>122,033</td>
+<td>1.6%</td>
+<td>2.5%</td>
+<td>5.0%</td>
+<td>-2.53</td>
+</tr>
+<tr>
+<td>Materials</td>
+<td>840,429</td>
+<td>1,614,392</td>
+<td>7.5%</td>
+<td>-33,064</td>
+<td>112,186</td>
+<td>—</td>
+<td>2.3%</td>
+<td>-1.6%</td>
+<td>3.87</td>
+</tr>
+<tr>
+<td>Construction</td>
+<td>1,245,908</td>
+<td>2,698,471</td>
+<td>9.0%</td>
+<td>60,924</td>
+<td>93,362</td>
+<td>4.9%</td>
+<td>1.9%</td>
+<td>2.9%</td>
+<td>-0.980</td>
+</tr>
+<tr>
+<td>Household &amp; Personal Products</td>
+<td>358,891</td>
+<td>652,411</td>
+<td>6.9%</td>
+<td>36,275</td>
+<td>77,022</td>
+<td>8.7%</td>
+<td>1.6%</td>
+<td>1.7%</td>
+<td>-0.150</td>
+</tr>
+<tr>
+<td>Health Care Equipment &amp; Services</td>
+<td>851,683</td>
+<td>1,576,466</td>
+<td>7.1%</td>
+<td>26,127</td>
+<td>75,380</td>
+<td>12.5%</td>
+<td>1.6%</td>
+<td>124.0%</td>
+<td>0.310</td>
+</tr>
+</tbody></table>
+<p>_Full table: <code>data/time_series__profit_pool_migration.csv</code>_ (38 rows, 10 columns)._</p>
+<h3>Fastest risers among the ranked firms</h3>
+<p><strong>Fastest risers among the ranked firms</strong></p>
+<table><thead><tr>
+<th>company</th>
+<th>rank_now</th>
+<th>growth_pct</th>
+</tr></thead><tbody>
+<tr>
+<td>Nomura</td>
+<td>359</td>
+<td>17,836.3%</td>
+</tr>
+<tr>
+<td>Cheniere Energy</td>
+<td>415</td>
+<td>5,719.3%</td>
+</tr>
+<tr>
+<td>Phoenix Group Holdings</td>
+<td>896</td>
+<td>2,902.0%</td>
+</tr>
+<tr>
+<td>NVIDIA</td>
+<td>47</td>
+<td>2,504.7%</td>
+</tr>
+<tr>
+<td>Tesla</td>
+<td>69</td>
+<td>2,265.9%</td>
+</tr>
+<tr>
+<td>First Citizens Bank (NC)</td>
+<td>406</td>
+<td>970.3%</td>
+</tr>
+<tr>
+<td>Vertex Pharmaceuticals</td>
+<td>960</td>
+<td>964.0%</td>
+</tr>
+<tr>
+<td>ServiceNow</td>
+<td>645</td>
+<td>943.2%</td>
+</tr>
+<tr>
+<td>Meta Platforms</td>
+<td>20</td>
+<td>817.6%</td>
+</tr>
+<tr>
+<td>Alibaba Group</td>
+<td>33</td>
+<td>811.5%</td>
+</tr>
+<tr>
+<td>BYD</td>
+<td>87</td>
+<td>795.2%</td>
+</tr>
+<tr>
+<td>Broadcom</td>
+<td>68</td>
+<td>683.5%</td>
+</tr>
+<tr>
+<td>Wanhua Chemical Group</td>
+<td>519</td>
+<td>677.2%</td>
+</tr>
+<tr>
+<td>Centene</td>
+<td>246</td>
+<td>643.8%</td>
+</tr>
+<tr>
+<td>Workday</td>
+<td>1,074</td>
+<td>624.1%</td>
+</tr>
+<tr>
+<td>Wuchan Zhongda Group</td>
+<td>1,099</td>
+<td>603.2%</td>
+</tr>
+<tr>
+<td>Geely Automobile Holdings</td>
+<td>528</td>
+<td>596.3%</td>
+</tr>
+<tr>
+<td>St. James&#x27;s Place</td>
+<td>851</td>
+<td>595.3%</td>
+</tr>
+<tr>
+<td>Cigna</td>
+<td>120</td>
+<td>543.3%</td>
+</tr>
+<tr>
+<td>Warner Bros. Discovery</td>
+<td>671</td>
+<td>516.1%</td>
+</tr>
+</tbody></table>
+<p>_Full table: <code>data/time_series__mobility_forbes.csv</code>_ (1,287 rows, 3 columns)._</p>
+<section id='sec-data-quality-how-far-to-trust-the-above'>
+<h1>Data quality: how far to trust the above</h1>
+<p>Where fields are empty, where two sources disagree, how old each dataset is, and the caveats that apply to every number in this pack.</p>
+<h3>What the data shows</h3>
+<ul>
+<li><strong>Forbes vs SEC filings.</strong> Across 1,453 companies in both, revenue differs by a median of 10.1%; 50% agree to within 10% and 9% differ by more than 2×.</li>
+<li><strong>Forbes vs Wikipedia country lists.</strong> Across 549 shared companies the median revenue gap is 7.1% and 77% land within 25% — the Wikipedia top-up is usable, but it is a third-tier source and is labelled as such.</li>
+<li><strong>Completeness is uneven.</strong> Densest gaps: wiki_countries (46% of cells empty, worst column <code>ownership</code>), ai_companies (39% of cells empty, worst column <code>total_funding_usd</code>), ai_labs (34% of cells empty, worst column <code>parent</code>).</li>
+<li><strong>Every company carries a confidence score</strong> (median 0.60, 10th percentile 0.40), derived from source trust, how many independent lists corroborate the company, and field completeness.</li>
+<li><strong>The Wikipedia top-up mostly finds companies Forbes missed.</strong> 527 of its 1,076 companies are absent from the Forbes 2,000 — which is precisely the coverage gap the reconciled ranking is built to close.</li>
+<li><strong>Read the caveats panel before quoting any single number.</strong> Revenue is a flow, not value added; valuations are marks, not prices; and the vintage of every series differs.</li>
+</ul>
+<h3>Charts</h3>
+<figure>
+<img src='charts/32_missingness.png' alt='Where the data is thin — Share of empty cells in key fields'>
+<figcaption>Where the data is thin — Share of empty cells in key fields</figcaption>
+</figure>
+<figure>
+<img src='charts/33_confidence.png' alt='How much to trust each row — Distribution of the confidence score'>
+<figcaption>How much to trust each row — Distribution of the confidence score</figcaption>
+</figure>
+<figure>
+<img src='charts/34_cross_source.png' alt='Do the sources agree? — Median revenue disagreement between source pairs'>
+<figcaption>Do the sources agree? — Median revenue disagreement between source pairs</figcaption>
+</figure>
+<h3>Where the data actually is missing</h3>
+<p><strong>Where the data actually is missing</strong></p>
+<table><thead><tr>
+<th>dataset</th>
+<th>column</th>
+<th>rows</th>
+<th>missing</th>
+<th>missing_pct</th>
+<th>distinct</th>
+</tr></thead><tbody>
+<tr>
+<td>wiki_countries</td>
+<td>ownership</td>
+<td>1,205</td>
+<td>1,205</td>
+<td>100.0%</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td>fortune500</td>
+<td>employees</td>
+<td>500</td>
+<td>490.00</td>
+<td>98.0%</td>
+<td>10.00</td>
+</tr>
+<tr>
+<td>wiki_countries</td>
+<td>employees</td>
+<td>1,205</td>
+<td>996.00</td>
+<td>82.7%</td>
+<td>208.00</td>
+</tr>
+<tr>
+<td>wiki_countries</td>
+<td>assets_usd</td>
+<td>1,205</td>
+<td>628.00</td>
+<td>52.1%</td>
+<td>503.00</td>
+</tr>
+<tr>
+<td>wiki_countries</td>
+<td>market_cap_usd</td>
+<td>1,205</td>
+<td>627.00</td>
+<td>52.0%</td>
+<td>428.00</td>
+</tr>
+<tr>
+<td>wiki_countries</td>
+<td>profit_usd</td>
+<td>1,205</td>
+<td>367.00</td>
+<td>30.5%</td>
+<td>417.00</td>
+</tr>
+<tr>
+<td>listed</td>
+<td>market_cap_usd</td>
+<td>12,512</td>
+<td>2,398</td>
+<td>19.2%</td>
+<td>10,099</td>
+</tr>
+<tr>
+<td>profiles</td>
+<td>market_cap_usd</td>
+<td>12,512</td>
+<td>2,398</td>
+<td>19.2%</td>
+<td>10,099</td>
+</tr>
+<tr>
+<td>wiki_countries</td>
+<td>industry</td>
+<td>1,205</td>
+<td>128.00</td>
+<td>10.6%</td>
+<td>154.00</td>
+</tr>
+<tr>
+<td>forbes2000</td>
+<td>employees</td>
+<td>2,000</td>
+<td>202.00</td>
+<td>10.1%</td>
+<td>1,612</td>
+</tr>
+<tr>
+<td>exchange_top</td>
+<td>revenue_usd</td>
+<td>561</td>
+<td>24.00</td>
+<td>4.3%</td>
+<td>487.00</td>
+</tr>
+<tr>
+<td>profiles</td>
+<td>revenue_usd</td>
+<td>12,512</td>
+<td>425.00</td>
+<td>3.4%</td>
+<td>7,421</td>
+</tr>
+<tr>
+<td>listed</td>
+<td>revenue_usd</td>
+<td>12,512</td>
+<td>425.00</td>
+<td>3.4%</td>
+<td>7,421</td>
+</tr>
+<tr>
+<td>unicorns</td>
+<td>country</td>
+<td>1,442</td>
+<td>2.00</td>
+<td>10.0%</td>
+<td>55.00</td>
+</tr>
+<tr>
+<td>unicorns</td>
+<td>industry</td>
+<td>1,442</td>
+<td>1.00</td>
+<td>10.0%</td>
+<td>7.00</td>
+</tr>
+<tr>
+<td>forbes2000</td>
+<td>country</td>
+<td>2,000</td>
+<td>0.000</td>
+<td>0.0%</td>
+<td>61.00</td>
+</tr>
+<tr>
+<td>forbes2000</td>
+<td>industry</td>
+<td>2,000</td>
+<td>0.000</td>
+<td>0.0%</td>
+<td>38.00</td>
+</tr>
+<tr>
+<td>wiki_countries</td>
+<td>country</td>
+<td>1,205</td>
+<td>0.000</td>
+<td>0.0%</td>
+<td>35.00</td>
+</tr>
+<tr>
+<td>listed</td>
+<td>country</td>
+<td>12,512</td>
+<td>0.000</td>
+<td>0.0%</td>
+<td>79.00</td>
+</tr>
+<tr>
+<td>wiki_countries</td>
+<td>revenue_usd</td>
+<td>1,205</td>
+<td>0.000</td>
+<td>0.0%</td>
+<td>937.00</td>
+</tr>
+<tr>
+<td>fortune_profiles</td>
+<td>country</td>
+<td>500</td>
+<td>0.000</td>
+<td>0.0%</td>
+<td>37.00</td>
+</tr>
+<tr>
+<td>forbes2000</td>
+<td>sector</td>
+<td>2,000</td>
+<td>0.000</td>
+<td>0.0%</td>
+<td>13.00</td>
+</tr>
+<tr>
+<td>fortune_profiles</td>
+<td>employees</td>
+<td>500</td>
+<td>0.000</td>
+<td>0.0%</td>
+<td>487.00</td>
+</tr>
+<tr>
+<td>fortune_profiles</td>
+<td>industry</td>
+<td>500</td>
+<td>0.000</td>
+<td>0.0%</td>
+<td>63.00</td>
+</tr>
+<tr>
+<td>exchange_top</td>
+<td>market_cap_usd</td>
+<td>561</td>
+<td>0.000</td>
+<td>0.0%</td>
+<td>561.00</td>
+</tr>
+</tbody></table>
+<p>_Full table: <code>data/data_quality__missingness_key.csv</code>_ (34 rows, 6 columns)._</p>
+<h3>How the sources disagree about the same company</h3>
+<p><strong>How the sources disagree about the same company</strong></p>
+<table><thead><tr>
+<th>source_a</th>
+<th>source_b</th>
+<th>pairs</th>
+<th>median_abs_pct_diff</th>
+<th>mean_abs_pct_diff</th>
+<th>p90_abs_pct_diff</th>
+<th>share_within_10pct</th>
+<th>share_within_25pct</th>
+<th>share_over_2x</th>
+<th>pearson_r</th>
+<th>note</th>
+</tr></thead><tbody>
+<tr>
+<td>forbes</td>
+<td>fortune</td>
+<td>326.00</td>
+<td>6.90</td>
+<td>12.00</td>
+<td>23.80</td>
+<td>66.90</td>
+<td>90.50</td>
+<td>3.40</td>
+<td>0.982</td>
+<td>—</td>
+</tr>
+<tr>
+<td>forbes</td>
+<td>listed</td>
+<td>1,453</td>
+<td>10.10</td>
+<td>23.00</td>
+<td>60.90</td>
+<td>49.60</td>
+<td>74.20</td>
+<td>8.70</td>
+<td>0.958</td>
+<td>—</td>
+</tr>
+<tr>
+<td>forbes</td>
+<td>wiki</td>
+<td>549.00</td>
+<td>7.10</td>
+<td>17.60</td>
+<td>51.10</td>
+<td>55.90</td>
+<td>76.70</td>
+<td>5.60</td>
+<td>0.989</td>
+<td>—</td>
+</tr>
+<tr>
+<td>fortune</td>
+<td>listed</td>
+<td>307.00</td>
+<td>5.60</td>
+<td>21.00</td>
+<td>63.80</td>
+<td>63.20</td>
+<td>75.20</td>
+<td>9.40</td>
+<td>0.954</td>
+<td>—</td>
+</tr>
+<tr>
+<td>fortune</td>
+<td>private</td>
+<td>1.00</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>too few matches</td>
+</tr>
+<tr>
+<td>fortune</td>
+<td>wiki</td>
+<td>229.00</td>
+<td>8.60</td>
+<td>18.90</td>
+<td>55.30</td>
+<td>53.70</td>
+<td>74.70</td>
+<td>7.90</td>
+<td>0.944</td>
+<td>—</td>
+</tr>
+<tr>
+<td>listed</td>
+<td>private</td>
+<td>5.00</td>
+<td>10.40</td>
+<td>38.10</td>
+<td>92.80</td>
+<td>40.00</td>
+<td>60.00</td>
+<td>20.00</td>
+<td>0.989</td>
+<td>—</td>
+</tr>
+<tr>
+<td>listed</td>
+<td>wiki</td>
+<td>591.00</td>
+<td>19.60</td>
+<td>31.20</td>
+<td>70.50</td>
+<td>35.00</td>
+<td>55.50</td>
+<td>11.50</td>
+<td>0.945</td>
+<td>—</td>
+</tr>
+<tr>
+<td>private</td>
+<td>wiki</td>
+<td>29.00</td>
+<td>22.80</td>
+<td>27.00</td>
+<td>45.90</td>
+<td>20.70</td>
+<td>51.70</td>
+<td>3.40</td>
+<td>0.982</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<p>_Full table: <code>data/data_quality__cross_source_disagreement.csv</code>_ (9 rows, 11 columns)._</p>
+<h3>Vintage of every source</h3>
+<p><strong>Vintage of every source</strong></p>
+<table><thead><tr>
+<th>dataset</th>
+<th>min_year</th>
+<th>max_year</th>
+<th>mode_year</th>
+</tr></thead><tbody>
+<tr>
+<td>Forbes Global 2000</td>
+<td>2,025</td>
+<td>2,025</td>
+<td>2,025</td>
+</tr>
+<tr>
+<td>Listed universe (SEC)</td>
+<td>2,001</td>
+<td>2,026</td>
+<td>2,026</td>
+</tr>
+<tr>
+<td>Fortune profiles (market value)</td>
+<td>2,026</td>
+<td>2,026</td>
+<td>2,026</td>
+</tr>
+</tbody></table>
+<p>_Full table: <code>data/data_quality__data_vintages.csv</code>_ (3 rows, 4 columns)._</p>
+<section id='sec-companies-one-page-for-every-firm'>
+<h1>Companies: one page for every firm</h1>
+<p>The directory behind the aggregates. Every company the reconciliation could name, with whatever is actually known about each one: size, sector, owner, country, and a way through to the company itself.</p>
+<h3>Key numbers</h3>
+<table class="kv"><tbody>
+<tr><td><strong>Companies in the directory</strong></td><td>15,175</td></tr>
+<tr><td><strong>With an official website</strong></td><td>2,021</td></tr>
+<tr><td><strong>With a Wikipedia page</strong></td><td>7,695</td></tr>
+<tr><td><strong>With a one-line description</strong></td><td>8,293</td></tr>
+<tr><td><strong>With a revenue figure</strong></td><td>13,239</td></tr>
+<tr><td><strong>With a market value</strong></td><td>10,730</td></tr>
+</tbody></table>
+<h3>What the data shows</h3>
+<ul>
+<li>The directory holds <strong>15,175 companies</strong> -- every firm the reconciliation could name. <strong>13,239</strong> carry a revenue figure, <strong>10,730</strong> a market value, and only <strong>11,409</strong> of them have a listed share.</li>
+<li>Descriptive detail is patchy by design rather than by accident: <strong>2,021</strong> companies have an official website, <strong>7,695</strong> a Wikipedia article and <strong>8,293</strong> a one-line description. The rest are numbers without a face, and this pack does not invent one.</li>
+<li>By measured revenue the largest sector is <strong>Financials</strong> with 643 firms and $12,766B of revenue.</li>
+</ul>
+<h3>Charts</h3>
+<figure>
+<img src='charts/35_every_company_we_can_measure.png' alt='Every company with a revenue figure, plotted on a log-log grid. The head is a handful of giants; the tail is tens of thousands of firms each too small to see in a ranked list.'>
+<figcaption>Every company with a revenue figure, plotted on a log-log grid. The head is a handful of giants; the tail is tens of thousands of firms each too small to see in a ranked list.</figcaption>
+</figure>
+<figure>
+<img src='charts/36_every_company_the_market_can_see.png' alt='The listed universe only: companies with a quoted price. The gap between the top of this cloud and the top of the revenue chart is the part of the corporate world that has no ticker.'>
+<figcaption>The listed universe only: companies with a quoted price. The gap between the top of this cloud and the top of the revenue chart is the part of the corporate world that has no ticker.</figcaption>
+</figure>
+<h3>The largest companies in the directory</h3>
+<p><strong>The largest companies in the directory</strong></p>
+<table><thead><tr>
+<th>company</th>
+<th>country</th>
+<th>sector</th>
+<th>ownership</th>
+<th>revenue_usd</th>
+<th>market_cap_usd</th>
+</tr></thead><tbody>
+<tr>
+<td>AMAZON.COM, INC.</td>
+<td>United States</td>
+<td>—</td>
+<td>public</td>
+<td>$717B</td>
+<td>$2.8T</td>
+</tr>
+<tr>
+<td>Walmart Inc.</td>
+<td>United States</td>
+<td>Consumer &amp; Retail</td>
+<td>public</td>
+<td>$706B</td>
+<td>$942B</td>
+</tr>
+<tr>
+<td>Amazon</td>
+<td>United States</td>
+<td>Consumer &amp; Retail</td>
+<td>public</td>
+<td>$638B</td>
+<td>$2.0T</td>
+</tr>
+<tr>
+<td>State Grid</td>
+<td>—</td>
+<td>—</td>
+<td>state</td>
+<td>$555B</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Saudi Arabian Oil Company (Saudi Aramco)</td>
+<td>Saudi Arabia</td>
+<td>Energy &amp; Utilities</td>
+<td>public</td>
+<td>$480B</td>
+<td>$1.7T</td>
+</tr>
+<tr>
+<td>UnitedHealth Group Incorporated</td>
+<td>United States</td>
+<td>—</td>
+<td>public</td>
+<td>$448B</td>
+<td>$365B</td>
+</tr>
+<tr>
+<td>Saudi Aramco</td>
+<td>Saudi Arabia</td>
+<td>—</td>
+<td>public</td>
+<td>$446B</td>
+<td>$1.7T</td>
+</tr>
+<tr>
+<td>Apple Inc.</td>
+<td>United States</td>
+<td>Technology</td>
+<td>public</td>
+<td>$416B</td>
+<td>$5.0T</td>
+</tr>
+<tr>
+<td>UnitedHealth Group</td>
+<td>United States</td>
+<td>Financials</td>
+<td>public</td>
+<td>$410B</td>
+<td>$383B</td>
+</tr>
+<tr>
+<td>McKESSON CORPORATION</td>
+<td>United States</td>
+<td>Healthcare</td>
+<td>public</td>
+<td>$403B</td>
+<td>$118B</td>
+</tr>
+<tr>
+<td>Alphabet Inc.</td>
+<td>United States</td>
+<td>Technology</td>
+<td>public</td>
+<td>$403B</td>
+<td>$4.2T</td>
+</tr>
+<tr>
+<td>CVS HEALTH CORPORATION</td>
+<td>United States</td>
+<td>Consumer &amp; Retail</td>
+<td>public</td>
+<td>$402B</td>
+<td>$119B</td>
+</tr>
+<tr>
+<td>China National Petroleum</td>
+<td>—</td>
+<td>—</td>
+<td>state</td>
+<td>$402B</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Vitol</td>
+<td>World (private)</td>
+<td>—</td>
+<td>unknown</td>
+<td>$400B</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Sinopec</td>
+<td>China</td>
+<td>Energy &amp; Utilities</td>
+<td>public</td>
+<td>$390B</td>
+<td>$95B</td>
+</tr>
+<tr>
+<td>PetroChina</td>
+<td>China</td>
+<td>Energy &amp; Utilities</td>
+<td>public</td>
+<td>$384B</td>
+<td>$136B</td>
+</tr>
+<tr>
+<td>Volkswagen Group</td>
+<td>Germany</td>
+<td>Consumer &amp; Retail</td>
+<td>public</td>
+<td>$351B</td>
+<td>$56B</td>
+</tr>
+<tr>
+<td>ExxonMobil</td>
+<td>United States</td>
+<td>Energy &amp; Utilities</td>
+<td>public</td>
+<td>$340B</td>
+<td>$470B</td>
+</tr>
+<tr>
+<td>Exxon Mobil Corporation</td>
+<td>United States</td>
+<td>—</td>
+<td>public</td>
+<td>$332B</td>
+<td>$733B</td>
+</tr>
+<tr>
+<td>Samsung</td>
+<td>South Korea</td>
+<td>—</td>
+<td>public</td>
+<td>$326B</td>
+<td>$1.1T</td>
+</tr>
+<tr>
+<td>Cencora, Inc.</td>
+<td>United States</td>
+<td>Healthcare</td>
+<td>public</td>
+<td>$321B</td>
+<td>$65B</td>
+</tr>
+<tr>
+<td>Toyota Motor</td>
+<td>Japan</td>
+<td>Consumer &amp; Retail</td>
+<td>public</td>
+<td>$309B</td>
+<td>$244B</td>
+</tr>
+<tr>
+<td>China State Construction Engineering</td>
+<td>China</td>
+<td>Construction &amp; Real Estate</td>
+<td>public</td>
+<td>$303B</td>
+<td>$31B</td>
+</tr>
+<tr>
+<td>JPMorgan Chase</td>
+<td>United States</td>
+<td>—</td>
+<td>public</td>
+<td>$298B</td>
+<td>$966B</td>
+</tr>
+<tr>
+<td>Foxconn (Hon Hai Precision Industry)</td>
+<td>Taiwan</td>
+<td>—</td>
+<td>public</td>
+<td>$297B</td>
+<td>$104B</td>
+</tr>
+</tbody></table>
+<p>_Full table: <code>data/companies__company_directory.csv</code>_ (15,175 rows, 29 columns)._</p>
+<section id='sec-appendix-a-the-datasets-behind-every-number'>
+<h1>Appendix A: the datasets behind every number</h1>
+<p>Each row is one source file, what it measures, who publishes it and how much weight it was given.</p>
+<p><strong>Dataset registry</strong></p>
+<table><thead><tr>
+<th>Dataset</th>
+<th>Kind</th>
+<th>Trust</th>
+<th>Publisher</th>
+<th>File</th>
+<th>Notes</th>
+</tr></thead><tbody>
+<tr>
+<td>Forbes Global 2000 2025</td>
+<td>financials</td>
+<td>reported</td>
+<td>Forbes</td>
+<td>global2000_2025.csv</td>
+<td>2,000 largest firms by revenue. Revenue is a Forbes estimate in USD.</td>
+</tr>
+<tr>
+<td>Forbes Global 2000 10-year history</td>
+<td>financials</td>
+<td>reported</td>
+<td>Forbes</td>
+<td>global2000_2025_history.csv</td>
+<td>Long-format revenue/profit history, approx. 10 years.</td>
+</tr>
+<tr>
+<td>Fortune Global 500 2025</td>
+<td>financials</td>
+<td>reported</td>
+<td>Fortune</td>
+<td>fortune_g500_2025.csv</td>
+<td>US-centric list; 500 firms ranked by revenue, USD millions.</td>
+</tr>
+<tr>
+<td>Fortune ownership labels (manual)</td>
+<td>reference</td>
+<td>reported</td>
+<td>manual correction</td>
+<td>fortune_labels.csv</td>
+<td>Corrects Fortune&#x27;s company_type field, which mislabels state-owned firms as Private.</td>
+</tr>
+<tr>
+<td>Companies master (Forbes + Fortune)</td>
+<td>financials</td>
+<td>reported</td>
+<td>derived</td>
+<td>companies_master.csv</td>
+<td>Union of Forbes 2000 and Fortune 500 with manual ownership labels.</td>
+</tr>
+<tr>
+<td>Industry taxonomy (13 sectors / 30 industries)</td>
+<td>reference</td>
+<td>reported</td>
+<td>derived</td>
+<td>industry_taxonomy.csv</td>
+<td>Sector rollup of the Forbes 2000.</td>
+</tr>
+<tr>
+<td>Country metadata (ISO3, region)</td>
+<td>reference</td>
+<td>reference</td>
+<td>derived</td>
+<td>country_meta.csv</td>
+<td>217 countries, 6 regions.</td>
+</tr>
+<tr>
+<td>Country GDP 2024</td>
+<td>reference</td>
+<td>authoritative</td>
+<td>World Bank</td>
+<td>country_gdp_2024.csv</td>
+<td>Nominal GDP in current USD, 204 countries.</td>
+</tr>
+<tr>
+<td>World macro series</td>
+<td>reference</td>
+<td>authoritative</td>
+<td>World Bank</td>
+<td>world_macro.csv</td>
+<td>World aggregates: GDP, employment by sector, labour force, population.</td>
+</tr>
+<tr>
+<td>Forbes America&#x27;s Top Private Companies</td>
+<td>financials</td>
+<td>reported</td>
+<td>Forbes</td>
+<td>private_us_2025.csv</td>
+<td>US only. Revenue reported by Forbes.</td>
+</tr>
+<tr>
+<td>Forbes Cloud 100 + Next Billion</td>
+<td>valuation</td>
+<td>mark</td>
+<td>Forbes</td>
+<td>startups_2025.csv</td>
+<td>Private valuations. Cloud 100 + Next Billion Dollar Startups.</td>
+</tr>
+<tr>
+<td>Listed company universe</td>
+<td>financials</td>
+<td>authoritative/estimate</td>
+<td>SEC XBRL + CompaniesMarketCap</td>
+<td>listed_universe.csv</td>
+<td>12,512 listed firms. SEC revenue is audited; CMC revenue is an estimate.</td>
+</tr>
+<tr>
+<td>Company profiles + descriptions</td>
+<td>reference</td>
+<td>mixed</td>
+<td>Forbes + Wikipedia</td>
+<td>company_profiles.csv</td>
+<td>20,663 profiles. Descriptions: Forbes (editorial) + Wikipedia (CC BY-SA).</td>
+</tr>
+<tr>
+<td>Global stock exchanges</td>
+<td>valuation</td>
+<td>reported</td>
+<td>CompaniesMarketCap</td>
+<td>exchanges.csv</td>
+<td>60 exchanges. Market cap totals are coverage-limited, not world totals.</td>
+</tr>
+<tr>
+<td>Top companies per exchange</td>
+<td>valuation</td>
+<td>reported</td>
+<td>CompaniesMarketCap</td>
+<td>exchange_top_companies.csv</td>
+<td>Top ~10 firms per exchange.</td>
+</tr>
+<tr>
+<td>Companies per exchange</td>
+<td>valuation</td>
+<td>reported</td>
+<td>CompaniesMarketCap</td>
+<td>exchange_companies.csv</td>
+<td>9,780 firm-exchange rows. ADRs mapped to home exchange.</td>
+</tr>
+<tr>
+<td>Ticker suffix to exchange map</td>
+<td>reference</td>
+<td>reference</td>
+<td>derived</td>
+<td>exchanges_lookup.csv</td>
+<td>Maps ticker suffixes to exchanges.</td>
+</tr>
+<tr>
+<td>Unicorn company list (CB Insights)</td>
+<td>valuation</td>
+<td>mark</td>
+<td>CB Insights</td>
+<td>unicorns_cbinsights.csv</td>
+<td>1,442 private companies with $1B+ valuations. Paper marks, not prices.</td>
+</tr>
+<tr>
+<td>Startups global (CB Insights + Forbes)</td>
+<td>valuation</td>
+<td>mark</td>
+<td>CB Insights / Forbes</td>
+<td>startups_global.csv</td>
+<td>1,479 rows, merged and de-duplicated.</td>
+</tr>
+<tr>
+<td>AI model builders</td>
+<td>reference</td>
+<td>mixed</td>
+<td>compiled</td>
+<td>ai_companies.csv</td>
+<td>173 companies across 15 modalities.</td>
+</tr>
+<tr>
+<td>AI labs</td>
+<td>reference</td>
+<td>mixed</td>
+<td>compiled</td>
+<td>ai_labs.csv</td>
+<td>99 labs. Open/closed weight status, HF org, valuation.</td>
+</tr>
+<tr>
+<td>Hugging Face org stats</td>
+<td>reference</td>
+<td>reported</td>
+<td>Hugging Face</td>
+<td>hf_stats.csv</td>
+<td>Model counts and top-model downloads per org.</td>
+</tr>
+</tbody></table>
+<section id='sec-appendix-b-chart-index'>
+<h1>Appendix B: chart index</h1>
+<p>Every chart is written to <code>charts/</code> next to this document.</p>
+<p><strong>Charts</strong></p>
+<table><thead><tr>
+<th>#</th>
+<th>Title</th>
+<th>Subtitle</th>
+<th>File</th>
+</tr></thead><tbody>
+<tr>
+<td>01</td>
+<td>The twenty largest companies on earth</td>
+<td>Revenue, 2025 — Forbes Global 2000</td>
+<td>charts/01_top20_revenue.png</td>
+</tr>
+<tr>
+<td>02</td>
+<td>How many firms clear each revenue bar</td>
+<td>Cumulative count above a revenue threshold</td>
+<td>charts/02_revenue_thresholds.png</td>
+</tr>
+<tr>
+<td>03</td>
+<td>The rank-size curve</td>
+<td>Revenue against rank, both on a log scale</td>
+<td>charts/03_rank_size_zipf.png</td>
+</tr>
+<tr>
+<td>04</td>
+<td>What Forbes&#x27; list leaves out</td>
+<td>Largest measured companies absent from the Global 2000</td>
+<td>charts/04_truncation_gap.png</td>
+</tr>
+<tr>
+<td>05</td>
+<td>Where the world&#x27;s corporate revenue is booked</td>
+<td>Top 20 countries by measured revenue</td>
+<td>charts/05_top_countries.png</td>
+</tr>
+<tr>
+<td>06</td>
+<td>Corporate weight against economic weight</td>
+<td>Revenue share against GDP share</td>
+<td>charts/06_revenue_vs_gdp.png</td>
+</tr>
+<tr>
+<td>07</td>
+<td>Six regions, one world</td>
+<td>Measured revenue by region</td>
+<td>charts/07_regions.png</td>
+</tr>
+<tr>
+<td>08</td>
+<td>What mixing in the other lists changes</td>
+<td>Forbes-only versus reconciled regional shares</td>
+<td>charts/08_region_compare.png</td>
+</tr>
+<tr>
+<td>09</td>
+<td>Revenue and profit by sector</td>
+<td>Where the money comes from, and where it stays</td>
+<td>charts/09_sector_revenue_profit.png</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Median net margin by sector</td>
+<td>The middle firm in each sector</td>
+<td>charts/10_sector_margin.png</td>
+</tr>
+<tr>
+<td>11</td>
+<td>How wide is the margin spread inside each sector?</td>
+<td>10th to 90th percentile net margin</td>
+<td>charts/11_margin_dispersion.png</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Every sector is margin-driven or turnover-driven</td>
+<td>Net margin against asset turnover</td>
+<td>charts/12_roa_decomposition.png</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Concentration inside each sector</td>
+<td>Herfindahl index on revenue</td>
+<td>charts/13_sector_concentration.png</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Who owns the world&#x27;s corporate revenue?</td>
+<td>Revenue by ownership type</td>
+<td>charts/14_ownership_mix.png</td>
+</tr>
+<tr>
+<td>15</td>
+<td>The invisible giants</td>
+<td>Measured companies missing from the Global 2000</td>
+<td>charts/15_invisible_giants.png</td>
+</tr>
+<tr>
+<td>16</td>
+<td>The true top 100 on earth</td>
+<td>Re-ranked from the reconciled universe</td>
+<td>charts/16_true_top100.png</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Median net margin, owner by owner</td>
+<td>State, listed, private and mutual businesses</td>
+<td>charts/17_margin_by_ownership.png</td>
+</tr>
+<tr>
+<td>18</td>
+<td>The twenty most valuable listed companies</td>
+<td>Market capitalisation</td>
+<td>charts/18_top_listed.png</td>
+</tr>
+<tr>
+<td>19</td>
+<td>What the market pays for each unit of revenue</td>
+<td>Market capitalisation ÷ revenue, by sector</td>
+<td>charts/19_multiples_by_sector.png</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Profit and market value disagree about what matters</td>
+<td>Profit share minus market-value share, by sector</td>
+<td>charts/20_profit_vs_mcap.png</td>
+</tr>
+<tr>
+<td>21</td>
+<td>How deep is each equity market?</td>
+<td>Market capitalisation as a multiple of GDP</td>
+<td>charts/21_financial_depth.png</td>
+</tr>
+<tr>
+<td>22</td>
+<td>The world&#x27;s exchanges by market value</td>
+<td>Aggregate market capitalisation per venue</td>
+<td>charts/22_exchanges.png</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Where the private giants are</td>
+<td>Unicorn paper valuation by country</td>
+<td>charts/23_unicorns_country.png</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Which industries the private money went into</td>
+<td>Unicorn paper valuation by industry</td>
+<td>charts/24_unicorns_industry.png</td>
+</tr>
+<tr>
+<td>25</td>
+<td>The unicorn wave</td>
+<td>Companies crossing $1B each year</td>
+<td>charts/25_unicorn_wave.png</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Real revenue with no listed share</td>
+<td>Measured revenue, no public equity</td>
+<td>charts/26_unlisted_top.png</td>
+</tr>
+<tr>
+<td>27</td>
+<td>The AI builders by modality</td>
+<td>Model builders grouped by what they build</td>
+<td>charts/27_ai_modality.png</td>
+</tr>
+<tr>
+<td>28</td>
+<td>The constant cohort</td>
+<td>Revenue of a fixed set of companies over time</td>
+<td>charts/28_cohort_revenue.png</td>
+</tr>
+<tr>
+<td>29</td>
+<td>Did the cohort get more profitable?</td>
+<td>Net margin of a fixed cohort</td>
+<td>charts/29_cohort_margin.png</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Who grew, who shrank</td>
+<td>Revenue change for the same companies over time</td>
+<td>charts/30_rank_mobility.png</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Where the profit pool moved</td>
+<td>Change in industry share of total profit</td>
+<td>charts/31_profit_pool_migration.png</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Where the data is thin</td>
+<td>Share of empty cells in key fields</td>
+<td>charts/32_missingness.png</td>
+</tr>
+<tr>
+<td>33</td>
+<td>How much to trust each row</td>
+<td>Distribution of the confidence score</td>
+<td>charts/33_confidence.png</td>
+</tr>
+<tr>
+<td>34</td>
+<td>Do the sources agree?</td>
+<td>Median revenue disagreement between source pairs</td>
+<td>charts/34_cross_source.png</td>
+</tr>
+<tr>
+<td>35</td>
+<td>Every company we can measure</td>
+<td>One dot per company, ranked by revenue</td>
+<td>charts/35_every_company_we_can_measure.png</td>
+</tr>
+<tr>
+<td>36</td>
+<td>Every company the market can see</td>
+<td>One dot per company with a market value</td>
+<td>charts/36_every_company_the_market_can_see.png</td>
+</tr>
+</tbody></table>
+<section id='sec-appendix-c-table-index'>
+<h1>Appendix C: table index</h1>
+<p>Every table the engine produced, written as CSV.</p>
+<p><strong>Tables</strong></p>
+<table><thead><tr>
+<th>Module</th>
+<th>Table</th>
+<th>Rows</th>
+<th>Columns</th>
+<th>File</th>
+</tr></thead><tbody>
+<tr>
+<td>scale</td>
+<td>top_beyond_forbes</td>
+<td>25</td>
+<td>company, country, revenue_musd, sector</td>
+<td>data/scale__top_beyond_forbes.csv</td>
+</tr>
+<tr>
+<td>scale</td>
+<td>thresholds</td>
+<td>6</td>
+<td>threshold, firms</td>
+<td>data/scale__thresholds.csv</td>
+</tr>
+<tr>
+<td>scale</td>
+<td>top20</td>
+<td>20</td>
+<td>company, country, revenue_usd, profit_usd, market_cap_usd</td>
+<td>data/scale__top20.csv</td>
+</tr>
+<tr>
+<td>scale</td>
+<td>rank_size</td>
+<td>2,000</td>
+<td>rank, company, country, revenue_usd</td>
+<td>data/scale__rank_size.csv</td>
+</tr>
+<tr>
+<td>geography</td>
+<td>country_forbes</td>
+<td>61</td>
+<td>country_iso3, companies, revenue_usd, profit_usd, market_cap_usd, employees, country, region, profit_margin, revenue_per_employee...</td>
+<td>data/geography__country_forbes.csv</td>
+</tr>
+<tr>
+<td>geography</td>
+<td>country_mixed</td>
+<td>84</td>
+<td>country_iso3, companies, revenue_usd, profit_usd, market_cap_usd, employees, country, region, profit_margin, revenue_per_employee...</td>
+<td>data/geography__country_mixed.csv</td>
+</tr>
+<tr>
+<td>geography</td>
+<td>regions_forbes</td>
+<td>6</td>
+<td>region, countries, companies, revenue_usd, profit_usd, market_cap_usd, employees, revenue_share, profit_margin, revenue_per_employee...</td>
+<td>data/geography__regions_forbes.csv</td>
+</tr>
+<tr>
+<td>geography</td>
+<td>regions_mixed</td>
+<td>6</td>
+<td>region, countries, companies, revenue_usd, profit_usd, market_cap_usd, employees, revenue_share, profit_margin, revenue_per_employee...</td>
+<td>data/geography__regions_mixed.csv</td>
+</tr>
+<tr>
+<td>geography</td>
+<td>map</td>
+<td>84</td>
+<td>country_iso3, country, region, companies, revenue_musd, profit_musd, market_cap_musd, employees, profit_margin</td>
+<td>data/geography__map.csv</td>
+</tr>
+<tr>
+<td>geography</td>
+<td>over_under</td>
+<td>55</td>
+<td>country, companies, revenue_usd, gdp_usd, revenue_share, gdp_share, index_vs_gdp</td>
+<td>data/geography__over_under.csv</td>
+</tr>
+<tr>
+<td>industry</td>
+<td>sectors</td>
+<td>13</td>
+<td>sector, companies, revenue_usd, profit_usd, assets_usd, market_cap_usd, employees, profit_margin, roa, asset_turnover...</td>
+<td>data/industry__sectors.csv</td>
+</tr>
+<tr>
+<td>industry</td>
+<td>industries</td>
+<td>30</td>
+<td>industry_canon, companies, revenue_usd, profit_usd, assets_usd, market_cap_usd, employees, profit_margin, roa, asset_turnover...</td>
+<td>data/industry__industries.csv</td>
+</tr>
+<tr>
+<td>industry</td>
+<td>margin_dispersion</td>
+<td>13</td>
+<td>sector, firms, mean, median, p10, p90, std, iqr, cv, loss_makers...</td>
+<td>data/industry__margin_dispersion.csv</td>
+</tr>
+<tr>
+<td>industry</td>
+<td>valuation_by_sector</td>
+<td>13</td>
+<td>sector, firms, median_ps, revenue, market_cap</td>
+<td>data/industry__valuation_by_sector.csv</td>
+</tr>
+<tr>
+<td>industry</td>
+<td>sector_concentration</td>
+<td>13</td>
+<td>sector, firms, hhi, top5_share, gini</td>
+<td>data/industry__sector_concentration.csv</td>
+</tr>
+<tr>
+<td>ownership</td>
+<td>ownership_forbes</td>
+<td>1</td>
+<td>ownership, companies, revenue_usd, profit_usd, market_cap_usd, employees, profit_margin, revenue_per_employee, revenue_share, profit_share</td>
+<td>data/ownership__ownership_forbes.csv</td>
+</tr>
+<tr>
+<td>ownership</td>
+<td>ownership_mixed</td>
+<td>6</td>
+<td>ownership, companies, revenue_usd, profit_usd, market_cap_usd, employees, profit_margin, revenue_per_employee, revenue_share, profit_share</td>
+<td>data/ownership__ownership_mixed.csv</td>
+</tr>
+<tr>
+<td>ownership</td>
+<td>invisible_giants</td>
+<td>200</td>
+<td>company_key, company, source, source_group, list_name, rank_in_source, country, country_iso3, region, city...</td>
+<td>data/ownership__invisible_giants.csv</td>
+</tr>
+<tr>
+<td>ownership</td>
+<td>invisible_by_country</td>
+<td>82</td>
+<td>country, firms, revenue_usd</td>
+<td>data/ownership__invisible_by_country.csv</td>
+</tr>
+<tr>
+<td>ownership</td>
+<td>true_top100</td>
+<td>100</td>
+<td>company_key, company, source, source_group, list_name, rank_in_source, country, country_iso3, region, city...</td>
+<td>data/ownership__true_top100.csv</td>
+</tr>
+<tr>
+<td>ownership</td>
+<td>margin_tests</td>
+<td>3</td>
+<td>comparison, n_a, n_b, mean_a, mean_b, median_a, median_b, diff, ci_low, ci_high...</td>
+<td>data/ownership__margin_tests.csv</td>
+</tr>
+<tr>
+<td>capital</td>
+<td>exchanges</td>
+<td>60</td>
+<td>exchange, exchange_country, city, companies, total_market_cap_usd, top10_market_cap_usd, top_company, top_company_mcap, top10_share, avg_company_cap...</td>
+<td>data/capital__exchanges.csv</td>
+</tr>
+<tr>
+<td>capital</td>
+<td>multiples_by_sector</td>
+<td>1</td>
+<td>sector, firms, median_ps, p25_ps, p75_ps, total_market_cap, total_revenue</td>
+<td>data/capital__multiples_by_sector.csv</td>
+</tr>
+<tr>
+<td>capital</td>
+<td>profit_pool</td>
+<td>13</td>
+<td>sector, revenue, profit, market_cap, profit_share, market_cap_share, profit_minus_mcap_pp, market_cap_to_profit</td>
+<td>data/capital__profit_pool.csv</td>
+</tr>
+<tr>
+<td>capital</td>
+<td>financial_depth</td>
+<td>74</td>
+<td>country, market_cap, companies, iso3, gdp, mcap_to_gdp</td>
+<td>data/capital__financial_depth.csv</td>
+</tr>
+<tr>
+<td>capital</td>
+<td>top_listed</td>
+<td>100</td>
+<td>company, country, sector, market_cap_usd, revenue_usd, revenue_basis</td>
+<td>data/capital__top_listed.csv</td>
+</tr>
+<tr>
+<td>private_capital</td>
+<td>unicorns_by_country</td>
+<td>55</td>
+<td>country, region, companies, valuation_usd</td>
+<td>data/private_capital__unicorns_by_country.csv</td>
+</tr>
+<tr>
+<td>private_capital</td>
+<td>unicorns_by_industry</td>
+<td>7</td>
+<td>industry, companies, valuation_usd</td>
+<td>data/private_capital__unicorns_by_industry.csv</td>
+</tr>
+<tr>
+<td>private_capital</td>
+<td>unicorns_top</td>
+<td>20</td>
+<td>company, country, industry, valuation_busd, date_joined</td>
+<td>data/private_capital__unicorns_top.csv</td>
+</tr>
+<tr>
+<td>private_capital</td>
+<td>private_us</td>
+<td>60</td>
+<td>company, industry, revenue_usd, employees</td>
+<td>data/private_capital__private_us.csv</td>
+</tr>
+<tr>
+<td>private_capital</td>
+<td>unlisted_top</td>
+<td>100</td>
+<td>company, country, ownership, sector, revenue_usd</td>
+<td>data/private_capital__unlisted_top.csv</td>
+</tr>
+<tr>
+<td>private_capital</td>
+<td>unicorns_by_year</td>
+<td>16</td>
+<td>year, companies, valuation_usd</td>
+<td>data/private_capital__unicorns_by_year.csv</td>
+</tr>
+<tr>
+<td>private_capital</td>
+<td>ai_by_modality</td>
+<td>59</td>
+<td>modality, companies</td>
+<td>data/private_capital__ai_by_modality.csv</td>
+</tr>
+<tr>
+<td>time_series</td>
+<td>cohort_revenue_series</td>
+<td>10</td>
+<td>year, total, n</td>
+<td>data/time_series__cohort_revenue_series.csv</td>
+</tr>
+<tr>
+<td>time_series</td>
+<td>cohort_profit_series</td>
+<td>10</td>
+<td>year, total, n</td>
+<td>data/time_series__cohort_profit_series.csv</td>
+</tr>
+<tr>
+<td>time_series</td>
+<td>cohort_margin_path</td>
+<td>10</td>
+<td>year, total_rev, total_prof, margin_pct</td>
+<td>data/time_series__cohort_margin_path.csv</td>
+</tr>
+<tr>
+<td>time_series</td>
+<td>profit_pool_migration</td>
+<td>38</td>
+<td>industry, revenue_start_musd, revenue_end_musd, revenue_cagr_pct, profit_start_musd, profit_end_musd, profit_cagr_pct, profit_share_end_pct, profit_share_start_pct, profit_share_change_pp</td>
+<td>data/time_series__profit_pool_migration.csv</td>
+</tr>
+<tr>
+<td>time_series</td>
+<td>rank_mobility</td>
+<td>1,287</td>
+<td>company, revenue_start_musd, revenue_end_musd, growth_pct</td>
+<td>data/time_series__rank_mobility.csv</td>
+</tr>
+<tr>
+<td>time_series</td>
+<td>mobility_forbes</td>
+<td>1,287</td>
+<td>company, rank_now, growth_pct</td>
+<td>data/time_series__mobility_forbes.csv</td>
+</tr>
+<tr>
+<td>data_quality</td>
+<td>missingness</td>
+<td>186</td>
+<td>dataset, column, rows, missing, missing_pct, distinct</td>
+<td>data/data_quality__missingness.csv</td>
+</tr>
+<tr>
+<td>data_quality</td>
+<td>missingness_key</td>
+<td>34</td>
+<td>dataset, column, rows, missing, missing_pct, distinct</td>
+<td>data/data_quality__missingness_key.csv</td>
+</tr>
+<tr>
+<td>data_quality</td>
+<td>cross_source_disagreement</td>
+<td>9</td>
+<td>source_a, source_b, pairs, median_abs_pct_diff, mean_abs_pct_diff, p90_abs_pct_diff, share_within_10pct, share_within_25pct, share_over_2x, pearson_r...</td>
+<td>data/data_quality__cross_source_disagreement.csv</td>
+</tr>
+<tr>
+<td>data_quality</td>
+<td>confidence</td>
+<td>200</td>
+<td>company, revenue_basis, n_sources, confidence_score</td>
+<td>data/data_quality__confidence.csv</td>
+</tr>
+<tr>
+<td>data_quality</td>
+<td>data_vintages</td>
+<td>3</td>
+<td>dataset, min_year, max_year, mode_year</td>
+<td>data/data_quality__data_vintages.csv</td>
+</tr>
+<tr>
+<td>companies</td>
+<td>company_directory</td>
+<td>15,175</td>
+<td>company, country, country_iso3, region, sector, industry_canon, ownership, source, list_name, n_sources...</td>
+<td>data/companies__company_directory.csv</td>
+</tr>
+<tr>
+<td>companies</td>
+<td>company_presence</td>
+<td>15,175</td>
+<td>company, country_iso3, sector, ownership, source, revenue_usd, market_cap_usd, employees, rank_by_revenue</td>
+<td>data/companies__company_presence.csv</td>
+</tr>
+</tbody></table>
+<section id='sec-appendix-d-caveats'>
+<h1>Appendix D: caveats</h1>
+<ul>
+<li>{&#x27;topic&#x27;: &#x27;Revenue is a flow, not value added&#x27;, &#x27;detail&#x27;: &#x27;Company revenue double-counts intermediate goods across the supply chain. Global 2000 revenue equals ~47% of world GDP only as a scale statement.&#x27;}</li>
+<li>{&#x27;topic&#x27;: &quot;Fortune&#x27;s company_type mislabels state firms&quot;, &#x27;detail&#x27;: &quot;Fortune reports several Chinese state enterprises as &#x27;Private&#x27;. Ownership for 104 names was hand-labelled in data/fortune_labels.csv and applied here.&quot;}</li>
+<li>{&#x27;topic&#x27;: &#x27;Exchange market caps are not world market cap&#x27;, &#x27;detail&#x27;: &#x27;The 60 exchanges cover ~148T USD, but listed domestic companies number ~48,000 worldwide, so this is a coverage figure, not a total.&#x27;}</li>
+<li>{&#x27;topic&#x27;: &#x27;Unicorn valuations are marks, not prices&#x27;, &#x27;detail&#x27;: &#x27;Private valuations are the price of the most recent round, usually preferred stock with a preference. They are not realisable and not comparable to market capitalisation.&#x27;}</li>
+<li>{&#x27;topic&#x27;: &#x27;The listed universe is US-complete and world-partial&#x27;, &#x27;detail&#x27;: &#x27;5,500 US names carry SEC XBRL revenue; the rest carry a market-cap-site estimate. Country counts measure coverage, not corporate density.&#x27;}</li>
+<li>{&#x27;topic&#x27;: &#x27;Market-value snapshots come from different dates&#x27;, &#x27;detail&#x27;: &#x27;Forbes values are May 2025; the scraped Fortune profiles are dated 2026. They are never plotted on the same axis.&#x27;}</li>
+</ul>
+<p>Generated by <code>data_analysis/build_report.py</code>.</p>
+</section>
+<footer>Generated by data_analysis/build_report.py &mdash; every number is reproducible from the datasets listed in the appendix.</footer>
+</div></body></html>

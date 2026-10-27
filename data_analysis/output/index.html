@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Business World in Numbers — data study</title>
+<meta name="description" content="A browsable study of the measured large-company world: scale, geography, industry, ownership, capital, private markets, change over time, and the quality of the underlying data.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+
+<header class="masthead">
+  <div class="wrap">
+    <p class="eyebrow" id="eyebrow">Data study</p>
+    <h1 id="title">The Business World in Numbers</h1>
+    <p class="dek" id="dek"></p>
+    <div class="statbar" id="statbar"></div>
+    <div class="masthead-actions">
+      <label class="search">
+        <span class="sr-only">Search every number and firm</span>
+        <input id="search" type="search" placeholder="Search firms, numbers, ideas…" autocomplete="off" spellcheck="false">
+      </label>
+      <button id="viewToggle" class="btn" type="button" aria-pressed="false">All charts</button>
+    </div>
+  </div>
+</header>
+
+<div class="wrap shell">
+  <aside class="sidebar">
+    <nav id="nav" aria-label="Sections"></nav>
+    <p class="sidebar-note" id="status"></p>
+  </aside>
+  <main id="content" class="content" tabindex="-1"></main>
+</div>
+
+<div id="lightbox" class="lightbox" hidden>
+  <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close">&times;</button>
+  <figure>
+    <img id="lightboxImg" alt="">
+    <figcaption id="lightboxCaption"></figcaption>
+  </figure>
+</div>
+
+<footer class="foot">
+  <div class="wrap" id="footer"></div>
+</footer>
+
+<script src="data.js"></script>
+<script src="companies.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

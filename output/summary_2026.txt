@@ -1,0 +1,72 @@
+Companies: 2000
+Total revenue: $55.97 trillion
+Total profits: $5.53 trillion
+Total assets:  $272.22 trillion
+Total market value: $121.92 trillion
+Total employees: 82,224,162
+
+Top 10 countries by company count:
+country
+United States     595
+China             300
+Japan             178
+South Korea        66
+India              64
+Canada             64
+United Kingdom     63
+Germany            50
+Switzerland        46
+France             44
+
+Top 15 industries by company count:
+industry
+Banking                            314
+Diversified Financials             136
+Construction                       116
+Insurance                          112
+Materials                           95
+Capital Goods                       94
+Utilities                           93
+Oil & Gas Operations                91
+IT Software & Services              84
+Consumer Durables                   83
+Transportation                      81
+Technology Hardware & Equipment     78
+Business Services & Supplies        76
+Food, Drink & Tobacco               71
+Retailing                           67
+
+Companies per region:
+region
+Asia-Pacific                  787
+North America                 668
+Europe                        409
+Middle East & Central Asia     64
+Latin America                  55
+Africa                         17
+
+Top 10 by revenue ($M):
+ rank                                  company       country  revenue_musd
+    2                                   Amazon United States      742776.0
+   23                                  Walmart United States      713163.0
+    5 Saudi Arabian Oil Company (Saudi Aramco)  Saudi Arabia      455531.0
+   11                                    Apple United States      451442.0
+   29                       UnitedHealth Group United States      449713.0
+    4                                 Alphabet United States      423165.0
+  112                               CVS Health United States      407944.0
+  162                                 McKesson United States      403430.0
+   22                               PetroChina         China      392552.0
+    3                       Berkshire Hathaway United States      375394.0
+
+Top 10 by market value ($M):
+ rank                                  company       country  market_value_musd
+   27                                   NVIDIA United States          5475276.0
+    4                                 Alphabet United States          4807434.0
+   11                                    Apple United States          4409598.0
+    7                                Microsoft United States          3134203.0
+    2                                   Amazon United States          2841380.0
+   53                                 Broadcom United States          2013134.0
+   31                     Taiwan Semiconductor        Taiwan          1862600.0
+    5 Saudi Arabian Oil Company (Saudi Aramco)  Saudi Arabia          1785651.0
+   96                                    Tesla United States          1585815.0
+   16                           Meta Platforms United States          1559178.0
