@@ -1,0 +1,54 @@
+name: Weekly data update
+
+# Runs pipeline/update.py every Sunday (04:30 UTC = 10:00 India time) and
+# commits the refreshed stock market data if anything changed.
+# Can also be started by hand from the Actions tab ("Run workflow").
+
+on:
+  schedule:
+    - cron: '30 4 * * 0'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install packages
+        run: pip install pandas
+
+      - name: Download, check and rebuild
+        run: python pipeline/update.py
+
+      - name: Save the update report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: update-report
+          path: pipeline/logs/latest.md
+          if-no-files-found: ignore
+
+      - name: Commit new data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add stock_market/data startups/data/country_pop_gdp.csv site/data/market_history.js site/data/unicorn_density.js
+          if git diff --cached --quiet; then
+            echo "No data changes this week."
+          else
+            git commit -m "Weekly data update $(date -u +%Y-%m-%d)"
+            git push
+          fi

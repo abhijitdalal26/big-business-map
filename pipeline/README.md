@@ -37,3 +37,9 @@ files are backed up to `backup/<date>/` (the 5 newest are kept). The build also 
 on its own (exchange-rate glitches and World Bank reporting errors) and lists them on the page.
 
 The update changes files on this computer only. To publish, commit and push as usual.
+
+## Running on GitHub (no PC needed)
+
+`.github/workflows/update-data.yml` runs `pipeline/update.py` on GitHub every Sunday at 04:30 UTC
+and commits the new data if anything changed. Start it by hand from the repo's **Actions** tab
+("Weekly data update" → "Run workflow"). Each run's report is attached to the run as `update-report`.
