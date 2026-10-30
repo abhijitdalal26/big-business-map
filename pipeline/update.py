@@ -16,7 +16,7 @@ How it stays safe
   4. Checks the rebuilt site data, and restores the backup if that fails.
 
 Run by hand:  python pipeline/update.py
-Scheduled:    pipeline/schedule_windows.ps1 registers a weekly Windows task
+Scheduled:    pipeline/schedule_windows.ps1 optional local Windows task (GitHub Actions already runs it monthly)
 """
 import csv, json, shutil, subprocess, sys
 from datetime import datetime

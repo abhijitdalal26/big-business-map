@@ -1,12 +1,13 @@
-name: Weekly data update
+name: Monthly data update
 
-# Runs pipeline/update.py every Sunday (04:30 UTC = 10:00 India time) and
-# commits the refreshed stock market data if anything changed.
+# Runs pipeline/update.py on the 2nd of every month (04:30 UTC = 10:00 India
+# time), once the previous month has closed, and commits the refreshed stock
+# market data if anything changed.
 # Can also be started by hand from the Actions tab ("Run workflow").
 
 on:
   schedule:
-    - cron: '30 4 * * 0'
+    - cron: '30 4 2 * *'
   workflow_dispatch:
 
 permissions:
@@ -47,8 +48,8 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add stock_market/data startups/data/country_pop_gdp.csv site/data/market_history.js site/data/unicorn_density.js
           if git diff --cached --quiet; then
-            echo "No data changes this week."
+            echo "No data changes this month."
           else
-            git commit -m "Weekly data update $(date -u +%Y-%m-%d)"
+            git commit -m "Monthly data update $(date -u +%Y-%m-%d)"
             git push
           fi

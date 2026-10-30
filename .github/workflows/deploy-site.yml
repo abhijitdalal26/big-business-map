@@ -1,14 +1,14 @@
 name: Publish site
 
 # Publishes the site/ folder to GitHub Pages on every push to main that
-# touches it, and after each weekly data update.
+# touches it, and after each monthly data update.
 
 on:
   push:
     branches: [main]
     paths: ['site/**']
   workflow_run:
-    workflows: ['Weekly data update']
+    workflows: ['Monthly data update']
     types: [completed]
   workflow_dispatch:
 

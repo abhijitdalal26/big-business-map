@@ -1,9 +1,9 @@
 # Automatic data updates
 
 `python pipeline/update.py` refreshes the parts of the site that come from stable, official
-sources, checks the new data, and only then replaces the old data. A Windows task runs it every
-Sunday at 10:00 (`pipeline/schedule_windows.ps1`). The result of the last run is in
-`logs/latest.md`.
+sources, checks the new data, and only then replaces the old data. GitHub runs it on the 2nd of
+every month, after the previous month has closed (see the last section). The result of the last
+run is in `logs/latest.md`.
 
 ## What updates automatically
 
@@ -36,10 +36,12 @@ If any check fails, the site keeps the previous data and the log explains why. T
 files are backed up to `backup/<date>/` (the 5 newest are kept). The build also removes bad points
 on its own (exchange-rate glitches and World Bank reporting errors) and lists them on the page.
 
-The update changes files on this computer only. To publish, commit and push as usual.
+Run by hand, the update changes files on this computer only. To publish, commit and push as usual.
 
 ## Running on GitHub (no PC needed)
 
-`.github/workflows/update-data.yml` runs `pipeline/update.py` on GitHub every Sunday at 04:30 UTC
-and commits the new data if anything changed. Start it by hand from the repo's **Actions** tab
-("Weekly data update" → "Run workflow"). Each run's report is attached to the run as `update-report`.
+`.github/workflows/update-data.yml` runs `pipeline/update.py` on GitHub on the 2nd of every month
+at 04:30 UTC (10:00 India time), commits the new data if anything changed, and the site is then
+republished by `.github/workflows/deploy-site.yml`. Start it by hand from the repo's **Actions**
+tab ("Monthly data update" → "Run workflow"). Each run's report is attached to the run as
+`update-report`. `schedule_windows.ps1` is an optional local alternative and is not needed.
