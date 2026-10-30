@@ -1,4 +1,4 @@
-/* Big Business Map — shared helpers. Load AFTER echarts and BEFORE page scripts.
+/* Earth Economy — shared helpers. Load AFTER echarts and BEFORE page scripts.
    Data files are plain JS (window.ATLAS.<name> = {...}) so pages work from file:// without a server. */
 window.ATLAS = window.ATLAS || {};
 
@@ -34,10 +34,13 @@ window.ATLAS = window.ATLAS || {};
     const bar = document.createElement('div');
     bar.className = 'topbar';
     bar.innerHTML = `<div class="inner">
-      <a class="brand" href="index.html">Big <b>Business</b> Map</a>
-      <nav class="nav">${PAGES.map(([h, t]) => `<a href="${h}" class="${h === here ? 'active' : ''}">${t}</a>`).join('')}</nav>
+      <a class="brand" href="index.html">Earth <b>Economy</b></a>
+      <div class="nav-wrap"><nav class="nav">${PAGES.map(([h, t]) => `<a href="${h}" class="${h === here ? 'active' : ''}">${t}</a>`).join('')}</nav></div>
       <button class="theme-btn" type="button" title="Toggle theme">${isDark() ? 'Light' : 'Dark'}</button></div>`;
     document.body.prepend(bar);
+    // On a phone the nav is a sideways strip: start it at the current page.
+    const nav = bar.querySelector('.nav'), act = nav.querySelector('a.active');
+    if (act) nav.scrollLeft = act.offsetLeft - (nav.clientWidth - act.offsetWidth) / 2;
     bar.querySelector('.theme-btn').onclick = () => {
       const next = isDark() ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', next);
@@ -45,7 +48,7 @@ window.ATLAS = window.ATLAS || {};
       location.reload(); // simplest way to re-theme every chart
     };
     const f = document.createElement('footer');
-    f.innerHTML = `<div class="wrap">Big Business Map — research pack. Sources: Forbes Global 2000 (2026), Fortune Global 500 (2026),
+    f.innerHTML = `<div class="wrap">Earth Economy — research pack. Sources: Forbes Global 2000 (2026), Fortune Global 500 (2026),
       CompaniesMarketCap, SEC EDGAR, CB Insights unicorn list, Forbes Cloud 100, World Bank Open Data, and others named under each chart.
       Figures are snapshots; check the "caveat" boxes before quoting.</div>`;
     document.body.append(f);
@@ -113,9 +116,38 @@ window.ATLAS = window.ATLAS || {};
       });
       merged[k] = Array.isArray(option[k]) ? option[k].map(fix) : fix(option[k]);
     });
+    // Pages also call inst.setOption() later (filters, toggles), so phone tweaks hook in there too.
+    const raw = inst.setOption.bind(inst);
+    inst.setOption = (opt, ...rest) => raw(isPhone() ? mobilize(opt) : opt, ...rest);
     inst.setOption(merged);
     window.addEventListener('resize', () => inst.resize());
     return inst;
+  }
+
+  function isPhone() { return window.matchMedia && window.matchMedia('(max-width: 640px)').matches; }
+  const arr = v => (v == null ? [] : Array.isArray(v) ? v : [v]);
+  const mapEach = (v, fn) => (v == null ? v : Array.isArray(v) ? v.map(fn) : fn(v));
+
+  // Phone-only chart tweaks: legends scroll instead of wrapping over the plot, long category
+  // labels are cut short so bars keep their width, and nothing grabs one-finger page scrolling.
+  function mobilize(opt) {
+    if (!opt || typeof opt !== 'object') return opt;
+    const o = Object.assign({}, opt);
+    if (o.legend && o.legend !== false) o.legend = mapEach(o.legend, l => Object.assign({ type: 'scroll' }, l));
+    ['xAxis', 'yAxis'].forEach(k => {
+      o[k] = mapEach(o[k], a => {
+        if (!a || typeof a !== 'object') return a;
+        const lab = Object.assign({ fontSize: 11 }, a.axisLabel || {});
+        if (a.type === 'category' && k === 'yAxis' && lab.width == null) Object.assign(lab, { width: 96, overflow: 'truncate' });
+        if (k === 'xAxis') lab.hideOverlap = true;
+        const extra = k === 'xAxis' && a.type === 'value' && a.splitNumber == null ? { splitNumber: 3 } : {};
+        return Object.assign({}, a, extra, { axisLabel: lab });
+      });
+    });
+    if (o.dataZoom) o.dataZoom = arr(o.dataZoom).filter(z => z.type !== 'inside');
+    if (o.geo) o.geo = mapEach(o.geo, g => Object.assign({}, g, { roam: false }));
+    if (o.series) o.series = mapEach(o.series, s => (s && (s.type === 'map' || s.type === 'graph') && s.roam ? Object.assign({}, s, { roam: false }) : s));
+    return o;
   }
 
   // ---------- tables ----------

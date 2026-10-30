@@ -1,4 +1,4 @@
-# Big Business Map: interactive research site
+# Earth Economy: interactive research site
 
 Open `index.html` in a browser. No server is needed, but you do need internet for the chart library and fonts.
 
@@ -10,13 +10,13 @@ Open `index.html` in a browser. No server is needed, but you do need internet fo
 | `geography.html` | World map, country rankings, revenue share vs GDP share, India deep-dive |
 | `sectors.html` | What business does: sector treemap, margins, valuations, oligopolies |
 | `ownership.html` | State, family, private and co-op giants that are not on stock markets |
-| `markets.html` | 60 exchanges, market cap vs GDP, trillion-dollar club, exchange drilldown |
-| `startups.html` | 1,440 unicorns, investors, AI labs, India panel, 2026 AI valuations |
+| `markets.html` | 60 exchanges, market cap vs GDP, trillion-dollar club, exchange drilldown, each country's index and market size over time |
+| `startups.html` | 1,440 unicorns in all 55 countries, per-person and per-GDP ranking, investors, AI labs, India panel |
 | `time.html` | A decade of change: cohort growth, rank mobility, profit-pool migration |
 | `directory.html` | Search and filter ~15,000 companies, with CSV export |
 | `notebook.html` | **Every quotable fact, caveat and story angle in one searchable page** |
 
-Rebuild a page's data with `python site/build/<page>.py`. After editing `site/notes/*.md`, run `python site/build/notebook.py`.
+Rebuild a page's data with `python site/build/<page>.py`. Market history and unicorn density: run `python stock_market/scripts/fetch_history.py`, then `python site/build/market_history.py` and `python site/build/unicorn_density.py`. After editing `site/notes/*.md`, run `python site/build/notebook.py`.
 Sourced context tables (VC, IPOs, informality, etc.) are in `site/build/context_data/*.csv`.
 
 ## Verify before quoting

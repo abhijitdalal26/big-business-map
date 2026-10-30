@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Company finder — Big Business Map</title>
+<title>Company finder — Earth Economy</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Serif+4:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
@@ -15,7 +15,7 @@
   .finder-tools label { display: flex; flex-direction: column; font-size: 12px; color: var(--text-2); gap: 3px; }
   .finder-tools input, .finder-tools select { font: inherit; font-size: 14px; padding: 6px 9px; border: 1px solid var(--border); border-radius: 6px; background: var(--surface); color: var(--text); min-width: 0; }
   .finder-tools .wide { grid-column: span 2; }
-  @media (max-width: 600px) { .finder-tools .wide { grid-column: span 1; } }
+  @media (max-width: 600px) { .finder-tools { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; } .finder-tools .wide { grid-column: span 2; } }
   .finder-bar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; font-size: 14px; color: var(--text-2); margin: 8px 0; }
   .finder-bar button { font: inherit; font-size: 13px; padding: 5px 10px; border: 1px solid var(--border); border-radius: 6px; background: var(--surface); color: var(--text); cursor: pointer; }
   .finder-bar button:disabled { opacity: .4; cursor: default; }
@@ -30,8 +30,8 @@
 <div class="wrap">
   <header class="page-head">
     <p class="kicker">Company finder</p>
-    <h1>15,175 companies, one search box</h1>
-    <p class="dek">Every company the reconciliation could name: the Forbes Global 2000, Fortune's state-owned and private giants, 11,400 more listed firms, 1,400 unicorns, AI labs and Wikipedia's national lists. Filter by country, sector, list or owner, sort any column, and plot what you find.</p>
+    <h1>About 15,500 companies, one search box</h1>
+    <p class="dek">Every company the reconciliation could name: the Forbes Global 2000, Fortune's state-owned and private giants, 10,700 more listed firms, 1,400 unicorns, AI labs and Wikipedia's national lists. Filter by country, sector, list or owner, sort any column, and plot what you find.</p>
   </header>
 
   <div id="tiles"></div>

@@ -68,3 +68,28 @@ $py = "C:\Users\abhijit\.dsh\dsh-runtimes\dsh-primary-runtime\dependencies\pytho
 & $py stock_market/scripts/build_exchanges.py
 & $py stock_market/scripts/make_chart.py
 ```
+
+## History: how each country's market grew (added Oct 2026)
+
+`scripts/fetch_history.py` downloads, and `site/build/market_history.py` turns into the
+"How each country's stock market has performed" section of `site/markets.html`:
+
+| File | What it is |
+|---|---|
+| `data/index_monthly.csv` | Month-end close of 27 main indexes (Yahoo Finance), from 1985–2012 depending on the index |
+| `data/fx_monthly.csv` | Local currency per US$, monthly average (FRED; Yahoo for IDR, ARS, ILS, TRY; pre-1999 euro from legacy currencies at the fixed rates) |
+| `data/wb_market_history.csv` | World Bank market cap (US$, % of GDP) and listed companies, every country, 1975–2025 |
+
+Checks done: 12 index closes for Dec 2024 match the official closes exactly (an earlier
+time-zone bug had shifted Asian/European months by one; fixed). October 2026 falls in KOSPI
+and Jakarta were checked against news reports. World Bank reporting errors are removed: a
+fixed list (India 2018 and 2025 NSE+BSE double count, Iran, etc.) plus an automatic rule for
+1–2 year blips more than 3x off both neighbours. Every removed point is listed on the page.
+
+Not covered by index history: Saudi Arabia, Thailand, Philippines, Vietnam, Russia (no free
+monthly data). Indexes are price-only (no dividends).
+
+```
+python stock_market/scripts/fetch_history.py
+python site/build/market_history.py
+```

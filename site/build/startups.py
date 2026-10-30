@@ -38,7 +38,9 @@ u['month'] = d.dt.month
 
 CITY = {'Gurgaon': 'Gurugram', 'Bangalore': 'Bengaluru', 'New Delhi': 'Delhi', 'Bombay': 'Mumbai'}
 u['city'] = u['city'].replace(CITY)
-u['country'] = u['country'].fillna('Unknown')
+# Two rows have a blank country but a city-state as city (Quest Global: Singapore, Micro Connect: Hong Kong)
+CITY_STATE = {'Singapore': 'Singapore', 'Hong Kong': 'Hong Kong'}
+u['country'] = u['country'].fillna(u['city'].map(CITY_STATE)).fillna('Unknown')
 u['industry'] = u['industry'].fillna('Unclassified')
 
 ALIAS = {

@@ -60,3 +60,15 @@ $py = "C:\Users\abhijit\.dsh\dsh-runtimes\dsh-primary-runtime\dependencies\pytho
 & $py startups/scripts/build_startups.py
 & $py startups/scripts/make_charts.py
 ```
+
+## Per-capita view and cross-check (added Oct 2026)
+
+`data/country_pop_gdp.csv` (World Bank population and GDP, written by
+`stock_market/scripts/fetch_history.py`) feeds `site/build/unicorn_density.py`, which powers the
+"unicorns per 10M people / per $1T GDP" chart on `site/startups.html`. Countries under 1M people
+and offshore hubs (Seychelles, Cayman) are kept out of that chart.
+
+Cross-check: an independent tally of the CB board (10 Sep 2026) gives US 806, China 166, India 67,
+UK 65, close to this snapshot. Hurun's 2026 index counts China at 381, more than twice CB, so
+quote both for China. Known gap: Estonia's Bolt (EUR 7.4B, Jan 2022) is not on CB's board.
+Two rows with a blank country (Quest Global, Micro Connect) are assigned from their city.

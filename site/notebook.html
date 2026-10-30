@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Writer's Notebook — Big Business Map</title>
+<title>Writer's Notebook — Earth Economy</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Serif+4:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
@@ -12,7 +12,16 @@
 <script src="data/notebook.js"></script>
 <style>
   .nb { display: grid; grid-template-columns: 220px 1fr; gap: 28px; align-items: start; }
-  @media (max-width: 900px) { .nb { grid-template-columns: 1fr; } .toc { position: static !important; } }
+  .nb > * { min-width: 0; }
+  .md { overflow-wrap: anywhere; }
+  .md pre { overflow-x: auto; }
+  @media (max-width: 900px) { .nb { grid-template-columns: minmax(0, 1fr); } .toc { position: static !important; } }
+  @media (max-width: 640px) {
+    .nb-card { padding: 4px 14px 14px; }
+    .toc { display: flex; gap: 6px; overflow-x: auto; padding: 8px; scrollbar-width: none; }
+    .toc .lbl { display: none; }
+    .toc a { white-space: nowrap; background: var(--surface-2); }
+  }
   .toc { position: sticky; top: 68px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px; }
   .toc a { display: block; padding: 5px 8px; border-radius: 6px; color: var(--text-2); text-decoration: none; font-size: 14px; }
   .toc a:hover { background: var(--surface-2); color: var(--text); }

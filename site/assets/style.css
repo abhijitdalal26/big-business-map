@@ -1,4 +1,4 @@
-/* Big Business Map — shared styles. Every page uses these tokens. */
+/* Earth Economy — shared styles. Every page uses these tokens. */
 :root {
   color-scheme: light;
   --bg: #f7f6f2;
@@ -124,3 +124,46 @@ table.data tr:hover td { background: var(--surface-2); }
 .hub a .d { font-size: 14px; color: var(--text-2); margin-top: 6px; }
 
 footer { margin-top: 64px; padding: 24px 0 40px; border-top: 1px solid var(--border); color: var(--text-3); font-size: 13px; }
+
+/* ---------- phone + small tablet ---------- */
+.card-tools label { display: inline-flex; align-items: center; gap: 6px; max-width: 100%; }
+.card-tools select, .card-tools input { max-width: 100%; min-width: 0; }
+.nav-wrap { position: relative; flex: 1; min-width: 0; display: flex; }
+@media (max-width: 640px) {
+  .topbar .inner { flex-wrap: wrap; height: auto; gap: 0 12px; padding: 0 12px; }
+  .brand { flex: 1; padding: 12px 0 8px; }
+  .theme-btn { min-height: 32px; }
+  .nav-wrap { order: 3; flex-basis: 100%; margin: 0 -12px; }
+  .nav-wrap::after { content: ""; position: absolute; right: 0; top: 0; bottom: 0; width: 28px; pointer-events: none;
+    background: linear-gradient(to right, transparent, var(--surface)); }
+  .nav { padding: 0 24px 4px 6px; }
+  .nav a { padding: 8px 10px; }
+  .page-head { padding: 24px 0 16px; margin-bottom: 20px; }
+  .dek { font-size: 17px; }
+  h2 { font-size: 22px; margin-top: 36px; }
+  .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .tile { padding: 10px 12px; }
+  .tile .v { font-size: 22px; overflow-wrap: anywhere; }
+  .tile .l { font-size: 12.5px; }
+  .grid { gap: 12px; }
+  .card { padding: 14px 12px 10px; }
+  .chart { height: 360px; }
+  .chart.short { height: 260px; }
+  .card-tools { gap: 6px 10px; }
+  .card-tools label { flex: 1 1 100%; }
+  .card-tools label select, .card-tools label input { flex: 1; }
+  /* 16px stops iOS from zooming the page when a field is focused */
+  .card-tools select, .card-tools input, .card-tools button, input, select { font-size: 16px; min-height: 36px; }
+  .tbl-toggle { padding: 8px 0; font-size: 13px; }
+  .notes, .explainer { padding: 12px 14px; }
+  .hub { grid-template-columns: 1fr; }
+}
+.ctl label { max-width: 100%; }
+.ctl select, .ctl input { min-width: 0; max-width: 100%; }
+@media (max-width: 640px) {
+  .ctl label { flex: 1 1 100%; }
+  .ctl label select, .ctl label input { flex: 1; font-size: 16px; min-height: 36px; }
+}
+.card-tools.chips button { font-size: 12.5px; padding: 3px 9px; border-radius: 999px; cursor: pointer; }
+.card-tools.chips button.x::after { content: " ×"; opacity: .6; }
+@media (max-width: 640px) { .card-tools.chips button { font-size: 13px; min-height: 32px; } }
