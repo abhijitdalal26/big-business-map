@@ -29,7 +29,7 @@ import numpy as np
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
-YEAR = int(sys.argv[1]) if len(sys.argv) > 1 else 2025
+YEAR = int(sys.argv[1]) if len(sys.argv) > 1 else 2026
 DATA_OUT = ROOT / "article" / "data"
 IMG_OUT = ROOT / "article" / "images"
 DATA_OUT.mkdir(parents=True, exist_ok=True)

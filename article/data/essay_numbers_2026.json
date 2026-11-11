@@ -1,0 +1,717 @@
+{
+ "totals": {
+  "rev_T": 55.974135,
+  "profit_T": 5.5323908,
+  "mv_T": 121.915565,
+  "employees_M": 82.224162,
+  "loss_makers": 127
+ },
+ "rev_pct_world_gdp": 50.124849695038534,
+ "worker_share_pct": 2.223974118908131,
+ "one_worker_in": 44.96455203763585,
+ "half_of": {
+  "revenue": 207,
+  "profit": 135,
+  "market_value": 103
+ },
+ "share_of_listed_pct": 4.168403501458942,
+ "sectors": [
+  {
+   "sector": "Financials",
+   "n": 563,
+   "rev": 12012127.0,
+   "pro": 1755923.8,
+   "mv": 20444759.0,
+   "rev_pct": 21.46,
+   "pro_pct": 31.74,
+   "mv_pct": 16.77,
+   "pe": 11.6,
+   "n_100B": 20.0
+  },
+  {
+   "sector": "Consumer & Retail",
+   "n": 205,
+   "rev": 9217178.0,
+   "pro": 440813.8,
+   "mv": 13824010.0,
+   "rev_pct": 16.47,
+   "pro_pct": 7.97,
+   "mv_pct": 11.34,
+   "pe": 27.23,
+   "n_100B": 17.0
+  },
+  {
+   "sector": "Energy & Utilities",
+   "n": 184,
+   "rev": 6782090.0,
+   "pro": 545327.8,
+   "mv": 9917573.0,
+   "rev_pct": 12.12,
+   "pro_pct": 9.86,
+   "mv_pct": 8.13,
+   "pe": 17.71,
+   "n_100B": 13.0
+  },
+  {
+   "sector": "Technology",
+   "n": 209,
+   "rev": 5986430.0,
+   "pro": 1178498.2,
+   "mv": 41546197.0,
+   "rev_pct": 10.69,
+   "pro_pct": 21.3,
+   "mv_pct": 34.08,
+   "pe": 34.25,
+   "n_100B": 11.0
+  },
+  {
+   "sector": "Healthcare",
+   "n": 109,
+   "rev": 4411389.0,
+   "pro": 317233.7,
+   "mv": 8246090.0,
+   "rev_pct": 7.88,
+   "pro_pct": 5.73,
+   "mv_pct": 6.76,
+   "pe": 24.94,
+   "n_100B": 8.0
+  },
+  {
+   "sector": "Food & Agriculture",
+   "n": 94,
+   "rev": 3011367.0,
+   "pro": 169513.4,
+   "mv": 3812330.0,
+   "rev_pct": 5.38,
+   "pro_pct": 3.06,
+   "mv_pct": 3.13,
+   "pe": 21.23,
+   "n_100B": 3.0
+  },
+  {
+   "sector": "Industrials & Defense",
+   "n": 129,
+   "rev": 2754468.0,
+   "pro": 260721.7,
+   "mv": 8510957.0,
+   "rev_pct": 4.92,
+   "pro_pct": 4.71,
+   "mv_pct": 6.98,
+   "pe": 32.58,
+   "n_100B": 1.0
+  },
+  {
+   "sector": "Construction & Real Estate",
+   "n": 117,
+   "rev": 2701370.0,
+   "pro": 125809.0,
+   "mv": 2157443.0,
+   "rev_pct": 4.83,
+   "pro_pct": 2.27,
+   "mv_pct": 1.77,
+   "pe": 14.49,
+   "n_100B": 4.0
+  },
+  {
+   "sector": "Materials & Chemicals",
+   "n": 139,
+   "rev": 2634224.0,
+   "pro": 198759.6,
+   "mv": 4441257.0,
+   "rev_pct": 4.71,
+   "pro_pct": 3.59,
+   "mv_pct": 3.64,
+   "pe": 20.52,
+   "n_100B": 0.0
+  },
+  {
+   "sector": "Business Services",
+   "n": 106,
+   "rev": 2585776.0,
+   "pro": 212273.1,
+   "mv": 3955517.0,
+   "rev_pct": 4.62,
+   "pro_pct": 3.84,
+   "mv_pct": 3.24,
+   "pe": 18.41,
+   "n_100B": 5.0
+  },
+  {
+   "sector": "Telecom & Media",
+   "n": 61,
+   "rev": 1924935.0,
+   "pro": 195248.5,
+   "mv": 2817534.0,
+   "rev_pct": 3.44,
+   "pro_pct": 3.53,
+   "mv_pct": 2.31,
+   "pe": 12.55,
+   "n_100B": 5.0
+  },
+  {
+   "sector": "Transport & Logistics",
+   "n": 81,
+   "rev": 1864400.0,
+   "pro": 127406.2,
+   "mv": 2113444.0,
+   "rev_pct": 3.33,
+   "pro_pct": 2.3,
+   "mv_pct": 1.73,
+   "pe": 16.2,
+   "n_100B": 0.0
+  },
+  {
+   "sector": "Conglomerates",
+   "n": 2,
+   "rev": 59241.0,
+   "pro": 3896.0,
+   "mv": 97852.0,
+   "rev_pct": 0.11,
+   "pro_pct": 0.07,
+   "mv_pct": 0.08,
+   "pe": 25.12,
+   "n_100B": 0.0
+  },
+  {
+   "sector": "Unclassified",
+   "n": 1,
+   "rev": 29140.0,
+   "pro": 966.0,
+   "mv": 30602.0,
+   "rev_pct": 0.05,
+   "pro_pct": 0.02,
+   "mv_pct": 0.03,
+   "pe": 31.68,
+   "n_100B": 0.0
+  }
+ ],
+ "us": {
+  "n": 595,
+  "rev_pct": 37.43748786828059,
+  "pro_pct": 42.205769339360494,
+  "mv_pct": 55.96233015858147,
+  "avg_rev_B": 35.21900840336134,
+  "gdp_pct": 26.23637681919131,
+  "unicorn_value_pct": 68.72923859416012
+ },
+ "china": {
+  "n": 300,
+  "rev_pct": 14.57487462736137,
+  "pro_pct": 12.567427449268408,
+  "mv_pct": 7.883497074389148,
+  "avg_rev_B": 27.193866666666665
+ },
+ "japan": {
+  "n": 178,
+  "rev_pct": 7.914727043124472,
+  "pro_pct": 5.832200068006764,
+  "mv_pct": 4.62490823054464,
+  "avg_rev_B": 24.88876404494382,
+  "unicorns": 6
+ },
+ "india": {
+  "n": 64,
+  "rev_pct": 2.387013216014861,
+  "pro_pct": 2.4592351646597344,
+  "mv_pct": 1.6712402554997796,
+  "avg_rev_B": 20.87671875,
+  "rank_by_count": 6,
+  "rank_by_revenue": 9
+ },
+ "eu27": {
+  "n": 276,
+  "rev_pct": 14.707069613492017,
+  "pro_pct": 11.549317882605113,
+  "mv_pct": 9.726175652797082,
+  "avg_rev_B": 29.826648550724634,
+  "unicorn_value_pct": 5.834567672653212,
+  "gdp_pct": 17.026201130553364,
+  "unicorns": 132
+ },
+ "russia_n": 0,
+ "dna": {
+  "World": {
+   "Business Services": 4.6,
+   "Conglomerates": 0.1,
+   "Construction & Real Estate": 4.8,
+   "Consumer & Retail": 16.5,
+   "Energy & Utilities": 12.1,
+   "Financials": 21.5,
+   "Food & Agriculture": 5.4,
+   "Healthcare": 7.9,
+   "Industrials & Defense": 4.9,
+   "Materials & Chemicals": 4.7,
+   "Technology": 10.7,
+   "Telecom & Media": 3.4,
+   "Transport & Logistics": 3.3,
+   "Unclassified": 0.1
+  },
+  "United States": {
+   "Business Services": 5.4,
+   "Conglomerates": 0.1,
+   "Construction & Real Estate": 1.7,
+   "Consumer & Retail": 20.4,
+   "Energy & Utilities": 8.9,
+   "Financials": 15.3,
+   "Food & Agriculture": 4.8,
+   "Healthcare": 15.8,
+   "Industrials & Defense": 4.5,
+   "Materials & Chemicals": 1.9,
+   "Technology": 14.5,
+   "Telecom & Media": 3.4,
+   "Transport & Logistics": 3.1,
+   "Unclassified": 0.1
+  },
+  "China": {
+   "Business Services": 4.1,
+   "Construction & Real Estate": 16.4,
+   "Consumer & Retail": 10.8,
+   "Energy & Utilities": 11.7,
+   "Financials": 25.9,
+   "Food & Agriculture": 1.9,
+   "Healthcare": 2.1,
+   "Industrials & Defense": 5.7,
+   "Materials & Chemicals": 7.5,
+   "Technology": 7.5,
+   "Telecom & Media": 1.4,
+   "Transport & Logistics": 5.1
+  },
+  "Japan": {
+   "Business Services": 7.8,
+   "Construction & Real Estate": 4.9,
+   "Consumer & Retail": 24.2,
+   "Energy & Utilities": 7.5,
+   "Financials": 14.1,
+   "Food & Agriculture": 8.2,
+   "Healthcare": 4.0,
+   "Industrials & Defense": 7.6,
+   "Materials & Chemicals": 7.8,
+   "Technology": 6.7,
+   "Telecom & Media": 4.3,
+   "Transport & Logistics": 2.7
+  },
+  "India": {
+   "Business Services": 3.5,
+   "Construction & Real Estate": 3.9,
+   "Consumer & Retail": 11.8,
+   "Energy & Utilities": 28.8,
+   "Financials": 33.4,
+   "Food & Agriculture": 0.7,
+   "Healthcare": 0.5,
+   "Industrials & Defense": 0.2,
+   "Materials & Chemicals": 8.4,
+   "Technology": 5.7,
+   "Telecom & Media": 2.2,
+   "Transport & Logistics": 1.1
+  },
+  "Germany": {
+   "Business Services": 2.8,
+   "Construction & Real Estate": 1.4,
+   "Consumer & Retail": 36.5,
+   "Energy & Utilities": 6.0,
+   "Financials": 17.5,
+   "Food & Agriculture": 1.6,
+   "Healthcare": 4.3,
+   "Industrials & Defense": 7.2,
+   "Materials & Chemicals": 7.7,
+   "Technology": 2.5,
+   "Telecom & Media": 5.8,
+   "Transport & Logistics": 6.6
+  },
+  "Gulf": {
+   "Construction & Real Estate": 2.7,
+   "Energy & Utilities": 56.1,
+   "Financials": 27.6,
+   "Healthcare": 4.0,
+   "Materials & Chemicals": 2.3,
+   "Telecom & Media": 7.4
+  }
+ },
+ "company_vs_country": [
+  {
+   "n_smaller": 183,
+   "just_below": "Belgium",
+   "just_above": "Poland",
+   "rank": 22,
+   "label": "Walmart revenue (FY2024)",
+   "v": 713.2,
+   "kind": "revenue"
+  },
+  {
+   "n_smaller": 183,
+   "just_below": "Belgium",
+   "just_above": "Poland",
+   "rank": 22,
+   "label": "Amazon revenue (FY2024)",
+   "v": 742.8,
+   "kind": "revenue"
+  },
+  {
+   "n_smaller": 137,
+   "just_below": "Bulgaria",
+   "just_above": "Kenya",
+   "rank": 68,
+   "label": "Reliance Industries revenue (FY2024)",
+   "v": 119.7,
+   "kind": "revenue"
+  },
+  {
+   "n_smaller": 123,
+   "just_below": "Tanzania",
+   "just_above": "Uruguay",
+   "rank": 82,
+   "label": "State Bank of India revenue (FY2024)",
+   "v": 80.3,
+   "kind": "revenue"
+  },
+  {
+   "n_smaller": 94,
+   "just_below": "Bosnia and Herzegovina",
+   "just_above": "Papua New Guinea",
+   "rank": 111,
+   "label": "Tata Consultancy Services revenue (FY2024)",
+   "v": 30.2,
+   "kind": "revenue"
+  },
+  {
+   "n_smaller": 170,
+   "just_below": "Bangladesh",
+   "just_above": "Philippines",
+   "rank": 35,
+   "label": "Saudi Arabian Oil Company (Saudi Aramco) revenue (FY2024)",
+   "v": 455.5,
+   "kind": "revenue"
+  },
+  {
+   "n_smaller": 202,
+   "just_below": "Germany",
+   "just_above": "China",
+   "rank": 3,
+   "label": "Nvidia Corp market cap (2026)",
+   "v": 5242.1,
+   "kind": "market cap"
+  },
+  {
+   "n_smaller": 202,
+   "just_below": "Germany",
+   "just_above": "China",
+   "rank": 3,
+   "label": "Apple Inc. market cap (2026)",
+   "v": 5004.9,
+   "kind": "market cap"
+  },
+  {
+   "n_smaller": 200,
+   "just_below": "India",
+   "just_above": "Japan",
+   "rank": 5,
+   "label": "Microsoft Corporation market cap (2026)",
+   "v": 3961.7,
+   "kind": "market cap"
+  },
+  {
+   "n_smaller": 147,
+   "just_below": "Kuwait",
+   "just_above": "Ukraine",
+   "rank": 58,
+   "label": "Reliance Industries market cap (2026)",
+   "v": 171.4,
+   "kind": "market cap"
+  }
+ ],
+ "trillion_club": {
+  "n": 15,
+  "us": 12
+ },
+ "true_top15": [
+  {
+   "name": "Amazon",
+   "owner": "Listed (in Forbes)",
+   "rev_B": 742.78
+  },
+  {
+   "name": "Walmart",
+   "owner": "Listed (in Forbes)",
+   "rev_B": 713.16
+  },
+  {
+   "name": "State Grid",
+   "owner": "State-owned",
+   "rev_B": 555.37
+  },
+  {
+   "name": "Saudi Arabian Oil Company (Saudi Aramco)",
+   "owner": "Listed (in Forbes)",
+   "rev_B": 455.53
+  },
+  {
+   "name": "Apple",
+   "owner": "Listed (in Forbes)",
+   "rev_B": 451.44
+  },
+  {
+   "name": "UnitedHealth Group",
+   "owner": "Listed (in Forbes)",
+   "rev_B": 449.71
+  },
+  {
+   "name": "Alphabet",
+   "owner": "Listed (in Forbes)",
+   "rev_B": 423.17
+  },
+  {
+   "name": "CVS Health",
+   "owner": "Listed (in Forbes)",
+   "rev_B": 407.94
+  },
+  {
+   "name": "McKesson",
+   "owner": "Listed (in Forbes)",
+   "rev_B": 403.43
+  },
+  {
+   "name": "China National Petroleum",
+   "owner": "State-owned",
+   "rev_B": 401.93
+  },
+  {
+   "name": "PetroChina",
+   "owner": "Listed (in Forbes)",
+   "rev_B": 392.55
+  },
+  {
+   "name": "Berkshire Hathaway",
+   "owner": "Listed (in Forbes)",
+   "rev_B": 375.39
+  },
+  {
+   "name": "Volkswagen Group",
+   "owner": "Listed (in Forbes)",
+   "rev_B": 370.81
+  },
+  {
+   "name": "Sinopec",
+   "owner": "Listed (in Forbes)",
+   "rev_B": 354.4
+  },
+  {
+   "name": "Toyota Motor",
+   "owner": "Listed (in Forbes)",
+   "rev_B": 336.35
+  }
+ ],
+ "decade": {
+  "n": 1252,
+  "rev_x": 1.64,
+  "prof_x": 2.24,
+  "rev_cagr": 5.6,
+  "prof_cagr": 9.4,
+  "m15": 7.3,
+  "m24": 10.0,
+  "m20": 10.3,
+  "gdp_x": 1.45,
+  "tech_mv_share": 34.1,
+  "tech_p15": 11.9,
+  "tech_p24": 23.4,
+  "tech_r15": 7.5,
+  "tech_r24": 10.0,
+  "panel_x": 1.91,
+  "entrants": 748,
+  "excluded": 9,
+  "years": [
+   2016,
+   2025
+  ],
+  "rank_moves": {
+   "Amazon": [
+    23,
+    1
+   ],
+   "Walmart": [
+    1,
+    2
+   ],
+   "Apple": [
+    7,
+    3
+   ],
+   "UnitedHealth Group": [
+    11,
+    4
+   ],
+   "Alphabet": [
+    56,
+    5
+   ],
+   "CVS Health": [
+    13,
+    6
+   ],
+   "McKesson": [
+    10,
+    7
+   ],
+   "PetroChina": [
+    8,
+    8
+   ],
+   "Berkshire Hathaway": [
+    6,
+    9
+   ],
+   "Volkswagen Group": [
+    4,
+    10
+   ],
+   "Sinopec": [
+    2,
+    11
+   ],
+   "Toyota Motor": [
+    3,
+    12
+   ],
+   "ExxonMobil": [
+    9,
+    13
+   ],
+   "Cencora": [
+    21,
+    14
+   ],
+   "Microsoft": [
+    60,
+    15
+   ],
+   "China State Construction Engineering": [
+    22,
+    16
+   ],
+   "Costco Wholesale": [
+    33,
+    17
+   ],
+   "JPMorganChase": [
+    47,
+    18
+   ],
+   "Cigna": [
+    184,
+    19
+   ],
+   "Hon Hai Precision ": [
+    24,
+    20
+   ]
+  },
+  "nvidia": {
+   "rev_start_B": 6.91,
+   "rev_end_B": 215.938,
+   "multiple": 31.250072358900145
+  }
+ },
+ "ownership": {
+  "fortune_rev": 43057852,
+  "fortune_n": 500,
+  "state_ctrl_rev": 9948977,
+  "state_ctrl_n": 110,
+  "state_ctrl_pct": 23.1,
+  "state_any_pct": 26.8,
+  "unlisted_n": 128,
+  "unlisted_rev": 9804510,
+  "china_n": 111,
+  "us_n": 141,
+  "china_state_n": 72,
+  "china_state_rev_pct": 75.5,
+  "india_n": 10,
+  "india_psu_n": 23,
+  "india_n_g2000": 64,
+  "india_psu_rev_pct": 44.1,
+  "india_psu_mv_pct": 23.8,
+  "india_psu_profit_pct": 40.9,
+  "forbes_state_rev_pct": 17.8,
+  "forbes_state_m_rev_pct": 13.3,
+  "forbes_state_n": 262,
+  "forbes_state_mv_pct": 8.3,
+  "fortune_mix": [
+   {
+    "owner": "Listed, no major state stake",
+    "n": 325,
+    "rev": 28476864,
+    "profit": 2601926,
+    "agg_margin": 9.1,
+    "med_margin": 7.0,
+    "loss_makers": 19
+   },
+   {
+    "owner": "Listed, significant state stake",
+    "n": 19,
+    "rev": 1592691,
+    "profit": 118079,
+    "agg_margin": 7.4,
+    "med_margin": 5.3,
+    "loss_makers": 0
+   },
+   {
+    "owner": "Listed, state-controlled",
+    "n": 28,
+    "rev": 3183788,
+    "profit": 412371,
+    "agg_margin": 13.0,
+    "med_margin": 7.5,
+    "loss_makers": 1
+   },
+   {
+    "owner": "State-owned, unlisted",
+    "n": 82,
+    "rev": 6765189,
+    "profit": 170613,
+    "agg_margin": 2.5,
+    "med_margin": 1.3,
+    "loss_makers": 10
+   },
+   {
+    "owner": "Private (family / founder / foundation)",
+    "n": 26,
+    "rev": 1846643,
+    "profit": 30986,
+    "agg_margin": 1.7,
+    "med_margin": 0.9,
+    "loss_makers": 4
+   },
+   {
+    "owner": "Mutual / co-operative",
+    "n": 20,
+    "rev": 1192678,
+    "profit": 57862,
+    "agg_margin": 4.9,
+    "med_margin": 2.7,
+    "loss_makers": 0
+   }
+  ],
+  "india_stats": {
+   "PSU (state-controlled)": {
+    "n": 23,
+    "rev": 589571,
+    "profit": 55613,
+    "mv": 485783,
+    "emp": 379937,
+    "agg_margin": 9.4,
+    "med_margin": 12.9,
+    "mv_to_rev": 0.82,
+    "mv_to_profit": 8.7
+   },
+   "Private sector": {
+    "n": 41,
+    "rev": 746539,
+    "profit": 80442,
+    "mv": 1551719,
+    "emp": 1848772,
+    "agg_margin": 10.8,
+    "med_margin": 12.8,
+    "mv_to_rev": 2.08,
+    "mv_to_profit": 19.3
+   }
+  }
+ }
+}

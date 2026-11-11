@@ -1,7 +1,8 @@
 """Charts for the first Substack essay (article/essay_01_draft.md).
 
 Run from the repo root:
-    python article/make_article_charts.py
+    python article/essay_numbers.py 2026      (first: computes the numbers)
+    python article/make_article_charts.py [year]
 
 Writes PNGs to article/images/. Uses the same colours and fonts as
 data_analysis/style.py so the essay matches the study pack and the site.
@@ -9,7 +10,9 @@ data_analysis/style.py so the essay matches the study pack and the site.
 
 from __future__ import annotations
 
+import json
 import shutil
+import sys
 from pathlib import Path
 
 import matplotlib
@@ -19,6 +22,9 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
+YEAR = int(sys.argv[1]) if len(sys.argv) > 1 else 2026
+# Every Forbes-based number comes from essay_numbers.py, so charts and text always agree.
+N = json.loads((ROOT / f"article/data/essay_numbers_{YEAR}.json").read_text(encoding="utf-8"))
 OUT = ROOT / "article" / "images"
 OUT.mkdir(parents=True, exist_ok=True)
 
@@ -92,13 +98,16 @@ def pyramid() -> None:
     titles(fig, "The pyramid of business on Earth",
            "Each step is a different count from a different source. Bar widths are on a log scale.",
            "Sources: IFC/McKinsey via CGAP (2010 est.); IFC SME Finance Forum (2019); "
-           "World Bank CM.MKT.LDOM.NO (2024); Forbes Global 2000 (2025); CompaniesMarketCap (Oct 2026).")
+           "World Bank CM.MKT.LDOM.NO (2024); "
+           f"Forbes Global 2000 ({YEAR}); CompaniesMarketCap (Oct 2026).")
     save(fig, "01_pyramid_of_business.png")
 
 
 # 2. How few firms make half of everything -----------------------------------
 def half_of_everything() -> None:
-    rows = [("Revenue\n($52.9T)", 208), ("Profit\n($4.9T)", 147), ("Market value\n($91.3T)", 126)]
+    t, h = N["totals"], N["half_of"]
+    rows = [(f"Revenue\n(${t['rev_T']:.1f}T)", h["revenue"]), (f"Profit\n(${t['profit_T']:.1f}T)", h["profit"]),
+            (f"Market value\n(${t['mv_T']:.1f}T)", h["market_value"])]
     fig, ax = plt.subplots(figsize=(10, 4.6))
     fig.subplots_adjust(top=0.76, bottom=0.12, left=0.16)
     labels = [r[0] for r in rows][::-1]
@@ -115,14 +124,14 @@ def half_of_everything() -> None:
     ax.tick_params(axis="y", length=0, labelsize=11)
     titles(fig, "Half of everything, a handful of firms",
            "Out of the 2,000 biggest listed companies, how many it takes to reach 50% of the total",
-           "Source: Forbes Global 2000 (2025 list, FY2024 financials; market value May 2025).")
+           f"Source: Forbes Global 2000 ({YEAR} list; latest fiscal-year financials, market value at list date).")
     save(fig, "02_half_of_everything.png")
 
 
 # 3. Where profit is made vs where value is priced ---------------------------
 def sector_shares() -> None:
-    s = pd.read_csv(ROOT / "data_analysis/output/data/industry__sectors.csv")
-    s["value_share"] = s.market_cap_usd / s.market_cap_usd.sum()
+    s = pd.DataFrame(N["sectors"])
+    s["revenue_share"], s["profit_share"], s["value_share"] = s.rev_pct / 100, s.pro_pct / 100, s.mv_pct / 100
     keep = ["Technology", "Financials", "Consumer & Retail", "Energy & Utilities", "Healthcare"]
     s = s.set_index("sector").loc[keep[::-1]]
     fig, ax = plt.subplots(figsize=(10, 5.8))
@@ -144,24 +153,19 @@ def sector_shares() -> None:
     ax.legend(loc="lower right", frameon=False, fontsize=10)
     titles(fig, "Profit is made in banks. Value is priced in tech.",
            "Each sector's share of the Global 2000's revenue, profit and market value",
-           "Source: Forbes Global 2000 (2025). Bank 'revenue' is gross interest + fees, which inflates Financials.")
+           f"Source: Forbes Global 2000 ({YEAR}). Bank 'revenue' is gross interest + fees, which inflates Financials.")
     save(fig, "03_profit_vs_value_by_sector.png")
 
 
 # 4. The true top 15 by revenue, listed or not --------------------------------
 def true_top() -> None:
-    g = pd.read_csv(ROOT / "data/global2000_2025.csv")
-    listed = g[["company", "revenue_musd"]].assign(kind="Listed company")
-    f = pd.read_csv(ROOT / "data/fortune_g500_2025.csv", encoding="utf-8", encoding_errors="replace")
-    lab = pd.read_csv(ROOT / "data/fortune_labels.csv")
-    f = f.merge(lab, on="slug", how="left")
-    hidden = f[f.duplicate_of.isna() & f.ownership.isin(["State-owned", "Private", "Mutual / Cooperative"])]
-    hidden = hidden.rename(columns={"revenues_musd": "revenue_musd"})[["company", "revenue_musd", "ownership"]]
-    hidden["kind"] = hidden.ownership.map({"State-owned": "State-owned, no shares traded",
-                                           "Private": "Privately owned",
-                                           "Mutual / Cooperative": "Member-owned"})
-    allc = pd.concat([listed, hidden[["company", "revenue_musd", "kind"]]])
-    top = allc.nlargest(15, "revenue_musd").iloc[::-1]
+    # The same re-ranked list the site's Scale page shows (Forbes listed + Fortune unlisted).
+    kind = {"Listed (in Forbes)": "Listed company", "State-owned": "State-owned, no shares traded",
+            "Private": "Privately owned", "Mutual/co-op": "Member-owned"}
+    top = pd.DataFrame(N["true_top15"]).rename(columns={"name": "company"})
+    top["revenue_musd"] = top.rev_B * 1000
+    top["kind"] = top.owner.map(kind).fillna("Listed company")
+    top = top.iloc[::-1]
     top["company"] = top.company.replace({"Saudi Arabian Oil Company (Saudi Aramco)": "Saudi Aramco",
                                           "China National Petroleum": "China National Petroleum (CNPC)"})
     colours = {"Listed company": BAR, "State-owned, no shares traded": ACCENT,
@@ -182,8 +186,8 @@ def true_top() -> None:
               loc="lower right", frameon=False, fontsize=10)
     titles(fig, "The world's biggest companies, if you include the ones with no ticker",
            "Top 15 by revenue. The orange bars never show up on a stock screen.",
-           "Sources: Forbes Global 2000 (2025) for listed firms; Fortune Global 500 (2025) for unlisted ones. "
-           "FY2024 revenue. Ownership labels are curated.")
+           f"Sources: Forbes Global 2000 ({YEAR}) for listed firms; Fortune Global 500 for unlisted ones. "
+           "Latest fiscal-year revenue. Ownership labels are curated.")
     save(fig, "04_true_top15_by_revenue.png")
 
 
@@ -237,11 +241,12 @@ def ai_share_of_vc() -> None:
 
 # 7. The higher up the pyramid, the more American --------------------------------
 def us_share() -> None:
-    rows = [("World GDP", 26.5, "World Bank, 2024"),
-            ("Global 2000 revenue", 37, "Forbes, FY2024"),
-            ("Global 2000 profit", 42, "Forbes, FY2024"),
-            ("Global 2000 market value", 55, "Forbes, May 2025"),
-            ("Unicorn value", 69, "CB Insights, 2026")]
+    u = N["us"]
+    rows = [("World GDP", u["gdp_pct"], "World Bank, 2024"),
+            ("Global 2000 revenue", u["rev_pct"], f"Forbes, {YEAR} list"),
+            ("Global 2000 profit", u["pro_pct"], f"Forbes, {YEAR} list"),
+            ("Global 2000 market value", u["mv_pct"], f"Forbes, {YEAR} list"),
+            ("Unicorn value", u["unicorn_value_pct"], "CB Insights, 2026")]
     fig, ax = plt.subplots(figsize=(10, 5))
     fig.subplots_adjust(top=0.78, bottom=0.1, left=0.25)
     labels = [r[0] for r in rows][::-1]
@@ -265,10 +270,38 @@ def us_share() -> None:
     save(fig, "11_more_american.png")
 
 
+# 8. The giants with no shares to buy -------------------------------------------
+def unlisted_giants() -> None:
+    mix = {r["owner"]: r for r in N["ownership"]["fortune_mix"]}
+    rows = [("State-owned, unlisted", "State-owned", ACCENT),
+            ("Private (family / founder / foundation)", "Private", GREEN),
+            ("Mutual / co-operative", "Member-owned (mutual / co-op)", SAND)]
+    fig, ax = plt.subplots(figsize=(10, 4.6))
+    fig.subplots_adjust(top=0.76, bottom=0.12, left=0.27)
+    labels, vals, cols = [], [], []
+    for key, label, colour in rows[::-1]:
+        r = mix[key]
+        labels.append(f"{label}\n{r['n']} companies")
+        vals.append(r["rev"] / 1e6)
+        cols.append(colour)
+    ax.barh(labels, vals, color=cols, height=0.62)
+    for y, v in enumerate(vals):
+        ax.text(v + 0.08, y, f"${v:.1f}T", va="center", fontsize=13, fontweight="bold", color=INK)
+    ax.set_xlim(0, max(vals) * 1.2)
+    ax.xaxis.set_major_formatter(lambda x, _: f"${x:.0f}T")
+    ax.grid(axis="x", color=GRID)
+    ax.set_axisbelow(True)
+    ax.tick_params(axis="y", length=0, labelsize=11)
+    o = N["ownership"]
+    titles(fig, f"${o['unlisted_rev'] / 1e6:.1f} trillion a year, and no shares to buy",
+           f"{o['unlisted_n']} of the world's 500 largest companies by revenue have no listed shares at group level",
+           "Source: Fortune Global 500, ownership labels curated by the atlas (as on the site's Ownership page).")
+    save(fig, "08_unlisted_giants.png")
+
+
 # Reused charts from the existing pack ------------------------------------------
 def copy_existing() -> None:
-    for src, dst in [("output/charts/10_gdp_vs_employment.png", "07_gdp_vs_employment.png"),
-                     ("output/charts/13_invisible_giants.png", "08_invisible_giants.png")]:
+    for src, dst in [("output/charts/10_gdp_vs_employment.png", "07_gdp_vs_employment.png")]:
         shutil.copy(ROOT / src, OUT / dst)
         print("copied", dst)
 
@@ -281,4 +314,5 @@ if __name__ == "__main__":
     employment_status()
     ai_share_of_vc()
     us_share()
+    unlisted_giants()
     copy_existing()
