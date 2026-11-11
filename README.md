@@ -32,6 +32,19 @@ never silently mixed.
 | `analysis/startups_findings.md` | Venture-layer numbers |
 | `analysis/atlas.md` | **The full four-layer narrative, with all headline numbers** |
 
+## The article
+
+| Path | What it is |
+|---|---|
+| `article/essay_01_draft.md` | First Substack essay draft, with editor notes at the end |
+| `article/images/*.png` | The essay's charts (200 dpi) |
+| `article/data/business_ideas.csv` | ~2,300 largest companies (listed and unlisted), each with a sector and a one-line "what they do" |
+| `article/data/idea_sectors.csv` | Per sector: the idea in one sentence, shares of revenue/profit/value, how many firms pass $10B and $100B |
+| `article/data/idea_overrides.csv` | Hand-written lines and sector fixes that win over the extracted text |
+
+Rebuild with `python article/fetch_wiki_ideas.py` (only fetches what's missing),
+then `python article/business_ideas.py` and `python article/make_article_charts.py`.
+
 ## Study pack (the analysis to write from)
 
 The `data_analysis/` engine reconciles every source into one company universe

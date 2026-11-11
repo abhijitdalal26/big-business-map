@@ -1,0 +1,109 @@
+company,sector,what_they_do
+Walmart,,"Sells groceries and everyday goods at low prices through 10,000+ big stores and online"
+Amazon,,"Runs the biggest online store, and rents computing power to other companies (AWS)"
+State Grid,,"Owns and runs most of China's electricity grid; state-owned, no shares traded"
+Saudi Arabian Oil Company (Saudi Aramco),,"Pumps and refines Saudi Arabia's oil and gas; the state owns most of it"
+UnitedHealth Group,,"Sells health insurance in the US and runs clinics, pharmacy services and health data"
+China National Petroleum,,"China's largest state oil and gas group; parent of the listed PetroChina"
+Apple,,"Designs iPhones, Macs and other devices, and earns fees on the apps and services running on them"
+Sinopec,,"Refines oil and sells fuel and chemicals across China; state-controlled"
+PetroChina,,"Produces, refines and sells oil and gas in China; listed arm of state-owned CNPC"
+CVS Health,,"Runs US pharmacies and health insurance (Aetna), and manages drug benefits for employers"
+Berkshire Hathaway,,"Uses cash from its insurance businesses to buy and own whole companies, from railways to utilities"
+Alphabet,,"Runs Google Search and YouTube, earning mostly from ads; also sells cloud computing"
+Volkswagen Group,,"Makes cars and trucks under brands like VW, Audi, Porsche and Skoda"
+McKesson,,"Buys medicines in bulk from drugmakers and delivers them to US pharmacies and hospitals"
+ExxonMobil,,"Finds, pumps and refines oil and gas, and makes chemicals"
+Toyota Motor,,"Makes and sells cars, the world's largest carmaker by units"
+Cencora,,"Wholesales medicines to US pharmacies, clinics and hospitals"
+China State Construction Engineering,,"Builds housing, offices and infrastructure, mostly in China; state-controlled"
+JPMorganChase,,"The largest US bank: takes deposits, lends, and runs investment banking and trading"
+Shell Plc,,"Produces oil and gas, trades energy, and sells fuel through its petrol stations"
+Costco Wholesale,,"Sells goods in bulk at thin margins and earns its profit mostly from membership fees"
+Microsoft,,"Sells software (Windows, Office) and cloud computing (Azure) to businesses and people"
+Cigna,,"Sells health insurance and manages prescription-drug benefits in the US"
+Trafigura Group,Business Services,"Buys, ships and sells oil, metals and minerals around the world; privately owned by its staff"
+Glencore International,,"Mines and trades metals, coal and other commodities"
+Cardinal Health,,"Distributes medicines and medical supplies to US pharmacies and hospitals"
+ICBC,,"The world's largest bank by assets: takes deposits and lends across China; state-controlled"
+Samsung Electronics,,"Makes memory chips, smartphones, TVs and home appliances"
+Hon Hai Precision,,"Assembles electronics for other brands, most famously the iPhone (Foxconn)"
+NVIDIA,,"Designs the chips (GPUs) that train and run AI models; the factories that make them are someone else's"
+Meta Platforms,,"Runs Facebook, Instagram and WhatsApp, earning almost all its money from ads"
+Taiwan Semiconductor,,"Manufactures chips designed by other companies (Apple, Nvidia, AMD) in its own factories"
+Tencent Holdings,,"Runs WeChat and the world's largest video-game business"
+Alibaba Group,,"Runs China's largest online marketplaces and a big cloud-computing business"
+Reliance Industries,,"Refines oil, and runs India's largest telecom (Jio) and retail chains"
+Tata Consultancy Services,,"Writes and runs software and IT systems for large companies, with 600,000+ staff"
+Life Insurance Corp. of India,,"India's largest life insurer; majority owned by the government"
+State Bank of India,,"India's largest bank: takes deposits and lends nationwide; government-controlled"
+Cargill,Food & Agriculture,"Buys, ships and processes grain, oilseeds and meat; family-owned"
+Koch,Conglomerates,"Owns refineries, chemicals, paper and many other businesses; family-owned"
+Huawei Investment & Holding,Technology,"Makes telecom network gear and smartphones; owned by its employees' union"
+Bosch Group,,"Makes car parts, power tools and home appliances; controlled by a charitable foundation"
+State Farm Insurance,,"Sells car and home insurance in the US; owned by its policyholders (a mutual)"
+COFCO,Food & Agriculture,"China's state food trader: buys, stores and processes grain and oilseeds"
+XMXYG,Business Services,"Trades and ships metals, energy and farm goods; state-owned (Xiamen Xiangyu)"
+Xiamen ITG Holding Group,Business Services,"Trades commodities and runs supply chains; state-owned"
+H-E-B Grocery Company,Food & Agriculture,"Runs supermarkets in Texas and Mexico; family-owned"
+China General Technology,Industrials & Defense,"Makes machine tools and medical products; state-owned"
+Enterprise Mobility,Transport & Logistics,"Rents cars and trucks (Enterprise, National, Alamo); family-owned"
+Hailiang Group,Materials & Chemicals,"Makes copper tubes and other metal products"
+The Friedkin Group,Conglomerates,
+Standard Industries,Materials & Chemicals,
+Sammons Enterprises,Financials,
+Tenaska,Energy & Utilities,
+Chick-fil-A,Consumer & Retail,"Sells chicken sandwiches through 3,000+ fast-food restaurants; family-owned"
+Kirkland & Ellis,Business Services,"Sells legal advice to companies and private-equity firms; a partnership"
+Southwire,Industrials & Defense,
+Hard Rock International,Consumer & Retail,
+Latham & Watkins,Business Services,
+Panda Restaurant Group,Consumer & Retail,
+The Wonderful Company,Food & Agriculture,
+Arctic Slope Regional Corporation,Conglomerates,
+Consolidated Elec Distributors,Business Services,
+Crown Equipment,Industrials & Defense,
+Ilitch Holdings,Consumer & Retail,
+Fertitta Entertainment,Consumer & Retail,
+Amsted Industries,Industrials & Defense,
+"Skadden, Arps, Slate, Meagher & Flom",Business Services,
+"Gibson, Dunn & Crutcher",Business Services,
+DigiKey,Business Services,
+Sidley Austin,Business Services,
+Southern Tire Mart,Consumer & Retail,
+Ropes & Gray,Business Services,
+Baker McKenzie,Business Services,
+O'Neal Industries,Materials & Chemicals,
+White & Case,Business Services,
+EBSCO Industries,Conglomerates,
+Morgan Lewis & Bockius,Business Services,
+China Railway Engineering Group,,"Builds railways, bridges, tunnels and roads across China and abroad; state-owned"
+Shandong Energy Group,,"Mines coal and makes chemicals and power in Shandong province; state-owned"
+PowerChina,,"Builds dams, power plants and infrastructure worldwide; state-owned"
+Zhejiang Rongsheng Holding Group,,"Refines oil into petrochemicals and polyester for textiles; privately owned"
+U.S. Postal Service,,"Delivers mail and parcels to every US address; an independent government agency"
+EP Group,,"Owns power plants, gas pipelines and energy-trading businesses across Europe; privately owned"
+China FAW Group,,"Makes cars and trucks (Hongqi, and joint ventures with VW and Toyota); state-owned"
+New York Life Insurance,,"Sells life insurance and annuities in the US; owned by its policyholders (a mutual)"
+Zhejiang Hengyi Group,,"Refines oil into chemicals and polyester fibre; privately owned"
+Jinchuan Group,,"Mines and refines nickel, cobalt and copper in China; state-owned"
+Crédit Mutuel Group,,"French banking and insurance group owned by its members (a co-operative)"
+United Services Automobile Assn.,,"Sells insurance and banking to US military families; owned by its members"
+CFE,,"Mexico's state electricity company: generates, transmits and sells power nationwide"
+Huaqin Technology,,"Designs and assembles smartphones, laptops and servers for other brands"
+China Southern Power Grid,,"Runs the electricity grid for southern China; state-owned"
+China Minmetals,,"Mines, trades and processes metals and builds metallurgical plants; state-owned"
+Shaanxi Coal & Chemical Industry,,"Mines coal and turns it into chemicals and power; state-owned"
+Perusahaan Listrik Negara,,"Indonesia's state electricity company, with a monopoly on power distribution"
+Reliance,,"Refines oil, and runs India's largest telecom (Jio) and retail chains"
+SpaceX,,"Builds rockets and runs Starlink satellite internet; merged with Elon Musk's AI company xAI in 2026"
+Anthropic,,"Builds the Claude AI models and sells access to businesses and developers"
+OpenAI,,"Builds the GPT AI models and ChatGPT, and sells access to businesses and developers"
+ByteDance,,"Runs TikTok and its Chinese twin Douyin, earning mostly from ads"
+Databricks,,"Sells a cloud platform companies use to store, analyse and build AI on their data"
+Stripe,,"Processes online payments for millions of businesses, taking a small cut of each one"
+DeepSeek,,"Chinese AI lab that releases its large language models as open weights"
+Moonshot AI,,"Chinese AI lab behind the Kimi chatbot and models"
+Mistral AI,,"French AI lab that builds open and commercial large language models"
+Titan Company,,"Sells watches (Titan), jewellery (Tanishq) and eyewear in India; part of the Tata group"
+HCL Technologies,,"Writes and runs software and IT systems for large companies worldwide"
