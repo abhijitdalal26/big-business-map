@@ -251,10 +251,10 @@ The Forbes 2000 isn't wrong. It measures exactly what it says it measures. The m
 ### How this was built
 
 - **Sources:** Forbes Global 2000 (2026), Fortune Global 500, World Bank Open Data (2024), ILO (2025), CB Insights, Crunchbase, CompaniesMarketCap, SEC filings, EY Global IPO Trends, XBMA/LSEG, Global SWF, World Cooperative Monitor.
-- **Matching:** about 18,000 rows were reconciled into one universe of **15,175 companies**. The sources disagree on 756 of them.
+- **Matching:** about 18,000 rows were reconciled into one universe of **about 15,000 companies**.
 - **Business ideas:** one-line descriptions for over 2,000 of the largest companies, extracted from Forbes and Wikipedia text, with ~80 written by hand. Sectors follow the site's 13-sector taxonomy.
 - **Rules I followed:** revenue, market value and private valuations are never added together; they're different things measured on different dates. Ownership labels are curated by hand and approximate.
-- **Everything is open:** [live site](https://abhijitdalal26.github.io/big-business-map/), including a searchable directory of all 15,175 companies.
+- **Everything is open:** [live site](https://abhijitdalal26.github.io/big-business-map/), including a searchable directory of all of them.
 
 ---
 ---
@@ -283,7 +283,7 @@ The Forbes 2000 isn't wrong. It measures exactly what it says it measures. The m
 
 Eleven images is a lot for one post. If you need to cut, drop `09` (the bar chart `03` makes the same point) and `07` (the text carries it).
 
-**Two places where the live site still shows 2025 numbers.** The Overview page's headline tiles ($52.9T revenue, 92.6M staff) and the Geography page's country table (US 612 firms, India 70). Every other page uses 2026. The essay follows 2026, so a reader may spot the difference on those two pages.
+**The live site matches the essay.** Every chart page uses the 2026 list. The one exception is the Writer's notebook page (`site/notes/*.md`), which keeps the working notes as they were written and still quotes some 2025 figures.
 
 **Facts to re-check on publish day:** Anthropic/OpenAI marks (add the date); "15 companies worth $1T+" and Nvidia at $5.2T (Oct 2026 snapshot); Amazon's "22nd among economies" (revenue vs GDP is a size comparison, kept as "would rank"); Amul's "largest co-op adjusted for income" wording; State Grid and CNPC revenue come from the Fortune list the site uses.
 

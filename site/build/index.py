@@ -44,18 +44,23 @@ def conc(col):
     return dict(marks=marks, half=half, curve=pts)
 concentration = {'revenue': conc('revenue_musd'), 'profit': conc('profits_musd'), 'mv': conc('market_value_musd')}
 
-sm = M['scale']['metrics']
+# Global 2000 totals come straight from the 2026 list (the study pack's metrics.json is the 2025 list).
+g_rev, g_prof = g.revenue_musd.sum() * 1e6, g.profits_musd.sum() * 1e6
+# Unlisted giants: the same figures the Ownership page shows (site/build/ownership.py runs first).
+_own = open(os.path.join(ROOT, 'site', 'data', 'ownership.js'), encoding='utf-8').read()
+_H = json.loads(_own[_own.index('= ', _own.index('ATLAS.ownership')) + 2:].rstrip().rstrip(';'))['H']
 tiles = dict(
     world_gdp=mac('NY.GDP.MKTP.CD'), listed_domestic=mac('CM.MKT.LDOM.NO'), labor_force=mac('SL.TLF.TOTL.IN'),
     population=mac('SP.POP.TOTL'),
-    g_rev=sm['forbes_revenue_total'], g_prof=sm['forbes_profit_total'], g_mv=sm['forbes_market_cap_total'],
-    g_emp=sm['forbes_employees_total'], g_assets=sm['forbes_assets_total'], g_margin=sm['forbes_blended_margin'],
-    g_loss=sm['forbes_loss_makers'],
+    g_rev=float(g_rev), g_prof=float(g_prof), g_mv=float(g.market_value_musd.sum() * 1e6),
+    g_emp=float(g.employees.sum()), g_assets=float(g.assets_musd.sum() * 1e6), g_margin=float(g_prof / g_rev),
+    g_loss=int((g.profits_musd < 0).sum()),
     unicorns=int(len(uni)), unicorn_val=float(uni.valuation_busd.sum() * 1e9),
     universe=M['companies']['metrics']['companies'], universe_rows=17985,
     exchanges=int(len(ex)), exchange_mcap=float(ex.total_market_cap_usd.sum()), exchange_cos=int(ex.companies.sum()),
     listed_universe=int(len(lu)), listed_mcap=float(lu.market_cap_usd.sum()),
-    countries_g2k=int(g.country.nunique()), fortune_outside=90, fortune_outside_rev=6.4e12,
+    countries_g2k=int(g.country.nunique()),
+    fortune_outside=int(_H['unlisted_n']), fortune_outside_rev=float(_H['unlisted_rev']) * 1e6,
 )
 
 # dataset registry: parse Appendix A of STUDY_PACK.md

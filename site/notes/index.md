@@ -14,7 +14,7 @@
 - The US has **612** of the 2,000 firms, **37%** of revenue and **55%** of market value. China has 275, Japan 180, India 70 (4th), UK 68.
 - Private layer: **1,442 unicorns** worth **$7.3T** on paper (CB Insights). Anthropic ($965B) and OpenAI ($840B) dominate.
 - 60 stock exchanges carry **$148.5T** across 9,778 listings. The listed universe has 12,512 firms worth $150.8T.
-- The reconciled universe holds **15,175 companies** from 17,985 source rows. Sources disagree on 756 rows.
+- The reconciled universe holds **about 15,000 companies** from 17,985 source rows.
 - 90 state-owned, private and mutual giants with **$6.4T** of revenue are absent from Forbes (Fortune 500 layer).
 - Directory coverage: 13,239 firms have revenue, 10,730 a market cap, ~2,400 a profit figure and 7,695 a Wikipedia page.
 

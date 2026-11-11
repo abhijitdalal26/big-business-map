@@ -96,7 +96,7 @@
   <p class="section-dek">Every measure is shown as a share of the world total, so very different measures can sit side by side. This compares shares only. Nothing is added across ledgers.</p>
   <div class="grid">
     <div class="card">
-      <h3 id="c-h2h-h">The US has 26% of world GDP, 55% of big-company market value and 69% of unicorn value</h3>
+      <h3 id="c-h2h-h">The US has 26% of world GDP, 56% of big-company market value and 69% of unicorn value</h3>
       <p class="sub">Share of the world total, %</p>
       <div class="card-tools">
         <label>China as <select id="h2h-china"><option value="1">China (mainland)</option><option value="2">Greater China (+HK, Taiwan)</option></select></label>
@@ -110,11 +110,11 @@
   <div id="n-h2h"></div>
 
   <h2 id="india">India deep-dive</h2>
-  <p class="section-dek">India is the world's fifth-largest economy. It has the fourth-largest number of Global 2000 companies, but those companies are small for the list, and much of their weight comes from state-owned banks, oil firms and the LIC.</p>
+  <p class="section-dek">India is the world's fifth-largest economy. It has the joint fifth-largest number of Global 2000 companies, but those companies are small for the list, and much of their weight comes from state-owned banks, oil firms and the LIC.</p>
   <div id="tiles-india"></div>
   <div class="grid">
     <div class="card">
-      <h3 id="c-ind-h">Reliance and LIC lead India's 70 giants by revenue; HDFC Bank and TCS lead on value</h3>
+      <h3 id="c-ind-h">Reliance and LIC lead India's 64 giants by revenue; Reliance and HDFC Bank lead on value</h3>
       <p class="sub" id="c-ind-sub"></p>
       <div class="card-tools"><span id="ind-tools"></span>
         <label>Show <select id="ind-n"><option value="25" selected>Top 25</option><option value="70">All 70</option></select></label></div>
@@ -210,7 +210,7 @@ ATLAS.tiles('tiles', [
   const keys = ['g_n', 'g_rev', 'g_prof', 'g_mv', 'u_n', 'u_val', 'l_mv', 'r_rev', 'r_lmv'];
   sel.innerHTML = keys.map(k => `<option value="${k}">${lbl(k)}</option>`).join('');
   const HEAD = {
-    g_n: 'The US has 612 of the 2,000 largest public firms; China 275, Japan 180, India 70',
+    g_n: 'The US has 595 of the 2,000 largest public firms; China 300, Japan 178, India 64',
     g_rev: 'US firms book $19.5T of Global 2000 revenue, China\'s $7.8T',
     g_prof: 'US firms earn 42% of all Global 2000 profit',
     g_mv: 'US firms are worth $50T, more than the rest of the world\'s giants combined',
@@ -350,10 +350,10 @@ const REGIONS = ['North America', 'Asia-Pacific', 'Europe', 'Middle East & Centr
 (function () {
   const zero = G.zero_forbes_big.map(z => z.name).join(', ');
   ATLAS.notes('n-sc', { title: 'Who is over and under', items: [
-    '<b>Over-indexed</b> (Forbes view): Hong Kong 4.2×, Luxembourg 2.3×, Switzerland 2.2×, Japan 1.9×, South Korea 1.7×, Ireland 1.4×, United States 1.3×. These are headquarters economies: firms domicile there for tax, finance or history, and book revenue earned worldwide.',
-    `<b>Under-indexed</b>: China 0.80×, India 0.67×, and most of Latin America, Africa and Southeast Asia. Their economies run on small firms, state entities and informal work that big-company lists do not capture.`,
+    '<b>Over-indexed</b> (Forbes view): Hong Kong 4.0×, Switzerland 2.4×, Luxembourg 2.2×, Japan 2.1×, South Korea 2.0×, United States 1.4×, Ireland 1.3×. These are headquarters economies: firms domicile there for tax, finance or history, and book revenue earned worldwide.',
+    `<b>Under-indexed</b>: China 0.87×, India 0.71×, and most of Latin America, Africa and Southeast Asia. Their economies run on small firms, state entities and informal work that big-company lists do not capture.`,
     `<b>Off the chart entirely</b> (zero Global 2000 firms): ${zero}.`,
-    '<b>The fit is still strong:</b> across 60 countries, the rank correlation between GDP share and Global 2000 revenue share is ρ = 0.87. Big economies have big companies. The interesting part is the size of the deviations.',
+    '<b>The fit is still strong:</b> across 61 countries, the rank correlation between GDP share and Global 2000 revenue share is ρ = 0.82. Big economies have big companies. The interesting part is the size of the deviations.',
     '<b>Tax havens explode the index</b> in the reconciled view: Bermuda 26× and the Cayman Islands 33× (insurers and holding companies domiciled there).',
   ] });
   ATLAS.notes('x-index', { title: 'Explainer: the over/under index', items: [
@@ -440,7 +440,7 @@ const REGIONS = ['North America', 'Asia-Pacific', 'Europe', 'Middle East & Centr
 (function () {
   const R = G.india_ranks, F70 = G.india_firms;
   ATLAS.tiles('tiles-india', [
-    { v: ind.g_n, l: 'Indian firms in the Global 2000', s: `#${R.g_n} in the world, behind the US, China and Japan` },
+    { v: ind.g_n, l: 'Indian firms in the Global 2000', s: `#${R.g_n} in the world (level with Canada), behind the US, China, Japan and South Korea` },
     { v: F(ind.g_rev), l: 'Their combined revenue', s: `#${R.g_rev} by revenue; ${P(ind.g_rev / ind.gdp * 100, 0)} of India's GDP` },
     { v: F(ind.g_mv), l: 'Their market value (May 2026)', s: `#${R.g_mv} in the world; ${P(ind.g_mv / W.g_mv * 100, 1)} of the total` },
     { v: P(ind.g_prof / ind.g_rev * 100), l: 'Net margin of India\'s 70', s: `vs ${P(W.g_prof / W.g_rev * 100)} for the whole list` },
@@ -490,7 +490,7 @@ const REGIONS = ['North America', 'Asia-Pacific', 'Europe', 'Middle East & Centr
   // peers
   const PM = { rev_gdp: ['Global 2000 revenue ÷ GDP', v => (v * 100).toFixed(0) + '%', 'India\'s giants book revenue worth 35% of GDP; Japan\'s book 101%'],
                lmv_gdp: ['Listed market cap ÷ GDP', v => (v * 100).toFixed(0) + '%', 'India\'s stock market is worth about 100% of its GDP, deeper than China\'s or Germany\'s'],
-               mv_gdp: ['Global 2000 market value ÷ GDP', v => (v * 100).toFixed(0) + '%', 'India\'s 70 giants are worth 62% of GDP, more than China\'s 38%'],
+               mv_gdp: ['Global 2000 market value ÷ GDP', v => (v * 100).toFixed(0) + '%', 'India\'s 64 giants are worth 54% of GDP, slightly more than China\'s 51%'],
                uni_per_t: ['Unicorns per $1T of GDP', v => v.toFixed(1), 'India has 17 unicorns per $1T of GDP, behind only the US and UK among these big economies'],
                g_per_t: ['Global 2000 firms per $1T of GDP', v => v.toFixed(1), 'India has 19 giants per $1T of GDP, more than China\'s 15'] };
   const sel = document.getElementById('peer-metric');
@@ -538,18 +538,18 @@ const REGIONS = ['North America', 'Asia-Pacific', 'Europe', 'Middle East & Centr
   const top5rev = F70.slice(0, 5).reduce((s, f) => s + f.rev, 0);
   const psu = ['Life Insurance Corp. of India', 'Indian Oil', 'Oil & Natural Gas', 'State Bank of India', 'Bharat Petroleum'];
   ATLAS.notes('n-india', { title: 'India: numbers to quote', items: [
-    `<b>${ind.g_n} Indian companies</b> are in the Forbes Global 2000, the fourth-largest contingent after the US (612), China (275) and Japan (180), and ahead of the UK (68). By combined revenue (${F(ind.g_rev)}) India ranks only <b>#${R.g_rev}</b>.`,
+    `<b>${ind.g_n} Indian companies</b> are in the Forbes Global 2000, the joint fifth-largest contingent (level with Canada) after the US (595), China (300), Japan (178) and South Korea (66), and just ahead of the UK (63). By combined revenue (${F(ind.g_rev)}) India ranks only <b>#${R.g_rev}</b>.`,
     `<b>Small giants:</b> the average Indian Global 2000 firm books ${F(ind.g_rev / ind.g_n)} of revenue, against ${F(W.g_rev / 2000)} for the list as a whole and ${F(us.g_rev / us.g_n)} for a US member.`,
-    `<b>The state is big in India Inc.:</b> four of India's top five by revenue (LIC, Indian Oil, ONGC, SBI) are government-controlled. The top five together book ${F(top5rev)}, or ${P(top5rev / ind.g_rev * 100, 0)} of the revenue of all 70.`,
-    `<b>Revenue vs value:</b> Reliance leads on revenue ($114B) and value ($206B). HDFC Bank (#6 by revenue) is #2 by value ($171B), and TCS ($30B revenue) is worth $146B. LIC books $107B of revenue but is valued at only $59B, and Indian Oil $91B but $22B.`,
+    `<b>The state is big in India Inc.:</b> three of India's top five by revenue (LIC, Indian Oil, SBI) are government-controlled, and ONGC is sixth. The top five together book ${F(top5rev)}, or ${P(top5rev / ind.g_rev * 100, 0)} of the revenue of all ${ind.g_n}.`,
+    `<b>Revenue vs value:</b> Reliance leads on revenue ($120B) and value ($188B). HDFC Bank (#7 by revenue) is #2 by value ($123B), and TCS ($30B revenue) is worth $85B. LIC books $108B of revenue but is valued at only $53B, and Indian Oil $88B but $20B.`,
     `<b>Sector tilt:</b> finance is ${P(G.india_sectors[0].india * 100, 0)} of Indian giant revenue (world: ${P(G.india_sectors[0].world * 100, 0)}), and energy & utilities ${P(G.india_sectors[2].india * 100, 0)} (world: ${P(G.india_sectors[2].world * 100, 0)}). Healthcare, industrials and food are almost absent, although India is the "pharmacy of the world".`,
     `<b>Market depth:</b> India's listed companies are worth ${F(ind.l_mv)}, ${P(ind.l_mv / ind.gdp * 100, 0)} of GDP. That is deeper than China (${P(byIso.CHN.l_mv / byIso.CHN.gdp * 100, 0)}), Germany (${P(byIso.DEU.l_mv / byIso.DEU.gdp * 100, 0)}) or Brazil (${P(byIso.BRA.l_mv / byIso.BRA.gdp * 100, 0)}), but far behind the US (${P(us.l_mv / us.gdp * 100, 0)}). NSE is the world's #${G.india_ex[0].rank} exchange in this dataset.`,
     `<b>Unicorns:</b> ${ind.u_n} Indian unicorns worth ${F(ind.u_val)} (#${R.u_n} in the world after the US, China and UK). The largest are ${G.india_unicorns.slice(0, 4).map(u => u.company + ' (' + F(u.val) + ')').join(', ')}.`,
     `<b>Reconciled view:</b> adding the listed universe, ${N(ind.x_n)} Indian firms carry ${F(ind.x_rev)} of measured revenue, ${P(ind.x_rev / ind.gdp * 100, 0)} of GDP.`,
   ] });
   ATLAS.notes('n-india-ang', { title: 'India story angles', items: [
-    '"Many giants, small giants": India ranks 4th by count but 9th by revenue. Why do Indian firms stay mid-sized? Fragmented markets, low per-capita spending, and a rupee that lost value against the dollar.',
-    '"Investors pay a premium for India": Indian giants trade at about 1.8× revenue, against 0.9× for Chinese and 1.0× for Japanese giants (US: 2.6×). Is that a growth bet or froth?',
+    '"Many giants, small giants": India ranks joint 5th by count but 9th by revenue. Why do Indian firms stay mid-sized? Fragmented markets, low per-capita spending, and a rupee that lost value against the dollar.',
+    '"Investors pay a premium for India": Indian giants trade at about 1.5× revenue, against 1.2× for Chinese and 1.3× for Japanese giants (US: 3.3×). Is that a growth bet or froth?',
     '"PSU heavyweights": LIC, IOC, ONGC, SBI, BPCL and NTPC are revenue giants with modest valuations. What disinvestment would mean for India\'s rank.',
     '"Missing sectors": almost no Indian manufacturer or pharma firm sits among the world\'s 2,000 largest by revenue. Compare with China and South Korea.',
     '"The unicorn hangover": India has 63 unicorns today. Several have listed, and others have been marked down.',

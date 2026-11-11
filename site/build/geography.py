@@ -56,12 +56,18 @@ def row(i):
 for _, r in gdp.iterrows():
     row(r.iso3)['gdp'] = float(r.gdp_usd)
 
+# Forbes figures per country come straight from the 2026 list (the study-pack table is the 2025 list).
+# The study-pack table is still used for population only.
+g2k = rd(os.path.join(D, 'global2000_2026.csv'))
+g2k['iso'] = g2k.country.map(iso)
+assert g2k.iso.notna().all(), g2k[g2k.iso.isna()].country.unique()
+for i, grp in g2k.groupby('iso'):
+    row(i).update(g_n=int(len(grp)), g_rev=float(grp.revenue_musd.sum() * 1e6),
+                  g_prof=float(grp.profits_musd.sum() * 1e6), g_mv=float(grp.market_value_musd.sum() * 1e6),
+                  g_emp=float(grp.employees.sum()), region=grp.region.mode().iloc[0])
 f = rd(os.path.join(A, 'geography__country_forbes.csv'))
 for _, r in f.iterrows():
-    c = row(r.country_iso3)
-    c.update(g_n=int(r.companies), g_rev=float(r.revenue_usd), g_prof=float(r.profit_usd),
-             g_mv=float(r.market_cap_usd), g_emp=float(r.employees), region=r.region)
-    if pd.notna(r.population): c['pop'] = float(r.population)
+    if pd.notna(r.population): row(r.country_iso3)['pop'] = float(r.population)
 
 m = rd(os.path.join(A, 'geography__country_mixed.csv'))
 for _, r in m.iterrows():
@@ -82,9 +88,6 @@ for _, r in fd.iterrows():
     c = row(r.iso3); c['l_mv'] = float(r.market_cap); c['l_n'] = int(r.companies)
 
 # top Forbes firms per country (for tooltips)
-g2k = rd(os.path.join(D, 'global2000_2026.csv'))
-g2k['iso'] = g2k.country.map(iso)
-assert g2k.iso.notna().all(), g2k[g2k.iso.isna()].country.unique()
 for i, grp in g2k.sort_values('revenue_musd', ascending=False).groupby('iso'):
     row(i)['top'] = ', '.join(grp.company.head(3))
 
@@ -104,7 +107,15 @@ reg_gdp = {}
 for c in C.values():
     if 'gdp' in c: reg_gdp[c['region']] = reg_gdp.get(c['region'], 0) + c['gdp']
 regions = []
-rf = rd(os.path.join(A, 'geography__regions_forbes.csv')).set_index('region')
+# Regions from the 2026 list too, in the same shape as the study-pack table.
+rf = g2k.groupby('region').agg(companies=('company', 'size'), revenue_usd=('revenue_musd', 'sum'),
+                               profit_usd=('profits_musd', 'sum'), market_cap_usd=('market_value_musd', 'sum'))
+rf[['revenue_usd', 'profit_usd', 'market_cap_usd']] *= 1e6
+rf['revenue_share'] = rf.revenue_usd / rf.revenue_usd.sum()
+rf['profit_margin'] = rf.profit_usd / rf.revenue_usd
+rf = rf.sort_values('revenue_usd', ascending=False)
+_old_regions = set(rd(os.path.join(A, 'geography__regions_forbes.csv')).region)
+assert set(rf.index) <= _old_regions | {'Other'}, set(rf.index) - _old_regions
 rm = rd(os.path.join(A, 'geography__regions_mixed.csv')).set_index('region')
 reg_u = {}
 for c in C.values():

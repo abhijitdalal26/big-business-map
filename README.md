@@ -53,7 +53,7 @@ then `python article/business_ideas.py` and `python article/make_article_charts.
 ## Study pack (the analysis to write from)
 
 The `data_analysis/` engine reconciles every source into one company universe
-(15,175 companies from 17,985 source rows) and runs eight analysis modules
+(about 15,000 companies from 17,985 source rows) and runs eight analysis modules
 over it: scale, geography, industry, ownership, capital, private capital, time
 series, and data quality. Its output is a study pack — **not** article prose.
 It is the place to look up a number, check its caveat, and see the chart.
@@ -68,7 +68,7 @@ It is the place to look up a number, check its caveat, and see the chart.
 | `data_analysis/output/data/*.csv` | 46 full tables behind every chart and claim |
 | `data_analysis/output/metrics.json` | Every metric, machine-readable |
 
-The app's last section is a **company directory**: all 15,175 companies in the
+The app's last section is a **company directory**: all ~15,000 companies in the
 reconciled universe, searchable, each with its official website, Wikipedia and
 Forbes links where the source files know them.
 

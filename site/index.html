@@ -17,7 +17,7 @@
   <header class="page-head">
     <p class="kicker">Research pack · Overview</p>
     <h1>Every big business on earth, measured</h1>
-    <p class="dek">The 2,000 largest listed companies book $52.9 trillion of revenue, a sum equal to 47% of world GDP, and they sit on $91 trillion of market value. Around them are 12,500 more listed firms, 1,442 private unicorns and 60 stock exchanges. This pack puts all of it in one place so you can check a number, see how it is spread and read the caveats before you write.</p>
+    <p class="dek">The 2,000 largest listed companies book $56.0 trillion of revenue, a sum equal to half of world GDP, and they sit on $122 trillion of market value. Around them are 12,500 more listed firms, 1,442 private unicorns and 60 stock exchanges. This pack puts all of it in one place so you can check a number, see how it is spread and read the caveats before you write.</p>
   </header>
 
   <div id="tiles"></div>
@@ -102,8 +102,8 @@
     <div class="card half">
       <h3>Coverage: what is and isn't in the pack</h3>
       <ul class="sub">
-        <li><b>In:</b> 2,000 public giants with full financials. 90 state-owned, private and mutual giants from the Fortune 500. 12,512 listed firms with market cap, 5,500 of them with audited US revenue. 1,442 unicorns. 60 exchanges with 9,780 listings. 173 AI model builders.</li>
-        <li><b>Reconciled universe:</b> 17,985 source rows are de-duplicated into 15,175 companies. On 756 rows the sources disagree.</li>
+        <li><b>In:</b> 2,000 public giants with full financials. 128 state-owned, private and mutual giants from the Fortune Global 500 with no listed shares. 12,512 listed firms with market cap, 5,500 of them with audited US revenue. 1,442 unicorns. 60 exchanges with 9,780 listings. 173 AI model builders.</li>
+        <li><b>Reconciled universe:</b> 17,985 source rows are de-duplicated into about 15,000 companies. Where sources give different numbers for the same company, the directory says which one it shows.</li>
         <li><b>Out:</b> small business and the informal economy (the bottom ~95% of firms by count). Most co-operatives. Ownership networks (who owns whom). Listings exchange by exchange beyond the top companies.</li>
         <li><b>Country</b> means where a company is domiciled, not who owns it. That is why Bermuda and the Cayman Islands "over-index".</li>
       </ul>
@@ -139,9 +139,9 @@ ATLAS.tiles('tiles', [
 ]);
 ATLAS.notes('n-tiles', { title: 'Numbers to quote', items: [
   `<b>${F(T.g_rev)}</b> is what the Forbes Global 2000 took in. That equals <b>${P(T.g_rev / T.world_gdp * 100, 0)}</b> of 2024 world GDP (${F(T.world_gdp)}). It is a scale comparison, not a share of GDP (see the explainer below).`,
-  `They employ <b>${(T.g_emp / 1e6).toFixed(1)} million</b> people, about <b>${P(T.g_emp / T.labor_force * 100, 1)}</b> of the world's 3.7 billion workers. So roughly 1 worker in 40 produces revenue equal to half the world's output.`,
+  `They employ <b>${(T.g_emp / 1e6).toFixed(1)} million</b> people, about <b>${P(T.g_emp / T.labor_force * 100, 1)}</b> of the world's 3.7 billion workers. So roughly 1 worker in ${Math.round(T.labor_force / T.g_emp)} produces revenue equal to half the world's output.`,
   `Of the roughly <b>48,000</b> listed companies on earth, just 2,000 (about 4%) make the Forbes list. Then add <b>${N(T.unicorns)}</b> private unicorns worth ${F(T.unicorn_val)} on paper.`,
-  `<b>${T.g_loss}</b> of the 2,000 lost money in their latest year. The blended net margin is <b>${P(T.g_margin * 100)}</b>, so 9 cents of every dollar of sales is profit.`,
+  `<b>${T.g_loss}</b> of the 2,000 lost money in their latest year. The blended net margin is <b>${P(T.g_margin * 100)}</b>, so ${Math.round(T.g_margin * 100)} cents of every dollar of sales is profit.`,
 ] });
 
 // ---------- yardstick ----------
@@ -166,7 +166,7 @@ ATLAS.notes('n-tiles', { title: 'Numbers to quote', items: [
 })();
 
 ATLAS.notes('x-ledgers', { title: 'Explainer: revenue, profit, market value and GDP are four different things', items: [
-  '<b>Revenue</b> is everything a company sold. <b>GDP</b> counts only <i>value added</i>. A carmaker\'s revenue includes the steel, chips and tyres it bought, and the steelmaker\'s revenue counts that steel again. Adding up company revenue therefore double-counts, which is why $52.9T of revenue can sit beside $111.7T of GDP without meaning "47% of the economy".',
+  '<b>Revenue</b> is everything a company sold. <b>GDP</b> counts only <i>value added</i>. A carmaker\'s revenue includes the steel, chips and tyres it bought, and the steelmaker\'s revenue counts that steel again. Adding up company revenue therefore double-counts, which is why $56.0T of revenue can sit beside $111.7T of GDP without meaning "half of the economy".',
   '<b>Profit</b> (net income) is what is left after every cost, interest payment and tax. It is the cleanest measure of who earns the money.',
   '<b>Market value</b> (market capitalisation) is share price × shares outstanding. It is what investors think all future profits are worth today, so it is a stock figure, not a yearly flow. Never add it to revenue.',
   '<b>Safe phrasing:</b> "The 2,000 largest listed companies took in revenue equal to nearly half of world GDP." <b>Unsafe:</b> "These companies make up half the world economy."',
@@ -302,15 +302,15 @@ document.getElementById('x-ledgers').className = 'explainer';
 ATLAS.notes('n-head', { title: 'What the charts say', items: [
   `<b>Concentration is steep.</b> The top 10 firms hold ${P(D.concentration.revenue.marks['10'] * 100, 1)} of revenue, the top 100 hold ${P(D.concentration.revenue.marks['100'] * 100, 0)} and the top 500 hold ${P(D.concentration.revenue.marks['500'] * 100, 0)}. Half of all revenue sits with just <b>${D.concentration.revenue.half}</b> firms.`,
   `<b>Profit and value are even more concentrated.</b> The top 10 by profit earn ${P(D.concentration.profit.marks['10'] * 100, 0)} of all profit. The top 10 by market value hold ${P(D.concentration.mv.marks['10'] * 100, 0)} of all market value, and only <b>${D.concentration.mv.half}</b> firms make up half of it. That is the AI and big-tech premium.`,
-  `<b>Financials are the biggest sector</b> by revenue (about 23%), ahead of Consumer & Retail (17%), Energy & Utilities (13%) and Technology (9%). Technology's share of market value is several times its share of revenue.`,
-  `<b>The US has 612 of the 2,000 firms</b> but books 37% of revenue and 55% of market value. China has 275 firms. India has 70, the fourth-largest count, but only about 2.5% of the revenue.`,
+  `<b>Financials are the biggest sector</b> by revenue (about 21%), ahead of Consumer & Retail (16%), Energy & Utilities (12%) and Technology (11%). Technology's share of market value is several times its share of revenue.`,
+  `<b>The US has 595 of the 2,000 firms</b> but books 37% of revenue and 56% of market value. China has 300 firms. India has 64, joint fifth by count, but only about 2.4% of the revenue.`,
 ] });
 ATLAS.notes('n-angles', { title: 'Story angles', items: [
-  '"Half the world\'s output, 2.5% of its workers": use the revenue-to-GDP and employees-to-labour-force ratios together.',
+  '"Half the world\'s output, 2.2% of its workers": use the revenue-to-GDP and employees-to-labour-force ratios together.',
   '"2,000 out of 48,000": the Forbes list is the top 4% of listed firms, and listed firms are a tiny fraction of the hundreds of millions of businesses on earth. The tail of small and informal businesses is invisible in every company list.',
-  '"The 126 companies worth half of everything": market value is far more concentrated than sales.',
-  '"India: 4th by number of giants, 9th by their revenue." India has many big firms, but they are smaller than the global average. The <a href="geography.html#india">India deep-dive</a> has the detail.',
-  '"The invisible giants": 90 state-owned, private and mutual companies worth $6.4T of revenue never appear in Forbes. See <a href="ownership.html">Ownership</a>.',
+  '"The 103 companies worth half of everything": market value is far more concentrated than sales.',
+  '"India: joint 5th by number of giants, 9th by their revenue." India has many big firms, but they are smaller than the global average. The <a href="geography.html#india">India deep-dive</a> has the detail.',
+  '"The invisible giants": 128 state-owned, private and mutual companies with $9.8T of revenue have no listed shares, so they never appear in Forbes. See <a href="ownership.html">Ownership</a>.',
 ] });
 
 // ---------- hub ----------
@@ -332,7 +332,7 @@ document.getElementById('hub').innerHTML = ATLAS.PAGES.filter(([h]) => h !== 'in
 // ---------- methodology ----------
 ATLAS.notes('n-rules', { title: 'Rules that keep this honest', items: [
   '<b>Never sum across layers inside one chart.</b> Forbes and Fortune use different fiscal years and definitions, and Cloud 100 and unicorn figures are valuations, not revenue.',
-  '<b>Revenue is not value added.</b> "Combined revenue equals 47% of world GDP" is defensible. "These companies are 47% of the economy" is not.',
+  '<b>Revenue is not value added.</b> "Combined revenue equals half of world GDP" is defensible. "These companies are half of the economy" is not.',
   '<b>Forbes\' market values are May 2026 snapshots.</b> Share prices have moved since, especially for AI-linked stocks.',
   '<b>Forbes\' industry labels are free text</b> (39 variants, e.g. "Banking" and "Banking and Financial Services"). This pack always uses the cleaned <code>sector</code> / <code>industry_canon</code> fields.',
   '<b>Fortune\'s "Company type" mislabels state firms as "Private".</b> This pack uses its own curated ownership labels instead.',
