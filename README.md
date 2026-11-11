@@ -2,6 +2,11 @@
 
 **Live site: https://abhijitdalal26.github.io/big-business-map/**
 
+> **Frozen as a one-time 2026 snapshot (November 2026).** The data is not refreshed any
+> more: the "Monthly data update" workflow is disabled, and the site and essay describe the
+> world as of the Forbes Global 2000 (2026), the Fortune Global 500 and the October 2026
+> market data. To revive it, see `pipeline/README.md`.
+
 A four-layer dataset of what business exists on earth, how big it is, and where the
 visible numbers stop. Every layer keeps its own source and methodology; they are
 never silently mixed.

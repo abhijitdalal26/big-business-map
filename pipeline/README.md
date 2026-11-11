@@ -40,6 +40,10 @@ Run by hand, the update changes files on this computer only. To publish, commit 
 
 ## Running on GitHub (no PC needed)
 
+**Currently switched off.** The project is frozen as a one-time 2026 snapshot, so the
+"Monthly data update" workflow was disabled in November 2026. Turn it back on with
+`gh workflow enable "Monthly data update"` (or the Actions tab) if you ever want updates again.
+
 `.github/workflows/update-data.yml` runs `pipeline/update.py` on GitHub on the 2nd of every month
 at 04:30 UTC (10:00 India time), commits the new data if anything changed, and the site is then
 republished by `.github/workflows/deploy-site.yml`. Start it by hand from the repo's **Actions**
