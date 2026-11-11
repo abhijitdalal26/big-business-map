@@ -167,3 +167,7 @@ footer { margin-top: 64px; padding: 24px 0 40px; border-top: 1px solid var(--bor
 .card-tools.chips button { font-size: 12.5px; padding: 3px 9px; border-radius: 999px; cursor: pointer; }
 .card-tools.chips button.x::after { content: " ×"; opacity: .6; }
 @media (max-width: 640px) { .card-tools.chips button { font-size: 13px; min-height: 32px; } }
+
+/* "What they do" line appended to company tooltips (assets/common.js, data/ideas.js) */
+.tip-idea { margin-top: 6px; padding-top: 6px; border-top: 1px solid var(--border); color: var(--text-2); font-size: 12px; line-height: 1.4; }
+.tip-idea b { color: var(--text); font-weight: 600; }

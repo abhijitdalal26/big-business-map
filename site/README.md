@@ -19,6 +19,8 @@ Open `index.html` in a browser. No server is needed, but you do need internet fo
 Rebuild a page's data with `python site/build/<page>.py`. Market history and unicorn density: run `python stock_market/scripts/fetch_history.py`, then `python site/build/market_history.py` and `python site/build/unicorn_density.py`. After editing `site/notes/*.md`, run `python site/build/notebook.py`.
 Sourced context tables (VC, IPOs, informality, etc.) are in `site/build/context_data/*.csv`.
 
+**"What they do" in tooltips.** Any chart tooltip about a single company ends with a one-line description of the business. The lines live in `data/ideas.js`, and `assets/common.js` adds them to every chart automatically, so pages need no code of their own. Rebuild after changing a page's data with `python site/build/ideas.py`. Hand-written lines and fixes go in `article/data/idea_overrides.csv`.
+
 ## Verify before quoting
 - SpaceX shows as listed (~$1.9T) in the Oct 2026 market-cap data, after the Feb 2026 merger with xAI. Confirm this.
 - 2026 AI valuations (Anthropic $965B, OpenAI $852B, Stripe $159B) come from press reports.

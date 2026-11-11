@@ -82,6 +82,79 @@ window.ATLAS = window.ATLAS || {};
   function seq() { return ['--seq-1', '--seq-2', '--seq-3', '--seq-4', '--seq-5'].map(css); }
   function diverging() { return [css('--div-neg'), css('--div-mid'), css('--div-pos')]; }
 
+  // ---------- "what they do" in company tooltips ----------
+  // data/ideas.js (built by site/build/ideas.py) maps a normalised company name to a one-line
+  // description. Any chart tooltip about a single company gets that line appended, so pages
+  // need no code of their own. nameKey() must stay in step with nk() in site/build/ideas.py.
+  const LEGAL = new Set(['inc', 'incorporated', 'corp', 'corporation', 'co', 'company', 'ltd', 'limited', 'plc', 'nv',
+    'ag', 'sa', 'se', 'spa', 'ab', 'asa', 'oyj', 'as', 'bhd', 'berhad', 'tbk', 'llc', 'lp', 'kgaa', 'gmbh', 'holding',
+    'holdings', 'group', 'cos', 'companies']);
+  function nameKey(n) {
+    let s = String(n).normalize('NFKD').replace(/[^\x00-\x7f]/g, '').toLowerCase().replace(/&/g, ' and ');
+    s = s.replace(/['`]/g, '');
+    const j = [];
+    s.split(/[^a-z0-9]+/).filter(Boolean).forEach(x => {   // glue runs of single letters: U.S. -> us
+      if (x.length === 1 && j.length && j[j.length - 1][0] === '\0') j[j.length - 1] += x;
+      else j.push(x.length === 1 ? '\0' + x : x);
+    });
+    let w = j.map(x => x.replace(/^\0/, '')).map(x => (x === 'corp' ? 'corporation' : x));
+    if (w.length > 1 && (w[0] === 'the' || w[0] === 'pt')) w = w.slice(1);
+    while (w.length > 1 && LEGAL.has(w[w.length - 1])) w = w.slice(0, -1);
+    return w.join('');
+  }
+  function ideaFor(p) {
+    const ideas = window.ATLAS_IDEAS;
+    if (!ideas || !p || Array.isArray(p)) return null;   // axis tooltips list many series: skip
+    const d = p.data, cands = [p.name];
+    if (d && typeof d === 'object') {
+      cands.push(d.name, d.n, d.company, d.nm, d.label);
+      if (Array.isArray(d)) cands.push(...d.slice(0, 4));
+      // Some charts tuck the row one level down, e.g. {value: [x, y], r: {company: ...}}.
+      Object.values(d).forEach(v => {
+        if (v && typeof v === 'object' && !Array.isArray(v)) cands.push(v.company, v.name, v.n, v.nm);
+      });
+      if (Array.isArray(d.value)) cands.push(...d.value.slice(-3));
+    }
+    if (Array.isArray(p.value)) cands.push(...p.value.slice(-3));
+    for (const c of cands) {
+      if (typeof c !== 'string' || c.length < 2) continue;
+      const line = ideas[nameKey(c)];
+      if (line) return line;
+    }
+    return null;
+  }
+  // Fallback for charts whose data holds only numbers or a row index: use the bold title the
+  // tooltip itself starts with, e.g. "<b>Amazon</b> (#1)<br>...".
+  function ideaFromTitle(html) {
+    const m = /^\s*<(b|strong)>(.*?)<\/\1>/i.exec(html);
+    if (!m || !window.ATLAS_IDEAS) return null;
+    const t = m[2].replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/\s*[#(·].*$/, '').trim();
+    return t.length > 2 ? window.ATLAS_IDEAS[nameKey(t)] || null : null;
+  }
+  const escHTML = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  function withIdea(fmt) {
+    if (typeof fmt !== 'function' || fmt.__idea) return fmt;
+    const f = function (p) {
+      const out = fmt.apply(this, arguments);
+      const line = typeof out === 'string' && !Array.isArray(p) ? ideaFor(p) || ideaFromTitle(out) : null;
+      return line ? `${out}<div class="tip-idea"><b>What they do:</b> ${escHTML(line)}</div>` : out;
+    };
+    f.__idea = true;
+    return f;
+  }
+  function addIdeas(opt) {
+    if (!window.ATLAS_IDEAS || !opt || typeof opt !== 'object') return opt;
+    const fixTip = t => (t && typeof t.formatter === 'function' ? Object.assign({}, t, { formatter: withIdea(t.formatter) }) : t);
+    const fixList = v => (v == null ? v : Array.isArray(v) ? v.map(fixTip) : fixTip(v));
+    const o = Object.assign({}, opt);
+    if (o.tooltip) o.tooltip = fixList(o.tooltip);
+    if (o.series) {
+      const fixS = s => (s && s.tooltip ? Object.assign({}, s, { tooltip: fixTip(s.tooltip) }) : s);
+      o.series = Array.isArray(o.series) ? o.series.map(fixS) : fixS(o.series);
+    }
+    return o;
+  }
+
   // ---------- echarts ----------
   // ATLAS.chart(elOrId, option) -> echarts instance, themed, responsive, with hover tooltips on.
   function chart(el, option) {
@@ -118,7 +191,7 @@ window.ATLAS = window.ATLAS || {};
     });
     // Pages also call inst.setOption() later (filters, toggles), so phone tweaks hook in there too.
     const raw = inst.setOption.bind(inst);
-    inst.setOption = (opt, ...rest) => raw(isPhone() ? mobilize(opt) : opt, ...rest);
+    inst.setOption = (opt, ...rest) => { opt = addIdeas(opt); return raw(isPhone() ? mobilize(opt) : opt, ...rest); };
     inst.setOption(merged);
     window.addEventListener('resize', () => inst.resize());
     return inst;
@@ -197,6 +270,6 @@ window.ATLAS = window.ATLAS || {};
     el.innerHTML = list.map(t => `<div class="tile"><div class="v">${t.v}</div><div class="l">${t.l}</div>${t.s ? `<div class="s">${t.s}</div>` : ''}</div>`).join('');
   }
 
-  Object.assign(window.ATLAS, { chart, table, tableToggle, notes, tiles, fmtUSD, fmtNum, fmtPct, palette, seq, diverging, css, isDark, PAGES });
+  Object.assign(window.ATLAS, { chart, nameKey, ideaFor, table, tableToggle, notes, tiles, fmtUSD, fmtNum, fmtPct, palette, seq, diverging, css, isDark, PAGES });
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', renderNav); else renderNav();
 })();
